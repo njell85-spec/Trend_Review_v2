@@ -1,15 +1,15 @@
 {
   "runId": "2026-06-22",
-  "generatedAt": "2026-06-22T11:04:09.268Z",
+  "generatedAt": "2026-06-22T11:23:00.345Z",
   "dashboardUrl": "https://njell85-spec.github.io/Trend_Review_v2/",
   "status": {
     "runId": "2026-06-22",
     "status": "success",
     "step": "done",
-    "startedAt": "2026-06-22T11:03:20.158Z",
-    "finishedAt": "2026-06-22T11:04:09.268Z",
+    "startedAt": "2026-06-22T11:22:01.819Z",
+    "finishedAt": "2026-06-22T11:23:00.345Z",
     "counts": {
-      "fetched": 120,
+      "fetched": 300,
       "screened": 30,
       "analyzed": 1,
       "fallback": 0
@@ -32,7 +32,7 @@
     ]
   },
   "counts": {
-    "fetched": 120,
+    "fetched": 300,
     "screened": 30,
     "analyzed": 1,
     "fallback": 0
@@ -47,79 +47,81 @@
     {
       "pmid": "42308484",
       "title": "Cefazolin for Methicillin-Susceptible Bacteremia.",
-      "oneLineSummary": "In patients with methicillin-susceptible bacteremia, cefazolin was noninferior to antistaphylococcal penicillins for 90-day mortality and significantly reduced the risk of acute kidney injury.",
-      "oneLineSummary_ko": "메티실린 감수성 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 항스타필로코쿠스 페니실린 대비 비열등하였으며 급성 신손상 위험을 유의하게 줄였습니다.",
-      "whyItMatters": "The choice between cefazolin and antistaphylococcal penicillins (flucloxacillin/cloxacillin) for MSSA bacteremia has been highly debated, primarily due to concerns about the high-inoculum effect with cefazolin and the higher risk of acute kidney injury with penicillins. This randomized trial provides high-quality clinical evidence favoring cefazolin as a safer and highly effective first-line therapy.",
-      "whyItMatters_ko": "MSSA 균혈증 치료에 있어 세파졸린과 항스타필로코쿠스 페니실린(플루클록사실린/클록사실린) 간의 선택은 세파졸린의 고균량 효과 우려와 페니실린의 높은 급성 신손상 위험 때문에 오랜 논쟁거리였습니다. 본 무작위 배정 임상시험은 세파졸린이 더 안전하고 매우 효과적인 1차 치료제임을 지지하는 고품질의 임상적 근거를 제공합니다.",
-      "clinicalQuestion": "Is cefazolin noninferior to antistaphylococcal penicillins for 90-day mortality, and does it reduce the incidence of acute kidney injury in adult patients with methicillin-susceptible bacteremia?",
-      "clinicalQuestion_ko": "메티실린 감수성 균혈증 성인 환자에서 세파졸린은 90일 사망률 측면에서 항스타필로코쿠스 페니실린 대비 비열등하며, 급성 신손상 발생을 줄입니까?",
+      "oneLineSummary": "In adults with methicillin-susceptible bacteremia, cefazolin was noninferior to antistaphylococcal penicillins for 90-day mortality and caused significantly less acute kidney injury.",
+      "oneLineSummary_ko": "메티실린 감수성 균혈증 성인 환자에서 세파졸린은 90일 사망률 측면에서 항포도상구균 페니실린 대비 비열등하였으며, 급성 신손상 발생률은 유의하게 낮았습니다.",
+      "whyItMatters": "For decades, infectious disease guidelines have debated whether cefazolin is as effective as antistaphylococcal penicillins (such as nafcillin, oxacillin, or flucloxacillin) for MSSA bacteremia due to concerns over the inoculum effect. This large, randomized controlled platform trial (SNAP) provides high-quality evidence that cefazolin is noninferior to antistaphylococcal penicillins and is safer, resulting in substantially less acute kidney injury.",
+      "whyItMatters_ko": "수십 년 동안 감염학 가이드라인은 MSSA 균혈증 치료에서 세파졸린이 접종원 효과(inoculum effect)로 인해 항포도상구균 페니실린(나프실린, 옥사실린, 플루클록사실린 등)만큼 효과적인지에 대해 논쟁해 왔습니다. 이 대규모 무작위 대조군 플랫폼 연구(SNAP)는 세파졸린이 항포도상구균 페니실린에 비해 비열등할 뿐만 아니라 급성 신손상을 크게 줄여 더 안전하다는 고품질 근거를 제공합니다.",
+      "clinicalQuestion": "Is cefazolin noninferior to antistaphylococcal penicillins (flucloxacillin or cloxacillin) for 90-day mortality in adults with penicillin-resistant, methicillin-susceptible bacteremia?",
+      "clinicalQuestion_ko": "페니실린 내성, 메티실린 감수성 균혈증 성인 환자에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린)과 비교하여 90일 사망률 측면에서 비열등한가?",
       "pico": {
-        "population": "Adult patients with penicillin-resistant, methicillin-susceptible bacteremia",
+        "population": "Adults with penicillin-resistant, methicillin-susceptible bacteremia",
         "intervention": "Cefazolin",
         "comparison": "Antistaphylococcal penicillin (flucloxacillin or cloxacillin)",
-        "outcome": "90-day all-cause mortality and 14-day acute kidney injury"
+        "outcome": "All-cause mortality at 90 days and acute kidney injury within 14 days"
       },
       "pico_ko": {
-        "population": "페니실린 내성, 메티실린 감수성 균혈증이 있는 성인 환자",
+        "population": "페니실린 내성, 메티실린 감수성 균혈증을 앓고 있는 성인 환자",
         "intervention": "세파졸린 (Cefazolin)",
-        "comparison": "항스타필로코쿠스 페니실린 (플루클록사실린 또는 클록사실린)",
-        "outcome": "90일 모든 원인으로 인한 사망 및 14일 이내 급성 신손상"
+        "comparison": "항포도상구균 페니실린 (플루클록사실린 또는 클록사실린)",
+        "outcome": "90일 전원인 사망률 및 14일 이내 급성 신손상 발생률"
       },
       "detailedPico": {
-        "population": "Adult patients with penicillin-resistant, methicillin-susceptible Staphylococcus aureus bacteremia",
-        "population_ko": "페니실린 내성, 메티실린 감수성 황색포도상구균(MSSA) 균혈증 성인 환자",
-        "countrySetting": "International, multicenter Bayesian adaptive platform trial (SNAP trial)",
-        "countrySetting_ko": "다국가, 다기관 베이지안 적응형 플랫폼 임상시험 (SNAP 임상시험)",
-        "intervention": "Intravenous cefazolin",
-        "intervention_ko": "정맥 주사용 세파졸린",
-        "comparator": "Intravenous antistaphylococcal penicillin (flucloxacillin or cloxacillin)",
-        "comparator_ko": "정맥 주사용 항스타필로코쿠스 페니실린 (플루클록사실린 또는 클록사실린)",
+        "population": "Adult patients with penicillin-resistant, methicillin-susceptible bacteremia enrolled in the SNAP platform trial.",
+        "population_ko": "진행 중인 SNAP 플랫폼 임상시험에 등록된 페니실린 내성, 메티실린 감수성 균혈증 성인 환자.",
+        "countrySetting": "Multicenter, international trial (specific countries not reported in abstract)",
+        "countrySetting_ko": "다국가, 다기관 임상시험 (구체적인 국가 목록은 초록에 보고되지 않음)",
+        "intervention": "Cefazolin (dosing and route of administration not reported in abstract)",
+        "intervention_ko": "세파졸린 (구체적인 용량 및 투여 경로는 초록에 보고되지 않음)",
+        "comparator": "Antistaphylococcal penicillin (flucloxacillin or cloxacillin; dosing not reported in abstract)",
+        "comparator_ko": "항포도상구균 페니실린 (플루클록사실린 또는 클록사실린, 구체적인 용량은 보고되지 않음)",
         "outcomes": [
           {
             "label": "Primary Outcome",
             "outcome": "Death from any cause within 90 days after enrollment",
             "outcome_ko": "등록 후 90일 이내 모든 원인으로 인한 사망",
-            "result": "15.0% (97/645 patients) in the cefazolin group vs 17.0% (109/642 patients) in the antistaphylococcal-penicillin group",
-            "result_ko": "세파졸린 군 15.0% (97/645명) 대 항스타필로코쿠스 페니실린 군 17.0% (109/642명)",
-            "statistics": "Adjusted odds ratio (aOR), 0.81; 95% credible interval (CrI), 0.59 to 1.12; probability of noninferiority, 99.2%; probability of superiority, 89.8%",
-            "interpretation": "Cefazolin met the prespecified criterion for noninferiority to antistaphylococcal penicillins (aOR <1.2, reflecting <2.5% absolute difference). There was also a high probability of superiority.",
-            "interpretation_ko": "세파졸린은 항스타필로코쿠스 페니실린 대비 사전 정의된 비열등성 기준(aOR <1.2, 절대 차이 약 <2.5%포인트에 해당)을 충족하였습니다. 또한 우월성을 보일 확률도 높았습니다."
+            "result": "15.0% (97/645) in the cefazolin group vs. 17.0% (109/642) in the antistaphylococcal-penicillin group",
+            "result_ko": "세파졸린 군 15.0% (97/645) 대 항포도상구균 페니실린 군 17.0% (109/642)",
+            "statistics": "Adjusted odds ratio (aOR) 0.81 (95% credible interval [CrI], 0.59 to 1.12); posterior probability of noninferiority = 99.2%; posterior probability of superiority = 89.8%",
+            "interpretation": "Cefazolin met the prespecified noninferiority threshold (adjusted odds ratio <1.2) for 90-day mortality, with a very high posterior probability of noninferiority (99.2%).",
+            "interpretation_ko": "세파졸린은 90일 사망률에 대해 사전에 설정된 비열등성 기준(조정 오즈비 <1.2)을 충족했으며, 비열등할 사후 확률이 99.2%로 매우 높았습니다."
           },
           {
-            "label": "Secondary Safety Outcome",
-            "outcome": "Development of acute kidney injury (AKI) within 14 days",
-            "outcome_ko": "14일 이내 급성 신손상 (AKI) 발생",
-            "result": "13.9% (92/660 patients) in the cefazolin group vs 19.6% (127/648 patients) in the antistaphylococcal-penicillin group",
-            "result_ko": "세파졸린 군 13.9% (92/660명) 대 항스타필로코쿠스 페니실린 군 19.6% (127/648명)",
-            "statistics": "Adjusted odds ratio (aOR), 0.67; 95% credible interval (CrI), 0.50 to 0.89; probability of superiority, 99.7%",
-            "interpretation": "Cefazolin was superior to antistaphylococcal penicillins, significantly reducing the occurrence of acute kidney injury.",
-            "interpretation_ko": "세파졸린은 항스타필로코쿠스 페니실린 대비 우월하여 급성 신손상 발생률을 유의하게 낮췄습니다."
+            "label": "Secondary Outcome",
+            "outcome": "Acute kidney injury (AKI) within 14 days",
+            "outcome_ko": "14일 이내 급성 신손상(AKI) 발생",
+            "result": "13.9% (92/660) in the cefazolin group vs. 19.6% (127/648) in the antistaphylococcal-penicillin group",
+            "result_ko": "세파졸린 군 13.9% (92/660) 대 항포도상구균 페니실린 군 19.6% (127/648)",
+            "statistics": "Adjusted odds ratio (aOR) 0.67 (95% credible interval [CrI], 0.50 to 0.89); posterior probability of superiority = 99.7%",
+            "interpretation": "Cefazolin therapy was associated with a clinically and statistically meaningful reduction in the risk of acute kidney injury compared to antistaphylococcal penicillins.",
+            "interpretation_ko": "세파졸린 치료는 항포도상구균 페니실린에 비해 급성 신손상 위험을 임상적 및 통계적으로 유의하게 감소시켰습니다."
           }
         ]
       },
       "keyFindings": [
-        "Cefazolin demonstrated noninferiority for 90-day mortality compared to flucloxacillin or cloxacillin (15.0% vs. 17.0%, aOR 0.81, 95% CrI 0.59 to 1.12; posterior probability of noninferiority 99.2%).",
-        "Cefazolin was associated with a clinically significant lower risk of acute kidney injury within 14 days than the penicillins (13.9% vs. 19.6%, aOR 0.67, 95% CrI 0.50 to 0.89; posterior probability of superiority 99.7%)."
+        "Cefazolin is noninferior to antistaphylococcal penicillins (flucloxacillin or cloxacillin) for 90-day mortality in adults with methicillin-susceptible bacteremia (15.0% vs. 17.0%, aOR 0.81, 95% CrI 0.59 to 1.12).",
+        "Cefazolin therapy resulted in a significantly lower incidence of acute kidney injury within 14 days compared to antistaphylococcal penicillins (13.9% vs. 19.6%, aOR 0.67, 95% CrI 0.50 to 0.89).",
+        "The Bayesian posterior probability of noninferiority for mortality was 99.2%, and the posterior probability of superiority for renal safety was 99.7%."
       ],
       "keyFindings_ko": [
-        "세파졸린은 플루클록사실린 또는 클록사실린 대비 90일 사망률에서 비열등성을 입증했습니다 (15.0% 대 17.0%, 보정 오즈비 0.81, 95% 신용구간 0.59~1.12, 비열등성 후험 확률 99.2%).",
-        "세파졸린은 페니실린 제제에 비해 14일 이내 급성 신손상 위험을 임상적으로 유의미하게 낮췄습니다 (13.9% 대 19.6%, 보정 오즈비 0.67, 95% 신용구간 0.50~0.89, 우월성 후험 확률 99.7%)."
+        "메티실린 감수성 균혈증 성인 환자 치료에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린) 대비 90일 사망률 측면에서 비열등했습니다 (15.0% 대 17.0%, 조정 오즈비 0.81, 95% 신용구간 0.59 ~ 1.12).",
+        "세파졸린 치료군은 항포도상구균 페니실린군에 비해 14일 이내 급성 신손상 발생률이 유의하게 낮았습니다 (13.9% 대 19.6%, 조정 오즈비 0.67, 95% 신용구간 0.50 ~ 0.89).",
+        "사망률에 대한 베이지안 비열등성 사후 확률은 99.2%였으며, 신장 안전성에 대한 우월성 사후 확률은 99.7%였습니다."
       ],
-      "conclusion": "Cefazolin is noninferior to antistaphylococcal penicillins (flucloxacillin/cloxacillin) for the treatment of methicillin-susceptible bacteremia, while providing a significantly safer renal profile with lower rates of acute kidney injury.",
-      "conclusion_ko": "메티실린 감수성 균혈증 치료에 있어 세파졸린은 항스타필로코쿠스 페니실린(플루클록사실린/클록사실린) 대비 90일 사망률 측면에서 비열등하며, 급성 신손상 빈도를 유의하게 낮추어 현저히 우수한 신장 안전성 프로파일을 보입니다.",
-      "clinicalTakeaway": "In adult patients with MSSA bacteremia, cefazolin should be the preferred first-line parenteral therapy over antistaphylococcal penicillins like flucloxacillin or cloxacillin. It offers identical efficacy with a substantially lower risk of nephrotoxicity, clarifying long-standing clinical practice dilemmas.",
-      "clinicalTakeaway_ko": "MSSA 균혈증이 있는 성인 환자에서 세파졸린은 플루클록사실린이나 클록사실린과 같은 항스타필로코쿠스 페니실린보다 선호되는 1차 정맥 투여 치료제여야 합니다. 신독성 위험이 실질적으로 훨씬 낮으면서도 동등한 효능을 제공하므로 오랜 임상적 고민을 해결해 줍니다.",
-      "limitations": "The trial was open-label, which could influence secondary clinician behaviors or discharge decisions. Additionally, the brief abstract details do not specify the prevalence or outcome in patients with high-inoculum infections like endocarditis.",
-      "limitations_ko": "본 임상시험은 공개라벨(open-label) 디자인으로 진행되어 의료진의 세부적인 관리나 퇴원 결정 등에 영향을 미쳤을 수 있습니다. 또한 초록의 정보만으로는 심내막염과 같은 고균량 감염(high-inoculum infection) 환자에서의 비율이나 결과가 구별되어 제시되지 않았습니다.",
-      "edIcuApplicability": "Highly applicable. Emergency and ICU physicians routinely initiate, continue, or transition empiric MRSA cover to targeted MSSA cover. Utilizing cefazolin instead of flucloxacillin/cloxacillin simplifies administration, is widely available globally, and significantly spares renal function in critically ill patients.",
-      "edIcuApplicability_ko": "매우 적용 가능성이 높습니다. 응급실 및 중환자실 의료진은 흔히 MSSA 표적 치료를 시작하거나 기존 치료를 전환합니다. 플루클록사실린/클록사실린 대신 세파졸린을 투여하는 것은 약제 공급이 수월하고 투약이 용이할 뿐만 아니라, 중증 환자의 신기능을 보존하는 데 큰 장점을 제공합니다.",
+      "conclusion": "In patients with methicillin-susceptible bacteremia, cefazolin was noninferior to flucloxacillin or cloxacillin with respect to 90-day mortality and was associated with a lower incidence of acute kidney injury.",
+      "conclusion_ko": "메티실린 감수성 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 플루클록사실린 또는 클록사실린에 비열등하였고, 급성 신손상 발생률은 유의하게 낮추었습니다.",
+      "clinicalTakeaway": "For adult patients with MSSA bacteremia, cefazolin should be considered the preferred first-line therapy over antistaphylococcal penicillins (like flucloxacillin or cloxacillin). It offers equivalent survival outcomes while significantly lowering the risk of acute kidney injury, which has been a major drawback of penicillin therapy. This trial addresses long-standing clinician anxiety regarding the inoculum effect of cefazolin in deep-seated infections.",
+      "clinicalTakeaway_ko": "MSSA 균혈증 성인 환자에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린)보다 우선적으로 고려되어야 하는 1차 치료제입니다. 페니실린 치료의 주요 단점이었던 급성 신손상 위험을 유의하게 낮추면서도 동등한 생존율을 제공합니다. 이번 임상시험은 심부 감염에서 세파졸린의 접종원 효과에 대한 임상 의사들의 오랜 우려를 해소해 줍니다.",
+      "limitations": "The trial was open-label, which could introduce bias in patient management. The active comparator was limited to flucloxacillin or cloxacillin; thus, extrapolation to centers primarily using nafcillin or oxacillin, while biochemically similar, remains indirect. Detail regarding the clinical source of bacteremia (e.g., endocarditis, osteomyelitis) and exact dosing regimens were not provided in the abstract.",
+      "limitations_ko": "본 임상시험은 공개 라벨(open-label)로 진행되어 임상적 처치 과정에서 편향이 개입되었을 가능성이 있습니다. 대조군이 플루클록사실린 또는 클록사실린으로 제한되었기 때문에, 생화학적으로는 유사하나 나프실린이나 옥사실린을 주로 사용하는 의료기관으로 결과를 바로 대입하기에는 제한이 있습니다. 균혈증의 원인 병소(예: 심내막염, 골수염 등) 및 구체적인 투여 용량에 대한 세부 데이터는 초록에서 제공되지 않았습니다.",
+      "edIcuApplicability": "Highly applicable. Emergency and ICU clinicians frequently manage patients with positive blood cultures growing Gram-positive cocci. Once MSSA is identified, transitioning patients to cefazolin instead of antistaphylococcal penicillins represents a high-value clinical choice that reduces nephrotoxicity in critically ill patients without compromising mortality outcomes.",
+      "edIcuApplicability_ko": "매우 높은 적용 가능성을 가집니다. 응급실 및 중환자실 의료진은 그람 양성 균혈증 환자를 빈번하게 치료합니다. MSSA로 확인된 후, 환자의 치료제를 항포도상구균 페니실린 대신 세파졸린으로 전환하는 것은 중증 환자에서 사망률 저하 없이 신독성을 낮출 수 있는 매우 유용한 임상적 선택입니다.",
       "evidenceLevel": "High",
-      "clinicalApplicabilityScore": 9,
+      "clinicalApplicabilityScore": 9.5,
       "manualReviewNeeded": false,
       "analysisNotes": [
-        "Bayesian adaptive platform trial (SNAP trial).",
-        "Open-label, randomized controlled trial design.",
-        "Noninferiority and superiority evaluated with hierarchical Bayesian logistic-regression modeling."
+        "The SNAP trial is a landmark international Bayesian adaptive platform trial addressing a long-standing infectious disease controversy.",
+        "Demonstrates noninferiority for mortality with very high certainty (99.2% probability) and clear superiority for renal safety (13.9% AKI vs 19.6% AKI).",
+        "Highly relevant for emergency medicine and critical care transitions of care as definitive culture data returns."
       ],
       "paper": {
         "pmid": "42308484",
@@ -162,7 +164,7 @@
         "doi": "10.1056/NEJMoa2506905",
         "pmcid": "",
         "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308484/",
-        "collectedAt": "2026-06-22T11:03:26.528Z",
+        "collectedAt": "2026-06-22T11:22:05.733Z",
         "screeningData": {
           "score": 12,
           "relevanceMatches": [],
@@ -187,6 +189,65 @@
     }
   ],
   "candidates": [
+    {
+      "pmid": "42284053",
+      "title": "Comorbidities, Weight-Based Initial Fluid Resuscitation, and Mortality in Patients With Sepsis.",
+      "abstract": "IMPORTANCE: Guidelines suggest administering at least 30 mL/kg of initial fluid to patients with sepsis-induced hypoperfusion. However, there is uncertainty regarding the benefits of fluid resuscitation in patients with severe cardiac or kidney comorbidities or intermediate elevation of lactate level (18.0-36.0 mg/dL).\nOBJECTIVE: To evaluate the association of 30 mL/kg or more of fluid administered within 6 hours of hospital arrival with 30-day mortality across key target populations with community-onset sepsis.\nDESIGN, SETTING, AND PARTICIPANTS: This cohort study included adults hospitalized for community-onset sepsis in 67 hospitals in the Michigan Hospital Medicine Safety Consortium (discharge dates from December 2021 to January 2025) who had an indication for fluid resuscitation (ie, hypotension or lactate level of 18.0 mg/dL or greater) within 3 hours of hospital arrival. Data were analyzed from November 26, 2024, to November 16, 2025.\nEXPOSURE: Receipt of at least 30 mL/kg vs less than 30 mL/kg fluid in the first 6 hours after hospital arrival. Fluid volume included all crystalloid fluid and blood products.\nMAIN OUTCOMES AND MEASURES: Association between administration of 30 mL/kg or more of fluid within 6 hours of hospital arrival and 30-day mortality using weighted regression models adjusted for patient characteristics. Target populations were defined by (1) fluid indication: hypoperfusion (hypotension or lactate level >36.0 mg/dL) vs intermediate lactate elevation (18.0-36.0 mg/dL) and (2) presence of severe comorbidities that might increase risk of fluid overload (left ventricular ejection fraction <40%, severe-to-critical aortic stenosis, or end-stage kidney disease). Secondary analyses used adjusted logistic regression models with restricted cubic spline terms to evaluate associations of fluid volume administered with mortality.\nRESULTS: Among 43 321 patients hospitalized for community-onset sepsis, 25 481 (58.8%) had an indication for fluid resuscitation and were included in the study (median age, 71 years [IQR, 61-80 years]; 50.5% male; 37.0% with body mass index >30.0, calculated as weight in kilograms divided by height in meters squared). A total of 12 943 (50.8%) had hypoperfusion without severe comorbidities; 1741 (6.8%), hypoperfusion with severe comorbidities; 9974 (39.1%), intermediate lactate elevation without severe comorbidities; and 823 (3.2%), intermediate lactate elevation with severe comorbidities. Administration of 30 mL/kg or more of fluid vs less than 30 mL/kg was associated with lower adjusted 30-day mortality rates in patients with hypoperfusion without severe comorbidities (26.0% [95% CI, 24.9%-27.2%] vs 30.4% [95% CI, 28.8%-32.0%]; adjusted absolute difference [diff], -4.4 percentage points [pp] [95% CI, -6.1 to -2.7 pp]) and intermediate lactate elevation without severe comorbidities (12.0% [95% CI, 10.6%-13.5%] vs 13.9% [95% CI, 12.9%-14.8%]; diff, -1.8 pp [95% CI, -3.6 to -0.1 pp]). For patients with hypoperfusion and severe cardiac or kidney comorbidities, the association between 30-day adjusted mortality and receiving 30 mL/kg or more of fluid vs less than 30 mL/kg was not statistically significant (34.7% [95% CI, 30.8%-38.6%] vs 38.8% [95% CI, 35.8%-41.8%]; diff, -4.1 pp [95% CI, -9.0 to 0.8 pp]), although spline models indicated decreasing mortality with fluid resuscitation of 30 mL/kg or more of fluid.\nCONCLUSIONS AND RELEVANCE: In this cohort study of patients with community-onset sepsis, initial administration of 30 mL/kg or more of fluid was associated with lower 30-day mortality among patients who had either hypoperfusion or intermediate lactate elevation without severe cardiac or kidney comorbidities. The findings suggest that broader application of at least 30 mL/kg of initial fluid resuscitation for sepsis in patients with hypoperfusion and cardiac or kidney comorbidities or intermediate lactate elevation may reduce sepsis-related mortality.",
+      "authors": [
+        "Munroe ES",
+        "Walzl E",
+        "Seelye S",
+        "Cahill M",
+        "Czilok T",
+        "Jones J",
+        "Kenes MT",
+        "Posa PJ"
+      ],
+      "journal": "JAMA network open",
+      "pubDate": "2026-Jun-01",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Male",
+        "Fluid Therapy",
+        "Female",
+        "Aged",
+        "Sepsis",
+        "Comorbidity",
+        "Middle Aged",
+        "Cohort Studies",
+        "Body Weight",
+        "Resuscitation",
+        "Michigan"
+      ],
+      "keywords": [],
+      "doi": "10.1001/jamanetworkopen.2026.18232",
+      "pmcid": "PMC13263783",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42284053/",
+      "collectedAt": "2026-06-22T11:22:13.585Z",
+      "screeningData": {
+        "score": 15,
+        "relevanceMatches": [
+          "ICU",
+          "sepsis",
+          "resuscitation"
+        ],
+        "studyType": "Practice Guideline",
+        "sampleSize": 321,
+        "journalBoost": 4,
+        "reasons": [
+          "abstract available",
+          "topic match: ICU, sepsis, resuscitation",
+          "study design: Practice Guideline",
+          "sample size signal: N=321",
+          "journal boost: JAMA network open"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
     {
       "pmid": "42307314",
       "title": "The efficacy of high-flow nasal cannula versus non-invasive mechanical ventilation in preventing reintubation in patients at high risk of extubation failure: systematic review and meta-analysis with trial sequential analysis.",
@@ -221,7 +282,7 @@
       "doi": "10.62675/2965-2774.20260371",
       "pmcid": "PMC13155773",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307314/",
-      "collectedAt": "2026-06-22T11:03:27.871Z",
+      "collectedAt": "2026-06-22T11:22:06.569Z",
       "screeningData": {
         "score": 14,
         "relevanceMatches": [
@@ -239,6 +300,191 @@
           "topic match: critical care, intensive care, airway, intubation",
           "study design: Meta-Analysis",
           "sample size signal: N=1697"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42297460",
+      "title": "Ventilation strategies and outcomes after out-of-hospital cardiac arrest: protocol for a pre-planned sub-analysis of the STEPCARE trial.",
+      "abstract": "INTRODUCTION: After resuscitation from out of hospital cardiac arrest (OHCA), mechanical ventilation (MV) and respiratory management are fundamental to support patients in the intensive care unit (ICU) and to minimise secondary brain injury. Best practices for MV and association with clinical outcomes in patients with OHCA remain unclear.\nMETHODS AND ANALYSIS: This protocol describes a pre-planned respiratory-focused series of sub-analyses within the Sedation, Temperature and Pressure after Cardiac Arrest and Resuscitation (STEPCARE) trial, an ongoing interventional study evaluating 6-month mortality after randomisation in patients admitted to ICUs following OHCA. The primary aim is to describe real-world ventilator settings and gas-exchange targets during the first 72 hours after ICU admission in patients receiving invasive mechanical ventilation after OHCA. Secondary aims include to estimate the incidence of respiratory complications during ICU stay (eg, ventilator-associated pneumonia, acute respiratory distress syndrome, barotrauma); and to explore the association between early ventilator settings/gas-exchange parameters and 6-month outcomes (mortality and neurological status). Exploratory aim is to characterise weaning and extubation practices, including timing and failure rates.Eligible patients will include adult STEPCARE participants receiving invasive MV after return of spontaneous circulation with available respiratory data recorded within the STEPCARE database.Data collected in the STEPCARE trial that will be analysed include patients' prehospital characteristics; clinical examination at hospital admission and at ICU admission; ventilator settings and arterial blood gases recorded at predefined time points during ICU stay. In particular: MV setting (mode, tidal volume, positive end-expiratory pressure, fraction of inspired oxygen, tidal volume, mechanical power, plateau/driving pressures), gas-exchange values (arterial partial pressure of oxygen and carbon dioxide, pH, arterial saturation of oxygen), timing of measurements and the occurrence/timing of respiratory complications and weaning outcomes.\nETHICS AND DISSEMINATION: The STEPCARE study has been approved by the regional ethics committee at Lund University (Dnr 2022-02425-01, Approved IRB on 2022-06-18) and by all ethics boards in the participating countries. No additional ethical approval is required for this predefined secondary analysis, as no further data collection or interventions will be performed. Findings will be disseminated through publication in peer-reviewed journals and, where appropriate, conference abstracts and presentations. Patients and the public were not involved.\nCLINICALTRIALSGOV: NCT05564754.",
+      "authors": [
+        "Battaglini D",
+        "Gualdi F",
+        "Cammarota G",
+        "McGuigan PJ",
+        "Thomas M",
+        "Skrifvars MB",
+        "Niemelä VH",
+        "Reinikainen M"
+      ],
+      "journal": "BMJ open",
+      "pubDate": "2026-Jun-15",
+      "publicationTypes": [
+        "Clinical Trial Protocol",
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Cardiopulmonary Resuscitation",
+        "Intensive Care Units",
+        "Out-of-Hospital Cardiac Arrest",
+        "Randomized Controlled Trials as Topic",
+        "Research Design",
+        "Respiration, Artificial",
+        "Multicenter Studies as Topic"
+      ],
+      "keywords": [
+        "Hyperoxia",
+        "Hypoxia",
+        "Out-of-Hospital Cardiac Arrest",
+        "Ventilators, Mechanical"
+      ],
+      "doi": "10.1136/bmjopen-2026-118872",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42297460/",
+      "collectedAt": "2026-06-22T11:22:09.896Z",
+      "screeningData": {
+        "score": 13,
+        "relevanceMatches": [
+          "intensive care",
+          "ICU",
+          "resuscitation",
+          "cardiac arrest",
+          "mechanical ventilation",
+          "trauma"
+        ],
+        "studyType": "Clinical Trial",
+        "sampleSize": null,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: intensive care, ICU, resuscitation, cardiac arrest",
+          "study design: Clinical Trial",
+          "journal boost: BMJ open"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42277933",
+      "title": "Validation of the 2022 German trauma team activation criteria: a national registry study with focus on geriatric-specific modifiers.",
+      "abstract": "BACKGROUND: The 2022 revision of the German Trauma Society's (DGU) trauma team activation (TTA) criteria introduces geriatric-specific modifiers to enhance the sensitivity of risk stratification in older (elderly) trauma patients. This study evaluates the validity of these updated criteria using national registry data, with particular focus on mortality gradients across activation levels and the prognostic value of newly incorporated modifiers.\nMETHODS: We conducted a retrospective cohort analysis of patients aged ≥ 60 years, defined as elderly trauma patients, from the TraumaRegister DGU (TR-DGU) between 2018 and 2023. Cases were stratified according to TTA status based on both the 2016 and 2022 DGU guidelines: high risk of severe injury (HRSI), moderate risk of severe injury (MRSI), or None (provider decision). The primary outcome was in-hospital mortality. Subgroup analyses examined the impact of pre-injury anticoagulation, systolic blood pressure (SBP) 91-100 mmHg, Glasgow Coma Scale (GCS) 13-14, and multiple serious injuries, defined as Abbreviated Injury Scale (AIS) ≥ 3 in two or more body regions.\nRESULTS: Among 66,273 elderly trauma patients, mortality according to the 2022 criteria showed a consistent risk gradient: 20.2% (high risk of severe injury, HRSI), 9.0% (moderate risk of severe injury, MRSI), and 4.2% (None). In contrast, the 2016 criteria yielded inconsistent patterns, including higher mortality in the \"None\" category. New modifiers were strongly predictive of mortality: multiple serious injuries in ≥ 2 regions (16.7% vs. 6.7%), SBP 91-100 mmHg (13.1% vs. 7.3%), and GCS 13-14 (12.5% vs. 5.6%). Pre-injury anticoagulation was associated with increased mortality across all subgroups (29.3% vs. 20.3%).\nCONCLUSION: The 2022 TTA criteria improve the alignment between triage criteria and observed mortality risk, particularly among elderly patients. The addition of geriatric-specific modifiers enhances predictive accuracy and clinical applicability. Future work should quantify implications for overtriage and resource allocation to support evidence-based trauma system optimization.",
+      "authors": [
+        "Faul P",
+        "Hagebusch P",
+        "Lefering R",
+        "Schweigkofler U",
+        "Münzberg M",
+        "Jakobi T",
+        "Koch DA"
+      ],
+      "journal": "Scandinavian journal of trauma, resuscitation and emergency medicine",
+      "pubDate": "2026-Jun-11",
+      "publicationTypes": [
+        "Journal Article",
+        "Validation Study"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Registries",
+        "Germany",
+        "Retrospective Studies",
+        "Female",
+        "Hospital Mortality",
+        "Wounds and Injuries",
+        "Aged",
+        "Male",
+        "Trauma Centers",
+        "Risk Assessment",
+        "Injury Severity Score"
+      ],
+      "keywords": [
+        "Geriatric modifier emergency medicine",
+        "Geriatric patient",
+        "Geriatric trauma",
+        "Guideline",
+        "Trauma team activation",
+        "Undertriage"
+      ],
+      "doi": "10.1186/s13049-026-01641-1",
+      "pmcid": "PMC13261963",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42277933/",
+      "collectedAt": "2026-06-22T11:22:16.103Z",
+      "screeningData": {
+        "score": 13,
+        "relevanceMatches": [
+          "emergency medicine",
+          "ICU",
+          "resuscitation",
+          "trauma"
+        ],
+        "studyType": "Practice Guideline",
+        "sampleSize": null,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency medicine, ICU, resuscitation, trauma",
+          "study design: Practice Guideline",
+          "journal boost: Scandinavian journal of trauma, resuscitation and emergency medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42284048",
+      "title": "Institutional Variation in Life-Sustaining Treatments and Mortality Among Older Patients.",
+      "abstract": "IMPORTANCE: The optimal intensity of care for older patients (age ≥80 years) in intensive care units (ICUs) remains uncertain. Although institutional variation in critical care practice has been described, less is known about case-mix-adjusted variation in life-sustaining treatment use among older patients admitted to ICUs and whether greater institutional treatment intensity is associated with improved survival.\nOBJECTIVE: To quantify institutional variation in the use of life-sustaining treatments for older patients among ICUs and examine the association of treatment intensity with in-hospital mortality.\nDESIGN, SETTING, AND PARTICIPANTS: This retrospective cohort study used nationwide data from the Japanese Intensive Care Patient Database (JIPAD) for patients aged 80 years or older admitted to 127 ICUs at JIPAD-participating institutions in Japan between April 1, 2015, and March 31, 2023.\nEXPOSURES: Intensive care unit admission and age 80 years or older.\nMAIN OUTCOMES AND MEASURES: Institutional treatment intensity was quantified using standardized treatment ratio (STR), defined as the ratio of observed-to-expected life-sustaining treatment use after adjustment for patient-level characteristics. The association between STR category and in-hospital mortality was evaluated using both logistic regression and hierarchical bayesian multilevel logistic regression models.\nRESULTS: Among 60 713 patients (median age, 84 years [IQR, 82-87 years]; 32 302 male [53.2%]), the crude institutional rate of life-sustaining treatment use ranged from 4.8% (8 of 167 patients) to 38.0% (322 of 847 patients). After adjustment for patient case mix, the STR ranged from 0.24 (95% CI, 0.11-0.48) to 2.34 (95% CI, 1.91-2.85) across participating ICUs. In multilevel analyses adjusted for patient- and institution-level factors, higher institutional treatment intensity was not associated with in-hospital survival compared with intermediate treatment intensity (high STR category: odds ratio, 1.17; 95% credible interval, 0.91-1.39).\nCONCLUSIONS AND RELEVANCE: In this cohort study of older patients admitted to ICUs, institutional use of life-sustaining treatments varied substantially even after case-mix adjustment and higher institutional treatment intensity was not associated with better in-hospital survival. These findings suggest that increasing treatment intensity alone may not be associated with improved outcomes in this population and support the need for better approaches to identify patients most likely to benefit from intensive treatment.",
+      "authors": [
+        "Shiotsuka J",
+        "Uchino S",
+        "Sasabuchi Y",
+        "Imahase H",
+        "Masuyama T",
+        "Ono S",
+        "Yoshinaga K",
+        "Iizuka Y"
+      ],
+      "journal": "JAMA health forum",
+      "pubDate": "2026-Jun-01",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Male",
+        "Aged, 80 and over",
+        "Hospital Mortality",
+        "Female",
+        "Retrospective Studies",
+        "Intensive Care Units",
+        "Japan",
+        "Life Support Care"
+      ],
+      "keywords": [],
+      "doi": "10.1001/jamahealthforum.2026.1451",
+      "pmcid": "PMC13263776",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42284048/",
+      "collectedAt": "2026-06-22T11:22:14.390Z",
+      "screeningData": {
+        "score": 13,
+        "relevanceMatches": [
+          "critical care",
+          "intensive care",
+          "ICU"
+        ],
+        "studyType": "Observational",
+        "sampleSize": 713,
+        "journalBoost": 4,
+        "reasons": [
+          "abstract available",
+          "topic match: critical care, intensive care, ICU",
+          "study design: Observational",
+          "sample size signal: N=713",
+          "journal boost: JAMA health forum"
         ],
         "exclude": false,
         "excludeReason": ""
@@ -285,7 +531,7 @@
       "doi": "10.1056/NEJMoa2506905",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308484/",
-      "collectedAt": "2026-06-22T11:03:26.528Z",
+      "collectedAt": "2026-06-22T11:22:05.733Z",
       "screeningData": {
         "score": 12,
         "relevanceMatches": [],
@@ -297,6 +543,125 @@
           "study design: Randomized Controlled Trial",
           "sample size signal: N=645",
           "journal boost: The New England journal of medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42303390",
+      "title": "Predictive variables for early detection of sepsis in adults admitted to intensive care units: protocol for a systematic review.",
+      "abstract": "INTRODUCTION: Sepsis is a life-threatening condition in intensive care units (ICUs), where any delay in diagnosis and treatment can lead to organ dysfunction, prolonged hospital stay and increased mortality. Early identification of sepsis prior to its clinical manifestation may enable timely intervention and improve outcomes. This review aims to identify, synthesise and categorise predictor variables assessed in adult ICU patients prior to sepsis diagnosis.\nMETHODS/DESIGN: This protocol, in accordance with the Preferred Reporting Items for Systematic Review and Meta-Analysis Protocols (PRISMA-P) guideline, will involve a comprehensive search of PubMed/Medline, Scopus, Embase, Web of Science, IEEE Xplore and Cochrane Library for English-language studies from database inception. The search is planned to be conducted between March 2026 and June 2026. We will include prospective, retrospective, cohort, case-control and cross-sectional studies, and both randomised and non-randomised designs. Additionally, we will consider secondary analysis of electronic health records, clinical registries and routinely acquired clinical data that determine risk factors and predictive variables that will help in the early identification of sepsis using machine learning, artificial intelligence, computational or statistical methods. Two independent reviewers will perform title and abstract screening followed by full-text review and data extraction. The risk of bias will be evaluated using appropriate tools depending on study design: the Newcastle-Ottawa Scale for observational studies, Cochrane Risk of Bias tool for randomised trials and PROBAST for prediction model studies. We will perform a narrative synthesis structured by variable-type, timing and performance metrics (area under the curve, sensitivity, ORs). Subgroup analyses will be conducted based on study design, sepsis definition, type of ICU (medical, surgical, mixed) and geographic area (high-income and low- and middle-income countries).\nETHICS AND DISSEMINATION: Findings from this systematic review will be disseminated through publication in a peer-reviewed journal and/or presentation at scientific conferences. The data used will not include individual patient data, so ethical approval is not required.\nPROSPERO REGISTRATION NUMBER: CRD420251113781.",
+      "authors": [
+        "Keshavarz Z",
+        "Zand F",
+        "Asmarian N",
+        "Rafiee M",
+        "Sarabi RE"
+      ],
+      "journal": "BMJ open",
+      "pubDate": "2026-Jun-16",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Sepsis",
+        "Systematic Reviews as Topic",
+        "Intensive Care Units",
+        "Early Diagnosis",
+        "Research Design",
+        "Adult",
+        "Risk Factors",
+        "Machine Learning"
+      ],
+      "keywords": [
+        "Artificial Intelligence",
+        "Intensive Care Units",
+        "Machine Learning",
+        "Risk Factors",
+        "Sepsis"
+      ],
+      "doi": "10.1136/bmjopen-2025-109036",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42303390/",
+      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "screeningData": {
+        "score": 12,
+        "relevanceMatches": [
+          "intensive care",
+          "ICU",
+          "sepsis"
+        ],
+        "studyType": "Practice Guideline",
+        "sampleSize": null,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: intensive care, ICU, sepsis",
+          "study design: Practice Guideline",
+          "journal boost: BMJ open"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42285569",
+      "title": "Randomised, double-blind clinical trial protocol to evaluate whether early and perioperative tranexamic acid administration reduces transfusion rates and blood loss of patients undergoing hip fracture surgery in Spain.",
+      "abstract": "INTRODUCTION: In patients with a hip fracture, anaemia has been associated with increased transfusion requirements, poor functional outcomes, prolonged hospital stays and increased mortality. While anaemia in elderly patients with hip fractures has traditionally been attributed to bleeding during or after surgery, many of these patients are anaemic on hospital admission. Thus, detecting and managing anaemia in the perioperative, postoperative and, most significantly, the preoperative period is important to avoid the need for blood transfusions and to improve patient outcomes. The protocol for this clinical trial is designed to evaluate the efficacy and safety of both combined intravenous and topical tranexamic acid (TXA) therapy, or topical administration alone, assessing its effect on blood loss and the need for blood transfusions in elderly patients undergoing hip fracture surgery.\nMETHODS AND ANALYSIS: This is a multicentre, double-blinded, randomised, placebo-controlled trial with a 1:1 allocation ratio. Patients of both sexes, aged ≥65 years, who are admitted to the emergency department and will undergo hip fracture surgery are eligible for enrolment. Eligible patients who provide their consent will be stratified according to the type of fracture (intracapsular and extracapsular) and whether or not they are suitable for intravenous TXA therapy, and they will then be randomly allocated to receive either TXA or a placebo. The primary outcome is the blood transfusion rate from patient admission to the emergency department until discharge, while the secondary outcomes include: the preoperative, perioperative and postoperative haemoglobin and haematocrit levels; the preoperative and postoperative occult and total blood loss; the mean length of hospital stay; and any adverse events assessed for up to 1 year after patient discharge.\nETHICS AND DISSEMINATION: The study was approved by the Basque Country Ethics Committee (Ref.: 2021012) and the Spanish Agency for Medicines and Healthcare Products (Agencia Española de Medicamentos y Productos Sanitarios). All participants will provide their written informed consent prior to study inclusion. The trial's results, regardless of its outcomes, will be disseminated through presentations at scientific conferences and publication in peer-reviewed journals, and they will be made publicly available through the European Union Clinical Trials Register after the end of the clinical trial.\nTRIAL REGISTRATION NUMBERS: EudraCT Number 2020-002144-23; EUCT Number 2024-519349-31-00.",
+      "authors": [
+        "Arrieta J",
+        "De La Herran G",
+        "Mínguez Cabeza LA",
+        "Fernández González MI",
+        "Revilla Guarinos MT"
+      ],
+      "journal": "BMJ open",
+      "pubDate": "2026-Jun-12",
+      "publicationTypes": [
+        "Journal Article",
+        "Clinical Trial Protocol"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Tranexamic Acid",
+        "Hip Fractures",
+        "Double-Blind Method",
+        "Antifibrinolytic Agents",
+        "Blood Transfusion",
+        "Spain",
+        "Blood Loss, Surgical",
+        "Female",
+        "Randomized Controlled Trials as Topic",
+        "Anemia",
+        "Aged"
+      ],
+      "keywords": [
+        "ACCIDENT & EMERGENCY MEDICINE",
+        "Hip",
+        "Orthopaedic & trauma surgery",
+        "Randomized Controlled Trial"
+      ],
+      "doi": "10.1136/bmjopen-2025-108380",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42285569/",
+      "collectedAt": "2026-06-22T11:22:13.584Z",
+      "screeningData": {
+        "score": 12,
+        "relevanceMatches": [
+          "emergency department",
+          "emergency medicine",
+          "trauma"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": null,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, emergency medicine, trauma",
+          "study design: Randomized Controlled Trial",
+          "journal boost: BMJ open"
         ],
         "exclude": false,
         "excludeReason": ""
@@ -342,7 +707,7 @@
       "doi": "10.3389/fpubh.2026.1837412",
       "pmcid": "PMC13268985",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42311997/",
-      "collectedAt": "2026-06-22T11:03:26.528Z",
+      "collectedAt": "2026-06-22T11:22:05.732Z",
       "screeningData": {
         "score": 12,
         "relevanceMatches": [
@@ -406,7 +771,7 @@
       "doi": "10.1136/bmjopen-2025-113082",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315266/",
-      "collectedAt": "2026-06-22T11:03:23.515Z",
+      "collectedAt": "2026-06-22T11:22:04.016Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -467,7 +832,7 @@
       "doi": "10.1136/bmjopen-2026-117133",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315260/",
-      "collectedAt": "2026-06-22T11:03:23.515Z",
+      "collectedAt": "2026-06-22T11:22:04.016Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -483,6 +848,70 @@
           "study design: Observational",
           "sample size signal: N=567",
           "journal boost: BMJ open"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42303309",
+      "title": "Development and validation of LPCPIS: an integrated clinical, biomarker and lung ultrasound score for the diagnosis of ventilator-associated pneumonia.",
+      "abstract": "OBJECTIVES: To evaluate whether the performance of the modified Clinical Pulmonary Infection Score (CPIS) for diagnosis of ventilator-associated pneumonia (VAP) could be improved by incorporating procalcitonin (PCT), lactate and a standardised lung ultrasound score (LUS).\nDESIGN: Prospective observational study.\nSETTING: Internal medicine and respiratory intensive care units (ICUs) of a tertiary care centre in India over 18 months.\nPARTICIPANTS: 97 adult patients receiving invasive mechanical ventilation for 48 hours or more with suspected VAP.\nPRIMARY AND SECONDARY OUTCOME MEASURES: The primary outcome was the diagnostic accuracy (area under the receiver operating characteristic curve (AUC)) of the integrated score compared with a reference standard of quantitative bronchoalveolar lavage culture (>10 CFU/mL). Secondary outcomes included ICU length of stay and 14-day mortality.\nRESULTS: Of the 97 patients, 70 (72.2%) were culture positive. The modified CPIS alone demonstrated limited diagnostic utility (AUC 0.686). In contrast, the novel 4-point Lactate-Lung Ultrasound-Procalcitonin-Clinical Pulmonary Infection Score (LPCPIS) score (integrating CPIS >5, lactate >2.15 mmol/L, PCT >1.3 ng/mL and LUS >14) achieved excellent discriminatory ability (AUC 0.919, 95% CI 0.844 to 0.976). At a cut-off of ≥2, the score yielded 95.7% sensitivity and 77.8% specificity. Crucially, a 4-point LPCPIS bedside score of ≤1 was associated with a highly diminished probability of VAP, yielding a negative predictive value of 100% in this cohort. In comparison, a score ≥3 strongly indicated a high likelihood of VAP, with a positive predictive value of 96.5% and specificity of 92.6%, pending definitive microbiological confirmation.\nCONCLUSIONS: The novel 4-point LPCPIS bedside score demonstrates significant diagnostic superiority over the traditional modified CPIS (AUC 0.919 vs 0.686). By integrating bedside lung ultrasound with biomarkers, this simplified pragmatic tool provides impressive discriminatory power, allowing clinicians in resource-limited settings to reliably assess probability of VAP and guide early antimicrobial decision-making while awaiting definitive microbiological cultures.",
+      "authors": [
+        "Sharma A",
+        "Bairwa M",
+        "Angural Y",
+        "Heera Lal K",
+        "Makkar A",
+        "Sharma P",
+        "Kant R"
+      ],
+      "journal": "BMJ open respiratory research",
+      "pubDate": "2026-Jun-15",
+      "publicationTypes": [
+        "Journal Article",
+        "Observational Study",
+        "Validation Study"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Pneumonia, Ventilator-Associated",
+        "Prospective Studies",
+        "Biomarkers",
+        "Ultrasonography",
+        "Male",
+        "Procalcitonin",
+        "Female",
+        "Middle Aged",
+        "Lung",
+        "Intensive Care Units",
+        "India"
+      ],
+      "keywords": [
+        "Palliative Care",
+        "Patient Outcome Assessment",
+        "Respiratory Infection"
+      ],
+      "doi": "10.1136/bmjresp-2025-004085",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42303309/",
+      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "screeningData": {
+        "score": 11,
+        "relevanceMatches": [
+          "intensive care",
+          "ICU",
+          "mechanical ventilation"
+        ],
+        "studyType": "Observational",
+        "sampleSize": 97,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: intensive care, ICU, mechanical ventilation",
+          "study design: Observational",
+          "sample size signal: N=97",
+          "journal boost: BMJ open respiratory research"
         ],
         "exclude": false,
         "excludeReason": ""
@@ -526,7 +955,7 @@
       "doi": "10.1001/jamanetworkopen.2026.18896",
       "pmcid": "PMC13280705",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313385/",
-      "collectedAt": "2026-06-22T11:03:25.027Z",
+      "collectedAt": "2026-06-22T11:22:04.779Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -540,6 +969,72 @@
           "topic match: trauma",
           "study design: Randomized Controlled Trial",
           "journal boost: JAMA network open"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42285729",
+      "title": "The Influence of Hypocalcaemia on Trauma Patients Experiencing Post-Induction Hypotension: A Retrospective Observational Study.",
+      "abstract": "OBJECTIVE: Hypocalcaemia is a common electrolyte disturbance in major trauma patients, particularly those with haemorrhagic shock. Trauma patients are often intubated as part of their care, which can result in post-induction hypotension. We aimed to estimate the effect of hypocalcaemia on post-induction hypotension.\nMETHODS: We conducted a retrospective observational study of trauma patients ≥ 18 years old intubated in a tertiary Australian Emergency Department between 1st January 2020 and 30th September 2024. Epidemiological and clinical management data were extracted to estimate the effect of hypocalcaemia on outcomes.\nRESULTS: Of 478 eligible patients, 151 had available haemodynamic and calcium measurements. Post-induction hypotension occurred in 38/47 (81%) of hypocalcaemic and 69/104 (66%) of non-hypocalcaemic patients. Hypocalcaemia was associated with higher odds of post-induction hypotension (adjusted odds ratio [aOR] 2.15, 95% confidence interval [CI] 0.84-5.51), with considerable uncertainty in this estimate. Hypocalcaemic patients were more likely to receive red blood cells within 15-min post-induction (OR 2.13, 95% CI 1.12-4.04). Minimal differences were observed in cardiac arrest 15-min post-induction (OR 0.65, 95% CI 0.07-5.73) or mortality at discharge (OR 1.00, 95% CI 0.51-1.97).\nCONCLUSIONS: Hypocalcaemia may be associated with higher odds of post-induction hypotension in trauma patients; however, our findings require corroboration across a larger multi-centre prospective observational study. If corroborated, a randomised controlled trial is warranted to establish the utility of calcium replacement for the prevention of post-induction hypotension.",
+      "authors": [
+        "Kwok A",
+        "Selman C",
+        "Gumm K",
+        "Read DJ",
+        "Douglas N",
+        "Bourke EM"
+      ],
+      "journal": "Emergency medicine Australasia : EMA",
+      "pubDate": "2026-Jun",
+      "publicationTypes": [
+        "Journal Article",
+        "Observational Study"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Hypocalcemia",
+        "Retrospective Studies",
+        "Female",
+        "Hypotension",
+        "Male",
+        "Adult",
+        "Middle Aged",
+        "Wounds and Injuries",
+        "Australia",
+        "Aged",
+        "Emergency Service, Hospital"
+      ],
+      "keywords": [
+        "airway",
+        "hypocalcaemia",
+        "induction agent",
+        "intubation",
+        "post‐induction hypotension"
+      ],
+      "doi": "10.1111/1742-6723.70300",
+      "pmcid": "PMC13263128",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42285729/",
+      "collectedAt": "2026-06-22T11:22:13.584Z",
+      "screeningData": {
+        "score": 11,
+        "relevanceMatches": [
+          "emergency department",
+          "emergency medicine",
+          "ICU",
+          "cardiac arrest",
+          "airway",
+          "intubation",
+          "trauma"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": null,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, emergency medicine, ICU, cardiac arrest",
+          "study design: Randomized Controlled Trial"
         ],
         "exclude": false,
         "excludeReason": ""
@@ -586,7 +1081,7 @@
       "doi": "10.14712/23362936.2026.12",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319050/",
-      "collectedAt": "2026-06-22T11:03:23.513Z",
+      "collectedAt": "2026-06-22T11:22:04.015Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -649,7 +1144,7 @@
       "doi": "10.1177/17539447261457542",
       "pmcid": "PMC13272861",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42304606/",
-      "collectedAt": "2026-06-22T11:03:29.253Z",
+      "collectedAt": "2026-06-22T11:22:07.440Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -664,6 +1159,65 @@
           "topic match: critical care, intensive care",
           "study design: Practice Guideline",
           "sample size signal: N=3267"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42281541",
+      "title": "[Association between central venous pressure trajectories and 28-day mortality risk in ICU patients with acute kidney injury].",
+      "abstract": "OBJECTIVE: To explore the relationship between the trajectory of central venous pressure (CVP) changes and the 28-day mortality risk in patients with acute kidney injury (AKI) in the intensive care unit (ICU).\nMETHODS: A retrospective cohort study was conducted. Patients admitted to the emergency department and general ICU of the Affiliated Hospital of Guizhou Medical University within 48 hours of diagnosis with AKI from January 2021 to December 2024 were enrolled. The CVP values measured every 2 hours within 48 hours of admission were collected. The group-based trajectory model (GBTM) was used to identify research subjects with similar CVP development trajectories within the group and they were assigned to specific CVP trajectory groups. The difference in 28-day cumulative survival rate of patients in different CVP trajectory groups was compared using the Kaplan-Meier survival curve, and the impact of CVP trajectory on 28-day mortality risk was evaluated using multivariate Cox proportional hazards regression analysis. The dose-response relationship between CVP average value and 28-day mortality risk in AKI patients was analyzed using the restricted cubic spline (RCS) method. Subgroup analysis was conducted based on age, gender, comorbidities, and treatment interventions to evaluate the prognostic effect of CVP on different patient subgroups.\nRESULTS: A total of 409 patients with AKI were included. Four CVP trajectories were identified using GBTM analysis, namely: the initial CVP level was low and gradually increased (low level group, 98 cases, accounting for 24.0%); the initial CVP level was moderate and gradually increased (moderate level group, 168 cases, accounting for 41.1%); the initial CVP level was between moderate and high and gradually increased (medium-high level group, 102 cases, accounting for 24.9%); the initial CVP level was high and gradually increased before gradually decreasing (high level group, 41 cases, accounting for 10.0%). There were no significant differences in gender, age, body temperature, pulse, respiratory rate, systolic blood pressure, and comorbidities among the four groups. However, the admission blood oxygen saturation and blood sodium were the lowest in the high-level group, and the in-hospital mortality, the proportions of blood purification treatment and invasive mechanical ventilation were the highest in this group. The length of ICU stay was the shortest in the low-level group. The Kaplan-Meier survival curve showed that there was a statistically significant difference in the 28-day cumulative survival rate among the four CVP trajectory groups (Log-rank test: χ =9.258, P=0.026), and the 28-day cumulative survival rate of the high-level group was the lowest. Multivariate Cox proportional hazards regression analysis showed that, after adjusting for gender, age, comorbidities, admission vital signs, and test results, the 28-day mortality risk of the high-level group was higher than that of the low-level group [hazard ratio (HR)=2.02, 95% confidence interval (95%CI) was 1.15-3.55, P=0.014]. The RCS curve indicated that the average value of CVP monitoring at intervals of 2 hours within 48 hours after admission was linearly positively correlated with the 28-day mortality of patients. When CVP≥11.33 mmHg (1 mmHg=0.133 kPa), the mortality risk gradually increased with the increase in CVP. The Kaplan-Meier survival curve showed that the 28-day cumulative survival rate of patients in the CVP≥11.33 mmHg group was lower than that in the CVP<11.33 mmHg group (Log-rank test: χ =4.658, P=0.031). Subgroup analysis showed that the linear positive correlation between the CVP average value and the 28-day mortality still existed in AKI patients who were male, hypotensive, or using vasoactive drugs (all P<0.05).\nCONCLUSIONS: The trajectory of CVP changes in AKI patients in the ICU is closely related to the 28-day mortality risk. Dynamic monitoring of CVP can effectively identify high-risk patients with poor prognosis.",
+      "authors": [
+        "Lan S",
+        "Deng S",
+        "Huang R",
+        "Dong Y",
+        "Wang L",
+        "Zhang L",
+        "Fu J"
+      ],
+      "journal": "Zhonghua wei zhong bing ji jiu yi xue",
+      "pubDate": "2026-May",
+      "publicationTypes": [
+        "English Abstract",
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Acute Kidney Injury",
+        "Retrospective Studies",
+        "Intensive Care Units",
+        "Central Venous Pressure",
+        "Male",
+        "Female",
+        "Prognosis",
+        "Middle Aged",
+        "Aged",
+        "Risk Factors",
+        "Proportional Hazards Models"
+      ],
+      "keywords": [],
+      "doi": "10.3760/cma.j.cn121430-20250929-00499",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42281541/",
+      "collectedAt": "2026-06-22T11:22:14.390Z",
+      "screeningData": {
+        "score": 10,
+        "relevanceMatches": [
+          "emergency department",
+          "intensive care",
+          "ICU",
+          "mechanical ventilation"
+        ],
+        "studyType": "Observational",
+        "sampleSize": 409,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, intensive care, ICU, mechanical ventilation",
+          "study design: Observational",
+          "sample size signal: N=409"
         ],
         "exclude": false,
         "excludeReason": ""
@@ -712,7 +1266,7 @@
       "doi": "10.1007/s11302-026-10172-4",
       "pmcid": "PMC13282434",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319606/",
-      "collectedAt": "2026-06-22T11:03:22.220Z",
+      "collectedAt": "2026-06-22T11:22:02.737Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -774,7 +1328,7 @@
       "doi": "10.2196/86652",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308517/",
-      "collectedAt": "2026-06-22T11:03:26.528Z",
+      "collectedAt": "2026-06-22T11:22:05.733Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -789,6 +1343,306 @@
           "topic match: intensive care, mechanical ventilation",
           "study design: Practice Guideline",
           "sample size signal: N=508"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42303391",
+      "title": "Data from a UK-based multicentre randomised feasibility study investigating the management of post-traumatic benign paroxysmal positional vertigo: mixed-methods analyses.",
+      "abstract": "OBJECTIVES: Traumatic brain injury commonly causes dizziness and balance problems. Benign paroxysmal positional vertigo (BPPV) is the most frequent cause of inner-ear related post-traumatic vestibular dysfunction. However, optimal assessment and treatment practices are poorly evidenced. Using a mixed methods approach, we aimed to explore the feasibility of managing post-traumatic BPPV.\nDESIGN: A mixed-methods randomised feasibility study. In this paper, quantitative and qualitative data relating to key feasibility targets around recruitment, randomisation and assessment and treatment were selected and integrated to provide an in-depth understanding of BPPV management.\nSETTING: Three UK major trauma centres PARTICIPANTS: Hospitalised adults with post-traumatic BPPV.\nINTERVENTIONS: Patients were randomised to one of three interventions (repositioning manoeuvres, Brandt-Daroff exercises and advice).\nRESULTS: Screening and recruitment varied between sites due to individual and site-specific factors. Randomisation to advice was experienced differently by healthcare professionals and patients, suggesting that changes to the study design of a future effectiveness trial may be required. Assessment and treatment were acceptable to participants, supporting advancement to an effectiveness trial.\nCONCLUSIONS: Integration of qualitative and quantitative data revealed new findings relating to the primary outcomes of the feasibility study, while strengths and weaknesses of the trial design were also elucidated. Taken together, such data will influence and enhance the design of a future trial.\nTRIAL REGISTRATION NUMBER: ISRCTN91943864.",
+      "authors": [
+        "Smith RM",
+        "Sahu B",
+        "Burgess C",
+        "Beattie J",
+        "Newdick A",
+        "Tahtis V",
+        "Corcoran J",
+        "Marsden J"
+      ],
+      "journal": "BMJ open",
+      "pubDate": "2026-Jun-16",
+      "publicationTypes": [
+        "Journal Article",
+        "Multicenter Study",
+        "Randomized Controlled Trial"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Feasibility Studies",
+        "Benign Paroxysmal Positional Vertigo",
+        "United Kingdom",
+        "Female",
+        "Adult",
+        "Middle Aged",
+        "Male",
+        "Brain Injuries, Traumatic",
+        "Patient Positioning",
+        "Exercise Therapy",
+        "Aged"
+      ],
+      "keywords": [
+        "Brain Injuries",
+        "Feasibility Studies",
+        "Neurotology",
+        "Rehabilitation medicine"
+      ],
+      "doi": "10.1136/bmjopen-2026-117657",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42303391/",
+      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "screeningData": {
+        "score": 10,
+        "relevanceMatches": [
+          "trauma"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": null,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: trauma",
+          "study design: Randomized Controlled Trial",
+          "journal boost: BMJ open"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42301409",
+      "title": "Prehospital endotracheal intubation and 30-day survival in severe trauma: a matched cohort study from Navarra, Spain.",
+      "abstract": "PURPOSE: Prehospital endotracheal intubation (ETI) is frequently used in major trauma, but its association with 30-day survival remains debated. We evaluated the association between prehospital ETI and 30-day survival and assessed whether sex modifies the age-related increase in mortality risk.\nMETHODS: We conducted a retrospective cohort study using the Navarra Major Trauma Registry (2010-2019). Patients aged ≥15 years with New Injury Severity Score (NISS) ≥15 were included; patients who died before hospital admission or had incomplete records were excluded. To mitigate confounding by indication, intubated and non-intubated patients were matched 1:1 using prehospital Glasgow Coma Scale (GCS), respiratory distress, and prehospital cardiac arrest as matching variables. Because the proportional hazards assumption for Cox regression was not met, parametric Weibull survival models were fitted, including a sex-by-age interaction term.\nRESULTS: Overall, 1,909 patients were included; 212 (11.1%) underwent prehospital ETI. Matching yielded 190 pairs (n=380). In the matched cohort, prehospital ETI was not independently associated with 30-day survival (adjusted HR 0.91, 95% CI 0.65-1.27). Mortality risk was independently associated with lower GCS (per 1-point increase: HR 0.86, 95% CI 0.82-0.91) and respiratory distress (HR 7.63, 95% CI 4.34-13.4). A significant sex-by-age interaction was observed (HR 1.02, 95% CI 1.01-1.04).\nCONCLUSION: In this matched registry cohort, prehospital ETI was not independently associated with improved 30-day survival. Sex- and age-related heterogeneity supports the incorporation of sex-informed analyses when evaluating trauma outcomes and prehospital airway management.",
+      "authors": [
+        "Zulet Murillo D",
+        "Ferraz Torres M",
+        "Fortún Moral M",
+        "Belzunegui Otano T",
+        "Tamayo Rodríguez I"
+      ],
+      "journal": "European journal of trauma and emergency surgery : official publication of the European Trauma Society",
+      "pubDate": "2026-Jun-16",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Male",
+        "Female",
+        "Intubation, Intratracheal",
+        "Retrospective Studies",
+        "Spain",
+        "Emergency Medical Services",
+        "Adult",
+        "Middle Aged",
+        "Wounds and Injuries",
+        "Injury Severity Score",
+        "Registries"
+      ],
+      "keywords": [
+        "Endotracheal intubation",
+        "Prehospital care",
+        "Severe trauma",
+        "Sex differences",
+        "Survival"
+      ],
+      "doi": "10.1007/s00068-026-03234-0",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42301409/",
+      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "screeningData": {
+        "score": 10,
+        "relevanceMatches": [
+          "cardiac arrest",
+          "airway",
+          "intubation",
+          "trauma"
+        ],
+        "studyType": "Observational",
+        "sampleSize": 380,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: cardiac arrest, airway, intubation, trauma",
+          "study design: Observational",
+          "sample size signal: N=380"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42298088",
+      "title": "Drug-induced sleep endoscopy in obstructive sleep apnea: a systematic review and meta-analysis of sedative agents, monitoring methods, and administration techniques.",
+      "abstract": "BACKGROUND: Drug-induced sleep endoscopy (DISE) enables direct visualization of upper airway collapse patterns in obstructive sleep apnea (OSA) patients, but inconsistencies in sedative selection, monitoring methods, and administration techniques may affect result reproducibility. This meta-analysis evaluates how these factors influence complete collapse rates according to VOTE classification.\nMETHODS: Systematic searches of PubMed, Embase, and Cochrane Library identified studies performing DISE in OSA patients using single sedative agents (propofol, dexmedetomidine, or midazolam) with VOTE classification outcomes. Pooled collapse rates were estimated using generalized linear mixed models (GLMMs) with logit transformation. Univariate and multivariate metaregression analyses explored associations between sedative type, bispectral index (BIS) monitoring, drug administration method, body mass index (BMI), and collapse patterns.\nRESULTS: Twenty-two studies involving 3478 patients were included. Pooled complete collapse rates were velum 73.7% (95% CI 66.3-80.0), tongue base 40.6% (32.3-49.5), oropharynx 30.6% (24.6-38.4), and epiglottis 24.7% (17.3-34.0). Sedative type showed no significant association with collapse rates at any site (all PQM > 0.05). BIS monitoring was independently associated with reduced tongue base collapse (coefficient = - 1.39, p = 0.002), while BMI significantly predicted velum collapse (coefficient = 0.40, p < 0.001). Continuous infusion showed borderline significance at the oropharynx (P = 0.059). Significant publication bias at the epiglottis adjusted collapse rates from 24.7 to 47%; however, this adjustment may reflect definitional heterogeneity.\nCONCLUSIONS: DISE outcomes are more influenced by sedation depth monitoring and patient anatomy than sedative choice. BIS monitoring should be prioritized for tongue base assessment, while BMI-driven velum collapse reflects anatomical factors. Standardized protocols emphasizing objective monitoring may enhance DISE reliability.",
+      "authors": [
+        "Sung C",
+        "Kim HC",
+        "Lee HB",
+        "Heo SJ",
+        "Yang H",
+        "Lim SC"
+      ],
+      "journal": "Journal of clinical sleep medicine : JCSM : official publication of the American Academy of Sleep Medicine",
+      "pubDate": "2026-Jun-15",
+      "publicationTypes": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Review",
+        "Research Support, Non-U.S. Gov't"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Sleep Apnea, Obstructive",
+        "Hypnotics and Sedatives",
+        "Endoscopy",
+        "Propofol"
+      ],
+      "keywords": [
+        "Bispectral index monitoring",
+        "Drug-induced sleep endoscopy",
+        "Obstructive sleep apnea",
+        "Upper airway obstruction",
+        "VOTE classification"
+      ],
+      "doi": "10.1007/s44470-026-00105-8",
+      "pmcid": "PMC13269594",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42298088/",
+      "collectedAt": "2026-06-22T11:22:09.896Z",
+      "screeningData": {
+        "score": 10,
+        "relevanceMatches": [
+          "airway"
+        ],
+        "studyType": "Meta-Analysis",
+        "sampleSize": 3478,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: airway",
+          "study design: Meta-Analysis",
+          "sample size signal: N=3478"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42287451",
+      "title": "Antibiotic prophylaxis before shock wave lithotripsy in patients with sterile urine: a systematic review and meta-analysis.",
+      "abstract": "Whether routine antibiotic prophylaxis (AP) should be administered before shockwave lithotripsy (SWL) in patients with sterile urine remains controversial. We aimed to evaluate the effect of AP in this population. We systematically searched Web of Science, Embase, the Cochrane Library, and PubMed through November 20, 2025. The primary outcome was the composite overall infection risk, and secondary outcomes included symptomatic urinary tract infection (UTI), asymptomatic bacteriuria (AB), pyelonephritis, and sepsis. Ten randomized controlled trials involving 3,298 patients were included. AP did not significantly reduce the composite overall infection risk (RR, 0.82; 95% CI, 0.54-1.25; p = 0.35) or AB (RR, 0.80; 95% CI, 0.57-1.13; p = 0.21), but reduced symptomatic UTI (RR, 0.53; 95% CI, 0.29-0.97; p = 0.04). In the only trial reporting pyelonephritis, AP reduced the of pyelonephritis (RR, 0.05; 95% CI, 0.003-0.93; p = 0.04). No sepsis events were reported. Prediction interval and TSA analyses indicated that the symptomatic UTI finding was not definitive. These findings do not support routine universal prophylaxis in all patients with sterile urine undergoing SWL, but may support individualized use in selected patients after considering baseline infection risk, antimicrobial resistance, and antimicrobial stewardship.",
+      "authors": [
+        "Tuo X",
+        "Liu X",
+        "Chen L",
+        "Wen J",
+        "Xiang L",
+        "Liao B",
+        "Wang K",
+        "Jin X"
+      ],
+      "journal": "Urolithiasis",
+      "pubDate": "2026-Jun-13",
+      "publicationTypes": [
+        "Systematic Review",
+        "Journal Article",
+        "Meta-Analysis",
+        "Review"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Lithotripsy",
+        "Antibiotic Prophylaxis",
+        "Urinary Tract Infections",
+        "Pyelonephritis",
+        "Randomized Controlled Trials as Topic",
+        "Bacteriuria",
+        "Anti-Bacterial Agents",
+        "Sepsis",
+        "Urine"
+      ],
+      "keywords": [
+        "Antibiotic prophylaxis",
+        "Lithotripsy",
+        "Urinary tract infection"
+      ],
+      "doi": "10.1007/s00240-026-02016-y",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42287451/",
+      "collectedAt": "2026-06-22T11:22:12.755Z",
+      "screeningData": {
+        "score": 10,
+        "relevanceMatches": [
+          "sepsis"
+        ],
+        "studyType": "Meta-Analysis",
+        "sampleSize": 3298,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: sepsis",
+          "study design: Meta-Analysis",
+          "sample size signal: N=3298"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42299597",
+      "title": "The prognostic utility of HDL as a biomarker for sepsis or septic shock: A systematic review and meta-analysis.",
+      "abstract": "BACKGROUND: We systematically reviewed and meta-analyzed prospective observational evidence on the association between circulating high-density lipoprotein (HDL) levels and short-term mortality in adult patients with sepsis or septic shock.\nMETHODS: The databases of PubMed, EMBASE, Cochrane Library, CBM, CNKI, Wanfang and VIP were searched for all the studies. RevMan5.4 was used to analyze the sensitivity and heterogeneity and then calculate the combined effect. Funnel plots were applied to evaluate the publication bias of the included studies.\nRESULTS: A total of 9 studies were included and synthesized in the analysis. 867 patients were divided into the survival group (n = 562) and the death group (n = 305). The results showed that the HDL levels increased in sepsis survivors compared to non-survivors (standardized mean difference = 4.67, 95% confidence interval = 1.01-8.34, Z = 2.50, P = .01, I2 = 52%). There were higher levels of low-density lipoprotein (LDL) and cholesterol among patients in the survival group than among those in the death group. The triglycerides levels had no significant difference between the 2 groups. Sensitivity analysis indicated that the results were stable. The funnel plot showed that the effect points of the 9 studies were roughly in the form of \"inverted funnels.\"\nCONCLUSION: Lower HDL levels measured early in sepsis are associated with higher short-term mortality, but the current evidence is observational and of low certainty. HDL may be useful as an adjunctive risk stratification marker rather than a stand-alone decision tool, and its therapeutic relevance requires prospective validation.",
+      "authors": [
+        "Wang Y",
+        "Han F",
+        "Lou L",
+        "Wang S",
+        "Yang C"
+      ],
+      "journal": "Medicine",
+      "pubDate": "2026-Jun-12",
+      "publicationTypes": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Biomarkers",
+        "Sepsis",
+        "Prognosis",
+        "Shock, Septic",
+        "Lipoproteins, HDL",
+        "Triglycerides",
+        "Prospective Studies"
+      ],
+      "keywords": [
+        "HDL",
+        "Lipoproteins",
+        "Mortality",
+        "Sepsis"
+      ],
+      "doi": "10.1097/MD.0000000000049261",
+      "pmcid": "PMC13268517",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42299597/",
+      "collectedAt": "2026-06-22T11:22:09.099Z",
+      "screeningData": {
+        "score": 10,
+        "relevanceMatches": [
+          "sepsis",
+          "septic shock"
+        ],
+        "studyType": "Meta-Analysis",
+        "sampleSize": 562,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: sepsis, septic shock",
+          "study design: Meta-Analysis",
+          "sample size signal: N=562"
         ],
         "exclude": false,
         "excludeReason": ""
@@ -832,7 +1686,7 @@
       "doi": "10.1001/jamanetworkopen.2026.18199",
       "pmcid": "PMC13276627",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307949/",
-      "collectedAt": "2026-06-22T11:03:27.871Z",
+      "collectedAt": "2026-06-22T11:22:06.569Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -893,7 +1747,7 @@
       "doi": "10.1080/0886022X.2026.2677246",
       "pmcid": "PMC13276809",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42309977/",
-      "collectedAt": "2026-06-22T11:03:26.528Z",
+      "collectedAt": "2026-06-22T11:22:05.733Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -947,7 +1801,7 @@
       "doi": "10.62675/2965-2774.20260345",
       "pmcid": "PMC13155771",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307312/",
-      "collectedAt": "2026-06-22T11:03:27.871Z",
+      "collectedAt": "2026-06-22T11:22:06.569Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1007,7 +1861,7 @@
       "doi": "10.62675/2965-2774.20260262",
       "pmcid": "PMC13155772",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307310/",
-      "collectedAt": "2026-06-22T11:03:27.871Z",
+      "collectedAt": "2026-06-22T11:22:06.569Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1023,6 +1877,56 @@
           "abstract available",
           "topic match: critical care, intensive care, sepsis, septic shock",
           "study design: Practice Guideline"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42280906",
+      "title": "VISIOCPR: Monocular Vision-Based CPR Training System with Human-Computer Collaborative Feedback.",
+      "abstract": "High-quality cardiopulmonary resuscitation (CPR) aims at saving lives in time-critical emergencies, which requires correct compression rate, depth, and hand placement. However, due to the high cost and environmental constraints of sensor-equipped manikins or dedicated hardware, it is unrealistic to deploy these devices in ordinary training settings. For monocular vision-based methods, estimating compression depth without direct depth signals and tracking hands under severe overlap are difficult. To address these problems, this paper proposes VISIOCPR, a monocular vision-based CPR training system with human-computer collaborative feedback, which provides quantitative CPR coaching using only a standard RGB camera. To address the inherent visual constraints, the system integrates a tiered compression-point detector that maintains robust tracking continuity despite severe hand overlap and motion blur. Furthermore, it recovers accurate metric depth without attached markers through a fused calibration scheme, which combines an empirical baseline, a reference-object measurement, and visible body proportions. A randomized controlled study (n=40) showed that participants trained with VISIOCPR achieved higher simultaneous compliance and reached competency faster than the control group under the tested setting.",
+      "authors": [
+        "Li A",
+        "Lu W"
+      ],
+      "journal": "Sensors (Basel, Switzerland)",
+      "pubDate": "2026-May-27",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Cardiopulmonary Resuscitation",
+        "Feedback",
+        "Vision, Monocular",
+        "Manikins"
+      ],
+      "keywords": [
+        "cardiopulmonary resuscitation",
+        "human–computer interaction",
+        "medical training",
+        "monocular depth estimation",
+        "real-time feedback"
+      ],
+      "doi": "10.3390/s26113388",
+      "pmcid": "PMC13258953",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42280906/",
+      "collectedAt": "2026-06-22T11:22:14.390Z",
+      "screeningData": {
+        "score": 9,
+        "relevanceMatches": [
+          "ICU",
+          "resuscitation"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 40,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: ICU, resuscitation",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=40"
         ],
         "exclude": false,
         "excludeReason": ""
@@ -1069,7 +1973,7 @@
       "doi": "10.1136/bmjopen-2025-107409",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315273/",
-      "collectedAt": "2026-06-22T11:03:23.515Z",
+      "collectedAt": "2026-06-22T11:22:04.016Z",
       "screeningData": {
         "score": 9,
         "relevanceMatches": [
@@ -1088,898 +1992,8 @@
         "exclude": false,
         "excludeReason": ""
       }
-    },
-    {
-      "pmid": "42304418",
-      "title": "The PAPER heuristic: a structured cognitive aid to reduce intrinsic cognitive load in early clinical reasoning training.",
-      "abstract": "BACKGROUND: Clinical reasoning is a key competency in undergraduate medical education but is often taught implicitly. Structured approaches such as acronyms may help support students in developing this skill, especially in complex or high-stakes situations. The acronym PAPER (Patient, details of Acute situation, relevant Past medical History, Estimate the situation, Recommendations) was developed to provide a simple and structured framework to support clinical reasoning.\nMETHODS: The acronym was developed through a three-round Delphi process with clinical experts in emergency medicine, anaesthesiology, and trauma surgery. It was piloted in a single-blind, simulation-based study with 290 medical students in either their fourth clinical semester or final year. Students were randomised to either an intervention group, which received a 20-minute introduction to clinical reasoning and the acronym before simulation training, or a control group, which received standard simulation alone. The outcomes included clinical performance, nontechnical skills, and cognitive load, which were assessed via blinded raters and validated self-report questionnaires.\nRESULTS: No significant differences in clinical performance were found between the intervention and control groups. However, among fourth-semester students, the intervention group reported a significantly lower intrinsic cognitive load than did the control group. The final-year students generally reported better scores in teamwork and decision-making but reported lower germane cognitive loads than their junior peers did. The effect of the intervention appeared to be influenced by the students' training stage.\nCONCLUSIONS: While the acronym did not improve overall clinical performance, it was associated with a reduced intrinsic cognitive load in less experienced students. Introducing structured clinical reasoning tools earlier in the curriculum may help learners process clinical scenarios more effectively. Timing appears to be an important factor in the success of such interventions and should be considered in curriculum development.",
-      "authors": [
-        "Gebauer M",
-        "Herbstreit F",
-        "Brenner T",
-        "Benson S",
-        "Szalai C"
-      ],
-      "journal": "BMC medical education",
-      "pubDate": "2026-Jun-16",
-      "publicationTypes": [
-        "Journal Article",
-        "Randomized Controlled Trial"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Clinical Reasoning",
-        "Clinical Competence",
-        "Education, Medical, Undergraduate",
-        "Single-Blind Method",
-        "Delphi Technique",
-        "Male",
-        "Cognition",
-        "Female",
-        "Simulation Training",
-        "Students, Medical",
-        "Adult"
-      ],
-      "keywords": [
-        "Clinical reasoning",
-        "Cognitive aid",
-        "Cognitive load",
-        "Curriculum timing",
-        "Delphi method",
-        "Emergency medicine education",
-        "Medical education",
-        "Non-technical skills",
-        "Simulation-based learning",
-        "Undergraduate medical education"
-      ],
-      "doi": "10.1186/s12909-026-09639-0",
-      "pmcid": "PMC13282858",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42304418/",
-      "collectedAt": "2026-06-22T11:03:29.253Z",
-      "screeningData": {
-        "score": 9,
-        "relevanceMatches": [
-          "emergency medicine",
-          "ICU",
-          "trauma"
-        ],
-        "studyType": "Randomized Controlled Trial",
-        "sampleSize": null,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: emergency medicine, ICU, trauma",
-          "study design: Randomized Controlled Trial"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42306438",
-      "title": "Point-of-Care Ultrasound Guidelines From Family Medicine, Emergency Medicine, and Internal Medicine for Curriculum Development: A Narrative Review.",
-      "abstract": "BACKGROUND: Family medicine (FM) and emergency medicine (EM) have Accreditation Council for Graduate Medical Education-mandated point-of-care ultrasound (POCUS) training. While POCUS has many uses in internal medicine (IM), lack of mandated training has resulted in wide variation and lack of standardization in graduate medical education (GME) curricula.\nOBJECTIVE: To perform a narrative review asking the questions: what are the recommended POCUS curriculum elements across FM, EM, and IM, and how can these inform the development of a more standardized curriculum?\nMETHODS: This narrative review was conducted in March 2024. Authors searched published materials from the following organizations: Canadian Association of Emergency Physicians, American College of Emergency Physicians, College of Family Physicians of Canada, American Academy of Family Physicians, Canadian Society of Internal Medicine, Society of Hospital Medicine, Society of General Internal Medicine, Alliance for Academic Internal Medicine, and American College of Physicians. Only documents endorsed for POCUS training/education were included. Narrative review was chosen due to the small number and large heterogeneity of documents. All documents were reviewed, and common themes were identified by the authors of the study; they were later compared using a large language model, and authors verified by repeat analysis.\nRESULTS: Nine documents, 2 online courses, and 5 procedural position statements were identified and reviewed. Both authors agreed on the final themes: POCUS uses, basic knowledge and teaching methods for POCUS, image number requirements and competency assessment, and quality control.\nCONCLUSIONS: There is overlap between recommended curricula for POCUS in major organizations. Internal medicine does not have an apparent defined, standardized curriculum for GME.",
-      "authors": [
-        "Nickols J",
-        "Douthit N"
-      ],
-      "journal": "Journal of graduate medical education",
-      "pubDate": "2026-Jun",
-      "publicationTypes": [
-        "Journal Article",
-        "Review"
-      ],
-      "meshTerms": [
-        "Curriculum",
-        "Point-of-Care Systems",
-        "Emergency Medicine",
-        "Internal Medicine",
-        "Ultrasonography",
-        "Humans",
-        "Education, Medical, Graduate",
-        "Family Practice",
-        "Guidelines as Topic",
-        "Canada"
-      ],
-      "keywords": [],
-      "doi": "10.4300/JGME-D-25-00546.1",
-      "pmcid": "PMC13267195",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42306438/",
-      "collectedAt": "2026-06-22T11:03:29.253Z",
-      "screeningData": {
-        "score": 9,
-        "relevanceMatches": [
-          "emergency medicine",
-          "ICU",
-          "point-of-care ultrasound"
-        ],
-        "studyType": "Practice Guideline",
-        "sampleSize": null,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: emergency medicine, ICU, point-of-care ultrasound",
-          "study design: Practice Guideline"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42317981",
-      "title": "Personality traits as behavioral determinants of road traffic injury risk: a mechanism-informed cross-sectional analysis.",
-      "abstract": "BACKGROUND: Road traffic injuries (RTIs) remain a major global public health burden and a leading cause of mortality, particularly among individuals aged 5-29 years. While environmental and infrastructural determinants have been widely studied, the role of individual behavioral predispositions, including personality traits, remains underexplored. This study examines the association between the Big Five personality traits and RTI risk within a behavioral and injury prevention framework.\nMETHODS: A hospital-based cross-sectional study with a case-control analytical framework was conducted in two tertiary centers in Kelantan, Malaysia. Adults aged 18-60 years with RTIs were recruited from emergency departments, while controls were randomly selected from outpatient populations. Personality traits were assessed using the validated Bahasa Malaysia version of the Revised NEO Personality Inventory. A multivariable logistic regression analysis was performed to evaluate the associations between personality traits and RTI risk, adjusting for relevant confounders.\nRESULTS: A total of 425 participants were included (229 RTI cases and 196 controls) in the study. The RTI group demonstrated marked male predominance. The distribution of personality traits was comparable between the groups. In adjusted analyses, agreeableness and neuroticism were significantly associated with an increased risk of RTIs [OR 1.12, 95% CI (1.03-1.21); OR 1.10, 95% CI (1.03-1.18), respectively].\nCONCLUSION: Personality traits may contribute to RTI risk through behavioral mechanisms involving emotional regulation, attention control, and decision-making. These findings support an integrated model of RTI risk incorporating both behavioral and environmental factors, with implications for targeted road safety and public health interventions.",
-      "authors": [
-        "Cheong A",
-        "Nik Ab Rahman NH",
-        "Wan Mohd Zuhdi WHI"
-      ],
-      "journal": "Frontiers in public health",
-      "pubDate": "2026",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Cross-Sectional Studies",
-        "Accidents, Traffic",
-        "Male",
-        "Personality",
-        "Malaysia",
-        "Adult",
-        "Middle Aged",
-        "Case-Control Studies",
-        "Wounds and Injuries",
-        "Female",
-        "Adolescent"
-      ],
-      "keywords": [
-        "Malaysia",
-        "agreeableness",
-        "big five personality",
-        "motor vehicle accident",
-        "neuroticism",
-        "personality trait",
-        "road traffic injury",
-        "trauma"
-      ],
-      "doi": "10.3389/fpubh.2026.1842790",
-      "pmcid": "PMC13274368",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42317981/",
-      "collectedAt": "2026-06-22T11:03:23.513Z",
-      "screeningData": {
-        "score": 9,
-        "relevanceMatches": [
-          "emergency department",
-          "ICU",
-          "trauma"
-        ],
-        "studyType": "Observational",
-        "sampleSize": 425,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: emergency department, ICU, trauma",
-          "study design: Observational",
-          "sample size signal: N=425"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42317427",
-      "title": "An Active-Learning Resuscitation Leadership Curriculum for Emergency Medicine Residents.",
-      "abstract": "INTRODUCTION: Effective leadership during emergency resuscitations is a core competency for emergency medicine physicians and is associated with improved patient outcomes. Despite its importance, formal training is often limited and informal. A needs assessment at our emergency medicine residency revealed gaps in leadership performance, particularly in communication and role delineation, motivating development of a structured curriculum.\nMETHODS: We developed a low-cost, active-learning curriculum for emergency medicine residents across all PGYs using Kern's 6-step framework. Educational objectives focused on resuscitation guidelines, role delineation, and team and situational management. The curriculum included 3 flipped-classroom sessions and 1 gamified review, incorporating case-based discussions and role-playing, delivered from July-December 2024. Impact was evaluated with pre- and postimplementation on-shift Leadership Behavior Description Questionnaire assessments and resident confidence surveys.\nRESULTS: Forty-two residents were eligible; 38 (244 assessments) and 33 (136 assessments) residents contributed pre- and postcurriculum bedside assessments, respectively. Leadership performance improved significantly across multiple objectives ( < .05), with PGY-1 learners demonstrating the largest gains. Survey responses (30 pre, 28 post) showed significantly increased confidence leading resuscitations across all PGY levels ( < .001). Residents valued the interactive and gamified components, highlighting enhanced engagement and exposure to varied leadership strategies.\nDISCUSSION: This low-cost, active-learning curriculum improved emergency medicine residents' resuscitation leadership skills and confidence, particularly among junior learners. Early, structured exposure may foster durable leadership development and enhance team communication. Future work should evaluate the curriculum's longitudinal impact and optimal timing across varied training sites to further refine resuscitation leadership education.",
-      "authors": [
-        "Sobin M",
-        "Prescott P",
-        "Berger D",
-        "Jankowski M",
-        "Turner-Lawrence D",
-        "Todd B"
-      ],
-      "journal": "MedEdPORTAL : the journal of teaching and learning resources",
-      "pubDate": "2026",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Leadership",
-        "Curriculum",
-        "Humans",
-        "Emergency Medicine",
-        "Resuscitation",
-        "Problem-Based Learning",
-        "Internship and Residency",
-        "Surveys and Questionnaires",
-        "Clinical Competence"
-      ],
-      "keywords": [
-        "Active Learning",
-        "Case-Based Learning",
-        "Communication Skills",
-        "Emergency Medicine",
-        "Flipped Classroom",
-        "Games",
-        "Leadership Development",
-        "Resuscitation"
-      ],
-      "doi": "10.15766/mep_2374-8265.11610",
-      "pmcid": "PMC13272583",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42317427/",
-      "collectedAt": "2026-06-22T11:03:23.513Z",
-      "screeningData": {
-        "score": 9,
-        "relevanceMatches": [
-          "emergency medicine",
-          "ICU",
-          "resuscitation"
-        ],
-        "studyType": "Practice Guideline",
-        "sampleSize": null,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: emergency medicine, ICU, resuscitation",
-          "study design: Practice Guideline"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42315277",
-      "title": "Help-seeking and barriers to emergency care during out-of-hospital cardiac arrests in public housing areas: a qualitative study.",
-      "abstract": "INTRODUCTION: Understanding whether socioeconomic and ethnic backgrounds influence help-seeking and communication with emergency medical services (EMS) is essential to mitigate disparities.\nOBJECTIVE: We explored how public housing residents seek help and communicate with EMS, focusing on barriers and enablers to out-of-hospital cardiac arrest (OHCA) recognition and swift EMS responses.\nDESIGN: Explorative qualitative analysis of audio recordings of emergency service calls regarding non-EMS witnessed OHCAs. Audio recordings were screened and selected to ensure call variety-then transcribed and analysed using thematic analysis inspired by the concepts of social wrongs and social orders. We also analysed the dispatch protocol, a tool for managing emergency service calls.\nSETTING: Four public housing areas with >50% ethnic minority residents in Copenhagen, Denmark.\nPARTICIPANTS: Non-EMS witnessed OHCAs from 2017 to 2022.\nRESULTS: We included 17 calls regarding 13 OHCAs and defined two themes. The effective call aligned with the dispatch protocol, leading to swift OHCA recognition and dispatcher-assisted cardiopulmonary resuscitation (CPR). In contrast, the challenging call, which did not match the framework of the dispatch protocol, entailed one or more of the following characteristics, leading to delayed or missed OHCA recognition: (1) multiple people involved (multiple callers, third-party caller or bystanders communicating with caller), (2) language barriers, (3) emotionally unstable callers and (4) lack of emergency medical competencies. Across themes, witnesses contacted someone in their network instead of calling emergency services immediately. This was a barrier to OHCA recognition in the challenging calls, which some dispatchers managed using calm intonation and simple inquiries.\nCONCLUSIONS: We identified two themes concerning communication in emergency service calls from public housing areas: the effective call and the challenging call, resulting in swift or delayed/missed OHCA recognition, respectively. The dispatch protocol enabled swift recognition in the effective calls but was a barrier in the challenging calls. Across themes, witnesses used network-based help-seeking before calling emergency services, delaying EMS responses and dispatcher-assisted CPR.",
-      "authors": [
-        "Juul Grabmayr A",
-        "Kragh AMR",
-        "Kjærholm S",
-        "Sheikh AP",
-        "Østergaard D",
-        "Hassager C",
-        "Folke F",
-        "Tjørnhøj-Thomsen T"
-      ],
-      "journal": "BMJ open",
-      "pubDate": "2026-Jun-18",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Out-of-Hospital Cardiac Arrest",
-        "Female",
-        "Qualitative Research",
-        "Emergency Medical Services",
-        "Denmark",
-        "Male",
-        "Cardiopulmonary Resuscitation",
-        "Middle Aged",
-        "Public Housing",
-        "Aged",
-        "Help-Seeking Behavior"
-      ],
-      "keywords": [
-        "ACCIDENT & EMERGENCY MEDICINE",
-        "Out-of-Hospital Cardiac Arrest",
-        "PUBLIC HEALTH"
-      ],
-      "doi": "10.1136/bmjopen-2025-100597",
-      "pmcid": "",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315277/",
-      "collectedAt": "2026-06-22T11:03:23.515Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "emergency medicine",
-          "resuscitation",
-          "cardiac arrest"
-        ],
-        "studyType": "Other",
-        "sampleSize": null,
-        "journalBoost": 3,
-        "reasons": [
-          "abstract available",
-          "topic match: emergency medicine, resuscitation, cardiac arrest",
-          "journal boost: BMJ open"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42315256",
-      "title": "Clinical outcomes and costs associated with viral lower respiratory tract disease hospitalisations.",
-      "abstract": "BACKGROUND: An updated comprehensive assessment of the burden of hospitalised viral lower respiratory tract disease (LRTD) is especially salient after the COVID-19 pandemic. Therefore, we aimed to comprehensively describe clinical characteristics and outcomes of US adults hospitalised with viral LRTD between 2015 and 2023.\nMETHODS: In this retrospective analysis, adults hospitalised between 1 January 2015 and 31 March 2023 were identified using Optum's deidentified Clinformatics Data Mart Database. Index date was the first (ICD-9/10) code for viral LRTD hospitalisation. Outcomes included intensive care unit (ICU) admission, non-invasive ventilation (NIV), invasive mechanical ventilation/extracorporeal membrane oxygenation (IMV/ECMO), costs, 30-day mortality and 30-day readmissions. Outcomes were stratified by viral aetiology (), clinical severity and time period (2015-2019; 2020-2021; 2022-2023). Time-to-event data were assessed using Kaplan-Meier estimates.\nRESULTS: Of 387 449 patients hospitalised for viral LRTD, 38.1% were admitted to ICU within 30 days of index (84.6% of these were admitted on index date); 8.4% and 8.7%, respectively, received NIV and IMV/ECMO within 30 days of index and 30-day mortality was 15.1%. Median (IQR) length of stay and mean (SD) hospitalisation costs were 7 (4-15) days and $42 752 ($44 841), respectively. Admission to ICU, mortality and costs were substantial across all aetiologies but peaked from 2020 to 2021; readmissions and costs remained high even into 2022-2023.\nCONCLUSIONS: Severe viral LRTD incurred substantial burden for US healthcare systems across all viral aetiologies, even in non-pandemic years, with frequent ICU admission and ventilation use, and with considerable associated costs. Readmission rates and costs remain high even after the peak of COVID-19.",
-      "authors": [
-        "Maslova E",
-        "Fagerås M",
-        "Tran T",
-        "Emmanuel B",
-        "Khezrian M",
-        "Branscombe N",
-        "Johnson S",
-        "Dalal G"
-      ],
-      "journal": "BMJ open respiratory research",
-      "pubDate": "2026-Jun-18",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Retrospective Studies",
-        "Hospitalization",
-        "Female",
-        "COVID-19",
-        "Middle Aged",
-        "Male",
-        "United States",
-        "Intensive Care Units",
-        "Patient Readmission",
-        "Aged",
-        "Respiration, Artificial"
-      ],
-      "keywords": [
-        "COVID-19",
-        "Respiratory Infection",
-        "Viral infection"
-      ],
-      "doi": "10.1136/bmjresp-2025-003552",
-      "pmcid": "",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315256/",
-      "collectedAt": "2026-06-22T11:03:23.515Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "intensive care",
-          "ICU",
-          "mechanical ventilation"
-        ],
-        "studyType": "Other",
-        "sampleSize": 0,
-        "journalBoost": 3,
-        "reasons": [
-          "abstract available",
-          "topic match: intensive care, ICU, mechanical ventilation",
-          "journal boost: BMJ open respiratory research"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42313240",
-      "title": "The tokophobia severity scale: a psychometric multicountry study with childbearing-age women.",
-      "abstract": "PURPOSE: Tokophobia refers to a clinically significant fear of childbirth that affects women across the reproductive lifespan. Given its prevalence and association with adverse mental health, obstetric, and reproductive decision-making outcomes, valid and reliable measures are essential to identify women at risk of tokophobia.\nMETHODS: Tokophobia Severity Scale (TSS) psychometric properties were analyzed in nulliparous non-pregnant, pregnant, and women in the postpartum using data from cross-sectional and longitudinal studies conducted in four countries: Australia, Lithuania, Poland, and Portugal. Sample (n = 1,585) comprised nulliparous non-pregnant (Poland, n = 559), pregnant (Lithuania, n = 197, Portugal, n = 353), and women at two months postpartum (Australia, n = 292; Lithuania, n = 184). Participants completed the TSS, and self-reported questionnaires on sociodemographic, obstetric, fetal/neonatal, mental health-related characteristics, depressive and anxiety symptoms, birth trauma perception, and another measure of fear of childbirth (FOC).\nRESULTS: Results supported a three-factor model: fear, coping, and intrusive thoughts. Invariance was found across childbearing-age periods and countries. Cronbach's alpha and McDonald's omega coefficients for the TSS total score were 0.89-0.90. Known-group validity was established with differences in sociodemographic, obstetric, fetal/neonatal, and mental health-related characteristics. Concurrent validity was found with depressive and anxiety symptoms, and birth trauma perception. Convergent validity was found with another FOC measure. TSS scores in pregnancy predicted elective cesarean section, birth trauma perception, and postpartum depressive and anxiety symptoms. TSS discriminates women with or without clinically significant tokophobia symptoms in childbearing-age periods and countries.\nCONCLUSIONS: TSS is a psychometrically strong measure that can be used to screen clinically significant tokophobia symptoms.",
-      "authors": [
-        "Fidalgo D",
-        "Sousa M",
-        "Sousa C",
-        "Jomeen J",
-        "Pawlicka P",
-        "Riklikienė O",
-        "Lamela D",
-        "Baird K"
-      ],
-      "journal": "Archives of women's mental health",
-      "pubDate": "2026-Jun-18",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Female",
-        "Psychometrics",
-        "Adult",
-        "Pregnancy",
-        "Parturition",
-        "Cross-Sectional Studies",
-        "Surveys and Questionnaires",
-        "Fear",
-        "Australia",
-        "Anxiety",
-        "Portugal"
-      ],
-      "keywords": [
-        "Anxiety",
-        "Childbirth",
-        "Pregnancy,depression",
-        "Tokophobia"
-      ],
-      "doi": "10.1007/s00737-026-01736-9",
-      "pmcid": "PMC13279276",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313240/",
-      "collectedAt": "2026-06-22T11:03:25.027Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "trauma"
-        ],
-        "studyType": "Observational",
-        "sampleSize": 1585,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: trauma",
-          "study design: Observational",
-          "sample size signal: N=1585"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42304236",
-      "title": "Pain has limited predictive value for fractures following falls in older people: insight from a retrospective study.",
-      "abstract": "BACKGROUND: In the emergency department (ED), decisions regarding radiological imaging for older patients who have experienced low-energy falls (LEF) are frequently complicated by inconsistencies between the reported mechanism of injury, the patients' symptoms, and the findings on physical examination. Our study aimed to investigate the coherence between physician-documented complaints, the implementation of radiological imaging and the diagnosis of fractures of the vertebral column, rib cage and pelvic ring.\nMETHODS: This is a secondary analysis of a retrospective consecutive sample of 2882 patients presenting with LEF to two urban Level I trauma centers between 1 January 2016 and 31 December 2016, who underwent radiological imaging to diagnose their fractures. Physician-documented complaints were abstracted from electronic health records.\nRESULTS: A total of 2882 patients were included. Mild signs of concussion (e.g. headache) (22.0%), extremity pain (18.0%) and pain of the pelvic ring (14.2%) occurred most frequently. Physician-documented complaints were significantly associated with radiological imaging in the respective regions. True prevalence of fractures ranged from 0.14 (95%CI: 0.09, 0.20) in the cervical spine to 0.36 (95%CI: 0.30, 0.41) in the pelvic ring. The sensitivity of documented pain for fractures ranged from 0.78 (95%CI: 0.56, 0.93) in the thoracic spine to 0.98 in the rib cage (95%CI: 0.88, 1.00) and the pelvic ring (95%CI: 0.94, 1.00). Specificity was poor to moderate in all regions of interest. Positive likelihood ratios (LR+) were of poor value, ranging from 1.48 (95%CI: 1.09, 2.02) in the thoracic spine to 1.08 (95%CI: 1.03, 1.13) in the pelvic ring. Negative likelihood ratios (LR-) were of moderate to good value, ranging from 0.07 in the rib cage (95%CI: 0.01, 0.50) to 0.46 in the thoracic spine (95%CI: 0.20, 1.04). Area under the curve (AUC) values ranged from 0.51 (95%CI: 0.48-0.54) for the lumbar spine to 0.62 (95%CI: 0.59-0.65) for the rib cage.\nCONCLUSION: The presence of physician-documented complaints pertaining to the trunk skeleton have a relevant probability of triggering imaging studies in older persons with LEF in the ED. Nevertheless, these complaints do not safely enable discrimination between individuals with and without fractures and are of limited value modifying the subsequent diagnostic imaging process.",
-      "authors": [
-        "Pedersen V",
-        "Lampart A",
-        "Wania R",
-        "Arnold I",
-        "Maeder N",
-        "Niedermeier S",
-        "Stahl R",
-        "Trumm C"
-      ],
-      "journal": "BMC emergency medicine",
-      "pubDate": "2026-Jun-16",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Retrospective Studies",
-        "Accidental Falls",
-        "Female",
-        "Male",
-        "Fractures, Bone",
-        "Aged",
-        "Aged, 80 and over",
-        "Emergency Service, Hospital",
-        "Predictive Value of Tests",
-        "Pain",
-        "Spinal Fractures"
-      ],
-      "keywords": [
-        "Complaints",
-        "Emergency imaging",
-        "Fracture",
-        "Low-energy fall",
-        "Older adult",
-        "Test performance"
-      ],
-      "doi": "10.1186/s12873-026-01644-2",
-      "pmcid": "PMC13277108",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42304236/",
-      "collectedAt": "2026-06-22T11:03:29.253Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "emergency department",
-          "emergency medicine",
-          "trauma"
-        ],
-        "studyType": "Other",
-        "sampleSize": 2882,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: emergency department, emergency medicine, trauma",
-          "sample size signal: N=2882"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42317003",
-      "title": "Assessing nutritional risk and its association with mortality in ICU patients using the modified NUTRIC score: evidence from a tertiary care hospital.",
-      "abstract": "BACKGROUND: The objective of this study was to assess nutritional risk in ICU patients using the modified Nutritional Risk in Critically ill (mNUTRIC) score and to evaluate its association with in-hospital mortality.\nMETHODS: A cross-sectional study was conducted in a tertiary care hospital, including 584 ICU admitted patients. The mNUTRIC score was calculated, and the association between mNUTRIC-defined nutritional risk and mortality was evaluated using logistic regressions.\nRESULTS: Of the total 584 patients, the mean 57.6 ± 15.3 years and 67.5% ( = 394) were female. The mean APACHE-II and SOFA scores were 18.9 ± 8.5 and 5.1 ± 1.9, respectively. The mean mNUTRIC score was 3.2 ± 2.0 with 69.9% of patients classified as low nutritional risk and 30.1% as high nutritional risk. Patients classified as having high nutritional risk by the mNUTRIC score had a high mortality rate (62.9%). In adjusted mortality model, low nutritional risk based on the mNUTRIC score was associated with significantly lower odds of mortality (aOR 0.51, 95% CI 0.28-0.91) after adjustment for APACHE-II score, the number of comorbidities, and ICU type. The area under the curve for discriminating mortality was 0.819.\nCONCLUSION: The mNUTRIC score is a useful nutritional risk screening tool and demonstrates a strong prognostic association with mortality in critically ill ICU patients, supporting its applicability in a tertiary care hospital context in Pakistan.",
-      "authors": [
-        "Ahmad B",
-        "Akhtar I",
-        "Taimur M",
-        "Shah SHBU",
-        "Ahmad AMR",
-        "Irfan M",
-        "Ghafori R"
-      ],
-      "journal": "Annals of medicine",
-      "pubDate": "2026-Dec",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Female",
-        "Intensive Care Units",
-        "Tertiary Care Centers",
-        "Critical Illness",
-        "Nutrition Assessment",
-        "Cross-Sectional Studies",
-        "Hospital Mortality",
-        "Middle Aged",
-        "Male",
-        "Aged",
-        "APACHE"
-      ],
-      "keywords": [
-        "Critically ill",
-        "intensive care unit",
-        "malnutrition",
-        "modified NUTRIC",
-        "mortality",
-        "nutritional risk"
-      ],
-      "doi": "10.1080/07853890.2026.2690708",
-      "pmcid": "",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42317003/",
-      "collectedAt": "2026-06-22T11:03:23.513Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "intensive care",
-          "ICU"
-        ],
-        "studyType": "Observational",
-        "sampleSize": 584,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: intensive care, ICU",
-          "study design: Observational",
-          "sample size signal: N=584"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42307588",
-      "title": "Vital sign-based Early Warning Scores in low- and middle-income countries: a systematic review of clinical effectiveness and implementation challenges.",
-      "abstract": "Early recognition of clinically deteriorating patients may improve patient outcomes. Early warning scores (EWS) are widely used in high-income settings, but their effectiveness in low- and middle-income countries (LMICs) remains uncertain. This systematic review evaluates whether the implementation of EWS improves patient outcomes in LMICs and explores factors that may influence their effectiveness. A systematic search was conducted in Pubmed, EMBASE, and the Cochrane Library from database inception to 12 December 2024. Studies comparing patient outcomes before and after EWS implementation in LMICs were included. Outcomes of interest were mortality, length of hospital stay, serious adverse events (SAEs), and intensive care unit (ICU) admissions. Five studies met the inclusion criteria. Overall, EWS implementation was not associated with a consistent reduction in mortality or SAEs. However, two studies reported a shorter length of hospital stays following implementation, and one study demonstrated a reduction in unplanned ICU admissions. The included studies were heterogeneous in design, setting, and patient populations and therefore overall certainty of evidence was low to moderate. Current evidence does not demonstrate an improvement in patient outcomes following the implementation of EWS in LMICs. However, this finding is based on a small number of heterogenous studies with varying methodological quality and should therefore be interpreted with caution. The absence of observed benefits may reflect both limitations of the available evidence and contextual factors, such as limited resources, insufficient training, and restricted escalation capacity. Future research should focus on both clinical effectiveness and implementation factors within LMIC health-care systems.",
-      "authors": [
-        "Jansen NJ",
-        "Veldhuis LI"
-      ],
-      "journal": "Global health action",
-      "pubDate": "2026-Dec",
-      "publicationTypes": [
-        "Systematic Review",
-        "Journal Article",
-        "Review"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Developing Countries",
-        "Early Warning Score",
-        "Resource-Limited Settings",
-        "Vital Signs",
-        "Length of Stay",
-        "Intensive Care Units",
-        "Evidence Gaps"
-      ],
-      "keywords": [
-        "Low resource setting",
-        "Prediction models",
-        "mortality",
-        "serious adverse events",
-        "vital signs"
-      ],
-      "doi": "10.1080/16549716.2026.2690321",
-      "pmcid": "PMC13276808",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307588/",
-      "collectedAt": "2026-06-22T11:03:27.871Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "intensive care",
-          "ICU"
-        ],
-        "studyType": "Systematic Review",
-        "sampleSize": null,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: intensive care, ICU",
-          "study design: Systematic Review"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42311974",
-      "title": "Management strategies to mitigate burnout and turnover intention while enhancing patient safety in neonatal intensive care: an integrative review.",
-      "abstract": "BACKGROUND: Globally, the nursing workforce shortage in Neonatal Intensive Care Units (NICUs) is evolving into a critical public health challenge. NICU nurses face a dual burden of high technical demands and intensive emotional labor, making them a high-risk group for professional burnout. The occupational wellbeing of nurses not only impacts individual health but also directly correlates with the clinical safety outcomes of preterm and ill neonates through the \"health impairment process.\"\nOBJECTIVE: This study aims to introduce the Job Demands-Resources (JD-R) model as a systemic management diagnostic framework to comprehensively evaluate organizational management interventions targeting burnout, turnover intention, and patient safety among NICU nurses. The ultimate goal is to identify public health pathways that safeguard healthcare workforce sustainability and enhance patient safety.\nMETHODS: Adopting Whittemore and Knafl's integrative review framework and strictly following the PRISMA 2020 guidelines, we systematically searched PubMed, CINAHL, Web of Science, and Embase for original studies published between 2015 and 2025. The Joanna Briggs Institute (JBI) checklists were utilized for quality appraisal. The JD-R model was applied for deductive categorization and narrative synthesis of the interventions.\nRESULTS: Fourteen original studies were included, 11 of which provided high-quality evidence. The findings revealed: (1) Optimization of job demands: Implementing flexible scheduling and Developmental Care Partners (DCP) reduced cognitive and physical loads, significantly mitigating burnout. (2) Enhancement of job resources: Mentoring programs, institutionalized career advancement pathways (e.g., ENNP roles), and participatory management strategies (e.g., \"World Café\" workshops) were identified as core drivers for increasing retention intentions. (3) Public health outcome linkage: Nurse burnout was positively correlated with healthcare-associated infection (HAI) rates. Strengthening nurse resilience through organizational resource injection proved to be an effective strategy for improving safety outcomes in vulnerable infant populations.\nCONCLUSIONS: NICU nursing management must transition from \"individual crisis response\" to \"public health system governance.\" Resource building based on the JD-R model, including institutionalized career paths and psychological resilience support, functions not merely as a management tool but as a critical defensive strategy for the sustainable development of the healthcare workforce and the safety of newborns.",
-      "authors": [
-        "Huang X",
-        "Li Y",
-        "Hu Y",
-        "Li Y",
-        "Chen Q"
-      ],
-      "journal": "Frontiers in public health",
-      "pubDate": "2026",
-      "publicationTypes": [
-        "Journal Article",
-        "Review",
-        "Systematic Review"
-      ],
-      "meshTerms": [
-        "Burnout, Professional",
-        "Humans",
-        "Intensive Care Units, Neonatal",
-        "Personnel Turnover",
-        "Patient Safety"
-      ],
-      "keywords": [
-        "health workforce sustainability",
-        "job demands-resources model",
-        "neonatal intensive care unit",
-        "nurse burnout",
-        "occupational health",
-        "patient safety culture",
-        "public health management",
-        "turnover intention"
-      ],
-      "doi": "10.3389/fpubh.2026.1835328",
-      "pmcid": "PMC13270537",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42311974/",
-      "collectedAt": "2026-06-22T11:03:26.528Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "intensive care",
-          "ICU"
-        ],
-        "studyType": "Practice Guideline",
-        "sampleSize": null,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: intensive care, ICU",
-          "study design: Practice Guideline"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42306528",
-      "title": "Mapping the knowledge landscape of biofilm-mediated drug resistance: a bibliometric analysis and clinical trial landscape overview.",
-      "abstract": "BACKGROUND: is a major opportunistic pathogen whose ability to form biofilms greatly enhances antimicrobial tolerance and contributes to persistent infection. Although increasing attention has been paid to biofilm-mediated drug resistance, the overall knowledge structure and translational development of this field remain unclear.\nMETHODS: A bibliometric analysis was performed using publications retrieved from the Web of Science Core Collection and Scopus on December 20, 2025. The search covered the period 2014-2025 and focused on , antimicrobial resistance, and biofilms, resulting in 6,537 publications for bibliometric analysis. To complement the bibliometric findings, a supplementary narrative review of published clinical studies and a separate registered trial landscape overview were conducted. After screening, 6 published clinical studies and 18 registered interventional trials were included.\nRESULTS: Global research output on biofilm-mediated resistance increased steadily from 2014 to 2025. China, the United States, and India were the most productive countries, while the United States showed the leading role in the international collaboration network. Keyword clustering and temporal analyses indicated three major research directions: multidrug resistance evolution and pathogenic synergy, novel antibacterial interventions and functional materials, and clinical translation and efficacy evaluation. The supplementary clinical component showed growing interest in adjunctive and mechanistically targeted strategies, particularly in chronic airway and wound-associated infections, although mature efficacy data remain limited.\nCONCLUSIONS: Research on biofilm-mediated drug resistance is shifting from mechanistic exploration toward translational application. This study provides a data-driven overview of the field's intellectual structure, research hotspots, and emerging trends, and may help guide future anti-biofilm and anti-resistance research.",
-      "authors": [
-        "Zhao P",
-        "Wang Z",
-        "Jia N",
-        "Wang X",
-        "Liu J",
-        "Zhu Y"
-      ],
-      "journal": "Frontiers in cellular and infection microbiology",
-      "pubDate": "2026",
-      "publicationTypes": [
-        "Journal Article",
-        "Review",
-        "Systematic Review"
-      ],
-      "meshTerms": [
-        "Biofilms",
-        "Pseudomonas aeruginosa",
-        "Humans",
-        "Bibliometrics",
-        "Anti-Bacterial Agents",
-        "Pseudomonas Infections",
-        "Drug Resistance, Bacterial",
-        "Clinical Trials as Topic",
-        "Drug Resistance, Multiple, Bacterial"
-      ],
-      "keywords": [
-        "Pseudomonas aeruginosa",
-        "anti-biofilm strategies",
-        "antimicrobial resistance",
-        "bibliometric analysis",
-        "biofilm-mediated drug resistance",
-        "clinical trials"
-      ],
-      "doi": "10.3389/fcimb.2026.1830404",
-      "pmcid": "PMC13265391",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42306528/",
-      "collectedAt": "2026-06-22T11:03:29.253Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "ICU",
-          "airway"
-        ],
-        "studyType": "Systematic Review",
-        "sampleSize": null,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: ICU, airway",
-          "study design: Systematic Review"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42306043",
-      "title": "Identification of Th17 Cell-Associated Biomarkers and Their Potential Regulatory Mechanisms in Chronic Obstructive Pulmonary Disease Through Integrated Bioinformatics Analysis and Machine Learning.",
-      "abstract": "PURPOSE: Chronic obstructive pulmonary disease (COPD) is characterized by persistent airflow limitation and chronic airway inflammation. Th17 cell-related immune pathways may contribute to COPD-associated immune dysregulation, but their molecular associations remain incompletely understood. This study aimed to preliminarily explore Th17 cell-associated biomarkers and their potential regulatory networks in COPD.\nMETHODS: Transcriptomic profiles from COPD and control samples were analyzed to identify differentially expressed genes (DEGs). Th17 cell-related DEGs were obtained by intersecting DEGs with Th17-related genes. Random forest and Boruta algorithms were used for biomarker screening, followed by expression validation in training and validation cohorts and RT-qPCR verification. A nomogram model was constructed, and chromosome localization, immune infiltration, gene set enrichment analysis (GSEA), regulatory network analysis, and drug prediction were performed.\nRESULTS: A total of 3811 DEGs were identified, including 1408 upregulated and 2403 downregulated genes; 16 overlapped with Th17-related genes. AUC was 1.000, with a 95% confidence interval of 1.000-1.000. Machine learning and validation analyses indicated that TGFBR2 and IKBKB may serve as COPD-associated biomarkers, with both genes showing significant downregulation in COPD samples and RT-qPCR validation (p < 0.05). Immune infiltration analysis indicated significant differences in 11 immune cell types between COPD and control groups. TGFBR2 and IKBKB were negatively correlated with Th17 cell infiltration (TGFBR2: cor = -0.502, p < 0.05; IKBKB: cor = -0.466, p < 0.05). IKBKB was also negatively correlated with macrophages (cor = -0.725, p < 0.001), while TGFBR2 was negatively correlated with natural killer T cells (cor = -0.635, p < 0.001). GSEA suggested 78 enriched pathways, including 42 related to TGFBR2 and 36 related to IKBKB. Drug prediction suggested 92 potential agents.\nCONCLUSION: This preliminary, hypothesis-generating study suggests that TGFBR2 and IKBKB may be associated with Th17-related immune alterations in COPD and may provide candidate markers for further mechanistic and therapeutic validation.",
-      "authors": [
-        "Li Q",
-        "Xue D",
-        "Yu J",
-        "Yang M",
-        "Zhang Y",
-        "Obuli R"
-      ],
-      "journal": "International journal of chronic obstructive pulmonary disease",
-      "pubDate": "2026",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Pulmonary Disease, Chronic Obstructive",
-        "Th17 Cells",
-        "Gene Expression Profiling",
-        "Machine Learning",
-        "I-kappa B Kinase",
-        "Computational Biology",
-        "Gene Regulatory Networks",
-        "Receptor, Transforming Growth Factor-beta Type II",
-        "Transcriptome",
-        "Case-Control Studies",
-        "Signal Transduction"
-      ],
-      "keywords": [
-        "T helper 17 cells",
-        "biomarkers",
-        "chronic obstructive pulmonary disease",
-        "gene set enrichment analysis",
-        "immune infiltration analysis"
-      ],
-      "doi": "10.2147/COPD.S596649",
-      "pmcid": "PMC13267836",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42306043/",
-      "collectedAt": "2026-06-22T11:03:29.253Z",
-      "screeningData": {
-        "score": 8,
-        "relevanceMatches": [
-          "airway"
-        ],
-        "studyType": "Observational",
-        "sampleSize": 1408,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: airway",
-          "study design: Observational",
-          "sample size signal: N=1408"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42320931",
-      "title": "Transthoracic echocardiography in children with bacteraemia: a multi-centre retrospective analysis.",
-      "abstract": "BACKGROUND: bacteraemia (SAB) is associated with risk of infective endocarditis (IE). IE is rare in children in the absence of known risk factors such as congenital heart disease. Routine transthoracic echocardiography (TTE) is often performed in children with SAB despite limited age-specific evidence.\nMETHODS: This multi-centre retrospective cohort study included 101 children (aged ≤18 years) with SAB across six North West London hospitals (2018-2023). Data were collected from electronic patient records.\nRESULTS: 71 children (70%) underwent TTE and 30 (30%) did not. IE was confirmed in four (5.6%) of those undergoing TTE. All four IE cases were right-sided and occurred in children with established risk factors: congenital heart disease (2/4), intravenous drug use (1/4) or central venous catheters (2/4). The TTE group had longer hospital stays than the no-TTE group (median 17 vs 4 days, p=0.0020). Acute in-hospital mortality occurred in 1/71 of the TTE group vs 0/30 of the no-TTE group (p=1.0). Among children undergoing TTE, features associated with IE included embolic phenomena (75% vs 1.5%, p<0.001), higher CRP (median 237 vs 124 mg/L, p=0.083), persistent bacteraemia at >72 hours (67% vs 4.9%, p=0.018) and polymicrobial growth on blood culture (50% vs 6%, p=0.033).\nCONCLUSION: Our findings support a risk-stratified rather than universal approach to TTE in paediatric SAB. TTE could reasonably be omitted in children with a structurally normal heart, no established IE risk factor and no clinical feature suggestive of IE, but should be performed when embolic phenomena, persistent bacteraemia, polymicrobial growth, a pre-existing murmur or an established IE risk factor is present. Prospective multi-centre validation is needed before such an approach can be adopted in routine practice.",
-      "authors": [
-        "Gray K",
-        "Ahad F",
-        "Cunnington A"
-      ],
-      "journal": "BMJ paediatrics open",
-      "pubDate": "2026-Jun-19",
-      "publicationTypes": [
-        "Journal Article",
-        "Multicenter Study"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Retrospective Studies",
-        "Bacteremia",
-        "Staphylococcal Infections",
-        "Child",
-        "Female",
-        "Male",
-        "Echocardiography",
-        "Child, Preschool",
-        "Staphylococcus aureus",
-        "Infant",
-        "Adolescent"
-      ],
-      "keywords": [
-        "Health services research",
-        "Microbiology"
-      ],
-      "doi": "10.1136/bmjpo-2025-004466",
-      "pmcid": "",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320931/",
-      "collectedAt": "2026-06-22T11:03:22.220Z",
-      "screeningData": {
-        "score": 7,
-        "relevanceMatches": [],
-        "studyType": "Observational",
-        "sampleSize": null,
-        "journalBoost": 3,
-        "reasons": [
-          "abstract available",
-          "study design: Observational",
-          "journal boost: BMJ paediatrics open"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42320034",
-      "title": "Online Sepsis Prediction Using Vital Signs and Multiscale Temporal-Aware Contrastive Learning: Model Development and Validation Study.",
-      "abstract": "BACKGROUND: Real-time prediction of sepsis is a critical yet highly challenging task. Existing studies face 2 major limitations. First, they often rely on laboratory test results that are not readily available in real time, making timely diagnosis difficult. Second, the patient's condition evolves as a typical time series, but current methods often adopt coarse modeling strategies, with model architectures that are inefficient to train and deploy effectively.\nOBJECTIVE: This study aimed to develop a prediction model for online sepsis detection using only easily obtainable vital signs, such as heart rate and temperature, with variable-length input sequences while maintaining high predictive performance through the multiscale temporal representation learning.\nMETHODS: We propose a deep learning model, Multi-Scale Temporal-aware Contrastive Learning (MSTCL), for efficient sepsis prediction based on the intensive care unit data derived from publicly available databases. We propose a multiscale temporal model to capture both short- and long-term dependencies in variable-length physiological time series. To enhance the robustness of our model, we used contrastive learning techniques that differentiate between positive and negative sepsis progression trajectories. Input features were limited to 6 vital signs, without reliance on laboratory tests or clinical notes.\nRESULTS: The model was evaluated on more than 400 patients with and without sepsis. It achieved an area under the receiver operating characteristic curve of 88.34%, a sensitivity of 89.29%, and a specificity of 73% for predicting sepsis onset based on variable-length vital-sign histories. The normalized mean absolute error for the predicted sepsis onset was 0.11%.\nCONCLUSIONS: Our proposed model's low complexity and rapid inference make it suitable for deployment in real-time monitoring systems and low-resource environments. The ability to learn from variable-length historical data enhances the clinical applicability of our model. Furthermore, the methodology of temporal-aware contrastive learning offers a robust and efficient solution for online sepsis detection in diverse clinical settings.",
-      "authors": [
-        "Yang X",
-        "Lv Z",
-        "Lv H",
-        "Zhou Q",
-        "Jiang W",
-        "Meng Z",
-        "Yang W"
-      ],
-      "journal": "JMIR medical informatics",
-      "pubDate": "2026-Jun-19",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Sepsis",
-        "Vital Signs",
-        "Deep Learning",
-        "Predictive Learning Models",
-        "Intensive Care Units",
-        "ROC Curve",
-        "Prediction Algorithms"
-      ],
-      "keywords": [
-        "contrastive learning",
-        "deep learning",
-        "sepsis prediction",
-        "temporal modeling",
-        "vital signs monitoring"
-      ],
-      "doi": "10.2196/82762",
-      "pmcid": "PMC13282041",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320034/",
-      "collectedAt": "2026-06-22T11:03:22.220Z",
-      "screeningData": {
-        "score": 7,
-        "relevanceMatches": [
-          "intensive care",
-          "ICU",
-          "sepsis"
-        ],
-        "studyType": "Other",
-        "sampleSize": 400,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: intensive care, ICU, sepsis",
-          "sample size signal: N=400"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
     }
   ],
-  "excludedCount": 21,
+  "excludedCount": 39,
   "errors": []
 }

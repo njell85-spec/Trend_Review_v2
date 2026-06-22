@@ -2,10 +2,10 @@
   "runId": "2026-06-22",
   "status": "success",
   "step": "done",
-  "startedAt": "2026-06-22T11:03:20.158Z",
-  "finishedAt": "2026-06-22T11:04:09.268Z",
+  "startedAt": "2026-06-22T11:22:01.819Z",
+  "finishedAt": "2026-06-22T11:23:00.345Z",
   "counts": {
-    "fetched": 120,
+    "fetched": 300,
     "screened": 30,
     "analyzed": 1,
     "fallback": 0
