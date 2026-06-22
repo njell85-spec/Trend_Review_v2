@@ -1,13 +1,13 @@
 {
   "runId": "2026-06-22",
-  "generatedAt": "2026-06-22T11:23:00.345Z",
+  "generatedAt": "2026-06-22T11:51:38.295Z",
   "dashboardUrl": "https://njell85-spec.github.io/Trend_Review_v2/",
   "status": {
     "runId": "2026-06-22",
     "status": "success",
     "step": "done",
-    "startedAt": "2026-06-22T11:22:01.819Z",
-    "finishedAt": "2026-06-22T11:23:00.345Z",
+    "startedAt": "2026-06-22T11:49:02.258Z",
+    "finishedAt": "2026-06-22T11:51:38.295Z",
     "counts": {
       "fetched": 300,
       "screened": 30,
@@ -25,9 +25,22 @@
     "errors": [],
     "notifications": [
       {
-        "provider": "all",
+        "provider": "kakao",
         "status": "skipped",
-        "reason": "--no-notify"
+        "reason": "KAKAO_REFRESH_TOKEN and KAKAO_REST_API_KEY, or KAKAO_ACCESS_TOKEN, are missing",
+        "preview": {
+          "object_type": "text",
+          "text": "[Trend Review] 리포트 생성 완료\n2026-06-22 · 최근 180일 300편 수집 · Top 1\n🥇 Cefazolin for Methicillin-Suscept… (PMID:42308484)",
+          "link": {
+            "web_url": "https://njell85-spec.github.io/Trend_Review_v2/",
+            "mobile_web_url": "https://njell85-spec.github.io/Trend_Review_v2/"
+          },
+          "button_title": "리포트 보기"
+        }
+      },
+      {
+        "provider": "telegram",
+        "status": "sent"
       }
     ]
   },
@@ -47,81 +60,81 @@
     {
       "pmid": "42308484",
       "title": "Cefazolin for Methicillin-Susceptible Bacteremia.",
-      "oneLineSummary": "In adults with methicillin-susceptible bacteremia, cefazolin was noninferior to antistaphylococcal penicillins for 90-day mortality and caused significantly less acute kidney injury.",
-      "oneLineSummary_ko": "메티실린 감수성 균혈증 성인 환자에서 세파졸린은 90일 사망률 측면에서 항포도상구균 페니실린 대비 비열등하였으며, 급성 신손상 발생률은 유의하게 낮았습니다.",
-      "whyItMatters": "For decades, infectious disease guidelines have debated whether cefazolin is as effective as antistaphylococcal penicillins (such as nafcillin, oxacillin, or flucloxacillin) for MSSA bacteremia due to concerns over the inoculum effect. This large, randomized controlled platform trial (SNAP) provides high-quality evidence that cefazolin is noninferior to antistaphylococcal penicillins and is safer, resulting in substantially less acute kidney injury.",
-      "whyItMatters_ko": "수십 년 동안 감염학 가이드라인은 MSSA 균혈증 치료에서 세파졸린이 접종원 효과(inoculum effect)로 인해 항포도상구균 페니실린(나프실린, 옥사실린, 플루클록사실린 등)만큼 효과적인지에 대해 논쟁해 왔습니다. 이 대규모 무작위 대조군 플랫폼 연구(SNAP)는 세파졸린이 항포도상구균 페니실린에 비해 비열등할 뿐만 아니라 급성 신손상을 크게 줄여 더 안전하다는 고품질 근거를 제공합니다.",
-      "clinicalQuestion": "Is cefazolin noninferior to antistaphylococcal penicillins (flucloxacillin or cloxacillin) for 90-day mortality in adults with penicillin-resistant, methicillin-susceptible bacteremia?",
-      "clinicalQuestion_ko": "페니실린 내성, 메티실린 감수성 균혈증 성인 환자에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린)과 비교하여 90일 사망률 측면에서 비열등한가?",
+      "oneLineSummary": "Cefazolin is noninferior to antistaphylococcal penicillins for 90-day mortality in patients with methicillin-susceptible Staphylococcus aureus bacteremia while significantly reducing acute kidney injury.",
+      "oneLineSummary_ko": "메티실린 감수성 황색포도상구균 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 항포도상구균 페니실린에 비열등하였으며 급성 신손상 발생을 유의하게 줄였습니다.",
+      "whyItMatters": "While antistaphylococcal penicillins like flucloxacillin are traditional first-line therapies for MSSA bacteremia, they carry a high risk of nephrotoxicity; this large-scale randomized trial provides high-quality evidence that cefazolin is equally effective but much safer for the kidneys.",
+      "whyItMatters_ko": "플루클록사실린과 같은 항포도상구균 페니실린은 전통적인 MSSA 균혈증의 1차 치료제였으나 신독성 위험이 높았습니다. 이번 대규모 무작위 임상시험은 세파졸린이 신장에 훨씬 안전하면서도 동일하게 효과적이라는 고품질의 증거를 제공합니다.",
+      "clinicalQuestion": "In adults with penicillin-resistant, methicillin-susceptible Staphylococcus aureus bacteremia, is cefazolin noninferior to antistaphylococcal penicillins in terms of 90-day mortality, and does it reduce the incidence of acute kidney injury?",
+      "clinicalQuestion_ko": "페니실린 내성, 메티실린 감수성 황색포도상구균(MSSA) 균혈증이 있는 성인 환자에서 세파졸린은 항포도상구균 페니실린 대비 90일 사망률 측면에서 비열등하며, 급성 신손상 발생률을 감소시킵니까?",
       "pico": {
-        "population": "Adults with penicillin-resistant, methicillin-susceptible bacteremia",
-        "intervention": "Cefazolin",
-        "comparison": "Antistaphylococcal penicillin (flucloxacillin or cloxacillin)",
-        "outcome": "All-cause mortality at 90 days and acute kidney injury within 14 days"
+        "population": "Adults with penicillin-resistant, methicillin-susceptible Staphylococcus aureus (MSSA) bacteremia.",
+        "intervention": "Intravenous cefazolin (2g every 6 or 8 hours).",
+        "comparison": "Intravenous antistaphylococcal penicillin (flucloxacillin or cloxacillin, 2g every 4 or 6 hours).",
+        "outcome": "All-cause mortality at 90 days (primary) and acute kidney injury within 14 days (secondary safety)."
       },
       "pico_ko": {
-        "population": "페니실린 내성, 메티실린 감수성 균혈증을 앓고 있는 성인 환자",
-        "intervention": "세파졸린 (Cefazolin)",
-        "comparison": "항포도상구균 페니실린 (플루클록사실린 또는 클록사실린)",
-        "outcome": "90일 전원인 사망률 및 14일 이내 급성 신손상 발생률"
+        "population": "페니실린 내성, 메티실린 감수성 황색포도상구균(MSSA) 균혈증을 앓고 있는 성인 환자.",
+        "intervention": "정맥 주사용 세파졸린 (6시간 또는 8시간마다 2g 투여).",
+        "comparison": "정맥 주사용 항포도상구균 페니실린 (플루클록사실린 또는 클록사실린, 4시간 또는 6시간마다 2g 투여).",
+        "outcome": "90일 전원 사망률(1차 결과) 및 14일 이내 급성 신손상 발생률(2차 안전성 결과)."
       },
       "detailedPico": {
-        "population": "Adult patients with penicillin-resistant, methicillin-susceptible bacteremia enrolled in the SNAP platform trial.",
-        "population_ko": "진행 중인 SNAP 플랫폼 임상시험에 등록된 페니실린 내성, 메티실린 감수성 균혈증 성인 환자.",
-        "countrySetting": "Multicenter, international trial (specific countries not reported in abstract)",
-        "countrySetting_ko": "다국가, 다기관 임상시험 (구체적인 국가 목록은 초록에 보고되지 않음)",
-        "intervention": "Cefazolin (dosing and route of administration not reported in abstract)",
-        "intervention_ko": "세파졸린 (구체적인 용량 및 투여 경로는 초록에 보고되지 않음)",
-        "comparator": "Antistaphylococcal penicillin (flucloxacillin or cloxacillin; dosing not reported in abstract)",
-        "comparator_ko": "항포도상구균 페니실린 (플루클록사실린 또는 클록사실린, 구체적인 용량은 보고되지 않음)",
+        "population": "Adult patients (aged 18 or older) admitted to participating centers with penicillin-resistant, methicillin-susceptible Staphylococcus aureus complex grown from at least one blood culture collected within 72 hours prior to enrollment. Key exclusions included polymicrobial bacteremia.",
+        "population_ko": "등록 전 72시간 이내에 채취한 1개 이상의 혈액 배양에서 페니실린 내성, 메티실린 감수성 황색포도상구균 복합체가 배양되어 참여 병원에 입원한 성인 환자 (주요 제외 기준: 복합 균혈증).",
+        "countrySetting": "Ongoing international, multicenter, open-label, Bayesian adaptive platform randomized controlled trial (the SNAP trial, NCT05137119) recruiting in countries including the United States, Australia, Canada, Israel, Netherlands, New Zealand, France, Germany, Japan, South Africa, Sweden, Singapore, and the United Kingdom.",
+        "countrySetting_ko": "미국, 호주, 캐나다, 이스라엘, 네덜란드, 뉴질랜드, 프랑스, 독일, 일본, 남아프리카공화국, 스웨덴, 싱가포르, 영국 등에서 환자를 모집한 다국가, 다기관, 개방형, 베이지안 적응형 플랫폼 무작위 대조군 임상시험 (SNAP 연구, NCT05137119).",
+        "intervention": "Intravenous cefazolin 2g every 6 or 8 hours, adjusted for renal impairment or critical illness, for a minimum protocol duration of 14 days (or 5 days if allocated to an early switch to oral antibiotics).",
+        "intervention_ko": "정맥 주사용 세파졸린 2g을 6시간 또는 8시간 간격으로 투여(신기능 장애 또는 중증 환자는 용량 조절), 프로토콜상 최소 투여 기간은 14일(조기 경구 전환군으로 배정된 경우 5일).",
+        "comparator": "Intravenous antistaphylococcal penicillin (flucloxacillin or cloxacillin) 2g every 4 or 6 hours, adjusted for renal impairment or critical illness, for a minimum protocol duration of 14 days (or 5 days if allocated to an early switch to oral antibiotics).",
+        "comparator_ko": "정맥 주사용 항포도상구균 페니실린 (플루클록사실린 또는 클록사실린) 2g을 4시간 또는 6시간 간격으로 투여(신기능 장애 또는 중증 환자는 용량 조절), 프로토콜상 최소 투여 기간은 14일(조기 경구 전환군으로 배정된 경우 5일).",
         "outcomes": [
           {
             "label": "Primary Outcome",
-            "outcome": "Death from any cause within 90 days after enrollment",
-            "outcome_ko": "등록 후 90일 이내 모든 원인으로 인한 사망",
-            "result": "15.0% (97/645) in the cefazolin group vs. 17.0% (109/642) in the antistaphylococcal-penicillin group",
-            "result_ko": "세파졸린 군 15.0% (97/645) 대 항포도상구균 페니실린 군 17.0% (109/642)",
-            "statistics": "Adjusted odds ratio (aOR) 0.81 (95% credible interval [CrI], 0.59 to 1.12); posterior probability of noninferiority = 99.2%; posterior probability of superiority = 89.8%",
-            "interpretation": "Cefazolin met the prespecified noninferiority threshold (adjusted odds ratio <1.2) for 90-day mortality, with a very high posterior probability of noninferiority (99.2%).",
-            "interpretation_ko": "세파졸린은 90일 사망률에 대해 사전에 설정된 비열등성 기준(조정 오즈비 <1.2)을 충족했으며, 비열등할 사후 확률이 99.2%로 매우 높았습니다."
+            "outcome": "All-cause mortality at 90 days after platform entry",
+            "outcome_ko": "플랫폼 등록 후 90일 시점의 전원 사망률",
+            "result": "15.0% (97 of 645 patients) in the cefazolin group compared to 17.0% (109 of 642 patients) in the antistaphylococcal-penicillin group.",
+            "result_ko": "세파졸린군 15.0% (645명 중 97명) 대 항포도상구균 페니실린군 17.0% (642명 중 109명).",
+            "statistics": "Adjusted odds ratio (aOR), 0.81; 95% credible interval (CrI), 0.59 to 1.12; probability of noninferiority, 99.2%; probability of superiority, 89.8%.",
+            "interpretation": "Cefazolin successfully met the prespecified noninferiority criterion (aOR <1.2, representing an absolute mortality difference of <2.5 percentage points) compared to flucloxacillin/cloxacillin.",
+            "interpretation_ko": "세파졸린은 플루클록사실린/클록사실린 대비 사전에 설정된 비열등성 기준(aOR <1.2, 절대 사망률 차이 약 <2.5%p에 해당)을 성공적으로 충족했습니다."
           },
           {
-            "label": "Secondary Outcome",
-            "outcome": "Acute kidney injury (AKI) within 14 days",
-            "outcome_ko": "14일 이내 급성 신손상(AKI) 발생",
-            "result": "13.9% (92/660) in the cefazolin group vs. 19.6% (127/648) in the antistaphylococcal-penicillin group",
-            "result_ko": "세파졸린 군 13.9% (92/660) 대 항포도상구균 페니실린 군 19.6% (127/648)",
-            "statistics": "Adjusted odds ratio (aOR) 0.67 (95% credible interval [CrI], 0.50 to 0.89); posterior probability of superiority = 99.7%",
-            "interpretation": "Cefazolin therapy was associated with a clinically and statistically meaningful reduction in the risk of acute kidney injury compared to antistaphylococcal penicillins.",
-            "interpretation_ko": "세파졸린 치료는 항포도상구균 페니실린에 비해 급성 신손상 위험을 임상적 및 통계적으로 유의하게 감소시켰습니다."
+            "label": "Secondary Safety Outcome",
+            "outcome": "Development of acute kidney injury (AKI) within 14 days after enrollment",
+            "outcome_ko": "등록 후 14일 이내 급성 신손상(AKI) 발생률",
+            "result": "13.9% (92 of 660 patients) in the cefazolin group compared to 19.6% (127 of 648 patients) in the antistaphylococcal-penicillin group.",
+            "result_ko": "세파졸린군 13.9% (660명 중 92명) 대 항포도상구균 페니실린군 19.6% (648명 중 127명).",
+            "statistics": "Adjusted odds ratio (aOR), 0.67; 95% credible interval (CrI), 0.50 to 0.89; probability of superiority, 99.7%.",
+            "interpretation": "Cefazolin is superior to flucloxacillin/cloxacillin, significantly reducing the risk of acute kidney injury within 14 days.",
+            "interpretation_ko": "세파졸린은 플루클록사실린/클록사실린에 비해 14일 이내 급성 신손상 위험을 유의하게 줄여주어 신장 안전성 측면에서 우월했습니다."
           }
         ]
       },
       "keyFindings": [
-        "Cefazolin is noninferior to antistaphylococcal penicillins (flucloxacillin or cloxacillin) for 90-day mortality in adults with methicillin-susceptible bacteremia (15.0% vs. 17.0%, aOR 0.81, 95% CrI 0.59 to 1.12).",
-        "Cefazolin therapy resulted in a significantly lower incidence of acute kidney injury within 14 days compared to antistaphylococcal penicillins (13.9% vs. 19.6%, aOR 0.67, 95% CrI 0.50 to 0.89).",
-        "The Bayesian posterior probability of noninferiority for mortality was 99.2%, and the posterior probability of superiority for renal safety was 99.7%."
+        "Cefazolin met the noninferiority threshold for 90-day mortality compared to flucloxacillin/cloxacillin (15.0% vs 17.0%; aOR, 0.81; 95% CrI, 0.59 to 1.12; probability of noninferiority, 99.2%).",
+        "Cefazolin significantly reduced the incidence of acute kidney injury within 14 days compared to antistaphylococcal penicillins (13.9% vs 19.6%; aOR, 0.67; 95% CrI, 0.50 to 0.89; probability of superiority, 99.7%).",
+        "This trial domain was stopped early for the MSSA comparison after meeting the criteria for noninferiority, confirming cefazolin as a highly effective and safer first-line option."
       ],
       "keyFindings_ko": [
-        "메티실린 감수성 균혈증 성인 환자 치료에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린) 대비 90일 사망률 측면에서 비열등했습니다 (15.0% 대 17.0%, 조정 오즈비 0.81, 95% 신용구간 0.59 ~ 1.12).",
-        "세파졸린 치료군은 항포도상구균 페니실린군에 비해 14일 이내 급성 신손상 발생률이 유의하게 낮았습니다 (13.9% 대 19.6%, 조정 오즈비 0.67, 95% 신용구간 0.50 ~ 0.89).",
-        "사망률에 대한 베이지안 비열등성 사후 확률은 99.2%였으며, 신장 안전성에 대한 우월성 사후 확률은 99.7%였습니다."
+        "세파졸린은 플루클록사실린/클록사실린 대비 90일 사망률에 대한 비열등성 기준을 충족하였습니다 (15.0% 대 17.0%; 보정 오즈비 0.81; 95% 신용구간 0.59 ~ 1.12; 비열등성 확률 99.2%).",
+        "세파졸린은 항포도상구균 페니실린 대비 14일 이내 급성 신손상 발생률을 유의하게 낮추었습니다 (13.9% 대 19.6%; 보정 오즈비 0.67; 95% 신용구간 0.50 ~ 0.89; 우월성 확률 99.7%).",
+        "본 임상시험 영역은 비열등성 기준을 충족함에 따라 MSSA 비교군에 대한 환자 모집을 조기에 종료하여 세파졸린이 매우 효과적이고 안전한 1차 치료제임을 확인하였습니다."
       ],
-      "conclusion": "In patients with methicillin-susceptible bacteremia, cefazolin was noninferior to flucloxacillin or cloxacillin with respect to 90-day mortality and was associated with a lower incidence of acute kidney injury.",
-      "conclusion_ko": "메티실린 감수성 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 플루클록사실린 또는 클록사실린에 비열등하였고, 급성 신손상 발생률은 유의하게 낮추었습니다.",
-      "clinicalTakeaway": "For adult patients with MSSA bacteremia, cefazolin should be considered the preferred first-line therapy over antistaphylococcal penicillins (like flucloxacillin or cloxacillin). It offers equivalent survival outcomes while significantly lowering the risk of acute kidney injury, which has been a major drawback of penicillin therapy. This trial addresses long-standing clinician anxiety regarding the inoculum effect of cefazolin in deep-seated infections.",
-      "clinicalTakeaway_ko": "MSSA 균혈증 성인 환자에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린)보다 우선적으로 고려되어야 하는 1차 치료제입니다. 페니실린 치료의 주요 단점이었던 급성 신손상 위험을 유의하게 낮추면서도 동등한 생존율을 제공합니다. 이번 임상시험은 심부 감염에서 세파졸린의 접종원 효과에 대한 임상 의사들의 오랜 우려를 해소해 줍니다.",
-      "limitations": "The trial was open-label, which could introduce bias in patient management. The active comparator was limited to flucloxacillin or cloxacillin; thus, extrapolation to centers primarily using nafcillin or oxacillin, while biochemically similar, remains indirect. Detail regarding the clinical source of bacteremia (e.g., endocarditis, osteomyelitis) and exact dosing regimens were not provided in the abstract.",
-      "limitations_ko": "본 임상시험은 공개 라벨(open-label)로 진행되어 임상적 처치 과정에서 편향이 개입되었을 가능성이 있습니다. 대조군이 플루클록사실린 또는 클록사실린으로 제한되었기 때문에, 생화학적으로는 유사하나 나프실린이나 옥사실린을 주로 사용하는 의료기관으로 결과를 바로 대입하기에는 제한이 있습니다. 균혈증의 원인 병소(예: 심내막염, 골수염 등) 및 구체적인 투여 용량에 대한 세부 데이터는 초록에서 제공되지 않았습니다.",
-      "edIcuApplicability": "Highly applicable. Emergency and ICU clinicians frequently manage patients with positive blood cultures growing Gram-positive cocci. Once MSSA is identified, transitioning patients to cefazolin instead of antistaphylococcal penicillins represents a high-value clinical choice that reduces nephrotoxicity in critically ill patients without compromising mortality outcomes.",
-      "edIcuApplicability_ko": "매우 높은 적용 가능성을 가집니다. 응급실 및 중환자실 의료진은 그람 양성 균혈증 환자를 빈번하게 치료합니다. MSSA로 확인된 후, 환자의 치료제를 항포도상구균 페니실린 대신 세파졸린으로 전환하는 것은 중증 환자에서 사망률 저하 없이 신독성을 낮출 수 있는 매우 유용한 임상적 선택입니다.",
+      "conclusion": "In adult patients with methicillin-susceptible Staphylococcus aureus bacteremia, cefazolin is noninferior to flucloxacillin or cloxacillin regarding 90-day mortality and is associated with a significantly lower rate of acute kidney injury.",
+      "conclusion_ko": "메티실린 감수성 황색포도상구균 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 플루클록사실린 또는 클록사실린에 비열등하며, 급성 신손상 발생 빈도를 유의하게 줄여줍니다.",
+      "clinicalTakeaway": "Clinicians treating MSSA bacteremia should favor cefazolin over flucloxacillin or cloxacillin. Cefazolin provides equivalent efficacy in preventing mortality while significantly reducing the risk of acute kidney injury (13.9% vs 19.6%), offering an optimized balance of therapeutic efficacy and safety.",
+      "clinicalTakeaway_ko": "MSSA 균혈증을 치료하는 임상의는 플루클록사실린이나 클록사실린보다 세파졸린을 선호하는 것이 좋습니다. 세파졸린은 사망 예방에 동등한 효능을 제공하는 동시에 급성 신손상 위험을 유의하게 낮추어(13.9% 대 19.6%), 최적의 치료 효능 및 안전성 균형을 제공합니다.",
+      "limitations": "The trial used an open-label design, which could theoretically introduce clinical bias in co-interventions or management, though mortality and creatinine-defined acute kidney injury are highly objective endpoints. The comparator group allowed both flucloxacillin and cloxacillin, which may vary slightly in local practice.",
+      "limitations_ko": "본 임상시험은 개방형(open-label) 디자인으로 진행되어 이론적으로 공동 중재나 치료 관리에 임상적 편향을 유발할 수 있으나, 사망률 및 크레아티닌 수치 기반 급성 신손상은 매우 객관적인 지표입니다. 대조군에서 플루클록사실린과 클록사실린이 모두 허용되었기에 지역적 진료 패턴에 따른 미세한 차이가 존재할 수 있습니다.",
+      "edIcuApplicability": "Highly applicable to ED and ICU settings. Prompt and appropriate narrow-spectrum beta-lactam selection is critical when bacteremia results return. For confirmed MSSA bacteremia, cefazolin should be prioritized to preserve renal function and maintain optimal efficacy.",
+      "edIcuApplicability_ko": "응급실 및 중환자실(ED/ICU) 환경에 대단히 유용합니다. 균혈증 배양 결과가 확인되었을 때 신속하고 적절한 협범위 베타락탐 항생제를 선택하는 것은 매우 중요합니다. 확인된 MSSA 균혈증의 경우, 신기능을 보존하고 최적의 치료 효과를 유지하기 위해 세파졸린 사용을 우선시해야 합니다.",
       "evidenceLevel": "High",
       "clinicalApplicabilityScore": 9.5,
       "manualReviewNeeded": false,
       "analysisNotes": [
-        "The SNAP trial is a landmark international Bayesian adaptive platform trial addressing a long-standing infectious disease controversy.",
-        "Demonstrates noninferiority for mortality with very high certainty (99.2% probability) and clear superiority for renal safety (13.9% AKI vs 19.6% AKI).",
-        "Highly relevant for emergency medicine and critical care transitions of care as definitive culture data returns."
+        "Used data from the prestigious SNAP trial (NCT05137119), a phase IV adaptive platform trial.",
+        "Bayesian analysis methods provided clear probabilities of both noninferiority and superiority.",
+        "Very clean clinical takeaway advocating for a major practice change toward cefazolin as first-line."
       ],
       "paper": {
         "pmid": "42308484",
@@ -135,6 +148,20 @@
           "Yahav D",
           "Cheng MP",
           "Bonten M"
+        ],
+        "authorAffiliations": [
+          "Department of Medicine, Division of Infectious Diseases, McGill University, Montreal.",
+          "Department of Infectious Diseases, University of Melbourne at the Peter Doherty Institute for Infection and Immunity, Melbourne, VIC, Australia.",
+          "Department of Infectious Diseases, Division of Medicine, Middlemore Hospital, Auckland, New Zealand.",
+          "University College London Innovative Clinical Trials Unit, Institute of Clinical Trials and Methodology, University College London, London.",
+          "Department of Infection, Guy's and St. Thomas' National Health Service (NHS) Foundation Trust and King's College London, London.",
+          "Infectious Diseases Unit, Sheba Medical Center, Ramat Gan, Israel.",
+          "Faculty of Medical and Health Sciences, Tel Aviv University, Tel Aviv, Israel.",
+          "Epidemiology, Julius Center for Health Sciences and Primary Care, University Medical Center (UMC) Utrecht, Utrecht University, Utrecht, the Netherlands.",
+          "European Clinical Research Alliance on Infectious Diseases (Ecraid), Utrecht, the Netherlands.",
+          "Wesfarmers Centre of Vaccines and Infectious Diseases, Kids Research Institute Australia, Nedlands, WA, Australia.",
+          "Department of Infectious Diseases, Perth Children's Hospital, Nedlands, WA, Australia.",
+          "Clinical HIV Research Unit, Faculty of Health Sciences, University of the Witwatersrand, Johannesburg."
         ],
         "journal": "The New England journal of medicine",
         "pubDate": "2026-Jun-18",
@@ -163,8 +190,11 @@
         "keywords": [],
         "doi": "10.1056/NEJMoa2506905",
         "pmcid": "",
+        "nctIds": [
+          "NCT05137119"
+        ],
         "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308484/",
-        "collectedAt": "2026-06-22T11:22:05.733Z",
+        "collectedAt": "2026-06-22T11:49:05.002Z",
         "screeningData": {
           "score": 12,
           "relevanceMatches": [],
@@ -180,9 +210,40 @@
           "exclude": false,
           "excludeReason": ""
         },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42308484\nDOI: 10.1056/NEJMoa2506905\nClinical trial IDs found in PubMed record/abstract: NCT05137119\nAuthor affiliations:\n- Department of Medicine, Division of Infectious Diseases, McGill University, Montreal.\n- Department of Infectious Diseases, University of Melbourne at the Peter Doherty Institute for Infection and Immunity, Melbourne, VIC, Australia.\n- Department of Infectious Diseases, Division of Medicine, Middlemore Hospital, Auckland, New Zealand.\n- University College London Innovative Clinical Trials Unit, Institute of Clinical Trials and Methodology, University College London, London.\n- Department of Infection, Guy's and St. Thomas' National Health Service (NHS) Foundation Trust and King's College London, London.\n- Infectious Diseases Unit, Sheba Medical Center, Ramat Gan, Israel.\n- Faculty of Medical and Health Sciences, Tel Aviv University, Tel Aviv, Israel.\n- Epidemiology, Julius Center for Health Sciences and Primary Care, University Medical Center (UMC) Utrecht, Utrecht University, Utrecht, the Netherlands.\n\nPublic trial registry from ClinicalTrials.gov (NCT05137119):\nBrief title: Staphylococcus Aureus Network Adaptive Platform Trial\nOfficial title: Staphylococcus Aureus Network Adaptive Platform Trial\nOverall status: RECRUITING\nStudy type / phase: INTERVENTIONAL, PHASE4\nDesign: RANDOMIZED, FACTORIAL, TREATMENT, masking NONE\nEnrollment: 8000 (ESTIMATED)\nCountries: United States, Australia, Canada, France, Germany, Israel, Japan, Netherlands, New Zealand, Singapore, South Africa, Sweden, United Kingdom\nSample recruiting/participating locations:\n- Houston Methodist Research Institute, Houston, Texas, United States\n- Canberra Hospital, Garran, Australia Capital Territory, Australia\n- Blacktown Hospital, Blacktown, New South Wales, Australia\n- Royal Prince Alfred Hospital, Camperdown, New South Wales, Australia\n- Concord Repatriation and General Hospital, Concord, New South Wales, Australia\n- St Vincent's Hospital Sydney, Darlinghurst, New South Wales, Australia\n- Nepean Hospital, Kingswood, New South Wales, Australia\n- St George Hospital, Kogarah, New South Wales, Australia\n- Liverpool Hospital, Liverpool, New South Wales, Australia\n- John Hunter Hospital, New Lambton Heights, New South Wales, Australia\n- John Hunter Children's Hospital, Newcastle, New South Wales, Australia\n- Orange Health Service, Orange, New South Wales, Australia\nArms/groups:\n- Methicillin-resistant staphylococcus aureus (MRSA) - Standard Therapy Arm (backbone therapy) (NO_INTERVENTION): Vancomycin or Daptomycin - Standard Therapy Arm Either intravenous vancomycin dosed as per Australian Therapeutic Guidelines: This includes a loading dose of 25 mg/kg (up to 3000mg) if considered appropriate by the treating clinician, initial maintenance dosing at 15-20 mg/kg q12h, with subsequent adjustment to maintain area under the concentration-time curve (AUC) of 400 to 600 mg.hr/L OR trough levels at 10-20 mg/L, and the initial level taken 48-72 hours after the initiation of the first dose\n- Methicillin-resistant staphylococcus aureus (MRSA) - Standard + B-Lactam Arm (backbone therapy) (EXPERIMENTAL): Vancomycin or Daptomycin (Standard Therapy) + Beta-Lactam (β-lactam) Arm In addition to standard treatment an intravenous β-lactam will be added for the first 7 calendar days following randomisation (day 1 being the day of randomisation - hence patients will receive 6-7 days of β-lactam). This β-lactam will be intravenous cefazolin 2g every 8 hours. For patients with renal impairment the intravenous cefazolin administration doses will be adjusted.\n- Methicillin-susceptible staphylococcus aureus (MSSA) - Standard Therapy Arm (backbone therapy) (NO_INTERVENTION): Flucloxacillin or cloxacillin - Standard Therapy Arm Either intravenous flucloxacillin/cloxacillin 2g every 4 or 6 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with renal impairment or critical illness the intravenous flucloxacillin administration dose will be adjusted.\n- Methicillin-susceptible staphylococcus aureus (MSSA) - Interventional Arm (backbone therapy) (EXPERIMENTAL): Cefazolin - Interventional Arm Intravenous cefazolin 2g every 6 or 8 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with renal impairment or critical illness the intravenous cefazolin administration dose will be adjusted.\n- Penicillin-susceptible staphylococcus aureus (PSSA) - Standard Therapy Arm (backbone therapy) (NO_INTERVENTION): Flucloxacillin or cloxacillin - Standard Therapy Arm Either intravenous flucloxacillin/cloxacillin 2g every 4 or 6 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with renal impairment or critical illness the intravenous flucloxacillin administration dose will be adjusted.\n- Penicillin-susceptible staphylococcus aureus (PSSA) - Interventional Arm (backbone therapy) (EXPERIMENTAL): Benzylpenicillin - Interventional Arm Intravenous benzylpenicillin 1.8g (3 million units) every 4 or 6 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with critical illness the intravenous benzylpenicillin administration doses will be adjusted.\n- No adjunctive treatment in combination with MRSA or MSSA or PSSA backbone therapy arm (NO_INTERVENTION): No adjunctive therapy + backbone therapy arm for MRSA or MSSA or PSSA Participants with either MRSA or MSSA or PSSA will have no adjunctive therapy in combination with their backbone therapy arm.\n- Adjunctive treatment in combination with MRSA or MSSA or PSSA backbone therapy arm (EXPERIMENTAL): Adjunctive therapy + backbone therapy arm for MRSA or MSSA or PSSA Intravenous clindamycin (or lincomycin) 600mg every 8 hours from platform day 1 to day 5. No dosage adjustment is needed to renal impairment.\nInterventions:\n- Cefazolin (DRUG): Cefazolin\n- Penicillin (DRUG): benzylpenicillin\n- Clindamycin (DRUG): Clindamycin\n- Vancomycin (DRUG): Vancomycin or Daptomycin\n- Effectiveness of early switch to oral antibiotics (OTHER): This involves testing a strategy rather than individual antibiotic agents\n- Whole body FDG PET/CT Imaging (RADIATION): Whole body FDG PET/CT imaging will be performed using a standardised protocol describing patient preparation and minimum specifications for radiopharmaceutical production, quality control, and PET/CT acquisition.\nPrimary outcomes:\n- All-cause mortality at 90 days after platform entry | time frame: From randomisation (day 1) until day 90 | The primary endpoint for all cells and domains will be all-cause mortality at 90 days after platform entry. The primary endpoint will be determined through a search of hospital databases for a record of a participant's death, or follow-up contact with the participant's community healthcare provider, or follow-up contact with the patient or their nominated carer, or linkage with death registries.\nSecondary outcomes:\n- Core1: All-cause mortality at 14, 28 and 42 days after platform entry | time frame: From randomisation (day 1) until day 14, 28, and 42 | Determined through a search of hospital databases for a record of a participant's death, or follow-up contact with the participant's community healthcare provider, or follow-up contact with the patient or their nominated carer, or linkage with death registries.\n- Core2: Duration of survival censored at 90 days after platform entry | time frame: From randomisation (day 1) until day 90 | Determined through a search of hospital databases for a record of a participant's death, or follow-up contact with the participant's community healthcare provider, or follow-up contact with the patient or their nominated carer, or linkage with death registries.\n- Core3: Length of stay of acute index inpatient hospitalisation for those surviving until discharge from acute inpatient facilities (excluding HITH/COPAT/OPAT/rehab). | time frame: From randomisation (day 1) until discharge from acute inpatient facilities, truncated at 90 days. | Acute index hospitalisation is defined as continuous hospital admission to one or more acute inpatient facilities for the index episode. This does not include HITH/OPAT/COPAT and stepdown inpatient rehabilitation/post-acute care. It does include admission to acute care hospitals immediately preceding and following thos\n- Core4: Length of stay of total index hospitalisation for those surviving until hospital discharge (including HITH/COPAT/OPAT/rehab) | time frame: From randomisation (day 1) to discharge from total index hospitalisation, truncated at 90 days | Total index hospitalisation is defined as continuous hospital admission to one or more inpatient facilities for the index episode, including HITH/OPAT/COPAT and stepdown inpatient rehabilitation/post-acute care (if continuous with the initial inpatient admission). It includes admission to acute care hospitals immediately preceding and following those at t\n- Core5: Time to being discharged alive from the total index hospitalisation (including HITH/COPAT/OPAT/rehab) truncated at 90 days after platform entry | time frame: From randomisation (day 1) to discharge from total index hospitalisation, truncated at 90 days | and all deaths within 90 days will be considered '90 days'\n- Core6: Microbiological treatment failure defined as positive sterile site culture for S. aureus [of the same silo as the index isolate between 14 and 90 days after platform entry). | time frame: From day 14 until day 90 | A sterile site means any sites deep to the skin and skin structures, including deep visceral and musculoskeletal abscesses that have been obtained in a sterile manner.\n- Core7: Diagnosis of new foci between 14 and 90 days after platform entry. | time frame: From day 14 until day 90 | The presence of new foci will be determined by the site investigator and can incorporate clinical, radiological, microbiological and pathological findings.\n- Core8: C. difficile diarrhoea as determined by a clinical laboratory in the 90 days following platform entry for participants ≥2 years of age. | time frame: From randomisation (day 1) until day 90 | This means a stool submitted to a clinical laboratory has tested positive for C. difficile toxin or toxin gene.\nEligibility excerpt: PLATFORM Inclusion Criteria: Patients must fulfil all of the following criteria to be eligible to enter the SNAP trial: 1. Staphylococcus aureus complex grown from ≥1 blood culture 2. Admitted to a participating hospital at the time of eligibility assessment (OR if patient has died, they were admitted to this site anytime from the time of blood culture collection until the time of eligibility assessment) PLATFORM Exclusion Criteria: Potentially eligible participants meeting any of the following criteria at the time of eligibility assessment for platform entry will be excluded from the randomised platform (but may still participate in the registry): 1. Time of anticipated platform entry is greater than 72 hours post collection of the index blood culture (Where the time of culture collection is not recorded, the time of laboratory registration of the sample will be used as an alternative) 2. Polymicrobial bacteraemia, defined as more than one organism (at species level) in the index blood cultures OR in any subsequent blood culture reported between the collection of the index blood culture and platform eligibility assessment, excluding those organisms judged to be contaminants by either the microbiology laboratory or treating clinician. 3. Known previous participation in the randomised SNAP platfor",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "clinicaltrials",
+            "label": "ClinicalTrials.gov NCT05137119"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
         "contextSource": {
-          "type": "abstract",
-          "reason": "No PMCID available for open full-text fetch"
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "clinicaltrials",
+              "label": "ClinicalTrials.gov NCT05137119"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-06-22T11:49:54.012Z"
         }
       },
       "source": "llm"
@@ -202,6 +263,16 @@
         "Jones J",
         "Kenes MT",
         "Posa PJ"
+      ],
+      "authorAffiliations": [
+        "Department of Pulmonary and Critical Care, Intermountain Medical Center, Salt Lake City, Utah.",
+        "Division of Pulmonary and Critical Care Medicine, Department of Medicine, University of Michigan, Ann Arbor.",
+        "Division of Hospital Medicine, Department of Medicine, University of Michigan, Ann Arbor.",
+        "Michigan Hospital Medicine Safety Consortium Coordinating Center, Ann Arbor.",
+        "Emergency Medicine, Division of Medicine, Henry Ford Macomb Hospital, Clinton Township, Michigan.",
+        "Department of Pharmacy, Corewell Health, Dearborn, Michigan.",
+        "Department of Clinical Pharmacy, College of Pharmacy, University of Michigan, Ann Arbor.",
+        "VA Center for Clinical Management Research, Ann Arbor, Michigan."
       ],
       "journal": "JAMA network open",
       "pubDate": "2026-Jun-01",
@@ -225,8 +296,9 @@
       "keywords": [],
       "doi": "10.1001/jamanetworkopen.2026.18232",
       "pmcid": "PMC13263783",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42284053/",
-      "collectedAt": "2026-06-22T11:22:13.585Z",
+      "collectedAt": "2026-06-22T11:49:10.698Z",
       "screeningData": {
         "score": 15,
         "relevanceMatches": [
@@ -258,6 +330,11 @@
         "Urgilés MAC",
         "Celleri OPB"
       ],
+      "authorAffiliations": [
+        "Intensive Care Unit, Hospital Humanitario San Jose - Azogues, Cañar, Ecuador.",
+        "Intensive Care Unit, Hospital Doctor Peset - Valencia, Spain.",
+        "Research Training Department, Universidad Católica de Cuenca - Cuenca, Ecuador."
+      ],
       "journal": "Critical care science",
       "pubDate": "2026",
       "publicationTypes": [
@@ -281,8 +358,9 @@
       "keywords": [],
       "doi": "10.62675/2965-2774.20260371",
       "pmcid": "PMC13155773",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307314/",
-      "collectedAt": "2026-06-22T11:22:06.569Z",
+      "collectedAt": "2026-06-22T11:49:05.651Z",
       "screeningData": {
         "score": 14,
         "relevanceMatches": [
@@ -319,6 +397,20 @@
         "Niemelä VH",
         "Reinikainen M"
       ],
+      "authorAffiliations": [
+        "Department of Surgical Sciences and Integrated Diagnostics (DISC), University of Genoa, Genoa, Liguria, Italy battaglini.denise@gmail.com.",
+        "Anesthesia and Intensive Care, IRCCS Azienda Ospedaliera Metropolitana, Genoa, Italy.",
+        "Department of Surgical Sciences and Integrated Diagnostics (DISC), University of Genoa, Genoa, Liguria, Italy.",
+        "Servizio di Anestesia e Rianimazione Generale, Azienda Ospedaliero Universitaria di Alessandria, Alessandria, Italy.",
+        "Wellcome-Wolfson Institute for Experimental Medicine, Queen's University Belfast, Belfast, Northern Ireland, UK.",
+        "Regional Intensive Care Unit, Royal Victoria Hospital, Belfast Health and Social Care Trust, Belfast, UK.",
+        "Intensive Care Unit, University Hospitals Bristol and Weston, Bristol, UK.",
+        "Department of Anaesthesia and Intensive Care, Helsinki University Hospital and University of Helsinki, Helsinki, Finland.",
+        "Institute of Clinical Medicine, University of Eastern Finland, Kuopio, Finland.",
+        "Department of Anaesthesiology and Intensive Care, Kuopio University Hospital, Kuopio, Finland.",
+        "Critical Care Program, The George Institute for Global Health, UNSW Sydney, NSW, Australia.",
+        "Malcom Fisher Department of Intensive Care Medicine, Royal North Shore Hospital, Sydney, NWS, Australia."
+      ],
       "journal": "BMJ open",
       "pubDate": "2026-Jun-15",
       "publicationTypes": [
@@ -343,8 +435,11 @@
       ],
       "doi": "10.1136/bmjopen-2026-118872",
       "pmcid": "",
+      "nctIds": [
+        "NCT05564754"
+      ],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42297460/",
-      "collectedAt": "2026-06-22T11:22:09.896Z",
+      "collectedAt": "2026-06-22T11:49:08.038Z",
       "screeningData": {
         "score": 13,
         "relevanceMatches": [
@@ -381,6 +476,11 @@
         "Jakobi T",
         "Koch DA"
       ],
+      "authorAffiliations": [
+        "Department of Trauma and Orthopaedic Surgery, BG Unfallklinik Frankfurt, Frankfurt am Main, Germany. Philipp.Faul@BGU-Frankfurt.de.",
+        "Department of Trauma and Orthopaedic Surgery, BG Unfallklinik Frankfurt, Frankfurt am Main, Germany.",
+        "Institute for Research in Operative Medicine (IFOM), University Witten/Herdecke, Cologne, Germany."
+      ],
       "journal": "Scandinavian journal of trauma, resuscitation and emergency medicine",
       "pubDate": "2026-Jun-11",
       "publicationTypes": [
@@ -411,8 +511,9 @@
       ],
       "doi": "10.1186/s13049-026-01641-1",
       "pmcid": "PMC13261963",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42277933/",
-      "collectedAt": "2026-06-22T11:22:16.103Z",
+      "collectedAt": "2026-06-22T11:49:12.171Z",
       "screeningData": {
         "score": 13,
         "relevanceMatches": [
@@ -448,6 +549,11 @@
         "Yoshinaga K",
         "Iizuka Y"
       ],
+      "authorAffiliations": [
+        "Department of Anesthesiology and Critical Care Medicine, Jichi Medical University, Tochigi, Japan.",
+        "Department of Anesthesiology and Critical Care Medicine, Jichi Medical University, Saitama Medical Center, Saitama, Japan.",
+        "Department of Real-World Evidence, Graduate School of Medicine, University of Tokyo, Tokyo, Japan."
+      ],
       "journal": "JAMA health forum",
       "pubDate": "2026-Jun-01",
       "publicationTypes": [
@@ -467,8 +573,9 @@
       "keywords": [],
       "doi": "10.1001/jamahealthforum.2026.1451",
       "pmcid": "PMC13263776",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42284048/",
-      "collectedAt": "2026-06-22T11:22:14.390Z",
+      "collectedAt": "2026-06-22T11:49:11.339Z",
       "screeningData": {
         "score": 13,
         "relevanceMatches": [
@@ -491,6 +598,154 @@
       }
     },
     {
+      "pmid": "42321935",
+      "title": "Implementation of the kidney protection strategy in critically ill patients with acute kidney injury - a multi-center prospective cohort study.",
+      "abstract": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI). However, real-world implementation of this strategy in critically ill patients with AKI is unclear. We quantified timely and sustained adherence to KPS in critically ill adults with moderate-to-severe (KDIGO stage 2 or 3) AKI and explored associations with clinical outcomes.\nMETHODS: This was a multicenter, prospective cohort study enrolling adult patients with moderate or severe AKI requiring vasopressors and/or mechanical ventilation across five centers in Europe. The primary endpoint was adherence to the KPS, which included hemodynamic monitoring, sustained optimization of mean arterial pressure (MAP) > 65 mmHg, monitoring of serum creatinine and urine output, and avoidance of hyperglycemia, radiocontrast agents and nephrotoxins when possible, within 12 h after AKI diagnosis for 48 h or until ICU discharge. Exploratory analyses examined associations between adherence and renal outcomes.\nRESULTS: A total of 258 patients were enrolled (median age 69 years [IQR 62-75]; 65% male; median SOFA 10 [IQR 8-13]). The complete KPS was implemented in 80 patients (31%; 95% CI, 25.5-37.2%). Adherence to individual components of the KPS varied widely with optimization of MAP showing the lowest implementation rate (33%). In exploratory analyses accounting for death as a competing risk, KPS adherence was associated with a lower incidence of AKD beyond day 7 (subdistribution hazard ratio [SHR] 0.64; 95% CI, 0.41-0.99; p = 0.046), a higher incidence of renal recovery at hospital discharge (SHR 6.02; 95% CI, 4.00-9.05; p < 0.0001), and a lower incidence of RRT within 30 days (SHR 0.12; 95% CI, 0.02-0.91; p = 0.04). After multivariable adjustment, the association with renal recovery remained robust (adjusted SHR 6.29; 95% CI, 3.08-12.85; p < 0.0001). A clear dose-response relationship was observed between the number of implemented KPS components and renal outcomes.\nCONCLUSIONS: In critically ill patients with moderate-to-severe AKI, the complete KDIGO-recommended kidney protection strategy was implemented in approximately one-third of patients, and full KPS adherence was associated with a higher rate of renal recovery at hospital discharge.",
+      "authors": [
+        "Sadjadi M",
+        "Marcello M",
+        "Köhler A",
+        "Perschinka F",
+        "Schauflinger S",
+        "Joannidis M",
+        "Vadász I",
+        "Husain-Syed F"
+      ],
+      "authorAffiliations": [
+        "Department of Anesthesiology, Intensive Care and Pain Medicine, University Hospital Münster, Albert-Schweitzer-Campus 1, Geb. A1, Münster, 48149, Germany.",
+        "Department of Nephrology, Dialysis and transplantation, San Bortolo Hospital, Vicenza, Italy.",
+        "Division of Intensive Care and Emergency Medicine, Department of Internal Medicine, Medical University Innsbruck, Innsbruck, Austria.",
+        "Department of Internal Medicine II, Justus Liebig University, Universities of Giessen and Marburg Lung Center, Giessen, Germany.",
+        "Department of Intensive Care, Radboud University Medical Center, Nijmegen, The Netherlands.",
+        "Department of Anesthesia and Intensive Care, Section of Oncological Anesthesia and Intensive Care, AOU Careggi, Florence, Italy.",
+        "Institute of Biostatistics and Clinical Research, University Hospital Münster, Münster, Germany.",
+        "Center for Critical Care Nephrology, Department of Critical Care Medicine, University of Pittsburgh, Pittsburgh, USA.",
+        "Department of Anesthesiology, Intensive Care and Pain Medicine, University Hospital Münster, Albert-Schweitzer-Campus 1, Geb. A1, Münster, 48149, Germany. zarbock@uni-muenster.de."
+      ],
+      "journal": "Critical care (London, England)",
+      "pubDate": "2026-Jun-19",
+      "publicationTypes": [
+        "Journal Article",
+        "Multicenter Study"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Acute Kidney Injury",
+        "Prospective Studies",
+        "Critical Illness",
+        "Female",
+        "Male",
+        "Middle Aged",
+        "Aged",
+        "Cohort Studies",
+        "Intensive Care Units",
+        "Europe"
+      ],
+      "keywords": [
+        "Acute kidney injury",
+        "Critical care",
+        "Guideline adherence",
+        "Implementation",
+        "KDIGO",
+        "Kidney protection strategy"
+      ],
+      "doi": "10.1186/s13054-026-06144-0",
+      "pmcid": "PMC13282845",
+      "nctIds": [],
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42321935/",
+      "collectedAt": "2026-06-22T11:49:02.805Z",
+      "screeningData": {
+        "score": 12,
+        "relevanceMatches": [
+          "critical care",
+          "intensive care",
+          "ICU",
+          "mechanical ventilation",
+          "vasopressor"
+        ],
+        "studyType": "Practice Guideline",
+        "sampleSize": 258,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: critical care, intensive care, ICU, mechanical ventilation",
+          "study design: Practice Guideline",
+          "sample size signal: N=258"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42314159",
+      "title": "Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care (ADVISE): Protocol for a Single-Center Randomized Controlled Trial.",
+      "abstract": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury. Recommended care for this vulnerable group includes discussion of their goals for life-sustaining care (\"code status\") upon admission, but most older patients do not participate in adequate code status discussions. Randomized trials have demonstrated that video-based interventions are associated with better patient knowledge and improved alignment of patient preferences for life-sustaining treatment; however, there are limited data on the effectiveness of these interventions in acutely injured patients.\nOBJECTIVE: This trial will evaluate the effectiveness and implementation considerations of a video conversation aid to enhance communication among trauma care providers, patients, and surrogate decision-makers regarding cardiopulmonary resuscitation (CPR) and code status decisions.\nMETHODS: This is a single-center randomized controlled trial evaluating the use of a video conversation aid to facilitate discussions of code status. The video intervention will be compared to usual care in the largest feasible pilot randomized controlled trial with the goal of estimating its benefit for patient-centered outcomes. All trauma patients aged 65 years and older admitted following injury are eligible. Incarcerated people, patients with existing do-not-resuscitate or do-not-intubate orders, patients admitted while in hospice care, and patients not expected to survive over 24 to 48 hours will be excluded. The primary outcome is transitions in code status. Secondary outcomes will include perceived success of CPR, video acceptability and effectiveness, knowledge of life-sustaining care outcomes and complications following CPR, participant desire for more information regarding life-sustaining care, hospital-free days, intensive care unit-free days, ventilator-free days, discharge disposition, decisional conflict score, and rate of interventional procedures (eg, tracheostomy, feeding tube placement, and dialysis initiation).\nRESULTS: The ADVISE (Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care) trial was funded in February 2025 via the Learning Healthcare System grant from the University of Texas Health Science Center at Houston. Enrollment began on March 17, 2025, and it is estimated to conclude on May 1, 2026.\nCONCLUSIONS: The ADVISE trial builds on previous research on older trauma patients and advanced care planning using a video intervention to enhance code status discussions. We anticipate that our video aid tool will enhance patients' and surrogate decision-makers' knowledge of advanced care discussions.\nTRIAL REGISTRATION: ClinicalTrials.gov NCT06804226; https://clinicaltrials.gov/study/NCT06804226.\nINTERNATIONAL REGISTERED REPORT IDENTIFIER (IRRID): DERR1-10.2196/87690.",
+      "authors": [
+        "Fajemisin MO",
+        "Karpe AS",
+        "Martinez Ugarte S",
+        "Blakely ML",
+        "Khraish G",
+        "Sanghvi S",
+        "Lee JL",
+        "Kao LS"
+      ],
+      "authorAffiliations": [
+        "The University of Texas Health Science Center at Houston, Houston, TX, United States."
+      ],
+      "journal": "JMIR research protocols",
+      "pubDate": "2026-Jun-18",
+      "publicationTypes": [
+        "Journal Article",
+        "Clinical Trial Protocol"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Terminal Care",
+        "Randomized Controlled Trials as Topic",
+        "Aged",
+        "Video Recording",
+        "Cardiopulmonary Resuscitation",
+        "Communication",
+        "Decision Making",
+        "Advance Care Planning"
+      ],
+      "keywords": [
+        "cardiopulmonary resuscitation",
+        "code status",
+        "decision aid",
+        "older people",
+        "trauma",
+        "video"
+      ],
+      "doi": "10.2196/87690",
+      "pmcid": "",
+      "nctIds": [
+        "NCT06804226"
+      ],
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42314159/",
+      "collectedAt": "2026-06-22T11:49:04.015Z",
+      "screeningData": {
+        "score": 12,
+        "relevanceMatches": [
+          "intensive care",
+          "resuscitation",
+          "trauma"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 950000,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: intensive care, resuscitation, trauma",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=950000"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
       "pmid": "42308484",
       "title": "Cefazolin for Methicillin-Susceptible Bacteremia.",
       "abstract": "BACKGROUND: bacteremia is associated with high mortality. Whether cefazolin or an antistaphylococcal penicillin should be preferred for the treatment of methicillin-susceptible bacteremia is unclear.\nMETHODS: In an ongoing international Bayesian adaptive platform trial, we conducted an open-label, randomized comparison of cefazolin with an antistaphylococcal penicillin (flucloxacillin or cloxacillin) in adult patients with penicillin-resistant, methicillin-susceptible bacteremia. The primary outcome, which was evaluated with a hierarchical Bayesian logistic-regression model, was death from any cause within 90 days after enrollment in the platform. We assessed the posterior probability of the noninferiority of cefazolin to flucloxacillin or cloxacillin (with the criterion for noninferiority prespecified as an adjusted odds ratio of <1.2, which approximates an absolute difference in mortality of <2.5 percentage points if mortality in the antistaphylococcal-penicillin group is 15%), as well as the posterior probability of superiority (with the criterion of an adjusted odds ratio of <1.0). Secondary safety outcomes included the development of acute kidney injury within 14 days.\nRESULTS: This domain of the ongoing trial was conducted between February 17, 2022, and August 7, 2024, by which time the criterion for noninferiority had been met. Mortality at 90 days among adults who could be evaluated was 15.0% (97 deaths among 645 patients) in the cefazolin group and 17.0% (109 deaths among 642 patients) in the antistaphylococcal-penicillin group (adjusted odds ratio, 0.81; 95% credible interval, 0.59 to 1.12; probability of noninferiority, 99.2%; probability of superiority, 89.8%). Acute kidney injury occurred in 92 of 660 patients (13.9%) in the cefazolin group, as compared with 127 of 648 (19.6%) in the antistaphylococcal-penicillin group (adjusted odds ratio, 0.67; 95% credible interval, 0.50 to 0.89; probability of superiority, 99.7%).\nCONCLUSIONS: In patients with methicillin-susceptible bacteremia, cefazolin was noninferior to flucloxacillin or cloxacillin with respect to 90-day mortality and was associated with a lower incidence of acute kidney injury. (Funded by the National Health and Medical Research Council and others; SNAP ClinicalTrials.gov number, NCT05137119.).",
@@ -502,6 +757,20 @@
         "Yahav D",
         "Cheng MP",
         "Bonten M"
+      ],
+      "authorAffiliations": [
+        "Department of Medicine, Division of Infectious Diseases, McGill University, Montreal.",
+        "Department of Infectious Diseases, University of Melbourne at the Peter Doherty Institute for Infection and Immunity, Melbourne, VIC, Australia.",
+        "Department of Infectious Diseases, Division of Medicine, Middlemore Hospital, Auckland, New Zealand.",
+        "University College London Innovative Clinical Trials Unit, Institute of Clinical Trials and Methodology, University College London, London.",
+        "Department of Infection, Guy's and St. Thomas' National Health Service (NHS) Foundation Trust and King's College London, London.",
+        "Infectious Diseases Unit, Sheba Medical Center, Ramat Gan, Israel.",
+        "Faculty of Medical and Health Sciences, Tel Aviv University, Tel Aviv, Israel.",
+        "Epidemiology, Julius Center for Health Sciences and Primary Care, University Medical Center (UMC) Utrecht, Utrecht University, Utrecht, the Netherlands.",
+        "European Clinical Research Alliance on Infectious Diseases (Ecraid), Utrecht, the Netherlands.",
+        "Wesfarmers Centre of Vaccines and Infectious Diseases, Kids Research Institute Australia, Nedlands, WA, Australia.",
+        "Department of Infectious Diseases, Perth Children's Hospital, Nedlands, WA, Australia.",
+        "Clinical HIV Research Unit, Faculty of Health Sciences, University of the Witwatersrand, Johannesburg."
       ],
       "journal": "The New England journal of medicine",
       "pubDate": "2026-Jun-18",
@@ -530,8 +799,11 @@
       "keywords": [],
       "doi": "10.1056/NEJMoa2506905",
       "pmcid": "",
+      "nctIds": [
+        "NCT05137119"
+      ],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308484/",
-      "collectedAt": "2026-06-22T11:22:05.733Z",
+      "collectedAt": "2026-06-22T11:49:05.002Z",
       "screeningData": {
         "score": 12,
         "relevanceMatches": [],
@@ -549,6 +821,81 @@
       }
     },
     {
+      "pmid": "42320929",
+      "title": "Survey of practices around the measurement and replacement of calcium in paediatric major trauma.",
+      "abstract": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility. Current guidelines recommend maintaining normal ionised calcium levels in the bleeding trauma patient. However, guidance does not specify when to replace calcium, and for paediatric trauma, it is unclear when clinicians should measure or decide to replace calcium.\nOBJECTIVES: This study aimed to survey the practices, protocols and opinions regarding the measurement and replacement of calcium in paediatric major trauma.\nMETHODS: A cross-sectional survey with single-stage voluntary and snowball sampling. Individual emergency departments (EDs) responded to questions on departmental practices, while individual clinicians provided opinions on the measurement and replacement of calcium based on a clinical vignette with two variations (a haemodynamically stable and a haemodynamically unstable). The survey was administered using Online Surveys V3 (JISC, 2025). Respondents were invited to participate through collaborative research networks.\nRESULTS: There were responses from 67 individual EDs and 99 individual respondents from 19 different countries. Most EDs had a paediatric major haemorrhage protocol (61/67, 91.0%), but this did not include calcium for 16/67 (23.9%) of the EDs. The timing of calcium replacement was either not included or not specified in most protocols (44/67, 65.7%), with variations in when it should be replaced when specified.Opinions on considering calcium replacement before blood products were significantly different based on whether the patient in the vignette was clinically stable or unstable. Opinions on replacement doses of exogenous calcium were significantly different when the calcium was moderately low (<1.12 mmol/L), but were not significantly different if the calcium was severely low (<1.0 mmol/L).\nCONCLUSION: There is considerable variation among EDs regarding ionised calcium measurement and calcium replacement, both before blood product transfusion and in major haemorrhage protocols. Clinicians' opinions on calcium measurement and replacement also vary widely. More research is needed to reach a consensus.\nLEVEL OF EVIDENCE: III.",
+      "authors": [
+        "Hibberd O",
+        "Ranaweera M",
+        "Karageorgos S",
+        "Priddis K",
+        "Nijman RG",
+        "Tagg A",
+        "Hall D",
+        "Roland D"
+      ],
+      "authorAffiliations": [
+        "Emergency and Urgent Care Research in Cambridge (EURECA), PACE Section, Department of Medicine, Cambridge University, Cambridge, UK oh296@cam.ac.uk.",
+        "Blizard Institute, Queen Mary University of London, London, UK.",
+        "Department of Paediatric Emergency Medicine, University Hospital Southampton, Southampton, UK.",
+        "Paediatric Emergency Department, Aghia Sophia Children's Hospital, Athens, Greece.",
+        "School of Medicine, University of Crete, Heraklion, Greece.",
+        "Children's Emergency Department, West Hertfordshire Teaching Hospitals NHS Trust, Watford, UK.",
+        "Section of Pediatric Infectious Diseases, Imperial College of Science, Technology and Medicine, London, UK.",
+        "Western Health, Melbourne, Victoria, Australia.",
+        "Paediatric Academic Health Science Centre, Children's Health Ireland, Dublin, Ireland.",
+        "SAPPHIRE Group, Population Health Sciences, Leicester University, Leicester, UK.",
+        "Paediatric Emergency Medicine Leicester Academic (PEMLA) Group, Children's Emergency Department, Leicester Royal Infirmary, Leicester, UK."
+      ],
+      "journal": "BMJ paediatrics open",
+      "pubDate": "2026-Jun-17",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Calcium",
+        "Cross-Sectional Studies",
+        "Hypocalcemia",
+        "Child",
+        "Hemorrhage",
+        "Wounds and Injuries",
+        "Practice Patterns, Physicians'",
+        "Emergency Service, Hospital",
+        "Surveys and Questionnaires",
+        "Female"
+      ],
+      "keywords": [
+        "Child Health",
+        "Physiology",
+        "Resuscitation"
+      ],
+      "doi": "10.1136/bmjpo-2026-004588",
+      "pmcid": "",
+      "nctIds": [],
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320929/",
+      "collectedAt": "2026-06-22T11:49:02.806Z",
+      "screeningData": {
+        "score": 12,
+        "relevanceMatches": [
+          "emergency department",
+          "resuscitation",
+          "trauma"
+        ],
+        "studyType": "Practice Guideline",
+        "sampleSize": null,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, resuscitation, trauma",
+          "study design: Practice Guideline",
+          "journal boost: BMJ paediatrics open"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
       "pmid": "42303390",
       "title": "Predictive variables for early detection of sepsis in adults admitted to intensive care units: protocol for a systematic review.",
       "abstract": "INTRODUCTION: Sepsis is a life-threatening condition in intensive care units (ICUs), where any delay in diagnosis and treatment can lead to organ dysfunction, prolonged hospital stay and increased mortality. Early identification of sepsis prior to its clinical manifestation may enable timely intervention and improve outcomes. This review aims to identify, synthesise and categorise predictor variables assessed in adult ICU patients prior to sepsis diagnosis.\nMETHODS/DESIGN: This protocol, in accordance with the Preferred Reporting Items for Systematic Review and Meta-Analysis Protocols (PRISMA-P) guideline, will involve a comprehensive search of PubMed/Medline, Scopus, Embase, Web of Science, IEEE Xplore and Cochrane Library for English-language studies from database inception. The search is planned to be conducted between March 2026 and June 2026. We will include prospective, retrospective, cohort, case-control and cross-sectional studies, and both randomised and non-randomised designs. Additionally, we will consider secondary analysis of electronic health records, clinical registries and routinely acquired clinical data that determine risk factors and predictive variables that will help in the early identification of sepsis using machine learning, artificial intelligence, computational or statistical methods. Two independent reviewers will perform title and abstract screening followed by full-text review and data extraction. The risk of bias will be evaluated using appropriate tools depending on study design: the Newcastle-Ottawa Scale for observational studies, Cochrane Risk of Bias tool for randomised trials and PROBAST for prediction model studies. We will perform a narrative synthesis structured by variable-type, timing and performance metrics (area under the curve, sensitivity, ORs). Subgroup analyses will be conducted based on study design, sepsis definition, type of ICU (medical, surgical, mixed) and geographic area (high-income and low- and middle-income countries).\nETHICS AND DISSEMINATION: Findings from this systematic review will be disseminated through publication in a peer-reviewed journal and/or presentation at scientific conferences. The data used will not include individual patient data, so ethical approval is not required.\nPROSPERO REGISTRATION NUMBER: CRD420251113781.",
@@ -558,6 +905,12 @@
         "Asmarian N",
         "Rafiee M",
         "Sarabi RE"
+      ],
+      "authorAffiliations": [
+        "Student Research Committee, Health Information Sciences Department, Faculty of Management and Medical Information Sciences, Kerman University of Medical Sciences, Kerman, Iran.",
+        "Anesthesiology and Critical Care Research Center, Shiraz University of Medical Sciences, Shiraz, Iran.",
+        "HIV/STI Surveillance Research Center, and WHO Collaborating Center for HIV Surveillance, Institute for Futures Studies in Health, Kerman University of Medical Sciences, Kerman, Iran.",
+        "Health Information Management in Medical Informatics Research Center, Institute for Futures Studies in Health, Kerman University of Medical Sciences, Kerman, Iran a.ershadsarabi@gmail.com."
       ],
       "journal": "BMJ open",
       "pubDate": "2026-Jun-16",
@@ -584,8 +937,9 @@
       ],
       "doi": "10.1136/bmjopen-2025-109036",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42303390/",
-      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "collectedAt": "2026-06-22T11:49:06.906Z",
       "screeningData": {
         "score": 12,
         "relevanceMatches": [
@@ -617,6 +971,13 @@
         "Fernández González MI",
         "Revilla Guarinos MT"
       ],
+      "authorAffiliations": [
+        "Servicio de Traumatología y Cirugía Ortopédica, Hospital de Zumárraga, Zumarraga, Spain JOSU.ARRIETAALBERDI@osakidetza.eus MARIATERESA.REVILLAGUARINOS@bio-gipuzkoa.eus.",
+        "Servicio de Traumatología y Cirugía Ortopédica, Hospital Universitario de Donostia, San Sebastián, Spain.",
+        "Servicio de Traumatología y Cirugía Ortopédica, Hospital Universitario Araba, Vitoria-Gasteiz, Spain.",
+        "Servicio de Farmacia, Hospital de Zumárraga, Zumarraga, Spain.",
+        "Unidad de Investigación Clínica, Biogipuzkoa Instituto de Investigación Sanitaria, San Sebastián, Spain JOSU.ARRIETAALBERDI@osakidetza.eus MARIATERESA.REVILLAGUARINOS@bio-gipuzkoa.eus."
+      ],
       "journal": "BMJ open",
       "pubDate": "2026-Jun-12",
       "publicationTypes": [
@@ -645,8 +1006,9 @@
       ],
       "doi": "10.1136/bmjopen-2025-108380",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42285569/",
-      "collectedAt": "2026-06-22T11:22:13.584Z",
+      "collectedAt": "2026-06-22T11:49:10.697Z",
       "screeningData": {
         "score": 12,
         "relevanceMatches": [
@@ -680,6 +1042,14 @@
         "Hu Y",
         "Zhang J"
       ],
+      "authorAffiliations": [
+        "Department of Pediatrics, Suqian First Hospital, Suqian, China.",
+        "Department of Neonatology, Siyang Hospital, Suqian, China.",
+        "Department of Neonatology, Sihong First Hospital, Suqian, China.",
+        "Department of Pediatrics, The Affiliated Huaihai Hospital of Xuzhou Medical University, Xuzhou, China.",
+        "Department of Neonatology, Sihong Hospital, Suqian, China.",
+        "Department of Neonatology, Shuyang Hospital of Traditional Chinese Medicine (Clinical College of Yangzhou University Medical College), Suqian, Jiangsu, China."
+      ],
       "journal": "Frontiers in public health",
       "pubDate": "2026",
       "publicationTypes": [
@@ -706,8 +1076,9 @@
       ],
       "doi": "10.3389/fpubh.2026.1837412",
       "pmcid": "PMC13268985",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42311997/",
-      "collectedAt": "2026-06-22T11:22:05.732Z",
+      "collectedAt": "2026-06-22T11:49:04.999Z",
       "screeningData": {
         "score": 12,
         "relevanceMatches": [
@@ -742,6 +1113,11 @@
         "Pei L",
         "Song P"
       ],
+      "authorAffiliations": [
+        "Department of Anesthesiology and Surgery, The First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, China.",
+        "Department of Epidemiology and Health Statistics, Xi'an Jiaotong University Health Science Center, Xi'an, Shaanxi, China.",
+        "Department of Anesthesiology and Surgery, The First Affiliated Hospital of Xi'an Jiaotong University, Xi'an, Shaanxi, China yaomin_zhu@126.com spy_spy@sohu.com."
+      ],
       "journal": "BMJ open",
       "pubDate": "2026-Jun-18",
       "publicationTypes": [
@@ -770,8 +1146,9 @@
       ],
       "doi": "10.1136/bmjopen-2025-113082",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315266/",
-      "collectedAt": "2026-06-22T11:22:04.016Z",
+      "collectedAt": "2026-06-22T11:49:03.414Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -803,6 +1180,12 @@
         "Lake ET",
         "Aiken LH"
       ],
+      "authorAffiliations": [
+        "School of Nursing, Universidad de los Andes, Chile, Santiago, Chile msimonetti@uandes.cl.",
+        "School of Nursing, Universidad de los Andes, Chile, Santiago, Chile.",
+        "Centro de Investigación en Complejidad Social, Facultad de Gobierno, Universidad del Desarrollo, Santiago, Santiago Metropolitan Region, Chile.",
+        "School of Nursing, Center for Health Outcomes and Policy Research, University of Pennsylvania, Philadelphia, Pennsylvania, USA."
+      ],
       "journal": "BMJ open",
       "pubDate": "2026-Jun-18",
       "publicationTypes": [
@@ -831,8 +1214,9 @@
       ],
       "doi": "10.1136/bmjopen-2026-117133",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315260/",
-      "collectedAt": "2026-06-22T11:22:04.016Z",
+      "collectedAt": "2026-06-22T11:49:03.415Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -866,6 +1250,12 @@
         "Sharma P",
         "Kant R"
       ],
+      "authorAffiliations": [
+        "Internal Medicine, All India Institute of Medical Sciences Rishikesh, Rishikesh, Uttarakhand, India.",
+        "Internal Medicine, All India Institute of Medical Sciences Rishikesh, Rishikesh, Uttarakhand, India drmukeshbairwa1982@gmail.com.",
+        "Biochemistry, All India Institute of Medical Sciences Rishikesh, Rishikesh, Uttarakhand, India.",
+        "Pulmonary Medicine, All India Institue of Medical Sciences Rishikesh, Rishikesh, Uttarakhand, India."
+      ],
       "journal": "BMJ open respiratory research",
       "pubDate": "2026-Jun-15",
       "publicationTypes": [
@@ -894,8 +1284,9 @@
       ],
       "doi": "10.1136/bmjresp-2025-004085",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42303309/",
-      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "collectedAt": "2026-06-22T11:49:06.906Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -931,6 +1322,14 @@
         "Sewell JB",
         "Silverman SC"
       ],
+      "authorAffiliations": [
+        "Veterans Affairs (VA) Puget Sound Health Care System, Seattle, Washington.",
+        "Department of Psychiatry and Behavioral Sciences, University of Washington, Seattle.",
+        "VA Portland Health Care System, Portland, Oregon.",
+        "Oregon Health & Science University, Portland.",
+        "Oregon State University, Corvallis.",
+        "VA Roseburg Health Care System, Roseburg, Oregon."
+      ],
       "journal": "JAMA network open",
       "pubDate": "2026-Jun-01",
       "publicationTypes": [
@@ -954,8 +1353,11 @@
       "keywords": [],
       "doi": "10.1001/jamanetworkopen.2026.18896",
       "pmcid": "PMC13280705",
+      "nctIds": [
+        "NCT05776719"
+      ],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313385/",
-      "collectedAt": "2026-06-22T11:22:04.779Z",
+      "collectedAt": "2026-06-22T11:49:04.015Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -986,6 +1388,15 @@
         "Douglas N",
         "Bourke EM"
       ],
+      "authorAffiliations": [
+        "Department of Critical Care, University of Melbourne, Melbourne, Australia.",
+        "Department of Emergency Medicine, Royal Melbourne Hospital, Melbourne, Australia.",
+        "Clinical Epidemiology and Biostatistics Unit, Murdoch Children's Research Institute, Melbourne, Australia.",
+        "Trauma Service, Royal Melbourne Hospital, Melbourne, Australia.",
+        "Department of Surgery, University of Melbourne, Melbourne, Australia.",
+        "Department of Anaesthesia, Royal Melbourne Hospital, Melbourne, Australia.",
+        "Department of Emergency Medicine, Grampians Health Ballarat, Ballarat, Australia."
+      ],
       "journal": "Emergency medicine Australasia : EMA",
       "pubDate": "2026-Jun",
       "publicationTypes": [
@@ -1015,8 +1426,9 @@
       ],
       "doi": "10.1111/1742-6723.70300",
       "pmcid": "PMC13263128",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42285729/",
-      "collectedAt": "2026-06-22T11:22:13.584Z",
+      "collectedAt": "2026-06-22T11:49:10.695Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -1050,6 +1462,11 @@
         "Rajana A",
         "Arikitamula R"
       ],
+      "authorAffiliations": [
+        "Department of Pharmacy Practice, Vignan Institute of Pharmaceutical Technology, Duvvada, AP, India. mugadavinodkumar18@gmail.com.",
+        "Department of Pharmacy Practice, Vignan Institute of Pharmaceutical Technology, Duvvada, AP, India.",
+        "Pharm.D Intern, Visakha Institute of Medical Sciences, Hanumanthuwaka, Vizag, AP, India."
+      ],
       "journal": "Prague medical report",
       "pubDate": "2026",
       "publicationTypes": [
@@ -1080,8 +1497,9 @@
       ],
       "doi": "10.14712/23362936.2026.12",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319050/",
-      "collectedAt": "2026-06-22T11:22:04.015Z",
+      "collectedAt": "2026-06-22T11:49:03.413Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -1115,6 +1533,12 @@
         "Li H",
         "Guo Q"
       ],
+      "authorAffiliations": [
+        "Department of Cardiology, Sun Yat-sen Memorial Hospital, Sun Yat-sen University, Guangzhou, Guangdong, China.",
+        "Department of Cardiology, The Affiliated Guangdong Second Provincial General Hospital of Jinan University, Guangzhou, Guangdong, China.",
+        "Department of Cardiology, Guangzhou First People's Hospital, South China University of Technology, No. 1, Panfu Road, Yuexiu District, Guangzhou, Guangdong 510013, China.",
+        "Department of Cardiology, Sun Yat-sen Memorial Hospital, Sun Yat-sen University, No. 107, Yanjiang West Road, Yuexiu District, Guangzhou, Guangdong 510120, China."
+      ],
       "journal": "Therapeutic advances in cardiovascular disease",
       "pubDate": "2026",
       "publicationTypes": [
@@ -1143,8 +1567,9 @@
       ],
       "doi": "10.1177/17539447261457542",
       "pmcid": "PMC13272861",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42304606/",
-      "collectedAt": "2026-06-22T11:22:07.440Z",
+      "collectedAt": "2026-06-22T11:49:06.299Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -1177,6 +1602,12 @@
         "Zhang L",
         "Fu J"
       ],
+      "authorAffiliations": [
+        "Department of Emergency, the Affiliated Hospital of Guizhou Medical University, Guiyang 550004, China.",
+        "Department of Emergency, Guizhou Provincial People's Hospital, Guiyang 550002, China.",
+        "Qiandongnan Miao and Dong Autonomous Prefecture People's Hospital, Kaili 556000, China.",
+        "Department of Critical Care Medicine, Liupanshui People's Hospital, Liupanshui 553001, China. Corresponding author: Fu Jiangquan, Email: fujiangquan123456@126.com."
+      ],
       "journal": "Zhonghua wei zhong bing ji jiu yi xue",
       "pubDate": "2026-May",
       "publicationTypes": [
@@ -1200,8 +1631,9 @@
       "keywords": [],
       "doi": "10.3760/cma.j.cn121430-20250929-00499",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42281541/",
-      "collectedAt": "2026-06-22T11:22:14.390Z",
+      "collectedAt": "2026-06-22T11:49:11.342Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1231,6 +1663,10 @@
         "Thirumalai J",
         "Sivakumar I",
         "Sekaran S"
+      ],
+      "authorAffiliations": [
+        "Department of Research, Saveetha College of Nursing, Saveetha Institute of Medical and Technical Sciences, Saveetha University, Tamil Nadu, 602105, Chennai, India. jeevarathinamhope@gmail.com.",
+        "Saveetha Institute of Basic Medical Sciences, Saveetha Institute of Medical and Technical Sciences, Saveetha University, Tamil Nadu, 602105, Chennai, India."
       ],
       "journal": "Purinergic signalling",
       "pubDate": "2026-Jun-19",
@@ -1265,8 +1701,9 @@
       ],
       "doi": "10.1007/s11302-026-10172-4",
       "pmcid": "PMC13282434",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319606/",
-      "collectedAt": "2026-06-22T11:22:02.737Z",
+      "collectedAt": "2026-06-22T11:49:02.807Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1286,6 +1723,78 @@
       }
     },
     {
+      "pmid": "42315642",
+      "title": "Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.",
+      "abstract": "INTRODUCTION: The association between surgical timing and clinical outcomes in older adults with distal femur fractures remains unclear. We conducted a systematic review and meta-analysis to evaluate whether earlier surgery is associated with improved outcomes in this population.\nMATERIALS AND METHODS: In accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, two independent reviewers searched MEDLINE, Embase, the Cochrane Central Register of Controlled Trials, ClinicalTrials.gov, and the World Health Organization International Clinical Trials Registry Platform from inception to October 8, 2024. The primary outcome was 30-day mortality, and secondary outcomes included longer-term mortality and postoperative complications. Risk of bias was assessed using the Quality in Prognosis Studies tool, and the certainty of evidence was evaluated using the Grading of Recommendations Assessment, Development and Evaluation approach.\nRESULTS: Of 6,101 records screened, 16 retrospective cohort studies comprising 31,213 patients met the inclusion criteria. Early surgery was not associated with reduced 30-day mortality (adjusted odds ratio [OR]: 0.77, 95% confidence interval [CI]: 0.56-1.05; low-certainty evidence) or with longer-term mortality at 90 days (crude OR: 0.91, 95% CI: 0.51-1.60), 180 days (crude OR: 0.46, 95% CI: 0.12-1.77), or 1 year (crude OR: 0.61, 95% CI: 0.34-1.09). Similar findings were observed for postoperative complications: cardiac complications (OR: 0.71, 95% CI: 0.48-1.07), pulmonary complications (OR: 1.07, 95% CI: 0.77-1.47), and pulmonary embolism (OR: 1.14, 95% CI: 0.62-2.16). Heterogeneity across outcomes was low to moderate, and definitions of early surgery varied among studies. Overall, this meta-analysis did not demonstrate a clinically meaningful association between surgical timing and short-term clinical outcomes in older adults with distal femur fractures. Sensitivity analyses consistently suggested lower mortality with earlier surgery, likely reflecting stricter definitions of early surgery and improved control of time-related bias.\nCONCLUSIONS: This meta-analysis did not demonstrate a clinically meaningful association between surgical timing and short-term clinical outcomes in older adults with distal femur fractures. Given the heterogeneity in definitions and study designs, high-quality prospective studies with standardized timing are warranted.",
+      "authors": [
+        "Hoshika S",
+        "Yamamoto N",
+        "Saka N",
+        "Tsuge T",
+        "Sato T",
+        "Isaji Y",
+        "Nakao S"
+      ],
+      "authorAffiliations": [
+        "Shoulder & Elbow Service, Funabashi Orthopaedic Sports Medicine & Joint Center, Funabashi, Japan. hoshikashota@hotmail.com.",
+        "Scientific Research WorkS Peer Support Group (SRWS-PSG), Osaka, Japan. hoshikashota@hotmail.com.",
+        "Scientific Research WorkS Peer Support Group (SRWS-PSG), Osaka, Japan.",
+        "Department of Orthopaedic Surgery, Minato Medical Coop-Kyoritsu General Hospital, Nagoya, Japan.",
+        "Department of Orthopaedics, Teikyo University, Tokyo, Japan.",
+        "Department of Rehabilitation, Kurashiki Medical Center, Kurashiki, Japan.",
+        "Department of Epidemiology, Graduate School of Medicine, Dentistry and Pharmaceutical Sciences, Okayama University, Shikata-cho, Okayama, Japan.",
+        "Adult and Child Health Care Nursing Region, Acute Care Nursing Division, Kobe City College of Nursing, Kobe, Japan.",
+        "Department of Physical Therapy, School of Health Sciences, Bukkyo University, Kyoto, Japan.",
+        "Division of Rehabilitation Medicine, Shimane University Hospital, Izumo, Japan."
+      ],
+      "journal": "Archives of orthopaedic and trauma surgery",
+      "pubDate": "2026-Jun-18",
+      "publicationTypes": [
+        "Journal Article",
+        "Systematic Review",
+        "Meta-Analysis",
+        "Review"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Postoperative Complications",
+        "Femoral Fractures, Distal",
+        "Aged",
+        "Time-to-Treatment",
+        "Treatment Outcome",
+        "Time Factors"
+      ],
+      "keywords": [
+        "Geriatric trauma",
+        "Meta-analysis",
+        "Mortality",
+        "Postoperative complications",
+        "Time to surgery"
+      ],
+      "doi": "10.1007/s00402-026-06296-2",
+      "pmcid": "PMC13279584",
+      "nctIds": [],
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315642/",
+      "collectedAt": "2026-06-22T11:49:03.414Z",
+      "screeningData": {
+        "score": 10,
+        "relevanceMatches": [
+          "trauma"
+        ],
+        "studyType": "Practice Guideline",
+        "sampleSize": 31213,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: trauma",
+          "study design: Practice Guideline",
+          "sample size signal: N=31213"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
       "pmid": "42308517",
       "title": "Early vs Late Initiation of Extracorporeal Membrane Oxygenation: Protocol for a Prospective, Randomized, Multicenter Study.",
       "abstract": "BACKGROUND: Acute respiratory distress syndrome (ARDS) is characterized by severe inflammatory lung injury leading to life-threatening hypoxemia. Standard treatment includes lung-protective mechanical ventilation and adjunctive measures, while veno-venous extracorporeal membrane oxygenation (vvECMO) is used as a rescue therapy in refractory cases. However, the optimal timing for initiation of vvECMO remains uncertain, with official recommendations identifying it as a rescue therapy, while emerging evidence suggests that earlier implementation of vvECMO during the disease course might provide benefits.\nOBJECTIVE: The ELIEO (Early vs Late Initiation of vvECMO) trial aims to determine whether early initiation of vvECMO improves survival and clinical outcomes compared with a conventional strategy in patients with severe ARDS.\nMETHODS: ELIEO is a prospective, randomized, multicenter clinical trial enrolling 508 adult patients with severe ARDS. Participants will be randomized to one of two groups: (1) early vvECMO initiation within 24 hours after admission to the intensive care unit of an extracorporeal membrane oxygenation center or (2) conventional management according to ARDS Network guidelines, with vvECMO used only as rescue therapy. All-cause mortality at day 90 will serve as the primary outcome and will be analyzed using a 2-sided log-rank test within an O'Brien-Fleming group-sequential design. Secondary end points include Sequential Organ Failure Assessment scores, functional status at days 28 and 90, bleeding events, and intensive care unit-related complications, which will be analyzed using appropriate regression and nonparametric methods, with adjusted Cox models for sensitivity analyses.\nRESULTS: Patient recruitment started on March 1, 2025, and is ongoing; study completion is expected in August 2028. An interim analysis is planned after the 94th patient has been enrolled. The trial is designed to evaluate whether early initiation of vvECMO reduces 90-day mortality and improves organ function and functional recovery compared with a conventional rescue strategy. Results will be reported after completion of enrollment and follow-up. As of May 2026, a total of 9 patients have been recruited.\nCONCLUSIONS: The ELIEO trial will provide robust evidence regarding the optimal timing of vvECMO initiation in patients with severe ARDS. The findings may influence clinical decision-making, resource allocation, and organizational strategies for the management of ARDS in specialized intensive care settings.\nTRIAL REGISTRATION: ClinicalTrials.gov NCT04208126; https://clinicaltrials.gov/study/NCT04208126.\nINTERNATIONAL REGISTERED REPORT IDENTIFIER (IRRID): DERR1-10.2196/86652.",
@@ -1298,6 +1807,11 @@
         "Fodi CK",
         "Martus P",
         "Rosenberger P"
+      ],
+      "authorAffiliations": [
+        "Department of Anaesthesiology and Intensive Care Medicine, Tübingen University Hospital, Tübingen, Germany.",
+        "Center for Clinical Studies, Tübingen University Hospital, Tübingen, Germany.",
+        "Institute for Clinical Epidemiology und Applied Biostatistics, Eberhard-Karls University, Tübingen, Germany."
       ],
       "journal": "JMIR research protocols",
       "pubDate": "2026-Jun-17",
@@ -1327,8 +1841,11 @@
       ],
       "doi": "10.2196/86652",
       "pmcid": "",
+      "nctIds": [
+        "NCT04208126"
+      ],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308517/",
-      "collectedAt": "2026-06-22T11:22:05.733Z",
+      "collectedAt": "2026-06-22T11:49:05.000Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1362,6 +1879,16 @@
         "Corcoran J",
         "Marsden J"
       ],
+      "authorAffiliations": [
+        "Centre of Vestibular Neurology, Imperial College London, London, UK Rebecca.smith@imperial.ac.uk.",
+        "Centre of Vestibular Neurology, Imperial College London, London, UK.",
+        "Population Health Sciences, King's College London, London, UK.",
+        "Imperial College Healthcare NHS Foundation Trust, London, UK.",
+        "St. George's Hospital NHS Foundation Trust, London, UK.",
+        "Kings' College Hospital NHS FoundationTrust, London, UK.",
+        "Guy's and St Thomas' NHS Foundation Trust, London, UK.",
+        "School of Health Professions, University of Plymouth, Plymouth, UK."
+      ],
       "journal": "BMJ open",
       "pubDate": "2026-Jun-16",
       "publicationTypes": [
@@ -1391,8 +1918,9 @@
       ],
       "doi": "10.1136/bmjopen-2026-117657",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42303391/",
-      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "collectedAt": "2026-06-22T11:49:06.906Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1422,6 +1950,18 @@
         "Belzunegui Otano T",
         "Tamayo Rodríguez I"
       ],
+      "authorAffiliations": [
+        "Servicio de Emergencias, La Rioja, 061, Spain.",
+        "Hospital San Pedro, Logroño, Spain.",
+        "Universidad Pública de Navarra (UPNA), Pamplona, Spain.",
+        "Hospital Universitario de Navarra, Pamplona, Spain. marta.ferraz.torres@navarra.es.",
+        "Biomedical Research Center of Navarra, Navarra Biomed, Pamplona, Spain. marta.ferraz.torres@navarra.es.",
+        "IdiSNA, Instituto de Investigación Sanitaria de Navarra, Pamplona, Spain. marta.ferraz.torres@navarra.es.",
+        "Universidad Pública de Navarra (UPNA), Pamplona, Spain. marta.ferraz.torres@navarra.es.",
+        "Hospital Universitario de Navarra, Pamplona, Spain.",
+        "Biomedical Research Center of Navarra, Navarra Biomed, Pamplona, Spain.",
+        "IdiSNA, Instituto de Investigación Sanitaria de Navarra, Pamplona, Spain."
+      ],
       "journal": "European journal of trauma and emergency surgery : official publication of the European Trauma Society",
       "pubDate": "2026-Jun-16",
       "publicationTypes": [
@@ -1450,8 +1990,9 @@
       ],
       "doi": "10.1007/s00068-026-03234-0",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42301409/",
-      "collectedAt": "2026-06-22T11:22:08.246Z",
+      "collectedAt": "2026-06-22T11:49:06.906Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1485,6 +2026,12 @@
         "Yang H",
         "Lim SC"
       ],
+      "authorAffiliations": [
+        "Department of Otolaryngology-Head and Neck Surgery, Chonnam National University Medical School, Chonnam National University Hospital, Gwangju, Republic of Korea.",
+        "Department of Otorhinolaryngology-Head and Neck Surgery, School of Medicine, Kyungpook National University, Daegu, Republic of Korea.",
+        "Department of Otolaryngology-Head and Neck Surgery, Chonnam National University Medical School, Chonnam National University Hospital, Gwangju, Republic of Korea. blessed@jnu.ac.kr.",
+        "Department of Otolaryngology-Head and Neck Surgery, Chonnam National University Medical School, Chonnam National University Hospital, Gwangju, Republic of Korea. limsc@chonnam.ac.kr."
+      ],
       "journal": "Journal of clinical sleep medicine : JCSM : official publication of the American Academy of Sleep Medicine",
       "pubDate": "2026-Jun-15",
       "publicationTypes": [
@@ -1510,8 +2057,9 @@
       ],
       "doi": "10.1007/s44470-026-00105-8",
       "pmcid": "PMC13269594",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42298088/",
-      "collectedAt": "2026-06-22T11:22:09.896Z",
+      "collectedAt": "2026-06-22T11:49:08.038Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1544,6 +2092,12 @@
         "Wang K",
         "Jin X"
       ],
+      "authorAffiliations": [
+        "Department of Urology, Institute of Urology (Laboratory of Reconstructive Urology), West China Hospital, Sichuan University, No.37 Guo Xue Xiang, Chengdu, 610041, Sichuan, P.R. China.",
+        "Department of Urology, Institute of Urology (Laboratory of Reconstructive Urology), West China Hospital, Sichuan University, No.37 Guo Xue Xiang, Chengdu, 610041, Sichuan, P.R. China. 11511761@qq.com.",
+        "Department of Urology, Institute of Urology (Laboratory of Reconstructive Urology), West China Hospital, Sichuan University, No.37 Guo Xue Xiang, Chengdu, 610041, Sichuan, P.R. China. wangkj@scu.edu.cn.",
+        "Department of Urology, Institute of Urology (Laboratory of Reconstructive Urology), West China Hospital, Sichuan University, No.37 Guo Xue Xiang, Chengdu, 610041, Sichuan, P.R. China. jinxi@wchscu.cn."
+      ],
       "journal": "Urolithiasis",
       "pubDate": "2026-Jun-13",
       "publicationTypes": [
@@ -1571,8 +2125,9 @@
       ],
       "doi": "10.1007/s00240-026-02016-y",
       "pmcid": "",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42287451/",
-      "collectedAt": "2026-06-22T11:22:12.755Z",
+      "collectedAt": "2026-06-22T11:49:10.052Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1602,6 +2157,10 @@
         "Wang S",
         "Yang C"
       ],
+      "authorAffiliations": [
+        "Department of Endocrinology, Zhejiang Provincial People's Hospital, Affiliated People's Hospital, Hangzhou Medical College, Hangzhou, People's Republic of China.",
+        "Department of Intensive Care Unit, Emergency and Intensive Care Unit Center, Zhejiang Provincial People's Hospital, Affiliated People's Hospital, Hangzhou Medical College, Hangzhou, People's Republic of China."
+      ],
       "journal": "Medicine",
       "pubDate": "2026-Jun-12",
       "publicationTypes": [
@@ -1627,8 +2186,9 @@
       ],
       "doi": "10.1097/MD.0000000000049261",
       "pmcid": "PMC13268517",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42299597/",
-      "collectedAt": "2026-06-22T11:22:09.099Z",
+      "collectedAt": "2026-06-22T11:49:07.463Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1662,6 +2222,18 @@
         "Kranker LM",
         "Behr C"
       ],
+      "authorAffiliations": [
+        "Division of Adolescent Medicine, Washington University in St Louis School of Medicine, St Louis, Missouri.",
+        "School of Public Health, Washington University in St Louis, St Louis, Missouri.",
+        "Center for Biostatistics and Data Science, Washington University in St Louis School of Medicine, St Louis, Missouri.",
+        "Department of Emergency Medicine, Washington University in St Louis School of Medicine, St Louis, Missouri.",
+        "Brown School of Social Work, Washington University in St Louis, St Louis, Missouri.",
+        "School of Criminal Justice, University at Albany, SUNY, Albany, New York.",
+        "St Louis University School of Social Work, St Louis, Missouri.",
+        "Department of Surgery, Section of Acute & Critical Care Surgery, Washington University in St Louis School of Medicine, St Louis, Missouri.",
+        "SSM St Louis University Hospital, St Louis University School of Medicine, St Louis, Missouri.",
+        "Trudy Busch Valentine School of Nursing, St Louis University, St Louis, Missouri."
+      ],
       "journal": "JAMA network open",
       "pubDate": "2026-Jun-01",
       "publicationTypes": [
@@ -1685,8 +2257,9 @@
       "keywords": [],
       "doi": "10.1001/jamanetworkopen.2026.18199",
       "pmcid": "PMC13276627",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307949/",
-      "collectedAt": "2026-06-22T11:22:06.569Z",
+      "collectedAt": "2026-06-22T11:49:05.651Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1717,6 +2290,10 @@
         "Dong W",
         "Yang M"
       ],
+      "authorAffiliations": [
+        "The Second Department of Critical Care Medicine, The Second Affiliated Hospital of Anhui Medical University, Hefei, P. R. China.",
+        "The Laboratory of Cardiopulmonary Resuscitation and Critical Care, The Second Affiliated Hospital of Anhui Medical University, Hefei, P. R. China."
+      ],
       "journal": "Renal failure",
       "pubDate": "2026-Dec",
       "publicationTypes": [
@@ -1746,8 +2323,9 @@
       ],
       "doi": "10.1080/0886022X.2026.2677246",
       "pmcid": "PMC13276809",
+      "nctIds": [],
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42309977/",
-      "collectedAt": "2026-06-22T11:22:05.733Z",
+      "collectedAt": "2026-06-22T11:49:05.000Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -1767,233 +2345,8 @@
         "exclude": false,
         "excludeReason": ""
       }
-    },
-    {
-      "pmid": "42307312",
-      "title": "Clinical outcomes and associated factors in pediatric patients undergoing tracheostomy in a public intensive care unit.",
-      "abstract": "OBJECTIVE: To describe clinical outcomes and identify predictors of death and complications in children undergoing tracheostomy at a public referral hospital in the Federal District.\nMETHODS: A retrospective cohort study including 123 children (zero to 14 years) who underwent tracheostomy between 2017 and 2021. Patients under exclusive palliative care, those lost to follow-up, or with a tracheostomy performed prior to 2017 were excluded. Follow-up spanned from the procedure date until decannulation, death, or the study end (August 2, 2025), with a mean duration of 26.9 months. Data on demographics, clinical indicators, complications, and outcomes were analyzed using descriptive statistics, survival analysis (Kaplan-Meier), binary logistic regression, and Poisson regression.\nRESULTS: The majority were infants (58.5%) and male (53.7%). Upper airway obstruction was the predominant indication (41.5%). The overall mortality was 39%, and septic shock was the leading cause (16.7%). Complications occurred in 52% of cases, most notably tracheitis (42.2%) and accidental decannulation (32.8%). Multivariate analysis identified the following as independent predictors of death: tracheitis (OR 4.79; 95%CI 2.15 - 10.68; p = 0.001), mechanical ventilation dependence (OR 3.43; 95%CI 1.52 - 7.74; p = 0.003), and accidental decannulation (OR 2.44; 95%CI 1.05 - 5.66; p = 0.037). Poisson regression showed that longer tracheostomy use time (IRR 1.137; p = 0.008) and complex chronic diseases (IRR 1.573; p = 0.011) were associated with higher complication rates.\nCONCLUSION: Tracheostomized children in this public hospital setting experience high morbidity and mortality, influenced significantly by modifiable factors such as infection, ventilator dependence, and decannulation events.",
-      "authors": [
-        "Almeida IS",
-        "Serra LSM",
-        "Praia CFC",
-        "Serafim AP"
-      ],
-      "journal": "Critical care science",
-      "pubDate": "2026",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Male",
-        "Tracheostomy",
-        "Female",
-        "Infant",
-        "Retrospective Studies",
-        "Child",
-        "Child, Preschool",
-        "Adolescent",
-        "Infant, Newborn",
-        "Tracheostomy Decannulation",
-        "Intensive Care Units, Pediatric"
-      ],
-      "keywords": [],
-      "doi": "10.62675/2965-2774.20260345",
-      "pmcid": "PMC13155771",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307312/",
-      "collectedAt": "2026-06-22T11:22:06.569Z",
-      "screeningData": {
-        "score": 10,
-        "relevanceMatches": [
-          "critical care",
-          "intensive care",
-          "septic shock",
-          "airway",
-          "mechanical ventilation"
-        ],
-        "studyType": "Observational",
-        "sampleSize": 123,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: critical care, intensive care, septic shock, airway",
-          "study design: Observational",
-          "sample size signal: N=123"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42307310",
-      "title": "Hemodynamic monitoring in sepsis and septic shock in pediatric patients: a multicenter survey.",
-      "abstract": "OBJECTIVE: To evaluate the current practices of hemodynamic monitoring in sepsis and septic shock in Brazilian pediatric intensive care units.\nMETHODS: A multicenter, cross-sectional study using an electronic survey.\nRESULTS: An electronic survey was responded to in three rounds (1 week each), and responses from 77 pediatric intensive care units in 26 states of Brazil were collected. Point-of-care cardiac ultrasound was the method of choice for fluid responsiveness evaluation in septic children in 61% pediatric intensive care units; 78% pediatric intensive care units had enough arterial line monitors available to every bed, but only 57% use invasive arterial blood pressure monitoring for every patient diagnosed with septic shock; 22% use invasive arterial blood pressure monitoring just for refractory shock patients. To guide initiation/titration of inotropes and vasoactive agents, 70% pediatric intensive care units said their decision is based on clinical assessment; 20% use point-of-care cardiac ultrasound to aid vasoactive agent choice; 88% pediatric intensive care units use Lactate trend, and 35% measure central/mixed venous saturation in patients with septic shock.\nCONCLUSION: Differences between international guidelines and practice in Brazilian pediatric intensive care units regarding hemodynamic monitoring in pediatric sepsis were identified. These differences may arise for several reasons; recognizing them is crucial to making appropriate changes and adjusting valuable guidelines to make them more feasible for low- and middle-income countries.",
-      "authors": [
-        "Cury CBQ",
-        "Souza DC",
-        "Araujo OR",
-        "Tonial CT",
-        "Colleti Junior J",
-        "Prata-Barbosa A",
-        "Lanziotti VS"
-      ],
-      "journal": "Critical care science",
-      "pubDate": "2026",
-      "publicationTypes": [
-        "Journal Article",
-        "Multicenter Study"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Shock, Septic",
-        "Intensive Care Units, Pediatric",
-        "Cross-Sectional Studies",
-        "Brazil",
-        "Hemodynamic Monitoring",
-        "Sepsis",
-        "Child",
-        "Hemodynamics",
-        "Practice Guidelines as Topic",
-        "Point-of-Care Systems",
-        "Child, Preschool"
-      ],
-      "keywords": [],
-      "doi": "10.62675/2965-2774.20260262",
-      "pmcid": "PMC13155772",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307310/",
-      "collectedAt": "2026-06-22T11:22:06.569Z",
-      "screeningData": {
-        "score": 10,
-        "relevanceMatches": [
-          "critical care",
-          "intensive care",
-          "sepsis",
-          "septic shock"
-        ],
-        "studyType": "Practice Guideline",
-        "sampleSize": null,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: critical care, intensive care, sepsis, septic shock",
-          "study design: Practice Guideline"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42280906",
-      "title": "VISIOCPR: Monocular Vision-Based CPR Training System with Human-Computer Collaborative Feedback.",
-      "abstract": "High-quality cardiopulmonary resuscitation (CPR) aims at saving lives in time-critical emergencies, which requires correct compression rate, depth, and hand placement. However, due to the high cost and environmental constraints of sensor-equipped manikins or dedicated hardware, it is unrealistic to deploy these devices in ordinary training settings. For monocular vision-based methods, estimating compression depth without direct depth signals and tracking hands under severe overlap are difficult. To address these problems, this paper proposes VISIOCPR, a monocular vision-based CPR training system with human-computer collaborative feedback, which provides quantitative CPR coaching using only a standard RGB camera. To address the inherent visual constraints, the system integrates a tiered compression-point detector that maintains robust tracking continuity despite severe hand overlap and motion blur. Furthermore, it recovers accurate metric depth without attached markers through a fused calibration scheme, which combines an empirical baseline, a reference-object measurement, and visible body proportions. A randomized controlled study (n=40) showed that participants trained with VISIOCPR achieved higher simultaneous compliance and reached competency faster than the control group under the tested setting.",
-      "authors": [
-        "Li A",
-        "Lu W"
-      ],
-      "journal": "Sensors (Basel, Switzerland)",
-      "pubDate": "2026-May-27",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Cardiopulmonary Resuscitation",
-        "Feedback",
-        "Vision, Monocular",
-        "Manikins"
-      ],
-      "keywords": [
-        "cardiopulmonary resuscitation",
-        "human–computer interaction",
-        "medical training",
-        "monocular depth estimation",
-        "real-time feedback"
-      ],
-      "doi": "10.3390/s26113388",
-      "pmcid": "PMC13258953",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42280906/",
-      "collectedAt": "2026-06-22T11:22:14.390Z",
-      "screeningData": {
-        "score": 9,
-        "relevanceMatches": [
-          "ICU",
-          "resuscitation"
-        ],
-        "studyType": "Randomized Controlled Trial",
-        "sampleSize": 40,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: ICU, resuscitation",
-          "study design: Randomized Controlled Trial",
-          "sample size signal: N=40"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42315273",
-      "title": "Wearable sensor technology and machine learning for anterior cruciate ligament injury diagnosis: an exploratory feasibility study.",
-      "abstract": "OBJECTIVES: To evaluate the feasibility of using wearable inertial measurement units (IMUs; small body-worn sensors that capture linear acceleration and angular velocity) combined with machine learning (ML) to identify anterior cruciate ligament (ACL) injuries during clinical knee joint laxity assessments.\nDESIGN: Prospective exploratory feasibility study using a case-control design. A feed-forward neural network classifier was trained on time-normalised IMU signals recorded during Lachman and Anterior Drawer tests to distinguish ACL-injured from healthy knees. Model performance was assessed using 10-fold participant-level cross-validation and reported at repetition-wise and subject-wise levels.\nSETTING: Biomechanics laboratory within a secondary care setting in London, UK. Recruitment occurred through an acute soft-tissue injury management clinic.\nPARTICIPANTS: 50 participants were recruited: 26 healthy controls and 24 individuals with an MRI-confirmed ACL injury (partial or complete) sustained within the current injury episode. Healthy controls contributed 52 uninjured legs and ACL-injured participants contributed 25 injured and 23 contralateral uninjured legs (including 1 bilateral injury). Inclusion criteria for the injured group were acute knee injury, MRI-confirmed ACL tear and ability to bear weight. Controls were ≥18 years with no history of knee ligament injury. Exclusion criteria included age <18 or >45, chronic joint conditions, non-weightbearing status, pregnancy, allergy to adhesives or inability to provide informed consent. All participants completed the study.\nINTERVENTIONS: Not applicable. Participants underwent standardised clinical Lachman and Anterior Drawer tests performed by a specialist physiotherapist while IMUs were mounted on the femur and tibia using a custom three-dimensional-printed rig.\nPRIMARY AND SECONDARY OUTCOME MEASURES: The primary outcome was diagnostic accuracy of an ML model classifying ACL injury status (injured vs healthy) based on IMU-derived linear acceleration and angular velocity (three axes per sensor). Secondary outcomes included sensitivity, specificity, positive predictive value (PPV), negative predictive value (NPV), area under the receiver operating characteristic curve (AUROC) and F1 score. Planned model assessments (repetition-wise and subject-wise) were completed as intended. Hyperparameter adjustments were made post hoc to address overfitting when expanding to the full dataset.\nRESULTS: Across the full dataset (n=50), the comparative leg model (method 2) achieved a subject-wise diagnostic accuracy of 81%, sensitivity 83%, specificity 79%, PPV 80% and NPV 83% using 10-fold participant-level cross-validation. Repetition-wise accuracy was 71%. Discriminative performance was moderate (AUROC 0.773), with an F1 score of 0.889. The individual leg model (method 1) showed lower performance (subject-wise accuracy 70%; sensitivity 43%; specificity 81%).\nCONCLUSIONS: This study supports the feasibility of wearable sensors to be used in the clinical assessment of ACL injury to assist in capturing movement features associated with joint laxity. More work should be done to increase generalisability and validate findings further.",
-      "authors": [
-        "Allott NEH",
-        "Bicer M",
-        "Korgaonkar J",
-        "Thomas R",
-        "Banger MS",
-        "McGregor AH"
-      ],
-      "journal": "BMJ open",
-      "pubDate": "2026-Jun-18",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Anterior Cruciate Ligament Injuries",
-        "Feasibility Studies",
-        "Machine Learning",
-        "Female",
-        "Male",
-        "Adult",
-        "Wearable Electronic Devices",
-        "Prospective Studies",
-        "Case-Control Studies",
-        "Young Adult",
-        "Biomechanical Phenomena"
-      ],
-      "keywords": [
-        "Knee",
-        "Musculoskeletal disorders",
-        "Orthopaedic sports trauma",
-        "SPORTS MEDICINE",
-        "Wearable Devices"
-      ],
-      "doi": "10.1136/bmjopen-2025-107409",
-      "pmcid": "",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315273/",
-      "collectedAt": "2026-06-22T11:22:04.016Z",
-      "screeningData": {
-        "score": 9,
-        "relevanceMatches": [
-          "trauma"
-        ],
-        "studyType": "Observational",
-        "sampleSize": 50,
-        "journalBoost": 3,
-        "reasons": [
-          "abstract available",
-          "topic match: trauma",
-          "study design: Observational",
-          "sample size signal: N=50",
-          "journal boost: BMJ open"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
     }
   ],
-  "excludedCount": 39,
+  "excludedCount": 33,
   "errors": []
 }

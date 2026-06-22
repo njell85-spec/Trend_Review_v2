@@ -2,8 +2,8 @@
   "runId": "2026-06-22",
   "status": "success",
   "step": "done",
-  "startedAt": "2026-06-22T11:22:01.819Z",
-  "finishedAt": "2026-06-22T11:23:00.345Z",
+  "startedAt": "2026-06-22T11:49:02.258Z",
+  "finishedAt": "2026-06-22T11:51:38.295Z",
   "counts": {
     "fetched": 300,
     "screened": 30,
@@ -21,9 +21,22 @@
   "errors": [],
   "notifications": [
     {
-      "provider": "all",
+      "provider": "kakao",
       "status": "skipped",
-      "reason": "--no-notify"
+      "reason": "KAKAO_REFRESH_TOKEN and KAKAO_REST_API_KEY, or KAKAO_ACCESS_TOKEN, are missing",
+      "preview": {
+        "object_type": "text",
+        "text": "[Trend Review] 리포트 생성 완료\n2026-06-22 · 최근 180일 300편 수집 · Top 1\n🥇 Cefazolin for Methicillin-Suscept… (PMID:42308484)",
+        "link": {
+          "web_url": "https://njell85-spec.github.io/Trend_Review_v2/",
+          "mobile_web_url": "https://njell85-spec.github.io/Trend_Review_v2/"
+        },
+        "button_title": "리포트 보기"
+      }
+    },
+    {
+      "provider": "telegram",
+      "status": "sent"
     }
   ]
 }

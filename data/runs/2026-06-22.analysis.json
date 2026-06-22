@@ -3,81 +3,81 @@
     {
       "pmid": "42308484",
       "title": "Cefazolin for Methicillin-Susceptible Bacteremia.",
-      "oneLineSummary": "In adults with methicillin-susceptible bacteremia, cefazolin was noninferior to antistaphylococcal penicillins for 90-day mortality and caused significantly less acute kidney injury.",
-      "oneLineSummary_ko": "메티실린 감수성 균혈증 성인 환자에서 세파졸린은 90일 사망률 측면에서 항포도상구균 페니실린 대비 비열등하였으며, 급성 신손상 발생률은 유의하게 낮았습니다.",
-      "whyItMatters": "For decades, infectious disease guidelines have debated whether cefazolin is as effective as antistaphylococcal penicillins (such as nafcillin, oxacillin, or flucloxacillin) for MSSA bacteremia due to concerns over the inoculum effect. This large, randomized controlled platform trial (SNAP) provides high-quality evidence that cefazolin is noninferior to antistaphylococcal penicillins and is safer, resulting in substantially less acute kidney injury.",
-      "whyItMatters_ko": "수십 년 동안 감염학 가이드라인은 MSSA 균혈증 치료에서 세파졸린이 접종원 효과(inoculum effect)로 인해 항포도상구균 페니실린(나프실린, 옥사실린, 플루클록사실린 등)만큼 효과적인지에 대해 논쟁해 왔습니다. 이 대규모 무작위 대조군 플랫폼 연구(SNAP)는 세파졸린이 항포도상구균 페니실린에 비해 비열등할 뿐만 아니라 급성 신손상을 크게 줄여 더 안전하다는 고품질 근거를 제공합니다.",
-      "clinicalQuestion": "Is cefazolin noninferior to antistaphylococcal penicillins (flucloxacillin or cloxacillin) for 90-day mortality in adults with penicillin-resistant, methicillin-susceptible bacteremia?",
-      "clinicalQuestion_ko": "페니실린 내성, 메티실린 감수성 균혈증 성인 환자에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린)과 비교하여 90일 사망률 측면에서 비열등한가?",
+      "oneLineSummary": "Cefazolin is noninferior to antistaphylococcal penicillins for 90-day mortality in patients with methicillin-susceptible Staphylococcus aureus bacteremia while significantly reducing acute kidney injury.",
+      "oneLineSummary_ko": "메티실린 감수성 황색포도상구균 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 항포도상구균 페니실린에 비열등하였으며 급성 신손상 발생을 유의하게 줄였습니다.",
+      "whyItMatters": "While antistaphylococcal penicillins like flucloxacillin are traditional first-line therapies for MSSA bacteremia, they carry a high risk of nephrotoxicity; this large-scale randomized trial provides high-quality evidence that cefazolin is equally effective but much safer for the kidneys.",
+      "whyItMatters_ko": "플루클록사실린과 같은 항포도상구균 페니실린은 전통적인 MSSA 균혈증의 1차 치료제였으나 신독성 위험이 높았습니다. 이번 대규모 무작위 임상시험은 세파졸린이 신장에 훨씬 안전하면서도 동일하게 효과적이라는 고품질의 증거를 제공합니다.",
+      "clinicalQuestion": "In adults with penicillin-resistant, methicillin-susceptible Staphylococcus aureus bacteremia, is cefazolin noninferior to antistaphylococcal penicillins in terms of 90-day mortality, and does it reduce the incidence of acute kidney injury?",
+      "clinicalQuestion_ko": "페니실린 내성, 메티실린 감수성 황색포도상구균(MSSA) 균혈증이 있는 성인 환자에서 세파졸린은 항포도상구균 페니실린 대비 90일 사망률 측면에서 비열등하며, 급성 신손상 발생률을 감소시킵니까?",
       "pico": {
-        "population": "Adults with penicillin-resistant, methicillin-susceptible bacteremia",
-        "intervention": "Cefazolin",
-        "comparison": "Antistaphylococcal penicillin (flucloxacillin or cloxacillin)",
-        "outcome": "All-cause mortality at 90 days and acute kidney injury within 14 days"
+        "population": "Adults with penicillin-resistant, methicillin-susceptible Staphylococcus aureus (MSSA) bacteremia.",
+        "intervention": "Intravenous cefazolin (2g every 6 or 8 hours).",
+        "comparison": "Intravenous antistaphylococcal penicillin (flucloxacillin or cloxacillin, 2g every 4 or 6 hours).",
+        "outcome": "All-cause mortality at 90 days (primary) and acute kidney injury within 14 days (secondary safety)."
       },
       "pico_ko": {
-        "population": "페니실린 내성, 메티실린 감수성 균혈증을 앓고 있는 성인 환자",
-        "intervention": "세파졸린 (Cefazolin)",
-        "comparison": "항포도상구균 페니실린 (플루클록사실린 또는 클록사실린)",
-        "outcome": "90일 전원인 사망률 및 14일 이내 급성 신손상 발생률"
+        "population": "페니실린 내성, 메티실린 감수성 황색포도상구균(MSSA) 균혈증을 앓고 있는 성인 환자.",
+        "intervention": "정맥 주사용 세파졸린 (6시간 또는 8시간마다 2g 투여).",
+        "comparison": "정맥 주사용 항포도상구균 페니실린 (플루클록사실린 또는 클록사실린, 4시간 또는 6시간마다 2g 투여).",
+        "outcome": "90일 전원 사망률(1차 결과) 및 14일 이내 급성 신손상 발생률(2차 안전성 결과)."
       },
       "detailedPico": {
-        "population": "Adult patients with penicillin-resistant, methicillin-susceptible bacteremia enrolled in the SNAP platform trial.",
-        "population_ko": "진행 중인 SNAP 플랫폼 임상시험에 등록된 페니실린 내성, 메티실린 감수성 균혈증 성인 환자.",
-        "countrySetting": "Multicenter, international trial (specific countries not reported in abstract)",
-        "countrySetting_ko": "다국가, 다기관 임상시험 (구체적인 국가 목록은 초록에 보고되지 않음)",
-        "intervention": "Cefazolin (dosing and route of administration not reported in abstract)",
-        "intervention_ko": "세파졸린 (구체적인 용량 및 투여 경로는 초록에 보고되지 않음)",
-        "comparator": "Antistaphylococcal penicillin (flucloxacillin or cloxacillin; dosing not reported in abstract)",
-        "comparator_ko": "항포도상구균 페니실린 (플루클록사실린 또는 클록사실린, 구체적인 용량은 보고되지 않음)",
+        "population": "Adult patients (aged 18 or older) admitted to participating centers with penicillin-resistant, methicillin-susceptible Staphylococcus aureus complex grown from at least one blood culture collected within 72 hours prior to enrollment. Key exclusions included polymicrobial bacteremia.",
+        "population_ko": "등록 전 72시간 이내에 채취한 1개 이상의 혈액 배양에서 페니실린 내성, 메티실린 감수성 황색포도상구균 복합체가 배양되어 참여 병원에 입원한 성인 환자 (주요 제외 기준: 복합 균혈증).",
+        "countrySetting": "Ongoing international, multicenter, open-label, Bayesian adaptive platform randomized controlled trial (the SNAP trial, NCT05137119) recruiting in countries including the United States, Australia, Canada, Israel, Netherlands, New Zealand, France, Germany, Japan, South Africa, Sweden, Singapore, and the United Kingdom.",
+        "countrySetting_ko": "미국, 호주, 캐나다, 이스라엘, 네덜란드, 뉴질랜드, 프랑스, 독일, 일본, 남아프리카공화국, 스웨덴, 싱가포르, 영국 등에서 환자를 모집한 다국가, 다기관, 개방형, 베이지안 적응형 플랫폼 무작위 대조군 임상시험 (SNAP 연구, NCT05137119).",
+        "intervention": "Intravenous cefazolin 2g every 6 or 8 hours, adjusted for renal impairment or critical illness, for a minimum protocol duration of 14 days (or 5 days if allocated to an early switch to oral antibiotics).",
+        "intervention_ko": "정맥 주사용 세파졸린 2g을 6시간 또는 8시간 간격으로 투여(신기능 장애 또는 중증 환자는 용량 조절), 프로토콜상 최소 투여 기간은 14일(조기 경구 전환군으로 배정된 경우 5일).",
+        "comparator": "Intravenous antistaphylococcal penicillin (flucloxacillin or cloxacillin) 2g every 4 or 6 hours, adjusted for renal impairment or critical illness, for a minimum protocol duration of 14 days (or 5 days if allocated to an early switch to oral antibiotics).",
+        "comparator_ko": "정맥 주사용 항포도상구균 페니실린 (플루클록사실린 또는 클록사실린) 2g을 4시간 또는 6시간 간격으로 투여(신기능 장애 또는 중증 환자는 용량 조절), 프로토콜상 최소 투여 기간은 14일(조기 경구 전환군으로 배정된 경우 5일).",
         "outcomes": [
           {
             "label": "Primary Outcome",
-            "outcome": "Death from any cause within 90 days after enrollment",
-            "outcome_ko": "등록 후 90일 이내 모든 원인으로 인한 사망",
-            "result": "15.0% (97/645) in the cefazolin group vs. 17.0% (109/642) in the antistaphylococcal-penicillin group",
-            "result_ko": "세파졸린 군 15.0% (97/645) 대 항포도상구균 페니실린 군 17.0% (109/642)",
-            "statistics": "Adjusted odds ratio (aOR) 0.81 (95% credible interval [CrI], 0.59 to 1.12); posterior probability of noninferiority = 99.2%; posterior probability of superiority = 89.8%",
-            "interpretation": "Cefazolin met the prespecified noninferiority threshold (adjusted odds ratio <1.2) for 90-day mortality, with a very high posterior probability of noninferiority (99.2%).",
-            "interpretation_ko": "세파졸린은 90일 사망률에 대해 사전에 설정된 비열등성 기준(조정 오즈비 <1.2)을 충족했으며, 비열등할 사후 확률이 99.2%로 매우 높았습니다."
+            "outcome": "All-cause mortality at 90 days after platform entry",
+            "outcome_ko": "플랫폼 등록 후 90일 시점의 전원 사망률",
+            "result": "15.0% (97 of 645 patients) in the cefazolin group compared to 17.0% (109 of 642 patients) in the antistaphylococcal-penicillin group.",
+            "result_ko": "세파졸린군 15.0% (645명 중 97명) 대 항포도상구균 페니실린군 17.0% (642명 중 109명).",
+            "statistics": "Adjusted odds ratio (aOR), 0.81; 95% credible interval (CrI), 0.59 to 1.12; probability of noninferiority, 99.2%; probability of superiority, 89.8%.",
+            "interpretation": "Cefazolin successfully met the prespecified noninferiority criterion (aOR <1.2, representing an absolute mortality difference of <2.5 percentage points) compared to flucloxacillin/cloxacillin.",
+            "interpretation_ko": "세파졸린은 플루클록사실린/클록사실린 대비 사전에 설정된 비열등성 기준(aOR <1.2, 절대 사망률 차이 약 <2.5%p에 해당)을 성공적으로 충족했습니다."
           },
           {
-            "label": "Secondary Outcome",
-            "outcome": "Acute kidney injury (AKI) within 14 days",
-            "outcome_ko": "14일 이내 급성 신손상(AKI) 발생",
-            "result": "13.9% (92/660) in the cefazolin group vs. 19.6% (127/648) in the antistaphylococcal-penicillin group",
-            "result_ko": "세파졸린 군 13.9% (92/660) 대 항포도상구균 페니실린 군 19.6% (127/648)",
-            "statistics": "Adjusted odds ratio (aOR) 0.67 (95% credible interval [CrI], 0.50 to 0.89); posterior probability of superiority = 99.7%",
-            "interpretation": "Cefazolin therapy was associated with a clinically and statistically meaningful reduction in the risk of acute kidney injury compared to antistaphylococcal penicillins.",
-            "interpretation_ko": "세파졸린 치료는 항포도상구균 페니실린에 비해 급성 신손상 위험을 임상적 및 통계적으로 유의하게 감소시켰습니다."
+            "label": "Secondary Safety Outcome",
+            "outcome": "Development of acute kidney injury (AKI) within 14 days after enrollment",
+            "outcome_ko": "등록 후 14일 이내 급성 신손상(AKI) 발생률",
+            "result": "13.9% (92 of 660 patients) in the cefazolin group compared to 19.6% (127 of 648 patients) in the antistaphylococcal-penicillin group.",
+            "result_ko": "세파졸린군 13.9% (660명 중 92명) 대 항포도상구균 페니실린군 19.6% (648명 중 127명).",
+            "statistics": "Adjusted odds ratio (aOR), 0.67; 95% credible interval (CrI), 0.50 to 0.89; probability of superiority, 99.7%.",
+            "interpretation": "Cefazolin is superior to flucloxacillin/cloxacillin, significantly reducing the risk of acute kidney injury within 14 days.",
+            "interpretation_ko": "세파졸린은 플루클록사실린/클록사실린에 비해 14일 이내 급성 신손상 위험을 유의하게 줄여주어 신장 안전성 측면에서 우월했습니다."
           }
         ]
       },
       "keyFindings": [
-        "Cefazolin is noninferior to antistaphylococcal penicillins (flucloxacillin or cloxacillin) for 90-day mortality in adults with methicillin-susceptible bacteremia (15.0% vs. 17.0%, aOR 0.81, 95% CrI 0.59 to 1.12).",
-        "Cefazolin therapy resulted in a significantly lower incidence of acute kidney injury within 14 days compared to antistaphylococcal penicillins (13.9% vs. 19.6%, aOR 0.67, 95% CrI 0.50 to 0.89).",
-        "The Bayesian posterior probability of noninferiority for mortality was 99.2%, and the posterior probability of superiority for renal safety was 99.7%."
+        "Cefazolin met the noninferiority threshold for 90-day mortality compared to flucloxacillin/cloxacillin (15.0% vs 17.0%; aOR, 0.81; 95% CrI, 0.59 to 1.12; probability of noninferiority, 99.2%).",
+        "Cefazolin significantly reduced the incidence of acute kidney injury within 14 days compared to antistaphylococcal penicillins (13.9% vs 19.6%; aOR, 0.67; 95% CrI, 0.50 to 0.89; probability of superiority, 99.7%).",
+        "This trial domain was stopped early for the MSSA comparison after meeting the criteria for noninferiority, confirming cefazolin as a highly effective and safer first-line option."
       ],
       "keyFindings_ko": [
-        "메티실린 감수성 균혈증 성인 환자 치료에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린) 대비 90일 사망률 측면에서 비열등했습니다 (15.0% 대 17.0%, 조정 오즈비 0.81, 95% 신용구간 0.59 ~ 1.12).",
-        "세파졸린 치료군은 항포도상구균 페니실린군에 비해 14일 이내 급성 신손상 발생률이 유의하게 낮았습니다 (13.9% 대 19.6%, 조정 오즈비 0.67, 95% 신용구간 0.50 ~ 0.89).",
-        "사망률에 대한 베이지안 비열등성 사후 확률은 99.2%였으며, 신장 안전성에 대한 우월성 사후 확률은 99.7%였습니다."
+        "세파졸린은 플루클록사실린/클록사실린 대비 90일 사망률에 대한 비열등성 기준을 충족하였습니다 (15.0% 대 17.0%; 보정 오즈비 0.81; 95% 신용구간 0.59 ~ 1.12; 비열등성 확률 99.2%).",
+        "세파졸린은 항포도상구균 페니실린 대비 14일 이내 급성 신손상 발생률을 유의하게 낮추었습니다 (13.9% 대 19.6%; 보정 오즈비 0.67; 95% 신용구간 0.50 ~ 0.89; 우월성 확률 99.7%).",
+        "본 임상시험 영역은 비열등성 기준을 충족함에 따라 MSSA 비교군에 대한 환자 모집을 조기에 종료하여 세파졸린이 매우 효과적이고 안전한 1차 치료제임을 확인하였습니다."
       ],
-      "conclusion": "In patients with methicillin-susceptible bacteremia, cefazolin was noninferior to flucloxacillin or cloxacillin with respect to 90-day mortality and was associated with a lower incidence of acute kidney injury.",
-      "conclusion_ko": "메티실린 감수성 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 플루클록사실린 또는 클록사실린에 비열등하였고, 급성 신손상 발생률은 유의하게 낮추었습니다.",
-      "clinicalTakeaway": "For adult patients with MSSA bacteremia, cefazolin should be considered the preferred first-line therapy over antistaphylococcal penicillins (like flucloxacillin or cloxacillin). It offers equivalent survival outcomes while significantly lowering the risk of acute kidney injury, which has been a major drawback of penicillin therapy. This trial addresses long-standing clinician anxiety regarding the inoculum effect of cefazolin in deep-seated infections.",
-      "clinicalTakeaway_ko": "MSSA 균혈증 성인 환자에서 세파졸린은 항포도상구균 페니실린(플루클록사실린 또는 클록사실린)보다 우선적으로 고려되어야 하는 1차 치료제입니다. 페니실린 치료의 주요 단점이었던 급성 신손상 위험을 유의하게 낮추면서도 동등한 생존율을 제공합니다. 이번 임상시험은 심부 감염에서 세파졸린의 접종원 효과에 대한 임상 의사들의 오랜 우려를 해소해 줍니다.",
-      "limitations": "The trial was open-label, which could introduce bias in patient management. The active comparator was limited to flucloxacillin or cloxacillin; thus, extrapolation to centers primarily using nafcillin or oxacillin, while biochemically similar, remains indirect. Detail regarding the clinical source of bacteremia (e.g., endocarditis, osteomyelitis) and exact dosing regimens were not provided in the abstract.",
-      "limitations_ko": "본 임상시험은 공개 라벨(open-label)로 진행되어 임상적 처치 과정에서 편향이 개입되었을 가능성이 있습니다. 대조군이 플루클록사실린 또는 클록사실린으로 제한되었기 때문에, 생화학적으로는 유사하나 나프실린이나 옥사실린을 주로 사용하는 의료기관으로 결과를 바로 대입하기에는 제한이 있습니다. 균혈증의 원인 병소(예: 심내막염, 골수염 등) 및 구체적인 투여 용량에 대한 세부 데이터는 초록에서 제공되지 않았습니다.",
-      "edIcuApplicability": "Highly applicable. Emergency and ICU clinicians frequently manage patients with positive blood cultures growing Gram-positive cocci. Once MSSA is identified, transitioning patients to cefazolin instead of antistaphylococcal penicillins represents a high-value clinical choice that reduces nephrotoxicity in critically ill patients without compromising mortality outcomes.",
-      "edIcuApplicability_ko": "매우 높은 적용 가능성을 가집니다. 응급실 및 중환자실 의료진은 그람 양성 균혈증 환자를 빈번하게 치료합니다. MSSA로 확인된 후, 환자의 치료제를 항포도상구균 페니실린 대신 세파졸린으로 전환하는 것은 중증 환자에서 사망률 저하 없이 신독성을 낮출 수 있는 매우 유용한 임상적 선택입니다.",
+      "conclusion": "In adult patients with methicillin-susceptible Staphylococcus aureus bacteremia, cefazolin is noninferior to flucloxacillin or cloxacillin regarding 90-day mortality and is associated with a significantly lower rate of acute kidney injury.",
+      "conclusion_ko": "메티실린 감수성 황색포도상구균 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 플루클록사실린 또는 클록사실린에 비열등하며, 급성 신손상 발생 빈도를 유의하게 줄여줍니다.",
+      "clinicalTakeaway": "Clinicians treating MSSA bacteremia should favor cefazolin over flucloxacillin or cloxacillin. Cefazolin provides equivalent efficacy in preventing mortality while significantly reducing the risk of acute kidney injury (13.9% vs 19.6%), offering an optimized balance of therapeutic efficacy and safety.",
+      "clinicalTakeaway_ko": "MSSA 균혈증을 치료하는 임상의는 플루클록사실린이나 클록사실린보다 세파졸린을 선호하는 것이 좋습니다. 세파졸린은 사망 예방에 동등한 효능을 제공하는 동시에 급성 신손상 위험을 유의하게 낮추어(13.9% 대 19.6%), 최적의 치료 효능 및 안전성 균형을 제공합니다.",
+      "limitations": "The trial used an open-label design, which could theoretically introduce clinical bias in co-interventions or management, though mortality and creatinine-defined acute kidney injury are highly objective endpoints. The comparator group allowed both flucloxacillin and cloxacillin, which may vary slightly in local practice.",
+      "limitations_ko": "본 임상시험은 개방형(open-label) 디자인으로 진행되어 이론적으로 공동 중재나 치료 관리에 임상적 편향을 유발할 수 있으나, 사망률 및 크레아티닌 수치 기반 급성 신손상은 매우 객관적인 지표입니다. 대조군에서 플루클록사실린과 클록사실린이 모두 허용되었기에 지역적 진료 패턴에 따른 미세한 차이가 존재할 수 있습니다.",
+      "edIcuApplicability": "Highly applicable to ED and ICU settings. Prompt and appropriate narrow-spectrum beta-lactam selection is critical when bacteremia results return. For confirmed MSSA bacteremia, cefazolin should be prioritized to preserve renal function and maintain optimal efficacy.",
+      "edIcuApplicability_ko": "응급실 및 중환자실(ED/ICU) 환경에 대단히 유용합니다. 균혈증 배양 결과가 확인되었을 때 신속하고 적절한 협범위 베타락탐 항생제를 선택하는 것은 매우 중요합니다. 확인된 MSSA 균혈증의 경우, 신기능을 보존하고 최적의 치료 효과를 유지하기 위해 세파졸린 사용을 우선시해야 합니다.",
       "evidenceLevel": "High",
       "clinicalApplicabilityScore": 9.5,
       "manualReviewNeeded": false,
       "analysisNotes": [
-        "The SNAP trial is a landmark international Bayesian adaptive platform trial addressing a long-standing infectious disease controversy.",
-        "Demonstrates noninferiority for mortality with very high certainty (99.2% probability) and clear superiority for renal safety (13.9% AKI vs 19.6% AKI).",
-        "Highly relevant for emergency medicine and critical care transitions of care as definitive culture data returns."
+        "Used data from the prestigious SNAP trial (NCT05137119), a phase IV adaptive platform trial.",
+        "Bayesian analysis methods provided clear probabilities of both noninferiority and superiority.",
+        "Very clean clinical takeaway advocating for a major practice change toward cefazolin as first-line."
       ],
       "paper": {
         "pmid": "42308484",
@@ -91,6 +91,20 @@
           "Yahav D",
           "Cheng MP",
           "Bonten M"
+        ],
+        "authorAffiliations": [
+          "Department of Medicine, Division of Infectious Diseases, McGill University, Montreal.",
+          "Department of Infectious Diseases, University of Melbourne at the Peter Doherty Institute for Infection and Immunity, Melbourne, VIC, Australia.",
+          "Department of Infectious Diseases, Division of Medicine, Middlemore Hospital, Auckland, New Zealand.",
+          "University College London Innovative Clinical Trials Unit, Institute of Clinical Trials and Methodology, University College London, London.",
+          "Department of Infection, Guy's and St. Thomas' National Health Service (NHS) Foundation Trust and King's College London, London.",
+          "Infectious Diseases Unit, Sheba Medical Center, Ramat Gan, Israel.",
+          "Faculty of Medical and Health Sciences, Tel Aviv University, Tel Aviv, Israel.",
+          "Epidemiology, Julius Center for Health Sciences and Primary Care, University Medical Center (UMC) Utrecht, Utrecht University, Utrecht, the Netherlands.",
+          "European Clinical Research Alliance on Infectious Diseases (Ecraid), Utrecht, the Netherlands.",
+          "Wesfarmers Centre of Vaccines and Infectious Diseases, Kids Research Institute Australia, Nedlands, WA, Australia.",
+          "Department of Infectious Diseases, Perth Children's Hospital, Nedlands, WA, Australia.",
+          "Clinical HIV Research Unit, Faculty of Health Sciences, University of the Witwatersrand, Johannesburg."
         ],
         "journal": "The New England journal of medicine",
         "pubDate": "2026-Jun-18",
@@ -119,8 +133,11 @@
         "keywords": [],
         "doi": "10.1056/NEJMoa2506905",
         "pmcid": "",
+        "nctIds": [
+          "NCT05137119"
+        ],
         "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308484/",
-        "collectedAt": "2026-06-22T11:22:05.733Z",
+        "collectedAt": "2026-06-22T11:49:05.002Z",
         "screeningData": {
           "score": 12,
           "relevanceMatches": [],
@@ -136,9 +153,40 @@
           "exclude": false,
           "excludeReason": ""
         },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42308484\nDOI: 10.1056/NEJMoa2506905\nClinical trial IDs found in PubMed record/abstract: NCT05137119\nAuthor affiliations:\n- Department of Medicine, Division of Infectious Diseases, McGill University, Montreal.\n- Department of Infectious Diseases, University of Melbourne at the Peter Doherty Institute for Infection and Immunity, Melbourne, VIC, Australia.\n- Department of Infectious Diseases, Division of Medicine, Middlemore Hospital, Auckland, New Zealand.\n- University College London Innovative Clinical Trials Unit, Institute of Clinical Trials and Methodology, University College London, London.\n- Department of Infection, Guy's and St. Thomas' National Health Service (NHS) Foundation Trust and King's College London, London.\n- Infectious Diseases Unit, Sheba Medical Center, Ramat Gan, Israel.\n- Faculty of Medical and Health Sciences, Tel Aviv University, Tel Aviv, Israel.\n- Epidemiology, Julius Center for Health Sciences and Primary Care, University Medical Center (UMC) Utrecht, Utrecht University, Utrecht, the Netherlands.\n\nPublic trial registry from ClinicalTrials.gov (NCT05137119):\nBrief title: Staphylococcus Aureus Network Adaptive Platform Trial\nOfficial title: Staphylococcus Aureus Network Adaptive Platform Trial\nOverall status: RECRUITING\nStudy type / phase: INTERVENTIONAL, PHASE4\nDesign: RANDOMIZED, FACTORIAL, TREATMENT, masking NONE\nEnrollment: 8000 (ESTIMATED)\nCountries: United States, Australia, Canada, France, Germany, Israel, Japan, Netherlands, New Zealand, Singapore, South Africa, Sweden, United Kingdom\nSample recruiting/participating locations:\n- Houston Methodist Research Institute, Houston, Texas, United States\n- Canberra Hospital, Garran, Australia Capital Territory, Australia\n- Blacktown Hospital, Blacktown, New South Wales, Australia\n- Royal Prince Alfred Hospital, Camperdown, New South Wales, Australia\n- Concord Repatriation and General Hospital, Concord, New South Wales, Australia\n- St Vincent's Hospital Sydney, Darlinghurst, New South Wales, Australia\n- Nepean Hospital, Kingswood, New South Wales, Australia\n- St George Hospital, Kogarah, New South Wales, Australia\n- Liverpool Hospital, Liverpool, New South Wales, Australia\n- John Hunter Hospital, New Lambton Heights, New South Wales, Australia\n- John Hunter Children's Hospital, Newcastle, New South Wales, Australia\n- Orange Health Service, Orange, New South Wales, Australia\nArms/groups:\n- Methicillin-resistant staphylococcus aureus (MRSA) - Standard Therapy Arm (backbone therapy) (NO_INTERVENTION): Vancomycin or Daptomycin - Standard Therapy Arm Either intravenous vancomycin dosed as per Australian Therapeutic Guidelines: This includes a loading dose of 25 mg/kg (up to 3000mg) if considered appropriate by the treating clinician, initial maintenance dosing at 15-20 mg/kg q12h, with subsequent adjustment to maintain area under the concentration-time curve (AUC) of 400 to 600 mg.hr/L OR trough levels at 10-20 mg/L, and the initial level taken 48-72 hours after the initiation of the first dose\n- Methicillin-resistant staphylococcus aureus (MRSA) - Standard + B-Lactam Arm (backbone therapy) (EXPERIMENTAL): Vancomycin or Daptomycin (Standard Therapy) + Beta-Lactam (β-lactam) Arm In addition to standard treatment an intravenous β-lactam will be added for the first 7 calendar days following randomisation (day 1 being the day of randomisation - hence patients will receive 6-7 days of β-lactam). This β-lactam will be intravenous cefazolin 2g every 8 hours. For patients with renal impairment the intravenous cefazolin administration doses will be adjusted.\n- Methicillin-susceptible staphylococcus aureus (MSSA) - Standard Therapy Arm (backbone therapy) (NO_INTERVENTION): Flucloxacillin or cloxacillin - Standard Therapy Arm Either intravenous flucloxacillin/cloxacillin 2g every 4 or 6 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with renal impairment or critical illness the intravenous flucloxacillin administration dose will be adjusted.\n- Methicillin-susceptible staphylococcus aureus (MSSA) - Interventional Arm (backbone therapy) (EXPERIMENTAL): Cefazolin - Interventional Arm Intravenous cefazolin 2g every 6 or 8 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with renal impairment or critical illness the intravenous cefazolin administration dose will be adjusted.\n- Penicillin-susceptible staphylococcus aureus (PSSA) - Standard Therapy Arm (backbone therapy) (NO_INTERVENTION): Flucloxacillin or cloxacillin - Standard Therapy Arm Either intravenous flucloxacillin/cloxacillin 2g every 4 or 6 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with renal impairment or critical illness the intravenous flucloxacillin administration dose will be adjusted.\n- Penicillin-susceptible staphylococcus aureus (PSSA) - Interventional Arm (backbone therapy) (EXPERIMENTAL): Benzylpenicillin - Interventional Arm Intravenous benzylpenicillin 1.8g (3 million units) every 4 or 6 hours. The minimum protocol duration of allocated study treatment is 14 days for those not allocated to early oral switch, and 5 days for those allocated to early oral switch. For patients with critical illness the intravenous benzylpenicillin administration doses will be adjusted.\n- No adjunctive treatment in combination with MRSA or MSSA or PSSA backbone therapy arm (NO_INTERVENTION): No adjunctive therapy + backbone therapy arm for MRSA or MSSA or PSSA Participants with either MRSA or MSSA or PSSA will have no adjunctive therapy in combination with their backbone therapy arm.\n- Adjunctive treatment in combination with MRSA or MSSA or PSSA backbone therapy arm (EXPERIMENTAL): Adjunctive therapy + backbone therapy arm for MRSA or MSSA or PSSA Intravenous clindamycin (or lincomycin) 600mg every 8 hours from platform day 1 to day 5. No dosage adjustment is needed to renal impairment.\nInterventions:\n- Cefazolin (DRUG): Cefazolin\n- Penicillin (DRUG): benzylpenicillin\n- Clindamycin (DRUG): Clindamycin\n- Vancomycin (DRUG): Vancomycin or Daptomycin\n- Effectiveness of early switch to oral antibiotics (OTHER): This involves testing a strategy rather than individual antibiotic agents\n- Whole body FDG PET/CT Imaging (RADIATION): Whole body FDG PET/CT imaging will be performed using a standardised protocol describing patient preparation and minimum specifications for radiopharmaceutical production, quality control, and PET/CT acquisition.\nPrimary outcomes:\n- All-cause mortality at 90 days after platform entry | time frame: From randomisation (day 1) until day 90 | The primary endpoint for all cells and domains will be all-cause mortality at 90 days after platform entry. The primary endpoint will be determined through a search of hospital databases for a record of a participant's death, or follow-up contact with the participant's community healthcare provider, or follow-up contact with the patient or their nominated carer, or linkage with death registries.\nSecondary outcomes:\n- Core1: All-cause mortality at 14, 28 and 42 days after platform entry | time frame: From randomisation (day 1) until day 14, 28, and 42 | Determined through a search of hospital databases for a record of a participant's death, or follow-up contact with the participant's community healthcare provider, or follow-up contact with the patient or their nominated carer, or linkage with death registries.\n- Core2: Duration of survival censored at 90 days after platform entry | time frame: From randomisation (day 1) until day 90 | Determined through a search of hospital databases for a record of a participant's death, or follow-up contact with the participant's community healthcare provider, or follow-up contact with the patient or their nominated carer, or linkage with death registries.\n- Core3: Length of stay of acute index inpatient hospitalisation for those surviving until discharge from acute inpatient facilities (excluding HITH/COPAT/OPAT/rehab). | time frame: From randomisation (day 1) until discharge from acute inpatient facilities, truncated at 90 days. | Acute index hospitalisation is defined as continuous hospital admission to one or more acute inpatient facilities for the index episode. This does not include HITH/OPAT/COPAT and stepdown inpatient rehabilitation/post-acute care. It does include admission to acute care hospitals immediately preceding and following thos\n- Core4: Length of stay of total index hospitalisation for those surviving until hospital discharge (including HITH/COPAT/OPAT/rehab) | time frame: From randomisation (day 1) to discharge from total index hospitalisation, truncated at 90 days | Total index hospitalisation is defined as continuous hospital admission to one or more inpatient facilities for the index episode, including HITH/OPAT/COPAT and stepdown inpatient rehabilitation/post-acute care (if continuous with the initial inpatient admission). It includes admission to acute care hospitals immediately preceding and following those at t\n- Core5: Time to being discharged alive from the total index hospitalisation (including HITH/COPAT/OPAT/rehab) truncated at 90 days after platform entry | time frame: From randomisation (day 1) to discharge from total index hospitalisation, truncated at 90 days | and all deaths within 90 days will be considered '90 days'\n- Core6: Microbiological treatment failure defined as positive sterile site culture for S. aureus [of the same silo as the index isolate between 14 and 90 days after platform entry). | time frame: From day 14 until day 90 | A sterile site means any sites deep to the skin and skin structures, including deep visceral and musculoskeletal abscesses that have been obtained in a sterile manner.\n- Core7: Diagnosis of new foci between 14 and 90 days after platform entry. | time frame: From day 14 until day 90 | The presence of new foci will be determined by the site investigator and can incorporate clinical, radiological, microbiological and pathological findings.\n- Core8: C. difficile diarrhoea as determined by a clinical laboratory in the 90 days following platform entry for participants ≥2 years of age. | time frame: From randomisation (day 1) until day 90 | This means a stool submitted to a clinical laboratory has tested positive for C. difficile toxin or toxin gene.\nEligibility excerpt: PLATFORM Inclusion Criteria: Patients must fulfil all of the following criteria to be eligible to enter the SNAP trial: 1. Staphylococcus aureus complex grown from ≥1 blood culture 2. Admitted to a participating hospital at the time of eligibility assessment (OR if patient has died, they were admitted to this site anytime from the time of blood culture collection until the time of eligibility assessment) PLATFORM Exclusion Criteria: Potentially eligible participants meeting any of the following criteria at the time of eligibility assessment for platform entry will be excluded from the randomised platform (but may still participate in the registry): 1. Time of anticipated platform entry is greater than 72 hours post collection of the index blood culture (Where the time of culture collection is not recorded, the time of laboratory registration of the sample will be used as an alternative) 2. Polymicrobial bacteraemia, defined as more than one organism (at species level) in the index blood cultures OR in any subsequent blood culture reported between the collection of the index blood culture and platform eligibility assessment, excluding those organisms judged to be contaminants by either the microbiology laboratory or treating clinician. 3. Known previous participation in the randomised SNAP platfor",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "clinicaltrials",
+            "label": "ClinicalTrials.gov NCT05137119"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
         "contextSource": {
-          "type": "abstract",
-          "reason": "No PMCID available for open full-text fetch"
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "clinicaltrials",
+              "label": "ClinicalTrials.gov NCT05137119"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-06-22T11:49:54.012Z"
         }
       },
       "source": "llm"
@@ -156,11 +204,11 @@
           "pmid": "42308484",
           "rank": 1,
           "clinicalPriorityScore": 9.5,
-          "rationale_ko": "이 연구는 MSSA 균혈증 환자에서 세파졸린과 항포도상구균 페니실린의 효능 및 안전성을 비교한 다기관 무작위 대조시험(RCT)으로, 세계 최고 권위의 의학 저널인 NEJM에 발표되었습니다. 중환자실 및 응급실에서 흔히 접하는 위중한 감염병인 MSSA 균혈증의 최적의 일차 약제 선택에 대해 직접적이고 실천 가능한 임상적 근거를 제공하므로 임상적 가치가 매우 높습니다."
+          "rationale_ko": "이 연구는 NEJM에 발표된 무작위 대조군 시험으로, 메티실린 감수성 황색포도상구균(MSSA) 균혈증 치료 시 세파졸린과 항포도상구균 페니실린의 효과와 부작용을 비교 평가하여 초기 패혈증 및 중증 감염 환자의 항생제 선택에 결정적인 임상적 근거를 제공합니다."
         }
       ],
       "notes_ko": [
-        "NEJM에 발표된 MSSA 균혈증 치료용 세파졸린 대 페니실린 비교 RCT는 높은 학술적 가치와 실제 임상 적용 가능성을 가지고 있어 오늘의 탑 논문으로 선정하였습니다."
+        "가장 학술적 가치와 임상적 영향력이 높은 NEJM의 MSSA 균혈증 관련 RCT 연구를 최종 선정하였습니다."
       ]
     }
   },
