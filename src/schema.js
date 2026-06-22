@@ -30,6 +30,23 @@ export const DetailedPicoSchema = z.object({
   outcomes: z.array(OutcomeSchema).min(1).max(6),
 });
 
+export const StudyDetailsSchema = z.object({
+  design: z.string().min(1),
+  design_ko: z.string().min(1),
+  setting: z.string().min(1),
+  setting_ko: z.string().min(1),
+  eligibility: z.string().min(1),
+  eligibility_ko: z.string().min(1),
+  interventionDetails: z.string().min(1),
+  interventionDetails_ko: z.string().min(1),
+  comparatorDetails: z.string().min(1),
+  comparatorDetails_ko: z.string().min(1),
+  followUp: z.string().min(1),
+  followUp_ko: z.string().min(1),
+  sourceBasis: z.string().min(1),
+  sourceBasis_ko: z.string().min(1),
+});
+
 export const AnalysisSchema = z.object({
   pmid: z.string().min(1),
   title: z.string().min(1),
@@ -39,6 +56,7 @@ export const AnalysisSchema = z.object({
   whyItMatters_ko: z.string().min(1),
   clinicalQuestion: z.string().min(1),
   clinicalQuestion_ko: z.string().min(1),
+  studyDetails: StudyDetailsSchema,
   pico: PicoSchema,
   pico_ko: PicoSchema,
   detailedPico: DetailedPicoSchema,
@@ -82,6 +100,7 @@ export const AnalysisJsonSchema = {
     whyItMatters_ko: { type: 'string' },
     clinicalQuestion: { type: 'string' },
     clinicalQuestion_ko: { type: 'string' },
+    studyDetails: studyDetailsJsonSchema(),
     pico: picoJsonSchema(),
     pico_ko: picoJsonSchema(),
     detailedPico: detailedPicoJsonSchema(),
@@ -119,6 +138,7 @@ export const AnalysisJsonSchema = {
     'whyItMatters_ko',
     'clinicalQuestion',
     'clinicalQuestion_ko',
+    'studyDetails',
     'pico',
     'pico_ko',
     'detailedPico',
@@ -178,6 +198,45 @@ function picoJsonSchema() {
       outcome: { type: 'string' },
     },
     required: ['population', 'intervention', 'comparison', 'outcome'],
+  };
+}
+
+function studyDetailsJsonSchema() {
+  return {
+    type: 'object',
+    additionalProperties: false,
+    properties: {
+      design: { type: 'string' },
+      design_ko: { type: 'string' },
+      setting: { type: 'string' },
+      setting_ko: { type: 'string' },
+      eligibility: { type: 'string' },
+      eligibility_ko: { type: 'string' },
+      interventionDetails: { type: 'string' },
+      interventionDetails_ko: { type: 'string' },
+      comparatorDetails: { type: 'string' },
+      comparatorDetails_ko: { type: 'string' },
+      followUp: { type: 'string' },
+      followUp_ko: { type: 'string' },
+      sourceBasis: { type: 'string' },
+      sourceBasis_ko: { type: 'string' },
+    },
+    required: [
+      'design',
+      'design_ko',
+      'setting',
+      'setting_ko',
+      'eligibility',
+      'eligibility_ko',
+      'interventionDetails',
+      'interventionDetails_ko',
+      'comparatorDetails',
+      'comparatorDetails_ko',
+      'followUp',
+      'followUp_ko',
+      'sourceBasis',
+      'sourceBasis_ko',
+    ],
   };
 }
 

@@ -101,7 +101,7 @@ export async function analyzeSinglePaper({ paper, config, options }) {
     const analysis = validateAnalysis(raw, enrichedPaper);
     return { analysis };
   } catch (firstError) {
-    if (!config.topics.analysis?.retryInvalidSchema) {
+    if (!config.topics.analysis?.retryInvalidSchema || !shouldRetryAnalysisRepair(firstError)) {
       return fallbackWithError(enrichedPaper, firstError);
     }
 
@@ -114,6 +114,13 @@ export async function analyzeSinglePaper({ paper, config, options }) {
       return fallbackWithError(enrichedPaper, secondError);
     }
   }
+}
+
+function shouldRetryAnalysisRepair(error) {
+  const message = String(error?.message ?? '');
+  if (/HTTP\s+(4\d\d|5\d\d)/i.test(message)) return false;
+  if (/quota|rate limit|too many requests/i.test(message)) return false;
+  return true;
 }
 
 function resolveProvider(options) {
@@ -336,6 +343,7 @@ Rules:
 - If open full text is provided, use it to deepen PICO, outcomes, limitations, and applicability.
 - Preserve important English study terms, drug names, endpoints, effect estimates, and statistical notation.
 - For every English field, provide the Korean paired field when the schema asks for *_ko.
+- studyDetails should capture the practical study-method details a clinician wants before reading the original paper: design, countries/sites, eligibility, intervention dosing/route/duration if available, comparator details, follow-up, and which accessible sources support the details.
 - detailedPico should be rich enough that a clinician can understand what was actually done without opening the paper.
 - Put primary and secondary outcomes inside detailedPico.outcomes.
 - Each outcome interpretation should be concise, intuitive, and avoid the phrase "easy interpretation".
@@ -407,14 +415,24 @@ Abstract: ${abstract}`;
 }
 
 function fallbackWithError(paper, error) {
+  const message = compactErrorMessage(error);
+
   return {
-    analysis: fallbackAnalysis(paper, error.message),
+    analysis: fallbackAnalysis(paper, message),
     error: {
       pmid: paper.pmid,
       step: 'analysis',
-      message: error.message,
+      message,
     },
   };
+}
+
+function compactErrorMessage(error) {
+  const message = String(error?.message ?? error ?? 'unknown error').replace(/\s+/g, ' ').trim();
+  if (/429|quota|too many requests/i.test(message)) {
+    return 'LLM API quota or rate limit was exceeded during analysis.';
+  }
+  return message.slice(0, 500);
 }
 
 export function fallbackAnalysis(paper, reason = 'manual fallback') {
@@ -431,6 +449,22 @@ export function fallbackAnalysis(paper, reason = 'manual fallback') {
     whyItMatters_ko: '이 논문은 EM/CCM 스크리닝 기준에는 포함되었지만 자동 분석이 실패했으므로 실제 활용 전 수동 확인이 필요합니다.',
     clinicalQuestion: `What does this ${studyType.toLowerCase()} suggest for emergency medicine or critical care practice?`,
     clinicalQuestion_ko: '이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.',
+    studyDetails: {
+      design: 'Manual review needed. Study design details were not reliably extracted.',
+      design_ko: '수동 검토 필요. 연구 설계를 안정적으로 추출하지 못했습니다.',
+      setting: 'Manual review needed. Country and site details were not reliably extracted.',
+      setting_ko: '수동 검토 필요. 국가와 연구 기관 정보를 안정적으로 추출하지 못했습니다.',
+      eligibility: 'Manual review needed. Inclusion and exclusion criteria were not reliably extracted.',
+      eligibility_ko: '수동 검토 필요. 포함 및 제외 기준을 안정적으로 추출하지 못했습니다.',
+      interventionDetails: 'Manual review needed. Intervention details were not reliably extracted.',
+      interventionDetails_ko: '수동 검토 필요. 중재 세부 정보를 안정적으로 추출하지 못했습니다.',
+      comparatorDetails: 'Manual review needed. Comparator details were not reliably extracted.',
+      comparatorDetails_ko: '수동 검토 필요. 비교군 세부 정보를 안정적으로 추출하지 못했습니다.',
+      followUp: 'Manual review needed. Follow-up details were not reliably extracted.',
+      followUp_ko: '수동 검토 필요. 추적관찰 정보를 안정적으로 추출하지 못했습니다.',
+      sourceBasis: `Fallback summary generated because: ${reason}`,
+      sourceBasis_ko: `다음 이유로 fallback 요약을 생성했습니다: ${reason}`,
+    },
     pico: {
       population: 'Manual review needed. Population details were not reliably extracted.',
       intervention: 'Manual review needed. Intervention or exposure details were not reliably extracted.',

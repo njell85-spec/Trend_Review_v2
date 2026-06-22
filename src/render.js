@@ -101,6 +101,17 @@ function renderMarkdown(report) {
     if (result.oneLineSummary_ko) lines.push(`- 요약: ${result.oneLineSummary_ko}`);
     if (result.whyItMatters) lines.push(`- Why it matters: ${result.whyItMatters}`);
     if (result.whyItMatters_ko) lines.push(`- 중요성: ${result.whyItMatters_ko}`);
+    if (result.studyDetails) {
+      lines.push('');
+      lines.push('#### Study Details');
+      lines.push(`- Design: ${result.studyDetails.design}`);
+      lines.push(`- Setting: ${result.studyDetails.setting}`);
+      lines.push(`- Eligibility: ${result.studyDetails.eligibility}`);
+      lines.push(`- Intervention: ${result.studyDetails.interventionDetails}`);
+      lines.push(`- Comparator: ${result.studyDetails.comparatorDetails}`);
+      lines.push(`- Follow-up: ${result.studyDetails.followUp}`);
+      lines.push(`- Source basis: ${result.studyDetails.sourceBasis}`);
+    }
     if (result.detailedPico?.outcomes?.length) {
       lines.push('');
       lines.push('#### Outcomes');

@@ -133,6 +133,8 @@ node src/cli.js --days 365 --max-papers 500 --candidate-limit 30 --top-n 3
 
 For long-term daily use, `--top-n 1` is the default to avoid unread backlog. A weekly digest can later collect the best 3-5 papers without forcing marginal daily picks.
 
+`--gemini-search-grounding` can improve depth when abstracts and public metadata are still thin, but it uses Gemini API Google Search grounding quota and may require billing depending on the project/model limits. Keep it off for the free/default workflow and enable it only when testing a higher-depth report.
+
 ## Report Format
 
 Each selected paper is rendered as a collapsed card. Opening the card shows:

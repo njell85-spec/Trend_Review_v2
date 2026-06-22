@@ -451,6 +451,7 @@ function renderPaper(result, index) {
   </summary>
   <div class="paper-body">
     ${renderTextSection('Why It Matters', 'clinical relevance', result.whyItMatters || result.clinicalQuestion || result.oneLineSummary, result.whyItMatters_ko || result.clinicalQuestion_ko || result.oneLineSummary_ko, 'why')}
+    ${renderStudyDetails(result)}
     ${renderDetailedPico(result)}
     ${renderFindings(result)}
     ${renderTextSection('Conclusion', 'author-level conclusion', result.conclusion || result.clinicalTakeaway, result.conclusion_ko || result.clinicalTakeaway_ko)}
@@ -460,6 +461,42 @@ function renderPaper(result, index) {
     ${renderLinks(result)}
   </div>
 </details>`;
+}
+
+function renderStudyDetails(result) {
+  const details = result.studyDetails;
+  if (!details) return '';
+
+  const rows = [
+    ['Design', details.design, details.design_ko],
+    ['Setting', details.setting, details.setting_ko],
+    ['Eligibility', details.eligibility, details.eligibility_ko],
+    ['Intervention Details', details.interventionDetails, details.interventionDetails_ko],
+    ['Comparator Details', details.comparatorDetails, details.comparatorDetails_ko],
+    ['Follow-up', details.followUp, details.followUp_ko],
+    ['Source Basis', details.sourceBasis, details.sourceBasis_ko],
+  ];
+
+  return `<section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    ${rows.map(([label, english, korean]) => detailRow(label, english, korean)).join('\n')}
+  </div>
+</section>`;
+}
+
+function detailRow(label, english, korean) {
+  return `<div class="pico-row">
+    <div class="pico-label">${escapeHtml(label.slice(0, 1))}</div>
+    <div class="pico-content">
+      <div class="pico-name">${escapeHtml(label)}</div>
+      <p class="en">${escapeHtml(english || '-')}</p>
+      ${korean ? `<p class="ko">${escapeHtml(korean)}</p>` : ''}
+    </div>
+  </div>`;
 }
 
 function renderDetailedPico(result) {
