@@ -327,6 +327,11 @@ export function renderArchiveDashboard(reports) {
       font-size: .76rem;
       line-height: 1.45;
     }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
     .points {
       margin: 0;
       padding-left: 1.1rem;
@@ -470,6 +475,7 @@ function renderStudyDetails(result) {
   const rows = [
     ['Design', details.design, details.design_ko],
     ['Setting', details.setting, details.setting_ko],
+    ['Sample Size', details.sampleSize, details.sampleSize_ko],
     ['Eligibility', details.eligibility, details.eligibility_ko],
     ['Intervention Details', details.interventionDetails, details.interventionDetails_ko],
     ['Comparator Details', details.comparatorDetails, details.comparatorDetails_ko],
@@ -566,13 +572,17 @@ function outcomeRows(outcomes) {
 function renderOutcome(outcome) {
   const resultKo = outcome.result_ko ? `\n    <p class="ko">${escapeHtml(outcome.result_ko)}</p>` : '';
   const interpretationKo = outcome.interpretation_ko ? `<br>${escapeHtml(outcome.interpretation_ko)}` : '';
+  const primerKo = outcome.statPrimer_ko ? `<br>${escapeHtml(outcome.statPrimer_ko)}` : '';
+  const primer = outcome.statPrimer
+    ? `\n    <div class="interpretation primer">ⓘ ${escapeHtml(outcome.statPrimer)}${primerKo}</div>`
+    : '';
 
   return `<div class="outcome">
     <div class="outcome-label">${escapeHtml(outcome.label)}</div>
     <p class="en">${escapeHtml(outcome.outcome)}</p>
     <p class="ko">${escapeHtml(outcome.outcome_ko)}</p>
     <p class="stat-line">${escapeHtml(outcome.result)}${outcome.statistics ? ` · ${escapeHtml(outcome.statistics)}` : ''}</p>${resultKo}
-    <div class="interpretation">ⓘ ${escapeHtml(outcome.interpretation)}${interpretationKo}</div>
+    <div class="interpretation">ⓘ ${escapeHtml(outcome.interpretation)}${interpretationKo}</div>${primer}
   </div>`;
 }
 

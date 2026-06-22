@@ -343,11 +343,13 @@ Rules:
 - If open full text is provided, use it to deepen PICO, outcomes, limitations, and applicability.
 - Preserve important English study terms, drug names, endpoints, effect estimates, and statistical notation.
 - For every English field, provide the Korean paired field when the schema asks for *_ko.
-- studyDetails should capture the practical study-method details a clinician wants before reading the original paper: design, countries/sites, eligibility, intervention dosing/route/duration if available, comparator details, follow-up, and which accessible sources support the details.
+- studyDetails should capture the practical study-method details a clinician wants before reading the original paper: design, countries/sites, sample size, eligibility, intervention dosing/route/duration if available, comparator details, follow-up, and which accessible sources support the details.
+- studyDetails.sampleSize must explicitly state the actual study sample size when available. Distinguish enrolled, randomized, analyzed, evaluable, intention-to-treat, per-protocol, and safety populations. Include arm denominators when available. Do not use an overall trial registry target enrollment as the article's actual sample size unless the source clearly says it is the analyzed sample for this paper.
 - detailedPico should be rich enough that a clinician can understand what was actually done without opening the paper.
 - Put primary and secondary outcomes inside detailedPico.outcomes.
 - Each outcome interpretation should be concise, intuitive, and avoid the phrase "easy interpretation".
-- Explain p value, OR/RR/HR, CI, risk difference, mean difference, and NNT only when those statistics appear.
+- Each outcome statPrimer should explain the basic reading rule for the statistics used in that outcome. Examples: for OR/RR/HR, 1 means no relative difference, below 1 means fewer events with the intervention, above 1 means more events; for 95% CI, crossing 1 usually means conventional statistical significance is not established for ratio measures; for p value, p<0.05 is commonly treated as statistically significant and p>=0.05 as not statistically significant; for risk difference, 0 means no absolute difference; for noninferiority, compare the confidence/credible interval or posterior probability against the prespecified margin.
+- Explain p value, OR/RR/HR, CI/CrI, risk difference, mean difference, NNT, and noninferiority margins only when those statistics appear.
 - Use p<0.05 as a common convention, but separate statistical significance from clinical importance.
 - oneLineSummary and oneLineSummary_ko must each be one short sentence.
 - clinicalApplicabilityScore should reflect direct usefulness for EM/CCM practice.
@@ -454,6 +456,8 @@ export function fallbackAnalysis(paper, reason = 'manual fallback') {
       design_ko: '수동 검토 필요. 연구 설계를 안정적으로 추출하지 못했습니다.',
       setting: 'Manual review needed. Country and site details were not reliably extracted.',
       setting_ko: '수동 검토 필요. 국가와 연구 기관 정보를 안정적으로 추출하지 못했습니다.',
+      sampleSize: 'Manual review needed. Actual enrolled, randomized, analyzed, or safety sample size was not reliably extracted.',
+      sampleSize_ko: '수동 검토 필요. 실제 등록, 무작위 배정, 분석 대상, 안전성 분석 대상 수를 안정적으로 추출하지 못했습니다.',
       eligibility: 'Manual review needed. Inclusion and exclusion criteria were not reliably extracted.',
       eligibility_ko: '수동 검토 필요. 포함 및 제외 기준을 안정적으로 추출하지 못했습니다.',
       interventionDetails: 'Manual review needed. Intervention details were not reliably extracted.',
@@ -496,6 +500,8 @@ export function fallbackAnalysis(paper, reason = 'manual fallback') {
           statistics: 'Not reliably extracted.',
           interpretation: 'Statistical interpretation was not available because structured analysis failed.',
           interpretation_ko: '구조화 분석 실패로 통계 해석을 제공하지 못했습니다.',
+          statPrimer: 'For ratio measures such as OR, RR, and HR, 1 means no relative difference; below 1 usually favors the intervention for harmful events, and above 1 suggests more events. For p values, p<0.05 is commonly treated as statistically significant; p>=0.05 is not.',
+          statPrimer_ko: 'OR/RR/HR 같은 비율 지표는 1이면 상대 차이가 없고, 해로운 사건에서는 1보다 작으면 중재군에 유리한 방향, 1보다 크면 사건이 더 많은 방향입니다. p-value는 보통 0.05 미만이면 통계적으로 유의, 0.05 이상이면 유의하다고 보기 어렵습니다.',
         },
       ],
     },

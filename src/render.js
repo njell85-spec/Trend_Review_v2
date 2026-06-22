@@ -106,6 +106,7 @@ function renderMarkdown(report) {
       lines.push('#### Study Details');
       lines.push(`- Design: ${result.studyDetails.design}`);
       lines.push(`- Setting: ${result.studyDetails.setting}`);
+      lines.push(`- Sample size: ${result.studyDetails.sampleSize}`);
       lines.push(`- Eligibility: ${result.studyDetails.eligibility}`);
       lines.push(`- Intervention: ${result.studyDetails.interventionDetails}`);
       lines.push(`- Comparator: ${result.studyDetails.comparatorDetails}`);
@@ -119,6 +120,8 @@ function renderMarkdown(report) {
         lines.push(`- ${outcome.label}: ${outcome.result} (${outcome.statistics})`);
         if (outcome.interpretation) lines.push(`  - ⓘ ${outcome.interpretation}`);
         if (outcome.interpretation_ko) lines.push(`  - ${outcome.interpretation_ko}`);
+        if (outcome.statPrimer) lines.push(`  - Stats rule: ${outcome.statPrimer}`);
+        if (outcome.statPrimer_ko) lines.push(`  - ${outcome.statPrimer_ko}`);
       }
     }
     lines.push(`- Takeaway: ${result.clinicalTakeaway ?? ''}`);

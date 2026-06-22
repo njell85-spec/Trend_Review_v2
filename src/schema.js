@@ -16,6 +16,8 @@ export const OutcomeSchema = z.object({
   statistics: z.string().min(1),
   interpretation: z.string().min(1),
   interpretation_ko: z.string().min(1),
+  statPrimer: z.string().min(1),
+  statPrimer_ko: z.string().min(1),
 });
 
 export const DetailedPicoSchema = z.object({
@@ -35,6 +37,8 @@ export const StudyDetailsSchema = z.object({
   design_ko: z.string().min(1),
   setting: z.string().min(1),
   setting_ko: z.string().min(1),
+  sampleSize: z.string().min(1),
+  sampleSize_ko: z.string().min(1),
   eligibility: z.string().min(1),
   eligibility_ko: z.string().min(1),
   interventionDetails: z.string().min(1),
@@ -210,6 +214,8 @@ function studyDetailsJsonSchema() {
       design_ko: { type: 'string' },
       setting: { type: 'string' },
       setting_ko: { type: 'string' },
+      sampleSize: { type: 'string' },
+      sampleSize_ko: { type: 'string' },
       eligibility: { type: 'string' },
       eligibility_ko: { type: 'string' },
       interventionDetails: { type: 'string' },
@@ -226,6 +232,8 @@ function studyDetailsJsonSchema() {
       'design_ko',
       'setting',
       'setting_ko',
+      'sampleSize',
+      'sampleSize_ko',
       'eligibility',
       'eligibility_ko',
       'interventionDetails',
@@ -287,6 +295,8 @@ function outcomeJsonSchema() {
       statistics: { type: 'string' },
       interpretation: { type: 'string' },
       interpretation_ko: { type: 'string' },
+      statPrimer: { type: 'string' },
+      statPrimer_ko: { type: 'string' },
     },
     required: [
       'label',
@@ -297,6 +307,8 @@ function outcomeJsonSchema() {
       'statistics',
       'interpretation',
       'interpretation_ko',
+      'statPrimer',
+      'statPrimer_ko',
     ],
   };
 }

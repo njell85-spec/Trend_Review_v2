@@ -141,9 +141,10 @@ Each selected paper is rendered as a collapsed card. Opening the card shows:
 
 - English source-style summary with Korean interpretation underneath
 - Why it matters
+- study design, setting, and explicit sample size / denominator details when available
 - detailed PICO
 - primary and secondary outcomes inside the PICO `O` section
-- compact `ⓘ` statistical interpretation for p value, OR/RR/HR, CI, risk difference, mean difference, or NNT when reported
+- compact `ⓘ` statistical interpretation plus basic reading rules for p value, OR/RR/HR, CI/CrI, risk difference, mean difference, NNT, or noninferiority margins when reported
 - conclusion
 - limitations
 - ED/ICU applicability
