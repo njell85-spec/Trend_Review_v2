@@ -82,7 +82,7 @@ jobs:
           if [ -n "$RUN_DATE" ]; then ARGS+=(--date "$RUN_DATE"); fi
           if [ -n "$MAX_PAPERS" ]; then ARGS+=(--max-papers "$MAX_PAPERS"); fi
           if [ "$DRY_RUN" = "true" ]; then ARGS+=(--dry-run); fi
-          ARGS+=(--no-notify)
+          if [ "$NO_NOTIFY" = "true" ]; then ARGS+=(--no-notify); fi
           node src/cli.js "${ARGS[@]}"
 
       - name: Commit generated reports
