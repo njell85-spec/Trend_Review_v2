@@ -14,6 +14,7 @@ Expected:
 
 - all tests pass
 - dry run prints `Trend Review YYYY-MM-DD: success`
+- default live run uses a 180-day PubMed window, collects up to 300 papers, keeps 30 candidates, and publishes Top 1
 
 ## 2. Push v2 To GitHub
 
@@ -165,6 +166,7 @@ Expected:
 - dashboard deploys
 - Telegram message arrives if Telegram secrets are set
 - KakaoTalk message arrives if Kakao secrets are set
+- generated report cards are collapsed by default and expand by clicking the paper title row
 
 ## 8. Daily Automation
 

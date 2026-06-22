@@ -6,20 +6,22 @@
   <title>Trend Review</title>
   <style>
     :root {
-      --ink: #18212f;
-      --muted: #697386;
-      --line: #dfe5ee;
-      --page: #f6f8fb;
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
       --paper: #ffffff;
       --teal: #0f766e;
-      --blue: #244c9a;
-      --plum: #6f3f85;
-      --coral: #b65346;
-      --gold: #90661c;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
       --soft-teal: #e7f4f1;
-      --soft-blue: #ebf1ff;
-      --soft-coral: #fff0ed;
-      --shadow: 0 12px 32px rgba(24, 33, 47, .08);
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
     }
     * { box-sizing: border-box; }
     body {
@@ -27,7 +29,7 @@
       background: var(--page);
       color: var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.52;
+      line-height: 1.55;
     }
     a {
       color: var(--blue);
@@ -35,46 +37,44 @@
       text-underline-offset: 3px;
     }
     .wrap {
-      width: min(100% - 28px, 1040px);
+      width: min(100% - 28px, 980px);
       margin: 0 auto;
     }
     .mast {
-      background:
-        linear-gradient(90deg, rgba(15,118,110,.16), transparent 36%),
-        linear-gradient(180deg, #fff, #f9fbfd);
+      background: linear-gradient(180deg, #fff, #f9fbfd);
       border-bottom: 1px solid var(--line);
     }
     .mast-inner {
       padding: 22px 0 18px;
       display: grid;
-      gap: 18px;
+      gap: 16px;
     }
     .topline {
       display: flex;
-      align-items: flex-start;
       justify-content: space-between;
-      gap: 18px;
+      align-items: flex-start;
+      gap: 16px;
     }
     h1 {
       margin: 0;
-      font-size: clamp(1.7rem, 5vw, 2.55rem);
-      line-height: 1.05;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
       letter-spacing: 0;
     }
     .subtitle {
       margin: 8px 0 0;
       color: var(--muted);
-      font-size: .95rem;
-      max-width: 56rem;
+      font-size: .94rem;
+      max-width: 58rem;
     }
     .run-state {
-      display: inline-grid;
-      gap: 3px;
+      display: grid;
       justify-items: end;
-      white-space: nowrap;
+      gap: 3px;
       color: var(--muted);
-      font-size: .8rem;
-      padding-top: 3px;
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
     }
     .run-state strong {
       color: var(--teal);
@@ -87,110 +87,35 @@
       gap: 9px;
     }
     .stat {
-      background: var(--paper);
+      min-width: 0;
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 12px;
-      min-width: 0;
+      padding: 11px 12px;
     }
     .stat b {
       display: block;
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       line-height: 1.1;
     }
     .stat span {
-      color: var(--muted);
       display: block;
       margin-top: 4px;
-      font-size: .75rem;
+      color: var(--muted);
+      font-size: .74rem;
     }
     main {
-      padding: 18px 0 34px;
-      display: grid;
-      gap: 14px;
-    }
-    .today {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .today-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 12px;
-      padding: 15px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(90deg, #ffffff, #f8fafc);
-    }
-    .today-title {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      min-width: 0;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 26px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: var(--soft-teal);
-      color: var(--teal);
-      font-size: .75rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-    .today-date {
-      font-size: 1.05rem;
-      font-weight: 850;
-    }
-    .today-meta {
-      color: var(--muted);
-      font-size: .86rem;
-      align-self: center;
-      white-space: nowrap;
-    }
-    .quick-list {
-      display: grid;
-      gap: 9px;
-      padding: 14px 15px 16px;
-    }
-    .quick-item {
-      display: grid;
-      grid-template-columns: 26px minmax(0, 1fr);
-      gap: 8px;
-      align-items: start;
-    }
-    .quick-index {
-      color: var(--teal);
-      font-weight: 850;
-      line-height: 1.45;
-    }
-    .quick-title {
-      font-weight: 780;
-      font-size: .95rem;
-    }
-    .quick-meta {
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: .78rem;
-    }
-    .paper-stack {
+      padding: 16px 0 36px;
       display: grid;
       gap: 12px;
     }
-    details.paper {
+    details {
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
-    details.paper[open] {
-      border-color: rgba(15, 118, 110, .45);
+    details[open] {
       box-shadow: var(--shadow);
     }
     summary {
@@ -198,169 +123,227 @@
       cursor: pointer;
     }
     summary::-webkit-details-marker { display: none; }
-    .paper-summary {
+    .day-summary {
       display: grid;
-      grid-template-columns: 34px minmax(0, 1fr) auto;
-      align-items: center;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 12px;
-      padding: 14px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
     }
-    .rank {
-      width: 31px;
-      height: 31px;
-      border-radius: 8px;
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      color: #fff;
-      background: var(--teal);
-      font-size: .78rem;
-      font-weight: 850;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
     }
-    .rank.two { background: var(--blue); }
-    .rank.three { background: var(--plum); }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
     .paper-title {
       margin: 0;
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
       line-height: 1.32;
-      letter-spacing: 0;
       font-weight: 850;
+      letter-spacing: 0;
     }
     .paper-meta {
       margin-top: 5px;
       color: var(--muted);
-      font-size: .82rem;
-    }
-    .tag {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 999px;
-      padding: 4px 9px;
-      font-size: .76rem;
-      color: var(--ink);
-      white-space: nowrap;
+      font-size: .8rem;
     }
     .paper-body {
       border-top: 1px solid var(--line);
-      background: #fbfcfe;
-      padding: 15px;
+      padding: 13px;
       display: grid;
-      gap: 14px;
-    }
-    .callout {
-      padding: 12px;
-      border-radius: 8px;
-      background: var(--soft-blue);
-      border: 1px solid #d8e3ff;
-    }
-    .callout strong,
-    .section h3 {
-      display: block;
-      margin: 0 0 6px;
-      color: var(--blue);
-      font-size: .84rem;
-      font-weight: 850;
+      gap: 12px;
+      background: #fbfcfe;
     }
     .section {
-      display: grid;
-      gap: 7px;
-    }
-    .section p { margin: 0; }
-    .ko {
-      color: #536073;
-      font-size: .9rem;
-    }
-    .pico-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-    .pico {
-      border: 1px solid #e2e8f0;
       background: #fff;
-      border-radius: 8px;
-      padding: 10px;
-      min-width: 0;
-    }
-    .pico b {
-      display: block;
-      color: var(--teal);
-      font-size: .78rem;
-      margin-bottom: 5px;
-    }
-    .bottom-line {
-      background: var(--soft-coral);
-      border: 1px solid #ffd8d0;
-      border-radius: 8px;
-      padding: 12px;
-    }
-    .bottom-line h3 { color: var(--coral); }
-    ul {
-      margin: 0;
-      padding-left: 1.1rem;
-    }
-    li + li { margin-top: 5px; }
-    .days {
-      display: grid;
-      gap: 10px;
-    }
-    details.day {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-      overflow: hidden;
-    }
-    .day-summary {
-      padding: 12px 14px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .day-date {
-      font-weight: 850;
-    }
-    .day-list {
-      padding: 0 14px 13px;
-      color: var(--muted);
-      font-size: .84rem;
-      display: grid;
-      gap: 5px;
-    }
-    .journal {
-      background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
-    .journal-head {
-      padding: 12px 14px;
+    .section-head {
+      padding: 10px 11px;
       border-bottom: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
       font-weight: 850;
     }
-    .journal-table {
-      overflow-x: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 680px;
-      font-size: .8rem;
-    }
-    th, td {
-      text-align: left;
-      vertical-align: top;
+    .pico-content {
       padding: 9px 10px;
-      border-bottom: 1px solid #eef2f7;
+      display: grid;
+      gap: 5px;
     }
-    th {
+    .pico-name {
       color: var(--muted);
-      font-size: .68rem;
+      font-size: .72rem;
+      font-weight: 790;
       text-transform: uppercase;
-      letter-spacing: 0;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
     }
     footer {
       border-top: 1px solid var(--line);
@@ -369,21 +352,23 @@
       text-align: center;
       font-size: .78rem;
     }
-    @media (max-width: 760px) {
-      .wrap { width: min(100% - 24px, 1040px); }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
       .topline,
-      .today-head { grid-template-columns: 1fr; }
-      .run-state { justify-items: start; white-space: normal; }
-      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .today-meta { white-space: normal; }
+      .day-summary,
       .paper-summary {
-        grid-template-columns: 34px minmax(0, 1fr);
+        grid-template-columns: 1fr;
       }
-      .paper-summary .tag {
-        grid-column: 2;
-        justify-self: start;
+      .run-state {
+        justify-items: start;
+        white-space: normal;
       }
-      .pico-grid { grid-template-columns: 1fr; }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
     }
   </style>
 </head>
@@ -393,315 +378,575 @@
       <div class="topline">
         <div>
           <h1>EM/CCM Trend Review</h1>
-          <p class="subtitle">Emergency Medicine & Critical Care Medicine literature briefing</p>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
         </div>
         <div class="run-state">
           <strong>success</strong>
-          <span>2026. 6. 22. PM 4:46</span>
+          <span>2026. 6. 22. 오후 8:04</span>
         </div>
       </div>
       <div class="stats">
-        <div class="stat"><b>2</b><span>Days</span></div>
-        <div class="stat"><b>50</b><span>Fetched</span></div>
-        <div class="stat"><b>30</b><span>Screened</span></div>
-        <div class="stat"><b>3</b><span>Top Papers</span></div>
+        <div class="stat"><b>2</b><span>Archive Days</span></div>
+        <div class="stat"><b>120</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
       </div>
     </div>
   </header>
   <main class="wrap">
-    <section class="today">
-  <div class="today-head">
-    <div class="today-title">
-      <span class="pill">Latest</span>
-      <span class="today-date">2026-06-22</span>
-      <span class="muted">3 papers</span>
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-06-22</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
     </div>
-    <div class="today-meta">30-day window · 2026. 6. 22. PM 4:46</div>
-  </div>
-  <div class="quick-list">
-    <div class="quick-item">
-  <div class="quick-index">1</div>
-  <div>
-    <div class="quick-title">Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.</div>
-    <div class="quick-meta">Archives of orthopaedic and trauma surgery · 2026-Jun-18 · PMID 42315642</div>
-  </div>
-</div>
-<div class="quick-item">
-  <div class="quick-index">2</div>
-  <div>
-    <div class="quick-title">Effect of a Mobile App on Medication Errors During Simulated Pediatric Cardiopulmonary Resuscitation: PEDIDOSIS App vs. Conventional Methods. A Multicenter Simulation-based Randomized Controlled Trial.</div>
-    <div class="quick-meta">Journal of medical systems · 2026-Jun-19 · PMID 42319567</div>
-  </div>
-</div>
-<div class="quick-item">
-  <div class="quick-index">3</div>
-  <div>
-    <div class="quick-title">From single to dual platelet inhibition FIBTEM assay: fibrinogen replacement thresholds for critical bleeding after trauma.</div>
-    <div class="quick-meta">European journal of trauma and emergency surgery : official publication of the European Trauma Society · 2026-Jun-18 · PMID 42313188</div>
-  </div>
-</div>
-  </div>
-</section>
-    <section class="paper-stack">
-      <details class="paper" open>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
   <summary class="paper-summary">
-    <span class="rank">01</span>
     <div>
-      <h2 class="paper-title">Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.</h2>
-      <div class="paper-meta">Archives of orthopaedic and trauma surgery · 2026-Jun-18</div>
+      <h2 class="paper-title">Cefazolin for Methicillin-Susceptible Bacteremia.</h2>
+      <div class="paper-meta">
+        The New England journal of medicine · 2026-Jun-18 · PMID 42308484
+      </div>
     </div>
-    <span class="tag">Guide</span>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Abstract only</span>
+      <span class="chevron">›</span>
+    </div>
   </summary>
   <div class="paper-body">
-    <div class="callout">
-      <strong>Why It Matters</strong>
-      <p>Does earlier surgery in older adults with distal femur fractures improve postoperative outcomes compared to delayed surgery?</p>
-      <p class="ko">고령의 원위 대퇴골 골절 환자에서 조기 수술이 지연 수술에 비해 30일 사망률 및 수술 후 합병증 등의 예후를 개선하는가?</p>
-    </div>
-    <div class="section">
-  <h3>PICO</h3>
-  <div class="pico-grid">
-    <div class="pico">
-  <b>P</b>
-  <p>Older adults with distal femur fractures (16 retrospective cohort studies, n = 31,213)</p>
-  <p class="ko">원위 대퇴골 골절이 있는 고령 환자 (16개 후향적 코호트 연구, 총 31,213명)</p>
-</div>
-    <div class="pico">
-  <b>I</b>
-  <p>Early surgery (definitions varied across studies)</p>
-  <p class="ko">조기 수술 (연구마다 정의 상이)</p>
-</div>
-    <div class="pico">
-  <b>C</b>
-  <p>Delayed surgery</p>
-  <p class="ko">지연 수술</p>
-</div>
-    <div class="pico">
-  <b>O</b>
-  <p>30-day mortality (primary), longer-term mortality (at 90 days, 180 days, 1 year), and postoperative complications (cardiac, pulmonary, pulmonary embolism)</p>
-  <p class="ko">30일 사망률 (일차 결과), 장기 사망률 (90일, 180일, 1년), 수술 후 합병증 (심장, 폐, 폐색전증)</p>
-</div>
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
   </div>
-</div>
-    <div class="section">
-  <h3>Key Findings</h3>
-  <ul>
-    <li>Early surgery was not associated with reduced 30-day mortality (adjusted OR: 0.77, 95% CI: 0.56-1.05; low-certainty evidence).<p class="ko">조기 수술은 30일 사망률의 유의한 감소와 연관되지 않았습니다 (보정 OR: 0.77, 95% CI: 0.56-1.05; 낮은 확실성 근거).</p></li>
-<li>No significant differences were observed for longer-term mortality at 90 days (crude OR: 0.91), 180 days (crude OR: 0.46), or 1 year (crude OR: 0.61).<p class="ko">90일 (조 OR: 0.91), 180일 (조 OR: 0.46), 1년 (조 OR: 0.61) 장기 사망률에서도 두 군 간 유의한 차이가 없었습니다.</p></li>
-<li>Postoperative complications, including cardiac complications (OR: 0.71), pulmonary complications (OR: 1.07), and pulmonary embolism (OR: 1.14), did not significantly differ between groups.<p class="ko">심장 합병증 (OR: 0.71), 폐 합병증 (OR: 1.07), 폐색전증 (OR: 1.14) 등 수술 후 합병증 비율도 유사했습니다.</p></li>
-  </ul>
-</div>
-    <div class="bottom-line section">
-      <h3>Clinical Bottom Line</h3>
-      <p>Unlike hip fractures where early surgery is strongly associated with better outcomes, timing of surgery for distal femur fractures in older adults did not show a clear benefit for mortality or complications. Preoperative medical optimization may take precedence over rushing to the operating room, though prospective trials are needed.</p>
-      <p class="ko">조기 수술이 예후 개선에 필수적인 고관절 골절과 달리, 고령 원위 대퇴골 골절 환자에서는 조기 수술이 사망률이나 합병증을 유의하게 줄이지 못했습니다. 응급 수술을 서두르기보다 사전 내과적 동반 질환 최적화에 집중하는 것이 더 적절할 수 있습니다.</p>
+  <div class="section-body">
+    <p class="en">The choice between cefazolin and antistaphylococcal penicillins (flucloxacillin/cloxacillin) for MSSA bacteremia has been highly debated, primarily due to concerns about the high-inoculum effect with cefazolin and the higher risk of acute kidney injury with penicillins. This randomized trial provides high-quality clinical evidence favoring cefazolin as a safer and highly effective first-line therapy.</p>
+    <p class="ko">MSSA 균혈증 치료에 있어 세파졸린과 항스타필로코쿠스 페니실린(플루클록사실린/클록사실린) 간의 선택은 세파졸린의 고균량 효과 우려와 페니실린의 높은 급성 신손상 위험 때문에 오랜 논쟁거리였습니다. 본 무작위 배정 임상시험은 세파졸린이 더 안전하고 매우 효과적인 1차 치료제임을 지지하는 고품질의 임상적 근거를 제공합니다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Adult patients with penicillin-resistant, methicillin-susceptible Staphylococcus aureus bacteremia</p>
+      <p class="ko">페니실린 내성, 메티실린 감수성 황색포도상구균(MSSA) 균혈증 성인 환자</p>
+      <p class="en"><strong>Setting:</strong> International, multicenter Bayesian adaptive platform trial (SNAP trial)</p>
+      <p class="ko">다국가, 다기관 베이지안 적응형 플랫폼 임상시험 (SNAP 임상시험)</p>
     </div>
-    <div class="section">
-  <h3>Limitations</h3>
-  <p>All included studies were retrospective with substantial variation in how &#39;early surgery&#39; was defined, leading to potential classification and selection biases.</p>
-  <p class="ko">포함된 모든 연구가 후향적 설계이며, &#39;조기 수술&#39;에 대한 정의가 연구마다 달라 분류 오류 및 선택 편향의 한계가 있습니다.</p>
-</div>
-    <div class="section">
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Intravenous cefazolin</p>
+      <p class="ko">정맥 주사용 세파졸린</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Intravenous antistaphylococcal penicillin (flucloxacillin or cloxacillin)</p>
+      <p class="ko">정맥 주사용 항스타필로코쿠스 페니실린 (플루클록사실린 또는 클록사실린)</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary Outcome</div>
+    <p class="en">Death from any cause within 90 days after enrollment</p>
+    <p class="ko">등록 후 90일 이내 모든 원인으로 인한 사망</p>
+    <p class="stat-line">15.0% (97/645 patients) in the cefazolin group vs 17.0% (109/642 patients) in the antistaphylococcal-penicillin group · Adjusted odds ratio (aOR), 0.81; 95% credible interval (CrI), 0.59 to 1.12; probability of noninferiority, 99.2%; probability of superiority, 89.8%</p>
+    <p class="ko">세파졸린 군 15.0% (97/645명) 대 항스타필로코쿠스 페니실린 군 17.0% (109/642명)</p>
+    <div class="interpretation">ⓘ Cefazolin met the prespecified criterion for noninferiority to antistaphylococcal penicillins (aOR &lt;1.2, reflecting &lt;2.5% absolute difference). There was also a high probability of superiority.<br>세파졸린은 항스타필로코쿠스 페니실린 대비 사전 정의된 비열등성 기준(aOR &lt;1.2, 절대 차이 약 &lt;2.5%포인트에 해당)을 충족하였습니다. 또한 우월성을 보일 확률도 높았습니다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary Safety Outcome</div>
+    <p class="en">Development of acute kidney injury (AKI) within 14 days</p>
+    <p class="ko">14일 이내 급성 신손상 (AKI) 발생</p>
+    <p class="stat-line">13.9% (92/660 patients) in the cefazolin group vs 19.6% (127/648 patients) in the antistaphylococcal-penicillin group · Adjusted odds ratio (aOR), 0.67; 95% credible interval (CrI), 0.50 to 0.89; probability of superiority, 99.7%</p>
+    <p class="ko">세파졸린 군 13.9% (92/660명) 대 항스타필로코쿠스 페니실린 군 19.6% (127/648명)</p>
+    <div class="interpretation">ⓘ Cefazolin was superior to antistaphylococcal penicillins, significantly reducing the occurrence of acute kidney injury.<br>세파졸린은 항스타필로코쿠스 페니실린 대비 우월하여 급성 신손상 발생률을 유의하게 낮췄습니다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Cefazolin demonstrated noninferiority for 90-day mortality compared to flucloxacillin or cloxacillin (15.0% vs. 17.0%, aOR 0.81, 95% CrI 0.59 to 1.12; posterior probability of noninferiority 99.2%).</p><p class="ko">세파졸린은 플루클록사실린 또는 클록사실린 대비 90일 사망률에서 비열등성을 입증했습니다 (15.0% 대 17.0%, 보정 오즈비 0.81, 95% 신용구간 0.59~1.12, 비열등성 후험 확률 99.2%).</p></li>
+<li><p class="en">Cefazolin was associated with a clinically significant lower risk of acute kidney injury within 14 days than the penicillins (13.9% vs. 19.6%, aOR 0.67, 95% CrI 0.50 to 0.89; posterior probability of superiority 99.7%).</p><p class="ko">세파졸린은 페니실린 제제에 비해 14일 이내 급성 신손상 위험을 임상적으로 유의미하게 낮췄습니다 (13.9% 대 19.6%, 보정 오즈비 0.67, 95% 신용구간 0.50~0.89, 우월성 후험 확률 99.7%).</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Cefazolin is noninferior to antistaphylococcal penicillins (flucloxacillin/cloxacillin) for the treatment of methicillin-susceptible bacteremia, while providing a significantly safer renal profile with lower rates of acute kidney injury.</p>
+    <p class="ko">메티실린 감수성 균혈증 치료에 있어 세파졸린은 항스타필로코쿠스 페니실린(플루클록사실린/클록사실린) 대비 90일 사망률 측면에서 비열등하며, 급성 신손상 빈도를 유의하게 낮추어 현저히 우수한 신장 안전성 프로파일을 보입니다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">The trial was open-label, which could influence secondary clinician behaviors or discharge decisions. Additionally, the brief abstract details do not specify the prevalence or outcome in patients with high-inoculum infections like endocarditis.</p>
+    <p class="ko">본 임상시험은 공개라벨(open-label) 디자인으로 진행되어 의료진의 세부적인 관리나 퇴원 결정 등에 영향을 미쳤을 수 있습니다. 또한 초록의 정보만으로는 심내막염과 같은 고균량 감염(high-inoculum infection) 환자에서의 비율이나 결과가 구별되어 제시되지 않았습니다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Highly applicable. Emergency and ICU physicians routinely initiate, continue, or transition empiric MRSA cover to targeted MSSA cover. Utilizing cefazolin instead of flucloxacillin/cloxacillin simplifies administration, is widely available globally, and significantly spares renal function in critically ill patients.</p>
+    <p class="ko">매우 적용 가능성이 높습니다. 응급실 및 중환자실 의료진은 흔히 MSSA 표적 치료를 시작하거나 기존 치료를 전환합니다. 플루클록사실린/클록사실린 대신 세파졸린을 투여하는 것은 약제 공급이 수월하고 투약이 용이할 뿐만 아니라, 중증 환자의 신기능을 보존하는 데 큰 장점을 제공합니다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In adult patients with MSSA bacteremia, cefazolin should be the preferred first-line parenteral therapy over antistaphylococcal penicillins like flucloxacillin or cloxacillin. It offers identical efficacy with a substantially lower risk of nephrotoxicity, clarifying long-standing clinical practice dilemmas.</p>
+    <p class="ko">MSSA 균혈증이 있는 성인 환자에서 세파졸린은 플루클록사실린이나 클록사실린과 같은 항스타필로코쿠스 페니실린보다 선호되는 1차 정맥 투여 치료제여야 합니다. 신독성 위험이 실질적으로 훨씬 낮으면서도 동등한 효능을 제공하므로 오랜 임상적 고민을 해결해 줍니다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
       <h3>Links</h3>
-      <p><a href="https://pubmed.ncbi.nlm.nih.gov/42315642/" target="_blank" rel="noopener">PubMed 42315642</a> · <a href="https://doi.org/10.1007/s00402-026-06296-2" target="_blank" rel="noopener">DOI</a></p>
+      <span class="section-sub">source</span>
     </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42308484/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1056/NEJMoa2506905" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+<details class="day">
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-06-21</span>
+      <span class="pill blue">3 report</span>
+      <span class="pill">30-day window</span>
+      <span class="pill amber">3 fallback</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis</h2>
+      <div class="paper-meta">
+        Annals of Emergency Medicine · 2026-06-12 · PMID 99999002
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">Meta-analysis</span>
+      <span class="pill">Source context</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">What does this meta-analysis suggest for emergency medicine or critical care practice?</p>
+    <p class="ko">이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">legacy format</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Manual review needed. Population details were not reliably extracted.</p>
+      <p class="ko">수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Manual review needed. Intervention or exposure details were not reliably extracted.</p>
+      <p class="ko">수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparison</div>
+      <p class="en">Manual review needed. Comparator details were not reliably extracted or not reported.</p>
+      <p class="ko">수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcome</div>
+      <p class="en">Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.</p>
+      <p class="ko">Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Fallback summary generated because: LLM provider not configured</p>
+    <p class="ko">다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/99999002/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1000/example.2" target="_blank" rel="noopener">DOI</a></div>
+  </section>
   </div>
 </details>
 <details class="paper">
   <summary class="paper-summary">
-    <span class="rank two">02</span>
     <div>
-      <h2 class="paper-title">Effect of a Mobile App on Medication Errors During Simulated Pediatric Cardiopulmonary Resuscitation: PEDIDOSIS App vs. Conventional Methods. A Multicenter Simulation-based Randomized Controlled Trial.</h2>
-      <div class="paper-meta">Journal of medical systems · 2026-Jun-19</div>
+      <h2 class="paper-title">Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial</h2>
+      <div class="paper-meta">
+        Critical Care Medicine · 2026-06-14 · PMID 99999001
+      </div>
     </div>
-    <span class="tag">RCT</span>
+    <div class="day-title">
+      <span class="pill teal">#2</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Source context</span>
+      <span class="chevron">›</span>
+    </div>
   </summary>
   <div class="paper-body">
-    <div class="callout">
-      <strong>Why It Matters</strong>
-      <p>Does the use of the PEDIDOSIS mobile app during simulated pediatric cardiopulmonary resuscitation reduce medication errors made by nursing staff compared to conventional methods?</p>
-      <p class="ko">소아 심폐소생술 시뮬레이션 상황에서 PEDIDOSIS 모바일 앱 사용이 기존 방식에 비해 간호사의 투약 오류를 줄일 수 있는가?</p>
-    </div>
-    <div class="section">
-  <h3>PICO</h3>
-  <div class="pico-grid">
-    <div class="pico">
-  <b>P</b>
-  <p>Nursing professionals participating in a simulated pediatric emergency resuscitation in Spain.</p>
-  <p class="ko">스페인의 소아 응급 소생술 시뮬레이션에 참여한 간호사들</p>
-</div>
-    <div class="pico">
-  <b>I</b>
-  <p>PEDIDOSIS smartphone application for drug preparation.</p>
-  <p class="ko">약물 준비를 위한 PEDIDOSIS 스마트폰 앱 사용</p>
-</div>
-    <div class="pico">
-  <b>C</b>
-  <p>Conventional methods (such as printed or electronic medication tables, smartphones, calculators, or no cognitive aid).</p>
-  <p class="ko">기존 방식 (인쇄물/전자기기 약물 표, 스마트폰, 계산기 또는 인지 보조 도구 없음)</p>
-</div>
-    <div class="pico">
-  <b>O</b>
-  <p>Incidence and magnitude of medication errors (dose deviations), proportion of multiple errors, time to administration, stress, satisfaction, and usability.</p>
-  <p class="ko">투약 오류(용량 편차) 발생률 및 크기, 다중 오류 비율, 투여 소요 시간, 스트레스, 만족도, 사용 편의성</p>
-</div>
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
   </div>
-</div>
-    <div class="section">
-  <h3>Key Findings</h3>
-  <ul>
-    <li>The incidence of wrong dose administration (any deviation) was significantly lower in the PEDIDOSIS app group compared to the control group (26.4% vs 51.5%, p &lt; 0.001).<p class="ko">PEDIDOSIS 앱 사용 군은 대조군 대비 임의의 용량 편차 발생률이 유의하게 낮았다 (26.4% 대 51.5%, p &lt; 0.001).</p></li>
-<li>The odds of a clinically significant (&gt;10% deviation) dosing error was reduced by 76% with the app (OR 0.24 [0.14-0.4], risk difference of 20.7%), and fewer participants committed multiple errors (15.1% vs 57.7%).<p class="ko">앱 사용은 10% 초과 용량 편차 오류 발생 가능성을 76% 감소시켰으며 (OR 0.24 [0.14-0.4], 위험도 차이 20.7%), 다중 투약 오류 비율도 대폭 감소했다 (15.1% 대 57.7%).</p></li>
-<li>The app group reported higher overall satisfaction, lower stress, and a good usability score (System Usability Scale score of 78.9 out of 100).<p class="ko">앱 사용 군에서 전반적인 만족도가 더 높았고 스트레스는 더 낮았으며, 시스템 사용성 평가(SUS) 점수는 100점 만점에 78.9점을 기록했다.</p></li>
-  </ul>
-</div>
-    <div class="bottom-line section">
-      <h3>Clinical Bottom Line</h3>
-      <p>In simulated pediatric cardiopulmonary resuscitations, using the PEDIDOSIS smartphone application for emergency drug preparation (epinephrine, bicarbonate, midazolam, norepinephrine) significantly reduces dangerous dosing errors and multiple medication errors while lowering nurse stress and increasing satisfaction. These findings support integrating validated digital cognitive aids into pediatric emergency workflows, although direct real-world clinical implementation trials are still needed.</p>
-      <p class="ko">소아 심폐소생술 시뮬레이션에서 전용 스마트폰 앱(PEDIDOSIS)을 활용해 응급 약물(에피네프린, 탄산수소나트륨, 미다졸람, 노르에피네프린)을 계산 및 준비했을 때, 위험한 용량 오류와 다중 투약 오류를 유의하게 줄이고 간호사의 스트레스를 낮추며 만족도를 높였다. 소아 응급 진료 지침에 검증된 디지털 보조 도구를 통합하는 것을 지지하는 결과이나, 실제 임상 현장에서의 추가적인 검증이 필요하다.</p>
+  <div class="section-body">
+    <p class="en">What does this randomized controlled trial suggest for emergency medicine or critical care practice?</p>
+    <p class="ko">이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">legacy format</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Manual review needed. Population details were not reliably extracted.</p>
+      <p class="ko">수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.</p>
     </div>
-    <div class="section">
-  <h3>Limitations</h3>
-  <p>The study was conducted in a high-fidelity simulation environment, which may not fully capture the real-world clinical performance and cognitive load of actual pediatric arrests. Additionally, although drug administration times were measured, the exact timing data were not reported in the abstract.</p>
-  <p class="ko">본 연구는 실제 소아 심정지 상황이 아닌 고충실도 시뮬레이션 환경에서 진행되었기 때문에 실제 임상 현장에서의 수행력과 인지적 부하를 온전히 대변하지 못할 수 있다. 또한 약물 투약 소요 시간이 측정되었으나 초록에 구체적인 데이터가 명시되지 않았다.</p>
-</div>
-    <div class="section">
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Manual review needed. Intervention or exposure details were not reliably extracted.</p>
+      <p class="ko">수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparison</div>
+      <p class="en">Manual review needed. Comparator details were not reliably extracted or not reported.</p>
+      <p class="ko">수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcome</div>
+      <p class="en">Background: Early septic shock management in the emergency department may influence mortality.</p>
+      <p class="ko">Background: Early septic shock management in the emergency department may influence mortality.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Background: Early septic shock management in the emergency department may influence mortality.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Fallback summary generated because: LLM provider not configured</p>
+    <p class="ko">다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
       <h3>Links</h3>
-      <p><a href="https://pubmed.ncbi.nlm.nih.gov/42319567/" target="_blank" rel="noopener">PubMed 42319567</a> · <a href="https://doi.org/10.1007/s10916-026-02425-x" target="_blank" rel="noopener">DOI</a></p>
+      <span class="section-sub">source</span>
     </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/99999001/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1000/example.1" target="_blank" rel="noopener">DOI</a></div>
+  </section>
   </div>
 </details>
 <details class="paper">
   <summary class="paper-summary">
-    <span class="rank three">03</span>
     <div>
-      <h2 class="paper-title">From single to dual platelet inhibition FIBTEM assay: fibrinogen replacement thresholds for critical bleeding after trauma.</h2>
-      <div class="paper-meta">European journal of trauma and emergency surgery : official publication of the European Trauma Society · 2026-Jun-18</div>
+      <h2 class="paper-title">Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial</h2>
+      <div class="paper-meta">
+        JAMA · 2026-06-10 · PMID 99999003
+      </div>
     </div>
-    <span class="tag">Moderate</span>
+    <div class="day-title">
+      <span class="pill teal">#3</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Source context</span>
+      <span class="chevron">›</span>
+    </div>
   </summary>
   <div class="paper-body">
-    <div class="callout">
-      <strong>Why It Matters</strong>
-      <p>Does transitioning from single to dual-platelet inhibition in the ROTEM FIBTEM assay affect the correlation with Clauss fibrinogen or the optimal diagnostic thresholds for identifying hypofibrinogenemia in major trauma patients?</p>
-      <p class="ko">중증 외상 환자에서 ROTEM FIBTEM 검사의 혈소판 억제 방식이 단일에서 이중으로 변경될 때, Clauss 피브리노겐 수치와의 상관관계 및 저피브리노겐혈증 진단을 위한 최적의 역치값에 변화가 있는가?</p>
-    </div>
-    <div class="section">
-  <h3>PICO</h3>
-  <div class="pico-grid">
-    <div class="pico">
-  <b>P</b>
-  <p>Adult patients with major trauma presenting in Queensland between 2022 and 2025 who had paired ROTEM and conventional coagulation tests on arrival</p>
-  <p class="ko">2022년에서 2025년 사이 내원하여 내원 당시 ROTEM 및 일반 응고 검사를 함께 시행받은 성인 중증 외상 환자</p>
-</div>
-    <div class="pico">
-  <b>I</b>
-  <p>FIBTEM assay with dual-platelet inhibition (addition of tirofiban to cytochalasin D)</p>
-  <p class="ko">이중 혈소판 억제 FIBTEM 검사 (cytochalasin D에 tirofiban 추가)</p>
-</div>
-    <div class="pico">
-  <b>C</b>
-  <p>FIBTEM assay with single-platelet inhibition (cytochalasin D alone)</p>
-  <p class="ko">단일 혈소판 억제 FIBTEM 검사 (cytochalasin D 단독)</p>
-</div>
-    <div class="pico">
-  <b>O</b>
-  <p>Correlation (R2) between FIBTEM-A5 and Clauss fibrinogen, and diagnostic accuracy (sensitivity, specificity) for detecting Clauss fibrinogen &lt; 2.0 g/L at FIBTEM-A5 thresholds of &lt;= 10 mm and &lt;= 8 mm</p>
-  <p class="ko">FIBTEM-A5와 Clauss 피브리노겐 수치 간의 상관관계(R2), 그리고 FIBTEM-A5 &lt;= 10 mm 및 &lt;= 8 mm 역치에서 피브리노겐 &lt; 2.0 g/L를 진단하는 정확도(민감도, 특이도)</p>
-</div>
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
   </div>
-</div>
-    <div class="section">
-  <h3>Key Findings</h3>
-  <ul>
-    <li>The correlation with Clauss fibrinogen was similar between single (R2 0.61; 95% CI: 0.51-0.70) and dual-platelet inhibition assays (R2 0.70; 95% CI: 0.62-0.77; p = 0.94).<p class="ko">Clauss 피브리노겐 수치와의 상관관계는 단일 억제(R2 0.61)와 이중 억제(R2 0.70) 검사 간에 유의미한 차이가 없었습니다 (p = 0.94).</p></li>
-<li>Predicted FIBTEM-A5 amplitudes at 2.0 g/L of fibrinogen were 7.83 mm (95% CI: 7.42-8.23) for single and 7.54 mm (95% CI: 7.22-7.87) for dual assays.<p class="ko">피브리노겐 2.0 g/L 기준 예측된 FIBTEM-A5 값은 단일 억제 7.83 mm, 이중 억제 7.54 mm로 차이가 크지 않았습니다.</p></li>
-<li>For the dual-platelet inhibition assay, sensitivity and specificity for detecting fibrinogen &lt; 2.0 g/L were 97.8% and 48.1% at &lt;= 10 mm, and 92.1% and 74.7% at &lt;= 8 mm.<p class="ko">이중 억제 검사에서 피브리노겐 &lt; 2.0 g/L 진단을 위한 FIBTEM-A5 &lt;= 10 mm 역치는 민감도 97.8%/특이도 48.1%를, &lt;= 8 mm 역치는 민감도 92.1%/특이도 74.7%를 나타냈습니다.</p></li>
-  </ul>
-</div>
-    <div class="bottom-line section">
-      <h3>Clinical Bottom Line</h3>
-      <p>The transition from single to dual-platelet inhibition in the ROTEM FIBTEM assay does not require recalibration of established clinical transfusion thresholds. Clinicians can continue to use FIBTEM-A5 &lt;= 10 mm for high sensitivity to avoid missing hypofibrinogenemia, or &lt;= 8 mm for greater specificity to guide fibrinogen replacement in bleeding trauma patients.</p>
-      <p class="ko">ROTEM FIBTEM 검사의 혈소판 억제 방식 변경(tirofiban 추가) 후에도 기존에 사용되던 임상적 수혈 역치 기준을 재조정할 필요가 없습니다. 외상성 출혈 환자의 피브리노겐 보충 시, 저피브리노겐혈증을 놓치지 않기 위한 선별 목적으로는 FIBTEM-A5 &lt;= 10 mm(고민감도)를, 보다 확정적인 치료 결정 목적으로는 &lt;= 8 mm(고특이도)를 기존과 동일하게 적용할 수 있습니다.</p>
+  <div class="section-body">
+    <p class="en">What does this randomized controlled trial suggest for emergency medicine or critical care practice?</p>
+    <p class="ko">이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">legacy format</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Manual review needed. Population details were not reliably extracted.</p>
+      <p class="ko">수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.</p>
     </div>
-    <div class="section">
-  <h3>Limitations</h3>
-  <p>This is a retrospective cohort study conducted in a single Australian state (Queensland) and did not analyze direct patient outcomes such as mortality or actual blood product use.</p>
-  <p class="ko">호주 퀸즐랜드 지역 단일 코호트를 대상으로 한 후향적 연구이며, 실제 수혈량이나 사망률 등 환자의 임상적 예후 결과를 직접 분석하지는 않았습니다.</p>
-</div>
-    <div class="section">
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Manual review needed. Intervention or exposure details were not reliably extracted.</p>
+      <p class="ko">수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparison</div>
+      <p class="en">Manual review needed. Comparator details were not reliably extracted or not reported.</p>
+      <p class="ko">수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcome</div>
+      <p class="en">Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.</p>
+      <p class="ko">Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Fallback summary generated because: LLM provider not configured</p>
+    <p class="ko">다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+    <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
       <h3>Links</h3>
-      <p><a href="https://pubmed.ncbi.nlm.nih.gov/42313188/" target="_blank" rel="noopener">PubMed 42313188</a> · <a href="https://doi.org/10.1007/s00068-026-03250-0" target="_blank" rel="noopener">DOI</a></p>
+      <span class="section-sub">source</span>
     </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/99999003/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1000/example.3" target="_blank" rel="noopener">DOI</a></div>
+  </section>
   </div>
 </details>
-    </section>
-    <section class="days">
-  <details class="day">
-    <summary class="day-summary">
-      <span class="day-date">2026-06-21</span>
-      <span class="muted">3 papers</span>
-      <span class="muted" style="margin-left:auto">2026. 6. 21. PM 7:48</span>
-    </summary>
-    <div class="day-list">
-      <div>1. Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis · PMID 99999002</div>
-<div>2. Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial · PMID 99999001</div>
-<div>3. Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial · PMID 99999003</div>
-    </div>
-  </details>
-</section>
-    <section class="journal">
-  <div class="journal-head">
-    <span>Recent Journal Archive</span>
-    <span class="muted">6 entries</span>
   </div>
-  <div class="journal-table">
-    <table>
-      <thead><tr><th>Date</th><th>Journal</th><th>Published</th><th>Article</th></tr></thead>
-      <tbody>
-        <tr>
-            <td>2026-06-22</td>
-            <td><strong>Archives of orthopaedic and trauma surgery</strong></td>
-            <td>2026-Jun-18</td>
-            <td><a href="https://pubmed.ncbi.nlm.nih.gov/42315642/" target="_blank" rel="noopener">Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.</a></td>
-          </tr>
-<tr>
-            <td>2026-06-22</td>
-            <td><strong>Journal of medical systems</strong></td>
-            <td>2026-Jun-19</td>
-            <td><a href="https://pubmed.ncbi.nlm.nih.gov/42319567/" target="_blank" rel="noopener">Effect of a Mobile App on Medication Errors During Simulated Pediatric Cardiopulmonary Resuscitation: PEDIDOSIS App vs. Conventional Methods. A Multicenter Simulation-based Randomized Controlled Trial.</a></td>
-          </tr>
-<tr>
-            <td>2026-06-22</td>
-            <td><strong>European journal of trauma and emergency surgery : official publication of the European Trauma Society</strong></td>
-            <td>2026-Jun-18</td>
-            <td><a href="https://pubmed.ncbi.nlm.nih.gov/42313188/" target="_blank" rel="noopener">From single to dual platelet inhibition FIBTEM assay: fibrinogen replacement thresholds for critical bleeding after trauma.</a></td>
-          </tr>
-<tr>
-            <td>2026-06-21</td>
-            <td><strong>Annals of Emergency Medicine</strong></td>
-            <td>2026-06-12</td>
-            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999002/" target="_blank" rel="noopener">Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis</a></td>
-          </tr>
-<tr>
-            <td>2026-06-21</td>
-            <td><strong>Critical Care Medicine</strong></td>
-            <td>2026-06-14</td>
-            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999001/" target="_blank" rel="noopener">Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial</a></td>
-          </tr>
-<tr>
-            <td>2026-06-21</td>
-            <td><strong>JAMA</strong></td>
-            <td>2026-06-10</td>
-            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999003/" target="_blank" rel="noopener">Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial</a></td>
-          </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+</details>
   </main>
   <footer>
-    Trend Review v2 · PubMed pipeline · schema-validated summaries
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
   </footer>
 </body>
 </html>

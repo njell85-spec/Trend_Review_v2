@@ -1,12 +1,12 @@
 search:
-  days: 30
-  maxPapers: 50
+  days: 180
+  maxPapers: 300
   candidateLimit: 30
-  topN: 3
+  topN: 1
   # Operational presets:
-  # - Daily Top 3: days 30, topN 3, candidateLimit 30
-  # - Higher-quality digest: days 30, topN 1, candidateLimit 30
-  # - Backfill / catch-up: days 180-365, topN 3, candidateLimit 30
+  # - Daily digest: days 180, maxPapers 300, candidateLimit 30, topN 1
+  # - Higher-volume daily digest: days 180, maxPapers 300, candidateLimit 30, topN 2-3
+  # - Backfill / catch-up: days 365, maxPapers 500, candidateLimit 30, topN 3-5
   # Only selected topN PMIDs are written to data/seen_pmids.json.
   pubmed:
     query: >
@@ -69,5 +69,6 @@ screening:
 
 analysis:
   maxAbstractChars: 4500
+  maxFullTextChars: 16000
   retryInvalidSchema: true
   fallbackLanguage: ko

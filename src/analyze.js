@@ -1,4 +1,5 @@
 import { AnalysisJsonSchema, AnalysisSchema, RankingJsonSchema, RankingSchema } from './schema.js';
+import { enrichPaperContext } from './enrich.js';
 import { fetchWithRetry } from './utils/http.js';
 
 export async function analyzeTopPapers({ candidates, config, options }) {
@@ -88,25 +89,27 @@ export async function analyzeSinglePaper({ paper, config, options }) {
     return { analysis: fallbackAnalysis(paper, provider === 'none' ? 'LLM provider not configured' : 'dry-run fallback') };
   }
 
+  const enrichedPaper = await enrichPaperContext({ paper, config, options });
   const maxChars = Number(config.topics.analysis?.maxAbstractChars ?? 4500);
-  const prompt = buildPrompt(paper, maxChars);
+  const maxFullTextChars = Number(config.topics.analysis?.maxFullTextChars ?? 16000);
+  const prompt = buildPrompt(enrichedPaper, maxChars, maxFullTextChars);
 
   try {
-    const raw = await callProvider({ provider, prompt, paper });
-    const analysis = validateAnalysis(raw, paper);
+    const raw = await callProvider({ provider, prompt, paper: enrichedPaper });
+    const analysis = validateAnalysis(raw, enrichedPaper);
     return { analysis };
   } catch (firstError) {
     if (!config.topics.analysis?.retryInvalidSchema) {
-      return fallbackWithError(paper, firstError);
+      return fallbackWithError(enrichedPaper, firstError);
     }
 
     try {
       const repairPrompt = `${prompt}\n\nYour previous response failed schema validation. Return only a valid JSON object that exactly matches the requested schema. Do not include markdown.`;
-      const repaired = await callProvider({ provider, prompt: repairPrompt, paper });
-      const analysis = validateAnalysis(repaired, paper);
+      const repaired = await callProvider({ provider, prompt: repairPrompt, paper: enrichedPaper });
+      const analysis = validateAnalysis(repaired, enrichedPaper);
       return { analysis };
     } catch (secondError) {
-      return fallbackWithError(paper, secondError);
+      return fallbackWithError(enrichedPaper, secondError);
     }
   }
 }
@@ -275,8 +278,12 @@ function validateAnalysis(raw, paper) {
   };
 }
 
-function buildPrompt(paper, maxChars) {
+function buildPrompt(paper, maxChars, maxFullTextChars) {
   const abstract = String(paper.abstract ?? '').slice(0, maxChars);
+  const fullText = String(paper.fullText ?? '').slice(0, maxFullTextChars);
+  const contextSource = paper.contextSource?.type === 'pmc'
+    ? `Open full text from PMC (${paper.contextSource.pmcid})`
+    : `Abstract only (${paper.contextSource?.reason ?? 'no open full text attached'})`;
   const score = paper.screeningData?.score ?? 0;
   const studyType = paper.screeningData?.studyType ?? 'Other';
 
@@ -286,25 +293,34 @@ Return a single JSON object matching the provided schema.
 
 Rules:
 - Do not invent statistics. Use only values explicitly stated in the title or abstract.
-- If country, baseline balance, subgroup data, or exact values are not stated, say they are not reported.
-- Keep English PICO close to the source wording.
-- Provide Korean translations for all *_ko fields.
-- Keep Korean concise and practical for a clinician reading on mobile.
-- oneLineSummary_ko must be one short Korean sentence.
+- If open full text is provided, use it to deepen PICO, outcomes, limitations, and applicability.
+- If country, setting, baseline balance, subgroup data, exact values, or follow-up are not stated, say they are not reported.
+- Preserve important English study terms, drug names, endpoints, effect estimates, and statistical notation.
+- For every English field, provide the Korean paired field when the schema asks for *_ko.
+- detailedPico should be rich enough that a clinician can understand what was actually done without opening the paper.
+- Put primary and secondary outcomes inside detailedPico.outcomes.
+- Each outcome interpretation should be concise, intuitive, and avoid the phrase "easy interpretation".
+- Explain p value, OR/RR/HR, CI, risk difference, mean difference, and NNT only when those statistics appear.
+- Use p<0.05 as a common convention, but separate statistical significance from clinical importance.
+- oneLineSummary and oneLineSummary_ko must each be one short sentence.
 - clinicalApplicabilityScore should reflect direct usefulness for EM/CCM practice.
 
 Paper:
 PMID: ${paper.pmid}
 Title: ${paper.title}
 Journal: ${paper.journal} (${paper.pubDate})
+Authors: ${(paper.authors ?? []).join(', ') || 'Not reported'}
 Study type signal: ${studyType}
 Deterministic screening score: ${score}
+Analysis source: ${contextSource}
 Publication types: ${(paper.publicationTypes ?? []).join(', ') || 'Not reported'}
 MeSH terms: ${(paper.meshTerms ?? []).join(', ') || 'Not reported'}
 Keywords: ${(paper.keywords ?? []).join(', ') || 'Not reported'}
 
 Abstract:
-${abstract}`;
+${abstract}
+
+${fullText ? `Open full text excerpt:\n${fullText}` : ''}`;
 }
 
 function buildRankingPrompt(candidates, topN) {
@@ -360,9 +376,12 @@ export function fallbackAnalysis(paper, reason = 'manual fallback') {
   return {
     pmid: String(paper.pmid),
     title: paper.title,
-    oneLineSummary_ko: `자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: ${sentence}`,
+    oneLineSummary: `Automated detailed analysis was not available; manual review is needed. ${sentence}`,
+    oneLineSummary_ko: `자동 상세 분석을 사용할 수 없어 원문 또는 초록 확인이 필요합니다. ${sentence}`,
+    whyItMatters: 'This paper matched the EM/CCM screening rules, but the automated analysis failed and should be reviewed manually before use.',
+    whyItMatters_ko: '이 논문은 EM/CCM 스크리닝 기준에는 포함되었지만 자동 분석이 실패했으므로 실제 활용 전 수동 확인이 필요합니다.',
     clinicalQuestion: `What does this ${studyType.toLowerCase()} suggest for emergency medicine or critical care practice?`,
-    clinicalQuestion_ko: `이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.`,
+    clinicalQuestion_ko: '이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.',
     pico: {
       population: 'Manual review needed. Population details were not reliably extracted.',
       intervention: 'Manual review needed. Intervention or exposure details were not reliably extracted.',
@@ -375,12 +394,38 @@ export function fallbackAnalysis(paper, reason = 'manual fallback') {
       comparison: '수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.',
       outcome: sentence,
     },
+    detailedPico: {
+      population: 'Manual review needed. Population details were not reliably extracted.',
+      population_ko: '수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.',
+      countrySetting: 'Not reliably extracted.',
+      countrySetting_ko: '국가와 연구 세팅을 안정적으로 추출하지 못했습니다.',
+      intervention: 'Manual review needed.',
+      intervention_ko: '수동 검토가 필요합니다.',
+      comparator: 'Manual review needed or not reported.',
+      comparator_ko: '수동 검토가 필요하거나 보고되지 않았습니다.',
+      outcomes: [
+        {
+          label: 'Outcome',
+          outcome: 'Manual review needed.',
+          outcome_ko: '수동 검토 필요.',
+          result: sentence,
+          result_ko: sentence,
+          statistics: 'Not reliably extracted.',
+          interpretation: 'Statistical interpretation was not available because structured analysis failed.',
+          interpretation_ko: '구조화 분석 실패로 통계 해석을 제공하지 못했습니다.',
+        },
+      ],
+    },
     keyFindings: [sentence],
     keyFindings_ko: [sentence],
+    conclusion: 'Automated conclusion was not available.',
+    conclusion_ko: '자동 결론을 생성하지 못했습니다.',
     clinicalTakeaway: 'Automated analysis was not available. Review the abstract and original paper before changing practice.',
     clinicalTakeaway_ko: '자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.',
     limitations: `Fallback summary generated because: ${reason}`,
     limitations_ko: `다음 이유로 fallback 요약을 생성했습니다: ${reason}`,
+    edIcuApplicability: 'Manual review needed before applying this paper to ED or ICU practice.',
+    edIcuApplicability_ko: 'ED/ICU 진료에 적용하기 전 수동 검토가 필요합니다.',
     evidenceLevel: fallbackEvidenceLevel(studyType),
     clinicalApplicabilityScore: score,
     manualReviewNeeded: true,

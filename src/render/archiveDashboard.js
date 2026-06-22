@@ -2,9 +2,6 @@ export function renderArchiveDashboard(reports) {
   const safeReports = reports.length ? reports : [emptyReport()];
   const latest = safeReports[0];
   const totals = getTotals(safeReports);
-  const journalRows = safeReports
-    .flatMap((report) => (report.topPapers ?? []).map((result) => ({ report, result })))
-    .slice(0, 18);
 
   return `<!doctype html>
 <html lang="ko">
@@ -14,20 +11,22 @@ export function renderArchiveDashboard(reports) {
   <title>Trend Review</title>
   <style>
     :root {
-      --ink: #18212f;
-      --muted: #697386;
-      --line: #dfe5ee;
-      --page: #f6f8fb;
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
       --paper: #ffffff;
       --teal: #0f766e;
-      --blue: #244c9a;
-      --plum: #6f3f85;
-      --coral: #b65346;
-      --gold: #90661c;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
       --soft-teal: #e7f4f1;
-      --soft-blue: #ebf1ff;
-      --soft-coral: #fff0ed;
-      --shadow: 0 12px 32px rgba(24, 33, 47, .08);
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
     }
     * { box-sizing: border-box; }
     body {
@@ -35,7 +34,7 @@ export function renderArchiveDashboard(reports) {
       background: var(--page);
       color: var(--ink);
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.52;
+      line-height: 1.55;
     }
     a {
       color: var(--blue);
@@ -43,46 +42,44 @@ export function renderArchiveDashboard(reports) {
       text-underline-offset: 3px;
     }
     .wrap {
-      width: min(100% - 28px, 1040px);
+      width: min(100% - 28px, 980px);
       margin: 0 auto;
     }
     .mast {
-      background:
-        linear-gradient(90deg, rgba(15,118,110,.16), transparent 36%),
-        linear-gradient(180deg, #fff, #f9fbfd);
+      background: linear-gradient(180deg, #fff, #f9fbfd);
       border-bottom: 1px solid var(--line);
     }
     .mast-inner {
       padding: 22px 0 18px;
       display: grid;
-      gap: 18px;
+      gap: 16px;
     }
     .topline {
       display: flex;
-      align-items: flex-start;
       justify-content: space-between;
-      gap: 18px;
+      align-items: flex-start;
+      gap: 16px;
     }
     h1 {
       margin: 0;
-      font-size: clamp(1.7rem, 5vw, 2.55rem);
-      line-height: 1.05;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
       letter-spacing: 0;
     }
     .subtitle {
       margin: 8px 0 0;
       color: var(--muted);
-      font-size: .95rem;
-      max-width: 56rem;
+      font-size: .94rem;
+      max-width: 58rem;
     }
     .run-state {
-      display: inline-grid;
-      gap: 3px;
+      display: grid;
       justify-items: end;
-      white-space: nowrap;
+      gap: 3px;
       color: var(--muted);
-      font-size: .8rem;
-      padding-top: 3px;
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
     }
     .run-state strong {
       color: var(--teal);
@@ -95,110 +92,35 @@ export function renderArchiveDashboard(reports) {
       gap: 9px;
     }
     .stat {
-      background: var(--paper);
+      min-width: 0;
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 12px;
-      min-width: 0;
+      padding: 11px 12px;
     }
     .stat b {
       display: block;
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       line-height: 1.1;
     }
     .stat span {
-      color: var(--muted);
       display: block;
       margin-top: 4px;
-      font-size: .75rem;
+      color: var(--muted);
+      font-size: .74rem;
     }
     main {
-      padding: 18px 0 34px;
-      display: grid;
-      gap: 14px;
-    }
-    .today {
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-    .today-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 12px;
-      padding: 15px;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(90deg, #ffffff, #f8fafc);
-    }
-    .today-title {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      min-width: 0;
-    }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 26px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: var(--soft-teal);
-      color: var(--teal);
-      font-size: .75rem;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-    .today-date {
-      font-size: 1.05rem;
-      font-weight: 850;
-    }
-    .today-meta {
-      color: var(--muted);
-      font-size: .86rem;
-      align-self: center;
-      white-space: nowrap;
-    }
-    .quick-list {
-      display: grid;
-      gap: 9px;
-      padding: 14px 15px 16px;
-    }
-    .quick-item {
-      display: grid;
-      grid-template-columns: 26px minmax(0, 1fr);
-      gap: 8px;
-      align-items: start;
-    }
-    .quick-index {
-      color: var(--teal);
-      font-weight: 850;
-      line-height: 1.45;
-    }
-    .quick-title {
-      font-weight: 780;
-      font-size: .95rem;
-    }
-    .quick-meta {
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: .78rem;
-    }
-    .paper-stack {
+      padding: 16px 0 36px;
       display: grid;
       gap: 12px;
     }
-    details.paper {
+    details {
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
-    details.paper[open] {
-      border-color: rgba(15, 118, 110, .45);
+    details[open] {
       box-shadow: var(--shadow);
     }
     summary {
@@ -206,169 +128,227 @@ export function renderArchiveDashboard(reports) {
       cursor: pointer;
     }
     summary::-webkit-details-marker { display: none; }
-    .paper-summary {
+    .day-summary {
       display: grid;
-      grid-template-columns: 34px minmax(0, 1fr) auto;
-      align-items: center;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 12px;
-      padding: 14px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
     }
-    .rank {
-      width: 31px;
-      height: 31px;
-      border-radius: 8px;
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      color: #fff;
-      background: var(--teal);
-      font-size: .78rem;
-      font-weight: 850;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
     }
-    .rank.two { background: var(--blue); }
-    .rank.three { background: var(--plum); }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
     .paper-title {
       margin: 0;
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
       line-height: 1.32;
-      letter-spacing: 0;
       font-weight: 850;
+      letter-spacing: 0;
     }
     .paper-meta {
       margin-top: 5px;
       color: var(--muted);
-      font-size: .82rem;
-    }
-    .tag {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 999px;
-      padding: 4px 9px;
-      font-size: .76rem;
-      color: var(--ink);
-      white-space: nowrap;
+      font-size: .8rem;
     }
     .paper-body {
       border-top: 1px solid var(--line);
-      background: #fbfcfe;
-      padding: 15px;
+      padding: 13px;
       display: grid;
-      gap: 14px;
-    }
-    .callout {
-      padding: 12px;
-      border-radius: 8px;
-      background: var(--soft-blue);
-      border: 1px solid #d8e3ff;
-    }
-    .callout strong,
-    .section h3 {
-      display: block;
-      margin: 0 0 6px;
-      color: var(--blue);
-      font-size: .84rem;
-      font-weight: 850;
+      gap: 12px;
+      background: #fbfcfe;
     }
     .section {
-      display: grid;
-      gap: 7px;
-    }
-    .section p { margin: 0; }
-    .ko {
-      color: #536073;
-      font-size: .9rem;
-    }
-    .pico-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 8px;
-    }
-    .pico {
-      border: 1px solid #e2e8f0;
       background: #fff;
-      border-radius: 8px;
-      padding: 10px;
-      min-width: 0;
-    }
-    .pico b {
-      display: block;
-      color: var(--teal);
-      font-size: .78rem;
-      margin-bottom: 5px;
-    }
-    .bottom-line {
-      background: var(--soft-coral);
-      border: 1px solid #ffd8d0;
-      border-radius: 8px;
-      padding: 12px;
-    }
-    .bottom-line h3 { color: var(--coral); }
-    ul {
-      margin: 0;
-      padding-left: 1.1rem;
-    }
-    li + li { margin-top: 5px; }
-    .days {
-      display: grid;
-      gap: 10px;
-    }
-    details.day {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--paper);
-      overflow: hidden;
-    }
-    .day-summary {
-      padding: 12px 14px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .day-date {
-      font-weight: 850;
-    }
-    .day-list {
-      padding: 0 14px 13px;
-      color: var(--muted);
-      font-size: .84rem;
-      display: grid;
-      gap: 5px;
-    }
-    .journal {
-      background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
-    .journal-head {
-      padding: 12px 14px;
+    .section-head {
+      padding: 10px 11px;
       border-bottom: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
-      gap: 12px;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
       font-weight: 850;
     }
-    .journal-table {
-      overflow-x: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 680px;
-      font-size: .8rem;
-    }
-    th, td {
-      text-align: left;
-      vertical-align: top;
+    .pico-content {
       padding: 9px 10px;
-      border-bottom: 1px solid #eef2f7;
+      display: grid;
+      gap: 5px;
     }
-    th {
+    .pico-name {
       color: var(--muted);
-      font-size: .68rem;
+      font-size: .72rem;
+      font-weight: 790;
       text-transform: uppercase;
-      letter-spacing: 0;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
     }
     footer {
       border-top: 1px solid var(--line);
@@ -377,21 +357,23 @@ export function renderArchiveDashboard(reports) {
       text-align: center;
       font-size: .78rem;
     }
-    @media (max-width: 760px) {
-      .wrap { width: min(100% - 24px, 1040px); }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
       .topline,
-      .today-head { grid-template-columns: 1fr; }
-      .run-state { justify-items: start; white-space: normal; }
-      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .today-meta { white-space: normal; }
+      .day-summary,
       .paper-summary {
-        grid-template-columns: 34px minmax(0, 1fr);
+        grid-template-columns: 1fr;
       }
-      .paper-summary .tag {
-        grid-column: 2;
-        justify-self: start;
+      .run-state {
+        justify-items: start;
+        white-space: normal;
       }
-      .pico-grid { grid-template-columns: 1fr; }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
     }
   </style>
 </head>
@@ -401,7 +383,7 @@ export function renderArchiveDashboard(reports) {
       <div class="topline">
         <div>
           <h1>EM/CCM Trend Review</h1>
-          <p class="subtitle">Emergency Medicine & Critical Care Medicine literature briefing</p>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
         </div>
         <div class="run-state">
           <strong>${escapeHtml(latest.status?.status ?? 'ready')}</strong>
@@ -409,172 +391,211 @@ export function renderArchiveDashboard(reports) {
         </div>
       </div>
       <div class="stats">
-        ${stat('Days', totals.days)}
-        ${stat('Fetched', latest.counts?.fetched ?? 0)}
-        ${stat('Screened', latest.counts?.screened ?? 0)}
-        ${stat('Top Papers', latest.topPapers?.length ?? 0)}
+        ${stat('Archive Days', totals.days)}
+        ${stat('Latest Fetched', latest.counts?.fetched ?? 0)}
+        ${stat('Latest Screened', latest.counts?.screened ?? 0)}
+        ${stat('Latest Reports', latest.topPapers?.length ?? 0)}
       </div>
     </div>
   </header>
   <main class="wrap">
-    ${renderToday(latest)}
-    <section class="paper-stack">
-      ${(latest.topPapers ?? []).map((result, index) => renderPaper(result, index)).join('\n')}
-    </section>
-    ${safeReports.length > 1 ? renderDays(safeReports.slice(1)) : ''}
-    ${journalRows.length ? renderJournalArchive(journalRows) : ''}
+    ${safeReports.map((report, index) => renderDay(report, index === 0)).join('\n')}
   </main>
   <footer>
-    Trend Review v2 · PubMed pipeline · schema-validated summaries
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
   </footer>
 </body>
 </html>`;
 }
 
-function renderToday(report) {
+function renderDay(report, isLatest) {
   const papers = report.topPapers ?? [];
-  return `<section class="today">
-  <div class="today-head">
-    <div class="today-title">
-      <span class="pill">Latest</span>
-      <span class="today-date">${escapeHtml(report.runId)}</span>
-      <span class="muted">${escapeHtml(String(papers.length))} papers</span>
-    </div>
-    <div class="today-meta">${escapeHtml(report.searchWindow?.days ?? '')}-day window · ${escapeHtml(formatKst(report.generatedAt))}</div>
-  </div>
-  <div class="quick-list">
-    ${papers.slice(0, 3).map((result, index) => renderQuickItem(result, index)).join('\n')}
-  </div>
-</section>`;
-}
+  const selection = report.status?.counts?.fallback ? `${report.status.counts.fallback} fallback` : 'LLM analysis';
+  const latestBadge = isLatest ? '\n      <span class="pill teal">Latest</span>' : '';
 
-function renderQuickItem(result, index) {
-  const paper = result.paper ?? {};
-  return `<div class="quick-item">
-  <div class="quick-index">${index + 1}</div>
-  <div>
-    <div class="quick-title">${escapeHtml(result.title)}</div>
-    <div class="quick-meta">${escapeHtml(paper.journal ?? '')} · ${escapeHtml(paper.pubDate ?? '')} · PMID ${escapeHtml(result.pmid)}</div>
+  return `<details class="day"${isLatest ? ' open' : ''}>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">${escapeHtml(report.runId)}</span>${latestBadge}
+      <span class="pill blue">${escapeHtml(String(papers.length))} report</span>
+      <span class="pill">${escapeHtml(report.searchWindow?.days ?? '')}-day window</span>
+      <span class="pill amber">${escapeHtml(selection)}</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    ${papers.length ? papers.map((result, index) => renderPaper(result, index)).join('\n') : renderEmptyPaper()}
   </div>
-</div>`;
+</details>`;
 }
 
 function renderPaper(result, index) {
   const paper = result.paper ?? {};
   const studyType = shortStudyType(paper.screeningData?.studyType ?? '', result.evidenceLevel);
-  const rankClass = index === 1 ? ' two' : index === 2 ? ' three' : '';
-  return `<details class="paper"${index === 0 ? ' open' : ''}>
+  const context = contextLabel(paper.contextSource);
+
+  return `<details class="paper">
   <summary class="paper-summary">
-    <span class="rank${rankClass}">${String(index + 1).padStart(2, '0')}</span>
     <div>
       <h2 class="paper-title">${escapeHtml(result.title)}</h2>
-      <div class="paper-meta">${escapeHtml(paper.journal ?? '')} · ${escapeHtml(paper.pubDate ?? '')}</div>
+      <div class="paper-meta">
+        ${escapeHtml(paper.journal ?? '')} · ${escapeHtml(paper.pubDate ?? '')} · PMID ${escapeHtml(result.pmid)}
+      </div>
     </div>
-    <span class="tag">${escapeHtml(studyType)}</span>
+    <div class="day-title">
+      <span class="pill teal">#${index + 1}</span>
+      <span class="pill blue">${escapeHtml(studyType)}</span>
+      <span class="pill">${escapeHtml(context)}</span>
+      <span class="chevron">›</span>
+    </div>
   </summary>
   <div class="paper-body">
-    <div class="callout">
-      <strong>Why It Matters</strong>
-      <p>${escapeHtml(result.clinicalQuestion || result.oneLineSummary_ko || '-')}</p>
-      ${result.clinicalQuestion_ko ? `<p class="ko">${escapeHtml(result.clinicalQuestion_ko)}</p>` : ''}
-    </div>
-    ${renderPico(result)}
+    ${renderTextSection('Why It Matters', 'clinical relevance', result.whyItMatters || result.clinicalQuestion || result.oneLineSummary, result.whyItMatters_ko || result.clinicalQuestion_ko || result.oneLineSummary_ko, 'why')}
+    ${renderDetailedPico(result)}
     ${renderFindings(result)}
-    <div class="bottom-line section">
-      <h3>Clinical Bottom Line</h3>
-      <p>${escapeHtml(result.clinicalTakeaway || '-')}</p>
-      ${result.clinicalTakeaway_ko ? `<p class="ko">${escapeHtml(result.clinicalTakeaway_ko)}</p>` : ''}
-    </div>
-    ${renderSection('Limitations', result.limitations, result.limitations_ko)}
-    <div class="section">
-      <h3>Links</h3>
-      <p><a href="${escapeAttribute(paper.pubmedUrl ?? '#')}" target="_blank" rel="noopener">PubMed ${escapeHtml(result.pmid)}</a>${paper.doi ? ` · <a href="https://doi.org/${escapeAttribute(paper.doi)}" target="_blank" rel="noopener">DOI</a>` : ''}</p>
-    </div>
+    ${renderTextSection('Conclusion', 'author-level conclusion', result.conclusion || result.clinicalTakeaway, result.conclusion_ko || result.clinicalTakeaway_ko)}
+    ${renderTextSection('Limitations', 'what weakens confidence', result.limitations, result.limitations_ko)}
+    ${renderTextSection('ED / ICU Applicability', 'practice consideration', result.edIcuApplicability || result.clinicalTakeaway, result.edIcuApplicability_ko || result.clinicalTakeaway_ko)}
+    ${renderTextSection('Bottom Line', 'mobile summary', result.clinicalTakeaway || result.oneLineSummary, result.clinicalTakeaway_ko || result.oneLineSummary_ko, 'bottom')}
+    ${renderLinks(result)}
   </div>
 </details>`;
 }
 
-function renderPico(result) {
-  const pico = result.pico ?? {};
-  const picoKo = result.pico_ko ?? {};
-  return `<div class="section">
-  <h3>PICO</h3>
-  <div class="pico-grid">
-    ${picoBox('P', pico.population, picoKo.population)}
-    ${picoBox('I', pico.intervention, picoKo.intervention)}
-    ${picoBox('C', pico.comparison, picoKo.comparison)}
-    ${picoBox('O', pico.outcome, picoKo.outcome)}
+function renderDetailedPico(result) {
+  const detailed = result.detailedPico;
+  if (!detailed) return renderLegacyPico(result);
+
+  return `<section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
   </div>
-</div>`;
+  <div class="section-body pico-grid">
+    ${picoRow('P', 'Population', detailed.population, detailed.population_ko, detailed.countrySetting, detailed.countrySetting_ko)}
+    ${picoRow('I', 'Intervention', detailed.intervention, detailed.intervention_ko)}
+    ${picoRow('C', 'Comparator', detailed.comparator, detailed.comparator_ko)}
+    ${outcomeRows(detailed.outcomes ?? [])}
+  </div>
+</section>`;
 }
 
-function picoBox(label, english, korean) {
-  return `<div class="pico">
-  <b>${escapeHtml(label)}</b>
-  <p>${escapeHtml(english || '-')}</p>
-  ${korean ? `<p class="ko">${escapeHtml(korean)}</p>` : ''}
-</div>`;
+function renderLegacyPico(result) {
+  const pico = result.pico ?? {};
+  const picoKo = result.pico_ko ?? {};
+
+  return `<section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">legacy format</span>
+  </div>
+  <div class="section-body pico-grid">
+    ${picoRow('P', 'Population', pico.population, picoKo.population)}
+    ${picoRow('I', 'Intervention', pico.intervention, picoKo.intervention)}
+    ${picoRow('C', 'Comparison', pico.comparison, picoKo.comparison)}
+    ${picoRow('O', 'Outcome', pico.outcome, picoKo.outcome)}
+  </div>
+</section>`;
+}
+
+function picoRow(label, name, english, korean, secondaryEnglish = '', secondaryKorean = '') {
+  const optionalLines = [
+    korean ? `<p class="ko">${escapeHtml(korean)}</p>` : null,
+    secondaryEnglish ? `<p class="en"><strong>Setting:</strong> ${escapeHtml(secondaryEnglish)}</p>` : null,
+    secondaryKorean ? `<p class="ko">${escapeHtml(secondaryKorean)}</p>` : null,
+  ].filter(Boolean);
+
+  return `<div class="pico-row">
+    <div class="pico-label">${escapeHtml(label)}</div>
+    <div class="pico-content">
+      <div class="pico-name">${escapeHtml(name)}</div>
+      <p class="en">${escapeHtml(english || '-')}</p>${optionalLines.length ? `\n      ${optionalLines.join('\n      ')}` : ''}
+    </div>
+  </div>`;
+}
+
+function outcomeRows(outcomes) {
+  return `<div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        ${outcomes.map(renderOutcome).join('\n')}
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderOutcome(outcome) {
+  const resultKo = outcome.result_ko ? `\n    <p class="ko">${escapeHtml(outcome.result_ko)}</p>` : '';
+  const interpretationKo = outcome.interpretation_ko ? `<br>${escapeHtml(outcome.interpretation_ko)}` : '';
+
+  return `<div class="outcome">
+    <div class="outcome-label">${escapeHtml(outcome.label)}</div>
+    <p class="en">${escapeHtml(outcome.outcome)}</p>
+    <p class="ko">${escapeHtml(outcome.outcome_ko)}</p>
+    <p class="stat-line">${escapeHtml(outcome.result)}${outcome.statistics ? ` · ${escapeHtml(outcome.statistics)}` : ''}</p>${resultKo}
+    <div class="interpretation">ⓘ ${escapeHtml(outcome.interpretation)}${interpretationKo}</div>
+  </div>`;
 }
 
 function renderFindings(result) {
   const english = result.keyFindings ?? [];
   const korean = result.keyFindings_ko ?? [];
-  const items = english.length ? english : korean;
-  if (!items.length) return '';
-  return `<div class="section">
-  <h3>Key Findings</h3>
-  <ul>
-    ${items.map((item, index) => `<li>${escapeHtml(item)}${korean[index] && korean[index] !== item ? `<p class="ko">${escapeHtml(korean[index])}</p>` : ''}</li>`).join('\n')}
-  </ul>
-</div>`;
+  if (!english.length && !korean.length) return '';
+
+  return `<section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      ${(english.length ? english : korean).map((item, index) => `<li><p class="en">${escapeHtml(item)}</p>${korean[index] && korean[index] !== item ? `<p class="ko">${escapeHtml(korean[index])}</p>` : ''}</li>`).join('\n')}
+    </ul>
+  </div>
+</section>`;
 }
 
-function renderSection(title, english, korean) {
-  return `<div class="section">
-  <h3>${escapeHtml(title)}</h3>
-  <p>${escapeHtml(english || '-')}</p>
-  ${korean ? `<p class="ko">${escapeHtml(korean)}</p>` : ''}
-</div>`;
+function renderTextSection(title, subtitle, english, korean, className = '') {
+  const koreanLine = korean ? `\n    <p class="ko">${escapeHtml(korean)}</p>` : '';
+
+  return `<section class="section ${className}">
+  <div class="section-head">
+    <h3>${escapeHtml(title)}</h3>
+    <span class="section-sub">${escapeHtml(subtitle)}</span>
+  </div>
+  <div class="section-body">
+    <p class="en">${escapeHtml(english || '-')}</p>${koreanLine}
+  </div>
+</section>`;
 }
 
-function renderDays(reports) {
-  return `<section class="days">
-  ${reports.map((report) => `<details class="day">
-    <summary class="day-summary">
-      <span class="day-date">${escapeHtml(report.runId)}</span>
-      <span class="muted">${escapeHtml(String(report.topPapers?.length ?? 0))} papers</span>
-      <span class="muted" style="margin-left:auto">${escapeHtml(formatKst(report.generatedAt))}</span>
-    </summary>
-    <div class="day-list">
-      ${(report.topPapers ?? []).slice(0, 3).map((result, index) => `<div>${index + 1}. ${escapeHtml(result.title)} · PMID ${escapeHtml(result.pmid)}</div>`).join('\n')}
+function renderLinks(result) {
+  const paper = result.paper ?? {};
+  const links = [];
+  if (paper.pubmedUrl) links.push(`<a href="${escapeAttribute(paper.pubmedUrl)}" target="_blank" rel="noopener">PubMed</a>`);
+  if (paper.doi) links.push(`<a href="https://doi.org/${escapeAttribute(paper.doi)}" target="_blank" rel="noopener">DOI</a>`);
+  if (paper.pmcid) links.push(`<a href="https://pmc.ncbi.nlm.nih.gov/articles/${escapeAttribute(paper.pmcid)}/" target="_blank" rel="noopener">PMC</a>`);
+
+  return `<section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
     </div>
-  </details>`).join('\n')}
-</section>`;
+    <div class="section-body links">${links.join(' · ') || '-'}</div>
+  </section>`;
 }
 
-function renderJournalArchive(rows) {
-  return `<section class="journal">
-  <div class="journal-head">
-    <span>Recent Journal Archive</span>
-    <span class="muted">${escapeHtml(String(rows.length))} entries</span>
-  </div>
-  <div class="journal-table">
-    <table>
-      <thead><tr><th>Date</th><th>Journal</th><th>Published</th><th>Article</th></tr></thead>
-      <tbody>
-        ${rows.map(({ report, result }) => {
-          const paper = result.paper ?? {};
-          return `<tr>
-            <td>${escapeHtml(report.runId)}</td>
-            <td><strong>${escapeHtml(paper.journal ?? '')}</strong></td>
-            <td>${escapeHtml(paper.pubDate ?? '')}</td>
-            <td><a href="${escapeAttribute(paper.pubmedUrl ?? '#')}" target="_blank" rel="noopener">${escapeHtml(result.title)}</a></td>
-          </tr>`;
-        }).join('\n')}
-      </tbody>
-    </table>
-  </div>
-</section>`;
+function renderEmptyPaper() {
+  return `<div class="paper">
+    <div class="paper-summary">
+      <div>
+        <h2 class="paper-title">No selected paper</h2>
+        <div class="paper-meta">No report was generated for this date.</div>
+      </div>
+    </div>
+  </div>`;
 }
 
 function getTotals(reports) {
@@ -601,12 +622,18 @@ function emptyReport() {
 function shortStudyType(studyType = '', evidenceLevel = '') {
   const lower = studyType.toLowerCase();
   if (lower.includes('random')) return 'RCT';
-  if (lower.includes('meta')) return 'Meta';
-  if (lower.includes('systematic')) return 'SR';
-  if (lower.includes('guideline')) return 'Guide';
-  if (lower.includes('clinical trial')) return 'Trial';
-  if (lower.includes('observational')) return evidenceLevel || 'Obs';
+  if (lower.includes('meta')) return 'Meta-analysis';
+  if (lower.includes('systematic')) return 'Systematic review';
+  if (lower.includes('guideline')) return 'Guideline';
+  if (lower.includes('clinical trial')) return 'Clinical trial';
+  if (lower.includes('observational')) return evidenceLevel || 'Observational';
   return evidenceLevel || studyType || 'Review';
+}
+
+function contextLabel(contextSource = {}) {
+  if (contextSource.type === 'pmc') return 'PMC full text';
+  if (contextSource.type === 'abstract') return 'Abstract only';
+  return 'Source context';
 }
 
 function formatKst(value) {
@@ -629,4 +656,3 @@ function escapeHtml(value) {
 function escapeAttribute(value) {
   return escapeHtml(value).replace(/`/g, '&#96;');
 }
-

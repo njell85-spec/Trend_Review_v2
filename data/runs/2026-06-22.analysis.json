@@ -1,332 +1,164 @@
 {
   "analyses": [
     {
-      "pmid": "42315642",
-      "title": "Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.",
-      "oneLineSummary_ko": "고령의 원위 대퇴골 골절 환자에서 조기 수술이 지연 수술에 비해 30일 사망률이나 합병증을 유의하게 낮추지 않는 것으로 나타났다.",
-      "clinicalQuestion": "Does earlier surgery in older adults with distal femur fractures improve postoperative outcomes compared to delayed surgery?",
-      "clinicalQuestion_ko": "고령의 원위 대퇴골 골절 환자에서 조기 수술이 지연 수술에 비해 30일 사망률 및 수술 후 합병증 등의 예후를 개선하는가?",
+      "pmid": "42308484",
+      "title": "Cefazolin for Methicillin-Susceptible Bacteremia.",
+      "oneLineSummary": "In patients with methicillin-susceptible bacteremia, cefazolin was noninferior to antistaphylococcal penicillins for 90-day mortality and significantly reduced the risk of acute kidney injury.",
+      "oneLineSummary_ko": "메티실린 감수성 균혈증 환자에서 세파졸린은 90일 사망률 측면에서 항스타필로코쿠스 페니실린 대비 비열등하였으며 급성 신손상 위험을 유의하게 줄였습니다.",
+      "whyItMatters": "The choice between cefazolin and antistaphylococcal penicillins (flucloxacillin/cloxacillin) for MSSA bacteremia has been highly debated, primarily due to concerns about the high-inoculum effect with cefazolin and the higher risk of acute kidney injury with penicillins. This randomized trial provides high-quality clinical evidence favoring cefazolin as a safer and highly effective first-line therapy.",
+      "whyItMatters_ko": "MSSA 균혈증 치료에 있어 세파졸린과 항스타필로코쿠스 페니실린(플루클록사실린/클록사실린) 간의 선택은 세파졸린의 고균량 효과 우려와 페니실린의 높은 급성 신손상 위험 때문에 오랜 논쟁거리였습니다. 본 무작위 배정 임상시험은 세파졸린이 더 안전하고 매우 효과적인 1차 치료제임을 지지하는 고품질의 임상적 근거를 제공합니다.",
+      "clinicalQuestion": "Is cefazolin noninferior to antistaphylococcal penicillins for 90-day mortality, and does it reduce the incidence of acute kidney injury in adult patients with methicillin-susceptible bacteremia?",
+      "clinicalQuestion_ko": "메티실린 감수성 균혈증 성인 환자에서 세파졸린은 90일 사망률 측면에서 항스타필로코쿠스 페니실린 대비 비열등하며, 급성 신손상 발생을 줄입니까?",
       "pico": {
-        "population": "Older adults with distal femur fractures (16 retrospective cohort studies, n = 31,213)",
-        "intervention": "Early surgery (definitions varied across studies)",
-        "comparison": "Delayed surgery",
-        "outcome": "30-day mortality (primary), longer-term mortality (at 90 days, 180 days, 1 year), and postoperative complications (cardiac, pulmonary, pulmonary embolism)"
+        "population": "Adult patients with penicillin-resistant, methicillin-susceptible bacteremia",
+        "intervention": "Cefazolin",
+        "comparison": "Antistaphylococcal penicillin (flucloxacillin or cloxacillin)",
+        "outcome": "90-day all-cause mortality and 14-day acute kidney injury"
       },
       "pico_ko": {
-        "population": "원위 대퇴골 골절이 있는 고령 환자 (16개 후향적 코호트 연구, 총 31,213명)",
-        "intervention": "조기 수술 (연구마다 정의 상이)",
-        "comparison": "지연 수술",
-        "outcome": "30일 사망률 (일차 결과), 장기 사망률 (90일, 180일, 1년), 수술 후 합병증 (심장, 폐, 폐색전증)"
+        "population": "페니실린 내성, 메티실린 감수성 균혈증이 있는 성인 환자",
+        "intervention": "세파졸린 (Cefazolin)",
+        "comparison": "항스타필로코쿠스 페니실린 (플루클록사실린 또는 클록사실린)",
+        "outcome": "90일 모든 원인으로 인한 사망 및 14일 이내 급성 신손상"
+      },
+      "detailedPico": {
+        "population": "Adult patients with penicillin-resistant, methicillin-susceptible Staphylococcus aureus bacteremia",
+        "population_ko": "페니실린 내성, 메티실린 감수성 황색포도상구균(MSSA) 균혈증 성인 환자",
+        "countrySetting": "International, multicenter Bayesian adaptive platform trial (SNAP trial)",
+        "countrySetting_ko": "다국가, 다기관 베이지안 적응형 플랫폼 임상시험 (SNAP 임상시험)",
+        "intervention": "Intravenous cefazolin",
+        "intervention_ko": "정맥 주사용 세파졸린",
+        "comparator": "Intravenous antistaphylococcal penicillin (flucloxacillin or cloxacillin)",
+        "comparator_ko": "정맥 주사용 항스타필로코쿠스 페니실린 (플루클록사실린 또는 클록사실린)",
+        "outcomes": [
+          {
+            "label": "Primary Outcome",
+            "outcome": "Death from any cause within 90 days after enrollment",
+            "outcome_ko": "등록 후 90일 이내 모든 원인으로 인한 사망",
+            "result": "15.0% (97/645 patients) in the cefazolin group vs 17.0% (109/642 patients) in the antistaphylococcal-penicillin group",
+            "result_ko": "세파졸린 군 15.0% (97/645명) 대 항스타필로코쿠스 페니실린 군 17.0% (109/642명)",
+            "statistics": "Adjusted odds ratio (aOR), 0.81; 95% credible interval (CrI), 0.59 to 1.12; probability of noninferiority, 99.2%; probability of superiority, 89.8%",
+            "interpretation": "Cefazolin met the prespecified criterion for noninferiority to antistaphylococcal penicillins (aOR <1.2, reflecting <2.5% absolute difference). There was also a high probability of superiority.",
+            "interpretation_ko": "세파졸린은 항스타필로코쿠스 페니실린 대비 사전 정의된 비열등성 기준(aOR <1.2, 절대 차이 약 <2.5%포인트에 해당)을 충족하였습니다. 또한 우월성을 보일 확률도 높았습니다."
+          },
+          {
+            "label": "Secondary Safety Outcome",
+            "outcome": "Development of acute kidney injury (AKI) within 14 days",
+            "outcome_ko": "14일 이내 급성 신손상 (AKI) 발생",
+            "result": "13.9% (92/660 patients) in the cefazolin group vs 19.6% (127/648 patients) in the antistaphylococcal-penicillin group",
+            "result_ko": "세파졸린 군 13.9% (92/660명) 대 항스타필로코쿠스 페니실린 군 19.6% (127/648명)",
+            "statistics": "Adjusted odds ratio (aOR), 0.67; 95% credible interval (CrI), 0.50 to 0.89; probability of superiority, 99.7%",
+            "interpretation": "Cefazolin was superior to antistaphylococcal penicillins, significantly reducing the occurrence of acute kidney injury.",
+            "interpretation_ko": "세파졸린은 항스타필로코쿠스 페니실린 대비 우월하여 급성 신손상 발생률을 유의하게 낮췄습니다."
+          }
+        ]
       },
       "keyFindings": [
-        "Early surgery was not associated with reduced 30-day mortality (adjusted OR: 0.77, 95% CI: 0.56-1.05; low-certainty evidence).",
-        "No significant differences were observed for longer-term mortality at 90 days (crude OR: 0.91), 180 days (crude OR: 0.46), or 1 year (crude OR: 0.61).",
-        "Postoperative complications, including cardiac complications (OR: 0.71), pulmonary complications (OR: 1.07), and pulmonary embolism (OR: 1.14), did not significantly differ between groups."
+        "Cefazolin demonstrated noninferiority for 90-day mortality compared to flucloxacillin or cloxacillin (15.0% vs. 17.0%, aOR 0.81, 95% CrI 0.59 to 1.12; posterior probability of noninferiority 99.2%).",
+        "Cefazolin was associated with a clinically significant lower risk of acute kidney injury within 14 days than the penicillins (13.9% vs. 19.6%, aOR 0.67, 95% CrI 0.50 to 0.89; posterior probability of superiority 99.7%)."
       ],
       "keyFindings_ko": [
-        "조기 수술은 30일 사망률의 유의한 감소와 연관되지 않았습니다 (보정 OR: 0.77, 95% CI: 0.56-1.05; 낮은 확실성 근거).",
-        "90일 (조 OR: 0.91), 180일 (조 OR: 0.46), 1년 (조 OR: 0.61) 장기 사망률에서도 두 군 간 유의한 차이가 없었습니다.",
-        "심장 합병증 (OR: 0.71), 폐 합병증 (OR: 1.07), 폐색전증 (OR: 1.14) 등 수술 후 합병증 비율도 유사했습니다."
+        "세파졸린은 플루클록사실린 또는 클록사실린 대비 90일 사망률에서 비열등성을 입증했습니다 (15.0% 대 17.0%, 보정 오즈비 0.81, 95% 신용구간 0.59~1.12, 비열등성 후험 확률 99.2%).",
+        "세파졸린은 페니실린 제제에 비해 14일 이내 급성 신손상 위험을 임상적으로 유의미하게 낮췄습니다 (13.9% 대 19.6%, 보정 오즈비 0.67, 95% 신용구간 0.50~0.89, 우월성 후험 확률 99.7%)."
       ],
-      "clinicalTakeaway": "Unlike hip fractures where early surgery is strongly associated with better outcomes, timing of surgery for distal femur fractures in older adults did not show a clear benefit for mortality or complications. Preoperative medical optimization may take precedence over rushing to the operating room, though prospective trials are needed.",
-      "clinicalTakeaway_ko": "조기 수술이 예후 개선에 필수적인 고관절 골절과 달리, 고령 원위 대퇴골 골절 환자에서는 조기 수술이 사망률이나 합병증을 유의하게 줄이지 못했습니다. 응급 수술을 서두르기보다 사전 내과적 동반 질환 최적화에 집중하는 것이 더 적절할 수 있습니다.",
-      "limitations": "All included studies were retrospective with substantial variation in how 'early surgery' was defined, leading to potential classification and selection biases.",
-      "limitations_ko": "포함된 모든 연구가 후향적 설계이며, '조기 수술'에 대한 정의가 연구마다 달라 분류 오류 및 선택 편향의 한계가 있습니다.",
-      "evidenceLevel": "Low",
-      "clinicalApplicabilityScore": 6,
+      "conclusion": "Cefazolin is noninferior to antistaphylococcal penicillins (flucloxacillin/cloxacillin) for the treatment of methicillin-susceptible bacteremia, while providing a significantly safer renal profile with lower rates of acute kidney injury.",
+      "conclusion_ko": "메티실린 감수성 균혈증 치료에 있어 세파졸린은 항스타필로코쿠스 페니실린(플루클록사실린/클록사실린) 대비 90일 사망률 측면에서 비열등하며, 급성 신손상 빈도를 유의하게 낮추어 현저히 우수한 신장 안전성 프로파일을 보입니다.",
+      "clinicalTakeaway": "In adult patients with MSSA bacteremia, cefazolin should be the preferred first-line parenteral therapy over antistaphylococcal penicillins like flucloxacillin or cloxacillin. It offers identical efficacy with a substantially lower risk of nephrotoxicity, clarifying long-standing clinical practice dilemmas.",
+      "clinicalTakeaway_ko": "MSSA 균혈증이 있는 성인 환자에서 세파졸린은 플루클록사실린이나 클록사실린과 같은 항스타필로코쿠스 페니실린보다 선호되는 1차 정맥 투여 치료제여야 합니다. 신독성 위험이 실질적으로 훨씬 낮으면서도 동등한 효능을 제공하므로 오랜 임상적 고민을 해결해 줍니다.",
+      "limitations": "The trial was open-label, which could influence secondary clinician behaviors or discharge decisions. Additionally, the brief abstract details do not specify the prevalence or outcome in patients with high-inoculum infections like endocarditis.",
+      "limitations_ko": "본 임상시험은 공개라벨(open-label) 디자인으로 진행되어 의료진의 세부적인 관리나 퇴원 결정 등에 영향을 미쳤을 수 있습니다. 또한 초록의 정보만으로는 심내막염과 같은 고균량 감염(high-inoculum infection) 환자에서의 비율이나 결과가 구별되어 제시되지 않았습니다.",
+      "edIcuApplicability": "Highly applicable. Emergency and ICU physicians routinely initiate, continue, or transition empiric MRSA cover to targeted MSSA cover. Utilizing cefazolin instead of flucloxacillin/cloxacillin simplifies administration, is widely available globally, and significantly spares renal function in critically ill patients.",
+      "edIcuApplicability_ko": "매우 적용 가능성이 높습니다. 응급실 및 중환자실 의료진은 흔히 MSSA 표적 치료를 시작하거나 기존 치료를 전환합니다. 플루클록사실린/클록사실린 대신 세파졸린을 투여하는 것은 약제 공급이 수월하고 투약이 용이할 뿐만 아니라, 중증 환자의 신기능을 보존하는 데 큰 장점을 제공합니다.",
+      "evidenceLevel": "High",
+      "clinicalApplicabilityScore": 9,
       "manualReviewNeeded": false,
       "analysisNotes": [
-        "The abstract notes that sensitivity analyses suggested lower mortality with earlier surgery when using stricter definitions, highlighting potential residual confounding in retrospective data.",
-        "While primarily an orthopedic study, this is highly relevant to EM and ICU physicians who coordinate preoperative clearance and medical optimization for geriatric trauma patients."
+        "Bayesian adaptive platform trial (SNAP trial).",
+        "Open-label, randomized controlled trial design.",
+        "Noninferiority and superiority evaluated with hierarchical Bayesian logistic-regression modeling."
       ],
       "paper": {
-        "pmid": "42315642",
-        "title": "Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.",
-        "abstract": "INTRODUCTION: The association between surgical timing and clinical outcomes in older adults with distal femur fractures remains unclear. We conducted a systematic review and meta-analysis to evaluate whether earlier surgery is associated with improved outcomes in this population.\nMATERIALS AND METHODS: In accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, two independent reviewers searched MEDLINE, Embase, the Cochrane Central Register of Controlled Trials, ClinicalTrials.gov, and the World Health Organization International Clinical Trials Registry Platform from inception to October 8, 2024. The primary outcome was 30-day mortality, and secondary outcomes included longer-term mortality and postoperative complications. Risk of bias was assessed using the Quality in Prognosis Studies tool, and the certainty of evidence was evaluated using the Grading of Recommendations Assessment, Development and Evaluation approach.\nRESULTS: Of 6,101 records screened, 16 retrospective cohort studies comprising 31,213 patients met the inclusion criteria. Early surgery was not associated with reduced 30-day mortality (adjusted odds ratio [OR]: 0.77, 95% confidence interval [CI]: 0.56-1.05; low-certainty evidence) or with longer-term mortality at 90 days (crude OR: 0.91, 95% CI: 0.51-1.60), 180 days (crude OR: 0.46, 95% CI: 0.12-1.77), or 1 year (crude OR: 0.61, 95% CI: 0.34-1.09). Similar findings were observed for postoperative complications: cardiac complications (OR: 0.71, 95% CI: 0.48-1.07), pulmonary complications (OR: 1.07, 95% CI: 0.77-1.47), and pulmonary embolism (OR: 1.14, 95% CI: 0.62-2.16). Heterogeneity across outcomes was low to moderate, and definitions of early surgery varied among studies. Overall, this meta-analysis did not demonstrate a clinically meaningful association between surgical timing and short-term clinical outcomes in older adults with distal femur fractures. Sensitivity analyses consistently suggested lower mortality with earlier surgery, likely reflecting stricter definitions of early surgery and improved control of time-related bias.\nCONCLUSIONS: This meta-analysis did not demonstrate a clinically meaningful association between surgical timing and short-term clinical outcomes in older adults with distal femur fractures. Given the heterogeneity in definitions and study designs, high-quality prospective studies with standardized timing are warranted.",
+        "pmid": "42308484",
+        "title": "Cefazolin for Methicillin-Susceptible Bacteremia.",
+        "abstract": "BACKGROUND: bacteremia is associated with high mortality. Whether cefazolin or an antistaphylococcal penicillin should be preferred for the treatment of methicillin-susceptible bacteremia is unclear.\nMETHODS: In an ongoing international Bayesian adaptive platform trial, we conducted an open-label, randomized comparison of cefazolin with an antistaphylococcal penicillin (flucloxacillin or cloxacillin) in adult patients with penicillin-resistant, methicillin-susceptible bacteremia. The primary outcome, which was evaluated with a hierarchical Bayesian logistic-regression model, was death from any cause within 90 days after enrollment in the platform. We assessed the posterior probability of the noninferiority of cefazolin to flucloxacillin or cloxacillin (with the criterion for noninferiority prespecified as an adjusted odds ratio of <1.2, which approximates an absolute difference in mortality of <2.5 percentage points if mortality in the antistaphylococcal-penicillin group is 15%), as well as the posterior probability of superiority (with the criterion of an adjusted odds ratio of <1.0). Secondary safety outcomes included the development of acute kidney injury within 14 days.\nRESULTS: This domain of the ongoing trial was conducted between February 17, 2022, and August 7, 2024, by which time the criterion for noninferiority had been met. Mortality at 90 days among adults who could be evaluated was 15.0% (97 deaths among 645 patients) in the cefazolin group and 17.0% (109 deaths among 642 patients) in the antistaphylococcal-penicillin group (adjusted odds ratio, 0.81; 95% credible interval, 0.59 to 1.12; probability of noninferiority, 99.2%; probability of superiority, 89.8%). Acute kidney injury occurred in 92 of 660 patients (13.9%) in the cefazolin group, as compared with 127 of 648 (19.6%) in the antistaphylococcal-penicillin group (adjusted odds ratio, 0.67; 95% credible interval, 0.50 to 0.89; probability of superiority, 99.7%).\nCONCLUSIONS: In patients with methicillin-susceptible bacteremia, cefazolin was noninferior to flucloxacillin or cloxacillin with respect to 90-day mortality and was associated with a lower incidence of acute kidney injury. (Funded by the National Health and Medical Research Council and others; SNAP ClinicalTrials.gov number, NCT05137119.).",
         "authors": [
-          "Hoshika S",
-          "Yamamoto N",
-          "Saka N",
-          "Tsuge T",
-          "Sato T",
-          "Isaji Y",
-          "Nakao S"
+          "Lee TC",
+          "Barina LA",
+          "Walls G",
+          "Goodman AL",
+          "Yahav D",
+          "Cheng MP",
+          "Bonten M"
         ],
-        "journal": "Archives of orthopaedic and trauma surgery",
+        "journal": "The New England journal of medicine",
         "pubDate": "2026-Jun-18",
         "publicationTypes": [
+          "Clinical Trial, Phase IV",
+          "Comparative Study",
+          "Equivalence Trial",
           "Journal Article",
-          "Systematic Review",
-          "Meta-Analysis",
-          "Review"
+          "Multicenter Study",
+          "Randomized Controlled Trial"
         ],
         "meshTerms": [
-          "Humans",
-          "Postoperative Complications",
-          "Femoral Fractures, Distal",
           "Aged",
-          "Time-to-Treatment",
-          "Treatment Outcome",
-          "Time Factors"
-        ],
-        "keywords": [
-          "Geriatric trauma",
-          "Meta-analysis",
-          "Mortality",
-          "Postoperative complications",
-          "Time to surgery"
-        ],
-        "doi": "10.1007/s00402-026-06296-2",
-        "pmcid": "PMC13279584",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315642/",
-        "collectedAt": "2026-06-22T07:43:09.736Z",
-        "screeningData": {
-          "score": 10,
-          "relevanceMatches": [
-            "trauma"
-          ],
-          "studyType": "Practice Guideline",
-          "sampleSize": 31213,
-          "journalBoost": 0,
-          "reasons": [
-            "abstract available",
-            "topic match: trauma",
-            "study design: Practice Guideline",
-            "sample size signal: N=31213"
-          ],
-          "exclude": false,
-          "excludeReason": ""
-        }
-      },
-      "source": "llm"
-    },
-    {
-      "pmid": "42319567",
-      "title": "Effect of a Mobile App on Medication Errors During Simulated Pediatric Cardiopulmonary Resuscitation: PEDIDOSIS App vs. Conventional Methods. A Multicenter Simulation-based Randomized Controlled Trial.",
-      "oneLineSummary_ko": "소아 심폐소생술 시뮬레이션에서 PEDIDOSIS 스마트폰 앱 사용이 기존 방식 대비 간호사의 투약 오류 발생률과 스트레스를 유의하게 감소시켰다.",
-      "clinicalQuestion": "Does the use of the PEDIDOSIS mobile app during simulated pediatric cardiopulmonary resuscitation reduce medication errors made by nursing staff compared to conventional methods?",
-      "clinicalQuestion_ko": "소아 심폐소생술 시뮬레이션 상황에서 PEDIDOSIS 모바일 앱 사용이 기존 방식에 비해 간호사의 투약 오류를 줄일 수 있는가?",
-      "pico": {
-        "population": "Nursing professionals participating in a simulated pediatric emergency resuscitation in Spain.",
-        "intervention": "PEDIDOSIS smartphone application for drug preparation.",
-        "comparison": "Conventional methods (such as printed or electronic medication tables, smartphones, calculators, or no cognitive aid).",
-        "outcome": "Incidence and magnitude of medication errors (dose deviations), proportion of multiple errors, time to administration, stress, satisfaction, and usability."
-      },
-      "pico_ko": {
-        "population": "스페인의 소아 응급 소생술 시뮬레이션에 참여한 간호사들",
-        "intervention": "약물 준비를 위한 PEDIDOSIS 스마트폰 앱 사용",
-        "comparison": "기존 방식 (인쇄물/전자기기 약물 표, 스마트폰, 계산기 또는 인지 보조 도구 없음)",
-        "outcome": "투약 오류(용량 편차) 발생률 및 크기, 다중 오류 비율, 투여 소요 시간, 스트레스, 만족도, 사용 편의성"
-      },
-      "keyFindings": [
-        "The incidence of wrong dose administration (any deviation) was significantly lower in the PEDIDOSIS app group compared to the control group (26.4% vs 51.5%, p < 0.001).",
-        "The odds of a clinically significant (>10% deviation) dosing error was reduced by 76% with the app (OR 0.24 [0.14-0.4], risk difference of 20.7%), and fewer participants committed multiple errors (15.1% vs 57.7%).",
-        "The app group reported higher overall satisfaction, lower stress, and a good usability score (System Usability Scale score of 78.9 out of 100)."
-      ],
-      "keyFindings_ko": [
-        "PEDIDOSIS 앱 사용 군은 대조군 대비 임의의 용량 편차 발생률이 유의하게 낮았다 (26.4% 대 51.5%, p < 0.001).",
-        "앱 사용은 10% 초과 용량 편차 오류 발생 가능성을 76% 감소시켰으며 (OR 0.24 [0.14-0.4], 위험도 차이 20.7%), 다중 투약 오류 비율도 대폭 감소했다 (15.1% 대 57.7%).",
-        "앱 사용 군에서 전반적인 만족도가 더 높았고 스트레스는 더 낮았으며, 시스템 사용성 평가(SUS) 점수는 100점 만점에 78.9점을 기록했다."
-      ],
-      "clinicalTakeaway": "In simulated pediatric cardiopulmonary resuscitations, using the PEDIDOSIS smartphone application for emergency drug preparation (epinephrine, bicarbonate, midazolam, norepinephrine) significantly reduces dangerous dosing errors and multiple medication errors while lowering nurse stress and increasing satisfaction. These findings support integrating validated digital cognitive aids into pediatric emergency workflows, although direct real-world clinical implementation trials are still needed.",
-      "clinicalTakeaway_ko": "소아 심폐소생술 시뮬레이션에서 전용 스마트폰 앱(PEDIDOSIS)을 활용해 응급 약물(에피네프린, 탄산수소나트륨, 미다졸람, 노르에피네프린)을 계산 및 준비했을 때, 위험한 용량 오류와 다중 투약 오류를 유의하게 줄이고 간호사의 스트레스를 낮추며 만족도를 높였다. 소아 응급 진료 지침에 검증된 디지털 보조 도구를 통합하는 것을 지지하는 결과이나, 실제 임상 현장에서의 추가적인 검증이 필요하다.",
-      "limitations": "The study was conducted in a high-fidelity simulation environment, which may not fully capture the real-world clinical performance and cognitive load of actual pediatric arrests. Additionally, although drug administration times were measured, the exact timing data were not reported in the abstract.",
-      "limitations_ko": "본 연구는 실제 소아 심정지 상황이 아닌 고충실도 시뮬레이션 환경에서 진행되었기 때문에 실제 임상 현장에서의 수행력과 인지적 부하를 온전히 대변하지 못할 수 있다. 또한 약물 투약 소요 시간이 측정되었으나 초록에 구체적인 데이터가 명시되지 않았다.",
-      "evidenceLevel": "Moderate",
-      "clinicalApplicabilityScore": 7.5,
-      "manualReviewNeeded": false,
-      "analysisNotes": [
-        "This was a multicenter, simulation-based RCT involving 105 nurses from Spain.",
-        "Experience levels were balanced between groups (> 5 years vs <= 5 years).",
-        "Addresses a major high-stakes area of EM/CCM (pediatric resuscitation dosing errors) but limited by simulation surrogate endpoints."
-      ],
-      "paper": {
-        "pmid": "42319567",
-        "title": "Effect of a Mobile App on Medication Errors During Simulated Pediatric Cardiopulmonary Resuscitation: PEDIDOSIS App vs. Conventional Methods. A Multicenter Simulation-based Randomized Controlled Trial.",
-        "abstract": "Despite its low incidence, pediatric cardiopulmonary arrest remains associated with high mortality and morbidity. The adequate preparation and administration of drugs can impact favourably on the outcomes of cardiopulmonary resuscitation. Nursing staff rely on cognitive aids such as paper support, calculators, or spreadsheets to ensure correct drug administration. Numerous strategies have been proposed to prevent medication errors, including the emergence of mHealth. This study evaluates the efficacy and usefulness of the PEDIDOSIS smartphone application (app) for nursing staff in a simulated pediatric emergency setting. A multicentre high-fidelity simulation-based randomized controlled trial was conducted in a pediatric emergency setting with nursing professionals from different hospitals in Spain. Randomisation groups: PEDIDOSIS app (La Paz Hospital, Spain) vs. conventional methods (such as printed or electronic medication tables, smartphones, calculators or no cognitive aid). To avoid bias due to differences in pediatric emergency experience, each group was randomly assigned the same number of participants with experience (> 5 years) and without experience (≤ 5 years). Epinephrine, bicarbonate, midazolam, and norepinephrine on two ocassions were administered in a simulation scenario. Number and magnitude of medication errors, time taken to drug administration were evaluated as measured with video recording; stress, satisfaction, and usability as measured using standardized survey tools were evaluated. One-hundred and five nurses participated. The incidence of wrong dose administration by any deviation from the correct dose was 51.5% for the control group vs. 26.4% for the PEDIDOSIS app group (p < 0.001). The OR for a wrong dose administration > 10% deviation with PEDIDOSIS app vs. conventional methods was 0.24 [0.14-0.4]), with a risk difference of 20.7%. The proportion of participants committing several medication errors (ME) was substantially lower with the app (15.1%) than with conventional methods (57.7%). Overall satisfaction regarding drug preparation was higher and stress lower in the app group. The System Usability Scale (SUS) score obtained for PEDIDOSIS app was 78.9 out of 100.",
-        "authors": [
-          "Martínez-Serrano A",
-          "Ruiz-Rojo H",
-          "Ruano Encinar M",
-          "García-Sánchez P",
-          "Durantez-Fernández C",
-          "de Rojas T"
-        ],
-        "journal": "Journal of medical systems",
-        "pubDate": "2026-Jun-19",
-        "publicationTypes": [
-          "Journal Article",
-          "Randomized Controlled Trial",
-          "Multicenter Study"
-        ],
-        "meshTerms": [
-          "Humans",
-          "Mobile Applications",
-          "Medication Errors",
-          "Cardiopulmonary Resuscitation",
-          "Male",
           "Female",
-          "Spain",
-          "Child"
-        ],
-        "keywords": [
-          "Administration, Intravenous",
-          "Emergencies",
-          "Medication Errors",
-          "Nursing",
-          "Pediatrics",
-          "mHealth"
-        ],
-        "doi": "10.1007/s10916-026-02425-x",
-        "pmcid": "PMC13282230",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319567/",
-        "collectedAt": "2026-06-22T07:43:09.118Z",
-        "screeningData": {
-          "score": 7,
-          "relevanceMatches": [
-            "resuscitation"
-          ],
-          "studyType": "Randomized Controlled Trial",
-          "sampleSize": null,
-          "journalBoost": 0,
-          "reasons": [
-            "abstract available",
-            "topic match: resuscitation",
-            "study design: Randomized Controlled Trial"
-          ],
-          "exclude": false,
-          "excludeReason": ""
-        }
-      },
-      "source": "llm"
-    },
-    {
-      "pmid": "42313188",
-      "title": "From single to dual platelet inhibition FIBTEM assay: fibrinogen replacement thresholds for critical bleeding after trauma.",
-      "oneLineSummary_ko": "외상 환자에서 이중 혈소판 억제 FIBTEM 검사 도입 후에도 기존의 피브리노겐 수혈 역치 기준을 조정 없이 그대로 사용할 수 있다.",
-      "clinicalQuestion": "Does transitioning from single to dual-platelet inhibition in the ROTEM FIBTEM assay affect the correlation with Clauss fibrinogen or the optimal diagnostic thresholds for identifying hypofibrinogenemia in major trauma patients?",
-      "clinicalQuestion_ko": "중증 외상 환자에서 ROTEM FIBTEM 검사의 혈소판 억제 방식이 단일에서 이중으로 변경될 때, Clauss 피브리노겐 수치와의 상관관계 및 저피브리노겐혈증 진단을 위한 최적의 역치값에 변화가 있는가?",
-      "pico": {
-        "population": "Adult patients with major trauma presenting in Queensland between 2022 and 2025 who had paired ROTEM and conventional coagulation tests on arrival",
-        "intervention": "FIBTEM assay with dual-platelet inhibition (addition of tirofiban to cytochalasin D)",
-        "comparison": "FIBTEM assay with single-platelet inhibition (cytochalasin D alone)",
-        "outcome": "Correlation (R2) between FIBTEM-A5 and Clauss fibrinogen, and diagnostic accuracy (sensitivity, specificity) for detecting Clauss fibrinogen < 2.0 g/L at FIBTEM-A5 thresholds of <= 10 mm and <= 8 mm"
-      },
-      "pico_ko": {
-        "population": "2022년에서 2025년 사이 내원하여 내원 당시 ROTEM 및 일반 응고 검사를 함께 시행받은 성인 중증 외상 환자",
-        "intervention": "이중 혈소판 억제 FIBTEM 검사 (cytochalasin D에 tirofiban 추가)",
-        "comparison": "단일 혈소판 억제 FIBTEM 검사 (cytochalasin D 단독)",
-        "outcome": "FIBTEM-A5와 Clauss 피브리노겐 수치 간의 상관관계(R2), 그리고 FIBTEM-A5 <= 10 mm 및 <= 8 mm 역치에서 피브리노겐 < 2.0 g/L를 진단하는 정확도(민감도, 특이도)"
-      },
-      "keyFindings": [
-        "The correlation with Clauss fibrinogen was similar between single (R2 0.61; 95% CI: 0.51-0.70) and dual-platelet inhibition assays (R2 0.70; 95% CI: 0.62-0.77; p = 0.94).",
-        "Predicted FIBTEM-A5 amplitudes at 2.0 g/L of fibrinogen were 7.83 mm (95% CI: 7.42-8.23) for single and 7.54 mm (95% CI: 7.22-7.87) for dual assays.",
-        "For the dual-platelet inhibition assay, sensitivity and specificity for detecting fibrinogen < 2.0 g/L were 97.8% and 48.1% at <= 10 mm, and 92.1% and 74.7% at <= 8 mm."
-      ],
-      "keyFindings_ko": [
-        "Clauss 피브리노겐 수치와의 상관관계는 단일 억제(R2 0.61)와 이중 억제(R2 0.70) 검사 간에 유의미한 차이가 없었습니다 (p = 0.94).",
-        "피브리노겐 2.0 g/L 기준 예측된 FIBTEM-A5 값은 단일 억제 7.83 mm, 이중 억제 7.54 mm로 차이가 크지 않았습니다.",
-        "이중 억제 검사에서 피브리노겐 < 2.0 g/L 진단을 위한 FIBTEM-A5 <= 10 mm 역치는 민감도 97.8%/특이도 48.1%를, <= 8 mm 역치는 민감도 92.1%/특이도 74.7%를 나타냈습니다."
-      ],
-      "clinicalTakeaway": "The transition from single to dual-platelet inhibition in the ROTEM FIBTEM assay does not require recalibration of established clinical transfusion thresholds. Clinicians can continue to use FIBTEM-A5 <= 10 mm for high sensitivity to avoid missing hypofibrinogenemia, or <= 8 mm for greater specificity to guide fibrinogen replacement in bleeding trauma patients.",
-      "clinicalTakeaway_ko": "ROTEM FIBTEM 검사의 혈소판 억제 방식 변경(tirofiban 추가) 후에도 기존에 사용되던 임상적 수혈 역치 기준을 재조정할 필요가 없습니다. 외상성 출혈 환자의 피브리노겐 보충 시, 저피브리노겐혈증을 놓치지 않기 위한 선별 목적으로는 FIBTEM-A5 <= 10 mm(고민감도)를, 보다 확정적인 치료 결정 목적으로는 <= 8 mm(고특이도)를 기존과 동일하게 적용할 수 있습니다.",
-      "limitations": "This is a retrospective cohort study conducted in a single Australian state (Queensland) and did not analyze direct patient outcomes such as mortality or actual blood product use.",
-      "limitations_ko": "호주 퀸즐랜드 지역 단일 코호트를 대상으로 한 후향적 연구이며, 실제 수혈량이나 사망률 등 환자의 임상적 예후 결과를 직접 분석하지는 않았습니다.",
-      "evidenceLevel": "Moderate",
-      "clinicalApplicabilityScore": 8.5,
-      "manualReviewNeeded": false,
-      "analysisNotes": [
-        "This study provides useful reassurance for laboratories and trauma services transitioning to newer ROTEM reagents, confirming that clinical decision algorithms based on FIBTEM-A5 thresholds do not need to be altered."
-      ],
-      "paper": {
-        "pmid": "42313188",
-        "title": "From single to dual platelet inhibition FIBTEM assay: fibrinogen replacement thresholds for critical bleeding after trauma.",
-        "abstract": "PURPOSE: The FIBTEM assay in Rotational Thromboelastometry (ROTEM) measures fibrin-based clot formation. The reagent transitioned from single to dual-platelet inhibition with addition of tirofiban to cytochalasin D, offering more complete platelet suppression. The aim of this study was to assess the impact of this change on transfusion thresholds in trauma.\nMETHODS: In this retrospective cohort study, we included adult patients with major trauma across Queensland who presented between 2022 and 2025 and had results available for paired ROTEM and conventional coagulation tests on arrival. Patients were sub-grouped into single and dual-platelet inhibition assay groups. Correlations between FIBTEM-A5 and Clauss fibrinogen were analysed, comparing correlation strength and diagnostic accuracy for fibrinogen levels of < 2.0 g/L.\nRESULTS: The relationship between FIBTEM-A5 and Clauss fibrinogen was similar using single platelet inhibition assays (R² 0.61;95%CI: 0.51-0.70) and dual-platelet inhibition assays (R² 0.70;95%CI: 0.62-0.77; p = 0.94). Predicted FIBTEM-A5 amplitudes at 2 g/L fibrinogen were 7.83 mm (95%CI: 7.42-8.23) and 7.54 mm (95%CI: 7.22-7.87). Diagnostic performance for detecting fibrinogen < 2.0 g/L was comparable between assays, for both FIBTEM-A5 ≤ 10 mm and FIBTEM-A5 ≤ 8 mm (all p > 0.05). For the dual-platelet inhibition assay, sensitivity and specificity were 97.8% and 48.1% at ≤ 10 mm, and 92.1% and 74.7% at ≤ 8 mm.\nCONCLUSION: Dual-platelet inhibition did not alter the relationship between FIBTEM-A5 and Clauss fibrinogen or the diagnostic accuracy of FIBTEM thresholds for identifying hypofibrinogenemia. FIBTEM-A5 ≤ 10 mm maintained high sensitivity, while ≤ 8 mm demonstrated greater specificity. Recalibration of established FIBTEM thresholds is not required following transition to dual-platelet inhibition.",
-        "authors": [
-          "Latona A",
-          "Winearls J",
-          "Ho A",
-          "Mitra B"
-        ],
-        "journal": "European journal of trauma and emergency surgery : official publication of the European Trauma Society",
-        "pubDate": "2026-Jun-18",
-        "publicationTypes": [
-          "Journal Article"
-        ],
-        "meshTerms": [
           "Humans",
-          "Fibrinogen",
-          "Thrombelastography",
-          "Retrospective Studies",
-          "Wounds and Injuries",
-          "Female",
-          "Platelet Aggregation Inhibitors",
           "Male",
-          "Tirofiban",
-          "Hemorrhage",
           "Middle Aged",
-          "Adult"
+          "Anti-Bacterial Agents",
+          "Bacteremia",
+          "Bayes Theorem",
+          "Cefazolin",
+          "Cloxacillin",
+          "First Generation Cephalosporins",
+          "Floxacillin"
         ],
-        "keywords": [
-          "Cytochalasin D",
-          "Fibrinogen",
-          "Major trauma",
-          "Thrombelastography",
-          "Tirofiban"
-        ],
-        "doi": "10.1007/s00068-026-03250-0",
-        "pmcid": "PMC13279660",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313188/",
-        "collectedAt": "2026-06-22T07:43:10.261Z",
+        "keywords": [],
+        "doi": "10.1056/NEJMoa2506905",
+        "pmcid": "",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42308484/",
+        "collectedAt": "2026-06-22T11:03:26.528Z",
         "screeningData": {
-          "score": 5,
-          "relevanceMatches": [
-            "trauma"
-          ],
-          "studyType": "Observational",
-          "sampleSize": null,
-          "journalBoost": 0,
+          "score": 12,
+          "relevanceMatches": [],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 645,
+          "journalBoost": 4,
           "reasons": [
             "abstract available",
-            "topic match: trauma",
-            "study design: Observational"
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=645",
+            "journal boost: The New England journal of medicine"
           ],
           "exclude": false,
           "excludeReason": ""
+        },
+        "contextSource": {
+          "type": "abstract",
+          "reason": "No PMCID available for open full-text fetch"
         }
       },
       "source": "llm"
     }
   ],
   "stats": {
-    "requested": 3,
-    "analyzed": 3,
+    "requested": 1,
+    "analyzed": 1,
     "fallbackCount": 0,
     "selection": {
       "source": "llm-rerank",
       "provider": "gemini",
       "selected": [
         {
-          "pmid": "42315642",
+          "pmid": "42308484",
           "rank": 1,
-          "clinicalPriorityScore": 8.5,
-          "rationale_ko": "노인 대퇴골 원위부 골절 환자 31,213명을 대상으로 한 이 체계적 문헌고찰 및 메타분석은 조기 수술이 30일 사망률 감소와 유의한 연관성이 없음을 보여줍니다. 이는 응급실 및 중환자실에서 취약한 고령 환자의 수술 전 내과적 상태를 무리하게 서두르지 않고 안전하게 최적화할 수 있는 임상적 근거를 제시합니다."
-        },
-        {
-          "pmid": "42319567",
-          "rank": 2,
-          "clinicalPriorityScore": 8.2,
-          "rationale_ko": "소아 심폐소생술 상황은 투약 오류 빈도가 높은 고위험 환경입니다. 이 다기관 시뮬레이션 기반 RCT는 PEDIDOSIS 스마트폰 앱이 전통적인 인지 보조 도구에 비해 간호 인력의 약물 준비 오류를 줄이는 데 효과적임을 입증하여 소아 소생술 현장에서의 실질적인 유용성을 보여줍니다."
-        },
-        {
-          "pmid": "42313188",
-          "rank": 3,
-          "clinicalPriorityScore": 7.8,
-          "rationale_ko": "중증 외상 소생술에서 점적 검사인 ROTEM(FIBTEM)은 피브리노겐 수혈 기준을 결정하는 데 필수적입니다. 본 연구는 단일에서 이중 혈소판 억제 방식으로 변경된 새로운 FIBTEM 검사법이 기존의 Clauss 피브리노겐 측정값과 여전히 강력한 상관관계를 보임을 검증하여 임상가들이 안심하고 현재의 수혈 프로토콜을 유지할 수 있도록 돕습니다."
+          "clinicalPriorityScore": 9.8,
+          "rationale_ko": "메티실린 감수성 황색포도상구균(MSSA) 균혈증 환자에서 세파졸린과 항스타필로코코스 페니실린의 효능 및 안전성을 비교한 NEJM 게재 다기관 무작위 대조 시험(RCT)입니다. 응급실 및 중환자실에서 흔히 접하는 치명적인 감염증의 표준 항생제 선택에 직접적이고 중대한 임상적 근거를 제공하는 중대한 연구입니다."
         }
       ],
       "notes_ko": [
-        "이번 selection에서는 외상 관리(고령자 수술 시점 조율 및 외상 소생술 중 ROTEM 검사법 유효성 확인)와 소아 응급 소생술 시의 환자 안전을 개선할 수 있는 디지털 헬스 솔루션 평가 등 임상 현장에 직접 적용할 수 있는 주제들을 우선적으로 선정했습니다."
+        "NEJM에 게재된 MSSA 균혈증에 대한 세파졸린 대 페니실린 비교 임상시험은 임상 현장에서의 항생제 선택을 유도하는 최상위 수준의 증거를 제공하므로 오늘의 가장 중요한 논문으로 선정하였습니다."
       ]
     }
   },

@@ -8,7 +8,9 @@ This project implements:
 
 - PubMed collection for recent EM/CCM papers
 - deterministic pre-screening before any LLM call
-- Top 3 PICO-style analysis with runtime schema validation
+- Gemini re-ranking from 30 screened candidates to a daily Top 1
+- detailed PICO/outcome/statistics analysis with runtime schema validation
+- optional PMC open full-text enrichment when a PMCID is available
 - fallback summaries when LLM output is missing or invalid
 - JSON, Markdown, HTML reports
 - mobile-first static dashboard in `public/index.html`
@@ -48,7 +50,7 @@ node src/cli.js --no-notify
 Useful options:
 
 ```bash
-node src/cli.js --days 14 --max-papers 50 --candidate-limit 30 --top-n 3
+node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 1
 node src/cli.js --skip-llm --no-notify
 node src/cli.js --date 2026-06-21 --ignore-seen
 ```
@@ -100,28 +102,45 @@ If `npm test` fails, the report and notifications do not run. Notifications are 
 
 ## Selection Protocol
 
-The default protocol is close to the reference project:
+The default protocol is optimized for a digest that can actually be read every morning:
 
-- search the recent PubMed window, default 30 days
-- pre-screen 30-50 papers with deterministic journal, study design, and EM/CCM relevance rules
+- search the recent PubMed window, default 180 days
+- collect up to 300 recent PubMed records
+- pre-screen with deterministic journal, study design, and EM/CCM relevance rules
 - keep about 30 screened candidates
-- analyze and publish Top 3
+- ask Gemini to re-rank those 30 candidates
+- analyze and publish Top 1 by default
+- fetch PMC open full text for the selected paper when a PMCID is available
 - write only the published Top papers to `data/seen_pmids.json`
 
 Recommended operating modes:
 
 ```bash
-# Daily Top 3
-node src/cli.js --top-n 3 --max-papers 50 --candidate-limit 30
+# Daily Top 1
+node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 1
 
-# Higher-quality and less forced
-node src/cli.js --top-n 1 --max-papers 50 --candidate-limit 30
+# Slightly higher-volume daily digest
+node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 2
 
 # One-time catch-up/backfill, useful when starting the system
-node src/cli.js --days 180 --max-papers 200 --candidate-limit 30 --top-n 3
+node src/cli.js --days 365 --max-papers 500 --candidate-limit 30 --top-n 3
 ```
 
-For long-term daily use, `--top-n 1` is usually more stable. A weekly digest can then collect the best 3-5 papers without forcing marginal daily picks.
+For long-term daily use, `--top-n 1` is the default to avoid unread backlog. A weekly digest can later collect the best 3-5 papers without forcing marginal daily picks.
+
+## Report Format
+
+Each selected paper is rendered as a collapsed card. Opening the card shows:
+
+- English source-style summary with Korean interpretation underneath
+- Why it matters
+- detailed PICO
+- primary and secondary outcomes inside the PICO `O` section
+- compact `ⓘ` statistical interpretation for p value, OR/RR/HR, CI, risk difference, mean difference, or NNT when reported
+- conclusion
+- limitations
+- ED/ICU applicability
+- PubMed, DOI, and PMC links when available
 
 ## GitHub Secrets
 

@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review v2 Report Example</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ef;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #31599e;
+      --violet: #6f4a8e;
+      --amber: #956316;
+      --red: #a3483d;
+      --soft-teal: #e8f5f2;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    .wrap {
+      width: min(100% - 28px, 920px);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 22px 0 16px;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-weight: 760;
+      font-size: .78rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 58rem;
+      font-size: clamp(1.28rem, 4.6vw, 2.05rem);
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font-size: .78rem;
+      font-weight: 650;
+    }
+
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+
+    main {
+      padding: 16px 0 40px;
+      display: grid;
+      gap: 13px;
+    }
+
+    section {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .section-head {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: .92rem;
+      letter-spacing: 0;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      font-size: .76rem;
+      white-space: nowrap;
+    }
+
+    .body {
+      padding: 13px 14px 14px;
+    }
+
+    .lead {
+      margin: 0;
+      font-size: .98rem;
+    }
+
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+
+    .pico {
+      display: grid;
+      gap: 8px;
+    }
+
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+      font-size: 1rem;
+    }
+
+    .pico-content {
+      padding: 10px 11px;
+      min-width: 0;
+    }
+
+    .pico-title {
+      margin: 0 0 4px;
+      color: var(--muted);
+      font-size: .73rem;
+      font-weight: 760;
+      text-transform: uppercase;
+    }
+
+    .pico-text {
+      margin: 0;
+      font-size: .9rem;
+    }
+
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .outcome {
+      padding: 10px;
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+
+    .outcome b {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--blue);
+      font-size: .83rem;
+    }
+
+    .outcome p {
+      margin: 0;
+      font-size: .88rem;
+    }
+
+    .stat-note {
+      margin-top: 7px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f4f7fb;
+      color: #536076;
+      font-size: .75rem;
+      line-height: 1.45;
+    }
+
+    .stat-note strong {
+      color: var(--ink);
+    }
+
+    .stack {
+      display: grid;
+      gap: 9px;
+    }
+
+    .callout {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .callout h3 {
+      margin: 0 0 6px;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: .89rem;
+    }
+
+    .callout.conclusion { border-color: #cddbf7; background: var(--soft-blue); }
+    .callout.limitation { border-color: #efd0cb; background: var(--soft-red); }
+    .callout.apply { border-color: #ead9f7; background: var(--soft-violet); }
+
+    .bottom-line {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+
+    .bottom-line h2 {
+      color: #fff;
+    }
+
+    .bottom-line .body {
+      display: grid;
+      gap: 8px;
+    }
+
+    .bottom-line p {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .foot {
+      color: var(--muted);
+      font-size: .75rem;
+      padding: 2px 0 0;
+    }
+
+    @media (min-width: 760px) {
+      main {
+        grid-template-columns: 1.08fr .92fr;
+        align-items: start;
+      }
+
+      .span {
+        grid-column: 1 / -1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">Daily Trend Review · Example Card</p>
+      <h1>Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures</h1>
+      <div class="meta">
+        <span class="pill teal">PMID 42315642</span>
+        <span class="pill blue">Systematic review / Meta-analysis</span>
+        <span class="pill amber">Clinical priority 6 / 10</span>
+        <span>Hoshika S et al.</span>
+        <span>Archives of Orthopaedic and Trauma Surgery · 2026 Jun 18</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="why span">
+      <div class="section-head">
+        <h2>Why It Matters</h2>
+        <span class="section-sub">왜 오늘 볼 만한가</span>
+      </div>
+      <div class="body">
+        <p class="lead">고령 외상 환자에서 “빨리 수술해야 예후가 좋아지는가”는 ED/ICU 초기 평가, 수술 전 최적화, 병상 조율에 직접 연결됩니다. 이 메타분석은 원위 대퇴골 골절에서는 조기 수술의 이득이 고관절 골절만큼 명확하지 않을 수 있음을 시사합니다.</p>
+      </div>
+    </section>
+
+    <section class="span">
+      <div class="section-head">
+        <h2>PICO</h2>
+        <span class="section-sub">O 안에 outcome과 통계 해석 포함</span>
+      </div>
+      <div class="body pico">
+        <div class="pico-row">
+          <div class="pico-label">P</div>
+          <div class="pico-content">
+            <p class="pico-title">Population</p>
+            <p class="pico-text">원위 대퇴골 골절이 있는 고령 환자. 16개 후향적 코호트 연구, 총 31,213명. 국가는 개별 포함 연구마다 다를 수 있으며, 초록만으로는 국가별 분포가 명확히 보고되지 않았습니다.</p>
+          </div>
+        </div>
+
+        <div class="pico-row">
+          <div class="pico-label">I</div>
+          <div class="pico-content">
+            <p class="pico-title">Intervention</p>
+            <p class="pico-text">조기 수술. 단, “조기”의 기준 시간은 연구마다 달랐습니다.</p>
+          </div>
+        </div>
+
+        <div class="pico-row">
+          <div class="pico-label">C</div>
+          <div class="pico-content">
+            <p class="pico-title">Comparison</p>
+            <p class="pico-text">지연 수술.</p>
+          </div>
+        </div>
+
+        <div class="pico-row">
+          <div class="pico-label">O</div>
+          <div class="pico-content">
+            <p class="pico-title">Outcomes</p>
+            <div class="outcomes">
+              <div class="outcome">
+                <b>Primary outcome</b>
+                <p>30일 사망률: adjusted OR 0.77, 95% CI 0.56-1.05. 조기 수술군에서 낮아 보였지만 통계적으로 명확한 차이는 아니었습니다.</p>
+                <div class="stat-note">ⓘ OR 1보다 작으면 사건 odds가 낮다는 방향입니다. 하지만 95% CI가 1을 포함하면 “실제로 차이가 없을 가능성”도 남아 있습니다. p값은 보통 0.05 미만이면 통계적으로 유의하다고 보지만, 여기서는 CI 기준으로 유의성이 뚜렷하지 않습니다.</div>
+              </div>
+              <div class="outcome">
+                <b>Secondary outcomes</b>
+                <p>90일 사망률 OR 0.91, 180일 사망률 OR 0.46, 1년 사망률 OR 0.61. 심장 합병증 OR 0.71, 폐 합병증 OR 1.07, 폐색전증 OR 1.14.</p>
+                <div class="stat-note">ⓘ OR 1에 가까우면 두 군 차이가 작다는 뜻입니다. OR이 1보다 커도 CI가 넓거나 1을 지나면 “증가 경향”만으로 해석하고, 확정적인 위험 증가로 말하면 안 됩니다.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Conclusion</h2>
+        <span class="section-sub">논문 결론</span>
+      </div>
+      <div class="body">
+        <div class="callout conclusion">
+          <p>조기 수술은 고령 원위 대퇴골 골절 환자의 30일 사망률, 장기 사망률, 주요 수술 후 합병증을 유의하게 줄이지 못했습니다. 근거 확실성은 낮습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Limitations</h2>
+        <span class="section-sub">주의해서 읽을 점</span>
+      </div>
+      <div class="body">
+        <div class="callout limitation">
+          <p>포함 연구가 모두 후향적 코호트였고, 조기 수술의 시간 기준이 연구마다 달랐습니다. 지연 수술군에 더 아픈 환자가 섞였을 가능성도 있어 인과관계 해석은 제한적입니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="span">
+      <div class="section-head">
+        <h2>ED / ICU Applicability</h2>
+        <span class="section-sub">실제 세팅에서 고려할 점</span>
+      </div>
+      <div class="body stack">
+        <div class="callout apply">
+          <h3>ED</h3>
+          <p>원위 대퇴골 골절 고령 환자에서 “무조건 당일 수술”보다 통증 조절, 섬망 예방, 항응고제 확인, 내과적 위험도 평가를 빠르게 정리하는 것이 더 중요할 수 있습니다.</p>
+        </div>
+        <div class="callout apply">
+          <h3>ICU</h3>
+          <p>쇼크, 호흡부전, 심부전 악화 등 동반 문제가 있는 환자는 수술 시간 자체보다 수술 전 생리학적 안정화와 합병증 예방 전략이 우선될 수 있습니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-line span">
+      <div class="section-head">
+        <h2>Bottom Line</h2>
+        <span class="section-sub">모바일 알림용 한 줄</span>
+      </div>
+      <div class="body">
+        <p>고령 원위 대퇴골 골절에서 조기 수술의 사망률 이득은 뚜렷하지 않았고, ED/ICU에서는 수술 전 최적화와 위험도 정리가 더 실용적인 포인트입니다.</p>
+      </div>
+    </section>
+
+    <p class="foot span">목업입니다. 실제 적용 시에는 초록에 없는 값은 “초록에 보고되지 않음”으로 표시하고, 원문 확인 전 진료 변경 근거로 사용하지 않도록 문구를 유지합니다.</p>
+  </main>
+</body>
+</html>

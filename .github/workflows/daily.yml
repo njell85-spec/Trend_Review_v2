@@ -13,7 +13,7 @@ on:
       max_papers:
         description: 'PubMed max papers'
         required: false
-        default: '50'
+        default: '300'
         type: string
       no_notify:
         description: 'Skip Telegram/Kakao notification'
@@ -74,7 +74,7 @@ jobs:
         shell: bash
         env:
           RUN_DATE: ${{ github.event.inputs.date || '' }}
-          MAX_PAPERS: ${{ github.event.inputs.max_papers || '50' }}
+          MAX_PAPERS: ${{ github.event.inputs.max_papers || '300' }}
           NO_NOTIFY: ${{ github.event.inputs.no_notify || 'false' }}
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
         run: |

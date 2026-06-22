@@ -97,8 +97,21 @@ function renderMarkdown(report) {
     lines.push('');
     lines.push(`- PMID: ${result.pmid}`);
     lines.push(`- Journal: ${paper.journal ?? ''} (${paper.pubDate ?? ''})`);
-    lines.push(`- Summary: ${result.oneLineSummary_ko}`);
-    lines.push(`- Takeaway: ${result.clinicalTakeaway_ko}`);
+    lines.push(`- Summary: ${result.oneLineSummary ?? result.oneLineSummary_ko ?? ''}`);
+    if (result.oneLineSummary_ko) lines.push(`- 요약: ${result.oneLineSummary_ko}`);
+    if (result.whyItMatters) lines.push(`- Why it matters: ${result.whyItMatters}`);
+    if (result.whyItMatters_ko) lines.push(`- 중요성: ${result.whyItMatters_ko}`);
+    if (result.detailedPico?.outcomes?.length) {
+      lines.push('');
+      lines.push('#### Outcomes');
+      for (const outcome of result.detailedPico.outcomes) {
+        lines.push(`- ${outcome.label}: ${outcome.result} (${outcome.statistics})`);
+        if (outcome.interpretation) lines.push(`  - ⓘ ${outcome.interpretation}`);
+        if (outcome.interpretation_ko) lines.push(`  - ${outcome.interpretation_ko}`);
+      }
+    }
+    lines.push(`- Takeaway: ${result.clinicalTakeaway ?? ''}`);
+    if (result.clinicalTakeaway_ko) lines.push(`- 임상 포인트: ${result.clinicalTakeaway_ko}`);
     lines.push(`- PubMed: ${paper.pubmedUrl ?? ''}`);
     lines.push('');
   }
@@ -122,4 +135,3 @@ function formatKst(value) {
     timeStyle: 'short',
   }).format(new Date(value));
 }
-
