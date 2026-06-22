@@ -45,6 +45,8 @@ jobs:
       PUBMED_EMAIL: ${{ secrets.PUBMED_EMAIL }}
       PUBMED_API_KEY: ${{ secrets.PUBMED_API_KEY }}
       LLM_PROVIDER: ${{ secrets.LLM_PROVIDER }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

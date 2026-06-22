@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { AnalysisSchema } from '../src/schema.js';
+import { AnalysisSchema, RankingSchema } from '../src/schema.js';
 import { fallbackAnalysis } from '../src/analyze.js';
 
 test('fallback analysis passes the runtime schema', () => {
@@ -18,6 +18,22 @@ test('fallback analysis passes the runtime schema', () => {
   const parsed = AnalysisSchema.parse(fallback);
   assert.equal(parsed.pmid, '1');
   assert.equal(parsed.manualReviewNeeded, true);
+});
+
+test('ranking schema accepts selected PMID priorities', () => {
+  const parsed = RankingSchema.parse({
+    selected: [
+      {
+        pmid: '123',
+        rank: 1,
+        clinicalPriorityScore: 8.5,
+        rationale_ko: '응급/중환자 진료에 바로 참고할 수 있는 RCT입니다.',
+      },
+    ],
+    notes_ko: ['주제 다양성을 고려했습니다.'],
+  });
+
+  assert.equal(parsed.selected[0].pmid, '123');
 });
 
 test('schema rejects string PICO payloads', () => {
@@ -48,4 +64,3 @@ test('schema rejects string PICO payloads', () => {
     });
   });
 });
-

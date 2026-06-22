@@ -1,11 +1,14 @@
-import { AnalysisJsonSchema, AnalysisSchema } from './schema.js';
+import { AnalysisJsonSchema, AnalysisSchema, RankingJsonSchema, RankingSchema } from './schema.js';
 import { fetchWithRetry } from './utils/http.js';
 
 export async function analyzeTopPapers({ candidates, config, options }) {
   const topN = Number(options.topN ?? config.topics.search?.topN ?? 3);
-  const topPapers = candidates.slice(0, topN);
+  const provider = resolveProvider(options);
+  const shouldUseLlm = provider !== 'none' && !options.skipLlm && !options.dryRun;
+  const selection = await selectTopPapers({ candidates, topN, provider, shouldUseLlm });
+  const topPapers = selection.topPapers;
   const analyses = [];
-  const errors = [];
+  const errors = selection.error ? [selection.error] : [];
 
   for (const paper of topPapers) {
     const result = await analyzeSinglePaper({ paper, config, options });
@@ -19,9 +22,62 @@ export async function analyzeTopPapers({ candidates, config, options }) {
       requested: topN,
       analyzed: analyses.length,
       fallbackCount: analyses.filter((analysis) => analysis.manualReviewNeeded).length,
+      selection: selection.stats,
     },
     errors,
   };
+}
+
+async function selectTopPapers({ candidates, topN, provider, shouldUseLlm }) {
+  const deterministicTop = candidates.slice(0, topN);
+
+  if (!shouldUseLlm || provider !== 'gemini' || candidates.length <= topN) {
+    return {
+      topPapers: deterministicTop,
+      stats: {
+        source: shouldUseLlm ? 'deterministic' : 'deterministic-fallback',
+        provider,
+        reason: !shouldUseLlm ? 'LLM selection disabled' : 'candidate pool does not need reranking',
+      },
+    };
+  }
+
+  try {
+    const raw = await callGeminiRanking(buildRankingPrompt(candidates, topN));
+    const ranking = RankingSchema.parse(raw);
+    const byPmid = new Map(candidates.map((paper) => [String(paper.pmid), paper]));
+    const selectedPmids = unique(ranking.selected.map((item) => String(item.pmid)));
+    const selected = selectedPmids.map((pmid) => byPmid.get(pmid)).filter(Boolean);
+    const selectedSet = new Set(selected.map((paper) => String(paper.pmid)));
+
+    for (const paper of candidates) {
+      if (selected.length >= topN) break;
+      if (!selectedSet.has(String(paper.pmid))) selected.push(paper);
+    }
+
+    return {
+      topPapers: selected.slice(0, topN),
+      stats: {
+        source: 'llm-rerank',
+        provider,
+        selected: ranking.selected,
+        notes_ko: ranking.notes_ko,
+      },
+    };
+  } catch (error) {
+    return {
+      topPapers: deterministicTop,
+      stats: {
+        source: 'deterministic-fallback',
+        provider,
+        reason: error.message,
+      },
+      error: {
+        step: 'rank',
+        message: error.message,
+      },
+    };
+  }
 }
 
 export async function analyzeSinglePaper({ paper, config, options }) {
@@ -58,15 +114,81 @@ export async function analyzeSinglePaper({ paper, config, options }) {
 function resolveProvider(options) {
   const explicit = options.llmProvider || process.env.LLM_PROVIDER;
   if (explicit) return explicit.toLowerCase();
+  if (process.env.GEMINI_API_KEY) return 'gemini';
   if (process.env.OPENAI_API_KEY) return 'openai';
   if (process.env.ANTHROPIC_API_KEY) return 'anthropic';
   return 'none';
 }
 
 async function callProvider({ provider, prompt, paper }) {
+  if (provider === 'gemini') return callGeminiAnalysis(prompt, paper);
   if (provider === 'openai') return callOpenAi(prompt, paper);
   if (provider === 'anthropic') return callAnthropic(prompt, paper);
   throw new Error(`Unsupported LLM provider: ${provider}`);
+}
+
+async function callGeminiAnalysis(prompt, paper) {
+  return callGeminiJson({
+    prompt,
+    schema: AnalysisJsonSchema,
+    context: `analysis ${paper.pmid}`,
+  });
+}
+
+async function callGeminiRanking(prompt) {
+  return callGeminiJson({
+    prompt,
+    schema: RankingJsonSchema,
+    context: 'candidate ranking',
+  });
+}
+
+async function callGeminiJson({ prompt, schema, context }) {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) throw new Error('GEMINI_API_KEY is missing');
+
+  const model = process.env.GEMINI_MODEL || 'gemini-3.5-flash';
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+  const response = await fetchWithRetry(url, {
+    method: 'POST',
+    headers: {
+      'x-goog-api-key': apiKey,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      contents: [
+        {
+          role: 'user',
+          parts: [
+            {
+              text: `You are an emergency medicine and critical care physician. Return only validated JSON.\n\n${prompt}`,
+            },
+          ],
+        },
+      ],
+      generationConfig: {
+        responseMimeType: 'application/json',
+        responseSchema: geminiResponseSchema(schema),
+      },
+    }),
+  });
+
+  const data = await response.json();
+  const content = data?.candidates?.[0]?.content?.parts?.map((part) => part.text).filter(Boolean).join('\n');
+  if (!content) throw new Error(`Gemini response did not include message content for ${context}`);
+  return JSON.parse(content);
+}
+
+function geminiResponseSchema(schema) {
+  if (Array.isArray(schema)) return schema.map(geminiResponseSchema);
+  if (!schema || typeof schema !== 'object') return schema;
+
+  const unsupportedKeys = new Set(['additionalProperties', '$schema']);
+  return Object.fromEntries(
+    Object.entries(schema)
+      .filter(([key]) => !unsupportedKeys.has(key))
+      .map(([key, value]) => [key, geminiResponseSchema(value)])
+  );
 }
 
 async function callOpenAi(prompt, paper) {
@@ -185,6 +307,40 @@ Abstract:
 ${abstract}`;
 }
 
+function buildRankingPrompt(candidates, topN) {
+  const papers = candidates.map((paper, index) => formatCandidateForRanking(paper, index + 1)).join('\n\n');
+
+  return `Select the Top ${topN} papers for a daily emergency medicine / critical care clinician newsletter.
+
+Return a single JSON object matching the provided schema.
+
+Selection criteria:
+- Prioritize practice-changing or high-yield clinical relevance for EM/CCM clinicians.
+- Prefer guidelines, randomized trials, systematic reviews, meta-analyses, high-impact journals, and large actionable observational studies.
+- De-prioritize case reports, animal/preclinical work, narrow education/QI papers, and papers with weak direct patient-care relevance.
+- Consider deterministic screening score, but override it when the abstract suggests low clinical usefulness.
+- Keep topic diversity when papers are otherwise similar.
+- Select only PMIDs from the candidate list.
+- rationale_ko should briefly explain why the paper deserves or does not deserve priority.
+
+Candidates:
+${papers}`;
+}
+
+function formatCandidateForRanking(paper, index) {
+  const screening = paper.screeningData ?? {};
+  const abstract = String(paper.abstract ?? '').replace(/\s+/g, ' ').slice(0, 1200);
+
+  return `${index}. PMID: ${paper.pmid}
+Title: ${paper.title}
+Journal: ${paper.journal} (${paper.pubDate})
+Study type signal: ${screening.studyType ?? 'Other'}
+Deterministic score: ${screening.score ?? 0}
+Screening reasons: ${(screening.reasons ?? []).join('; ') || 'none'}
+Publication types: ${(paper.publicationTypes ?? []).join(', ') || 'Not reported'}
+Abstract: ${abstract}`;
+}
+
 function fallbackWithError(paper, error) {
   return {
     analysis: fallbackAnalysis(paper, error.message),
@@ -245,6 +401,10 @@ function clampScore(value) {
   return Math.max(0, Math.min(10, Number(value) || 0));
 }
 
+function unique(values) {
+  return [...new Set(values)];
+}
+
 function fallbackEvidenceLevel(studyType) {
   if (['Meta-Analysis', 'Systematic Review', 'Randomized Controlled Trial', 'Practice Guideline'].includes(studyType)) {
     return 'Moderate';
@@ -252,4 +412,3 @@ function fallbackEvidenceLevel(studyType) {
   if (studyType === 'Clinical Trial' || studyType === 'Observational') return 'Low';
   return 'Very Low';
 }
-
