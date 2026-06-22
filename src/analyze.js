@@ -92,10 +92,12 @@ export async function analyzeSinglePaper({ paper, config, options }) {
   const enrichedPaper = await enrichPaperContext({ paper, config, options });
   const maxChars = Number(config.topics.analysis?.maxAbstractChars ?? 4500);
   const maxFullTextChars = Number(config.topics.analysis?.maxFullTextChars ?? 16000);
-  const prompt = buildPrompt(enrichedPaper, maxChars, maxFullTextChars);
+  const maxWebContextChars = Number(config.topics.analysis?.maxWebContextChars ?? 12000);
+  const prompt = buildPrompt(enrichedPaper, maxChars, maxFullTextChars, maxWebContextChars);
+  const geminiSearchGrounding = resolveGeminiSearchGrounding(config, options);
 
   try {
-    const raw = await callProvider({ provider, prompt, paper: enrichedPaper });
+    const raw = await callProvider({ provider, prompt, paper: enrichedPaper, geminiSearchGrounding });
     const analysis = validateAnalysis(raw, enrichedPaper);
     return { analysis };
   } catch (firstError) {
@@ -105,7 +107,7 @@ export async function analyzeSinglePaper({ paper, config, options }) {
 
     try {
       const repairPrompt = `${prompt}\n\nYour previous response failed schema validation. Return only a valid JSON object that exactly matches the requested schema. Do not include markdown.`;
-      const repaired = await callProvider({ provider, prompt: repairPrompt, paper: enrichedPaper });
+      const repaired = await callProvider({ provider, prompt: repairPrompt, paper: enrichedPaper, geminiSearchGrounding });
       const analysis = validateAnalysis(repaired, enrichedPaper);
       return { analysis };
     } catch (secondError) {
@@ -123,18 +125,27 @@ function resolveProvider(options) {
   return 'none';
 }
 
-async function callProvider({ provider, prompt, paper }) {
-  if (provider === 'gemini') return callGeminiAnalysis(prompt, paper);
+function resolveGeminiSearchGrounding(config, options) {
+  if (typeof options.geminiSearchGrounding === 'boolean') return options.geminiSearchGrounding;
+  if (process.env.GEMINI_SEARCH_GROUNDING) {
+    return ['1', 'true', 'yes', 'on'].includes(process.env.GEMINI_SEARCH_GROUNDING.toLowerCase());
+  }
+  return Boolean(config.topics.analysis?.geminiSearchGrounding);
+}
+
+async function callProvider({ provider, prompt, paper, geminiSearchGrounding }) {
+  if (provider === 'gemini') return callGeminiAnalysis(prompt, paper, { geminiSearchGrounding });
   if (provider === 'openai') return callOpenAi(prompt, paper);
   if (provider === 'anthropic') return callAnthropic(prompt, paper);
   throw new Error(`Unsupported LLM provider: ${provider}`);
 }
 
-async function callGeminiAnalysis(prompt, paper) {
+async function callGeminiAnalysis(prompt, paper, { geminiSearchGrounding = false } = {}) {
   return callGeminiJson({
     prompt,
     schema: AnalysisJsonSchema,
     context: `analysis ${paper.pmid}`,
+    geminiSearchGrounding,
   });
 }
 
@@ -146,40 +157,49 @@ async function callGeminiRanking(prompt) {
   });
 }
 
-async function callGeminiJson({ prompt, schema, context }) {
+async function callGeminiJson({ prompt, schema, context, geminiSearchGrounding = false }) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error('GEMINI_API_KEY is missing');
 
   const model = process.env.GEMINI_MODEL || 'gemini-3.5-flash';
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+  const body = {
+    contents: [
+      {
+        role: 'user',
+        parts: [
+          {
+            text: `You are an emergency medicine and critical care physician. Return only validated JSON.\n\n${prompt}`,
+          },
+        ],
+      },
+    ],
+    generationConfig: {
+      responseMimeType: 'application/json',
+      responseSchema: geminiResponseSchema(schema),
+    },
+  };
+
+  if (geminiSearchGrounding) {
+    body.tools = [{ google_search: {} }];
+  }
+
   const response = await fetchWithRetry(url, {
     method: 'POST',
     headers: {
       'x-goog-api-key': apiKey,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      contents: [
-        {
-          role: 'user',
-          parts: [
-            {
-              text: `You are an emergency medicine and critical care physician. Return only validated JSON.\n\n${prompt}`,
-            },
-          ],
-        },
-      ],
-      generationConfig: {
-        responseMimeType: 'application/json',
-        responseSchema: geminiResponseSchema(schema),
-      },
-    }),
+    body: JSON.stringify(body),
   });
 
   const data = await response.json();
   const content = data?.candidates?.[0]?.content?.parts?.map((part) => part.text).filter(Boolean).join('\n');
   if (!content) throw new Error(`Gemini response did not include message content for ${context}`);
-  return JSON.parse(content);
+  const parsed = JSON.parse(content);
+  const groundingMetadata = data?.candidates?.[0]?.groundingMetadata;
+  if (groundingMetadata) parsed.__groundingMetadata = groundingMetadata;
+  return parsed;
 }
 
 function geminiResponseSchema(schema) {
@@ -265,6 +285,7 @@ async function callAnthropic(prompt) {
 }
 
 function validateAnalysis(raw, paper) {
+  const groundingSources = extractGroundingSources(raw.__groundingMetadata);
   const parsed = AnalysisSchema.parse({
     ...raw,
     pmid: String(raw.pmid || paper.pmid),
@@ -273,17 +294,32 @@ function validateAnalysis(raw, paper) {
 
   return {
     ...parsed,
-    paper,
+    analysisNotes: groundingSources.length
+      ? [...parsed.analysisNotes, `Gemini Google Search grounding sources: ${groundingSources.map((source) => source.title).join('; ')}`]
+      : parsed.analysisNotes,
+    paper: groundingSources.length ? { ...paper, geminiGroundingSources: groundingSources } : paper,
     source: 'llm',
   };
 }
 
-function buildPrompt(paper, maxChars, maxFullTextChars) {
+function extractGroundingSources(metadata) {
+  const chunks = metadata?.groundingChunks ?? [];
+  return chunks
+    .map((chunk) => chunk.web)
+    .filter((web) => web?.uri)
+    .map((web) => ({
+      title: String(web.title || web.uri).slice(0, 160),
+      uri: web.uri,
+    }))
+    .slice(0, 8);
+}
+
+function buildPrompt(paper, maxChars, maxFullTextChars, maxWebContextChars) {
   const abstract = String(paper.abstract ?? '').slice(0, maxChars);
   const fullText = String(paper.fullText ?? '').slice(0, maxFullTextChars);
-  const contextSource = paper.contextSource?.type === 'pmc'
-    ? `Open full text from PMC (${paper.contextSource.pmcid})`
-    : `Abstract only (${paper.contextSource?.reason ?? 'no open full text attached'})`;
+  const enrichmentContext = String(paper.enrichmentContext ?? '').slice(0, maxWebContextChars);
+  const contextSource = formatContextSource(paper.contextSource);
+  const sourceLabels = (paper.enrichmentSources ?? []).map((source) => source.label).join('; ') || 'none';
   const score = paper.screeningData?.score ?? 0;
   const studyType = paper.screeningData?.studyType ?? 'Other';
 
@@ -292,9 +328,12 @@ function buildPrompt(paper, maxChars, maxFullTextChars) {
 Return a single JSON object matching the provided schema.
 
 Rules:
-- Do not invent statistics. Use only values explicitly stated in the title or abstract.
+- Do not invent statistics. Use only values explicitly stated in the abstract, open full text excerpt, or public enrichment context.
+- Use public enrichment context from PubMed metadata, ClinicalTrials.gov, Crossref, and DOI landing pages to deepen country/setting, population, intervention/comparator details, outcomes, limitations, and applicability.
+- When using trial-registry or landing-page metadata, phrase it as public registry/metadata information if it is not explicitly in the article abstract.
+- Do not say country, setting, study arms, trial design, or outcomes are "not reported" if they appear in public enrichment context.
+- If exact drug dose, route, baseline balance, subgroup data, exact values, or follow-up are absent from all provided sources, say they are not available in the accessible sources.
 - If open full text is provided, use it to deepen PICO, outcomes, limitations, and applicability.
-- If country, setting, baseline balance, subgroup data, exact values, or follow-up are not stated, say they are not reported.
 - Preserve important English study terms, drug names, endpoints, effect estimates, and statistical notation.
 - For every English field, provide the Korean paired field when the schema asks for *_ko.
 - detailedPico should be rich enough that a clinician can understand what was actually done without opening the paper.
@@ -313,6 +352,7 @@ Authors: ${(paper.authors ?? []).join(', ') || 'Not reported'}
 Study type signal: ${studyType}
 Deterministic screening score: ${score}
 Analysis source: ${contextSource}
+Public enrichment sources: ${sourceLabels}
 Publication types: ${(paper.publicationTypes ?? []).join(', ') || 'Not reported'}
 MeSH terms: ${(paper.meshTerms ?? []).join(', ') || 'Not reported'}
 Keywords: ${(paper.keywords ?? []).join(', ') || 'Not reported'}
@@ -320,7 +360,16 @@ Keywords: ${(paper.keywords ?? []).join(', ') || 'Not reported'}
 Abstract:
 ${abstract}
 
+${enrichmentContext ? `Public enrichment context:\n${enrichmentContext}\n` : ''}
+
 ${fullText ? `Open full text excerpt:\n${fullText}` : ''}`;
+}
+
+function formatContextSource(contextSource = {}) {
+  if (contextSource.type === 'pmc+metadata') return `Open full text from PMC (${contextSource.pmcid}) plus public metadata`;
+  if (contextSource.type === 'pmc') return `Open full text from PMC (${contextSource.pmcid})`;
+  if (contextSource.type === 'public-metadata') return `Abstract plus public metadata (${contextSource.reason ?? 'no PMC full text'})`;
+  return `Abstract only (${contextSource.reason ?? 'no open full text attached'})`;
 }
 
 function buildRankingPrompt(candidates, topN) {

@@ -577,6 +577,12 @@ function renderLinks(result) {
   if (paper.pubmedUrl) links.push(`<a href="${escapeAttribute(paper.pubmedUrl)}" target="_blank" rel="noopener">PubMed</a>`);
   if (paper.doi) links.push(`<a href="https://doi.org/${escapeAttribute(paper.doi)}" target="_blank" rel="noopener">DOI</a>`);
   if (paper.pmcid) links.push(`<a href="https://pmc.ncbi.nlm.nih.gov/articles/${escapeAttribute(paper.pmcid)}/" target="_blank" rel="noopener">PMC</a>`);
+  for (const nctId of paper.nctIds ?? []) {
+    links.push(`<a href="https://clinicaltrials.gov/study/${escapeAttribute(nctId)}" target="_blank" rel="noopener">${escapeHtml(nctId)}</a>`);
+  }
+  for (const source of paper.geminiGroundingSources ?? []) {
+    links.push(`<a href="${escapeAttribute(source.uri)}" target="_blank" rel="noopener">Search: ${escapeHtml(source.title)}</a>`);
+  }
 
   return `<section class="section">
     <div class="section-head">
@@ -631,7 +637,9 @@ function shortStudyType(studyType = '', evidenceLevel = '') {
 }
 
 function contextLabel(contextSource = {}) {
+  if (contextSource.type === 'pmc+metadata') return 'PMC + metadata';
   if (contextSource.type === 'pmc') return 'PMC full text';
+  if (contextSource.type === 'public-metadata') return 'Abstract + metadata';
   if (contextSource.type === 'abstract') return 'Abstract only';
   return 'Source context';
 }

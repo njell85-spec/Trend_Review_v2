@@ -123,12 +123,15 @@ function parseArticle(item) {
     const publicationTypes = normalizeArray(article?.PublicationTypeList?.PublicationType)
       .map(valueOf)
       .filter(Boolean);
+    const authors = parseAuthors(article?.AuthorList?.Author);
+    const authorAffiliations = parseAffiliations(article?.AuthorList?.Author);
 
     return {
       pmid: String(pmid),
       title,
       abstract,
-      authors: parseAuthors(article?.AuthorList?.Author),
+      authors,
+      authorAffiliations,
       journal: String(journal?.Title ?? journal?.ISOAbbreviation ?? ''),
       pubDate: parsePubDate(journal?.JournalIssue?.PubDate),
       publicationTypes,
@@ -136,6 +139,7 @@ function parseArticle(item) {
       keywords: parseKeywords(medline?.KeywordList),
       doi: findArticleId(articleIds, 'doi'),
       pmcid: findArticleId(articleIds, 'pmc'),
+      nctIds: extractNctIds([title, abstract, ...articleIds.map(valueOf)].join(' ')),
       pubmedUrl: `https://pubmed.ncbi.nlm.nih.gov/${pmid}/`,
       collectedAt: new Date().toISOString(),
     };
@@ -160,6 +164,15 @@ function parseAuthors(authorList) {
     .slice(0, 8)
     .map((author) => `${author?.LastName ?? ''} ${author?.Initials ?? ''}`.trim())
     .filter(Boolean);
+}
+
+function parseAffiliations(authorList) {
+  return unique(
+    normalizeArray(authorList)
+      .flatMap((author) => normalizeArray(author?.AffiliationInfo)
+        .map((info) => normalizeText(valueOf(info?.Affiliation))))
+      .filter(Boolean)
+  ).slice(0, 12);
 }
 
 function parseMesh(meshList) {
@@ -188,6 +201,14 @@ function findArticleId(articleIds, type) {
   return String(valueOf(match));
 }
 
+function extractNctIds(text = '') {
+  return unique(String(text).match(/NCT\d{8}/gi) ?? []).map((id) => id.toUpperCase());
+}
+
+function unique(values) {
+  return [...new Set(values)];
+}
+
 function normalizeArray(value) {
   if (!value) return [];
   return Array.isArray(value) ? value : [value];
@@ -201,4 +222,3 @@ function valueOf(value) {
 function normalizeText(value) {
   return String(value ?? '').replace(/\s+/g, ' ').trim();
 }
-

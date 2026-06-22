@@ -70,5 +70,7 @@ screening:
 analysis:
   maxAbstractChars: 4500
   maxFullTextChars: 16000
+  maxWebContextChars: 12000
+  geminiSearchGrounding: false
   retryInvalidSchema: true
   fallbackLanguage: ko

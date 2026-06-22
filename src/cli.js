@@ -28,6 +28,8 @@ function parseArgs(args) {
     else if (arg === '--skip-llm') options.skipLlm = true;
     else if (arg === '--ignore-seen') options.ignoreSeen = true;
     else if (arg === '--no-seen-update') options.noSeenUpdate = true;
+    else if (arg === '--gemini-search-grounding') options.geminiSearchGrounding = true;
+    else if (arg === '--no-gemini-search-grounding') options.geminiSearchGrounding = false;
     else if (arg === '--date') {
       options.date = next;
       index += 1;
@@ -69,6 +71,10 @@ Options:
   --skip-llm             Use fallback summaries even in live runs
   --ignore-seen          Do not filter data/seen_pmids.json
   --no-seen-update       Do not write collected PMIDs to seen_pmids.json
+  --gemini-search-grounding
+                         Allow Gemini API Google Search grounding for analysis
+  --no-gemini-search-grounding
+                         Disable Gemini API Google Search grounding for analysis
   --date YYYY-MM-DD      Run date id
   --days N               PubMed search window
   --max-papers N         PubMed retmax

@@ -10,7 +10,8 @@ This project implements:
 - deterministic pre-screening before any LLM call
 - Gemini re-ranking from 30 screened candidates to a daily Top 1
 - detailed PICO/outcome/statistics analysis with runtime schema validation
-- optional PMC open full-text enrichment when a PMCID is available
+- public-source enrichment from PMC, ClinicalTrials.gov, Crossref, DOI landing metadata, and PubMed affiliations
+- optional Gemini Google Search grounding for selected-paper analysis when explicitly enabled
 - fallback summaries when LLM output is missing or invalid
 - JSON, Markdown, HTML reports
 - mobile-first static dashboard in `public/index.html`
@@ -111,6 +112,7 @@ The default protocol is optimized for a digest that can actually be read every m
 - ask Gemini to re-rank those 30 candidates
 - analyze and publish Top 1 by default
 - fetch PMC open full text for the selected paper when a PMCID is available
+- if PMC full text is unavailable, enrich from public registry/metadata sources such as ClinicalTrials.gov, Crossref, DOI landing metadata, and PubMed affiliations
 - write only the published Top papers to `data/seen_pmids.json`
 
 Recommended operating modes:
@@ -118,6 +120,9 @@ Recommended operating modes:
 ```bash
 # Daily Top 1
 node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 1
+
+# Daily Top 1 with Gemini Google Search grounding enabled for the selected paper
+node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 1 --gemini-search-grounding
 
 # Slightly higher-volume daily digest
 node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 2
