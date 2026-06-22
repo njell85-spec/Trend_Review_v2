@@ -1,0 +1,460 @@
+{
+  "runId": "2026-06-22",
+  "generatedAt": "2026-06-22T04:31:19.183Z",
+  "dashboardUrl": "",
+  "status": {
+    "runId": "2026-06-22",
+    "status": "success",
+    "step": "done",
+    "startedAt": "2026-06-22T04:31:19.157Z",
+    "finishedAt": "2026-06-22T04:31:19.183Z",
+    "counts": {
+      "fetched": 4,
+      "screened": 3,
+      "analyzed": 3,
+      "fallback": 3
+    },
+    "outputs": {
+      "json": "reports/2026-06-22.json",
+      "markdown": "reports/2026-06-22.md",
+      "html": "reports/2026-06-22.html",
+      "publicIndex": "public/index.html",
+      "latestJson": "public/latest.json",
+      "statusJson": "public/status.json"
+    },
+    "errors": [],
+    "notifications": [
+      {
+        "provider": "all",
+        "status": "skipped",
+        "reason": "--no-notify"
+      }
+    ]
+  },
+  "counts": {
+    "fetched": 4,
+    "screened": 3,
+    "analyzed": 3,
+    "fallback": 3
+  },
+  "query": "(\"emergency medicine\"[MeSH Terms] OR \"critical care\"[MeSH Terms] OR \"intensive care units\"[MeSH Terms] OR \"sepsis\"[MeSH Terms] OR \"shock\"[MeSH Terms] OR resuscitation[Title/Abstract] OR airway[Title/Abstract] OR trauma[Title/Abstract]) AND humans[MeSH Terms]\n",
+  "searchWindow": {
+    "days": 30
+  },
+  "topPapers": [
+    {
+      "pmid": "99999002",
+      "title": "Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis",
+      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.",
+      "clinicalQuestion": "What does this meta-analysis suggest for emergency medicine or critical care practice?",
+      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "pico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
+        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
+        "outcome": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+      },
+      "pico_ko": {
+        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
+        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
+        "outcome": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+      },
+      "keyFindings": [
+        "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+      ],
+      "keyFindings_ko": [
+        "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+      ],
+      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
+      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
+      "limitations": "Fallback summary generated because: LLM provider not configured",
+      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 10,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "LLM provider not configured"
+      ],
+      "paper": {
+        "pmid": "99999002",
+        "title": "Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis",
+        "abstract": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults. Data Sources: MEDLINE, Embase, and trial registries through May 2026. Study Selection: Randomized trials and prospective cohorts in emergency departments and ICUs. Data Synthesis: Twenty-one studies including 9340 intubations were included. Video laryngoscopy increased first-pass success (OR 1.42, 95% CI 1.18 to 1.71) and reduced severe hypoxemia (OR 0.78, 95% CI 0.63 to 0.97). Conclusions: Video laryngoscopy improves airway outcomes in critically ill adults.",
+        "authors": [
+          "Lee S",
+          "Morgan B"
+        ],
+        "journal": "Annals of Emergency Medicine",
+        "pubDate": "2026-06-12",
+        "publicationTypes": [
+          "Meta-Analysis",
+          "Systematic Review"
+        ],
+        "meshTerms": [
+          "Intubation, Intratracheal",
+          "Critical Care",
+          "Emergency Medicine"
+        ],
+        "keywords": [
+          "airway",
+          "intubation",
+          "video laryngoscopy"
+        ],
+        "doi": "10.1000/example.2",
+        "pmcid": "",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999002/",
+        "collectedAt": "2026-06-21T00:00:00.000Z",
+        "screeningData": {
+          "score": 17,
+          "relevanceMatches": [
+            "emergency department",
+            "emergency medicine",
+            "critical care",
+            "ICU",
+            "airway",
+            "intubation"
+          ],
+          "studyType": "Meta-Analysis",
+          "sampleSize": 9340,
+          "journalBoost": 3,
+          "reasons": [
+            "abstract available",
+            "topic match: emergency department, emergency medicine, critical care, ICU",
+            "study design: Meta-Analysis",
+            "sample size signal: N=9340",
+            "journal boost: Annals of Emergency Medicine"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        }
+      },
+      "source": "fallback"
+    },
+    {
+      "pmid": "99999001",
+      "title": "Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial",
+      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: Background: Early septic shock management in the emergency department may influence mortality.",
+      "clinicalQuestion": "What does this randomized controlled trial suggest for emergency medicine or critical care practice?",
+      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "pico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
+        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
+        "outcome": "Background: Early septic shock management in the emergency department may influence mortality."
+      },
+      "pico_ko": {
+        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
+        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
+        "outcome": "Background: Early septic shock management in the emergency department may influence mortality."
+      },
+      "keyFindings": [
+        "Background: Early septic shock management in the emergency department may influence mortality."
+      ],
+      "keyFindings_ko": [
+        "Background: Early septic shock management in the emergency department may influence mortality."
+      ],
+      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
+      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
+      "limitations": "Fallback summary generated because: LLM provider not configured",
+      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 10,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "LLM provider not configured"
+      ],
+      "paper": {
+        "pmid": "99999001",
+        "title": "Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial",
+        "abstract": "Background: Early septic shock management in the emergency department may influence mortality. Methods: We randomized 1280 adult patients with septic shock to early norepinephrine plus usual care or usual care alone. The primary outcome was 28-day mortality. Results: Mortality was 21.4% in the early norepinephrine group and 25.8% in usual care (risk ratio 0.83, 95% CI 0.70 to 0.99). Serious adverse events were similar. Conclusions: Early norepinephrine reduced 28-day mortality without increasing serious adverse events.",
+        "authors": [
+          "Kim J",
+          "Patel R",
+          "Garcia M"
+        ],
+        "journal": "Critical Care Medicine",
+        "pubDate": "2026-06-14",
+        "publicationTypes": [
+          "Randomized Controlled Trial"
+        ],
+        "meshTerms": [
+          "Septic Shock",
+          "Emergency Service, Hospital",
+          "Vasoconstrictor Agents"
+        ],
+        "keywords": [
+          "septic shock",
+          "vasopressor",
+          "emergency department"
+        ],
+        "doi": "10.1000/example.1",
+        "pmcid": "",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999001/",
+        "collectedAt": "2026-06-21T00:00:00.000Z",
+        "screeningData": {
+          "score": 16,
+          "relevanceMatches": [
+            "emergency department",
+            "critical care",
+            "septic shock",
+            "vasopressor"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 1280,
+          "journalBoost": 3,
+          "reasons": [
+            "abstract available",
+            "topic match: emergency department, critical care, septic shock, vasopressor",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=1280",
+            "journal boost: Critical Care Medicine"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        }
+      },
+      "source": "fallback"
+    },
+    {
+      "pmid": "99999003",
+      "title": "Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial",
+      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.",
+      "clinicalQuestion": "What does this randomized controlled trial suggest for emergency medicine or critical care practice?",
+      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "pico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
+        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
+        "outcome": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+      },
+      "pico_ko": {
+        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
+        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
+        "outcome": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+      },
+      "keyFindings": [
+        "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+      ],
+      "keyFindings_ko": [
+        "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+      ],
+      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
+      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
+      "limitations": "Fallback summary generated because: LLM provider not configured",
+      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 10,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "LLM provider not configured"
+      ],
+      "paper": {
+        "pmid": "99999003",
+        "title": "Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial",
+        "abstract": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain. Methods: In a pragmatic cluster randomized trial, 44 emergency departments assigned 5162 adults with suspected hemorrhagic shock to balanced crystalloids or saline during initial resuscitation. The primary outcome was 30-day mortality. Results: Mortality was 18.9% with balanced crystalloids and 21.2% with saline (adjusted OR 0.87, 95% CI 0.76 to 1.00). Acute kidney injury was lower with balanced crystalloids. Conclusions: Balanced crystalloids may modestly reduce mortality and kidney injury.",
+        "authors": [
+          "Smith A",
+          "Chen L",
+          "Rao P"
+        ],
+        "journal": "JAMA",
+        "pubDate": "2026-06-10",
+        "publicationTypes": [
+          "Clinical Trial"
+        ],
+        "meshTerms": [
+          "Hemorrhagic Shock",
+          "Wounds and Injuries",
+          "Fluid Therapy"
+        ],
+        "keywords": [
+          "trauma",
+          "shock",
+          "resuscitation"
+        ],
+        "doi": "10.1000/example.3",
+        "pmcid": "",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999003/",
+        "collectedAt": "2026-06-21T00:00:00.000Z",
+        "screeningData": {
+          "score": 16,
+          "relevanceMatches": [
+            "emergency department",
+            "resuscitation",
+            "trauma"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 5162,
+          "journalBoost": 4,
+          "reasons": [
+            "abstract available",
+            "topic match: emergency department, resuscitation, trauma",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=5162",
+            "journal boost: JAMA"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        }
+      },
+      "source": "fallback"
+    }
+  ],
+  "candidates": [
+    {
+      "pmid": "99999002",
+      "title": "Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis",
+      "abstract": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults. Data Sources: MEDLINE, Embase, and trial registries through May 2026. Study Selection: Randomized trials and prospective cohorts in emergency departments and ICUs. Data Synthesis: Twenty-one studies including 9340 intubations were included. Video laryngoscopy increased first-pass success (OR 1.42, 95% CI 1.18 to 1.71) and reduced severe hypoxemia (OR 0.78, 95% CI 0.63 to 0.97). Conclusions: Video laryngoscopy improves airway outcomes in critically ill adults.",
+      "authors": [
+        "Lee S",
+        "Morgan B"
+      ],
+      "journal": "Annals of Emergency Medicine",
+      "pubDate": "2026-06-12",
+      "publicationTypes": [
+        "Meta-Analysis",
+        "Systematic Review"
+      ],
+      "meshTerms": [
+        "Intubation, Intratracheal",
+        "Critical Care",
+        "Emergency Medicine"
+      ],
+      "keywords": [
+        "airway",
+        "intubation",
+        "video laryngoscopy"
+      ],
+      "doi": "10.1000/example.2",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999002/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 17,
+        "relevanceMatches": [
+          "emergency department",
+          "emergency medicine",
+          "critical care",
+          "ICU",
+          "airway",
+          "intubation"
+        ],
+        "studyType": "Meta-Analysis",
+        "sampleSize": 9340,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, emergency medicine, critical care, ICU",
+          "study design: Meta-Analysis",
+          "sample size signal: N=9340",
+          "journal boost: Annals of Emergency Medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "99999001",
+      "title": "Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial",
+      "abstract": "Background: Early septic shock management in the emergency department may influence mortality. Methods: We randomized 1280 adult patients with septic shock to early norepinephrine plus usual care or usual care alone. The primary outcome was 28-day mortality. Results: Mortality was 21.4% in the early norepinephrine group and 25.8% in usual care (risk ratio 0.83, 95% CI 0.70 to 0.99). Serious adverse events were similar. Conclusions: Early norepinephrine reduced 28-day mortality without increasing serious adverse events.",
+      "authors": [
+        "Kim J",
+        "Patel R",
+        "Garcia M"
+      ],
+      "journal": "Critical Care Medicine",
+      "pubDate": "2026-06-14",
+      "publicationTypes": [
+        "Randomized Controlled Trial"
+      ],
+      "meshTerms": [
+        "Septic Shock",
+        "Emergency Service, Hospital",
+        "Vasoconstrictor Agents"
+      ],
+      "keywords": [
+        "septic shock",
+        "vasopressor",
+        "emergency department"
+      ],
+      "doi": "10.1000/example.1",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999001/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 16,
+        "relevanceMatches": [
+          "emergency department",
+          "critical care",
+          "septic shock",
+          "vasopressor"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 1280,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, critical care, septic shock, vasopressor",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=1280",
+          "journal boost: Critical Care Medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "99999003",
+      "title": "Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial",
+      "abstract": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain. Methods: In a pragmatic cluster randomized trial, 44 emergency departments assigned 5162 adults with suspected hemorrhagic shock to balanced crystalloids or saline during initial resuscitation. The primary outcome was 30-day mortality. Results: Mortality was 18.9% with balanced crystalloids and 21.2% with saline (adjusted OR 0.87, 95% CI 0.76 to 1.00). Acute kidney injury was lower with balanced crystalloids. Conclusions: Balanced crystalloids may modestly reduce mortality and kidney injury.",
+      "authors": [
+        "Smith A",
+        "Chen L",
+        "Rao P"
+      ],
+      "journal": "JAMA",
+      "pubDate": "2026-06-10",
+      "publicationTypes": [
+        "Clinical Trial"
+      ],
+      "meshTerms": [
+        "Hemorrhagic Shock",
+        "Wounds and Injuries",
+        "Fluid Therapy"
+      ],
+      "keywords": [
+        "trauma",
+        "shock",
+        "resuscitation"
+      ],
+      "doi": "10.1000/example.3",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999003/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 16,
+        "relevanceMatches": [
+          "emergency department",
+          "resuscitation",
+          "trauma"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 5162,
+        "journalBoost": 4,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, resuscitation, trauma",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=5162",
+          "journal boost: JAMA"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    }
+  ],
+  "excludedCount": 1,
+  "errors": []
+}

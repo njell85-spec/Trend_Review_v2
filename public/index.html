@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #18212f;
+      --muted: #697386;
+      --line: #dfe5ee;
+      --page: #f6f8fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #244c9a;
+      --plum: #6f3f85;
+      --coral: #b65346;
+      --gold: #90661c;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #ebf1ff;
+      --soft-coral: #fff0ed;
+      --shadow: 0 12px 32px rgba(24, 33, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.52;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 1040px);
+      margin: 0 auto;
+    }
+    .mast {
+      background:
+        linear-gradient(90deg, rgba(15,118,110,.16), transparent 36%),
+        linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 18px;
+    }
+    .topline {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.55rem);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .95rem;
+      max-width: 56rem;
+    }
+    .run-state {
+      display: inline-grid;
+      gap: 3px;
+      justify-items: end;
+      white-space: nowrap;
+      color: var(--muted);
+      font-size: .8rem;
+      padding-top: 3px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px;
+      min-width: 0;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.45rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      color: var(--muted);
+      display: block;
+      margin-top: 4px;
+      font-size: .75rem;
+    }
+    main {
+      padding: 18px 0 34px;
+      display: grid;
+      gap: 14px;
+    }
+    .today {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .today-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      padding: 15px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(90deg, #ffffff, #f8fafc);
+    }
+    .today-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 26px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: var(--soft-teal);
+      color: var(--teal);
+      font-size: .75rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .today-date {
+      font-size: 1.05rem;
+      font-weight: 850;
+    }
+    .today-meta {
+      color: var(--muted);
+      font-size: .86rem;
+      align-self: center;
+      white-space: nowrap;
+    }
+    .quick-list {
+      display: grid;
+      gap: 9px;
+      padding: 14px 15px 16px;
+    }
+    .quick-item {
+      display: grid;
+      grid-template-columns: 26px minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+    }
+    .quick-index {
+      color: var(--teal);
+      font-weight: 850;
+      line-height: 1.45;
+    }
+    .quick-title {
+      font-weight: 780;
+      font-size: .95rem;
+    }
+    .quick-meta {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+    .paper-stack {
+      display: grid;
+      gap: 12px;
+    }
+    details.paper {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details.paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+    }
+    .rank {
+      width: 31px;
+      height: 31px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background: var(--teal);
+      font-size: .78rem;
+      font-weight: 850;
+    }
+    .rank.two { background: var(--blue); }
+    .rank.three { background: var(--plum); }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      line-height: 1.32;
+      letter-spacing: 0;
+      font-weight: 850;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+    .tag {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 4px 9px;
+      font-size: .76rem;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      background: #fbfcfe;
+      padding: 15px;
+      display: grid;
+      gap: 14px;
+    }
+    .callout {
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--soft-blue);
+      border: 1px solid #d8e3ff;
+    }
+    .callout strong,
+    .section h3 {
+      display: block;
+      margin: 0 0 6px;
+      color: var(--blue);
+      font-size: .84rem;
+      font-weight: 850;
+    }
+    .section {
+      display: grid;
+      gap: 7px;
+    }
+    .section p { margin: 0; }
+    .ko {
+      color: #536073;
+      font-size: .9rem;
+    }
+    .pico-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+    }
+    .pico {
+      border: 1px solid #e2e8f0;
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      min-width: 0;
+    }
+    .pico b {
+      display: block;
+      color: var(--teal);
+      font-size: .78rem;
+      margin-bottom: 5px;
+    }
+    .bottom-line {
+      background: var(--soft-coral);
+      border: 1px solid #ffd8d0;
+      border-radius: 8px;
+      padding: 12px;
+    }
+    .bottom-line h3 { color: var(--coral); }
+    ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+    li + li { margin-top: 5px; }
+    .days {
+      display: grid;
+      gap: 10px;
+    }
+    details.day {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .day-summary {
+      padding: 12px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .day-date {
+      font-weight: 850;
+    }
+    .day-list {
+      padding: 0 14px 13px;
+      color: var(--muted);
+      font-size: .84rem;
+      display: grid;
+      gap: 5px;
+    }
+    .journal {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .journal-head {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 850;
+    }
+    .journal-table {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+      font-size: .8rem;
+    }
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 9px 10px;
+      border-bottom: 1px solid #eef2f7;
+    }
+    th {
+      color: var(--muted);
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 24px, 1040px); }
+      .topline,
+      .today-head { grid-template-columns: 1fr; }
+      .run-state { justify-items: start; white-space: normal; }
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .today-meta { white-space: normal; }
+      .paper-summary {
+        grid-template-columns: 34px minmax(0, 1fr);
+      }
+      .paper-summary .tag {
+        grid-column: 2;
+        justify-self: start;
+      }
+      .pico-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">Emergency Medicine & Critical Care Medicine literature briefing</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 6. 22. 오후 1:31</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>2</b><span>Days</span></div>
+        <div class="stat"><b>4</b><span>Fetched</span></div>
+        <div class="stat"><b>3</b><span>Screened</span></div>
+        <div class="stat"><b>3</b><span>Top Papers</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="today">
+  <div class="today-head">
+    <div class="today-title">
+      <span class="pill">Latest</span>
+      <span class="today-date">2026-06-22</span>
+      <span class="muted">3 papers</span>
+    </div>
+    <div class="today-meta">30-day window · 2026. 6. 22. 오후 1:31</div>
+  </div>
+  <div class="quick-list">
+    <div class="quick-item">
+  <div class="quick-index">1</div>
+  <div>
+    <div class="quick-title">Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis</div>
+    <div class="quick-meta">Annals of Emergency Medicine · 2026-06-12 · PMID 99999002</div>
+  </div>
+</div>
+<div class="quick-item">
+  <div class="quick-index">2</div>
+  <div>
+    <div class="quick-title">Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial</div>
+    <div class="quick-meta">Critical Care Medicine · 2026-06-14 · PMID 99999001</div>
+  </div>
+</div>
+<div class="quick-item">
+  <div class="quick-index">3</div>
+  <div>
+    <div class="quick-title">Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial</div>
+    <div class="quick-meta">JAMA · 2026-06-10 · PMID 99999003</div>
+  </div>
+</div>
+  </div>
+</section>
+    <section class="paper-stack">
+      <details class="paper" open>
+  <summary class="paper-summary">
+    <span class="rank">01</span>
+    <div>
+      <h2 class="paper-title">Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis</h2>
+      <div class="paper-meta">Annals of Emergency Medicine · 2026-06-12</div>
+    </div>
+    <span class="tag">Meta</span>
+  </summary>
+  <div class="paper-body">
+    <div class="callout">
+      <strong>Why It Matters</strong>
+      <p>What does this meta-analysis suggest for emergency medicine or critical care practice?</p>
+      <p class="ko">이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.</p>
+    </div>
+    <div class="section">
+  <h3>PICO</h3>
+  <div class="pico-grid">
+    <div class="pico">
+  <b>P</b>
+  <p>Manual review needed. Population details were not reliably extracted.</p>
+  <p class="ko">수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.</p>
+</div>
+    <div class="pico">
+  <b>I</b>
+  <p>Manual review needed. Intervention or exposure details were not reliably extracted.</p>
+  <p class="ko">수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.</p>
+</div>
+    <div class="pico">
+  <b>C</b>
+  <p>Manual review needed. Comparator details were not reliably extracted or not reported.</p>
+  <p class="ko">수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.</p>
+</div>
+    <div class="pico">
+  <b>O</b>
+  <p>Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.</p>
+  <p class="ko">Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.</p>
+</div>
+  </div>
+</div>
+    <div class="section">
+  <h3>Key Findings</h3>
+  <ul>
+    <li>Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.</li>
+  </ul>
+</div>
+    <div class="bottom-line section">
+      <h3>Clinical Bottom Line</h3>
+      <p>Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+      <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+    </div>
+    <div class="section">
+  <h3>Limitations</h3>
+  <p>Fallback summary generated because: LLM provider not configured</p>
+  <p class="ko">다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured</p>
+</div>
+    <div class="section">
+      <h3>Links</h3>
+      <p><a href="https://pubmed.ncbi.nlm.nih.gov/99999002/" target="_blank" rel="noopener">PubMed 99999002</a> · <a href="https://doi.org/10.1000/example.2" target="_blank" rel="noopener">DOI</a></p>
+    </div>
+  </div>
+</details>
+<details class="paper">
+  <summary class="paper-summary">
+    <span class="rank two">02</span>
+    <div>
+      <h2 class="paper-title">Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial</h2>
+      <div class="paper-meta">Critical Care Medicine · 2026-06-14</div>
+    </div>
+    <span class="tag">RCT</span>
+  </summary>
+  <div class="paper-body">
+    <div class="callout">
+      <strong>Why It Matters</strong>
+      <p>What does this randomized controlled trial suggest for emergency medicine or critical care practice?</p>
+      <p class="ko">이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.</p>
+    </div>
+    <div class="section">
+  <h3>PICO</h3>
+  <div class="pico-grid">
+    <div class="pico">
+  <b>P</b>
+  <p>Manual review needed. Population details were not reliably extracted.</p>
+  <p class="ko">수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.</p>
+</div>
+    <div class="pico">
+  <b>I</b>
+  <p>Manual review needed. Intervention or exposure details were not reliably extracted.</p>
+  <p class="ko">수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.</p>
+</div>
+    <div class="pico">
+  <b>C</b>
+  <p>Manual review needed. Comparator details were not reliably extracted or not reported.</p>
+  <p class="ko">수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.</p>
+</div>
+    <div class="pico">
+  <b>O</b>
+  <p>Background: Early septic shock management in the emergency department may influence mortality.</p>
+  <p class="ko">Background: Early septic shock management in the emergency department may influence mortality.</p>
+</div>
+  </div>
+</div>
+    <div class="section">
+  <h3>Key Findings</h3>
+  <ul>
+    <li>Background: Early septic shock management in the emergency department may influence mortality.</li>
+  </ul>
+</div>
+    <div class="bottom-line section">
+      <h3>Clinical Bottom Line</h3>
+      <p>Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+      <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+    </div>
+    <div class="section">
+  <h3>Limitations</h3>
+  <p>Fallback summary generated because: LLM provider not configured</p>
+  <p class="ko">다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured</p>
+</div>
+    <div class="section">
+      <h3>Links</h3>
+      <p><a href="https://pubmed.ncbi.nlm.nih.gov/99999001/" target="_blank" rel="noopener">PubMed 99999001</a> · <a href="https://doi.org/10.1000/example.1" target="_blank" rel="noopener">DOI</a></p>
+    </div>
+  </div>
+</details>
+<details class="paper">
+  <summary class="paper-summary">
+    <span class="rank three">03</span>
+    <div>
+      <h2 class="paper-title">Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial</h2>
+      <div class="paper-meta">JAMA · 2026-06-10</div>
+    </div>
+    <span class="tag">RCT</span>
+  </summary>
+  <div class="paper-body">
+    <div class="callout">
+      <strong>Why It Matters</strong>
+      <p>What does this randomized controlled trial suggest for emergency medicine or critical care practice?</p>
+      <p class="ko">이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.</p>
+    </div>
+    <div class="section">
+  <h3>PICO</h3>
+  <div class="pico-grid">
+    <div class="pico">
+  <b>P</b>
+  <p>Manual review needed. Population details were not reliably extracted.</p>
+  <p class="ko">수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.</p>
+</div>
+    <div class="pico">
+  <b>I</b>
+  <p>Manual review needed. Intervention or exposure details were not reliably extracted.</p>
+  <p class="ko">수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.</p>
+</div>
+    <div class="pico">
+  <b>C</b>
+  <p>Manual review needed. Comparator details were not reliably extracted or not reported.</p>
+  <p class="ko">수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.</p>
+</div>
+    <div class="pico">
+  <b>O</b>
+  <p>Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.</p>
+  <p class="ko">Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.</p>
+</div>
+  </div>
+</div>
+    <div class="section">
+  <h3>Key Findings</h3>
+  <ul>
+    <li>Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.</li>
+  </ul>
+</div>
+    <div class="bottom-line section">
+      <h3>Clinical Bottom Line</h3>
+      <p>Automated analysis was not available. Review the abstract and original paper before changing practice.</p>
+      <p class="ko">자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.</p>
+    </div>
+    <div class="section">
+  <h3>Limitations</h3>
+  <p>Fallback summary generated because: LLM provider not configured</p>
+  <p class="ko">다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured</p>
+</div>
+    <div class="section">
+      <h3>Links</h3>
+      <p><a href="https://pubmed.ncbi.nlm.nih.gov/99999003/" target="_blank" rel="noopener">PubMed 99999003</a> · <a href="https://doi.org/10.1000/example.3" target="_blank" rel="noopener">DOI</a></p>
+    </div>
+  </div>
+</details>
+    </section>
+    <section class="days">
+  <details class="day">
+    <summary class="day-summary">
+      <span class="day-date">2026-06-21</span>
+      <span class="muted">3 papers</span>
+      <span class="muted" style="margin-left:auto">2026. 6. 21. 오후 7:48</span>
+    </summary>
+    <div class="day-list">
+      <div>1. Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis · PMID 99999002</div>
+<div>2. Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial · PMID 99999001</div>
+<div>3. Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial · PMID 99999003</div>
+    </div>
+  </details>
+</section>
+    <section class="journal">
+  <div class="journal-head">
+    <span>Recent Journal Archive</span>
+    <span class="muted">6 entries</span>
+  </div>
+  <div class="journal-table">
+    <table>
+      <thead><tr><th>Date</th><th>Journal</th><th>Published</th><th>Article</th></tr></thead>
+      <tbody>
+        <tr>
+            <td>2026-06-22</td>
+            <td><strong>Annals of Emergency Medicine</strong></td>
+            <td>2026-06-12</td>
+            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999002/" target="_blank" rel="noopener">Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis</a></td>
+          </tr>
+<tr>
+            <td>2026-06-22</td>
+            <td><strong>Critical Care Medicine</strong></td>
+            <td>2026-06-14</td>
+            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999001/" target="_blank" rel="noopener">Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial</a></td>
+          </tr>
+<tr>
+            <td>2026-06-22</td>
+            <td><strong>JAMA</strong></td>
+            <td>2026-06-10</td>
+            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999003/" target="_blank" rel="noopener">Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial</a></td>
+          </tr>
+<tr>
+            <td>2026-06-21</td>
+            <td><strong>Annals of Emergency Medicine</strong></td>
+            <td>2026-06-12</td>
+            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999002/" target="_blank" rel="noopener">Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis</a></td>
+          </tr>
+<tr>
+            <td>2026-06-21</td>
+            <td><strong>Critical Care Medicine</strong></td>
+            <td>2026-06-14</td>
+            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999001/" target="_blank" rel="noopener">Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial</a></td>
+          </tr>
+<tr>
+            <td>2026-06-21</td>
+            <td><strong>JAMA</strong></td>
+            <td>2026-06-10</td>
+            <td><a href="https://pubmed.ncbi.nlm.nih.gov/99999003/" target="_blank" rel="noopener">Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial</a></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed pipeline · schema-validated summaries
+  </footer>
+</body>
+</html>

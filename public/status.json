@@ -1,0 +1,29 @@
+{
+  "runId": "2026-06-22",
+  "status": "success",
+  "step": "done",
+  "startedAt": "2026-06-22T04:31:19.157Z",
+  "finishedAt": "2026-06-22T04:31:19.183Z",
+  "counts": {
+    "fetched": 4,
+    "screened": 3,
+    "analyzed": 3,
+    "fallback": 3
+  },
+  "outputs": {
+    "json": "reports/2026-06-22.json",
+    "markdown": "reports/2026-06-22.md",
+    "html": "reports/2026-06-22.html",
+    "publicIndex": "public/index.html",
+    "latestJson": "public/latest.json",
+    "statusJson": "public/status.json"
+  },
+  "errors": [],
+  "notifications": [
+    {
+      "provider": "all",
+      "status": "skipped",
+      "reason": "--no-notify"
+    }
+  ]
+}

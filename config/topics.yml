@@ -1,0 +1,73 @@
+search:
+  days: 30
+  maxPapers: 50
+  candidateLimit: 30
+  topN: 3
+  # Operational presets:
+  # - Daily Top 3: days 30, topN 3, candidateLimit 30
+  # - Higher-quality digest: days 30, topN 1, candidateLimit 30
+  # - Backfill / catch-up: days 180-365, topN 3, candidateLimit 30
+  # Only selected topN PMIDs are written to data/seen_pmids.json.
+  pubmed:
+    query: >
+      ("emergency medicine"[MeSH Terms] OR "critical care"[MeSH Terms]
+      OR "intensive care units"[MeSH Terms] OR "sepsis"[MeSH Terms]
+      OR "shock"[MeSH Terms] OR resuscitation[Title/Abstract]
+      OR airway[Title/Abstract] OR trauma[Title/Abstract])
+      AND humans[MeSH Terms]
+    email: research@example.com
+
+screening:
+  relevanceKeywords:
+    - emergency department
+    - emergency medicine
+    - critical care
+    - intensive care
+    - ICU
+    - sepsis
+    - septic shock
+    - resuscitation
+    - cardiac arrest
+    - airway
+    - intubation
+    - mechanical ventilation
+    - vasopressor
+    - trauma
+    - toxicology
+    - point-of-care ultrasound
+  excludeKeywords:
+    - veterinary
+    - animal model
+    - mice
+    - mouse
+    - rat model
+  excludePublicationTypes:
+    - Case Reports
+    - Comment
+    - Editorial
+    - Letter
+    - News
+  highValueStudyTypes:
+    - Randomized Controlled Trial
+    - Clinical Trial
+    - Meta-Analysis
+    - Systematic Review
+    - Practice Guideline
+    - Guideline
+  journalBoosts:
+    "The New England Journal of Medicine": 4
+    "JAMA": 4
+    "The Lancet": 4
+    "BMJ": 3
+    "Annals of Emergency Medicine": 3
+    "Academic Emergency Medicine": 2
+    "Critical Care Medicine": 3
+    "Intensive Care Medicine": 3
+    "Chest": 2
+    "Resuscitation": 3
+    "Emergency Medicine Journal": 2
+
+analysis:
+  maxAbstractChars: 4500
+  retryInvalidSchema: true
+  fallbackLanguage: ko

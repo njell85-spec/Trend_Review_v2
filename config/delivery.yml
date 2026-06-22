@@ -1,0 +1,15 @@
+dashboard:
+  title: Trend Review
+  timezone: Asia/Seoul
+  publicBaseUrl: ${DASHBOARD_URL}
+
+notifications:
+  mode: all-enabled
+  order:
+    - kakao
+    - telegram
+  telegram:
+    enabled: true
+  kakao:
+    enabled: true
+    provider: rest-api

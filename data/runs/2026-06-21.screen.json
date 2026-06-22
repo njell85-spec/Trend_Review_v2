@@ -1,0 +1,353 @@
+{
+  "candidates": [
+    {
+      "pmid": "99999002",
+      "title": "Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis",
+      "abstract": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults. Data Sources: MEDLINE, Embase, and trial registries through May 2026. Study Selection: Randomized trials and prospective cohorts in emergency departments and ICUs. Data Synthesis: Twenty-one studies including 9340 intubations were included. Video laryngoscopy increased first-pass success (OR 1.42, 95% CI 1.18 to 1.71) and reduced severe hypoxemia (OR 0.78, 95% CI 0.63 to 0.97). Conclusions: Video laryngoscopy improves airway outcomes in critically ill adults.",
+      "authors": [
+        "Lee S",
+        "Morgan B"
+      ],
+      "journal": "Annals of Emergency Medicine",
+      "pubDate": "2026-06-12",
+      "publicationTypes": [
+        "Meta-Analysis",
+        "Systematic Review"
+      ],
+      "meshTerms": [
+        "Intubation, Intratracheal",
+        "Critical Care",
+        "Emergency Medicine"
+      ],
+      "keywords": [
+        "airway",
+        "intubation",
+        "video laryngoscopy"
+      ],
+      "doi": "10.1000/example.2",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999002/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 17,
+        "relevanceMatches": [
+          "emergency department",
+          "emergency medicine",
+          "critical care",
+          "ICU",
+          "airway",
+          "intubation"
+        ],
+        "studyType": "Meta-Analysis",
+        "sampleSize": 9340,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, emergency medicine, critical care, ICU",
+          "study design: Meta-Analysis",
+          "sample size signal: N=9340",
+          "journal boost: Annals of Emergency Medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "99999001",
+      "title": "Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial",
+      "abstract": "Background: Early septic shock management in the emergency department may influence mortality. Methods: We randomized 1280 adult patients with septic shock to early norepinephrine plus usual care or usual care alone. The primary outcome was 28-day mortality. Results: Mortality was 21.4% in the early norepinephrine group and 25.8% in usual care (risk ratio 0.83, 95% CI 0.70 to 0.99). Serious adverse events were similar. Conclusions: Early norepinephrine reduced 28-day mortality without increasing serious adverse events.",
+      "authors": [
+        "Kim J",
+        "Patel R",
+        "Garcia M"
+      ],
+      "journal": "Critical Care Medicine",
+      "pubDate": "2026-06-14",
+      "publicationTypes": [
+        "Randomized Controlled Trial"
+      ],
+      "meshTerms": [
+        "Septic Shock",
+        "Emergency Service, Hospital",
+        "Vasoconstrictor Agents"
+      ],
+      "keywords": [
+        "septic shock",
+        "vasopressor",
+        "emergency department"
+      ],
+      "doi": "10.1000/example.1",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999001/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 16,
+        "relevanceMatches": [
+          "emergency department",
+          "critical care",
+          "septic shock",
+          "vasopressor"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 1280,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, critical care, septic shock, vasopressor",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=1280",
+          "journal boost: Critical Care Medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "99999003",
+      "title": "Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial",
+      "abstract": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain. Methods: In a pragmatic cluster randomized trial, 44 emergency departments assigned 5162 adults with suspected hemorrhagic shock to balanced crystalloids or saline during initial resuscitation. The primary outcome was 30-day mortality. Results: Mortality was 18.9% with balanced crystalloids and 21.2% with saline (adjusted OR 0.87, 95% CI 0.76 to 1.00). Acute kidney injury was lower with balanced crystalloids. Conclusions: Balanced crystalloids may modestly reduce mortality and kidney injury.",
+      "authors": [
+        "Smith A",
+        "Chen L",
+        "Rao P"
+      ],
+      "journal": "JAMA",
+      "pubDate": "2026-06-10",
+      "publicationTypes": [
+        "Clinical Trial"
+      ],
+      "meshTerms": [
+        "Hemorrhagic Shock",
+        "Wounds and Injuries",
+        "Fluid Therapy"
+      ],
+      "keywords": [
+        "trauma",
+        "shock",
+        "resuscitation"
+      ],
+      "doi": "10.1000/example.3",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999003/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 16,
+        "relevanceMatches": [
+          "emergency department",
+          "resuscitation",
+          "trauma"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 5162,
+        "journalBoost": 4,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, resuscitation, trauma",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=5162",
+          "journal boost: JAMA"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    }
+  ],
+  "allScreened": [
+    {
+      "pmid": "99999002",
+      "title": "Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis",
+      "abstract": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults. Data Sources: MEDLINE, Embase, and trial registries through May 2026. Study Selection: Randomized trials and prospective cohorts in emergency departments and ICUs. Data Synthesis: Twenty-one studies including 9340 intubations were included. Video laryngoscopy increased first-pass success (OR 1.42, 95% CI 1.18 to 1.71) and reduced severe hypoxemia (OR 0.78, 95% CI 0.63 to 0.97). Conclusions: Video laryngoscopy improves airway outcomes in critically ill adults.",
+      "authors": [
+        "Lee S",
+        "Morgan B"
+      ],
+      "journal": "Annals of Emergency Medicine",
+      "pubDate": "2026-06-12",
+      "publicationTypes": [
+        "Meta-Analysis",
+        "Systematic Review"
+      ],
+      "meshTerms": [
+        "Intubation, Intratracheal",
+        "Critical Care",
+        "Emergency Medicine"
+      ],
+      "keywords": [
+        "airway",
+        "intubation",
+        "video laryngoscopy"
+      ],
+      "doi": "10.1000/example.2",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999002/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 17,
+        "relevanceMatches": [
+          "emergency department",
+          "emergency medicine",
+          "critical care",
+          "ICU",
+          "airway",
+          "intubation"
+        ],
+        "studyType": "Meta-Analysis",
+        "sampleSize": 9340,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, emergency medicine, critical care, ICU",
+          "study design: Meta-Analysis",
+          "sample size signal: N=9340",
+          "journal boost: Annals of Emergency Medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "99999001",
+      "title": "Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial",
+      "abstract": "Background: Early septic shock management in the emergency department may influence mortality. Methods: We randomized 1280 adult patients with septic shock to early norepinephrine plus usual care or usual care alone. The primary outcome was 28-day mortality. Results: Mortality was 21.4% in the early norepinephrine group and 25.8% in usual care (risk ratio 0.83, 95% CI 0.70 to 0.99). Serious adverse events were similar. Conclusions: Early norepinephrine reduced 28-day mortality without increasing serious adverse events.",
+      "authors": [
+        "Kim J",
+        "Patel R",
+        "Garcia M"
+      ],
+      "journal": "Critical Care Medicine",
+      "pubDate": "2026-06-14",
+      "publicationTypes": [
+        "Randomized Controlled Trial"
+      ],
+      "meshTerms": [
+        "Septic Shock",
+        "Emergency Service, Hospital",
+        "Vasoconstrictor Agents"
+      ],
+      "keywords": [
+        "septic shock",
+        "vasopressor",
+        "emergency department"
+      ],
+      "doi": "10.1000/example.1",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999001/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 16,
+        "relevanceMatches": [
+          "emergency department",
+          "critical care",
+          "septic shock",
+          "vasopressor"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 1280,
+        "journalBoost": 3,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, critical care, septic shock, vasopressor",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=1280",
+          "journal boost: Critical Care Medicine"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "99999003",
+      "title": "Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial",
+      "abstract": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain. Methods: In a pragmatic cluster randomized trial, 44 emergency departments assigned 5162 adults with suspected hemorrhagic shock to balanced crystalloids or saline during initial resuscitation. The primary outcome was 30-day mortality. Results: Mortality was 18.9% with balanced crystalloids and 21.2% with saline (adjusted OR 0.87, 95% CI 0.76 to 1.00). Acute kidney injury was lower with balanced crystalloids. Conclusions: Balanced crystalloids may modestly reduce mortality and kidney injury.",
+      "authors": [
+        "Smith A",
+        "Chen L",
+        "Rao P"
+      ],
+      "journal": "JAMA",
+      "pubDate": "2026-06-10",
+      "publicationTypes": [
+        "Clinical Trial"
+      ],
+      "meshTerms": [
+        "Hemorrhagic Shock",
+        "Wounds and Injuries",
+        "Fluid Therapy"
+      ],
+      "keywords": [
+        "trauma",
+        "shock",
+        "resuscitation"
+      ],
+      "doi": "10.1000/example.3",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999003/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 16,
+        "relevanceMatches": [
+          "emergency department",
+          "resuscitation",
+          "trauma"
+        ],
+        "studyType": "Randomized Controlled Trial",
+        "sampleSize": 5162,
+        "journalBoost": 4,
+        "reasons": [
+          "abstract available",
+          "topic match: emergency department, resuscitation, trauma",
+          "study design: Randomized Controlled Trial",
+          "sample size signal: N=5162",
+          "journal boost: JAMA"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "pmid": "99999004",
+      "title": "A Case Report of Rare Herbal Toxicity in a Stable Outpatient",
+      "abstract": "We describe one outpatient with a rare herbal supplement exposure and mild self-limited symptoms.",
+      "authors": [
+        "Example E"
+      ],
+      "journal": "Case Reports in Medicine",
+      "pubDate": "2026-06-09",
+      "publicationTypes": [
+        "Case Reports"
+      ],
+      "meshTerms": [
+        "Plants, Medicinal"
+      ],
+      "keywords": [
+        "case report"
+      ],
+      "doi": "",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999004/",
+      "collectedAt": "2026-06-21T00:00:00.000Z",
+      "screeningData": {
+        "score": 2,
+        "relevanceMatches": [],
+        "studyType": "Other",
+        "sampleSize": null,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available"
+        ],
+        "exclude": true,
+        "excludeReason": "publication type excluded: Case Reports"
+      },
+      "exclusionReason": "publication type excluded: Case Reports"
+    }
+  ],
+  "stats": {
+    "input": 4,
+    "seenSkipped": 0,
+    "excluded": 1,
+    "candidates": 3,
+    "candidateLimit": 15
+  }
+}

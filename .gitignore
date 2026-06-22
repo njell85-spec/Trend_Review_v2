@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.codex-remote-attachments/
+credentials.json
+google_token.json
+*.log
+coverage/
+.DS_Store
