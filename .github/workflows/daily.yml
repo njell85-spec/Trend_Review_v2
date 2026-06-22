@@ -25,6 +25,16 @@ on:
         required: false
         default: false
         type: boolean
+      ignore_seen:
+        description: 'Do not filter seen PMIDs'
+        required: false
+        default: false
+        type: boolean
+      no_seen_update:
+        description: 'Do not write selected PMIDs to seen list'
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -77,12 +87,16 @@ jobs:
           MAX_PAPERS: ${{ github.event.inputs.max_papers || '300' }}
           NO_NOTIFY: ${{ github.event.inputs.no_notify || 'false' }}
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          IGNORE_SEEN: ${{ github.event.inputs.ignore_seen || 'false' }}
+          NO_SEEN_UPDATE: ${{ github.event.inputs.no_seen_update || 'false' }}
         run: |
           ARGS=()
           if [ -n "$RUN_DATE" ]; then ARGS+=(--date "$RUN_DATE"); fi
           if [ -n "$MAX_PAPERS" ]; then ARGS+=(--max-papers "$MAX_PAPERS"); fi
           if [ "$DRY_RUN" = "true" ]; then ARGS+=(--dry-run); fi
           if [ "$NO_NOTIFY" = "true" ]; then ARGS+=(--no-notify); fi
+          if [ "$IGNORE_SEEN" = "true" ]; then ARGS+=(--ignore-seen); fi
+          if [ "$NO_SEEN_UPDATE" = "true" ]; then ARGS+=(--no-seen-update); fi
           node src/cli.js "${ARGS[@]}"
 
       - name: Commit generated reports
