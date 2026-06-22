@@ -1,28 +1,28 @@
 {
   "analyses": [
     {
-      "pmid": "99999002",
-      "title": "Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis",
-      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults.",
-      "clinicalQuestion": "What does this meta-analysis suggest for emergency medicine or critical care practice?",
+      "pmid": "42321935",
+      "title": "Implementation of the kidney protection strategy in critically ill patients with acute kidney injury - a multi-center prospective cohort study.",
+      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI).",
+      "clinicalQuestion": "What does this practice guideline suggest for emergency medicine or critical care practice?",
       "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
       "pico": {
         "population": "Manual review needed. Population details were not reliably extracted.",
         "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
         "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
-        "outcome": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+        "outcome": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
       },
       "pico_ko": {
         "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
         "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
         "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
-        "outcome": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+        "outcome": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
       },
       "keyFindings": [
-        "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+        "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
       ],
       "keyFindings_ko": [
-        "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults."
+        "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
       ],
       "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
       "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
@@ -35,138 +35,67 @@
         "LLM provider not configured"
       ],
       "paper": {
-        "pmid": "99999002",
-        "title": "Video Laryngoscopy Versus Direct Laryngoscopy for Critically Ill Adults: A Systematic Review and Meta-analysis",
-        "abstract": "Objective: To compare first-pass success and hypoxemia with video versus direct laryngoscopy among critically ill adults. Data Sources: MEDLINE, Embase, and trial registries through May 2026. Study Selection: Randomized trials and prospective cohorts in emergency departments and ICUs. Data Synthesis: Twenty-one studies including 9340 intubations were included. Video laryngoscopy increased first-pass success (OR 1.42, 95% CI 1.18 to 1.71) and reduced severe hypoxemia (OR 0.78, 95% CI 0.63 to 0.97). Conclusions: Video laryngoscopy improves airway outcomes in critically ill adults.",
+        "pmid": "42321935",
+        "title": "Implementation of the kidney protection strategy in critically ill patients with acute kidney injury - a multi-center prospective cohort study.",
+        "abstract": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI). However, real-world implementation of this strategy in critically ill patients with AKI is unclear. We quantified timely and sustained adherence to KPS in critically ill adults with moderate-to-severe (KDIGO stage 2 or 3) AKI and explored associations with clinical outcomes.\nMETHODS: This was a multicenter, prospective cohort study enrolling adult patients with moderate or severe AKI requiring vasopressors and/or mechanical ventilation across five centers in Europe. The primary endpoint was adherence to the KPS, which included hemodynamic monitoring, sustained optimization of mean arterial pressure (MAP) > 65 mmHg, monitoring of serum creatinine and urine output, and avoidance of hyperglycemia, radiocontrast agents and nephrotoxins when possible, within 12 h after AKI diagnosis for 48 h or until ICU discharge. Exploratory analyses examined associations between adherence and renal outcomes.\nRESULTS: A total of 258 patients were enrolled (median age 69 years [IQR 62-75]; 65% male; median SOFA 10 [IQR 8-13]). The complete KPS was implemented in 80 patients (31%; 95% CI, 25.5-37.2%). Adherence to individual components of the KPS varied widely with optimization of MAP showing the lowest implementation rate (33%). In exploratory analyses accounting for death as a competing risk, KPS adherence was associated with a lower incidence of AKD beyond day 7 (subdistribution hazard ratio [SHR] 0.64; 95% CI, 0.41-0.99; p = 0.046), a higher incidence of renal recovery at hospital discharge (SHR 6.02; 95% CI, 4.00-9.05; p < 0.0001), and a lower incidence of RRT within 30 days (SHR 0.12; 95% CI, 0.02-0.91; p = 0.04). After multivariable adjustment, the association with renal recovery remained robust (adjusted SHR 6.29; 95% CI, 3.08-12.85; p < 0.0001). A clear dose-response relationship was observed between the number of implemented KPS components and renal outcomes.\nCONCLUSIONS: In critically ill patients with moderate-to-severe AKI, the complete KDIGO-recommended kidney protection strategy was implemented in approximately one-third of patients, and full KPS adherence was associated with a higher rate of renal recovery at hospital discharge.",
         "authors": [
-          "Lee S",
-          "Morgan B"
+          "Sadjadi M",
+          "Marcello M",
+          "Köhler A",
+          "Perschinka F",
+          "Schauflinger S",
+          "Joannidis M",
+          "Vadász I",
+          "Husain-Syed F"
         ],
-        "journal": "Annals of Emergency Medicine",
-        "pubDate": "2026-06-12",
+        "journal": "Critical care (London, England)",
+        "pubDate": "2026-Jun-19",
         "publicationTypes": [
-          "Meta-Analysis",
-          "Systematic Review"
+          "Journal Article",
+          "Multicenter Study"
         ],
         "meshTerms": [
-          "Intubation, Intratracheal",
-          "Critical Care",
-          "Emergency Medicine"
+          "Humans",
+          "Acute Kidney Injury",
+          "Prospective Studies",
+          "Critical Illness",
+          "Female",
+          "Male",
+          "Middle Aged",
+          "Aged",
+          "Cohort Studies",
+          "Intensive Care Units",
+          "Europe"
         ],
         "keywords": [
-          "airway",
-          "intubation",
-          "video laryngoscopy"
+          "Acute kidney injury",
+          "Critical care",
+          "Guideline adherence",
+          "Implementation",
+          "KDIGO",
+          "Kidney protection strategy"
         ],
-        "doi": "10.1000/example.2",
-        "pmcid": "",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999002/",
-        "collectedAt": "2026-06-21T00:00:00.000Z",
+        "doi": "10.1186/s13054-026-06144-0",
+        "pmcid": "PMC13282845",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42321935/",
+        "collectedAt": "2026-06-22T06:11:44.387Z",
         "screeningData": {
-          "score": 17,
+          "score": 12,
           "relevanceMatches": [
-            "emergency department",
-            "emergency medicine",
             "critical care",
+            "intensive care",
             "ICU",
-            "airway",
-            "intubation"
-          ],
-          "studyType": "Meta-Analysis",
-          "sampleSize": 9340,
-          "journalBoost": 3,
-          "reasons": [
-            "abstract available",
-            "topic match: emergency department, emergency medicine, critical care, ICU",
-            "study design: Meta-Analysis",
-            "sample size signal: N=9340",
-            "journal boost: Annals of Emergency Medicine"
-          ],
-          "exclude": false,
-          "excludeReason": ""
-        }
-      },
-      "source": "fallback"
-    },
-    {
-      "pmid": "99999001",
-      "title": "Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial",
-      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: Background: Early septic shock management in the emergency department may influence mortality.",
-      "clinicalQuestion": "What does this randomized controlled trial suggest for emergency medicine or critical care practice?",
-      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
-      "pico": {
-        "population": "Manual review needed. Population details were not reliably extracted.",
-        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
-        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
-        "outcome": "Background: Early septic shock management in the emergency department may influence mortality."
-      },
-      "pico_ko": {
-        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
-        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
-        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
-        "outcome": "Background: Early septic shock management in the emergency department may influence mortality."
-      },
-      "keyFindings": [
-        "Background: Early septic shock management in the emergency department may influence mortality."
-      ],
-      "keyFindings_ko": [
-        "Background: Early septic shock management in the emergency department may influence mortality."
-      ],
-      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
-      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
-      "limitations": "Fallback summary generated because: LLM provider not configured",
-      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
-      "evidenceLevel": "Moderate",
-      "clinicalApplicabilityScore": 10,
-      "manualReviewNeeded": true,
-      "analysisNotes": [
-        "LLM provider not configured"
-      ],
-      "paper": {
-        "pmid": "99999001",
-        "title": "Early Vasopressor Strategy for Septic Shock in the Emergency Department: A Multicenter Randomized Trial",
-        "abstract": "Background: Early septic shock management in the emergency department may influence mortality. Methods: We randomized 1280 adult patients with septic shock to early norepinephrine plus usual care or usual care alone. The primary outcome was 28-day mortality. Results: Mortality was 21.4% in the early norepinephrine group and 25.8% in usual care (risk ratio 0.83, 95% CI 0.70 to 0.99). Serious adverse events were similar. Conclusions: Early norepinephrine reduced 28-day mortality without increasing serious adverse events.",
-        "authors": [
-          "Kim J",
-          "Patel R",
-          "Garcia M"
-        ],
-        "journal": "Critical Care Medicine",
-        "pubDate": "2026-06-14",
-        "publicationTypes": [
-          "Randomized Controlled Trial"
-        ],
-        "meshTerms": [
-          "Septic Shock",
-          "Emergency Service, Hospital",
-          "Vasoconstrictor Agents"
-        ],
-        "keywords": [
-          "septic shock",
-          "vasopressor",
-          "emergency department"
-        ],
-        "doi": "10.1000/example.1",
-        "pmcid": "",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999001/",
-        "collectedAt": "2026-06-21T00:00:00.000Z",
-        "screeningData": {
-          "score": 16,
-          "relevanceMatches": [
-            "emergency department",
-            "critical care",
-            "septic shock",
+            "mechanical ventilation",
             "vasopressor"
           ],
-          "studyType": "Randomized Controlled Trial",
-          "sampleSize": 1280,
-          "journalBoost": 3,
+          "studyType": "Practice Guideline",
+          "sampleSize": 258,
+          "journalBoost": 0,
           "reasons": [
             "abstract available",
-            "topic match: emergency department, critical care, septic shock, vasopressor",
-            "study design: Randomized Controlled Trial",
-            "sample size signal: N=1280",
-            "journal boost: Critical Care Medicine"
+            "topic match: critical care, intensive care, ICU, mechanical ventilation",
+            "study design: Practice Guideline",
+            "sample size signal: N=258"
           ],
           "exclude": false,
           "excludeReason": ""
@@ -175,28 +104,28 @@
       "source": "fallback"
     },
     {
-      "pmid": "99999003",
-      "title": "Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial",
-      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain.",
+      "pmid": "42314159",
+      "title": "Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care (ADVISE): Protocol for a Single-Center Randomized Controlled Trial.",
+      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury.",
       "clinicalQuestion": "What does this randomized controlled trial suggest for emergency medicine or critical care practice?",
       "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
       "pico": {
         "population": "Manual review needed. Population details were not reliably extracted.",
         "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
         "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
-        "outcome": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+        "outcome": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
       },
       "pico_ko": {
         "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
         "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
         "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
-        "outcome": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+        "outcome": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
       },
       "keyFindings": [
-        "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+        "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
       ],
       "keyFindings_ko": [
-        "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain."
+        "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
       ],
       "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
       "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
@@ -209,49 +138,160 @@
         "LLM provider not configured"
       ],
       "paper": {
-        "pmid": "99999003",
-        "title": "Balanced Crystalloids in Adults With Traumatic Hemorrhagic Shock: A Pragmatic Cluster Trial",
-        "abstract": "Importance: Fluid selection for traumatic hemorrhagic shock remains uncertain. Methods: In a pragmatic cluster randomized trial, 44 emergency departments assigned 5162 adults with suspected hemorrhagic shock to balanced crystalloids or saline during initial resuscitation. The primary outcome was 30-day mortality. Results: Mortality was 18.9% with balanced crystalloids and 21.2% with saline (adjusted OR 0.87, 95% CI 0.76 to 1.00). Acute kidney injury was lower with balanced crystalloids. Conclusions: Balanced crystalloids may modestly reduce mortality and kidney injury.",
+        "pmid": "42314159",
+        "title": "Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care (ADVISE): Protocol for a Single-Center Randomized Controlled Trial.",
+        "abstract": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury. Recommended care for this vulnerable group includes discussion of their goals for life-sustaining care (\"code status\") upon admission, but most older patients do not participate in adequate code status discussions. Randomized trials have demonstrated that video-based interventions are associated with better patient knowledge and improved alignment of patient preferences for life-sustaining treatment; however, there are limited data on the effectiveness of these interventions in acutely injured patients.\nOBJECTIVE: This trial will evaluate the effectiveness and implementation considerations of a video conversation aid to enhance communication among trauma care providers, patients, and surrogate decision-makers regarding cardiopulmonary resuscitation (CPR) and code status decisions.\nMETHODS: This is a single-center randomized controlled trial evaluating the use of a video conversation aid to facilitate discussions of code status. The video intervention will be compared to usual care in the largest feasible pilot randomized controlled trial with the goal of estimating its benefit for patient-centered outcomes. All trauma patients aged 65 years and older admitted following injury are eligible. Incarcerated people, patients with existing do-not-resuscitate or do-not-intubate orders, patients admitted while in hospice care, and patients not expected to survive over 24 to 48 hours will be excluded. The primary outcome is transitions in code status. Secondary outcomes will include perceived success of CPR, video acceptability and effectiveness, knowledge of life-sustaining care outcomes and complications following CPR, participant desire for more information regarding life-sustaining care, hospital-free days, intensive care unit-free days, ventilator-free days, discharge disposition, decisional conflict score, and rate of interventional procedures (eg, tracheostomy, feeding tube placement, and dialysis initiation).\nRESULTS: The ADVISE (Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care) trial was funded in February 2025 via the Learning Healthcare System grant from the University of Texas Health Science Center at Houston. Enrollment began on March 17, 2025, and it is estimated to conclude on May 1, 2026.\nCONCLUSIONS: The ADVISE trial builds on previous research on older trauma patients and advanced care planning using a video intervention to enhance code status discussions. We anticipate that our video aid tool will enhance patients' and surrogate decision-makers' knowledge of advanced care discussions.\nTRIAL REGISTRATION: ClinicalTrials.gov NCT06804226; https://clinicaltrials.gov/study/NCT06804226.\nINTERNATIONAL REGISTERED REPORT IDENTIFIER (IRRID): DERR1-10.2196/87690.",
         "authors": [
-          "Smith A",
-          "Chen L",
-          "Rao P"
+          "Fajemisin MO",
+          "Karpe AS",
+          "Martinez Ugarte S",
+          "Blakely ML",
+          "Khraish G",
+          "Sanghvi S",
+          "Lee JL",
+          "Kao LS"
         ],
-        "journal": "JAMA",
-        "pubDate": "2026-06-10",
+        "journal": "JMIR research protocols",
+        "pubDate": "2026-Jun-18",
         "publicationTypes": [
-          "Clinical Trial"
+          "Journal Article",
+          "Clinical Trial Protocol"
         ],
         "meshTerms": [
-          "Hemorrhagic Shock",
-          "Wounds and Injuries",
-          "Fluid Therapy"
+          "Humans",
+          "Terminal Care",
+          "Randomized Controlled Trials as Topic",
+          "Aged",
+          "Video Recording",
+          "Cardiopulmonary Resuscitation",
+          "Communication",
+          "Decision Making",
+          "Advance Care Planning"
         ],
         "keywords": [
+          "cardiopulmonary resuscitation",
+          "code status",
+          "decision aid",
+          "older people",
           "trauma",
-          "shock",
-          "resuscitation"
+          "video"
         ],
-        "doi": "10.1000/example.3",
+        "doi": "10.2196/87690",
         "pmcid": "",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/99999003/",
-        "collectedAt": "2026-06-21T00:00:00.000Z",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42314159/",
+        "collectedAt": "2026-06-22T06:11:45.004Z",
         "screeningData": {
-          "score": 16,
+          "score": 12,
+          "relevanceMatches": [
+            "intensive care",
+            "resuscitation",
+            "trauma"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 950000,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: intensive care, resuscitation, trauma",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=950000"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        }
+      },
+      "source": "fallback"
+    },
+    {
+      "pmid": "42320929",
+      "title": "Survey of practices around the measurement and replacement of calcium in paediatric major trauma.",
+      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility.",
+      "clinicalQuestion": "What does this practice guideline suggest for emergency medicine or critical care practice?",
+      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "pico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
+        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
+        "outcome": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+      },
+      "pico_ko": {
+        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
+        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
+        "outcome": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+      },
+      "keyFindings": [
+        "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+      ],
+      "keyFindings_ko": [
+        "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+      ],
+      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
+      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
+      "limitations": "Fallback summary generated because: LLM provider not configured",
+      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 10,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "LLM provider not configured"
+      ],
+      "paper": {
+        "pmid": "42320929",
+        "title": "Survey of practices around the measurement and replacement of calcium in paediatric major trauma.",
+        "abstract": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility. Current guidelines recommend maintaining normal ionised calcium levels in the bleeding trauma patient. However, guidance does not specify when to replace calcium, and for paediatric trauma, it is unclear when clinicians should measure or decide to replace calcium.\nOBJECTIVES: This study aimed to survey the practices, protocols and opinions regarding the measurement and replacement of calcium in paediatric major trauma.\nMETHODS: A cross-sectional survey with single-stage voluntary and snowball sampling. Individual emergency departments (EDs) responded to questions on departmental practices, while individual clinicians provided opinions on the measurement and replacement of calcium based on a clinical vignette with two variations (a haemodynamically stable and a haemodynamically unstable). The survey was administered using Online Surveys V3 (JISC, 2025). Respondents were invited to participate through collaborative research networks.\nRESULTS: There were responses from 67 individual EDs and 99 individual respondents from 19 different countries. Most EDs had a paediatric major haemorrhage protocol (61/67, 91.0%), but this did not include calcium for 16/67 (23.9%) of the EDs. The timing of calcium replacement was either not included or not specified in most protocols (44/67, 65.7%), with variations in when it should be replaced when specified.Opinions on considering calcium replacement before blood products were significantly different based on whether the patient in the vignette was clinically stable or unstable. Opinions on replacement doses of exogenous calcium were significantly different when the calcium was moderately low (<1.12 mmol/L), but were not significantly different if the calcium was severely low (<1.0 mmol/L).\nCONCLUSION: There is considerable variation among EDs regarding ionised calcium measurement and calcium replacement, both before blood product transfusion and in major haemorrhage protocols. Clinicians' opinions on calcium measurement and replacement also vary widely. More research is needed to reach a consensus.\nLEVEL OF EVIDENCE: III.",
+        "authors": [
+          "Hibberd O",
+          "Ranaweera M",
+          "Karageorgos S",
+          "Priddis K",
+          "Nijman RG",
+          "Tagg A",
+          "Hall D",
+          "Roland D"
+        ],
+        "journal": "BMJ paediatrics open",
+        "pubDate": "2026-Jun-17",
+        "publicationTypes": [
+          "Journal Article"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Calcium",
+          "Cross-Sectional Studies",
+          "Hypocalcemia",
+          "Child",
+          "Hemorrhage",
+          "Wounds and Injuries",
+          "Practice Patterns, Physicians'",
+          "Emergency Service, Hospital",
+          "Surveys and Questionnaires",
+          "Female"
+        ],
+        "keywords": [
+          "Child Health",
+          "Physiology",
+          "Resuscitation"
+        ],
+        "doi": "10.1136/bmjpo-2026-004588",
+        "pmcid": "",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320929/",
+        "collectedAt": "2026-06-22T06:11:44.387Z",
+        "screeningData": {
+          "score": 12,
           "relevanceMatches": [
             "emergency department",
             "resuscitation",
             "trauma"
           ],
-          "studyType": "Randomized Controlled Trial",
-          "sampleSize": 5162,
-          "journalBoost": 4,
+          "studyType": "Practice Guideline",
+          "sampleSize": null,
+          "journalBoost": 3,
           "reasons": [
             "abstract available",
             "topic match: emergency department, resuscitation, trauma",
-            "study design: Randomized Controlled Trial",
-            "sample size signal: N=5162",
-            "journal boost: JAMA"
+            "study design: Practice Guideline",
+            "journal boost: BMJ paediatrics open"
           ],
           "exclude": false,
           "excludeReason": ""
