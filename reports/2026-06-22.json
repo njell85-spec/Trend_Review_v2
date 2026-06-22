@@ -1,18 +1,18 @@
 {
   "runId": "2026-06-22",
-  "generatedAt": "2026-06-22T06:11:45.587Z",
+  "generatedAt": "2026-06-22T07:46:09.892Z",
   "dashboardUrl": "https://njell85-spec.github.io/Trend_Review_v2/",
   "status": {
     "runId": "2026-06-22",
     "status": "success",
     "step": "done",
-    "startedAt": "2026-06-22T06:11:43.663Z",
-    "finishedAt": "2026-06-22T06:11:45.587Z",
+    "startedAt": "2026-06-22T07:43:08.463Z",
+    "finishedAt": "2026-06-22T07:46:09.892Z",
     "counts": {
       "fetched": 50,
       "screened": 30,
       "analyzed": 3,
-      "fallback": 3
+      "fallback": 0
     },
     "outputs": {
       "json": "reports/2026-06-22.json",
@@ -35,7 +35,7 @@
     "fetched": 50,
     "screened": 30,
     "analyzed": 3,
-    "fallback": 3
+    "fallback": 0
   },
   "query": "(\"emergency medicine\"[MeSH Terms] OR \"critical care\"[MeSH Terms] OR \"intensive care units\"[MeSH Terms] OR \"sepsis\"[MeSH Terms] OR \"shock\"[MeSH Terms] OR resuscitation[Title/Abstract] OR airway[Title/Abstract] OR trauma[Title/Abstract]) AND humans[MeSH Terms]\n",
   "searchWindow": {
@@ -45,497 +45,304 @@
   },
   "topPapers": [
     {
-      "pmid": "42321935",
-      "title": "Implementation of the kidney protection strategy in critically ill patients with acute kidney injury - a multi-center prospective cohort study.",
-      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI).",
-      "clinicalQuestion": "What does this practice guideline suggest for emergency medicine or critical care practice?",
-      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "pmid": "42315642",
+      "title": "Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.",
+      "oneLineSummary_ko": "고령의 원위 대퇴골 골절 환자에서 조기 수술이 지연 수술에 비해 30일 사망률이나 합병증을 유의하게 낮추지 않는 것으로 나타났다.",
+      "clinicalQuestion": "Does earlier surgery in older adults with distal femur fractures improve postoperative outcomes compared to delayed surgery?",
+      "clinicalQuestion_ko": "고령의 원위 대퇴골 골절 환자에서 조기 수술이 지연 수술에 비해 30일 사망률 및 수술 후 합병증 등의 예후를 개선하는가?",
       "pico": {
-        "population": "Manual review needed. Population details were not reliably extracted.",
-        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
-        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
-        "outcome": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
+        "population": "Older adults with distal femur fractures (16 retrospective cohort studies, n = 31,213)",
+        "intervention": "Early surgery (definitions varied across studies)",
+        "comparison": "Delayed surgery",
+        "outcome": "30-day mortality (primary), longer-term mortality (at 90 days, 180 days, 1 year), and postoperative complications (cardiac, pulmonary, pulmonary embolism)"
       },
       "pico_ko": {
-        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
-        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
-        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
-        "outcome": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
+        "population": "원위 대퇴골 골절이 있는 고령 환자 (16개 후향적 코호트 연구, 총 31,213명)",
+        "intervention": "조기 수술 (연구마다 정의 상이)",
+        "comparison": "지연 수술",
+        "outcome": "30일 사망률 (일차 결과), 장기 사망률 (90일, 180일, 1년), 수술 후 합병증 (심장, 폐, 폐색전증)"
       },
       "keyFindings": [
-        "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
+        "Early surgery was not associated with reduced 30-day mortality (adjusted OR: 0.77, 95% CI: 0.56-1.05; low-certainty evidence).",
+        "No significant differences were observed for longer-term mortality at 90 days (crude OR: 0.91), 180 days (crude OR: 0.46), or 1 year (crude OR: 0.61).",
+        "Postoperative complications, including cardiac complications (OR: 0.71), pulmonary complications (OR: 1.07), and pulmonary embolism (OR: 1.14), did not significantly differ between groups."
       ],
       "keyFindings_ko": [
-        "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI)."
+        "조기 수술은 30일 사망률의 유의한 감소와 연관되지 않았습니다 (보정 OR: 0.77, 95% CI: 0.56-1.05; 낮은 확실성 근거).",
+        "90일 (조 OR: 0.91), 180일 (조 OR: 0.46), 1년 (조 OR: 0.61) 장기 사망률에서도 두 군 간 유의한 차이가 없었습니다.",
+        "심장 합병증 (OR: 0.71), 폐 합병증 (OR: 1.07), 폐색전증 (OR: 1.14) 등 수술 후 합병증 비율도 유사했습니다."
       ],
-      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
-      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
-      "limitations": "Fallback summary generated because: LLM provider not configured",
-      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
-      "evidenceLevel": "Moderate",
-      "clinicalApplicabilityScore": 10,
-      "manualReviewNeeded": true,
+      "clinicalTakeaway": "Unlike hip fractures where early surgery is strongly associated with better outcomes, timing of surgery for distal femur fractures in older adults did not show a clear benefit for mortality or complications. Preoperative medical optimization may take precedence over rushing to the operating room, though prospective trials are needed.",
+      "clinicalTakeaway_ko": "조기 수술이 예후 개선에 필수적인 고관절 골절과 달리, 고령 원위 대퇴골 골절 환자에서는 조기 수술이 사망률이나 합병증을 유의하게 줄이지 못했습니다. 응급 수술을 서두르기보다 사전 내과적 동반 질환 최적화에 집중하는 것이 더 적절할 수 있습니다.",
+      "limitations": "All included studies were retrospective with substantial variation in how 'early surgery' was defined, leading to potential classification and selection biases.",
+      "limitations_ko": "포함된 모든 연구가 후향적 설계이며, '조기 수술'에 대한 정의가 연구마다 달라 분류 오류 및 선택 편향의 한계가 있습니다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 6,
+      "manualReviewNeeded": false,
       "analysisNotes": [
-        "LLM provider not configured"
+        "The abstract notes that sensitivity analyses suggested lower mortality with earlier surgery when using stricter definitions, highlighting potential residual confounding in retrospective data.",
+        "While primarily an orthopedic study, this is highly relevant to EM and ICU physicians who coordinate preoperative clearance and medical optimization for geriatric trauma patients."
       ],
       "paper": {
-        "pmid": "42321935",
-        "title": "Implementation of the kidney protection strategy in critically ill patients with acute kidney injury - a multi-center prospective cohort study.",
-        "abstract": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI). However, real-world implementation of this strategy in critically ill patients with AKI is unclear. We quantified timely and sustained adherence to KPS in critically ill adults with moderate-to-severe (KDIGO stage 2 or 3) AKI and explored associations with clinical outcomes.\nMETHODS: This was a multicenter, prospective cohort study enrolling adult patients with moderate or severe AKI requiring vasopressors and/or mechanical ventilation across five centers in Europe. The primary endpoint was adherence to the KPS, which included hemodynamic monitoring, sustained optimization of mean arterial pressure (MAP) > 65 mmHg, monitoring of serum creatinine and urine output, and avoidance of hyperglycemia, radiocontrast agents and nephrotoxins when possible, within 12 h after AKI diagnosis for 48 h or until ICU discharge. Exploratory analyses examined associations between adherence and renal outcomes.\nRESULTS: A total of 258 patients were enrolled (median age 69 years [IQR 62-75]; 65% male; median SOFA 10 [IQR 8-13]). The complete KPS was implemented in 80 patients (31%; 95% CI, 25.5-37.2%). Adherence to individual components of the KPS varied widely with optimization of MAP showing the lowest implementation rate (33%). In exploratory analyses accounting for death as a competing risk, KPS adherence was associated with a lower incidence of AKD beyond day 7 (subdistribution hazard ratio [SHR] 0.64; 95% CI, 0.41-0.99; p = 0.046), a higher incidence of renal recovery at hospital discharge (SHR 6.02; 95% CI, 4.00-9.05; p < 0.0001), and a lower incidence of RRT within 30 days (SHR 0.12; 95% CI, 0.02-0.91; p = 0.04). After multivariable adjustment, the association with renal recovery remained robust (adjusted SHR 6.29; 95% CI, 3.08-12.85; p < 0.0001). A clear dose-response relationship was observed between the number of implemented KPS components and renal outcomes.\nCONCLUSIONS: In critically ill patients with moderate-to-severe AKI, the complete KDIGO-recommended kidney protection strategy was implemented in approximately one-third of patients, and full KPS adherence was associated with a higher rate of renal recovery at hospital discharge.",
+        "pmid": "42315642",
+        "title": "Association between timing of surgery and postoperative outcomes in older adults with distal femur fractures: a systematic review and meta-analysis.",
+        "abstract": "INTRODUCTION: The association between surgical timing and clinical outcomes in older adults with distal femur fractures remains unclear. We conducted a systematic review and meta-analysis to evaluate whether earlier surgery is associated with improved outcomes in this population.\nMATERIALS AND METHODS: In accordance with the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, two independent reviewers searched MEDLINE, Embase, the Cochrane Central Register of Controlled Trials, ClinicalTrials.gov, and the World Health Organization International Clinical Trials Registry Platform from inception to October 8, 2024. The primary outcome was 30-day mortality, and secondary outcomes included longer-term mortality and postoperative complications. Risk of bias was assessed using the Quality in Prognosis Studies tool, and the certainty of evidence was evaluated using the Grading of Recommendations Assessment, Development and Evaluation approach.\nRESULTS: Of 6,101 records screened, 16 retrospective cohort studies comprising 31,213 patients met the inclusion criteria. Early surgery was not associated with reduced 30-day mortality (adjusted odds ratio [OR]: 0.77, 95% confidence interval [CI]: 0.56-1.05; low-certainty evidence) or with longer-term mortality at 90 days (crude OR: 0.91, 95% CI: 0.51-1.60), 180 days (crude OR: 0.46, 95% CI: 0.12-1.77), or 1 year (crude OR: 0.61, 95% CI: 0.34-1.09). Similar findings were observed for postoperative complications: cardiac complications (OR: 0.71, 95% CI: 0.48-1.07), pulmonary complications (OR: 1.07, 95% CI: 0.77-1.47), and pulmonary embolism (OR: 1.14, 95% CI: 0.62-2.16). Heterogeneity across outcomes was low to moderate, and definitions of early surgery varied among studies. Overall, this meta-analysis did not demonstrate a clinically meaningful association between surgical timing and short-term clinical outcomes in older adults with distal femur fractures. Sensitivity analyses consistently suggested lower mortality with earlier surgery, likely reflecting stricter definitions of early surgery and improved control of time-related bias.\nCONCLUSIONS: This meta-analysis did not demonstrate a clinically meaningful association between surgical timing and short-term clinical outcomes in older adults with distal femur fractures. Given the heterogeneity in definitions and study designs, high-quality prospective studies with standardized timing are warranted.",
         "authors": [
-          "Sadjadi M",
-          "Marcello M",
-          "Köhler A",
-          "Perschinka F",
-          "Schauflinger S",
-          "Joannidis M",
-          "Vadász I",
-          "Husain-Syed F"
+          "Hoshika S",
+          "Yamamoto N",
+          "Saka N",
+          "Tsuge T",
+          "Sato T",
+          "Isaji Y",
+          "Nakao S"
         ],
-        "journal": "Critical care (London, England)",
+        "journal": "Archives of orthopaedic and trauma surgery",
+        "pubDate": "2026-Jun-18",
+        "publicationTypes": [
+          "Journal Article",
+          "Systematic Review",
+          "Meta-Analysis",
+          "Review"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Postoperative Complications",
+          "Femoral Fractures, Distal",
+          "Aged",
+          "Time-to-Treatment",
+          "Treatment Outcome",
+          "Time Factors"
+        ],
+        "keywords": [
+          "Geriatric trauma",
+          "Meta-analysis",
+          "Mortality",
+          "Postoperative complications",
+          "Time to surgery"
+        ],
+        "doi": "10.1007/s00402-026-06296-2",
+        "pmcid": "PMC13279584",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315642/",
+        "collectedAt": "2026-06-22T07:43:09.736Z",
+        "screeningData": {
+          "score": 10,
+          "relevanceMatches": [
+            "trauma"
+          ],
+          "studyType": "Practice Guideline",
+          "sampleSize": 31213,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: trauma",
+            "study design: Practice Guideline",
+            "sample size signal: N=31213"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        }
+      },
+      "source": "llm"
+    },
+    {
+      "pmid": "42319567",
+      "title": "Effect of a Mobile App on Medication Errors During Simulated Pediatric Cardiopulmonary Resuscitation: PEDIDOSIS App vs. Conventional Methods. A Multicenter Simulation-based Randomized Controlled Trial.",
+      "oneLineSummary_ko": "소아 심폐소생술 시뮬레이션에서 PEDIDOSIS 스마트폰 앱 사용이 기존 방식 대비 간호사의 투약 오류 발생률과 스트레스를 유의하게 감소시켰다.",
+      "clinicalQuestion": "Does the use of the PEDIDOSIS mobile app during simulated pediatric cardiopulmonary resuscitation reduce medication errors made by nursing staff compared to conventional methods?",
+      "clinicalQuestion_ko": "소아 심폐소생술 시뮬레이션 상황에서 PEDIDOSIS 모바일 앱 사용이 기존 방식에 비해 간호사의 투약 오류를 줄일 수 있는가?",
+      "pico": {
+        "population": "Nursing professionals participating in a simulated pediatric emergency resuscitation in Spain.",
+        "intervention": "PEDIDOSIS smartphone application for drug preparation.",
+        "comparison": "Conventional methods (such as printed or electronic medication tables, smartphones, calculators, or no cognitive aid).",
+        "outcome": "Incidence and magnitude of medication errors (dose deviations), proportion of multiple errors, time to administration, stress, satisfaction, and usability."
+      },
+      "pico_ko": {
+        "population": "스페인의 소아 응급 소생술 시뮬레이션에 참여한 간호사들",
+        "intervention": "약물 준비를 위한 PEDIDOSIS 스마트폰 앱 사용",
+        "comparison": "기존 방식 (인쇄물/전자기기 약물 표, 스마트폰, 계산기 또는 인지 보조 도구 없음)",
+        "outcome": "투약 오류(용량 편차) 발생률 및 크기, 다중 오류 비율, 투여 소요 시간, 스트레스, 만족도, 사용 편의성"
+      },
+      "keyFindings": [
+        "The incidence of wrong dose administration (any deviation) was significantly lower in the PEDIDOSIS app group compared to the control group (26.4% vs 51.5%, p < 0.001).",
+        "The odds of a clinically significant (>10% deviation) dosing error was reduced by 76% with the app (OR 0.24 [0.14-0.4], risk difference of 20.7%), and fewer participants committed multiple errors (15.1% vs 57.7%).",
+        "The app group reported higher overall satisfaction, lower stress, and a good usability score (System Usability Scale score of 78.9 out of 100)."
+      ],
+      "keyFindings_ko": [
+        "PEDIDOSIS 앱 사용 군은 대조군 대비 임의의 용량 편차 발생률이 유의하게 낮았다 (26.4% 대 51.5%, p < 0.001).",
+        "앱 사용은 10% 초과 용량 편차 오류 발생 가능성을 76% 감소시켰으며 (OR 0.24 [0.14-0.4], 위험도 차이 20.7%), 다중 투약 오류 비율도 대폭 감소했다 (15.1% 대 57.7%).",
+        "앱 사용 군에서 전반적인 만족도가 더 높았고 스트레스는 더 낮았으며, 시스템 사용성 평가(SUS) 점수는 100점 만점에 78.9점을 기록했다."
+      ],
+      "clinicalTakeaway": "In simulated pediatric cardiopulmonary resuscitations, using the PEDIDOSIS smartphone application for emergency drug preparation (epinephrine, bicarbonate, midazolam, norepinephrine) significantly reduces dangerous dosing errors and multiple medication errors while lowering nurse stress and increasing satisfaction. These findings support integrating validated digital cognitive aids into pediatric emergency workflows, although direct real-world clinical implementation trials are still needed.",
+      "clinicalTakeaway_ko": "소아 심폐소생술 시뮬레이션에서 전용 스마트폰 앱(PEDIDOSIS)을 활용해 응급 약물(에피네프린, 탄산수소나트륨, 미다졸람, 노르에피네프린)을 계산 및 준비했을 때, 위험한 용량 오류와 다중 투약 오류를 유의하게 줄이고 간호사의 스트레스를 낮추며 만족도를 높였다. 소아 응급 진료 지침에 검증된 디지털 보조 도구를 통합하는 것을 지지하는 결과이나, 실제 임상 현장에서의 추가적인 검증이 필요하다.",
+      "limitations": "The study was conducted in a high-fidelity simulation environment, which may not fully capture the real-world clinical performance and cognitive load of actual pediatric arrests. Additionally, although drug administration times were measured, the exact timing data were not reported in the abstract.",
+      "limitations_ko": "본 연구는 실제 소아 심정지 상황이 아닌 고충실도 시뮬레이션 환경에서 진행되었기 때문에 실제 임상 현장에서의 수행력과 인지적 부하를 온전히 대변하지 못할 수 있다. 또한 약물 투약 소요 시간이 측정되었으나 초록에 구체적인 데이터가 명시되지 않았다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 7.5,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "This was a multicenter, simulation-based RCT involving 105 nurses from Spain.",
+        "Experience levels were balanced between groups (> 5 years vs <= 5 years).",
+        "Addresses a major high-stakes area of EM/CCM (pediatric resuscitation dosing errors) but limited by simulation surrogate endpoints."
+      ],
+      "paper": {
+        "pmid": "42319567",
+        "title": "Effect of a Mobile App on Medication Errors During Simulated Pediatric Cardiopulmonary Resuscitation: PEDIDOSIS App vs. Conventional Methods. A Multicenter Simulation-based Randomized Controlled Trial.",
+        "abstract": "Despite its low incidence, pediatric cardiopulmonary arrest remains associated with high mortality and morbidity. The adequate preparation and administration of drugs can impact favourably on the outcomes of cardiopulmonary resuscitation. Nursing staff rely on cognitive aids such as paper support, calculators, or spreadsheets to ensure correct drug administration. Numerous strategies have been proposed to prevent medication errors, including the emergence of mHealth. This study evaluates the efficacy and usefulness of the PEDIDOSIS smartphone application (app) for nursing staff in a simulated pediatric emergency setting. A multicentre high-fidelity simulation-based randomized controlled trial was conducted in a pediatric emergency setting with nursing professionals from different hospitals in Spain. Randomisation groups: PEDIDOSIS app (La Paz Hospital, Spain) vs. conventional methods (such as printed or electronic medication tables, smartphones, calculators or no cognitive aid). To avoid bias due to differences in pediatric emergency experience, each group was randomly assigned the same number of participants with experience (> 5 years) and without experience (≤ 5 years). Epinephrine, bicarbonate, midazolam, and norepinephrine on two ocassions were administered in a simulation scenario. Number and magnitude of medication errors, time taken to drug administration were evaluated as measured with video recording; stress, satisfaction, and usability as measured using standardized survey tools were evaluated. One-hundred and five nurses participated. The incidence of wrong dose administration by any deviation from the correct dose was 51.5% for the control group vs. 26.4% for the PEDIDOSIS app group (p < 0.001). The OR for a wrong dose administration > 10% deviation with PEDIDOSIS app vs. conventional methods was 0.24 [0.14-0.4]), with a risk difference of 20.7%. The proportion of participants committing several medication errors (ME) was substantially lower with the app (15.1%) than with conventional methods (57.7%). Overall satisfaction regarding drug preparation was higher and stress lower in the app group. The System Usability Scale (SUS) score obtained for PEDIDOSIS app was 78.9 out of 100.",
+        "authors": [
+          "Martínez-Serrano A",
+          "Ruiz-Rojo H",
+          "Ruano Encinar M",
+          "García-Sánchez P",
+          "Durantez-Fernández C",
+          "de Rojas T"
+        ],
+        "journal": "Journal of medical systems",
         "pubDate": "2026-Jun-19",
         "publicationTypes": [
           "Journal Article",
+          "Randomized Controlled Trial",
           "Multicenter Study"
         ],
         "meshTerms": [
           "Humans",
-          "Acute Kidney Injury",
-          "Prospective Studies",
-          "Critical Illness",
-          "Female",
-          "Male",
-          "Middle Aged",
-          "Aged",
-          "Cohort Studies",
-          "Intensive Care Units",
-          "Europe"
-        ],
-        "keywords": [
-          "Acute kidney injury",
-          "Critical care",
-          "Guideline adherence",
-          "Implementation",
-          "KDIGO",
-          "Kidney protection strategy"
-        ],
-        "doi": "10.1186/s13054-026-06144-0",
-        "pmcid": "PMC13282845",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42321935/",
-        "collectedAt": "2026-06-22T06:11:44.387Z",
-        "screeningData": {
-          "score": 12,
-          "relevanceMatches": [
-            "critical care",
-            "intensive care",
-            "ICU",
-            "mechanical ventilation",
-            "vasopressor"
-          ],
-          "studyType": "Practice Guideline",
-          "sampleSize": 258,
-          "journalBoost": 0,
-          "reasons": [
-            "abstract available",
-            "topic match: critical care, intensive care, ICU, mechanical ventilation",
-            "study design: Practice Guideline",
-            "sample size signal: N=258"
-          ],
-          "exclude": false,
-          "excludeReason": ""
-        }
-      },
-      "source": "fallback"
-    },
-    {
-      "pmid": "42314159",
-      "title": "Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care (ADVISE): Protocol for a Single-Center Randomized Controlled Trial.",
-      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury.",
-      "clinicalQuestion": "What does this randomized controlled trial suggest for emergency medicine or critical care practice?",
-      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
-      "pico": {
-        "population": "Manual review needed. Population details were not reliably extracted.",
-        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
-        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
-        "outcome": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
-      },
-      "pico_ko": {
-        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
-        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
-        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
-        "outcome": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
-      },
-      "keyFindings": [
-        "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
-      ],
-      "keyFindings_ko": [
-        "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury."
-      ],
-      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
-      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
-      "limitations": "Fallback summary generated because: LLM provider not configured",
-      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
-      "evidenceLevel": "Moderate",
-      "clinicalApplicabilityScore": 10,
-      "manualReviewNeeded": true,
-      "analysisNotes": [
-        "LLM provider not configured"
-      ],
-      "paper": {
-        "pmid": "42314159",
-        "title": "Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care (ADVISE): Protocol for a Single-Center Randomized Controlled Trial.",
-        "abstract": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury. Recommended care for this vulnerable group includes discussion of their goals for life-sustaining care (\"code status\") upon admission, but most older patients do not participate in adequate code status discussions. Randomized trials have demonstrated that video-based interventions are associated with better patient knowledge and improved alignment of patient preferences for life-sustaining treatment; however, there are limited data on the effectiveness of these interventions in acutely injured patients.\nOBJECTIVE: This trial will evaluate the effectiveness and implementation considerations of a video conversation aid to enhance communication among trauma care providers, patients, and surrogate decision-makers regarding cardiopulmonary resuscitation (CPR) and code status decisions.\nMETHODS: This is a single-center randomized controlled trial evaluating the use of a video conversation aid to facilitate discussions of code status. The video intervention will be compared to usual care in the largest feasible pilot randomized controlled trial with the goal of estimating its benefit for patient-centered outcomes. All trauma patients aged 65 years and older admitted following injury are eligible. Incarcerated people, patients with existing do-not-resuscitate or do-not-intubate orders, patients admitted while in hospice care, and patients not expected to survive over 24 to 48 hours will be excluded. The primary outcome is transitions in code status. Secondary outcomes will include perceived success of CPR, video acceptability and effectiveness, knowledge of life-sustaining care outcomes and complications following CPR, participant desire for more information regarding life-sustaining care, hospital-free days, intensive care unit-free days, ventilator-free days, discharge disposition, decisional conflict score, and rate of interventional procedures (eg, tracheostomy, feeding tube placement, and dialysis initiation).\nRESULTS: The ADVISE (Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care) trial was funded in February 2025 via the Learning Healthcare System grant from the University of Texas Health Science Center at Houston. Enrollment began on March 17, 2025, and it is estimated to conclude on May 1, 2026.\nCONCLUSIONS: The ADVISE trial builds on previous research on older trauma patients and advanced care planning using a video intervention to enhance code status discussions. We anticipate that our video aid tool will enhance patients' and surrogate decision-makers' knowledge of advanced care discussions.\nTRIAL REGISTRATION: ClinicalTrials.gov NCT06804226; https://clinicaltrials.gov/study/NCT06804226.\nINTERNATIONAL REGISTERED REPORT IDENTIFIER (IRRID): DERR1-10.2196/87690.",
-        "authors": [
-          "Fajemisin MO",
-          "Karpe AS",
-          "Martinez Ugarte S",
-          "Blakely ML",
-          "Khraish G",
-          "Sanghvi S",
-          "Lee JL",
-          "Kao LS"
-        ],
-        "journal": "JMIR research protocols",
-        "pubDate": "2026-Jun-18",
-        "publicationTypes": [
-          "Journal Article",
-          "Clinical Trial Protocol"
-        ],
-        "meshTerms": [
-          "Humans",
-          "Terminal Care",
-          "Randomized Controlled Trials as Topic",
-          "Aged",
-          "Video Recording",
+          "Mobile Applications",
+          "Medication Errors",
           "Cardiopulmonary Resuscitation",
-          "Communication",
-          "Decision Making",
-          "Advance Care Planning"
+          "Male",
+          "Female",
+          "Spain",
+          "Child"
         ],
         "keywords": [
-          "cardiopulmonary resuscitation",
-          "code status",
-          "decision aid",
-          "older people",
-          "trauma",
-          "video"
+          "Administration, Intravenous",
+          "Emergencies",
+          "Medication Errors",
+          "Nursing",
+          "Pediatrics",
+          "mHealth"
         ],
-        "doi": "10.2196/87690",
-        "pmcid": "",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42314159/",
-        "collectedAt": "2026-06-22T06:11:45.004Z",
+        "doi": "10.1007/s10916-026-02425-x",
+        "pmcid": "PMC13282230",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319567/",
+        "collectedAt": "2026-06-22T07:43:09.118Z",
         "screeningData": {
-          "score": 12,
+          "score": 7,
           "relevanceMatches": [
-            "intensive care",
-            "resuscitation",
-            "trauma"
+            "resuscitation"
           ],
           "studyType": "Randomized Controlled Trial",
-          "sampleSize": 950000,
+          "sampleSize": null,
           "journalBoost": 0,
           "reasons": [
             "abstract available",
-            "topic match: intensive care, resuscitation, trauma",
-            "study design: Randomized Controlled Trial",
-            "sample size signal: N=950000"
+            "topic match: resuscitation",
+            "study design: Randomized Controlled Trial"
           ],
           "exclude": false,
           "excludeReason": ""
         }
       },
-      "source": "fallback"
+      "source": "llm"
     },
     {
-      "pmid": "42320929",
-      "title": "Survey of practices around the measurement and replacement of calcium in paediatric major trauma.",
-      "oneLineSummary_ko": "자동 상세 분석이 제한되어 원문 초록 확인이 필요합니다: BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility.",
-      "clinicalQuestion": "What does this practice guideline suggest for emergency medicine or critical care practice?",
-      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "pmid": "42313188",
+      "title": "From single to dual platelet inhibition FIBTEM assay: fibrinogen replacement thresholds for critical bleeding after trauma.",
+      "oneLineSummary_ko": "외상 환자에서 이중 혈소판 억제 FIBTEM 검사 도입 후에도 기존의 피브리노겐 수혈 역치 기준을 조정 없이 그대로 사용할 수 있다.",
+      "clinicalQuestion": "Does transitioning from single to dual-platelet inhibition in the ROTEM FIBTEM assay affect the correlation with Clauss fibrinogen or the optimal diagnostic thresholds for identifying hypofibrinogenemia in major trauma patients?",
+      "clinicalQuestion_ko": "중증 외상 환자에서 ROTEM FIBTEM 검사의 혈소판 억제 방식이 단일에서 이중으로 변경될 때, Clauss 피브리노겐 수치와의 상관관계 및 저피브리노겐혈증 진단을 위한 최적의 역치값에 변화가 있는가?",
       "pico": {
-        "population": "Manual review needed. Population details were not reliably extracted.",
-        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
-        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
-        "outcome": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+        "population": "Adult patients with major trauma presenting in Queensland between 2022 and 2025 who had paired ROTEM and conventional coagulation tests on arrival",
+        "intervention": "FIBTEM assay with dual-platelet inhibition (addition of tirofiban to cytochalasin D)",
+        "comparison": "FIBTEM assay with single-platelet inhibition (cytochalasin D alone)",
+        "outcome": "Correlation (R2) between FIBTEM-A5 and Clauss fibrinogen, and diagnostic accuracy (sensitivity, specificity) for detecting Clauss fibrinogen < 2.0 g/L at FIBTEM-A5 thresholds of <= 10 mm and <= 8 mm"
       },
       "pico_ko": {
-        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
-        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
-        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
-        "outcome": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+        "population": "2022년에서 2025년 사이 내원하여 내원 당시 ROTEM 및 일반 응고 검사를 함께 시행받은 성인 중증 외상 환자",
+        "intervention": "이중 혈소판 억제 FIBTEM 검사 (cytochalasin D에 tirofiban 추가)",
+        "comparison": "단일 혈소판 억제 FIBTEM 검사 (cytochalasin D 단독)",
+        "outcome": "FIBTEM-A5와 Clauss 피브리노겐 수치 간의 상관관계(R2), 그리고 FIBTEM-A5 <= 10 mm 및 <= 8 mm 역치에서 피브리노겐 < 2.0 g/L를 진단하는 정확도(민감도, 특이도)"
       },
       "keyFindings": [
-        "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+        "The correlation with Clauss fibrinogen was similar between single (R2 0.61; 95% CI: 0.51-0.70) and dual-platelet inhibition assays (R2 0.70; 95% CI: 0.62-0.77; p = 0.94).",
+        "Predicted FIBTEM-A5 amplitudes at 2.0 g/L of fibrinogen were 7.83 mm (95% CI: 7.42-8.23) for single and 7.54 mm (95% CI: 7.22-7.87) for dual assays.",
+        "For the dual-platelet inhibition assay, sensitivity and specificity for detecting fibrinogen < 2.0 g/L were 97.8% and 48.1% at <= 10 mm, and 92.1% and 74.7% at <= 8 mm."
       ],
       "keyFindings_ko": [
-        "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility."
+        "Clauss 피브리노겐 수치와의 상관관계는 단일 억제(R2 0.61)와 이중 억제(R2 0.70) 검사 간에 유의미한 차이가 없었습니다 (p = 0.94).",
+        "피브리노겐 2.0 g/L 기준 예측된 FIBTEM-A5 값은 단일 억제 7.83 mm, 이중 억제 7.54 mm로 차이가 크지 않았습니다.",
+        "이중 억제 검사에서 피브리노겐 < 2.0 g/L 진단을 위한 FIBTEM-A5 <= 10 mm 역치는 민감도 97.8%/특이도 48.1%를, <= 8 mm 역치는 민감도 92.1%/특이도 74.7%를 나타냈습니다."
       ],
-      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
-      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
-      "limitations": "Fallback summary generated because: LLM provider not configured",
-      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: LLM provider not configured",
+      "clinicalTakeaway": "The transition from single to dual-platelet inhibition in the ROTEM FIBTEM assay does not require recalibration of established clinical transfusion thresholds. Clinicians can continue to use FIBTEM-A5 <= 10 mm for high sensitivity to avoid missing hypofibrinogenemia, or <= 8 mm for greater specificity to guide fibrinogen replacement in bleeding trauma patients.",
+      "clinicalTakeaway_ko": "ROTEM FIBTEM 검사의 혈소판 억제 방식 변경(tirofiban 추가) 후에도 기존에 사용되던 임상적 수혈 역치 기준을 재조정할 필요가 없습니다. 외상성 출혈 환자의 피브리노겐 보충 시, 저피브리노겐혈증을 놓치지 않기 위한 선별 목적으로는 FIBTEM-A5 <= 10 mm(고민감도)를, 보다 확정적인 치료 결정 목적으로는 <= 8 mm(고특이도)를 기존과 동일하게 적용할 수 있습니다.",
+      "limitations": "This is a retrospective cohort study conducted in a single Australian state (Queensland) and did not analyze direct patient outcomes such as mortality or actual blood product use.",
+      "limitations_ko": "호주 퀸즐랜드 지역 단일 코호트를 대상으로 한 후향적 연구이며, 실제 수혈량이나 사망률 등 환자의 임상적 예후 결과를 직접 분석하지는 않았습니다.",
       "evidenceLevel": "Moderate",
-      "clinicalApplicabilityScore": 10,
-      "manualReviewNeeded": true,
+      "clinicalApplicabilityScore": 8.5,
+      "manualReviewNeeded": false,
       "analysisNotes": [
-        "LLM provider not configured"
+        "This study provides useful reassurance for laboratories and trauma services transitioning to newer ROTEM reagents, confirming that clinical decision algorithms based on FIBTEM-A5 thresholds do not need to be altered."
       ],
       "paper": {
-        "pmid": "42320929",
-        "title": "Survey of practices around the measurement and replacement of calcium in paediatric major trauma.",
-        "abstract": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility. Current guidelines recommend maintaining normal ionised calcium levels in the bleeding trauma patient. However, guidance does not specify when to replace calcium, and for paediatric trauma, it is unclear when clinicians should measure or decide to replace calcium.\nOBJECTIVES: This study aimed to survey the practices, protocols and opinions regarding the measurement and replacement of calcium in paediatric major trauma.\nMETHODS: A cross-sectional survey with single-stage voluntary and snowball sampling. Individual emergency departments (EDs) responded to questions on departmental practices, while individual clinicians provided opinions on the measurement and replacement of calcium based on a clinical vignette with two variations (a haemodynamically stable and a haemodynamically unstable). The survey was administered using Online Surveys V3 (JISC, 2025). Respondents were invited to participate through collaborative research networks.\nRESULTS: There were responses from 67 individual EDs and 99 individual respondents from 19 different countries. Most EDs had a paediatric major haemorrhage protocol (61/67, 91.0%), but this did not include calcium for 16/67 (23.9%) of the EDs. The timing of calcium replacement was either not included or not specified in most protocols (44/67, 65.7%), with variations in when it should be replaced when specified.Opinions on considering calcium replacement before blood products were significantly different based on whether the patient in the vignette was clinically stable or unstable. Opinions on replacement doses of exogenous calcium were significantly different when the calcium was moderately low (<1.12 mmol/L), but were not significantly different if the calcium was severely low (<1.0 mmol/L).\nCONCLUSION: There is considerable variation among EDs regarding ionised calcium measurement and calcium replacement, both before blood product transfusion and in major haemorrhage protocols. Clinicians' opinions on calcium measurement and replacement also vary widely. More research is needed to reach a consensus.\nLEVEL OF EVIDENCE: III.",
+        "pmid": "42313188",
+        "title": "From single to dual platelet inhibition FIBTEM assay: fibrinogen replacement thresholds for critical bleeding after trauma.",
+        "abstract": "PURPOSE: The FIBTEM assay in Rotational Thromboelastometry (ROTEM) measures fibrin-based clot formation. The reagent transitioned from single to dual-platelet inhibition with addition of tirofiban to cytochalasin D, offering more complete platelet suppression. The aim of this study was to assess the impact of this change on transfusion thresholds in trauma.\nMETHODS: In this retrospective cohort study, we included adult patients with major trauma across Queensland who presented between 2022 and 2025 and had results available for paired ROTEM and conventional coagulation tests on arrival. Patients were sub-grouped into single and dual-platelet inhibition assay groups. Correlations between FIBTEM-A5 and Clauss fibrinogen were analysed, comparing correlation strength and diagnostic accuracy for fibrinogen levels of < 2.0 g/L.\nRESULTS: The relationship between FIBTEM-A5 and Clauss fibrinogen was similar using single platelet inhibition assays (R² 0.61;95%CI: 0.51-0.70) and dual-platelet inhibition assays (R² 0.70;95%CI: 0.62-0.77; p = 0.94). Predicted FIBTEM-A5 amplitudes at 2 g/L fibrinogen were 7.83 mm (95%CI: 7.42-8.23) and 7.54 mm (95%CI: 7.22-7.87). Diagnostic performance for detecting fibrinogen < 2.0 g/L was comparable between assays, for both FIBTEM-A5 ≤ 10 mm and FIBTEM-A5 ≤ 8 mm (all p > 0.05). For the dual-platelet inhibition assay, sensitivity and specificity were 97.8% and 48.1% at ≤ 10 mm, and 92.1% and 74.7% at ≤ 8 mm.\nCONCLUSION: Dual-platelet inhibition did not alter the relationship between FIBTEM-A5 and Clauss fibrinogen or the diagnostic accuracy of FIBTEM thresholds for identifying hypofibrinogenemia. FIBTEM-A5 ≤ 10 mm maintained high sensitivity, while ≤ 8 mm demonstrated greater specificity. Recalibration of established FIBTEM thresholds is not required following transition to dual-platelet inhibition.",
         "authors": [
-          "Hibberd O",
-          "Ranaweera M",
-          "Karageorgos S",
-          "Priddis K",
-          "Nijman RG",
-          "Tagg A",
-          "Hall D",
-          "Roland D"
+          "Latona A",
+          "Winearls J",
+          "Ho A",
+          "Mitra B"
         ],
-        "journal": "BMJ paediatrics open",
-        "pubDate": "2026-Jun-17",
+        "journal": "European journal of trauma and emergency surgery : official publication of the European Trauma Society",
+        "pubDate": "2026-Jun-18",
         "publicationTypes": [
           "Journal Article"
         ],
         "meshTerms": [
           "Humans",
-          "Calcium",
-          "Cross-Sectional Studies",
-          "Hypocalcemia",
-          "Child",
-          "Hemorrhage",
+          "Fibrinogen",
+          "Thrombelastography",
+          "Retrospective Studies",
           "Wounds and Injuries",
-          "Practice Patterns, Physicians'",
-          "Emergency Service, Hospital",
-          "Surveys and Questionnaires",
-          "Female"
+          "Female",
+          "Platelet Aggregation Inhibitors",
+          "Male",
+          "Tirofiban",
+          "Hemorrhage",
+          "Middle Aged",
+          "Adult"
         ],
         "keywords": [
-          "Child Health",
-          "Physiology",
-          "Resuscitation"
+          "Cytochalasin D",
+          "Fibrinogen",
+          "Major trauma",
+          "Thrombelastography",
+          "Tirofiban"
         ],
-        "doi": "10.1136/bmjpo-2026-004588",
-        "pmcid": "",
-        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320929/",
-        "collectedAt": "2026-06-22T06:11:44.387Z",
+        "doi": "10.1007/s00068-026-03250-0",
+        "pmcid": "PMC13279660",
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313188/",
+        "collectedAt": "2026-06-22T07:43:10.261Z",
         "screeningData": {
-          "score": 12,
+          "score": 5,
           "relevanceMatches": [
-            "emergency department",
-            "resuscitation",
             "trauma"
           ],
-          "studyType": "Practice Guideline",
+          "studyType": "Observational",
           "sampleSize": null,
-          "journalBoost": 3,
+          "journalBoost": 0,
           "reasons": [
             "abstract available",
-            "topic match: emergency department, resuscitation, trauma",
-            "study design: Practice Guideline",
-            "journal boost: BMJ paediatrics open"
+            "topic match: trauma",
+            "study design: Observational"
           ],
           "exclude": false,
           "excludeReason": ""
         }
       },
-      "source": "fallback"
+      "source": "llm"
     }
   ],
   "candidates": [
-    {
-      "pmid": "42321935",
-      "title": "Implementation of the kidney protection strategy in critically ill patients with acute kidney injury - a multi-center prospective cohort study.",
-      "abstract": "BACKGROUND: The international Kidney Disease: Improving Global Outcomes (KDIGO) guidelines recommend the implementation of a kidney protection strategy (KPS) in patients at high risk of and with Acute Kidney Injury (AKI). However, real-world implementation of this strategy in critically ill patients with AKI is unclear. We quantified timely and sustained adherence to KPS in critically ill adults with moderate-to-severe (KDIGO stage 2 or 3) AKI and explored associations with clinical outcomes.\nMETHODS: This was a multicenter, prospective cohort study enrolling adult patients with moderate or severe AKI requiring vasopressors and/or mechanical ventilation across five centers in Europe. The primary endpoint was adherence to the KPS, which included hemodynamic monitoring, sustained optimization of mean arterial pressure (MAP) > 65 mmHg, monitoring of serum creatinine and urine output, and avoidance of hyperglycemia, radiocontrast agents and nephrotoxins when possible, within 12 h after AKI diagnosis for 48 h or until ICU discharge. Exploratory analyses examined associations between adherence and renal outcomes.\nRESULTS: A total of 258 patients were enrolled (median age 69 years [IQR 62-75]; 65% male; median SOFA 10 [IQR 8-13]). The complete KPS was implemented in 80 patients (31%; 95% CI, 25.5-37.2%). Adherence to individual components of the KPS varied widely with optimization of MAP showing the lowest implementation rate (33%). In exploratory analyses accounting for death as a competing risk, KPS adherence was associated with a lower incidence of AKD beyond day 7 (subdistribution hazard ratio [SHR] 0.64; 95% CI, 0.41-0.99; p = 0.046), a higher incidence of renal recovery at hospital discharge (SHR 6.02; 95% CI, 4.00-9.05; p < 0.0001), and a lower incidence of RRT within 30 days (SHR 0.12; 95% CI, 0.02-0.91; p = 0.04). After multivariable adjustment, the association with renal recovery remained robust (adjusted SHR 6.29; 95% CI, 3.08-12.85; p < 0.0001). A clear dose-response relationship was observed between the number of implemented KPS components and renal outcomes.\nCONCLUSIONS: In critically ill patients with moderate-to-severe AKI, the complete KDIGO-recommended kidney protection strategy was implemented in approximately one-third of patients, and full KPS adherence was associated with a higher rate of renal recovery at hospital discharge.",
-      "authors": [
-        "Sadjadi M",
-        "Marcello M",
-        "Köhler A",
-        "Perschinka F",
-        "Schauflinger S",
-        "Joannidis M",
-        "Vadász I",
-        "Husain-Syed F"
-      ],
-      "journal": "Critical care (London, England)",
-      "pubDate": "2026-Jun-19",
-      "publicationTypes": [
-        "Journal Article",
-        "Multicenter Study"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Acute Kidney Injury",
-        "Prospective Studies",
-        "Critical Illness",
-        "Female",
-        "Male",
-        "Middle Aged",
-        "Aged",
-        "Cohort Studies",
-        "Intensive Care Units",
-        "Europe"
-      ],
-      "keywords": [
-        "Acute kidney injury",
-        "Critical care",
-        "Guideline adherence",
-        "Implementation",
-        "KDIGO",
-        "Kidney protection strategy"
-      ],
-      "doi": "10.1186/s13054-026-06144-0",
-      "pmcid": "PMC13282845",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42321935/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
-      "screeningData": {
-        "score": 12,
-        "relevanceMatches": [
-          "critical care",
-          "intensive care",
-          "ICU",
-          "mechanical ventilation",
-          "vasopressor"
-        ],
-        "studyType": "Practice Guideline",
-        "sampleSize": 258,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: critical care, intensive care, ICU, mechanical ventilation",
-          "study design: Practice Guideline",
-          "sample size signal: N=258"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42314159",
-      "title": "Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care (ADVISE): Protocol for a Single-Center Randomized Controlled Trial.",
-      "abstract": "BACKGROUND: More than 950,000 adults over 65 years of age are hospitalized each year after injury. Recommended care for this vulnerable group includes discussion of their goals for life-sustaining care (\"code status\") upon admission, but most older patients do not participate in adequate code status discussions. Randomized trials have demonstrated that video-based interventions are associated with better patient knowledge and improved alignment of patient preferences for life-sustaining treatment; however, there are limited data on the effectiveness of these interventions in acutely injured patients.\nOBJECTIVE: This trial will evaluate the effectiveness and implementation considerations of a video conversation aid to enhance communication among trauma care providers, patients, and surrogate decision-makers regarding cardiopulmonary resuscitation (CPR) and code status decisions.\nMETHODS: This is a single-center randomized controlled trial evaluating the use of a video conversation aid to facilitate discussions of code status. The video intervention will be compared to usual care in the largest feasible pilot randomized controlled trial with the goal of estimating its benefit for patient-centered outcomes. All trauma patients aged 65 years and older admitted following injury are eligible. Incarcerated people, patients with existing do-not-resuscitate or do-not-intubate orders, patients admitted while in hospice care, and patients not expected to survive over 24 to 48 hours will be excluded. The primary outcome is transitions in code status. Secondary outcomes will include perceived success of CPR, video acceptability and effectiveness, knowledge of life-sustaining care outcomes and complications following CPR, participant desire for more information regarding life-sustaining care, hospital-free days, intensive care unit-free days, ventilator-free days, discharge disposition, decisional conflict score, and rate of interventional procedures (eg, tracheostomy, feeding tube placement, and dialysis initiation).\nRESULTS: The ADVISE (Advancing Discussions Using a Video-Based Support Tool About End-of-Life Care) trial was funded in February 2025 via the Learning Healthcare System grant from the University of Texas Health Science Center at Houston. Enrollment began on March 17, 2025, and it is estimated to conclude on May 1, 2026.\nCONCLUSIONS: The ADVISE trial builds on previous research on older trauma patients and advanced care planning using a video intervention to enhance code status discussions. We anticipate that our video aid tool will enhance patients' and surrogate decision-makers' knowledge of advanced care discussions.\nTRIAL REGISTRATION: ClinicalTrials.gov NCT06804226; https://clinicaltrials.gov/study/NCT06804226.\nINTERNATIONAL REGISTERED REPORT IDENTIFIER (IRRID): DERR1-10.2196/87690.",
-      "authors": [
-        "Fajemisin MO",
-        "Karpe AS",
-        "Martinez Ugarte S",
-        "Blakely ML",
-        "Khraish G",
-        "Sanghvi S",
-        "Lee JL",
-        "Kao LS"
-      ],
-      "journal": "JMIR research protocols",
-      "pubDate": "2026-Jun-18",
-      "publicationTypes": [
-        "Journal Article",
-        "Clinical Trial Protocol"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Terminal Care",
-        "Randomized Controlled Trials as Topic",
-        "Aged",
-        "Video Recording",
-        "Cardiopulmonary Resuscitation",
-        "Communication",
-        "Decision Making",
-        "Advance Care Planning"
-      ],
-      "keywords": [
-        "cardiopulmonary resuscitation",
-        "code status",
-        "decision aid",
-        "older people",
-        "trauma",
-        "video"
-      ],
-      "doi": "10.2196/87690",
-      "pmcid": "",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42314159/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
-      "screeningData": {
-        "score": 12,
-        "relevanceMatches": [
-          "intensive care",
-          "resuscitation",
-          "trauma"
-        ],
-        "studyType": "Randomized Controlled Trial",
-        "sampleSize": 950000,
-        "journalBoost": 0,
-        "reasons": [
-          "abstract available",
-          "topic match: intensive care, resuscitation, trauma",
-          "study design: Randomized Controlled Trial",
-          "sample size signal: N=950000"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
-    {
-      "pmid": "42320929",
-      "title": "Survey of practices around the measurement and replacement of calcium in paediatric major trauma.",
-      "abstract": "BACKGROUND: Ionised hypocalcaemia can worsen haemorrhage due to its role in clot formation, vascular tone and cardiac contractility. Current guidelines recommend maintaining normal ionised calcium levels in the bleeding trauma patient. However, guidance does not specify when to replace calcium, and for paediatric trauma, it is unclear when clinicians should measure or decide to replace calcium.\nOBJECTIVES: This study aimed to survey the practices, protocols and opinions regarding the measurement and replacement of calcium in paediatric major trauma.\nMETHODS: A cross-sectional survey with single-stage voluntary and snowball sampling. Individual emergency departments (EDs) responded to questions on departmental practices, while individual clinicians provided opinions on the measurement and replacement of calcium based on a clinical vignette with two variations (a haemodynamically stable and a haemodynamically unstable). The survey was administered using Online Surveys V3 (JISC, 2025). Respondents were invited to participate through collaborative research networks.\nRESULTS: There were responses from 67 individual EDs and 99 individual respondents from 19 different countries. Most EDs had a paediatric major haemorrhage protocol (61/67, 91.0%), but this did not include calcium for 16/67 (23.9%) of the EDs. The timing of calcium replacement was either not included or not specified in most protocols (44/67, 65.7%), with variations in when it should be replaced when specified.Opinions on considering calcium replacement before blood products were significantly different based on whether the patient in the vignette was clinically stable or unstable. Opinions on replacement doses of exogenous calcium were significantly different when the calcium was moderately low (<1.12 mmol/L), but were not significantly different if the calcium was severely low (<1.0 mmol/L).\nCONCLUSION: There is considerable variation among EDs regarding ionised calcium measurement and calcium replacement, both before blood product transfusion and in major haemorrhage protocols. Clinicians' opinions on calcium measurement and replacement also vary widely. More research is needed to reach a consensus.\nLEVEL OF EVIDENCE: III.",
-      "authors": [
-        "Hibberd O",
-        "Ranaweera M",
-        "Karageorgos S",
-        "Priddis K",
-        "Nijman RG",
-        "Tagg A",
-        "Hall D",
-        "Roland D"
-      ],
-      "journal": "BMJ paediatrics open",
-      "pubDate": "2026-Jun-17",
-      "publicationTypes": [
-        "Journal Article"
-      ],
-      "meshTerms": [
-        "Humans",
-        "Calcium",
-        "Cross-Sectional Studies",
-        "Hypocalcemia",
-        "Child",
-        "Hemorrhage",
-        "Wounds and Injuries",
-        "Practice Patterns, Physicians'",
-        "Emergency Service, Hospital",
-        "Surveys and Questionnaires",
-        "Female"
-      ],
-      "keywords": [
-        "Child Health",
-        "Physiology",
-        "Resuscitation"
-      ],
-      "doi": "10.1136/bmjpo-2026-004588",
-      "pmcid": "",
-      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320929/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
-      "screeningData": {
-        "score": 12,
-        "relevanceMatches": [
-          "emergency department",
-          "resuscitation",
-          "trauma"
-        ],
-        "studyType": "Practice Guideline",
-        "sampleSize": null,
-        "journalBoost": 3,
-        "reasons": [
-          "abstract available",
-          "topic match: emergency department, resuscitation, trauma",
-          "study design: Practice Guideline",
-          "journal boost: BMJ paediatrics open"
-        ],
-        "exclude": false,
-        "excludeReason": ""
-      }
-    },
     {
       "pmid": "42315266",
       "title": "Comparison of oxycodone hydrochloride injection versus sufentanil for postoperative analgesia in patients undergoing minimally invasive cardiac valve replacement: study protocol for a single-centre, randomised, double-blind non-inferiority trial.",
@@ -579,7 +386,7 @@
       "doi": "10.1136/bmjopen-2025-113082",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315266/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.737Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -640,7 +447,7 @@
       "doi": "10.1136/bmjopen-2026-117133",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315260/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.737Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -699,7 +506,7 @@
       "doi": "10.1001/jamanetworkopen.2026.18896",
       "pmcid": "PMC13280705",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313385/",
-      "collectedAt": "2026-06-22T06:11:45.572Z",
+      "collectedAt": "2026-06-22T07:43:10.261Z",
       "screeningData": {
         "score": 11,
         "relevanceMatches": [
@@ -761,7 +568,7 @@
       "doi": "10.1007/s11302-026-10172-4",
       "pmcid": "PMC13282434",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319606/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
+      "collectedAt": "2026-06-22T07:43:09.118Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -820,7 +627,7 @@
       "doi": "10.1007/s00402-026-06296-2",
       "pmcid": "PMC13279584",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315642/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 10,
         "relevanceMatches": [
@@ -880,7 +687,7 @@
       "doi": "10.1136/bmjopen-2025-107409",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315273/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 9,
         "relevanceMatches": [
@@ -941,7 +748,7 @@
       "doi": "10.3389/fpubh.2026.1842790",
       "pmcid": "PMC13274368",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42317981/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 9,
         "relevanceMatches": [
@@ -1003,7 +810,7 @@
       "doi": "10.15766/mep_2374-8265.11610",
       "pmcid": "PMC13272583",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42317427/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 9,
         "relevanceMatches": [
@@ -1064,7 +871,7 @@
       "doi": "10.1136/bmjopen-2025-100597",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315277/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 8,
         "relevanceMatches": [
@@ -1125,7 +932,7 @@
       "doi": "10.1136/bmjresp-2025-003552",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42315256/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.737Z",
       "screeningData": {
         "score": 8,
         "relevanceMatches": [
@@ -1187,7 +994,7 @@
       "doi": "10.1007/s00737-026-01736-9",
       "pmcid": "PMC13279276",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313240/",
-      "collectedAt": "2026-06-22T06:11:45.572Z",
+      "collectedAt": "2026-06-22T07:43:10.261Z",
       "screeningData": {
         "score": 8,
         "relevanceMatches": [
@@ -1249,7 +1056,7 @@
       "doi": "10.1080/07853890.2026.2690708",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42317003/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 8,
         "relevanceMatches": [
@@ -1305,7 +1112,7 @@
       "doi": "10.1136/bmjpo-2025-004466",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320931/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
+      "collectedAt": "2026-06-22T07:43:09.118Z",
       "screeningData": {
         "score": 7,
         "relevanceMatches": [],
@@ -1359,7 +1166,7 @@
       "doi": "10.2196/82762",
       "pmcid": "PMC13282041",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42320034/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
+      "collectedAt": "2026-06-22T07:43:09.118Z",
       "screeningData": {
         "score": 7,
         "relevanceMatches": [
@@ -1419,7 +1226,7 @@
       "doi": "10.1007/s10916-026-02425-x",
       "pmcid": "PMC13282230",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319567/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
+      "collectedAt": "2026-06-22T07:43:09.118Z",
       "screeningData": {
         "score": 7,
         "relevanceMatches": [
@@ -1468,7 +1275,7 @@
       "doi": "10.1051/ject/2026009",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319103/",
-      "collectedAt": "2026-06-22T06:11:45.003Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 7,
         "relevanceMatches": [
@@ -1521,7 +1328,7 @@
       "doi": "10.1037/pha0000864",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313642/",
-      "collectedAt": "2026-06-22T06:11:45.571Z",
+      "collectedAt": "2026-06-22T07:43:10.260Z",
       "screeningData": {
         "score": 7,
         "relevanceMatches": [
@@ -1579,7 +1386,7 @@
       "doi": "10.1080/0886022X.2026.2685354",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42312375/",
-      "collectedAt": "2026-06-22T06:11:45.572Z",
+      "collectedAt": "2026-06-22T07:43:10.261Z",
       "screeningData": {
         "score": 7,
         "relevanceMatches": [
@@ -1642,7 +1449,7 @@
       "doi": "10.1186/s12889-026-28032-6",
       "pmcid": "PMC13282876",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42321726/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
+      "collectedAt": "2026-06-22T07:43:09.117Z",
       "screeningData": {
         "score": 6,
         "relevanceMatches": [
@@ -1701,7 +1508,7 @@
       "doi": "10.1007/s00590-026-04817-8",
       "pmcid": "PMC13282350",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319556/",
-      "collectedAt": "2026-06-22T06:11:44.387Z",
+      "collectedAt": "2026-06-22T07:43:09.118Z",
       "screeningData": {
         "score": 6,
         "relevanceMatches": [
@@ -1758,7 +1565,7 @@
       "doi": "10.1093/jac/dkag199",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42318924/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 6,
         "relevanceMatches": [
@@ -1821,7 +1628,7 @@
       "doi": "10.1051/ject/2025056",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42319102/",
-      "collectedAt": "2026-06-22T06:11:45.003Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 6,
         "relevanceMatches": [
@@ -1879,7 +1686,7 @@
       "doi": "10.1007/s00068-026-03250-0",
       "pmcid": "PMC13279660",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313188/",
-      "collectedAt": "2026-06-22T06:11:45.572Z",
+      "collectedAt": "2026-06-22T07:43:10.261Z",
       "screeningData": {
         "score": 5,
         "relevanceMatches": [
@@ -1940,7 +1747,7 @@
       "doi": "10.1002/ppul.71711",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42323708/",
-      "collectedAt": "2026-06-22T06:11:44.386Z",
+      "collectedAt": "2026-06-22T07:43:09.116Z",
       "screeningData": {
         "score": 5,
         "relevanceMatches": [
@@ -2001,7 +1808,7 @@
       "doi": "10.1177/03000605261458634",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42316959/",
-      "collectedAt": "2026-06-22T06:11:45.004Z",
+      "collectedAt": "2026-06-22T07:43:09.736Z",
       "screeningData": {
         "score": 5,
         "relevanceMatches": [
@@ -2058,7 +1865,7 @@
       "doi": "10.1002/ppul.71705",
       "pmcid": "PMC13278357",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313717/",
-      "collectedAt": "2026-06-22T06:11:45.571Z",
+      "collectedAt": "2026-06-22T07:43:10.260Z",
       "screeningData": {
         "score": 5,
         "relevanceMatches": [
@@ -2099,7 +1906,7 @@
       "doi": "10.1111/1742-6723.70291",
       "pmcid": "",
       "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313528/",
-      "collectedAt": "2026-06-22T06:11:45.571Z",
+      "collectedAt": "2026-06-22T07:43:10.260Z",
       "screeningData": {
         "score": 5,
         "relevanceMatches": [
@@ -2117,8 +1924,184 @@
         "exclude": false,
         "excludeReason": ""
       }
+    },
+    {
+      "pmid": "42313463",
+      "title": "Genomic analysis of environmentally sourced species from Fiji and Australia.",
+      "abstract": "The World Health Organization identified as an underestimated, multi-drug-resistant and opportunistic nosocomial pathogen. It poses a threat to patients who are immunocompromised, suffering chronic disease, requiring indwelling catheters and undergoing mechanical ventilation, as well as victims of trauma and burns. Here, whole-genome sequences of 266 spp. from diverse environmental sources in Fiji and Australia were generated and used to improve understanding of the phylogeny of the genus. Isolates were sourced from freshwater, soil, waste biosolids, wastewater and animal agriculture using selective differential growth media. Phylogenomic analysis identified eight species, plus a singular novel Australian isolate most closely related to and . The Fijian isolates were primarily (Sm), with isolates belonging to 13 of the previously recognized 19 Sm subgroups, while most Australian isolates were notably non-. A genotypic characterization of the collections was performed, with a focus on well-characterized antimicrobial resistance and virulence genes identified in , highlighting the presence of these key genes within other species, particularly , and . Allelic analysis of chromosomal -lactamase revealed its presence across the entire genus, while carbapenemase gene was restricted to and its closest relatives. These data represent a significant contribution of non- genome sequences to the public domain, and the first dataset representing from Fiji.",
+      "authors": [
+        "Wyrsch ER",
+        "Drigo B",
+        "Li D",
+        "Cummins ML",
+        "Hem S",
+        "Sim JXF",
+        "Opoku S",
+        "Dunbar A"
+      ],
+      "journal": "Microbial genomics",
+      "pubDate": "2026-Jun",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Australia",
+        "Phylogeny",
+        "Fiji",
+        "Stenotrophomonas",
+        "Whole Genome Sequencing",
+        "Genome, Bacterial",
+        "Genomics",
+        "Anti-Bacterial Agents",
+        "beta-Lactamases",
+        "Humans"
+      ],
+      "keywords": [
+        "Stenotrophomonas",
+        "antimicrobial resistance",
+        "environmental epidemiology",
+        "genomic epidemiology",
+        "whole-genome sequencing"
+      ],
+      "doi": "10.1099/mgen.0.001750",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42313463/",
+      "collectedAt": "2026-06-22T07:43:10.260Z",
+      "screeningData": {
+        "score": 5,
+        "relevanceMatches": [
+          "ICU",
+          "mechanical ventilation",
+          "trauma"
+        ],
+        "studyType": "Other",
+        "sampleSize": null,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: ICU, mechanical ventilation, trauma"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42323884",
+      "title": "Plasma proteomics reveal SERPINA1 and CD59 as candidate biomarkers for COVID-19 severity stratification and prognosis prediction.",
+      "abstract": "BACKGROUND: COVID-19 has been closely associated with coagulation abnormalities. However, existing biomarkers, including D-dimer and fibrin degradation products (FDP), exhibit limited accuracy in stratifying disease severity and predicting long-term clinical outcomes.\nOBJECTIVES: This study aimed to use proteomic analysis to identify plasma biomarkers associated with COVID-19 severity and prognosis, and validate their predictive utility for mortality and thromboembolic complications.\nMETHODS: Plasma proteomic profiles were analyzed across three COVID-19 severity classes. Differential expression analysis and functional analysis were performed. Clustering analysis was used to identify proteins correlated with disease severity. Candidate biomarkers were validated in an independent cohort. Predictive performance of the biomarkers for mortality, sepsis and venous thromboembolism was evaluated using bootstrap-corrected ROC analyses and multivariable regression analyses.\nRESULTS: Proteomic analysis revealed progressive involvement of the coagulation and complement pathway with increasing disease severity. SERPINA1 and CD59 were identified as candidate biomarkers and exhibited significantly higher plasma levels in severe cases. Bootstrap-corrected ROC analyses demonstrated strong predictive performance: SERPINA1 achieved AUCs of 0.775 and 0.924 for 30-day and 12-month mortality, and CD59 achieved AUCs of 0.720 for sepsis; the combined model further improved prediction of 12-month mortality (AUC 0.946) and sepsis (AUC 0.904), outperforming D-dimer and FDP. Multivariable regression confirmed their independent prognostic value.\nCONCLUSION: This exploratory study identifies SERPINA1 and CD59 as candidate prognostic biomarkers in COVID-19, highlighting the role of coagulation and complement-related pathways in disease severity and warranting further prospective validation.",
+      "authors": [
+        "Zhou Z",
+        "Liu Q",
+        "Ma S",
+        "Shi A",
+        "Tao Y",
+        "Hu T",
+        "Yan S",
+        "Chen Y"
+      ],
+      "journal": "Annals of medicine",
+      "pubDate": "2026-Dec",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Biomarkers",
+        "COVID-19",
+        "Prognosis",
+        "Proteomics",
+        "Severity of Illness Index",
+        "Female",
+        "Male",
+        "Middle Aged",
+        "CD59 Antigens",
+        "Aged",
+        "SARS-CoV-2"
+      ],
+      "keywords": [
+        "COVID-19",
+        "Coagulation marker",
+        "mortality prediction",
+        "proteomics",
+        "venous thromboembolism"
+      ],
+      "doi": "10.1080/07853890.2026.2688626",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42323884/",
+      "collectedAt": "2026-06-22T07:43:09.116Z",
+      "screeningData": {
+        "score": 5,
+        "relevanceMatches": [
+          "sepsis"
+        ],
+        "studyType": "Observational",
+        "sampleSize": null,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: sepsis",
+          "study design: Observational"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
+    },
+    {
+      "pmid": "42323292",
+      "title": "Mapping behavioural mechanisms linking childhood maltreatment, cognition, impulsivity, and suicidality in bipolar disorder: A network approach.",
+      "abstract": "Childhood maltreatment (CM) has been consistently associated with increased risk and poorer outcomes in bipolar disorder (BD). However, the behavioural and cognitive mechanisms linking CM and suicidality remain poorly understood, limiting the development of targeted preventive interventions. We estimated a regularised partial correlation network to explore the interplay between CM subtypes (emotional, physical, or sexual abuse; emotional and physical neglect), cognitive domains (attention/processing speed, executive function/working memory, socio-emotional cognition, decision-making), impulsivity traits (attentional, motor, non-planning), and suicidal behaviours (ideation, planning, attempts) in 249 euthymic individuals with BD (mean age = 46.14, SD = 8.60; 59.84% female; 71.89% BD type I). CM was assessed using the Childhood Trauma Questionnaire (CTQ), cognition with a comprehensive neuropsychological battery, impulsivity with the Barratt Impulsiveness Scale (BIS-11), and suicidality with the Columbia Suicide Severity Rating Scale (C-SSRS) and structured interview. Age, sex, and social desirability (CTQ minimisation/denial subscale) were included as covariates. CM was associated with both cognitive functioning (poorer executive function and working memory, attention/processing speed, and socio-emotional cognition) and suicidality (suicidal ideation and, to a lesser extent, suicide attempts). Emotional abuse was linked to suicidal ideation (strongest association among CM subtypes; r = 0.27, p <0.001) and showed the highest centrality within the network (strength z = 1.76; expected influence z = 1.95). All CM subtypes were associated with impulsivity traits. Motor impulsivity emerged as a behavioural bridge between CM and suicidality (bridge expected influence z = 0.21), whereas higher socio-emotional cognition, particularly the ability to manage emotions, was associated with fewer suicide attempts. These findings highlight specific cognitive and behavioural mechanisms linking CM and suicidality in BD. Emotional abuse and socio-emotional cognition represent promising targets for trauma-informed and personalised interventions.",
+      "authors": [
+        "Fares-Otero NE",
+        "Iversen AE",
+        "Gutiérrez-Zotes A",
+        "Zarp J",
+        "Jiménez E",
+        "Sánchez-Moreno J",
+        "Pomarol-Clotet E",
+        "Vieta E"
+      ],
+      "journal": "Translational psychiatry",
+      "pubDate": "2026-Jun-20",
+      "publicationTypes": [
+        "Journal Article"
+      ],
+      "meshTerms": [
+        "Humans",
+        "Female",
+        "Bipolar Disorder",
+        "Impulsive Behavior",
+        "Male",
+        "Suicidal Ideation",
+        "Middle Aged",
+        "Cognition",
+        "Executive Function",
+        "Adult",
+        "Adult Survivors of Child Abuse",
+        "Neuropsychological Tests"
+      ],
+      "keywords": [],
+      "doi": "10.1038/s41398-026-04177-1",
+      "pmcid": "",
+      "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42323292/",
+      "collectedAt": "2026-06-22T07:43:09.117Z",
+      "screeningData": {
+        "score": 4,
+        "relevanceMatches": [
+          "ICU",
+          "trauma"
+        ],
+        "studyType": "Other",
+        "sampleSize": null,
+        "journalBoost": 0,
+        "reasons": [
+          "abstract available",
+          "topic match: ICU, trauma"
+        ],
+        "exclude": false,
+        "excludeReason": ""
+      }
     }
   ],
-  "excludedCount": 5,
+  "excludedCount": 8,
   "errors": []
 }

@@ -2,13 +2,13 @@
   "runId": "2026-06-22",
   "status": "success",
   "step": "done",
-  "startedAt": "2026-06-22T06:11:43.663Z",
-  "finishedAt": "2026-06-22T06:11:45.587Z",
+  "startedAt": "2026-06-22T07:43:08.463Z",
+  "finishedAt": "2026-06-22T07:46:09.892Z",
   "counts": {
     "fetched": 50,
     "screened": 30,
     "analyzed": 3,
-    "fallback": 3
+    "fallback": 0
   },
   "outputs": {
     "json": "reports/2026-06-22.json",
