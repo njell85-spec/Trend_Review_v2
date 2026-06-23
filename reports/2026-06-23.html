@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 6. 23. PM 7:51</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-06-23</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">The efficacy of high-flow nasal cannula versus non-invasive mechanical ventilation in preventing reintubation in patients at high risk of extubation failure: systematic review and meta-analysis with trial sequential analysis.</h2>
+      <div class="paper-meta">
+        Critical care science · 2026 · PMID 42307314
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">Meta-analysis</span>
+      <span class="pill">PMC + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">NIV is widely recommended for high-risk extubations but can be poorly tolerated due to mask discomfort, claustrophobia, and facial ulcers. Showing that HFNC is comparable in efficacy, and potentially better tolerated with fewer complications, offers clinicians a viable and patient-friendly alternative.</p>
+    <p class="ko">NIV는 발관 실패 고위험군 환자에게 널리 권장되지만 마스크 불편감, 폐쇄공포증, 안면 욕창 등으로 인해 환자가 견디기 힘들어하는 경우가 많습니다. HFNC가 재삽관 예방에서 NIV와 대등한 효과를 보이며 합병증이 적고 내약성이 우수하다는 점을 보여줌으로써 임상의에게 유용한 대안을 제시합니다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Systematic review and meta-analysis with trial sequential analysis (TSA) of randomized controlled trials (RCTs).</p>
+      <p class="ko">무작위 대조 시험(RCT)을 대상으로 한 시험 순차 분석(TSA)을 포함하는 체계적 문헌고찰 및 메타분석.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">Multi-country ICU settings across 10 included RCTs published between 2015 and 2024 (authors from Ecuador, Spain).</p>
+      <p class="ko">2015년에서 2024년 사이에 발표된 10개의 무작위 대조 시험에 포함된 다국가 중환자실(ICU) (저자 소속: 에콰도르, 스페인 등).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">1,697 patients analyzed across 10 RCTs (HFNC: n = 844 [49.7%] vs. NIV: n = 853 [50.3%]).</p>
+      <p class="ko">10개의 무작위 대조 시험에서 분석된 총 1,697명의 환자 (HFNC 군: 844명 [49.7%], NIV 군: 853명 [50.3%]).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Adult ICU patients at high risk of extubation failure, defined by at least one factor: age &gt; 65 years, cardiac or respiratory disease, APACHE II score &gt;= 12, BMI &gt;= 30, upper airway obstruction, weak cough, &gt;= 2 comorbidities, &gt; 1 failed spontaneous breathing trial (SBT), PaCO2 &gt;= 45 mmHg post-extubation, or IMV &gt;= 7 days. Excluded pregnancy, ECMO, and hyperbaric oxygen.</p>
+      <p class="ko">발관 실패 고위험군(연령 65세 초과, 심장/호흡기 질환, APACHE II 12점 이상, BMI 30 이상, 상기도 폐쇄, 약한 기침, 2개 이상의 동반 질환, 1회 초과의 자발 호흡 시험 실패, 발관 후 PaCO2 45 mmHg 이상, 또는 7일 이상의 침습적 기계 환기 중 하나 이상 정의) 환자들을 대상으로 한 RCT. 임신, ECMO 치료, 고압산소 치료 환자는 제외됨.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Post-extubation high-flow nasal cannula (HFNC) administered in the ICU according to individual trial protocols.</p>
+      <p class="ko">개별 임상시험 프로토콜에 따라 중환자실(ICU)에서 발관 후 고유량 비강 캐뉴라(HFNC)를 적용.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Post-extubation non-invasive mechanical ventilation (NIV/NIMV) administered in the ICU according to individual trial protocols.</p>
+      <p class="ko">개별 임상시험 프로토콜에 따라 중환자실(ICU)에서 발관 후 비침습적 인공호흡기(NIV/NIMV)를 적용.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Primary assessment within 7 days post-extubation, with long-term survival and length of stay followed to ICU and hospital discharge.</p>
+      <p class="ko">발관 후 7일 이내의 1차 평가를 비롯하여 중환자실 및 병원 퇴원 시까지의 장기 생존율과 재원 기간을 추적 관찰함.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Systematic review and meta-analysis of 10 RCTs, registered on PROSPERO (CRD420251104362), utilizing PMC open full-text (PMC13155773).</p>
+      <p class="ko">PROSPERO(CRD420251104362)에 등록되고 PMC 오픈 풀텍스트(PMC13155773)를 활용한 10개 무작위 대조 시험의 체계적 문헌고찰 및 메타분석.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Adult ICU patients successfully extubated after invasive mechanical ventilation but meeting high-risk criteria for extubation failure (e.g., advanced age, chronic cardiopulmonary diseases, hypercapnia, or prolonged ventilation).</p>
+      <p class="ko">침습적 기계 환기를 마친 후 성공적으로 발관되었으나, 고령, 만성 심폐 질환, 고이산화탄소혈증, 장기 기계 환기 등의 발관 실패 고위험군 기준을 충족하는 성인 중환자실 환자.</p>
+      <p class="en"><strong>Setting:</strong> Multi-center and single-center ICU settings across Spain, Ecuador, and other international sites from 10 RCTs (2015-2024).</p>
+      <p class="ko">스페인, 에콰도르 및 기타 다국가 10개 RCT(2015-2024년)의 다기관 및 단일기관 중환자실(ICU) 환경.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Heated, humidified oxygen administered via high-flow nasal cannula (HFNC) post-extubation.</p>
+      <p class="ko">발관 후 고유량 비강 캐뉴라(HFNC)를 통해 공급되는 가온 및 가습된 고유량 산소 요법.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Positive airway pressure administered via non-invasive mechanical ventilation (NIV) mask post-extubation.</p>
+      <p class="ko">발관 후 비침습적 인공호흡기(NIV) 마스크를 통해 공급되는 기도 양압 요법.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Overall Reintubation Rate (7 days)</div>
+    <p class="en">Reintubation within 7 days after extubation</p>
+    <p class="ko">발관 후 7일 이내의 재삽관율</p>
+    <p class="stat-line">HFNC: 171/844 (20.3%) vs. NIV: 179/853 (21.0%) · RR 1.00 (95% CI 0.92 to 1.09); p = 0.92; I² = 65.0%</p>
+    <p class="ko">HFNC 군: 171/844 (20.3%) vs NIV 군: 179/853 (21.0%)</p>
+    <div class="interpretation">ⓘ There was no difference in 7-day reintubation rates between HFNC and NIV. Trial sequential analysis (TSA) crossed the futility boundary, indicating no 20% relative risk difference exists between the two modalities.<br>HFNC와 NIV 간에 7일 재삽관율 차이는 없었습니다. 시험 순차 분석(TSA) 결과 무익성 경계(futility boundary)를 교차하여 두 요법 간에 20% 이상의 상대적 위험도 차이가 존재하지 않음을 확인했습니다.</div>
+    <div class="interpretation primer">ⓘ For Risk Ratio (RR), 1.00 indicates no difference. A 95% Confidence Interval (CI) crossing 1.00 indicates that the difference is not statistically significant. A high I² (65%) suggests moderate-to-high statistical heterogeneity among trials.<br>상대위험도(RR)에서 1.00은 차이가 없음을 나타냅니다. 95% 신뢰구간(CI)이 1.00을 포함하면 차이가 통계적으로 유의하지 않음을 의미합니다. 높은 I² 값(65%)은 임상시험 간에 중간에서 높은 수준의 통계적 이질성이 존재함을 시사합니다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Post-extubation Respiratory Failure</div>
+    <p class="en">Incidence of post-extubation respiratory failure</p>
+    <p class="ko">발관 후 호흡부전 발생률</p>
+    <p class="stat-line">NIV group had higher rates of respiratory failure compared to HFNC across 6 trials · RR 1.06 (95% CI 1.01 to 1.11); p = 0.04; I² = 27.0%</p>
+    <p class="ko">6개 임상시험 병합 결과 NIV 군에서 HFNC 군 대비 호흡부전 발생률이 더 높았음</p>
+    <div class="interpretation">ⓘ While the main analysis suggested a small but statistically significant increase in respiratory failure in the NIV group, a sensitivity analysis excluding the trial with high risk of bias eliminated this difference (RR 1.04; 95% CI 0.99 to 1.09; p = 0.12).<br>본 분석에서는 NIV 군에서 호흡부전 발생이 통계적으로 유의하게 약간 더 높은 것으로 나타났으나, 편향 위험이 높은 임상시험을 제외한 민감도 분석에서는 이 차이가 사라졌습니다 (RR 1.04; 95% CI 0.99-1.09; p = 0.12).</div>
+    <div class="interpretation primer">ⓘ A p-value &lt; 0.05 is commonly used to declare statistical significance, but a confidence interval crossing 1.00 in sensitivity analyses indicates that the effect may not be robust.<br>p-값 &lt; 0.05는 일반적으로 통계적 유의성을 선언하는 데 사용되지만, 민감도 분석에서 신뢰구간이 1.00을 포함하게 되면 그 효과가 견고하지 않을 수 있음을 시사합니다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">28-day Mortality</div>
+    <p class="en">All-cause mortality at 28 days</p>
+    <p class="ko">28일 전원 사망률</p>
+    <p class="stat-line">No significant difference between groups (reported in 8 trials) · RR 1.02 (95% CI 0.99 to 1.06); p = 0.13; I² = 0%</p>
+    <p class="ko">두 군 간에 유의한 차이 없음 (8개 임상시험 결과)</p>
+    <div class="interpretation">ⓘ There is no difference in 28-day survival rates between HFNC and NIV in patients at high risk of extubation failure.<br>발관 실패 고위험군 환자에서 HFNC와 NIV 간에 28일 생존율 차이는 없었습니다.</div>
+    <div class="interpretation primer">ⓘ An I² of 0% indicates that there was no statistical heterogeneity among the pooled trials for this outcome, meaning the trial results were highly consistent.<br>I²가 0%인 것은 이 결과에 대해 병합된 임상시험들 간에 통계적 이질성이 전혀 없었음을 나타내며, 이는 임상시험 결과들이 매우 일관적이었음을 의미합니다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">ICU Length of Stay</div>
+    <p class="en">Mean duration of ICU stay in days</p>
+    <p class="ko">중환자실 평균 재원 기간(일)</p>
+    <p class="stat-line">HFNC: Mean stay was 0.51 days shorter than NIV · MD -0.51 days (95% CI -1.85 to 0.82); p = 0.45; I² = 63.0%</p>
+    <p class="ko">HFNC 군: 평균 재원 기간이 NIV 군보다 0.51일 짧았음</p>
+    <div class="interpretation">ⓘ There was no statistically or clinically significant difference in ICU length of stay between the two treatments.<br>두 치료군 간에 중환자실 재원 기간의 통계적 또는 임상적으로 유의한 차이는 없었습니다.</div>
+    <div class="interpretation primer">ⓘ For Mean Difference (MD), a value of 0 indicates no difference. Since the 95% CI crosses 0, the observed 0.51-day reduction in stay is not statistically significant.<br>평균 차이(MD)에서 0은 차이가 없음을 나타냅니다. 95% 신뢰구간이 0을 포함하고 있으므로, 관찰된 0.51일의 재원 기간 단축은 통계적으로 유의하지 않습니다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">HFNC and NIV showed identical efficacy in terms of 7-day reintubation rates (20.3% vs. 21.0%; RR 1.00).</p><p class="ko">HFNC와 NIV는 7일 재삽관율 측면에서 대등한 효과를 보였습니다 (20.3% 대 21.0%; RR 1.00).</p></li>
+<li><p class="en">Trial sequential analysis (TSA) crossed the futility boundary for reintubation, confirming that further trials are unlikely to show a significant difference between HFNC and NIV.</p><p class="ko">시험 순차 분석(TSA) 결과 재삽관율에 대한 무익성 경계를 통과하여, 추가 연구가 진행되더라도 HFNC와 NIV 간의 유의한 차이를 규명할 가능성이 낮음을 확인했습니다.</p></li>
+<li><p class="en">No significant differences were found in 28-day mortality, ICU length of stay, or hospital length of stay between the two respiratory therapies.</p><p class="ko">두 호흡 보조 치료법 간에 28일 사망률, 중환자실 재원 기간 및 병원 재원 기간의 유의한 차이가 없었습니다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In adult patients at high risk of extubation failure, high-flow nasal cannula is comparable in efficacy to non-invasive mechanical ventilation, with no significant differences in reintubation rates, mortality, or length of stay.</p>
+    <p class="ko">발관 실패 고위험군인 성인 환자에서 고유량 비강 캐뉴라(HFNC)는 비침습적 인공호흡기(NIV)와 대등한 효과를 나타내어 재삽관율, 사망률 및 재원 기간에서 유의한 차이를 보이지 않았습니다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">The primary outcome had substantial statistical heterogeneity (I² = 65.0%), which was primarily driven by one outlier study (Magdy et al.). Also, post-extubation respiratory failure results were highly sensitive to the inclusion of a single study with a high risk of bias.</p>
+    <p class="ko">일차 결과에서 통계적 이질성(I² = 65.0%)이 상당히 나타났는데, 이는 주로 하나의 아웃라이어 연구(Magdy et al.)에 의한 것이었습니다. 또한 발관 후 호흡부전 결과는 편향 위험이 높은 단일 연구의 포함 여부에 매우 민감하게 변하는 한계를 보였습니다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Directly applicable to critical care medicine. Post-extubation respiratory support is a common ICU clinical dilemma, and this meta-analysis supports using HFNC as a primary strategy, which may reduce clinical workload and patient discomfort compared to NIV.</p>
+    <p class="ko">중환자 치료 현장에 직접 적용할 수 있습니다. 발관 후 호흡 보조 요법의 선택은 ICU 임상에서 매우 흔한 난제이며, 본 메타분석은 일차 치료로서 HFNC 사용을 지지하여 NIV 대비 의료진의 업무 부담을 줄이고 환자의 불편감을 경감시킬 수 있습니다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">For high-risk ICU patients undergoing extubation, HFNC is a viable and simpler alternative to NIV. Because HFNC is cheaper, easier to manage, and associated with better patient comfort and fewer interface-related complications (like facial ulcers or claustrophobia), clinicians can confidently select HFNC as a first-line post-extubation strategy without compromising patient safety.</p>
+    <p class="ko">발관을 시행하는 고위험군 중환자실 환자에게 HFNC는 NIV의 훌륭하고 더 간편한 대안입니다. HFNC는 비용이 저렴하고 관리가 용이하며, 환자 편안함이 높고 마스크 접촉 부위 합병증(안면 욕창, 폐쇄공포증 등)이 적기 때문에, 임상의는 환자의 안전을 해치지 않으면서도 발관 후 일차 치료 전략으로 HFNC를 자신 있게 선택할 수 있습니다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42307314/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.62675/2965-2774.20260371" target="_blank" rel="noopener">DOI</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13155773/" target="_blank" rel="noopener">PMC</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>

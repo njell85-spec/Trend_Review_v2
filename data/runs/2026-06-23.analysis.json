@@ -1,0 +1,257 @@
+{
+  "analyses": [
+    {
+      "pmid": "42307314",
+      "title": "The efficacy of high-flow nasal cannula versus non-invasive mechanical ventilation in preventing reintubation in patients at high risk of extubation failure: systematic review and meta-analysis with trial sequential analysis.",
+      "oneLineSummary": "A meta-analysis of ten trials shows no significant difference in reintubation, mortality, or length of stay between HFNC and NIV in patients at high risk of extubation failure.",
+      "oneLineSummary_ko": "10개의 무작위 대조 시험을 메타분석한 결과, 발관 실패 고위험군 환자에서 고유량 비강 캐뉴라(HFNC)와 비침습적 인공호흡기(NIV) 간의 재삽관율, 사망률, 재원 기간에 유의한 차이가 없었습니다.",
+      "whyItMatters": "NIV is widely recommended for high-risk extubations but can be poorly tolerated due to mask discomfort, claustrophobia, and facial ulcers. Showing that HFNC is comparable in efficacy, and potentially better tolerated with fewer complications, offers clinicians a viable and patient-friendly alternative.",
+      "whyItMatters_ko": "NIV는 발관 실패 고위험군 환자에게 널리 권장되지만 마스크 불편감, 폐쇄공포증, 안면 욕창 등으로 인해 환자가 견디기 힘들어하는 경우가 많습니다. HFNC가 재삽관 예방에서 NIV와 대등한 효과를 보이며 합병증이 적고 내약성이 우수하다는 점을 보여줌으로써 임상의에게 유용한 대안을 제시합니다.",
+      "clinicalQuestion": "In adult ICU patients at high risk of extubation failure, does high-flow nasal cannula (HFNC) compared to non-invasive ventilation (NIV) reduce the rate of reintubation, post-extubation respiratory failure, mortality, and length of stay?",
+      "clinicalQuestion_ko": "발관 실패 고위험군인 성인 중환자에서 고유량 비강 캐뉴라(HFNC) 사용은 비침습적 인공호흡기(NIV)와 비교하여 재삽관율, 발관 후 호흡부전, 사망률 및 재원 기간을 감소시킵니까?",
+      "studyDetails": {
+        "design": "Systematic review and meta-analysis with trial sequential analysis (TSA) of randomized controlled trials (RCTs).",
+        "design_ko": "무작위 대조 시험(RCT)을 대상으로 한 시험 순차 분석(TSA)을 포함하는 체계적 문헌고찰 및 메타분석.",
+        "setting": "Multi-country ICU settings across 10 included RCTs published between 2015 and 2024 (authors from Ecuador, Spain).",
+        "setting_ko": "2015년에서 2024년 사이에 발표된 10개의 무작위 대조 시험에 포함된 다국가 중환자실(ICU) (저자 소속: 에콰도르, 스페인 등).",
+        "sampleSize": "1,697 patients analyzed across 10 RCTs (HFNC: n = 844 [49.7%] vs. NIV: n = 853 [50.3%]).",
+        "sampleSize_ko": "10개의 무작위 대조 시험에서 분석된 총 1,697명의 환자 (HFNC 군: 844명 [49.7%], NIV 군: 853명 [50.3%]).",
+        "eligibility": "Adult ICU patients at high risk of extubation failure, defined by at least one factor: age > 65 years, cardiac or respiratory disease, APACHE II score >= 12, BMI >= 30, upper airway obstruction, weak cough, >= 2 comorbidities, > 1 failed spontaneous breathing trial (SBT), PaCO2 >= 45 mmHg post-extubation, or IMV >= 7 days. Excluded pregnancy, ECMO, and hyperbaric oxygen.",
+        "eligibility_ko": "발관 실패 고위험군(연령 65세 초과, 심장/호흡기 질환, APACHE II 12점 이상, BMI 30 이상, 상기도 폐쇄, 약한 기침, 2개 이상의 동반 질환, 1회 초과의 자발 호흡 시험 실패, 발관 후 PaCO2 45 mmHg 이상, 또는 7일 이상의 침습적 기계 환기 중 하나 이상 정의) 환자들을 대상으로 한 RCT. 임신, ECMO 치료, 고압산소 치료 환자는 제외됨.",
+        "interventionDetails": "Post-extubation high-flow nasal cannula (HFNC) administered in the ICU according to individual trial protocols.",
+        "interventionDetails_ko": "개별 임상시험 프로토콜에 따라 중환자실(ICU)에서 발관 후 고유량 비강 캐뉴라(HFNC)를 적용.",
+        "comparatorDetails": "Post-extubation non-invasive mechanical ventilation (NIV/NIMV) administered in the ICU according to individual trial protocols.",
+        "comparatorDetails_ko": "개별 임상시험 프로토콜에 따라 중환자실(ICU)에서 발관 후 비침습적 인공호흡기(NIV/NIMV)를 적용.",
+        "followUp": "Primary assessment within 7 days post-extubation, with long-term survival and length of stay followed to ICU and hospital discharge.",
+        "followUp_ko": "발관 후 7일 이내의 1차 평가를 비롯하여 중환자실 및 병원 퇴원 시까지의 장기 생존율과 재원 기간을 추적 관찰함.",
+        "sourceBasis": "Systematic review and meta-analysis of 10 RCTs, registered on PROSPERO (CRD420251104362), utilizing PMC open full-text (PMC13155773).",
+        "sourceBasis_ko": "PROSPERO(CRD420251104362)에 등록되고 PMC 오픈 풀텍스트(PMC13155773)를 활용한 10개 무작위 대조 시험의 체계적 문헌고찰 및 메타분석."
+      },
+      "pico": {
+        "population": "Adult ICU patients at high risk of extubation failure",
+        "intervention": "High-flow nasal cannula (HFNC)",
+        "comparison": "Non-invasive mechanical ventilation (NIV)",
+        "outcome": "Reintubation rate, post-extubation respiratory failure, mortality, and length of stay"
+      },
+      "pico_ko": {
+        "population": "발관 실패 고위험군인 성인 중환자실 환자",
+        "intervention": "고유량 비강 캐뉴라 (HFNC)",
+        "comparison": "비침습적 인공호흡기 (NIV)",
+        "outcome": "재삽관율, 발관 후 호흡부전, 사망률 및 재원 기간"
+      },
+      "detailedPico": {
+        "population": "Adult ICU patients successfully extubated after invasive mechanical ventilation but meeting high-risk criteria for extubation failure (e.g., advanced age, chronic cardiopulmonary diseases, hypercapnia, or prolonged ventilation).",
+        "population_ko": "침습적 기계 환기를 마친 후 성공적으로 발관되었으나, 고령, 만성 심폐 질환, 고이산화탄소혈증, 장기 기계 환기 등의 발관 실패 고위험군 기준을 충족하는 성인 중환자실 환자.",
+        "countrySetting": "Multi-center and single-center ICU settings across Spain, Ecuador, and other international sites from 10 RCTs (2015-2024).",
+        "countrySetting_ko": "스페인, 에콰도르 및 기타 다국가 10개 RCT(2015-2024년)의 다기관 및 단일기관 중환자실(ICU) 환경.",
+        "intervention": "Heated, humidified oxygen administered via high-flow nasal cannula (HFNC) post-extubation.",
+        "intervention_ko": "발관 후 고유량 비강 캐뉴라(HFNC)를 통해 공급되는 가온 및 가습된 고유량 산소 요법.",
+        "comparator": "Positive airway pressure administered via non-invasive mechanical ventilation (NIV) mask post-extubation.",
+        "comparator_ko": "발관 후 비침습적 인공호흡기(NIV) 마스크를 통해 공급되는 기도 양압 요법.",
+        "outcomes": [
+          {
+            "label": "Overall Reintubation Rate (7 days)",
+            "outcome": "Reintubation within 7 days after extubation",
+            "outcome_ko": "발관 후 7일 이내의 재삽관율",
+            "result": "HFNC: 171/844 (20.3%) vs. NIV: 179/853 (21.0%)",
+            "result_ko": "HFNC 군: 171/844 (20.3%) vs NIV 군: 179/853 (21.0%)",
+            "statistics": "RR 1.00 (95% CI 0.92 to 1.09); p = 0.92; I² = 65.0%",
+            "interpretation": "There was no difference in 7-day reintubation rates between HFNC and NIV. Trial sequential analysis (TSA) crossed the futility boundary, indicating no 20% relative risk difference exists between the two modalities.",
+            "interpretation_ko": "HFNC와 NIV 간에 7일 재삽관율 차이는 없었습니다. 시험 순차 분석(TSA) 결과 무익성 경계(futility boundary)를 교차하여 두 요법 간에 20% 이상의 상대적 위험도 차이가 존재하지 않음을 확인했습니다.",
+            "statPrimer": "For Risk Ratio (RR), 1.00 indicates no difference. A 95% Confidence Interval (CI) crossing 1.00 indicates that the difference is not statistically significant. A high I² (65%) suggests moderate-to-high statistical heterogeneity among trials.",
+            "statPrimer_ko": "상대위험도(RR)에서 1.00은 차이가 없음을 나타냅니다. 95% 신뢰구간(CI)이 1.00을 포함하면 차이가 통계적으로 유의하지 않음을 의미합니다. 높은 I² 값(65%)은 임상시험 간에 중간에서 높은 수준의 통계적 이질성이 존재함을 시사합니다."
+          },
+          {
+            "label": "Post-extubation Respiratory Failure",
+            "outcome": "Incidence of post-extubation respiratory failure",
+            "outcome_ko": "발관 후 호흡부전 발생률",
+            "result": "NIV group had higher rates of respiratory failure compared to HFNC across 6 trials",
+            "result_ko": "6개 임상시험 병합 결과 NIV 군에서 HFNC 군 대비 호흡부전 발생률이 더 높았음",
+            "statistics": "RR 1.06 (95% CI 1.01 to 1.11); p = 0.04; I² = 27.0%",
+            "interpretation": "While the main analysis suggested a small but statistically significant increase in respiratory failure in the NIV group, a sensitivity analysis excluding the trial with high risk of bias eliminated this difference (RR 1.04; 95% CI 0.99 to 1.09; p = 0.12).",
+            "interpretation_ko": "본 분석에서는 NIV 군에서 호흡부전 발생이 통계적으로 유의하게 약간 더 높은 것으로 나타났으나, 편향 위험이 높은 임상시험을 제외한 민감도 분석에서는 이 차이가 사라졌습니다 (RR 1.04; 95% CI 0.99-1.09; p = 0.12).",
+            "statPrimer": "A p-value < 0.05 is commonly used to declare statistical significance, but a confidence interval crossing 1.00 in sensitivity analyses indicates that the effect may not be robust.",
+            "statPrimer_ko": "p-값 < 0.05는 일반적으로 통계적 유의성을 선언하는 데 사용되지만, 민감도 분석에서 신뢰구간이 1.00을 포함하게 되면 그 효과가 견고하지 않을 수 있음을 시사합니다."
+          },
+          {
+            "label": "28-day Mortality",
+            "outcome": "All-cause mortality at 28 days",
+            "outcome_ko": "28일 전원 사망률",
+            "result": "No significant difference between groups (reported in 8 trials)",
+            "result_ko": "두 군 간에 유의한 차이 없음 (8개 임상시험 결과)",
+            "statistics": "RR 1.02 (95% CI 0.99 to 1.06); p = 0.13; I² = 0%",
+            "interpretation": "There is no difference in 28-day survival rates between HFNC and NIV in patients at high risk of extubation failure.",
+            "interpretation_ko": "발관 실패 고위험군 환자에서 HFNC와 NIV 간에 28일 생존율 차이는 없었습니다.",
+            "statPrimer": "An I² of 0% indicates that there was no statistical heterogeneity among the pooled trials for this outcome, meaning the trial results were highly consistent.",
+            "statPrimer_ko": "I²가 0%인 것은 이 결과에 대해 병합된 임상시험들 간에 통계적 이질성이 전혀 없었음을 나타내며, 이는 임상시험 결과들이 매우 일관적이었음을 의미합니다."
+          },
+          {
+            "label": "ICU Length of Stay",
+            "outcome": "Mean duration of ICU stay in days",
+            "outcome_ko": "중환자실 평균 재원 기간(일)",
+            "result": "HFNC: Mean stay was 0.51 days shorter than NIV",
+            "result_ko": "HFNC 군: 평균 재원 기간이 NIV 군보다 0.51일 짧았음",
+            "statistics": "MD -0.51 days (95% CI -1.85 to 0.82); p = 0.45; I² = 63.0%",
+            "interpretation": "There was no statistically or clinically significant difference in ICU length of stay between the two treatments.",
+            "interpretation_ko": "두 치료군 간에 중환자실 재원 기간의 통계적 또는 임상적으로 유의한 차이는 없었습니다.",
+            "statPrimer": "For Mean Difference (MD), a value of 0 indicates no difference. Since the 95% CI crosses 0, the observed 0.51-day reduction in stay is not statistically significant.",
+            "statPrimer_ko": "평균 차이(MD)에서 0은 차이가 없음을 나타냅니다. 95% 신뢰구간이 0을 포함하고 있으므로, 관찰된 0.51일의 재원 기간 단축은 통계적으로 유의하지 않습니다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "HFNC and NIV showed identical efficacy in terms of 7-day reintubation rates (20.3% vs. 21.0%; RR 1.00).",
+        "Trial sequential analysis (TSA) crossed the futility boundary for reintubation, confirming that further trials are unlikely to show a significant difference between HFNC and NIV.",
+        "No significant differences were found in 28-day mortality, ICU length of stay, or hospital length of stay between the two respiratory therapies."
+      ],
+      "keyFindings_ko": [
+        "HFNC와 NIV는 7일 재삽관율 측면에서 대등한 효과를 보였습니다 (20.3% 대 21.0%; RR 1.00).",
+        "시험 순차 분석(TSA) 결과 재삽관율에 대한 무익성 경계를 통과하여, 추가 연구가 진행되더라도 HFNC와 NIV 간의 유의한 차이를 규명할 가능성이 낮음을 확인했습니다.",
+        "두 호흡 보조 치료법 간에 28일 사망률, 중환자실 재원 기간 및 병원 재원 기간의 유의한 차이가 없었습니다."
+      ],
+      "conclusion": "In adult patients at high risk of extubation failure, high-flow nasal cannula is comparable in efficacy to non-invasive mechanical ventilation, with no significant differences in reintubation rates, mortality, or length of stay.",
+      "conclusion_ko": "발관 실패 고위험군인 성인 환자에서 고유량 비강 캐뉴라(HFNC)는 비침습적 인공호흡기(NIV)와 대등한 효과를 나타내어 재삽관율, 사망률 및 재원 기간에서 유의한 차이를 보이지 않았습니다.",
+      "clinicalTakeaway": "For high-risk ICU patients undergoing extubation, HFNC is a viable and simpler alternative to NIV. Because HFNC is cheaper, easier to manage, and associated with better patient comfort and fewer interface-related complications (like facial ulcers or claustrophobia), clinicians can confidently select HFNC as a first-line post-extubation strategy without compromising patient safety.",
+      "clinicalTakeaway_ko": "발관을 시행하는 고위험군 중환자실 환자에게 HFNC는 NIV의 훌륭하고 더 간편한 대안입니다. HFNC는 비용이 저렴하고 관리가 용이하며, 환자 편안함이 높고 마스크 접촉 부위 합병증(안면 욕창, 폐쇄공포증 등)이 적기 때문에, 임상의는 환자의 안전을 해치지 않으면서도 발관 후 일차 치료 전략으로 HFNC를 자신 있게 선택할 수 있습니다.",
+      "limitations": "The primary outcome had substantial statistical heterogeneity (I² = 65.0%), which was primarily driven by one outlier study (Magdy et al.). Also, post-extubation respiratory failure results were highly sensitive to the inclusion of a single study with a high risk of bias.",
+      "limitations_ko": "일차 결과에서 통계적 이질성(I² = 65.0%)이 상당히 나타났는데, 이는 주로 하나의 아웃라이어 연구(Magdy et al.)에 의한 것이었습니다. 또한 발관 후 호흡부전 결과는 편향 위험이 높은 단일 연구의 포함 여부에 매우 민감하게 변하는 한계를 보였습니다.",
+      "edIcuApplicability": "Directly applicable to critical care medicine. Post-extubation respiratory support is a common ICU clinical dilemma, and this meta-analysis supports using HFNC as a primary strategy, which may reduce clinical workload and patient discomfort compared to NIV.",
+      "edIcuApplicability_ko": "중환자 치료 현장에 직접 적용할 수 있습니다. 발관 후 호흡 보조 요법의 선택은 ICU 임상에서 매우 흔한 난제이며, 본 메타분석은 일차 치료로서 HFNC 사용을 지지하여 NIV 대비 의료진의 업무 부담을 줄이고 환자의 불편감을 경감시킬 수 있습니다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 8,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "GRADE certainty of evidence was moderate for reintubation at 7 days, high for mortality and post-extubation respiratory failure, and low for ICU/hospital length of stay.",
+        "Trial sequential analysis (TSA) crossed the futility boundary for reintubation, suggesting that the null finding is robust and unlikely to be altered by future trials."
+      ],
+      "paper": {
+        "pmid": "42307314",
+        "title": "The efficacy of high-flow nasal cannula versus non-invasive mechanical ventilation in preventing reintubation in patients at high risk of extubation failure: systematic review and meta-analysis with trial sequential analysis.",
+        "abstract": "OBJECTIVE: To conduct a systematic review and meta-analysis with trial sequential analysis to compare the efficacy of high-flow nasal cannula versus noninvasive ventilation in preventing reintubation, post-extubation respiratory failure, mortality, and length of stay in intensive care unit and hospital in patients at high risk of extubation failure.\nMETHODS: A comprehensive literature search was conducted across ten databases: MEDLINE®/PubMed®, Web of Science, SciELO, Embase, Scopus, the Cochrane Central Register of Controlled Trials, the International Clinical Trials Registry Platform, Google Scholar, GreyNet International, and OpenGrey. The primary outcome was reintubation. Secondary outcomes included post-extubation respiratory failure, intensive care unit and hospital mortality, as well as intensive care unit and hospital length of stay.\nRESULTS: Ten randomized controlled trials comprising 1,697 patients were included. There were no significant differences between high-flow nasal cannula and non-invasive ventilation in reintubation (RR = 1.00; 95%CI 0.92 - 1.09; p = 0.92; I2 = 65.0%), intensive care unit mortality (RR 1.03; 95%CI 1.00 - 1.07; p = 0.08; I2 = 28.0%), hospital mortality (RR 1.02; 95%CI 0.99 - 1.06; p = 0.13; I2 = 0%), intensive care unit length of stay (mean difference: -0.51 days; 95%CI -1.85 to 0.82; I2 = 63.0%), and hospital length of stay (mean difference: 0.80 days; 95%CI -1.72 to 3.32; I2 = 47.0%). High-flow nasal cannula showed a non-significant trend toward lower post-extubation respiratory failure and intensive care unit mortality in patients ventilated > 5 days.\nCONCLUSION: In adult patients at high risk of extubation failure, the use of high-flow nasal cannula is not associated with significant differences in reintubation rates, intensive care unit or hospital mortality, or intensive care unit or hospital length of stay compared with noninvasive ventilation.PROSPERO register: CRD420251104362.",
+        "authors": [
+          "Molina AES",
+          "Garcés HH",
+          "Urgilés MAC",
+          "Celleri OPB"
+        ],
+        "authorAffiliations": [
+          "Intensive Care Unit, Hospital Humanitario San Jose - Azogues, Cañar, Ecuador.",
+          "Intensive Care Unit, Hospital Doctor Peset - Valencia, Spain.",
+          "Research Training Department, Universidad Católica de Cuenca - Cuenca, Ecuador."
+        ],
+        "journal": "Critical care science",
+        "pubDate": "2026",
+        "publicationTypes": [
+          "Journal Article",
+          "Systematic Review",
+          "Meta-Analysis"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Cannula",
+          "Airway Extubation",
+          "Noninvasive Ventilation",
+          "Length of Stay",
+          "Intensive Care Units",
+          "Respiratory Insufficiency",
+          "Randomized Controlled Trials as Topic",
+          "Intubation, Intratracheal",
+          "Hospital Mortality",
+          "Oxygen Inhalation Therapy"
+        ],
+        "keywords": [],
+        "doi": "10.62675/2965-2774.20260371",
+        "pmcid": "PMC13155773",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42307314/",
+        "collectedAt": "2026-06-23T10:45:54.625Z",
+        "screeningData": {
+          "score": 14,
+          "relevanceMatches": [
+            "critical care",
+            "intensive care",
+            "airway",
+            "intubation",
+            "mechanical ventilation"
+          ],
+          "studyType": "Meta-Analysis",
+          "sampleSize": 1697,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: critical care, intensive care, airway, intubation",
+            "study design: Meta-Analysis",
+            "sample size signal: N=1697"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "INTRODUCTION The complexity and severity of patients in intensive care units (ICUs) vary widely. It is estimated that 39.0 - 72.0% of ICU patients require invasive mechanical ventilation (IMV). Among those extubated, 10.0 - 20.0% require reintubation. Extubation failure in critically ill patients increases morbidity, mortality, length of stay (LOS), and healthcare costs. The leading cause is acute respiratory failure. Bocchile et al. reported in a subgroup analysis that high-flow nasal cannula (HFNC) reduced the need for intubation compared with conventional oxygen therapy. Similarly, both HFNC and noninvasive ventilation (NIV) have been shown to lower the incidence of post-extubation respiratory failure and reintubation in patients at low risk of failure. However, evidence in high-risk patients remains inconsistent. Some randomized controlled trials (RCTs) found that HFNC is noninferior to NIV in preventing reintubation, whereas others suggest that NIV is more effective. Two systematic reviews with meta-analyses concluded that NIV reduces reintubation rates, although their populations were heterogeneous, with about 40.0% of patients at high risk. Other reviews comparing HFNC and NIV in high-risk patients found no significant differences in reintubation or mortality rates. Boscolo et al. and Fernando et al. analyzed this question using subgroup data from only four and six studies, respectively, and excluded patients with IMV > 36 hours, obesity, hypercapnia, or airway disorders. In contrast, Wang et al. directly compared the interventions. However, their sample included many patients with chronic obstructive pulmonary disease (COPD) and did not consider IMV duration as a high-risk criterion. Unlike NIV, HFNC offers several advantages, including better comfort, lower cost, and fewer adverse effects such as patient self-inflicted lung injury (P-SILI), gastric distension, mask discomfort, claustrophobia, and facial ulcers. Given the variability in current protocols and the ongoing difficulty in identifying patients at high risk of extubation failure, we designed this study to evaluate the role and effectiveness of both therapies in this vulnerable group. Our goal was to conduct a systematic review and meta-analysis with trial sequential analysis to compare the efficacy of HFNC NIV in preventing reintubation, post-extubation respiratory failure, mortality, and LOS in intensive care unit and hospital in patients at high risk of extubation failure. METHODS The Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) checklist was used to guide the reporting of the systematic review and meta-analysis, and the study was registered with PROSPERO (CRD420251104362). Search strategy Data management was performed using RevMan software. Two investigators independently searched the MEDLINE®/PubMed®, Web of Science, Embase, Scopus, the Cochrane Central Register of Controlled Trials (CENTRAL), the International Clinical Trials Registry Platform (ICTRP) databases, and gray literature sources, including Google Scholar, GreyNet International, and OpenGrey. The search covered all records in each database from their inception until February 2025. No geographic restrictions were applied. No language restrictions were applied. Corresponding authors were contacted to request unpublished data or clarification of ambiguous information. Study selection The following inclusion criteria were applied: patients at high risk of extubation failure, defined by at least one of the following factors: age over 65 years, cardiac or respiratory disease, Acute Physiology and Chronic Health Evaluation II (APACHE II) score ≥ 12 at the time of extubation, body mass index (BMI) ≥ 30kg/m, upper airway obstruction, weak cough, two or more comorbidities, more than one failed spontaneous breathing trial, arterial carbon dioxide pressure (PaCO) ≥ 45mmHg after extubation, and IMV ≥ 7 days. If studies included mixed populations (high- and low-risk), we extracted subgroup information from each study, if the information was not available in the main text, supplementary material, or after contacting the authors, we excluded the study; use of HFNC and NIV as interventions; reintubation reported as a primary or secondary outcome; and RCTs as the study design. The exclusion criteria included: pregnancy; patients receiving extracorporeal membrane oxygenation (ECMO); treatment with hyperbaric oxygen; and non-RCT studies. Data extraction and quality assessment Details about Boolean operators with Medical Subject Headings (MeSH) terms are summarized in . Data was independently extracted by two researchers, and any discrepancies were resolved by a third reviewer. From the selected studies, we collected the following information: first author, year of publication, country, sample size, type of study (single-center or multicenter), cause of IMV, duration of IMV, definition of high-risk extubation failure, intervention and control measures, post-extubation respiratory failure, reintubation, ICU mortality, hospital mortality, LOS in the ICU and hospital. The risk of bias was assessed using the Cochrane Risk of Bias 2 tool (RoB 2). Studies were considered high risk if at least one domain was rated high risk; otherwise, they were classified as low risk. Two researchers independently assessed the certainty of the pooled results using the GRADE (Grading of Recommendations Assessment, Development and Evaluation) approach. The meta-analysis was evaluated across five domains: risk of bias, inconsistency, indirectness, imprecision, and publication bias. The certainty of evidence was rated as high, moderate, low, or very low. Outcome measures The primary endpoint was the overall reintubation rate, defined as any reintubation event within 7 days after extubation. This outcome was used to compare the efficacy of HFNC and NIV in critically ill patients at high risk of extubation failure. Secondary outcomes included ICU and hospital mortality, ICU and hospital LOS, and post-extubation respiratory failure. The latter was defined as the presence or persistence of at least one of the following: respiratory acidosis (pH < 7.35 with PaCO ≥ 45mmHg), peripheral oxygen saturation (SpO) < 90% or partial pressure of oxygen in arterial blood (PaO) < 60mmHg with fraction of inspired oxygen (FiO) > 0.4, respiratory rate ≥ 35/minute, decreased level of consciousness, agitation, inability to clear secretions, or clinical signs of respiratory muscle fatigue or increased work of breathing (use of accessory muscles, paradoxical abdominal motion, or intercostal retraction). Statistical analysis Data were analyzed using Statistical Package for the Social Sciences (SPSS) version 30 for descriptive statistics, and Review Manager (RevMan, Cochrane Collaboration) was used to perform both fixed- and random-effects meta-analyses, with forest plots generated to visualize the pooled estimates. Dichotomous outcomes were expressed as risk ratios (RR) with 95% confidence intervals (95%CI), while continuous outcomes were reported as mean differences with 95%CI. A p value < 0.05 was considered statistically significant. To assess heterogeneity among studies, Cochran's Q test was applied, with heterogeneity indicated by a p value < 0.1. The I statistic was used with cutoffs of 25% (low), 50% (moderate), 75% (high), and >75% (very high). An L´Abbé plot was also used to visually assess heterogeneity in dichotomous outcomes. Publication bias was assessed using funnel plots and Egger's test (when at least ten studies were available). Subgroup analyses were performed based on duration of IMV (≤ 2 days, 3 - 5 days, 5 - 7 days, > 7 days), duration of each treatment (≤ 24 hours, ≤ 48 hours) and cause of intubation (hypercapnic or hypoxemic respiratory failure); sensitivity analyses were conducted by excluding studies with high risk of bias and meta-regression based on the number of high-risk factors for extubation failure (1, 2, 3, or ≥ 4). Finally, to balance type I and type II errors and to evaluate whether the observed effects could change with future studies, we performed a trial sequential analysis (TSA) using version 0.9 Beta of the Copenhagen Trial Unit software. For binary outcomes, we applied a random-effects model (DerSimonian-Laird) to construct the Z-curve, assuming a type I error of 5%, a relative risk reduction of 20%, and a statistical power of 80%. For continuous outcomes, the Z-curve was built with a type I error of 5%, a power of 80%, a variance of 20, and mean differences of 2 and 5 days for ICU and hospital LOS, respectively. These parameters were used to calculate the required information size to confirm or refute the intervention effect. The variance of 20 was derived from the average standard deviation across trials, while the mean difference reflected a clinically relevant effect reported in previous studies. In both analyses, we used the O’Brien-Fleming method to adjust significance thresholds. TSA was applied to both primary and secondary outcomes. RESULTS Study selection and characteristics A total of 3,399 studies were identified through the search strategy. After removing 379 duplicates, 3,020 records were screened by title and abstract, and 87 were selected for full-text review. Finally, 10 RCTs were included (). The RCTs were published between 2015 and 2024, including a total of 1,697 patients, of whom 844 (49.7%) received HFNC and 853 (50.3%) received NIV. Details of the included RCTs are summarized in . Except for the study by Temphattharachok et al., which was classified as high risk of bias, all other RCTs were categorized as low risk of bias (). Certainty of evidence (GRADE) was high for postextubation respiratory failure at 7 days, ICU mortality at 7 days, and 28-day mortality; moderate for reintubation at 7 days; and low for ICU and hospital LOS (). Reintubation Efficacy regarding reintubation rates was reported in all ten studies. In the HFNC group, 171 patients (20.3%) were reintubated, compared with 179 patients (21.0%) in the NIV group. No statistically significant differences were found between the groups (RR 1.00; 95%CI 0.92 - 1.09; p = 0.99; I = 65.0%; ). In the influence plot, Magdy et al. study emerged as a potential outlier, with notably harmful studentized residuals and an effect that increases the variance of the pooled estimate (). The funnel plot showed asymmetry in favor of HFNC (), and Egger's test was not significant (p = 0.105). In TSA, the Z-curve reached the required sample size (RIS) (1,360 patients) and crossed the futility boundary, suggesting that HFNC, compared with NIV, does not reduce the relative risk by 20.0% or more (). Post-extubation respiratory failure Six studies reported this outcome. Post-extubation respiratory failure was more frequent in the NIV group (RR 1.06; 95%CI 1.01 - 1.11; p = 0.04; I = 27.0%; ). The funnel plot showed asymmetry, suggesting potential small-study effects in both directions (). In TSA, the Z-curve reached the RIS and crossed the boundary in favor of HFNC, indicating a relative risk reduction of 20.0% (). Mortality Six studies reported ICU mortality, with no significant differences between groups (RR 1.03; 95%CI 1.00 - 1.07; p = 0.08; I = 28.0%; ). In TSA, the Z curve did not reach the alpha limit (). Twenty-eight-day mortality was reported in eight studies, and the meta-analysis showed no statistically significant differences (RR 1.02; 95%CI 0.99 - 1.06; p = 0.13; I = 0%; ). Only one study reported 90-day mortality. The Z curve in TSA reached the RIS and did not cross the boundary line (). Length of stay Seven studies reported ICU LOS, with no significant differences between groups (mean difference: -0.51 days; 95%CI -1.85 to 0.82; p = 0.45; I = 63.0%; ). Z curve reached RIS (). Hospital LOS was reported in six studies, and no significant differences were found (mean difference: 0.80 days; 95%CI: -1.72 to 3.32; p = 0.53; I = 47.0%; ), and in TSA, the Z curve reached the RIS . Subgroup analysis and meta-regression Subgroup analyses of primary and secondary outcomes were performed according to IMV duration (< 2 days, 3 - 5 days, 5 - 7 days, > 7 days), treatment duration (< 24 hours, 24 - 48 hours, > 48 hours), and cause of intubation. We also performed a meta-regression based on the number of high-risk factors for extubation failure (1 - 2, 3, or ≥ 4). Our results did not show significant differences in reintubation rates stratified by the duration of IMV, intervention duration, or cause of intubation ( and , ), nor by the number of risk factors (). For post-extubation respiratory failure, subgroup analyses according to duration of treatment and cause of intubation showed no significant differences (). In contrast, subgroup analysis by duration of IMV (3 – 5 days) showed a higher incidence in the NIV group (RR 1.08; 95%CI 1.01–1.16; p = 0.03; I2 = 32%; ). In the subgroup of patients with IMV duration between 5 - 7 days, ICU mortality was higher in the NIV group (RR 1.06; 95%CI 1.02 - 1.10; p = 0.01; I = 28.0%, ). No significant differences were observed in the other subgroups. Similarly, for hospital mortality, ICU LOS, and hospital LOS, no significant differences were observed across subgroups (). Sensitivity analysis A sensitivity analysis was performed, excluding the study by Temphattharachok et al. because of its high risk of bias. This analysis evaluated reintubation, post-extubation respiratory failure, ICU and hospital mortality, and ICU and hospital LOS. No significant changes were observed in heterogeneity or pooled results, except for post-extubation respiratory failure, which became statistically non-significant (RR 1.04; 95%CI 0.99 - 1.09; p = 0.12; I = 22.0%; ). For the reintubation outcome, the funnel plot showed that the study by Magdy et al. displayed marked asymmetry and fell outside the confidence interval, suggesting a possible overestimation of the effect. Excluding this study reduced heterogeneity from I = 65% to 0%, identifying it as the primary source of variability across trials. DISCUSSION In this systematic review and meta-analysis of patients at high risk of extubation failure, HFNC was associated with a similar risk of reintubation as NIV. Although substantial heterogeneity was observed (with Magdy et al. identified as a potential outlier in the influence plot), this is likely due to differences in patient characteristics (e.g., causes of intubation, duration of mechanical ventilation, and concomitant treatments) and variability in sample sizes across studies. Intensive care unit and hospital mortality, as well as ICU and hospital LOS, were similar between HFNC and NIV. High-flow nasal cannula also showed a non-significant trend toward lower post-extubation respiratory failure and ICU mortality in patients ventilated for more than 5 days. In the TSA, using a predefined relative risk reduction of 20% for dichotomous outcomes, the RIS was reached for reintubation, post-extubation respiratory failure, and hospital mortality, but not for ICU mortality. For continuous outcomes, with a mean difference of 2 days (ICU LOS) and 5 days (hospital LOS), the RIS was achieved. Our results are consistent with those of other meta-analyses. For example, the review by Guo et al., which included 1,746 patients from six RCTs, found no significant differences in reintubation rates between the two groups. However, HFNC was associated with a reduced incidence of post-extubation respiratory failure. Notably, patients in that review were not stratified by risk of reintubation, and the primary focus was on extubated patients with respiratory insufficiency. In the review by Al Nufaiei et al., no differences were found between the two treatments. However, the study was conducted exclusively in patients with COPD, and a meta-analysis was not performed. In the study by Feng et al., among patients with acute exacerbation of COPD, NIV was superior to HFNC in preventing reintubation in non-hypercapnic p",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42307314\nDOI: 10.62675/2965-2774.20260371\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Intensive Care Unit, Hospital Humanitario San Jose - Azogues, Cañar, Ecuador.\n- Intensive Care Unit, Hospital Doctor Peset - Valencia, Spain.\n- Research Training Department, Universidad Católica de Cuenca - Cuenca, Ecuador.\n\nPublic bibliographic metadata from Crossref:\nTitle: The efficacy of high-flow nasal cannula versus non-invasive mechanical ventilation in preventing reintubation in patients at high risk of extubation failure: systematic review and meta-analysis with trial sequential analysis\nType: journal-article\nPublished: 2026\nPublisher: Associação de Medicina Intensiva Brasileira\n\nPublic article landing-page metadata (https://criticalcarescience.org/article/the-efficacy-of-high-flow-nasal-cannula-versus-non-invasive-mechanical-ventilation-in-preventing-reintubation-in-patients-at-high-risk-of-extubation-failure-systematic-review-and-meta-analysis-with-t/):\n- og:description: ABSTRACT Objective: To conduct a systematic review and meta-analysis with trial sequential analysis to compare the efficacy of high-flow nasal cannula versus noninvasive ventilation in preventing reintubation, post-extubation respiratory failure, mortality, and length of stay in intensive care unit and hospital in patients at high risk of extubation failure. Methods: A comprehensive literature search was [&hellip;]\n- og:description: ABSTRACT Objective: To conduct a systematic review and meta-analysis with trial sequential analysis to compare the efficacy of high-flow nasal cannula versus noninvasive ventilation in preventing reintubation, post-extubation respiratory failure, mortality, and length of stay in intensive care unit and hospital in patients at high risk of extubation failure. Methods: A comprehensive literature search was [&hellip;]\n- citation_title: The efficacy of high-flow nasal cannula versus non-invasive mechanical ventilation in preventing reintubation in patients at high risk of extubation failure: systematic review and meta-analysis with trial sequential analysis\n- citation_publication_date: 2026-05-05\n- citation_journal_title: Critical Care Science",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13155773"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          },
+          {
+            "type": "doi-landing",
+            "label": "DOI landing metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13155773",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13155773"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            },
+            {
+              "type": "doi-landing",
+              "label": "DOI landing metadata"
+            }
+          ],
+          "fetchedAt": "2026-06-23T10:49:29.003Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "gemini",
+      "selected": [
+        {
+          "pmid": "42307314",
+          "rank": 1,
+          "clinicalPriorityScore": 8.5,
+          "rationale_ko": "본 연구는 발관 실패 고위험군 환자에서 재삽관 예방을 위해 고유량 비강 캐뉼라(HFNC)와 비침습적 인공호흡기(NIV)의 유효성을 비교한 10개의 무작위 대조 시험(총 1,697명)을 메타분석하였습니다. 두 치료법 간에 재삽관율 및 ICU 사망률에서 유의미한 차이가 없음을 나타내어, 중환자실 내 발관 후 호흡기 관리 전략 수립에 실질적이고 중요한 임상적 근거를 제공합니다."
+        }
+      ],
+      "notes_ko": [
+        "임상 시험 프로토콜, 소규모 관찰 연구, 혹은 직접적인 임상 변경 가능성이 낮은 주제들을 제외하고, 중환자실 기도 관리에서 즉각적으로 적용할 수 있는 메타분석 연구(PMID: 42307314)를 최종 선정하였습니다."
+      ]
+    }
+  },
+  "errors": []
+}
