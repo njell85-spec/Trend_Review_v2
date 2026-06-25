@@ -61,37 +61,64 @@ $korea = [TimeZoneInfo]::FindSystemTimeZoneById('Korea Standard Time')
 $runDate = [TimeZoneInfo]::ConvertTime([DateTimeOffset]::Now, $korea).ToString('yyyy-MM-dd')
 $markerPath = Join-Path $root ("data\notifications\{0}.json" -f $runDate)
 $reportPath = Join-Path $root ("reports\{0}.json" -f $runDate)
+$lockDir = Join-Path $logDir ("local-daily-{0}.lock" -f $runDate)
+$lockStaleHours = if ($env:LOCAL_DAILY_LOCK_STALE_HOURS) { [double]$env:LOCAL_DAILY_LOCK_STALE_HOURS } else { 8 }
 
 Write-Log "Trend Review local daily started for $runDate"
 
-Invoke-Step git @('pull', '--ff-only', 'origin', 'main')
+if (Test-Path -LiteralPath $lockDir) {
+  $lockInfo = Get-Item -LiteralPath $lockDir
+  $lockAgeHours = ((Get-Date) - $lockInfo.LastWriteTime).TotalHours
+  if ($lockAgeHours -lt $lockStaleHours) {
+    Write-Log ("Another local daily run is active for {0}. Exiting." -f $runDate)
+    exit 0
+  }
 
-if (Test-Path $markerPath) {
-  Write-Log "Notification marker already exists for $runDate. Exiting."
+  Write-Log ("Removing stale local daily lock for {0} ({1:N1} hours old)." -f $runDate, $lockAgeHours)
+  Remove-Item -LiteralPath $lockDir -Recurse -Force
+}
+
+try {
+  New-Item -ItemType Directory -Path $lockDir -ErrorAction Stop | Out-Null
+} catch {
+  Write-Log ("Could not acquire local daily lock for {0}: {1}" -f $runDate, $_.Exception.Message)
   exit 0
 }
 
-if (-not $env:LLM_PROVIDER) { $env:LLM_PROVIDER = 'claude-code' }
-if (-not $env:CLAUDE_CODE_MODEL) { $env:CLAUDE_CODE_MODEL = 'opus' }
-if (-not $env:CLAUDE_CODE_COMMAND) { $env:CLAUDE_CODE_COMMAND = 'claude.cmd' }
+try {
+  Invoke-Step git @('pull', '--ff-only', 'origin', 'main')
 
-Invoke-Step npm.cmd @('ci')
-Invoke-Step npm.cmd @('test')
+  if (Test-Path $markerPath) {
+    Write-Log "Notification marker already exists for $runDate. Exiting."
+    exit 0
+  }
 
-if (-not (Test-Path $reportPath)) {
-  Invoke-Step node @('src/cli.js', '--date', $runDate, '--no-notify')
-  Commit-And-Push -Paths @('data', 'reports', 'public') -Message 'chore: local daily trend review output'
-} else {
-  Write-Log "Report already exists for $runDate. Reusing existing report."
+  if (-not $env:LLM_PROVIDER) { $env:LLM_PROVIDER = 'claude-code' }
+  if (-not $env:CLAUDE_CODE_MODEL) { $env:CLAUDE_CODE_MODEL = 'opus' }
+  if (-not $env:CLAUDE_CODE_COMMAND) { $env:CLAUDE_CODE_COMMAND = 'claude.cmd' }
+
+  Invoke-Step npm.cmd @('ci')
+  Invoke-Step npm.cmd @('test')
+
+  if (-not (Test-Path $reportPath)) {
+    Invoke-Step node @('src/cli.js', '--date', $runDate, '--no-notify')
+    Commit-And-Push -Paths @('data', 'reports', 'public') -Message 'chore: local daily trend review output'
+  } else {
+    Write-Log "Report already exists for $runDate. Reusing existing report."
+  }
+
+  $waitSeconds = if ($env:LOCAL_PAGES_DEPLOY_WAIT_SECONDS) { [int]$env:LOCAL_PAGES_DEPLOY_WAIT_SECONDS } else { 90 }
+  if ($waitSeconds -gt 0) {
+    Write-Log "Waiting $waitSeconds seconds for GitHub Pages deployment."
+    Start-Sleep -Seconds $waitSeconds
+  }
+
+  Invoke-Step node @('src/notify/send-latest.js')
+  Commit-And-Push -Paths @('data/notifications') -Message 'chore: record local daily notification'
+
+  Write-Log "Trend Review local daily completed for $runDate"
+} finally {
+  if (Test-Path -LiteralPath $lockDir) {
+    Remove-Item -LiteralPath $lockDir -Recurse -Force -ErrorAction SilentlyContinue
+  }
 }
-
-$waitSeconds = if ($env:LOCAL_PAGES_DEPLOY_WAIT_SECONDS) { [int]$env:LOCAL_PAGES_DEPLOY_WAIT_SECONDS } else { 90 }
-if ($waitSeconds -gt 0) {
-  Write-Log "Waiting $waitSeconds seconds for GitHub Pages deployment."
-  Start-Sleep -Seconds $waitSeconds
-}
-
-Invoke-Step node @('src/notify/send-latest.js')
-Commit-And-Push -Paths @('data/notifications') -Message 'chore: record local daily notification'
-
-Write-Log "Trend Review local daily completed for $runDate"
