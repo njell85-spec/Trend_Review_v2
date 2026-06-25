@@ -2,10 +2,10 @@ search:
   days: 180
   maxPapers: 300
   candidateLimit: 30
-  topN: 3
+  topN: 1
   # Operational presets:
-  # - Daily digest: days 180, maxPapers 300, candidateLimit 30, topN 3
-  # - Concise daily digest: days 180, maxPapers 300, candidateLimit 30, topN 1
+  # - Daily digest: days 180, maxPapers 300, candidateLimit 30, topN 1
+  # - Higher-volume digest: days 180, maxPapers 300, candidateLimit 30, topN 2-3
   # - Backfill / catch-up: days 365, maxPapers 500, candidateLimit 30, topN 3-5
   # Only selected topN PMIDs are written to data/seen_pmids.json.
   pubmed:
