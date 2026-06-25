@@ -71,6 +71,8 @@ For local runs, install Claude Code and log in once with your Claude Pro/Max/Tea
 claude
 ```
 
+On Windows PowerShell, if `claude.ps1` is blocked by execution policy, use `claude.cmd` and set `CLAUDE_CODE_COMMAND=claude.cmd` in local `.env`.
+
 For GitHub Actions, generate a CI token locally and save it as the repository secret `CLAUDE_CODE_OAUTH_TOKEN`:
 
 ```bash
