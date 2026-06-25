@@ -332,6 +332,7 @@ async function callClaudeCodeJson({ prompt, schema, context }) {
   const command = resolveClaudeCodeCommand(process.env.CLAUDE_CODE_COMMAND || 'claude');
   const model = process.env.CLAUDE_CODE_MODEL || 'opus';
   const timeoutMs = Number(process.env.CLAUDE_CODE_TIMEOUT_MS || 600000);
+  const maxTurns = String(Number(process.env.CLAUDE_CODE_MAX_TURNS || 3));
   const args = [
     '-p',
     '--output-format',
@@ -341,7 +342,7 @@ async function callClaudeCodeJson({ prompt, schema, context }) {
     '--model',
     model,
     '--max-turns',
-    '1',
+    maxTurns,
     '--no-session-persistence',
     '--safe-mode',
     '--permission-mode',
