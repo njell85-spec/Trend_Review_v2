@@ -1,4 +1,6 @@
 import { spawn } from 'node:child_process';
+import { existsSync } from 'node:fs';
+import path from 'node:path';
 import { AnalysisJsonSchema, AnalysisSchema, RankingJsonSchema, RankingSchema } from './schema.js';
 import { enrichPaperContext } from './enrich.js';
 import { fetchWithRetry } from './utils/http.js';
@@ -327,7 +329,7 @@ async function callAnthropic(prompt) {
 }
 
 async function callClaudeCodeJson({ prompt, schema, context }) {
-  const command = process.env.CLAUDE_CODE_COMMAND || 'claude';
+  const command = resolveClaudeCodeCommand(process.env.CLAUDE_CODE_COMMAND || 'claude');
   const model = process.env.CLAUDE_CODE_MODEL || 'opus';
   const timeoutMs = Number(process.env.CLAUDE_CODE_TIMEOUT_MS || 600000);
   const args = [
@@ -368,7 +370,7 @@ async function callClaudeCodeJson({ prompt, schema, context }) {
     const child = spawn(command, args, {
       cwd: process.cwd(),
       env: childEnv,
-      shell: process.platform === 'win32',
+      shell: false,
       windowsHide: true,
     });
 
@@ -411,6 +413,20 @@ async function callClaudeCodeJson({ prompt, schema, context }) {
 
     child.stdin.end(prompt);
   });
+}
+
+function resolveClaudeCodeCommand(command) {
+  if (process.platform !== 'win32') return command;
+
+  const normalized = String(command).trim().toLowerCase();
+  if (!['claude', 'claude.cmd', 'claude.ps1'].includes(normalized)) return command;
+
+  const npmPrefix = process.env.APPDATA
+    ? path.join(process.env.APPDATA, 'npm', 'node_modules', '@anthropic-ai', 'claude-code', 'bin', 'claude.exe')
+    : '';
+  if (npmPrefix && existsSync(npmPrefix)) return npmPrefix;
+
+  return command;
 }
 
 function parseClaudeCodeOutput(stdout, context) {
