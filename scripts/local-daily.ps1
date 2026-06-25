@@ -20,9 +20,18 @@ function Invoke-Step {
   )
 
   Write-Log (">>> {0} {1}" -f $FilePath, ($Arguments -join ' '))
-  & $FilePath @Arguments 2>&1 | Tee-Object -FilePath $logPath -Append
-  if ($LASTEXITCODE -ne 0) {
-    throw ("Command failed with exit {0}: {1}" -f $LASTEXITCODE, $FilePath)
+  $previousErrorActionPreference = $ErrorActionPreference
+  try {
+    $ErrorActionPreference = 'Continue'
+    $output = & $FilePath @Arguments 2>&1
+    $exitCode = $LASTEXITCODE
+  } finally {
+    $ErrorActionPreference = $previousErrorActionPreference
+  }
+
+  $output | ForEach-Object { $_.ToString() } | Tee-Object -FilePath $logPath -Append
+  if ($exitCode -ne 0) {
+    throw ("Command failed with exit {0}: {1}" -f $exitCode, $FilePath)
   }
 }
 
