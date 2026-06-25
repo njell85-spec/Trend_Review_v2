@@ -108,15 +108,13 @@ After choosing one channel, set the other provider's `enabled` value to `false`.
 
 ## Automation
 
-GitHub Actions runs the daily workflow without the desktop PC after the repository is pushed and the required GitHub Secrets are configured.
+The active daily automation is the Windows Task Scheduler fallback on the desktop PC. It runs with the locally logged-in Claude Code subscription session.
 
 Daily schedule:
 
-```yaml
-# 06:17 Asia/Seoul primary
-- cron: '17 21 * * *'
-# 07:47 Asia/Seoul catch-up
-- cron: '47 22 * * *'
+```text
+06:17 Asia/Seoul primary
+07:47 Asia/Seoul catch-up
 ```
 
 Every daily run does this:
@@ -125,11 +123,13 @@ Every daily run does this:
 - run `npm test`
 - generate the literature report if today's report does not already exist
 - commit generated report files
-- deploy `public/` to GitHub Pages
+- push generated report files so GitHub Pages deploys from `public/`
 - send notifications through enabled providers once per KST run date
 - commit `data/notifications/YYYY-MM-DD.json` as the daily notification marker
 
-If `npm test` fails, the report and notifications do not run. Notifications are sent after GitHub Pages deployment so the message link points to the updated dashboard.
+The GitHub daily workflow is manual-only while this local scheduler is active, to avoid duplicate Telegram notifications. `Deploy Pages` still runs automatically whenever `public/**` changes.
+
+If `npm test` fails, the report and notifications do not run. Notifications are sent after a short deployment wait so the message link points to the updated dashboard.
 
 ## Selection Protocol
 

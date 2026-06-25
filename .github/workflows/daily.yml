@@ -1,12 +1,6 @@
 name: Daily Trend Review
 
 on:
-  schedule:
-    # Primary: 06:17 Asia/Seoul. Catch-up: 07:47 Asia/Seoul.
-    # GitHub schedule events can be delayed or dropped, so notification markers
-    # keep the two triggers idempotent for the same KST run date.
-    - cron: '17 21 * * *'
-    - cron: '47 22 * * *'
   workflow_dispatch:
     inputs:
       date:
