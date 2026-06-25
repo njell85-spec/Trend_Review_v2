@@ -25,7 +25,7 @@ export async function analyzeTopPapers({ candidates, config, options }) {
     stats: {
       requested: topN,
       analyzed: analyses.length,
-      fallbackCount: analyses.filter((analysis) => analysis.manualReviewNeeded).length,
+      fallbackCount: analyses.filter((analysis) => analysis.source === 'fallback').length,
       selection: selection.stats,
     },
     errors,

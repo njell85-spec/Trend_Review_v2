@@ -2,13 +2,13 @@
   "runId": "2026-06-25",
   "status": "success",
   "step": "done",
-  "startedAt": "2026-06-25T10:06:48.124Z",
-  "finishedAt": "2026-06-25T10:07:11.745Z",
+  "startedAt": "2026-06-25T10:17:14.986Z",
+  "finishedAt": "2026-06-25T10:20:41.276Z",
   "counts": {
     "fetched": 300,
-    "screened": 30,
+    "screened": 1,
     "analyzed": 1,
-    "fallback": 1
+    "fallback": 0
   },
   "outputs": {
     "json": "reports/2026-06-25.json",
@@ -18,17 +18,7 @@
     "latestJson": "public/latest.json",
     "statusJson": "public/status.json"
   },
-  "errors": [
-    {
-      "step": "rank",
-      "message": "spawn ENAMETOOLONG"
-    },
-    {
-      "pmid": "42336791",
-      "step": "analysis",
-      "message": "Claude Code CLI failed for analysis 42336791 with exit 1: �������� �ʹ� ��ϴ�."
-    }
-  ],
+  "errors": [],
   "notifications": [
     {
       "provider": "all",
