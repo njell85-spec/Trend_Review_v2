@@ -332,7 +332,6 @@ async function callClaudeCodeJson({ prompt, schema, context }) {
   const timeoutMs = Number(process.env.CLAUDE_CODE_TIMEOUT_MS || 600000);
   const args = [
     '-p',
-    prompt,
     '--output-format',
     'json',
     '--json-schema',
@@ -387,6 +386,7 @@ async function callClaudeCodeJson({ prompt, schema, context }) {
     child.stderr.on('data', (chunk) => {
       stderr += chunk.toString();
     });
+    child.stdin.on('error', () => {});
     child.on('error', (error) => {
       clearTimeout(timer);
       reject(new Error(`Claude Code CLI could not start for ${context}: ${error.message}`));
@@ -408,6 +408,8 @@ async function callClaudeCodeJson({ prompt, schema, context }) {
         reject(error);
       }
     });
+
+    child.stdin.end(prompt);
   });
 }
 
