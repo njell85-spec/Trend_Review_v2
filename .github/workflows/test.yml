@@ -8,6 +8,7 @@ on:
       - 'config/**'
       - 'package.json'
       - 'package-lock.json'
+      - 'scripts/**'
       - '.github/workflows/**'
   workflow_dispatch:
 
