@@ -8,7 +8,7 @@ This project implements:
 
 - PubMed collection for recent EM/CCM papers
 - deterministic pre-screening before any LLM call
-- Claude Code or Gemini re-ranking from 30 screened candidates to a daily Top 1
+- Claude Code or Gemini re-ranking from 30 screened candidates to a daily Top 3
 - detailed PICO/outcome/statistics analysis with runtime schema validation
 - public-source enrichment from PMC, ClinicalTrials.gov, Crossref, DOI landing metadata, and PubMed affiliations
 - optional Gemini Google Search grounding for selected-paper analysis when explicitly enabled
@@ -51,7 +51,7 @@ node src/cli.js --no-notify
 Useful options:
 
 ```bash
-node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 1
+node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 3
 node src/cli.js --skip-llm --no-notify
 node src/cli.js --date 2026-06-21 --ignore-seen
 ```
@@ -139,8 +139,8 @@ The default protocol is optimized for a digest that can actually be read every m
 - collect up to 300 recent PubMed records
 - pre-screen with deterministic journal, study design, and EM/CCM relevance rules
 - keep about 30 screened candidates
-- ask Gemini to re-rank those 30 candidates
-- analyze and publish Top 1 by default
+- ask the configured LLM, Claude Code Opus locally by default, to re-rank those 30 candidates
+- analyze and publish Top 3 by default
 - fetch PMC open full text for the selected paper when a PMCID is available
 - if PMC full text is unavailable, enrich from public registry/metadata sources such as ClinicalTrials.gov, Crossref, DOI landing metadata, and PubMed affiliations
 - write only the published Top papers to `data/seen_pmids.json`
@@ -148,20 +148,20 @@ The default protocol is optimized for a digest that can actually be read every m
 Recommended operating modes:
 
 ```bash
-# Daily Top 1
+# Daily Top 3
+node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 3
+
+# Concise daily Top 1
 node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 1
 
-# Daily Top 1 with Gemini Google Search grounding enabled for the selected paper
-node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 1 --gemini-search-grounding
-
-# Slightly higher-volume daily digest
-node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 2
+# Daily Top 3 with Gemini Google Search grounding enabled for selected papers
+node src/cli.js --days 180 --max-papers 300 --candidate-limit 30 --top-n 3 --gemini-search-grounding
 
 # One-time catch-up/backfill, useful when starting the system
 node src/cli.js --days 365 --max-papers 500 --candidate-limit 30 --top-n 3
 ```
 
-For long-term daily use, `--top-n 1` is the default to avoid unread backlog. A weekly digest can later collect the best 3-5 papers without forcing marginal daily picks.
+For long-term daily use, `--top-n 3` is the default project target. Use `--top-n 1` only when you want a shorter digest.
 
 `--gemini-search-grounding` can improve depth when abstracts and public metadata are still thin, but it uses Gemini API Google Search grounding quota and may require billing depending on the project/model limits. Keep it off for the free/default workflow and enable it only when testing a higher-depth report.
 
