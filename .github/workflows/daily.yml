@@ -2,8 +2,11 @@ name: Daily Trend Review
 
 on:
   schedule:
-    # 06:30 Asia/Seoul
-    - cron: '30 21 * * *'
+    # Primary: 06:17 Asia/Seoul. Catch-up: 07:47 Asia/Seoul.
+    # GitHub schedule events can be delayed or dropped, so notification markers
+    # keep the two triggers idempotent for the same KST run date.
+    - cron: '17 21 * * *'
+    - cron: '47 22 * * *'
   workflow_dispatch:
     inputs:
       date:
@@ -42,7 +45,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: daily-trend-review-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -61,6 +64,9 @@ jobs:
       OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       ANTHROPIC_MODEL: ${{ secrets.ANTHROPIC_MODEL }}
+      CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+      CLAUDE_CODE_MODEL: ${{ secrets.CLAUDE_CODE_MODEL }}
+      CLAUDE_CODE_TIMEOUT_MS: ${{ secrets.CLAUDE_CODE_TIMEOUT_MS }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
@@ -69,37 +75,75 @@ jobs:
       DASHBOARD_URL: ${{ vars.DASHBOARD_URL }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest generated outputs
+        shell: bash
+        run: git pull --ff-only origin main
+
+      - name: Resolve run state
+        id: run_state
+        shell: bash
+        env:
+          INPUT_DATE: ${{ github.event.inputs.date || '' }}
+        run: |
+          RUN_DATE="$INPUT_DATE"
+          if [ -z "$RUN_DATE" ]; then
+            RUN_DATE="$(TZ=Asia/Seoul date +%F)"
+          fi
+
+          echo "run_date=$RUN_DATE" >> "$GITHUB_OUTPUT"
+
+          if [ -f "data/notifications/$RUN_DATE.json" ]; then
+            echo "already_notified=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "already_notified=false" >> "$GITHUB_OUTPUT"
+          fi
+
+          if [ -f "reports/$RUN_DATE.json" ]; then
+            echo "report_exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "report_exists=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - uses: actions/setup-node@v4
+        if: ${{ steps.run_state.outputs.already_notified != 'true' }}
         with:
           node-version: '20'
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies
+        if: ${{ steps.run_state.outputs.already_notified != 'true' }}
+        run: npm ci
+
+      - name: Install Claude Code
+        if: ${{ steps.run_state.outputs.already_notified != 'true' && (env.LLM_PROVIDER == 'claude-code' || env.LLM_PROVIDER == 'claude_code' || env.LLM_PROVIDER == 'claude' || env.CLAUDE_CODE_OAUTH_TOKEN != '') }}
+        run: npm install -g @anthropic-ai/claude-code@latest
 
       - name: Run tests
+        if: ${{ steps.run_state.outputs.already_notified != 'true' && steps.run_state.outputs.report_exists != 'true' }}
         run: npm test
 
       - name: Run pipeline
+        if: ${{ steps.run_state.outputs.already_notified != 'true' && steps.run_state.outputs.report_exists != 'true' }}
         shell: bash
         env:
-          RUN_DATE: ${{ github.event.inputs.date || '' }}
+          RUN_DATE: ${{ steps.run_state.outputs.run_date }}
           MAX_PAPERS: ${{ github.event.inputs.max_papers || '300' }}
-          NO_NOTIFY: ${{ github.event.inputs.no_notify || 'false' }}
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
           IGNORE_SEEN: ${{ github.event.inputs.ignore_seen || 'false' }}
           NO_SEEN_UPDATE: ${{ github.event.inputs.no_seen_update || 'false' }}
         run: |
-          ARGS=()
-          if [ -n "$RUN_DATE" ]; then ARGS+=(--date "$RUN_DATE"); fi
+          ARGS=(--date "$RUN_DATE" --no-notify)
           if [ -n "$MAX_PAPERS" ]; then ARGS+=(--max-papers "$MAX_PAPERS"); fi
           if [ "$DRY_RUN" = "true" ]; then ARGS+=(--dry-run); fi
-          if [ "$NO_NOTIFY" = "true" ]; then ARGS+=(--no-notify); fi
           if [ "$IGNORE_SEEN" = "true" ]; then ARGS+=(--ignore-seen); fi
           if [ "$NO_SEEN_UPDATE" = "true" ]; then ARGS+=(--no-seen-update); fi
           node src/cli.js "${ARGS[@]}"
 
       - name: Commit generated reports
+        if: ${{ steps.run_state.outputs.already_notified != 'true' && steps.run_state.outputs.report_exists != 'true' }}
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
@@ -113,14 +157,31 @@ jobs:
           fi
 
       - uses: actions/configure-pages@v5
+        if: ${{ steps.run_state.outputs.already_notified != 'true' }}
 
       - uses: actions/upload-pages-artifact@v3
+        if: ${{ steps.run_state.outputs.already_notified != 'true' }}
         with:
           path: public
 
       - id: deployment
         uses: actions/deploy-pages@v4
+        if: ${{ steps.run_state.outputs.already_notified != 'true' }}
 
       - name: Send notifications
-        if: ${{ github.event.inputs.no_notify != 'true' }}
+        if: ${{ steps.run_state.outputs.already_notified != 'true' && github.event.inputs.no_notify != 'true' }}
         run: node src/notify/send-latest.js
+
+      - name: Commit notification marker
+        if: ${{ steps.run_state.outputs.already_notified != 'true' && github.event.inputs.no_notify != 'true' }}
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/notifications
+          if git diff --cached --quiet; then
+            echo "No notification marker changes."
+          else
+            git commit -m "chore: record daily notification"
+            git push
+          fi

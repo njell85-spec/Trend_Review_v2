@@ -80,6 +80,6 @@ Options:
   --max-papers N         PubMed retmax
   --candidate-limit N    Number of screened candidates kept
   --top-n N              Number of papers to analyze
-  --llm-provider NAME    gemini, openai, anthropic, or none
+  --llm-provider NAME    claude-code, gemini, openai, anthropic, or none
 `);
 }

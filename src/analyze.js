@@ -1,3 +1,4 @@
+import { spawn } from 'node:child_process';
 import { AnalysisJsonSchema, AnalysisSchema, RankingJsonSchema, RankingSchema } from './schema.js';
 import { enrichPaperContext } from './enrich.js';
 import { fetchWithRetry } from './utils/http.js';
@@ -32,19 +33,23 @@ export async function analyzeTopPapers({ candidates, config, options }) {
 async function selectTopPapers({ candidates, topN, provider, shouldUseLlm }) {
   const deterministicTop = candidates.slice(0, topN);
 
-  if (!shouldUseLlm || provider !== 'gemini' || candidates.length <= topN) {
+  if (!shouldUseLlm || !supportsLlmRanking(provider) || candidates.length <= topN) {
     return {
       topPapers: deterministicTop,
       stats: {
         source: shouldUseLlm ? 'deterministic' : 'deterministic-fallback',
         provider,
-        reason: !shouldUseLlm ? 'LLM selection disabled' : 'candidate pool does not need reranking',
+        reason: !shouldUseLlm
+          ? 'LLM selection disabled'
+          : supportsLlmRanking(provider)
+            ? 'candidate pool does not need reranking'
+            : `${provider} ranking is not implemented`,
       },
     };
   }
 
   try {
-    const raw = await callGeminiRanking(buildRankingPrompt(candidates, topN));
+    const raw = await callRankingProvider({ provider, prompt: buildRankingPrompt(candidates, topN) });
     const ranking = RankingSchema.parse(raw);
     const byPmid = new Map(candidates.map((paper) => [String(paper.pmid), paper]));
     const selectedPmids = unique(ranking.selected.map((item) => String(item.pmid)));
@@ -79,6 +84,10 @@ async function selectTopPapers({ candidates, topN, provider, shouldUseLlm }) {
       },
     };
   }
+}
+
+function supportsLlmRanking(provider) {
+  return ['gemini', 'claude-code'].includes(provider);
 }
 
 export async function analyzeSinglePaper({ paper, config, options }) {
@@ -125,11 +134,18 @@ function shouldRetryAnalysisRepair(error) {
 
 function resolveProvider(options) {
   const explicit = options.llmProvider || process.env.LLM_PROVIDER;
-  if (explicit) return explicit.toLowerCase();
+  if (explicit) return normalizeProvider(explicit);
+  if (process.env.CLAUDE_CODE_OAUTH_TOKEN) return 'claude-code';
   if (process.env.GEMINI_API_KEY) return 'gemini';
   if (process.env.OPENAI_API_KEY) return 'openai';
   if (process.env.ANTHROPIC_API_KEY) return 'anthropic';
   return 'none';
+}
+
+function normalizeProvider(provider) {
+  const normalized = String(provider).trim().toLowerCase().replace(/_/g, '-');
+  if (normalized === 'claude') return 'claude-code';
+  return normalized;
 }
 
 function resolveGeminiSearchGrounding(config, options) {
@@ -144,6 +160,13 @@ async function callProvider({ provider, prompt, paper, geminiSearchGrounding }) 
   if (provider === 'gemini') return callGeminiAnalysis(prompt, paper, { geminiSearchGrounding });
   if (provider === 'openai') return callOpenAi(prompt, paper);
   if (provider === 'anthropic') return callAnthropic(prompt, paper);
+  if (provider === 'claude-code') {
+    return callClaudeCodeJson({
+      prompt,
+      schema: AnalysisJsonSchema,
+      context: `analysis ${paper.pmid}`,
+    });
+  }
   throw new Error(`Unsupported LLM provider: ${provider}`);
 }
 
@@ -162,6 +185,18 @@ async function callGeminiRanking(prompt) {
     schema: RankingJsonSchema,
     context: 'candidate ranking',
   });
+}
+
+async function callRankingProvider({ provider, prompt }) {
+  if (provider === 'gemini') return callGeminiRanking(prompt);
+  if (provider === 'claude-code') {
+    return callClaudeCodeJson({
+      prompt,
+      schema: RankingJsonSchema,
+      context: 'candidate ranking',
+    });
+  }
+  throw new Error(`Unsupported ranking provider: ${provider}`);
 }
 
 async function callGeminiJson({ prompt, schema, context, geminiSearchGrounding = false }) {
@@ -289,6 +324,136 @@ async function callAnthropic(prompt) {
   const toolUse = data?.content?.find((part) => part.type === 'tool_use');
   if (!toolUse?.input) throw new Error('Anthropic response did not include tool input');
   return toolUse.input;
+}
+
+async function callClaudeCodeJson({ prompt, schema, context }) {
+  const command = process.env.CLAUDE_CODE_COMMAND || 'claude';
+  const model = process.env.CLAUDE_CODE_MODEL || 'opus';
+  const timeoutMs = Number(process.env.CLAUDE_CODE_TIMEOUT_MS || 600000);
+  const args = [
+    '-p',
+    prompt,
+    '--output-format',
+    'json',
+    '--json-schema',
+    JSON.stringify(schema),
+    '--model',
+    model,
+    '--max-turns',
+    '1',
+    '--no-session-persistence',
+    '--safe-mode',
+    '--permission-mode',
+    'dontAsk',
+    '--tools',
+    '',
+    '--disallowedTools',
+    'mcp__*',
+    '--system-prompt',
+    [
+      'You are an emergency medicine and critical care physician preparing a daily clinician literature review.',
+      'Use only the supplied paper, abstract, full-text excerpt, and public metadata.',
+      'Return structured data that exactly matches the requested JSON schema.',
+    ].join(' '),
+  ];
+
+  const childEnv = { ...process.env };
+  delete childEnv.ANTHROPIC_API_KEY;
+  delete childEnv.ANTHROPIC_AUTH_TOKEN;
+
+  if (process.env.GITHUB_ACTIONS && !childEnv.CLAUDE_CODE_OAUTH_TOKEN) {
+    throw new Error('CLAUDE_CODE_OAUTH_TOKEN is required for claude-code provider in GitHub Actions.');
+  }
+
+  return new Promise((resolve, reject) => {
+    const child = spawn(command, args, {
+      cwd: process.cwd(),
+      env: childEnv,
+      shell: process.platform === 'win32',
+      windowsHide: true,
+    });
+
+    let stdout = '';
+    let stderr = '';
+    let timedOut = false;
+    const timer = setTimeout(() => {
+      timedOut = true;
+      child.kill('SIGTERM');
+    }, timeoutMs);
+
+    child.stdout.on('data', (chunk) => {
+      stdout += chunk.toString();
+    });
+    child.stderr.on('data', (chunk) => {
+      stderr += chunk.toString();
+    });
+    child.on('error', (error) => {
+      clearTimeout(timer);
+      reject(new Error(`Claude Code CLI could not start for ${context}: ${error.message}`));
+    });
+    child.on('close', (code) => {
+      clearTimeout(timer);
+      if (timedOut) {
+        reject(new Error(`Claude Code CLI timed out after ${timeoutMs}ms for ${context}`));
+        return;
+      }
+      if (code !== 0) {
+        reject(new Error(`Claude Code CLI failed for ${context} with exit ${code}: ${compactCliOutput(stderr || stdout)}`));
+        return;
+      }
+
+      try {
+        resolve(parseClaudeCodeOutput(stdout, context));
+      } catch (error) {
+        reject(error);
+      }
+    });
+  });
+}
+
+function parseClaudeCodeOutput(stdout, context) {
+  const trimmed = stdout.trim();
+  if (!trimmed) throw new Error(`Claude Code returned empty output for ${context}`);
+
+  const parsed = JSON.parse(trimmed);
+  if (parsed.is_error) {
+    throw new Error(`Claude Code reported an error for ${context}: ${compactCliOutput(parsed.result || parsed.error || '')}`);
+  }
+  if (parsed.structured_output && typeof parsed.structured_output === 'object') {
+    return parsed.structured_output;
+  }
+  if (parsed.result && typeof parsed.result === 'string') {
+    return JSON.parse(extractJsonObject(parsed.result));
+  }
+  throw new Error(`Claude Code output did not include structured_output for ${context}`);
+}
+
+function extractJsonObject(text) {
+  const trimmed = text.trim();
+  if (trimmed.startsWith('{') && trimmed.endsWith('}')) return trimmed;
+  const match = trimmed.match(/\{[\s\S]*\}/);
+  if (!match) throw new Error('No JSON object found in Claude Code result');
+  return match[0];
+}
+
+function compactCliOutput(text) {
+  const compacted = String(text ?? '').replace(/\s+/g, ' ').trim().slice(0, 800);
+  return redactSecrets(compacted);
+}
+
+function redactSecrets(text) {
+  let redacted = text;
+  for (const name of [
+    'CLAUDE_CODE_OAUTH_TOKEN',
+    'ANTHROPIC_API_KEY',
+    'ANTHROPIC_AUTH_TOKEN',
+    'GEMINI_API_KEY',
+    'OPENAI_API_KEY',
+  ]) {
+    const value = process.env[name];
+    if (value && value.length >= 8) redacted = redacted.split(value).join(`[redacted ${name}]`);
+  }
+  return redacted;
 }
 
 function validateAnalysis(raw, paper) {
