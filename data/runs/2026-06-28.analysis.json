@@ -1,0 +1,261 @@
+{
+  "analyses": [
+    {
+      "pmid": "42348209",
+      "title": "Severity of Chronic Kidney Disease and Outcomes After Admission to the Intensive Care Unit.",
+      "oneLineSummary": "In 531,090 Ontario ICU adults, increasing CKD severity was progressively associated with higher mortality and ICU kidney replacement therapy, except maintenance dialysis patients had lower mortality than non-dialysis stage 5 CKD.",
+      "oneLineSummary_ko": "온타리오 ICU 성인 531,090명에서 CKD 중증도가 높을수록 사망률과 ICU 신대체요법이 점진적으로 증가했으나, 유지투석 환자는 비투석 5기 CKD보다 사망률이 낮았다.",
+      "whyItMatters": "CKD patients are overrepresented in the ICU (25% vs 12.5% in the general population), and this large population-based study quantifies how baseline kidney function—graded by KDIGO eGFR stage rather than diagnostic codes—independently tracks with ICU/hospital/90-day mortality, ICU KRT initiation, and long-term dialysis dependence, supporting bedside prognostication and goals-of-care discussions.",
+      "whyItMatters_ko": "CKD 환자는 ICU에서 과대표집되며(일반 인구 12.5% 대비 25%), 이 대규모 인구기반 연구는 진단코드가 아닌 KDIGO eGFR 단계로 분류한 기저 신기능이 ICU·병원·90일 사망률, ICU 내 KRT 시작, 장기 투석 의존과 독립적으로 연관됨을 정량화하여 침상 예후평가와 치료목표 논의를 뒷받침한다.",
+      "clinicalQuestion": "Among adults admitted to the ICU, how does the severity of preexisting CKD (by baseline outpatient eGFR/KDIGO stage) associate with mortality, ICU kidney replacement therapy, and KRT dependence at 90 days?",
+      "clinicalQuestion_ko": "ICU에 입원한 성인에서 기저 CKD 중증도(기저 외래 eGFR/KDIGO 단계 기준)는 사망률, ICU 내 신대체요법, 90일 KRT 의존과 어떻게 연관되는가?",
+      "studyDetails": {
+        "design": "Population-based retrospective cohort study using linked administrative health databases at ICES, following RECORD and STROBE reporting guidelines.",
+        "design_ko": "ICES의 연계 행정 보건 데이터베이스를 이용한 인구기반 후향적 코호트 연구로, RECORD 및 STROBE 보고지침을 준수했다.",
+        "setting": "Ontario, Canada; all ICUs province-wide, index ICU admissions from November 1, 2008 to February 28, 2021; data linked at ICES (multiple administrative databases including CIHI DAD, NACRS, OHIP, CORR, OLIS, Critical Care Information System).",
+        "setting_ko": "캐나다 온타리오주 전역의 모든 ICU; 2008년 11월 1일~2021년 2월 28일 ICU 입원; ICES에서 여러 행정 데이터베이스(CIHI DAD, NACRS, OHIP, CORR, OLIS, 중환자 정보시스템)를 연계함.",
+        "sampleSize": "531,090 adults analyzed (met eligibility from 848,202 Ontario ICU admissions in the accrual window). Distribution: no CKD 75%, stage 3a 12%, stage 3b 7%, stage 4 3%, non-dialysis-dependent stage 5 1%, maintenance dialysis 2%. A sensitivity analysis including patients without baseline creatinine (imputed eGFR 75) totaled n=824,951; an albuminuria subgroup had n=208,897 (39.3%).",
+        "sampleSize_ko": "분석 대상 성인 531,090명(누적 기간 온타리오 ICU 입원 848,202명 중 적격 충족). 분포: CKD 없음 75%, 3a기 12%, 3b기 7%, 4기 3%, 비투석 5기 1%, 유지투석 2%. 기저 크레아티닌 없는 환자(eGFR 75 대입)를 포함한 민감도분석 n=824,951; 알부민뇨 하위군 n=208,897(39.3%).",
+        "eligibility": "Ontario residents aged ≥18 years admitted to an ICU during the study period with a baseline outpatient serum creatinine measured 7–365 days before admission (first ICU admission used as index). Exclusions: prior kidney transplant, no baseline eGFR, ineligible for OHIP coverage.",
+        "eligibility_ko": "연구 기간 중 ICU에 입원한 18세 이상 온타리오 거주자로 입원 7~365일 전 외래 혈청 크레아티닌이 측정된 자(첫 ICU 입원을 색인일로 사용). 제외: 이전 신장이식, 기저 eGFR 없음, OHIP 적용 부적격.",
+        "interventionDetails": "Exposure was CKD severity by baseline outpatient eGFR (2021 CKD-EPI formula), classified by KDIGO stages: no CKD (≥60), stage 3a (45–59), stage 3b (30–44), stage 4 (15–29), non-dialysis-dependent stage 5 (<15), and maintenance dialysis. Albuminuria not in primary analysis due to limited availability.",
+        "interventionDetails_ko": "노출은 기저 외래 eGFR(2021 CKD-EPI 공식)에 따른 CKD 중증도로, KDIGO 단계로 분류: CKD 없음(≥60), 3a기(45–59), 3b기(30–44), 4기(15–29), 비투석 5기(<15), 유지투석. 알부민뇨는 가용성 제한으로 주분석에서 제외.",
+        "comparatorDetails": "Reference group was patients without CKD (baseline eGFR ≥60 mL/min/1.73 m2). Maintenance dialysis patients were excluded from KRT-in-ICU analyses.",
+        "comparatorDetails_ko": "기준군은 CKD 없는 환자(기저 eGFR ≥60 mL/min/1.73 m2). 유지투석 환자는 ICU 내 KRT 분석에서 제외됨.",
+        "followUp": "Outcomes captured during ICU stay, during hospital stay, and at 90 days after ICU admission; KRT dependence assessed at day 90. Loss to follow-up only through emigration (<0.5% annually).",
+        "followUp_ko": "결과는 ICU 재원 중, 병원 재원 중, ICU 입원 90일 후에 측정; KRT 의존은 90일에 평가. 추적 손실은 이민(연 0.5% 미만)에 의해서만 발생.",
+        "sourceBasis": "Abstract, PMC open full text (PMC13306308), PubMed metadata, and Crossref metadata.",
+        "sourceBasis_ko": "초록, PMC 공개 전문(PMC13306308), PubMed 메타데이터, Crossref 메타데이터."
+      },
+      "pico": {
+        "population": "531,090 adult ICU patients in Ontario, Canada with a baseline outpatient serum creatinine",
+        "intervention": "Preexisting CKD severity graded by baseline outpatient eGFR (KDIGO stages 3a–5 and maintenance dialysis)",
+        "comparison": "Patients without CKD (baseline eGFR ≥60 mL/min/1.73 m2)",
+        "outcome": "ICU, hospital, and 90-day mortality; ICU KRT initiation; KRT dependence at 90 days; length of stay"
+      },
+      "pico_ko": {
+        "population": "기저 외래 혈청 크레아티닌이 있는 캐나다 온타리오 성인 ICU 환자 531,090명",
+        "intervention": "기저 외래 eGFR로 분류한 기존 CKD 중증도(KDIGO 3a–5기 및 유지투석)",
+        "comparison": "CKD 없는 환자(기저 eGFR ≥60 mL/min/1.73 m2)",
+        "outcome": "ICU·병원·90일 사망률; ICU 내 KRT 시작; 90일 KRT 의존; 재원기간"
+      },
+      "detailedPico": {
+        "population": "531,090 consecutive adults (≥18 years; mean age 67 [SD 15] years; 57% men, 43% women) admitted to an ICU in Ontario, Canada (2008–2021) with a baseline outpatient serum creatinine 7–365 days before admission. One in four had preexisting CKD; covariates adjusted included age, sex, rural residence, income quintile, comorbidities, prior health care utilization, vasopressor and mechanical ventilation use at admission, MODS (excluding the renal component), and sepsis/severe sepsis.",
+        "population_ko": "캐나다 온타리오에서 ICU에 입원한 연속 성인 531,090명(18세 이상; 평균 67[SD 15]세; 남성 57%, 여성 43%)으로 입원 7~365일 전 외래 혈청 크레아티닌이 있었음. 4명 중 1명이 기존 CKD 보유; 보정 변수는 연령, 성별, 농촌 거주, 소득분위, 동반질환, 사전 의료이용, 입원 시 승압제·기계환기 사용, MODS(신장 항목 제외), 패혈증/중증 패혈증 포함.",
+        "countrySetting": "Canada (Ontario), province-wide ICUs; population-based administrative data linked at ICES.",
+        "countrySetting_ko": "캐나다(온타리오), 주 전역 ICU; ICES에서 연계한 인구기반 행정 데이터.",
+        "intervention": "CKD severity by baseline outpatient eGFR (2021 CKD-EPI), KDIGO stages 3a (45–59), 3b (30–44), 4 (15–29), non-dialysis-dependent stage 5 (<15), and maintenance dialysis.",
+        "intervention_ko": "기저 외래 eGFR(2021 CKD-EPI)에 따른 CKD 중증도, KDIGO 3a기(45–59), 3b기(30–44), 4기(15–29), 비투석 5기(<15), 유지투석.",
+        "comparator": "Patients without CKD (baseline eGFR ≥60 mL/min/1.73 m2) as reference.",
+        "comparator_ko": "CKD 없는 환자(기저 eGFR ≥60 mL/min/1.73 m2)를 기준으로 함.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "90-day all-cause mortality by CKD stage (adjusted)",
+            "outcome_ko": "CKD 단계별 90일 전체원인 사망률(보정)",
+            "result": "Relative to no CKD: stage 3a AOR 1.14 (95% CI, 1.11–1.17); stage 3b AOR 1.38 (1.34–1.42); stage 4 AOR 1.95 (1.87–2.03); non-dialysis-dependent stage 5 AOR 2.32 (2.14–2.52); maintenance dialysis OR 1.92 (1.82–2.04).",
+            "result_ko": "CKD 없음 대비: 3a기 AOR 1.14(95% CI, 1.11–1.17); 3b기 AOR 1.38(1.34–1.42); 4기 AOR 1.95(1.87–2.03); 비투석 5기 AOR 2.32(2.14–2.52); 유지투석 OR 1.92(1.82–2.04).",
+            "statistics": "AOR 1.14 / 1.38 / 1.95 / 2.32; dialysis OR 1.92, all 95% CIs excluding 1.0",
+            "interpretation": "Mortality odds rose stepwise with worsening CKD up to non-dialysis stage 5; maintenance dialysis patients had lower odds than non-dialysis stage 5 and comparable to stage 4.",
+            "interpretation_ko": "사망 위험은 비투석 5기까지 CKD 악화에 따라 단계적으로 증가; 유지투석 환자는 비투석 5기보다 낮고 4기와 유사했다.",
+            "statPrimer": "OR/AOR of 1 means no difference; >1 means higher odds of death; a 95% CI not crossing 1 indicates conventional statistical significance.",
+            "statPrimer_ko": "OR/AOR 1은 차이 없음, 1보다 크면 사망 위험 증가; 95% CI가 1을 포함하지 않으면 통계적 유의성을 의미한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "KRT initiation during ICU stay by CKD stage (adjusted, dialysis patients excluded)",
+            "outcome_ko": "CKD 단계별 ICU 재원 중 KRT 시작(보정, 투석 환자 제외)",
+            "result": "Relative to no CKD: stage 3a AOR 1.79 (1.68–1.90); stage 3b AOR 3.02 (2.83–3.22); stage 4 AOR 6.71 (6.23–7.22); non-dialysis-dependent stage 5 AOR 32.00 (29.07–35.22).",
+            "result_ko": "CKD 없음 대비: 3a기 AOR 1.79(1.68–1.90); 3b기 AOR 3.02(2.83–3.22); 4기 AOR 6.71(6.23–7.22); 비투석 5기 AOR 32.00(29.07–35.22).",
+            "statistics": "AOR 1.79 / 3.02 / 6.71 / 32.00, all 95% CIs excluding 1.0",
+            "interpretation": "Risk of needing ICU dialysis climbed steeply—about 32-fold for non-dialysis stage 5 versus patients without CKD.",
+            "interpretation_ko": "ICU 투석 필요 위험은 가파르게 증가하여 비투석 5기는 CKD 없는 환자 대비 약 32배였다.",
+            "statPrimer": "AOR of 1 means no difference; larger values mean greatly increased odds of ICU KRT; CIs well above 1 confirm significance.",
+            "statPrimer_ko": "AOR 1은 차이 없음; 값이 클수록 ICU KRT 위험이 크게 증가; CI가 1보다 충분히 크면 유의함을 확인한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "KRT dependence at 90 days among ICU KRT initiators surviving to 90 days",
+            "outcome_ko": "90일 생존한 ICU KRT 시작자 중 90일 KRT 의존",
+            "result": "Proportion KRT-dependent at day 90 increased by stage: no CKD 7.2%; stage 3a 14.2%; stage 3b 22.5%; stage 4 50.3%; previously non-dialysis-dependent stage 5 83.8%.",
+            "result_ko": "90일 KRT 의존 비율은 단계별 증가: CKD 없음 7.2%; 3a기 14.2%; 3b기 22.5%; 4기 50.3%; 이전 비투석 5기 83.8%.",
+            "statistics": "Descriptive proportions: 7.2% / 14.2% / 22.5% / 50.3% / 83.8%",
+            "interpretation": "Among survivors who started ICU dialysis, recovery off dialysis was far less likely with more severe baseline CKD—most stage 4 and nearly all prior stage 5 patients remained dialysis-dependent.",
+            "interpretation_ko": "ICU 투석을 시작한 생존자 중 기저 CKD가 심할수록 투석 중단 가능성이 훨씬 낮아 4기 대부분과 이전 5기 거의 전부가 투석 의존 상태로 남았다.",
+            "statPrimer": "These are descriptive percentages; higher values mean more patients remained dialysis-dependent. No ratio or p value is reported for this comparison.",
+            "statPrimer_ko": "이는 기술적 백분율로, 값이 높을수록 더 많은 환자가 투석 의존 상태로 남았음을 의미한다. 이 비교에는 비율이나 p값이 보고되지 않았다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Hospital length of stay by CKD stage (adjusted, competing risk of in-hospital death)",
+            "outcome_ko": "CKD 단계별 병원 재원기간(보정, 원내사망 경쟁위험)",
+            "result": "Adjusted subdistribution HR for discharge (sHR<1 = longer stay): stage 3a 0.94 (0.93–0.95); stage 3b 0.87 (0.86–0.88); stage 4 0.77 (0.76–0.79); non-dialysis stage 5 0.65 (0.62–0.67); maintenance dialysis 0.71 (0.70–0.73).",
+            "result_ko": "퇴원에 대한 보정 하위분포 HR(sHR<1=재원기간 연장): 3a기 0.94(0.93–0.95); 3b기 0.87(0.86–0.88); 4기 0.77(0.76–0.79); 비투석 5기 0.65(0.62–0.67); 유지투석 0.71(0.70–0.73).",
+            "statistics": "Adjusted sHR 0.94 / 0.87 / 0.77 / 0.65 / 0.71, all 95% CIs below 1.0",
+            "interpretation": "More severe CKD meant longer hospital stays (lower discharge rate), with maintenance dialysis somewhat less prolonged than non-dialysis stage 5.",
+            "interpretation_ko": "CKD가 심할수록 병원 재원기간이 길어졌으며(퇴원율 감소), 유지투석은 비투석 5기보다 다소 덜 연장되었다.",
+            "statPrimer": "Because the event is discharge, sHR of 1 means no difference; sHR<1 means slower discharge (longer stay); CIs not crossing 1 indicate significance.",
+            "statPrimer_ko": "사건이 퇴원이므로 sHR 1은 차이 없음; sHR<1이면 퇴원 지연(재원 연장); CI가 1을 포함하지 않으면 유의함을 의미한다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "One in four ICU patients had preexisting CKD—double the general-population prevalence—and adjusted mortality rose progressively with CKD stage up to non-dialysis-dependent stage 5 (90-day AOR 2.32).",
+        "Maintenance dialysis patients had lower mortality (OR 1.92) than non-dialysis-dependent stage 5 CKD (OR 2.32), comparable to stage 4, suggesting an established-dialysis paradox.",
+        "Risk of ICU KRT initiation increased steeply with CKD severity (up to AOR 32.00 for non-dialysis stage 5), and KRT dependence at 90 days among survivors rose from 7.2% (no CKD) to 83.8% (prior stage 5)."
+      ],
+      "keyFindings_ko": [
+        "ICU 환자 4명 중 1명이 기존 CKD를 가졌고(일반 인구의 2배), 보정 사망률은 비투석 5기까지 단계적으로 증가했다(90일 AOR 2.32).",
+        "유지투석 환자는 비투석 5기 CKD(OR 2.32)보다 사망률이 낮고(OR 1.92) 4기와 유사하여, 확립된 투석의 역설을 시사한다.",
+        "ICU 내 KRT 시작 위험은 CKD 중증도에 따라 가파르게 증가했고(비투석 5기 AOR 32.00), 생존자 중 90일 KRT 의존은 7.2%(CKD 없음)에서 83.8%(이전 5기)로 상승했다."
+      ],
+      "conclusion": "In this population-based cohort of consecutive Ontario ICU adults, the presence and increasing severity of preexisting CKD were independently associated with higher mortality, greater need for ICU kidney replacement therapy, higher 90-day KRT dependence, and longer length of stay—except that maintenance dialysis patients fared better than non-dialysis-dependent stage 5 CKD. These data can inform risk prognostication, goals-of-care discussions, resource allocation, and health policy.",
+      "conclusion_ko": "연속적인 온타리오 ICU 성인 인구기반 코호트에서 기존 CKD의 존재와 중증도 증가는 더 높은 사망률, ICU 신대체요법 필요 증가, 90일 KRT 의존 증가, 재원기간 연장과 독립적으로 연관되었으나, 유지투석 환자는 비투석 5기 CKD보다 결과가 양호했다. 이 자료는 위험 예후평가, 치료목표 논의, 자원 배분, 보건 정책에 활용될 수 있다.",
+      "clinicalTakeaway": "Use baseline outpatient eGFR/KDIGO stage as an independent prognostic marker in ICU patients: advancing CKD predicts higher mortality, much higher likelihood of needing dialysis in the ICU, and—especially in stage 4–5—a high chance of not recovering kidney function, which should frame realistic conversations with patients and families. Notably, maintenance dialysis patients are not the highest-risk group; their mortality resembles stage 4 CKD.",
+      "clinicalTakeaway_ko": "ICU 환자에서 기저 외래 eGFR/KDIGO 단계를 독립적 예후 지표로 활용하라: CKD가 진행할수록 사망률이 높고 ICU에서 투석이 필요할 가능성이 훨씬 크며, 특히 4–5기에서는 신기능 회복 실패 가능성이 높아 환자·가족과의 현실적 대화의 틀이 되어야 한다. 주목할 점은 유지투석 환자가 최고위험군이 아니며 사망률이 4기 CKD와 유사하다는 것이다.",
+      "limitations": "Observational administrative-data design precludes causal inference and risks residual/unmeasured confounding (e.g., frailty, code status, reason for ICU admission, illness trajectory). Albuminuria was excluded from the primary analysis and available in only 39.3% of patients; baseline eGFR relied on a single outpatient creatinine 7–365 days pre-admission; AKI superimposed on CKD was not separately disentangled in the primary exposure. The cohort is restricted to Ontario residents with an available baseline creatinine, which may limit generalizability and introduce selection effects (though an imputation sensitivity analysis was concordant). Exact baseline characteristic balance and length-of-stay absolute values are in supplementary materials not fully available in the provided sources.",
+      "limitations_ko": "관찰적 행정데이터 설계로 인과 추론이 불가하며 잔여/미측정 교란(예: 쇠약, 연명의료 의향, ICU 입원 사유, 질병 경과)의 위험이 있다. 알부민뇨는 주분석에서 제외되었고 환자의 39.3%에서만 가용했으며, 기저 eGFR은 입원 7~365일 전 단일 외래 크레아티닌에 의존했고, CKD에 중첩된 AKI는 주노출에서 별도로 구분되지 않았다. 코호트는 기저 크레아티닌이 있는 온타리오 거주자로 한정되어 일반화와 선택 효과에 제한이 있다(다만 대입 민감도분석은 일치). 정확한 기저 특성 균형과 재원기간 절대값은 제공된 자료에 완전히 포함되지 않은 보충자료에 있다.",
+      "edIcuApplicability": "Highly relevant to ED and ICU clinicians who routinely triage and counsel critically ill patients with CKD. Knowing a patient's baseline eGFR stage helps anticipate need for ICU dialysis, gauge prognosis, and set expectations about renal recovery and long-term dialysis dependence—particularly for stage 4–5 patients. The finding that maintenance dialysis patients have mortality similar to stage 4 (not the worst outcome) counters a common assumption. As an observational association study, it informs risk stratification and goals-of-care conversations rather than dictating a specific treatment.",
+      "edIcuApplicability_ko": "CKD를 가진 중증 환자를 일상적으로 분류·상담하는 응급실 및 ICU 임상의에게 매우 적절하다. 환자의 기저 eGFR 단계를 알면 ICU 투석 필요성 예측, 예후 판단, 신기능 회복 및 장기 투석 의존에 대한 기대 설정에 도움이 되며 특히 4–5기 환자에 유용하다. 유지투석 환자의 사망률이 4기와 유사하다(최악이 아님)는 결과는 흔한 가정을 반박한다. 관찰적 연관 연구이므로 특정 치료를 지시하기보다 위험 계층화와 치료목표 논의에 활용된다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 8,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Statistics drawn only from abstract and PMC full-text excerpt; AORs, ORs, sHRs, and proportions reproduced as stated.",
+        "Mortality 'paradox' for maintenance dialysis (OR 1.92) vs non-dialysis stage 5 (OR 2.32) explicitly stated; dialysis figure reported as OR rather than AOR in source.",
+        "Exact ICU and hospital mortality numeric values and baseline characteristic tables reside in figures/eTables not fully reproduced in provided sources.",
+        "Sensitivity analyses (imputed eGFR n=824,951; albuminuria subset n=208,897; Cox model; median-creatinine eGFR) reported as concordant with primary results.",
+        "Evidence level set to Moderate given large, complete population-based data but observational design with residual confounding."
+      ],
+      "paper": {
+        "pmid": "42348209",
+        "title": "Severity of Chronic Kidney Disease and Outcomes After Admission to the Intensive Care Unit.",
+        "abstract": "IMPORTANCE: Individuals with chronic kidney disease (CKD) are disproportionately admitted to the intensive care unit (ICU); however, the association between CKD severity and outcomes after ICU admission remains uncertain.\nOBJECTIVE: To evaluate the association between CKD severity and health outcomes after ICU admission.\nDESIGN, SETTING, AND PARTICIPANTS: This population-based cohort study was conducted from November 1, 2008, to February 28, 2021. Participants included 531 090 consecutive adult (≥18 years) residents of Ontario, Canada, admitted to an ICU during the study period who had a baseline outpatient serum creatinine measurement within 7 to 365 days prior to admission. Statistical analyses were conducted from July 23, 2025, to April 16, 2026.\nEXPOSURE: CKD severity was classified according to the baseline outpatient estimated glomerular filtration rate (eGFR) Kidney Disease Improving Global Outcomes criteria.\nMAIN OUTCOMES AND MEASURES: Mortality (ICU, hospital, and 90-day mortality) and kidney replacement therapy (KRT) requirement in the ICU and dependence at 90 days.\nRESULTS: The study included 531 090 adults (mean [SD] age, 67 [15] years; 57% men) admitted to the ICU. One in 4 individuals had preexisting CKD: stage 3a CKD, eGFR 45 to 59 mL/min/1.73 m2 (12% of adults); stage 3b CKD, eGFR 30 to 44 mL/min/1.73 m2 (7% of adults); stage 4 CKD, eGFR 15 to 29 mL/min/1.73 m2 (3% of adults); non-dialysis-dependent stage 5 CKD, eGFR less than 15 mL/min/1.73 m2 (1% of adults); and undergoing maintenance dialysis (2% of adults). Compared with individuals without CKD, the severity of the disease among individuals with CKD was progressively associated with increased mortality risk up to non-dialysis-dependent stage 5 CKD. However, the risk of mortality was lower for individuals receiving maintenance dialysis (odds ratio [OR], 1.92 [95% CI, 1.82-2.04]) compared with those with non-dialysis-dependent stage 5 CKD (OR, 2.32 [95% CI, 2.14-2.52]). Risk for KRT initiation in the ICU increased with CKD severity relative to individuals without CKD: stage 3a (adjusted OR [AOR], 1.79 [95% CI, 1.68-1.90]), stage 3b (AOR, 3.02 [95% CI, 2.83-3.22]), stage 4 (AOR, 6.71 [95% CI, 6.23-7.22]), and non-dialysis-dependent stage 5 (AOR, 32.00 [95% CI, 29.07-35.22]). Among those who initiated KRT in the ICU and survived to 90 days, KRT dependence at day 90 increased progressively by CKD stage: no CKD, 7.2%; stage 3a, 14.2%; stage 3b, 22.5%; stage 4, 50.3%; and previously non-dialysis-dependent stage 5, 83.8%.\nCONCLUSIONS AND RELEVANCE: In this cohort study of consecutive adults admitted to the ICU, the presence and severity of CKD were associated with adverse health outcomes. These findings can inform risk prognostication, discussions about goals of care, resource allocation, and health policy initiatives for this large portion of the ICU population.",
+        "authors": [
+          "El Wadia H",
+          "Beauregard N",
+          "Silver SA",
+          "Wald R",
+          "Akbari A",
+          "Fremont D",
+          "Ramsay T",
+          "Knoll GA"
+        ],
+        "authorAffiliations": [
+          "School of Epidemiology and Public Health, University of Ottawa, Ottawa, Ontario, Canada.",
+          "ICES Ottawa, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada.",
+          "Department of Medicine, Division of Nephrology, Queen's University, Kingston, Ontario, Canada.",
+          "Department of Medicine, Division of Nephrology, St Michael's Hospital, Toronto, Ontario, Canada.",
+          "Department of Nephrology and Hypertension, Tel Aviv Sourasky Medical Center, Tel Aviv, Israel.",
+          "Department of Medicine, Division of Nephrology, University of Ottawa, Ottawa, Ontario, Canada.",
+          "Inflammation and Chronic Disease Program, Ottawa Hospital Research Institute, University of Ottawa, Ottawa, Ontario, Canada."
+        ],
+        "journal": "JAMA network open",
+        "pubDate": "2026-Jun-01",
+        "publicationTypes": [
+          "Journal Article"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Male",
+          "Intensive Care Units",
+          "Female",
+          "Renal Insufficiency, Chronic",
+          "Aged",
+          "Ontario",
+          "Severity of Illness Index",
+          "Middle Aged",
+          "Cohort Studies",
+          "Glomerular Filtration Rate",
+          "Hospital Mortality"
+        ],
+        "keywords": [],
+        "doi": "10.1001/jamanetworkopen.2026.20192",
+        "pmcid": "PMC13306308",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42348209/",
+        "collectedAt": "2026-06-27T21:17:13.535Z",
+        "screeningData": {
+          "score": 11,
+          "relevanceMatches": [
+            "intensive care",
+            "ICU"
+          ],
+          "studyType": "Observational",
+          "sampleSize": 90,
+          "journalBoost": 4,
+          "reasons": [
+            "abstract available",
+            "topic match: intensive care, ICU",
+            "study design: Observational",
+            "sample size signal: N=90",
+            "journal boost: JAMA network open"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Chronic kidney disease (CKD) is associated with substantial morbidity and mortality worldwide. Its global burden has increased alongside diabetes, hypertension, and cardiovascular disease, and CKD now affects approximately 10% to 15% of adults. These shared factors predispose individuals with CKD to critical illness. Consequently, individuals with CKD, particularly those with end-stage kidney disease (ESKD), are admitted to intensive care units (ICUs) at rates disproportionate to their prevalence in the general population. The association between CKD and outcomes after ICU admission remains incompletely characterized. Prior studies have focused largely on acute kidney injury (AKI), particularly AKI requiring kidney replacement therapy (KRT), or on individuals with ESKD receiving maintenance dialysis. The association between CKD severity and outcomes after ICU admission remains uncertain. Furthermore, most studies have been limited to selected populations, single centers, or small sample sizes, limiting generalizability. A clearer understanding may inform risk stratification and resource allocation. Herein, we conducted a population-based cohort study of adults admitted to ICUs across Ontario, Canada, to examine the association between preexisting CKD severity and outcomes after ICU admission. Methods Study Design and Setting We conducted a population-based retrospective cohort study in Ontario, Canada, using linked health care databases held at ICES (formerly, Institute for Clinical Evaluative Sciences). ICES is an independent, nonprofit research institute whose legal status under Ontario’s health information privacy law allows it to collect and analyze health care and demographic data, without informed consent, for health system evaluation and improvement. The use of data in this project is authorized under section 45 of Ontario’s Personal Health Information Protection Act (PHIPA) and does not require review by a research ethics board. This study adheres to the Reporting of Studies Conducted Using Observational Routinely-Collected Health Data () and Strengthening the Reporting of Observational Studies in Epidemiology () reporting guidelines. Data Sources Baseline characteristics and outcomes were ascertained from deidentified, linked administrative databases housed at ICES. Demographic and vital status information was obtained from the Ontario Registered Persons Database. Diagnostic and procedural information from all hospitalizations was collected using the Canadian Institute for Health Information Discharge Abstract Database. Diagnostic information from emergency department visits was determined using the National Ambulatory Care Reporting System. Dialysis information was obtained from the Ontario Health Insurance Plan (OHIP) database. Kidney transplant information was obtained from the Canadian Organ Replacement Registry (CORR) and OHIP. Baseline serum creatinine levels were obtained from the Ontario Laboratories Information System and CORR. ICU-specific information was collected using the Critical Care Information System. These datasets were linked using unique encoded identifiers and analyzed at ICES. The databases were complete for all variables used except for rural residence and neighborhood income quintile, which were missing in less than 0.5% of individuals. Definitions for study variables are provided in eTable 1 in . Loss to follow-up occurred only through emigration (<0.5% annually). Cohort Definition All residents of Ontario, Canada, aged 18 years or older admitted to an ICU between November 1, 2008, and February 28, 2021, were included. The ICU admission date served as the index date. For individuals with multiple ICU admissions, only the first admission was included. Exclusions included prior kidney transplant, absence of baseline estimated glomerular filtrate rate (eGFR), or ineligibility for OHIP coverage. Exposure Baseline kidney function was defined using the most recent outpatient serum creatinine value measured 7 to 365 days prior to admission to balance proximity to the index date with the need to capture stable, nonacute-illness kidney function and maximize cohort inclusion. The eGFR was calculated using the 2021 CKD Epidemiology Collaboration formula. CKD severity was classified according to Kidney Disease Improving Global Outcomes eGFR stages: no CKD, eGFR 60 mL/min/1.73 m or greater; stage 3a, eGFR 45 to 59 mL/min/1.73 m; stage 3b, eGFR 30 to 44 mL/min/1.73 m; stage 4, eGFR 15 to 29 mL/min/1.73 m; non–dialysis-dependent stage 5, eGFR less than 15 mL/min/1.73 m; and maintenance dialysis. Albuminuria criteria were not included in the primary analysis due to limited availability. Outcomes The primary outcome was all-cause mortality, captured at 3 times: (1) during ICU stay, (2) during hospital stay, and (3) within 90 days after ICU admission. Secondary outcomes included KRT requirement during ICU stay, KRT dependence at 90 days, and ICU and hospital length of stay. Statistical Analysis Statistical analysis was conducted from July 23, 2025, to April 16, 2026. Baseline characteristics were summarized by CKD stage. Continuous variables were presented as mean (SD) or median (IQR) values, as appropriate. Categorical variables were presented as numbers and percentages. Logistic regression was used to estimate crude and adjusted associations between CKD stage and all mortality time frames as well as KRT in ICU. Individuals receiving maintenance dialysis were excluded from KRT analyses. Fine-Gray subdistribution hazard modeling was used to estimate crude and adjusted associations between CKD stage and hospital and ICU lengths of stay, where the number of days to discharge was the outcome measure with in-hospital death treated as a competing event. Covariates were selected a priori based on clinical knowledge, prior literature, and availability within ICES: age, sex, rural residence, neighborhood income quintile, comorbidities (coronary artery disease, myocardial infarction, diabetes, hypertension, congestive heart failure, arrhythmia, stroke, chronic liver disease, chronic obstructive pulmonary disease, HIV, cancer, and alcohol use disorder), health care utilization (emergency department visits, hospitalizations, outpatient primary care professional encounters, and nephrology visits) within 1 year prior to index, use of vasopressors on ICU admission, use of mechanical ventilation on ICU admission, severity of illness according to the Multiple Organ Dysfunction Score (MODS) on ICU admission but subtracting the contribution of the MODS kidney component (determined according to serum creatinine level), sepsis, and severe sepsis (including septic shock). MODS is an ICU severity-of-illness score that is uniformly captured for all ICU admissions in Ontario at the time of ICU admission. Sepsis and severe sepsis (including septic shock) were determined using a validated definition for identification within administrative data. For the outcome of KRT dependence at 90 days, which is defined at a fixed time point and does not have an intermediate time-to-event structure, we summarized outcomes descriptively as the proportion of individuals who died, survived without KRT, or survived with KRT at day 90 across CKD stages to account for the competing risk of death. Additional analyses included (1) using Cox proportional hazards regression modeling for the outcome of mortality within 90 days; (2) redefining the baseline eGFR according to the median outpatient serum creatinine level measured 7 to 365 days prior to admission; (3) including individuals without baseline serum creatinine values and assigning them an imputed eGFR of 75 mL/min/1.73 m, an accepted approach for estimating missing baseline kidney function; and (4) modeling albuminuria (determined using the most recent urine albumin to creatinine ratio within 24 months prior to admission for those for whom this was available) as the study exposure of interest. Statistical significance was defined as 95% CIs that did not overlap with 1.0 and a 2-sided < .05. Analyses were conducted using SAS, version 8.3 (SAS Institute Inc). Results Baseline Characteristics Of 848 202 Ontario residents admitted to ICU within the accrual period, 531 090 (mean [SD] age, 67 [15] years; 57% men and 43% women) met eligibility criteria (). The cohort consisted of 75% of individuals without CKD, 12% with stage 3a CKD, 7% with stage 3b CKD, 3% with stage 4 CKD, 1% with non–dialysis-dependent stage 5 CKD, and 2% receiving maintenance dialysis (). Baseline characteristics are displayed in the . Mortality Across all time frames, individuals without CKD had the lowest mortality percentage. The absolute mortality percentage increased progressively by CKD stage up to stage 4, followed by lower mortality among individuals with non–dialysis-dependent stage 5 CKD and those receiving maintenance dialysis (A-C). displays the crude odds ratios (ORs) and adjusted odds ratios (AORs) for the associations between CKD stage and mortality. In adjusted models, CKD was associated with a higher mortality risk, which increased progressively up to non–dialysis-dependent stage 5. However, the risk of mortality was lower for individuals receiving maintenance dialysis compared with those with non–dialysis-dependent stage 5 CKD. For example, relative to individuals without CKD, those with stages 3a, 3b, 4, and 5 (non–dialysis-dependent) CKD were associated with 14% (AOR, 1.14 [95% CI, 1.11-1.17]), 38% (AOR, 1.38 [95% CI, 1.34-1.42]), 95% (AOR, 1.95 [95% CI, 1.87-2.03), and 2.3-fold (AOR, 2.32 [95% CI, 2.14-2.52]) higher odds for 90-day mortality, respectively. However, individuals receiving maintenance dialysis experienced lower odds for 90-day mortality (OR, 1.92 [95% CI, 1.82-2.04]) relative to those with non–dialysis-dependent stage 5 CKD (OR, 2.32 [95% CI, 2.14-2.52]) and comparable with those with stage 4 CKD (OR, 1.95 [95% CI, 1.87-2.03]). Kidney Replacement Therapy The proportion of individuals requiring KRT during their ICU stay and remaining KRT dependent at 90 days increased markedly with increasing CKD severity (D-E). KRT dependence at 90 days progressively increased by CKD stage (no baseline CKD, 0.1%; stage 3a, 0.4%; stage 3b, 0.9%; stage 4, 5.4%; non–dialysis-dependent stage 5, 30.8%). displays the crude ORs and AORs for the association between CKD stage and KRT during ICU stay. In multivariable adjusted models and relative to individuals without CKD, the need for KRT in the ICU increased progressively by CKD severity (stage 3a: AOR, 1.79 [95% CI, 1.68-1.90]; stage 3b: AOR, 3.02 [95% CI, 2.83-3.22]; stage 4: AOR, 6.71 [95% CI, 6.23-7.22]; non–dialysis-dependent stage 5: AOR, 32.00 [95% CI, 29.07-35.22]). F displays the proportion of individuals who initiated KRT in the ICU, survived to 90 days after ICU admission, and remained KRT dependent at 90 days by CKD stage. This proportion increased progressively (no CKD, 7.2%; stage 3a, 14.2%; stage 3b, 22.5%; stage 4, 50.3%; previously non–dialysis-dependent stage 5, 83.8%). Length of Stay eFigure 1 in displays the crude and adjusted subdistribution hazard ratios (sHRs) for the associations between CKD stage and ICU and hospital lengths of stay. Because the event of interest was discharge, a sHR less than 1 indicates a lower rate of discharge over time (accounting for the competing risk of death), corresponding to a longer length of stay. With no baseline CKD as the reference, hospital length of stay increased progressively by CKD stage, except among individuals receiving maintenance dialysis (stage 3a: adjusted sHR, 0.94 [95% CI, 0.93-0.95]; stage 3b: adjusted sHR, 0.87 [95% CI, 0.86-0.88]; stage 4: adjusted sHR, 0.77 [95% CI, 0.76-0.79]; non–dialysis-dependent stage 5: adjusted sHR, 0.65 [95% CI, 0.62-0.67]; maintenance dialysis: adjusted sHR, 0.71 [95% CI, 0.70-0.73]). Additional Analyses Additional analyses using a time-to-event model for 90-day mortality (eTable 2 in ), redefining baseline eGFR according to the median outpatient serum creatinine level measured 7 to 365 days prior to admission (eFigure 2 in ) and including individuals with no available outpatient baseline serum creatinine measurements who were assigned an imputed baseline eGFR of 75 mL/min/1.73 m (total n = 824 951; eTables 3 and 4 and eFigure 3 in ), yielded similar results to the primary analysis. An additional analysis modeling albuminuria category (urine albumin to creatinine ratio, <30, 30-300, and >300 mg/g) among the subset of individuals with a urine albumin to creatinine ratio measured within 24 months prior to index (n = 208 897 [39.3%]) showed that increasing severity of albuminuria was progressively associated with higher odds for mortality and KRT initiation after ICU admission (eTable 5 and eFigure 4 in ). Discussion In this large population-based study of 531 090 Canadian adults admitted to the ICU, 1 in 4 individuals had preexisting CKD. Compared with individuals without CKD, the severity of the disease among individuals with CKD was progressively associated with increased mortality risk up to non–dialysis-dependent stage 5 CKD. However, the risk of mortality was lower for individuals receiving maintenance dialysis relative to those with non–dialysis-dependent stage 5 CKD and comparable with those with stage 4 CKD. The risk for KRT in the ICU and KRT dependence at 90 days also increased exponentially with increasing CKD severity. The presence and increasing severity of CKD was also associated with a greater length of ICU and hospital stay. An enhanced understanding of the associations between CKD severity and ICU-related outcomes is important because of the disproportionate representation of individuals with CKD in the ICU setting. The prevalence of CKD among Canadian adults is 12.5%. However, in this diverse, unselected, and population-wide cohort, we found that the prevalence of CKD among the population of patients in the ICU (25%) was double that observed in the general population. This overrepresentation relative to the general population is magnified further when considering individuals receiving maintenance dialysis, who have been shown to have an estimated 25-fold to 30-fold higher rate of ICU admission. Given the overrepresentation in the ICU and the inherent susceptibility to complications (eg, fluid overload, electrolyte derangements, and increased cardiovascular or infection risks), understanding how CKD severity is independently associated with ICU outcomes is important for risk prognostication, discussions about goals of care, resource allocation, and health policy initiatives. Despite this, the association between CKD and ICU outcomes has not previously been well established. Most prior studies linking kidney dysfunction with ICU outcomes have focused on AKI, with a smaller number focused on outcomes for individuals receiving maintenance dialysis. However, the much broader non–dialysis-dependent population with CKD has not been well studied in this regard. A prior Swedish ICU registry study (approximately 100 000 patients) classified patients into 5 groups (ESKD, CKD, AKI, AKI with CKD, and normal kidney function) to compare mortality and KRT dependence. The study found that preexisting CKD was significantly associated with increased risk of both death and KRT dependence. However, a major limitation of that study is that CKD was identified using codes, which poorly capture CKD and its severity, leading to high rates of misclassification. Accordingly, the Swedish study reported a much lower prevalence of CKD in the ICU population (4%) than has been reported in this and other studies (≥20%). Furthermore, this approach also does not allow for stratification of individuals by CKD stage, which is well established as an important risk factor for CKD progression and cardiovascular events. The present study now extends the evidence base on the association between CKD and ICU outcomes. By using a large population-based cohor",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42348209\nDOI: 10.1001/jamanetworkopen.2026.20192\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- School of Epidemiology and Public Health, University of Ottawa, Ottawa, Ontario, Canada.\n- ICES Ottawa, Ottawa Hospital Research Institute, Ottawa, Ontario, Canada.\n- Department of Medicine, Division of Nephrology, Queen's University, Kingston, Ontario, Canada.\n- Department of Medicine, Division of Nephrology, St Michael's Hospital, Toronto, Ontario, Canada.\n- Department of Nephrology and Hypertension, Tel Aviv Sourasky Medical Center, Tel Aviv, Israel.\n- Department of Medicine, Division of Nephrology, University of Ottawa, Ottawa, Ontario, Canada.\n- Inflammation and Chronic Disease Program, Ottawa Hospital Research Institute, University of Ottawa, Ottawa, Ontario, Canada.\n\nPublic bibliographic metadata from Crossref:\nTitle: Severity of Chronic Kidney Disease and Outcomes After Admission to the Intensive Care Unit\nType: journal-article\nPublished: 2026-6-25\nPublisher: American Medical Association (AMA)\nCrossref abstract/snippet: Importance Individuals with chronic kidney disease (CKD) are disproportionately admitted to the intensive care unit (ICU); however, the association between CKD severity and outcomes after ICU admission remains uncertain. Objective To evaluate the association between CKD severity and health outcomes after ICU admission. Design, Setting, and Participants This population-based cohort study was conducted from November 1, 2008, to February 28, 2021. Participants included 531 090 consecutive adult (≥18 years) residents of Ontario, Canada, admitted to an ICU during the study period who had a baseline outpatient serum creatinine measurement within 7 to 365 days prior to admission. Statistical analyses were conducted from July 23, 2025, to April 16, 2026. Exposure CKD severity was classified according to the baseline outpatient estimated glomerular filtration rate (eGFR) Kidney Disease Improving Global Outcomes criteria. Main Outcomes and Measures Mortality (ICU, hospital, and 90-day mortality) and kidney replacement therapy (KRT) requirement in the ICU and dependence at 90 days. Results The study included 531 090 adults (mean [SD] age, 67 [15] years; 57% men) admitted to the ICU. One in 4 individuals had preexisting CKD: stage 3a CKD, eGFR 45 to 59 mL/min/1.73 m 2 (12% of adults); stage 3b CKD, eGFR 30 to 44 mL/min/1.73 m 2 (7% of adults); stage 4 CKD, eGFR 15 to 29 mL/min/1.73 m 2 (3% of adults); non–dialysis-dependent stage 5 CKD, eGFR less than 15 mL/min/1.73 m 2 (1% of adults); and undergoing maintenance dialysis (2% of adults). Compared with individuals without CKD, the severity of the disease among individuals with CKD was progressively associated with increased mortality risk up to non–dialysis-dependent stage 5 CKD. However, the risk of mortality was lower for individua",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13306308"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13306308",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13306308"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-06-27T21:18:17.401Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42348209",
+          "rank": 1,
+          "clinicalPriorityScore": 7,
+          "rationale_ko": "JAMA Network Open에 게재된 대규모 인구기반 코호트(온타리오 약 53만 명)로, ICU 입실 환자에서 만성콩팥병(CKD) 중증도와 사망률 및 신대체요법 필요성 간의 연관성을 KDIGO eGFR 기준으로 체계적으로 평가했다. 표본 규모가 매우 크고 고임팩트 저널이며, 중환자 위험층화 및 예후 상담에 직접 적용 가능한 actionable 관찰연구로 CCM/EM 임상의에게 광범위한 가치가 있다. 후보군 중 RCT급 중재연구는 대부분 프로토콜·교육·QI·전임상에 머물거나 직접적 환자치료 관련성이 약해, 설계 견고성과 임상 일반화 가능성 측면에서 본 논문이 가장 우선순위가 높다."
+        }
+      ],
+      "notes_ko": [
+        "후보군 전반의 질이 높지 않았음: 다수가 임상시험 프로토콜(42315266, 42331582, 42326... 42335459), QI/교육 연구(42311997, 42323602), 또는 EM/CCM 직접 관련성이 낮은 주제(42331574 교도소 여성건강, 42313385 군 성폭력 PTSD, 42319606 만성기침)로 우선순위에서 제외함.",
+        "최종 1편으로 PMID 42348209(JAMA Network Open, 약 53만 명 인구기반 코호트)를 선정 - 고임팩트 저널, 대규모, 중환자 위험층화에 actionable한 예후 데이터로 CCM 임상의 관련성이 가장 높음.",
+        "경쟁 후보: PMID 42356117(ED 혈액배양의 임상영향, EM 핵심 진료 질문이나 단일기관 후향연구로 근거강도 제한), PMID 42351245(흉벽손상 수술 시기, Critical Care 게재·다기관 레지스트리지만 관찰연구), PMID 42320602(ARDS-섬망 메타분석, 결정점수 최고 14이나 연관성 위주로 직접적 actionability 낮음).",
+        "결정론적 스크리닝 점수는 참고했으나, 임상 유용성과 설계 견고성을 우선해 일부 고득점 항목(메타분석 등)보다 대규모 고임팩트 관찰연구를 상위로 조정함.",
+        "선정 논문이 무작위 중재연구가 아닌 관찰연구이므로 practice-changing보다는 high-yield 예후/위험층화 근거로 분류되어 clinicalPriorityScore를 7로 책정함."
+      ]
+    }
+  },
+  "errors": []
+}

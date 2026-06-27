@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 6. 28. 오전 6:27</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-06-28</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Severity of Chronic Kidney Disease and Outcomes After Admission to the Intensive Care Unit.</h2>
+      <div class="paper-meta">
+        JAMA network open · 2026-Jun-01 · PMID 42348209
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">Moderate</span>
+      <span class="pill">PMC + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">CKD patients are overrepresented in the ICU (25% vs 12.5% in the general population), and this large population-based study quantifies how baseline kidney function—graded by KDIGO eGFR stage rather than diagnostic codes—independently tracks with ICU/hospital/90-day mortality, ICU KRT initiation, and long-term dialysis dependence, supporting bedside prognostication and goals-of-care discussions.</p>
+    <p class="ko">CKD 환자는 ICU에서 과대표집되며(일반 인구 12.5% 대비 25%), 이 대규모 인구기반 연구는 진단코드가 아닌 KDIGO eGFR 단계로 분류한 기저 신기능이 ICU·병원·90일 사망률, ICU 내 KRT 시작, 장기 투석 의존과 독립적으로 연관됨을 정량화하여 침상 예후평가와 치료목표 논의를 뒷받침한다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Population-based retrospective cohort study using linked administrative health databases at ICES, following RECORD and STROBE reporting guidelines.</p>
+      <p class="ko">ICES의 연계 행정 보건 데이터베이스를 이용한 인구기반 후향적 코호트 연구로, RECORD 및 STROBE 보고지침을 준수했다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">Ontario, Canada; all ICUs province-wide, index ICU admissions from November 1, 2008 to February 28, 2021; data linked at ICES (multiple administrative databases including CIHI DAD, NACRS, OHIP, CORR, OLIS, Critical Care Information System).</p>
+      <p class="ko">캐나다 온타리오주 전역의 모든 ICU; 2008년 11월 1일~2021년 2월 28일 ICU 입원; ICES에서 여러 행정 데이터베이스(CIHI DAD, NACRS, OHIP, CORR, OLIS, 중환자 정보시스템)를 연계함.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">531,090 adults analyzed (met eligibility from 848,202 Ontario ICU admissions in the accrual window). Distribution: no CKD 75%, stage 3a 12%, stage 3b 7%, stage 4 3%, non-dialysis-dependent stage 5 1%, maintenance dialysis 2%. A sensitivity analysis including patients without baseline creatinine (imputed eGFR 75) totaled n=824,951; an albuminuria subgroup had n=208,897 (39.3%).</p>
+      <p class="ko">분석 대상 성인 531,090명(누적 기간 온타리오 ICU 입원 848,202명 중 적격 충족). 분포: CKD 없음 75%, 3a기 12%, 3b기 7%, 4기 3%, 비투석 5기 1%, 유지투석 2%. 기저 크레아티닌 없는 환자(eGFR 75 대입)를 포함한 민감도분석 n=824,951; 알부민뇨 하위군 n=208,897(39.3%).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Ontario residents aged ≥18 years admitted to an ICU during the study period with a baseline outpatient serum creatinine measured 7–365 days before admission (first ICU admission used as index). Exclusions: prior kidney transplant, no baseline eGFR, ineligible for OHIP coverage.</p>
+      <p class="ko">연구 기간 중 ICU에 입원한 18세 이상 온타리오 거주자로 입원 7~365일 전 외래 혈청 크레아티닌이 측정된 자(첫 ICU 입원을 색인일로 사용). 제외: 이전 신장이식, 기저 eGFR 없음, OHIP 적용 부적격.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Exposure was CKD severity by baseline outpatient eGFR (2021 CKD-EPI formula), classified by KDIGO stages: no CKD (≥60), stage 3a (45–59), stage 3b (30–44), stage 4 (15–29), non-dialysis-dependent stage 5 (&lt;15), and maintenance dialysis. Albuminuria not in primary analysis due to limited availability.</p>
+      <p class="ko">노출은 기저 외래 eGFR(2021 CKD-EPI 공식)에 따른 CKD 중증도로, KDIGO 단계로 분류: CKD 없음(≥60), 3a기(45–59), 3b기(30–44), 4기(15–29), 비투석 5기(&lt;15), 유지투석. 알부민뇨는 가용성 제한으로 주분석에서 제외.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Reference group was patients without CKD (baseline eGFR ≥60 mL/min/1.73 m2). Maintenance dialysis patients were excluded from KRT-in-ICU analyses.</p>
+      <p class="ko">기준군은 CKD 없는 환자(기저 eGFR ≥60 mL/min/1.73 m2). 유지투석 환자는 ICU 내 KRT 분석에서 제외됨.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Outcomes captured during ICU stay, during hospital stay, and at 90 days after ICU admission; KRT dependence assessed at day 90. Loss to follow-up only through emigration (&lt;0.5% annually).</p>
+      <p class="ko">결과는 ICU 재원 중, 병원 재원 중, ICU 입원 90일 후에 측정; KRT 의존은 90일에 평가. 추적 손실은 이민(연 0.5% 미만)에 의해서만 발생.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract, PMC open full text (PMC13306308), PubMed metadata, and Crossref metadata.</p>
+      <p class="ko">초록, PMC 공개 전문(PMC13306308), PubMed 메타데이터, Crossref 메타데이터.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">531,090 consecutive adults (≥18 years; mean age 67 [SD 15] years; 57% men, 43% women) admitted to an ICU in Ontario, Canada (2008–2021) with a baseline outpatient serum creatinine 7–365 days before admission. One in four had preexisting CKD; covariates adjusted included age, sex, rural residence, income quintile, comorbidities, prior health care utilization, vasopressor and mechanical ventilation use at admission, MODS (excluding the renal component), and sepsis/severe sepsis.</p>
+      <p class="ko">캐나다 온타리오에서 ICU에 입원한 연속 성인 531,090명(18세 이상; 평균 67[SD 15]세; 남성 57%, 여성 43%)으로 입원 7~365일 전 외래 혈청 크레아티닌이 있었음. 4명 중 1명이 기존 CKD 보유; 보정 변수는 연령, 성별, 농촌 거주, 소득분위, 동반질환, 사전 의료이용, 입원 시 승압제·기계환기 사용, MODS(신장 항목 제외), 패혈증/중증 패혈증 포함.</p>
+      <p class="en"><strong>Setting:</strong> Canada (Ontario), province-wide ICUs; population-based administrative data linked at ICES.</p>
+      <p class="ko">캐나다(온타리오), 주 전역 ICU; ICES에서 연계한 인구기반 행정 데이터.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">CKD severity by baseline outpatient eGFR (2021 CKD-EPI), KDIGO stages 3a (45–59), 3b (30–44), 4 (15–29), non-dialysis-dependent stage 5 (&lt;15), and maintenance dialysis.</p>
+      <p class="ko">기저 외래 eGFR(2021 CKD-EPI)에 따른 CKD 중증도, KDIGO 3a기(45–59), 3b기(30–44), 4기(15–29), 비투석 5기(&lt;15), 유지투석.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Patients without CKD (baseline eGFR ≥60 mL/min/1.73 m2) as reference.</p>
+      <p class="ko">CKD 없는 환자(기저 eGFR ≥60 mL/min/1.73 m2)를 기준으로 함.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">90-day all-cause mortality by CKD stage (adjusted)</p>
+    <p class="ko">CKD 단계별 90일 전체원인 사망률(보정)</p>
+    <p class="stat-line">Relative to no CKD: stage 3a AOR 1.14 (95% CI, 1.11–1.17); stage 3b AOR 1.38 (1.34–1.42); stage 4 AOR 1.95 (1.87–2.03); non-dialysis-dependent stage 5 AOR 2.32 (2.14–2.52); maintenance dialysis OR 1.92 (1.82–2.04). · AOR 1.14 / 1.38 / 1.95 / 2.32; dialysis OR 1.92, all 95% CIs excluding 1.0</p>
+    <p class="ko">CKD 없음 대비: 3a기 AOR 1.14(95% CI, 1.11–1.17); 3b기 AOR 1.38(1.34–1.42); 4기 AOR 1.95(1.87–2.03); 비투석 5기 AOR 2.32(2.14–2.52); 유지투석 OR 1.92(1.82–2.04).</p>
+    <div class="interpretation">ⓘ Mortality odds rose stepwise with worsening CKD up to non-dialysis stage 5; maintenance dialysis patients had lower odds than non-dialysis stage 5 and comparable to stage 4.<br>사망 위험은 비투석 5기까지 CKD 악화에 따라 단계적으로 증가; 유지투석 환자는 비투석 5기보다 낮고 4기와 유사했다.</div>
+    <div class="interpretation primer">ⓘ OR/AOR of 1 means no difference; &gt;1 means higher odds of death; a 95% CI not crossing 1 indicates conventional statistical significance.<br>OR/AOR 1은 차이 없음, 1보다 크면 사망 위험 증가; 95% CI가 1을 포함하지 않으면 통계적 유의성을 의미한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">KRT initiation during ICU stay by CKD stage (adjusted, dialysis patients excluded)</p>
+    <p class="ko">CKD 단계별 ICU 재원 중 KRT 시작(보정, 투석 환자 제외)</p>
+    <p class="stat-line">Relative to no CKD: stage 3a AOR 1.79 (1.68–1.90); stage 3b AOR 3.02 (2.83–3.22); stage 4 AOR 6.71 (6.23–7.22); non-dialysis-dependent stage 5 AOR 32.00 (29.07–35.22). · AOR 1.79 / 3.02 / 6.71 / 32.00, all 95% CIs excluding 1.0</p>
+    <p class="ko">CKD 없음 대비: 3a기 AOR 1.79(1.68–1.90); 3b기 AOR 3.02(2.83–3.22); 4기 AOR 6.71(6.23–7.22); 비투석 5기 AOR 32.00(29.07–35.22).</p>
+    <div class="interpretation">ⓘ Risk of needing ICU dialysis climbed steeply—about 32-fold for non-dialysis stage 5 versus patients without CKD.<br>ICU 투석 필요 위험은 가파르게 증가하여 비투석 5기는 CKD 없는 환자 대비 약 32배였다.</div>
+    <div class="interpretation primer">ⓘ AOR of 1 means no difference; larger values mean greatly increased odds of ICU KRT; CIs well above 1 confirm significance.<br>AOR 1은 차이 없음; 값이 클수록 ICU KRT 위험이 크게 증가; CI가 1보다 충분히 크면 유의함을 확인한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">KRT dependence at 90 days among ICU KRT initiators surviving to 90 days</p>
+    <p class="ko">90일 생존한 ICU KRT 시작자 중 90일 KRT 의존</p>
+    <p class="stat-line">Proportion KRT-dependent at day 90 increased by stage: no CKD 7.2%; stage 3a 14.2%; stage 3b 22.5%; stage 4 50.3%; previously non-dialysis-dependent stage 5 83.8%. · Descriptive proportions: 7.2% / 14.2% / 22.5% / 50.3% / 83.8%</p>
+    <p class="ko">90일 KRT 의존 비율은 단계별 증가: CKD 없음 7.2%; 3a기 14.2%; 3b기 22.5%; 4기 50.3%; 이전 비투석 5기 83.8%.</p>
+    <div class="interpretation">ⓘ Among survivors who started ICU dialysis, recovery off dialysis was far less likely with more severe baseline CKD—most stage 4 and nearly all prior stage 5 patients remained dialysis-dependent.<br>ICU 투석을 시작한 생존자 중 기저 CKD가 심할수록 투석 중단 가능성이 훨씬 낮아 4기 대부분과 이전 5기 거의 전부가 투석 의존 상태로 남았다.</div>
+    <div class="interpretation primer">ⓘ These are descriptive percentages; higher values mean more patients remained dialysis-dependent. No ratio or p value is reported for this comparison.<br>이는 기술적 백분율로, 값이 높을수록 더 많은 환자가 투석 의존 상태로 남았음을 의미한다. 이 비교에는 비율이나 p값이 보고되지 않았다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Hospital length of stay by CKD stage (adjusted, competing risk of in-hospital death)</p>
+    <p class="ko">CKD 단계별 병원 재원기간(보정, 원내사망 경쟁위험)</p>
+    <p class="stat-line">Adjusted subdistribution HR for discharge (sHR&lt;1 = longer stay): stage 3a 0.94 (0.93–0.95); stage 3b 0.87 (0.86–0.88); stage 4 0.77 (0.76–0.79); non-dialysis stage 5 0.65 (0.62–0.67); maintenance dialysis 0.71 (0.70–0.73). · Adjusted sHR 0.94 / 0.87 / 0.77 / 0.65 / 0.71, all 95% CIs below 1.0</p>
+    <p class="ko">퇴원에 대한 보정 하위분포 HR(sHR&lt;1=재원기간 연장): 3a기 0.94(0.93–0.95); 3b기 0.87(0.86–0.88); 4기 0.77(0.76–0.79); 비투석 5기 0.65(0.62–0.67); 유지투석 0.71(0.70–0.73).</p>
+    <div class="interpretation">ⓘ More severe CKD meant longer hospital stays (lower discharge rate), with maintenance dialysis somewhat less prolonged than non-dialysis stage 5.<br>CKD가 심할수록 병원 재원기간이 길어졌으며(퇴원율 감소), 유지투석은 비투석 5기보다 다소 덜 연장되었다.</div>
+    <div class="interpretation primer">ⓘ Because the event is discharge, sHR of 1 means no difference; sHR&lt;1 means slower discharge (longer stay); CIs not crossing 1 indicate significance.<br>사건이 퇴원이므로 sHR 1은 차이 없음; sHR&lt;1이면 퇴원 지연(재원 연장); CI가 1을 포함하지 않으면 유의함을 의미한다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">One in four ICU patients had preexisting CKD—double the general-population prevalence—and adjusted mortality rose progressively with CKD stage up to non-dialysis-dependent stage 5 (90-day AOR 2.32).</p><p class="ko">ICU 환자 4명 중 1명이 기존 CKD를 가졌고(일반 인구의 2배), 보정 사망률은 비투석 5기까지 단계적으로 증가했다(90일 AOR 2.32).</p></li>
+<li><p class="en">Maintenance dialysis patients had lower mortality (OR 1.92) than non-dialysis-dependent stage 5 CKD (OR 2.32), comparable to stage 4, suggesting an established-dialysis paradox.</p><p class="ko">유지투석 환자는 비투석 5기 CKD(OR 2.32)보다 사망률이 낮고(OR 1.92) 4기와 유사하여, 확립된 투석의 역설을 시사한다.</p></li>
+<li><p class="en">Risk of ICU KRT initiation increased steeply with CKD severity (up to AOR 32.00 for non-dialysis stage 5), and KRT dependence at 90 days among survivors rose from 7.2% (no CKD) to 83.8% (prior stage 5).</p><p class="ko">ICU 내 KRT 시작 위험은 CKD 중증도에 따라 가파르게 증가했고(비투석 5기 AOR 32.00), 생존자 중 90일 KRT 의존은 7.2%(CKD 없음)에서 83.8%(이전 5기)로 상승했다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In this population-based cohort of consecutive Ontario ICU adults, the presence and increasing severity of preexisting CKD were independently associated with higher mortality, greater need for ICU kidney replacement therapy, higher 90-day KRT dependence, and longer length of stay—except that maintenance dialysis patients fared better than non-dialysis-dependent stage 5 CKD. These data can inform risk prognostication, goals-of-care discussions, resource allocation, and health policy.</p>
+    <p class="ko">연속적인 온타리오 ICU 성인 인구기반 코호트에서 기존 CKD의 존재와 중증도 증가는 더 높은 사망률, ICU 신대체요법 필요 증가, 90일 KRT 의존 증가, 재원기간 연장과 독립적으로 연관되었으나, 유지투석 환자는 비투석 5기 CKD보다 결과가 양호했다. 이 자료는 위험 예후평가, 치료목표 논의, 자원 배분, 보건 정책에 활용될 수 있다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Observational administrative-data design precludes causal inference and risks residual/unmeasured confounding (e.g., frailty, code status, reason for ICU admission, illness trajectory). Albuminuria was excluded from the primary analysis and available in only 39.3% of patients; baseline eGFR relied on a single outpatient creatinine 7–365 days pre-admission; AKI superimposed on CKD was not separately disentangled in the primary exposure. The cohort is restricted to Ontario residents with an available baseline creatinine, which may limit generalizability and introduce selection effects (though an imputation sensitivity analysis was concordant). Exact baseline characteristic balance and length-of-stay absolute values are in supplementary materials not fully available in the provided sources.</p>
+    <p class="ko">관찰적 행정데이터 설계로 인과 추론이 불가하며 잔여/미측정 교란(예: 쇠약, 연명의료 의향, ICU 입원 사유, 질병 경과)의 위험이 있다. 알부민뇨는 주분석에서 제외되었고 환자의 39.3%에서만 가용했으며, 기저 eGFR은 입원 7~365일 전 단일 외래 크레아티닌에 의존했고, CKD에 중첩된 AKI는 주노출에서 별도로 구분되지 않았다. 코호트는 기저 크레아티닌이 있는 온타리오 거주자로 한정되어 일반화와 선택 효과에 제한이 있다(다만 대입 민감도분석은 일치). 정확한 기저 특성 균형과 재원기간 절대값은 제공된 자료에 완전히 포함되지 않은 보충자료에 있다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Highly relevant to ED and ICU clinicians who routinely triage and counsel critically ill patients with CKD. Knowing a patient&#39;s baseline eGFR stage helps anticipate need for ICU dialysis, gauge prognosis, and set expectations about renal recovery and long-term dialysis dependence—particularly for stage 4–5 patients. The finding that maintenance dialysis patients have mortality similar to stage 4 (not the worst outcome) counters a common assumption. As an observational association study, it informs risk stratification and goals-of-care conversations rather than dictating a specific treatment.</p>
+    <p class="ko">CKD를 가진 중증 환자를 일상적으로 분류·상담하는 응급실 및 ICU 임상의에게 매우 적절하다. 환자의 기저 eGFR 단계를 알면 ICU 투석 필요성 예측, 예후 판단, 신기능 회복 및 장기 투석 의존에 대한 기대 설정에 도움이 되며 특히 4–5기 환자에 유용하다. 유지투석 환자의 사망률이 4기와 유사하다(최악이 아님)는 결과는 흔한 가정을 반박한다. 관찰적 연관 연구이므로 특정 치료를 지시하기보다 위험 계층화와 치료목표 논의에 활용된다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Use baseline outpatient eGFR/KDIGO stage as an independent prognostic marker in ICU patients: advancing CKD predicts higher mortality, much higher likelihood of needing dialysis in the ICU, and—especially in stage 4–5—a high chance of not recovering kidney function, which should frame realistic conversations with patients and families. Notably, maintenance dialysis patients are not the highest-risk group; their mortality resembles stage 4 CKD.</p>
+    <p class="ko">ICU 환자에서 기저 외래 eGFR/KDIGO 단계를 독립적 예후 지표로 활용하라: CKD가 진행할수록 사망률이 높고 ICU에서 투석이 필요할 가능성이 훨씬 크며, 특히 4–5기에서는 신기능 회복 실패 가능성이 높아 환자·가족과의 현실적 대화의 틀이 되어야 한다. 주목할 점은 유지투석 환자가 최고위험군이 아니며 사망률이 4기 CKD와 유사하다는 것이다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42348209/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1001/jamanetworkopen.2026.20192" target="_blank" rel="noopener">DOI</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13306308/" target="_blank" rel="noopener">PMC</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
