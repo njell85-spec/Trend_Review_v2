@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 6. 29. 오전 6:21</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-06-29</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Rapid sequence versus early surgical stabilization of severe chest wall injuries: a propensity score-matched analysis from a multicenter trauma registry.</h2>
+      <div class="paper-meta">
+        Critical care (London, England) · 2026-Jun-25 · PMID 42351245
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">Low</span>
+      <span class="pill">PMC + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Timing of surgical stabilization of rib fractures (SSRF/CWR) is a hot topic in trauma and critical care; this is the first large multicenter analysis to test whether pushing fixation to the day of admission improves outcomes beyond the established &lt;72-h window, and it cautions against a blanket &quot;Day-0-for-all&quot; strategy.</p>
+    <p class="ko">늑골 골절의 수술적 고정(SSRF/CWR) 시기는 외상 및 중환자 진료에서 중요한 쟁점으로, 본 연구는 입원 당일까지 고정을 앞당기는 것이 기존의 72시간 이내 권고를 넘어 결과를 개선하는지 검증한 첫 대규모 다기관 분석이며 일률적인 &quot;모두 Day 0&quot; 전략에 경고를 던진다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Retrospective cohort study using prospectively collected registry data, with propensity score matching (PSM) to balance baseline characteristics; observational and non-randomized.</p>
+      <p class="ko">전향적으로 수집된 레지스트리 자료를 이용한 후향적 코호트 연구로, 기저 특성 균형을 위해 성향점수 매칭(PSM)을 적용한 관찰적·비무작위 연구.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">TraumaRegister DGU (TR-DGU) of the German Trauma Society, 2015-2023 dataset (project ID TR-DGU 2024-018). Per full text, participating hospitals are predominantly in Germany (~90%) with additional sites in Austria, Belgium, Finland, Luxembourg, Slovenia, Switzerland, the Netherlands, and the United Arab Emirates; analysis restricted to primary admissions in Europe. Author affiliations include Goettingen University Medical Center, Helios Hospital Schwerin, University Hospital Erlangen, and IFOM Witten/Herdecke.</p>
+      <p class="ko">독일 외상학회의 TraumaRegister DGU(TR-DGU) 2015-2023 자료(과제 ID TR-DGU 2024-018). 전문에 따르면 참여 병원의 약 90%가 독일이며 오스트리아, 벨기에, 핀란드, 룩셈부르크, 슬로베니아, 스위스, 네덜란드, 아랍에미리트의 기관도 포함되고, 분석은 유럽 내 1차 입원으로 제한됨. 저자 소속은 괴팅겐 대학병원, Helios Schwerin 병원, 에를랑겐 대학병원, IFOM Witten/Herdecke 등.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">Initial cohort of 34,659 patients with severe chest wall injuries; 9.7% underwent CWR. After exclusions (including 857 operative cases, 25.5%, with missing surgery date and deaths within 48 h), 2,498 operatively treated patients with a known surgery date were analyzed. Of these, 1,168 (46.8%) had rapid sequence (Day 0) and 567 (22.7%) had early (Days 1-3) surgery (remainder were Delayed/Late, described descriptively). Propensity score matching yielded 500 matched pairs (n=1,000) for the primary comparison.</p>
+      <p class="ko">중증 흉벽 손상 환자 초기 코호트 34,659명 중 9.7%가 CWR 시행. 제외(수술일 미상 857명(25.5%), 48시간 내 사망 등) 후 수술일이 확인된 2,498명을 분석. 이 중 1,168명(46.8%)이 rapid sequence(Day 0), 567명(22.7%)이 조기(1-3일) 수술(나머지는 지연/만기군으로 기술적 분석). 성향점수 매칭으로 500쌍(n=1,000)이 1차 비교에 사용됨.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Inclusion: primary admission to a participating European hospital; age &gt;=16 years; ISS &gt;=9; serious chest wall injury (serial rib fractures involving &gt;=3 ribs, AIS 3, or flail chest, AIS 3-5); survival &gt;=48 h post-admission; documented surgical CWR (rib fixation) with a valid calendar surgery date. Exclusions: secondary transfers, reduced/basic documentation only, missing CWR date, and deaths within first 48 h.</p>
+      <p class="ko">포함: 유럽 참여 병원 1차 입원, 16세 이상, ISS &gt;=9, 중증 흉벽 손상(늑골 3개 이상 연쇄 골절 AIS 3 또는 동요흉 AIS 3-5), 입원 후 48시간 이상 생존, 수술일이 확인된 흉벽 재건술(늑골 고정) 시행. 제외: 2차 전원, 기본 문서만 있는 경우, CWR 날짜 미상, 첫 48시간 내 사망.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Rapid sequence CWR (&quot;Rapid&quot;): surgical chest wall reconstruction/rib fixation performed on Day 0 (day of admission), often within the first 12 h per the introduction. TR-DGU records surgery as calendar date only, not exact time, so Day 0 vs Day 1 boundary misclassification is possible. Specific implants, plating systems, and operative duration are not available in the accessible sources.</p>
+      <p class="ko">Rapid sequence CWR(&quot;Rapid&quot;): 입원 당일(Day 0) 시행한 흉벽 재건술/늑골 고정으로, 서론에 따르면 흔히 첫 12시간 이내. TR-DGU는 수술을 정확한 시각이 아닌 달력 날짜로 기록하여 Day 0와 Day 1 경계의 오분류 가능. 구체적 임플란트, 고정 시스템, 수술 시간은 제공된 자료에 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Early CWR (&quot;Early&quot;): chest wall reconstruction performed on Days 1-3 after admission, within the generally recommended &lt;72-h window. Delayed (Days 4-6) and Late (Day &gt;=7) groups were described descriptively but excluded from the primary matched analysis due to survivorship bias.</p>
+      <p class="ko">조기 CWR(&quot;Early&quot;): 입원 후 1-3일째, 일반적으로 권고되는 72시간 이내에 시행한 흉벽 재건술. 지연군(4-6일)과 만기군(7일 이상)은 생존자 편향 때문에 1차 매칭 분석에서 제외하고 기술적으로만 보고됨.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Outcomes assessed during the index hospitalization (in-hospital mortality, sepsis, MOF, ventilation days, ICU and hospital length of stay). No post-discharge follow-up duration is described in the accessible sources.</p>
+      <p class="ko">결과는 해당 입원 기간 동안 평가(원내 사망, 패혈증, 다장기부전, 인공호흡 일수, 중환자실 및 재원기간). 퇴원 후 추적 기간은 제공된 자료에 기술되지 않음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Based on the article abstract, the open-access PMC full-text excerpt (PMC13308483), and public metadata from PubMed and Crossref (DOI 10.1186/s13054-026-06155-x).</p>
+      <p class="ko">논문 초록, 오픈액세스 PMC 전문 발췌(PMC13308483), PubMed 및 Crossref 공개 메타데이터(DOI 10.1186/s13054-026-06155-x)에 근거함.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Adults &gt;=16 years with ISS &gt;=9 and serious chest wall injury (serial rib fractures &gt;=3 ribs or flail chest, AIS Thorax &gt;=3) admitted to European TR-DGU hospitals 2015-2023, surviving &gt;=48 h and undergoing surgical chest wall reconstruction. Before matching the Rapid group was sicker (ISS 27.7 vs 26.0; severe head trauma 14.4% vs 9.2%). After matching 500 pairs, the Rapid group retained higher injury burden (mean ISS 28.1 vs 26.2; RISC III predicted mortality 16.2% vs 10.7%).</p>
+      <p class="ko">2015-2023년 유럽 TR-DGU 병원에 입원한 16세 이상, ISS &gt;=9, 중증 흉벽 손상(늑골 3개 이상 연쇄 골절 또는 동요흉, 흉부 AIS &gt;=3) 성인 중 48시간 이상 생존하고 흉벽 재건술을 받은 환자. 매칭 전 Rapid군이 더 중증(ISS 27.7 대 26.0, 중증 두부외상 14.4% 대 9.2%). 500쌍 매칭 후에도 Rapid군은 손상 부담이 더 높음(평균 ISS 28.1 대 26.2, RISC III 예측 사망률 16.2% 대 10.7%).</p>
+      <p class="en"><strong>Setting:</strong> Multicenter European trauma registry (TraumaRegister DGU), predominantly Germany (~90%) with additional countries; ~700 hospitals contribute ~30,000 cases/year. Retrospective registry analysis under project TR-DGU 2024-018.</p>
+      <p class="ko">다기관 유럽 외상 레지스트리(TraumaRegister DGU), 약 90%가 독일이고 일부 타국 포함; 약 700개 병원이 연 약 3만 건 입력. 과제 TR-DGU 2024-018 하의 후향적 레지스트리 분석.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Rapid sequence chest wall reconstruction performed on Day 0 (day of admission), often within first 12 h.</p>
+      <p class="ko">입원 당일(Day 0), 흔히 첫 12시간 이내에 시행한 rapid sequence 흉벽 재건술.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Early chest wall reconstruction performed on Days 1-3 after admission.</p>
+      <p class="ko">입원 후 1-3일째 시행한 조기 흉벽 재건술.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">In-hospital mortality (matched cohort)</p>
+    <p class="ko">원내 사망률(매칭 코호트)</p>
+    <p class="stat-line">10.6% (Rapid, Day 0) vs 3.6% (Early, Days 1-3); nearly threefold higher · p &lt; .001</p>
+    <p class="ko">10.6%(Rapid, Day 0) 대 3.6%(Early, 1-3일); 약 3배 높음</p>
+    <div class="interpretation">ⓘ Day-0 patients died about three times as often, but the authors attribute this to higher baseline risk and residual confounding by indication/survivorship bias rather than harm from early surgery; matched Rapid patients still had higher ISS and predicted mortality (RISC III 16.2% vs 10.7%).<br>Day 0 환자의 사망이 약 3배 많았으나, 저자들은 이를 조기 수술의 해가 아니라 더 높은 기저 위험과 적응증/생존자 편향에 의한 잔여 교란으로 해석함; 매칭 후에도 Rapid군은 ISS와 예측 사망률(RISC III 16.2% 대 10.7%)이 더 높았음.</div>
+    <div class="interpretation primer">ⓘ A p value &lt;0.05 is conventionally considered statistically significant; here p&lt;.001 indicates the mortality difference is very unlikely due to chance, though statistical significance does not establish causation given residual confounding.<br>p&lt;0.05는 통상 통계적으로 유의하다고 봄; p&lt;.001은 사망률 차이가 우연일 가능성이 매우 낮음을 의미하나, 잔여 교란이 있어 통계적 유의성이 인과관계를 입증하지는 않음.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Sepsis (matched cohort)</p>
+    <p class="ko">패혈증(매칭 코호트)</p>
+    <p class="stat-line">14.6% (Rapid) vs 12.0% (Early) · Difference not statistically significant</p>
+    <p class="ko">14.6%(Rapid) 대 12.0%(Early)</p>
+    <div class="interpretation">ⓘ Sepsis was numerically higher in the Day-0 group but the difference was not statistically significant.<br>패혈증은 Day 0군에서 수치상 높았으나 통계적으로 유의하지 않았음.</div>
+    <div class="interpretation primer">ⓘ When a difference is reported as not statistically significant (p&gt;=0.05), the data do not establish a real difference; a numerically higher rate may still reflect chance.<br>차이가 통계적으로 유의하지 않다(p&gt;=0.05)고 보고되면 실제 차이를 입증하지 못한 것이며, 수치상 높은 비율도 우연일 수 있음.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Multi-organ failure (MOF, failure of &gt;=2 organ systems; matched cohort)</p>
+    <p class="ko">다장기부전(MOF, 2개 이상 장기 부전; 매칭 코호트)</p>
+    <p class="stat-line">33.6% (Rapid) vs 28.3% (Early) · Difference not statistically significant</p>
+    <p class="ko">33.6%(Rapid) 대 28.3%(Early)</p>
+    <div class="interpretation">ⓘ MOF was numerically more common with Day-0 surgery but did not reach statistical significance, consistent with a sicker Rapid cohort.<br>MOF는 Day 0 수술에서 수치상 더 흔했으나 통계적 유의성에 도달하지 못했으며, 이는 더 중증인 Rapid군과 일치함.</div>
+    <div class="interpretation primer">ⓘ A result described as not statistically significant (p&gt;=0.05) means the study cannot confirm a true between-group difference for this endpoint.<br>통계적으로 유의하지 않다(p&gt;=0.05)는 결과는 해당 지표에서 군 간 실제 차이를 확인하지 못했음을 뜻함.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Length of stay (ICU/hospital) and duration of mechanical ventilation</p>
+    <p class="ko">재원기간(중환자실/병원) 및 인공호흡 기간</p>
+    <p class="stat-line">Prespecified as secondary outcomes; specific matched-cohort values are not available in the accessible sources (abstract/excerpt). · Not available in accessible sources</p>
+    <p class="ko">2차 결과로 사전 지정되었으나, 매칭 코호트의 구체적 수치는 제공된 자료(초록/발췌)에 없음.</p>
+    <div class="interpretation">ⓘ These resource-use outcomes were planned but exact values are not provided in the abstract or full-text excerpt available here.<br>이 자원 사용 결과는 계획되었으나 정확한 값은 본 초록 및 전문 발췌에 제시되지 않음.</div>
+    <div class="interpretation primer">ⓘ Length-of-stay and ventilation days are typically compared as means or medians; without reported values and dispersion or p values, no statistical inference can be made.<br>재원기간과 인공호흡 일수는 보통 평균 또는 중앙값으로 비교하며, 값과 산포 또는 p값이 보고되지 않으면 통계적 추론이 불가함.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Among 500 propensity-matched pairs, Day-0 rapid sequence CWR had nearly threefold higher in-hospital mortality than Day 1-3 early surgery (10.6% vs 3.6%, p&lt;.001).</p><p class="ko">성향점수 매칭된 500쌍에서 Day 0 rapid sequence CWR는 1-3일째 조기 수술보다 원내 사망률이 약 3배 높았음(10.6% 대 3.6%, p&lt;.001).</p></li>
+<li><p class="en">Matching did not fully balance risk: the Rapid group retained higher injury burden (mean ISS 28.1 vs 26.2) and higher RISC III predicted mortality (16.2% vs 10.7%), indicating residual confounding by indication.</p><p class="ko">매칭으로도 위험이 완전히 균형되지 않아 Rapid군은 손상 부담(평균 ISS 28.1 대 26.2)과 RISC III 예측 사망률(16.2% 대 10.7%)이 더 높았으며, 이는 적응증에 의한 잔여 교란을 시사함.</p></li>
+<li><p class="en">Sepsis (14.6% vs 12.0%) and multi-organ failure (33.6% vs 28.3%) were numerically higher with Day-0 surgery but not statistically significant.</p><p class="ko">패혈증(14.6% 대 12.0%)과 다장기부전(33.6% 대 28.3%)은 Day 0 수술에서 수치상 높았으나 통계적으로 유의하지 않았음.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In this large registry analysis, Day-0 rapid sequence chest wall reconstruction identified a distinct subgroup with more severe concomitant injuries and higher baseline risk, and its higher mortality likely reflects residual confounding by indication and survivorship bias rather than a detrimental effect of early surgery. The data do not support a blanket Day-0-for-all strategy but remain consistent with the broader literature that CWR within 72 h is beneficial when timing is individualized to overall injury severity and physiological stability.</p>
+    <p class="ko">이 대규모 레지스트리 분석에서 Day 0 rapid sequence 흉벽 재건술은 동반 손상이 더 심하고 기저 위험이 높은 별도의 하위군을 식별했으며, 높은 사망률은 조기 수술의 해라기보다 적응증에 의한 잔여 교란과 생존자 편향을 반영할 가능성이 크다. 이 자료는 일률적인 &quot;모두 Day 0&quot; 전략을 지지하지 않으나, 손상 중증도와 생리적 안정성에 맞춰 시기를 개별화할 때 72시간 이내 CWR이 유익하다는 기존 문헌과는 일치한다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Retrospective, non-randomized registry design with confounding by indication: Day-0 surgery is driven by life-threatening concomitant injuries and hemodynamic instability not fully captured. Matching did not eliminate residual imbalance (ISS, severe head injury, RISC III). Propensity model discrimination was modest (Nagelkerke R2 = 0.115); unmeasured factors (fracture morphology, intraoperative findings, real-time hemodynamics, hemodynamic trajectories) were unavailable. Survivorship bias from excluding deaths within 48 h, and 857 operative cases (25.5%) excluded for missing surgery date. Surgery timing recorded only as calendar date (not exact time), risking Day 0 vs Day 1 misclassification. Exact length-of-stay and ventilation values, implant/operative details, and post-discharge follow-up are not available in the accessible sources.</p>
+    <p class="ko">후향적·비무작위 레지스트리 설계로 적응증에 의한 교란이 존재: Day 0 수술은 충분히 포착되지 않은 생명을 위협하는 동반 손상과 혈역학적 불안정에 의해 결정됨. 매칭으로도 잔여 불균형(ISS, 중증 두부손상, RISC III)이 제거되지 않음. 성향점수 모델 판별력이 낮았고(Nagelkerke R2 = 0.115), 측정되지 않은 요인(골절 형태, 수술 중 소견, 실시간 혈역학, 혈역학 추세)을 반영하지 못함. 48시간 내 사망 제외에 따른 생존자 편향과 수술일 미상으로 제외된 857건(25.5%). 수술 시기가 정확한 시각이 아닌 달력 날짜로만 기록되어 Day 0 대 Day 1 오분류 위험. 정확한 재원기간·인공호흡 값, 임플란트/수술 세부, 퇴원 후 추적은 제공된 자료에 없음.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Directly relevant to trauma, emergency, and critical care teams managing flail chest and multiple rib fractures. The practical message is that timing of SSRF/CWR should be individualized: very early Day-0 fixation is appropriate when combined with damage-control or life-saving procedures, but the worse outcomes seen reflect patient severity, not a reason to delay indicated fixation beyond 72 h. EM/ICU clinicians should continue early multidisciplinary assessment for SSRF within 72 h while optimizing physiology. Note this is German/European registry data; surgical capabilities and pathways may differ by system.</p>
+    <p class="ko">동요흉 및 다발성 늑골 골절을 다루는 외상·응급·중환자 팀에 직접적으로 관련됨. 실무적 메시지는 SSRF/CWR 시기를 개별화해야 한다는 것: 손상통제 또는 구명 수술과 병행할 때 매우 조기의 Day 0 고정이 적절하며, 관찰된 나쁜 결과는 환자 중증도를 반영할 뿐 적응증이 되는 고정을 72시간 이후로 미룰 근거는 아니다. 응급/중환자 임상의는 생리를 최적화하면서 72시간 이내 SSRF에 대한 조기 다학제 평가를 지속해야 한다. 본 자료는 독일/유럽 레지스트리 자료이므로 수술 역량과 진료 경로가 시스템마다 다를 수 있다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Do not interpret this study as evidence that early (Day-0) rib fixation kills patients; rather, patients selected for immediate surgery are intrinsically sicker. Continue to aim for chest wall reconstruction within 72 h when indicated, individualizing timing to injury severity and physiologic stability rather than mandating Day-0 surgery for all.</p>
+    <p class="ko">이 연구를 조기(Day 0) 늑골 고정이 환자를 사망시킨다는 근거로 해석해서는 안 되며, 즉시 수술 대상으로 선택된 환자가 본질적으로 더 중증이다. 적응증이 될 때 72시간 이내 흉벽 재건술을 목표로 하되, 모든 환자에게 Day 0 수술을 강제하기보다 손상 중증도와 생리적 안정성에 맞춰 시기를 개별화해야 한다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42351245/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1186/s13054-026-06155-x" target="_blank" rel="noopener">DOI</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13308483/" target="_blank" rel="noopener">PMC</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>

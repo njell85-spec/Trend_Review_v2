@@ -1,0 +1,265 @@
+{
+  "analyses": [
+    {
+      "pmid": "42351245",
+      "title": "Rapid sequence versus early surgical stabilization of severe chest wall injuries: a propensity score-matched analysis from a multicenter trauma registry.",
+      "oneLineSummary": "In a German trauma registry, Day-0 \"rapid sequence\" chest wall reconstruction was associated with nearly threefold higher in-hospital mortality than Day 1-3 surgery, most likely reflecting residual confounding by indication rather than harm from early surgery.",
+      "oneLineSummary_ko": "독일 외상 레지스트리에서 입원 당일(Day 0) \"rapid sequence\" 흉벽 재건술은 1-3일째 수술보다 원내 사망률이 약 3배 높았으나, 이는 조기 수술 자체의 해가 아니라 적응증에 의한 잔여 교란을 반영할 가능성이 크다.",
+      "whyItMatters": "Timing of surgical stabilization of rib fractures (SSRF/CWR) is a hot topic in trauma and critical care; this is the first large multicenter analysis to test whether pushing fixation to the day of admission improves outcomes beyond the established <72-h window, and it cautions against a blanket \"Day-0-for-all\" strategy.",
+      "whyItMatters_ko": "늑골 골절의 수술적 고정(SSRF/CWR) 시기는 외상 및 중환자 진료에서 중요한 쟁점으로, 본 연구는 입원 당일까지 고정을 앞당기는 것이 기존의 72시간 이내 권고를 넘어 결과를 개선하는지 검증한 첫 대규모 다기관 분석이며 일률적인 \"모두 Day 0\" 전략에 경고를 던진다.",
+      "clinicalQuestion": "In severely injured/polytrauma patients with serious chest wall injury who survive 48 h and undergo chest wall reconstruction, does rapid sequence surgery on the day of admission (Day 0) improve in-hospital mortality and complications compared with early surgery on Days 1-3?",
+      "clinicalQuestion_ko": "48시간을 생존하고 흉벽 재건술을 받은 중증/다발성 외상 환자에서, 입원 당일(Day 0) rapid sequence 수술이 1-3일째 조기 수술에 비해 원내 사망률과 합병증을 개선하는가?",
+      "studyDetails": {
+        "design": "Retrospective cohort study using prospectively collected registry data, with propensity score matching (PSM) to balance baseline characteristics; observational and non-randomized.",
+        "design_ko": "전향적으로 수집된 레지스트리 자료를 이용한 후향적 코호트 연구로, 기저 특성 균형을 위해 성향점수 매칭(PSM)을 적용한 관찰적·비무작위 연구.",
+        "setting": "TraumaRegister DGU (TR-DGU) of the German Trauma Society, 2015-2023 dataset (project ID TR-DGU 2024-018). Per full text, participating hospitals are predominantly in Germany (~90%) with additional sites in Austria, Belgium, Finland, Luxembourg, Slovenia, Switzerland, the Netherlands, and the United Arab Emirates; analysis restricted to primary admissions in Europe. Author affiliations include Goettingen University Medical Center, Helios Hospital Schwerin, University Hospital Erlangen, and IFOM Witten/Herdecke.",
+        "setting_ko": "독일 외상학회의 TraumaRegister DGU(TR-DGU) 2015-2023 자료(과제 ID TR-DGU 2024-018). 전문에 따르면 참여 병원의 약 90%가 독일이며 오스트리아, 벨기에, 핀란드, 룩셈부르크, 슬로베니아, 스위스, 네덜란드, 아랍에미리트의 기관도 포함되고, 분석은 유럽 내 1차 입원으로 제한됨. 저자 소속은 괴팅겐 대학병원, Helios Schwerin 병원, 에를랑겐 대학병원, IFOM Witten/Herdecke 등.",
+        "sampleSize": "Initial cohort of 34,659 patients with severe chest wall injuries; 9.7% underwent CWR. After exclusions (including 857 operative cases, 25.5%, with missing surgery date and deaths within 48 h), 2,498 operatively treated patients with a known surgery date were analyzed. Of these, 1,168 (46.8%) had rapid sequence (Day 0) and 567 (22.7%) had early (Days 1-3) surgery (remainder were Delayed/Late, described descriptively). Propensity score matching yielded 500 matched pairs (n=1,000) for the primary comparison.",
+        "sampleSize_ko": "중증 흉벽 손상 환자 초기 코호트 34,659명 중 9.7%가 CWR 시행. 제외(수술일 미상 857명(25.5%), 48시간 내 사망 등) 후 수술일이 확인된 2,498명을 분석. 이 중 1,168명(46.8%)이 rapid sequence(Day 0), 567명(22.7%)이 조기(1-3일) 수술(나머지는 지연/만기군으로 기술적 분석). 성향점수 매칭으로 500쌍(n=1,000)이 1차 비교에 사용됨.",
+        "eligibility": "Inclusion: primary admission to a participating European hospital; age >=16 years; ISS >=9; serious chest wall injury (serial rib fractures involving >=3 ribs, AIS 3, or flail chest, AIS 3-5); survival >=48 h post-admission; documented surgical CWR (rib fixation) with a valid calendar surgery date. Exclusions: secondary transfers, reduced/basic documentation only, missing CWR date, and deaths within first 48 h.",
+        "eligibility_ko": "포함: 유럽 참여 병원 1차 입원, 16세 이상, ISS >=9, 중증 흉벽 손상(늑골 3개 이상 연쇄 골절 AIS 3 또는 동요흉 AIS 3-5), 입원 후 48시간 이상 생존, 수술일이 확인된 흉벽 재건술(늑골 고정) 시행. 제외: 2차 전원, 기본 문서만 있는 경우, CWR 날짜 미상, 첫 48시간 내 사망.",
+        "interventionDetails": "Rapid sequence CWR (\"Rapid\"): surgical chest wall reconstruction/rib fixation performed on Day 0 (day of admission), often within the first 12 h per the introduction. TR-DGU records surgery as calendar date only, not exact time, so Day 0 vs Day 1 boundary misclassification is possible. Specific implants, plating systems, and operative duration are not available in the accessible sources.",
+        "interventionDetails_ko": "Rapid sequence CWR(\"Rapid\"): 입원 당일(Day 0) 시행한 흉벽 재건술/늑골 고정으로, 서론에 따르면 흔히 첫 12시간 이내. TR-DGU는 수술을 정확한 시각이 아닌 달력 날짜로 기록하여 Day 0와 Day 1 경계의 오분류 가능. 구체적 임플란트, 고정 시스템, 수술 시간은 제공된 자료에 없음.",
+        "comparatorDetails": "Early CWR (\"Early\"): chest wall reconstruction performed on Days 1-3 after admission, within the generally recommended <72-h window. Delayed (Days 4-6) and Late (Day >=7) groups were described descriptively but excluded from the primary matched analysis due to survivorship bias.",
+        "comparatorDetails_ko": "조기 CWR(\"Early\"): 입원 후 1-3일째, 일반적으로 권고되는 72시간 이내에 시행한 흉벽 재건술. 지연군(4-6일)과 만기군(7일 이상)은 생존자 편향 때문에 1차 매칭 분석에서 제외하고 기술적으로만 보고됨.",
+        "followUp": "Outcomes assessed during the index hospitalization (in-hospital mortality, sepsis, MOF, ventilation days, ICU and hospital length of stay). No post-discharge follow-up duration is described in the accessible sources.",
+        "followUp_ko": "결과는 해당 입원 기간 동안 평가(원내 사망, 패혈증, 다장기부전, 인공호흡 일수, 중환자실 및 재원기간). 퇴원 후 추적 기간은 제공된 자료에 기술되지 않음.",
+        "sourceBasis": "Based on the article abstract, the open-access PMC full-text excerpt (PMC13308483), and public metadata from PubMed and Crossref (DOI 10.1186/s13054-026-06155-x).",
+        "sourceBasis_ko": "논문 초록, 오픈액세스 PMC 전문 발췌(PMC13308483), PubMed 및 Crossref 공개 메타데이터(DOI 10.1186/s13054-026-06155-x)에 근거함."
+      },
+      "pico": {
+        "population": "Severely injured/polytrauma patients (ISS >=9) with serious chest wall injury (>=3 rib fractures or flail chest) who survived 48 h and underwent chest wall reconstruction",
+        "intervention": "Rapid sequence CWR on Day 0 (day of admission)",
+        "comparison": "Early CWR on Days 1-3",
+        "outcome": "In-hospital mortality (primary); sepsis, multi-organ failure, length of stay (secondary)"
+      },
+      "pico_ko": {
+        "population": "48시간을 생존하고 흉벽 재건술을 받은 중증/다발성 외상 환자(ISS >=9, 늑골 3개 이상 골절 또는 동요흉)",
+        "intervention": "입원 당일(Day 0) rapid sequence CWR",
+        "comparison": "1-3일째 조기 CWR",
+        "outcome": "원내 사망률(1차); 패혈증, 다장기부전, 재원기간(2차)"
+      },
+      "detailedPico": {
+        "population": "Adults >=16 years with ISS >=9 and serious chest wall injury (serial rib fractures >=3 ribs or flail chest, AIS Thorax >=3) admitted to European TR-DGU hospitals 2015-2023, surviving >=48 h and undergoing surgical chest wall reconstruction. Before matching the Rapid group was sicker (ISS 27.7 vs 26.0; severe head trauma 14.4% vs 9.2%). After matching 500 pairs, the Rapid group retained higher injury burden (mean ISS 28.1 vs 26.2; RISC III predicted mortality 16.2% vs 10.7%).",
+        "population_ko": "2015-2023년 유럽 TR-DGU 병원에 입원한 16세 이상, ISS >=9, 중증 흉벽 손상(늑골 3개 이상 연쇄 골절 또는 동요흉, 흉부 AIS >=3) 성인 중 48시간 이상 생존하고 흉벽 재건술을 받은 환자. 매칭 전 Rapid군이 더 중증(ISS 27.7 대 26.0, 중증 두부외상 14.4% 대 9.2%). 500쌍 매칭 후에도 Rapid군은 손상 부담이 더 높음(평균 ISS 28.1 대 26.2, RISC III 예측 사망률 16.2% 대 10.7%).",
+        "countrySetting": "Multicenter European trauma registry (TraumaRegister DGU), predominantly Germany (~90%) with additional countries; ~700 hospitals contribute ~30,000 cases/year. Retrospective registry analysis under project TR-DGU 2024-018.",
+        "countrySetting_ko": "다기관 유럽 외상 레지스트리(TraumaRegister DGU), 약 90%가 독일이고 일부 타국 포함; 약 700개 병원이 연 약 3만 건 입력. 과제 TR-DGU 2024-018 하의 후향적 레지스트리 분석.",
+        "intervention": "Rapid sequence chest wall reconstruction performed on Day 0 (day of admission), often within first 12 h.",
+        "intervention_ko": "입원 당일(Day 0), 흔히 첫 12시간 이내에 시행한 rapid sequence 흉벽 재건술.",
+        "comparator": "Early chest wall reconstruction performed on Days 1-3 after admission.",
+        "comparator_ko": "입원 후 1-3일째 시행한 조기 흉벽 재건술.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "In-hospital mortality (matched cohort)",
+            "outcome_ko": "원내 사망률(매칭 코호트)",
+            "result": "10.6% (Rapid, Day 0) vs 3.6% (Early, Days 1-3); nearly threefold higher",
+            "result_ko": "10.6%(Rapid, Day 0) 대 3.6%(Early, 1-3일); 약 3배 높음",
+            "statistics": "p < .001",
+            "interpretation": "Day-0 patients died about three times as often, but the authors attribute this to higher baseline risk and residual confounding by indication/survivorship bias rather than harm from early surgery; matched Rapid patients still had higher ISS and predicted mortality (RISC III 16.2% vs 10.7%).",
+            "interpretation_ko": "Day 0 환자의 사망이 약 3배 많았으나, 저자들은 이를 조기 수술의 해가 아니라 더 높은 기저 위험과 적응증/생존자 편향에 의한 잔여 교란으로 해석함; 매칭 후에도 Rapid군은 ISS와 예측 사망률(RISC III 16.2% 대 10.7%)이 더 높았음.",
+            "statPrimer": "A p value <0.05 is conventionally considered statistically significant; here p<.001 indicates the mortality difference is very unlikely due to chance, though statistical significance does not establish causation given residual confounding.",
+            "statPrimer_ko": "p<0.05는 통상 통계적으로 유의하다고 봄; p<.001은 사망률 차이가 우연일 가능성이 매우 낮음을 의미하나, 잔여 교란이 있어 통계적 유의성이 인과관계를 입증하지는 않음."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Sepsis (matched cohort)",
+            "outcome_ko": "패혈증(매칭 코호트)",
+            "result": "14.6% (Rapid) vs 12.0% (Early)",
+            "result_ko": "14.6%(Rapid) 대 12.0%(Early)",
+            "statistics": "Difference not statistically significant",
+            "interpretation": "Sepsis was numerically higher in the Day-0 group but the difference was not statistically significant.",
+            "interpretation_ko": "패혈증은 Day 0군에서 수치상 높았으나 통계적으로 유의하지 않았음.",
+            "statPrimer": "When a difference is reported as not statistically significant (p>=0.05), the data do not establish a real difference; a numerically higher rate may still reflect chance.",
+            "statPrimer_ko": "차이가 통계적으로 유의하지 않다(p>=0.05)고 보고되면 실제 차이를 입증하지 못한 것이며, 수치상 높은 비율도 우연일 수 있음."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Multi-organ failure (MOF, failure of >=2 organ systems; matched cohort)",
+            "outcome_ko": "다장기부전(MOF, 2개 이상 장기 부전; 매칭 코호트)",
+            "result": "33.6% (Rapid) vs 28.3% (Early)",
+            "result_ko": "33.6%(Rapid) 대 28.3%(Early)",
+            "statistics": "Difference not statistically significant",
+            "interpretation": "MOF was numerically more common with Day-0 surgery but did not reach statistical significance, consistent with a sicker Rapid cohort.",
+            "interpretation_ko": "MOF는 Day 0 수술에서 수치상 더 흔했으나 통계적 유의성에 도달하지 못했으며, 이는 더 중증인 Rapid군과 일치함.",
+            "statPrimer": "A result described as not statistically significant (p>=0.05) means the study cannot confirm a true between-group difference for this endpoint.",
+            "statPrimer_ko": "통계적으로 유의하지 않다(p>=0.05)는 결과는 해당 지표에서 군 간 실제 차이를 확인하지 못했음을 뜻함."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Length of stay (ICU/hospital) and duration of mechanical ventilation",
+            "outcome_ko": "재원기간(중환자실/병원) 및 인공호흡 기간",
+            "result": "Prespecified as secondary outcomes; specific matched-cohort values are not available in the accessible sources (abstract/excerpt).",
+            "result_ko": "2차 결과로 사전 지정되었으나, 매칭 코호트의 구체적 수치는 제공된 자료(초록/발췌)에 없음.",
+            "statistics": "Not available in accessible sources",
+            "interpretation": "These resource-use outcomes were planned but exact values are not provided in the abstract or full-text excerpt available here.",
+            "interpretation_ko": "이 자원 사용 결과는 계획되었으나 정확한 값은 본 초록 및 전문 발췌에 제시되지 않음.",
+            "statPrimer": "Length-of-stay and ventilation days are typically compared as means or medians; without reported values and dispersion or p values, no statistical inference can be made.",
+            "statPrimer_ko": "재원기간과 인공호흡 일수는 보통 평균 또는 중앙값으로 비교하며, 값과 산포 또는 p값이 보고되지 않으면 통계적 추론이 불가함."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Among 500 propensity-matched pairs, Day-0 rapid sequence CWR had nearly threefold higher in-hospital mortality than Day 1-3 early surgery (10.6% vs 3.6%, p<.001).",
+        "Matching did not fully balance risk: the Rapid group retained higher injury burden (mean ISS 28.1 vs 26.2) and higher RISC III predicted mortality (16.2% vs 10.7%), indicating residual confounding by indication.",
+        "Sepsis (14.6% vs 12.0%) and multi-organ failure (33.6% vs 28.3%) were numerically higher with Day-0 surgery but not statistically significant."
+      ],
+      "keyFindings_ko": [
+        "성향점수 매칭된 500쌍에서 Day 0 rapid sequence CWR는 1-3일째 조기 수술보다 원내 사망률이 약 3배 높았음(10.6% 대 3.6%, p<.001).",
+        "매칭으로도 위험이 완전히 균형되지 않아 Rapid군은 손상 부담(평균 ISS 28.1 대 26.2)과 RISC III 예측 사망률(16.2% 대 10.7%)이 더 높았으며, 이는 적응증에 의한 잔여 교란을 시사함.",
+        "패혈증(14.6% 대 12.0%)과 다장기부전(33.6% 대 28.3%)은 Day 0 수술에서 수치상 높았으나 통계적으로 유의하지 않았음."
+      ],
+      "conclusion": "In this large registry analysis, Day-0 rapid sequence chest wall reconstruction identified a distinct subgroup with more severe concomitant injuries and higher baseline risk, and its higher mortality likely reflects residual confounding by indication and survivorship bias rather than a detrimental effect of early surgery. The data do not support a blanket Day-0-for-all strategy but remain consistent with the broader literature that CWR within 72 h is beneficial when timing is individualized to overall injury severity and physiological stability.",
+      "conclusion_ko": "이 대규모 레지스트리 분석에서 Day 0 rapid sequence 흉벽 재건술은 동반 손상이 더 심하고 기저 위험이 높은 별도의 하위군을 식별했으며, 높은 사망률은 조기 수술의 해라기보다 적응증에 의한 잔여 교란과 생존자 편향을 반영할 가능성이 크다. 이 자료는 일률적인 \"모두 Day 0\" 전략을 지지하지 않으나, 손상 중증도와 생리적 안정성에 맞춰 시기를 개별화할 때 72시간 이내 CWR이 유익하다는 기존 문헌과는 일치한다.",
+      "clinicalTakeaway": "Do not interpret this study as evidence that early (Day-0) rib fixation kills patients; rather, patients selected for immediate surgery are intrinsically sicker. Continue to aim for chest wall reconstruction within 72 h when indicated, individualizing timing to injury severity and physiologic stability rather than mandating Day-0 surgery for all.",
+      "clinicalTakeaway_ko": "이 연구를 조기(Day 0) 늑골 고정이 환자를 사망시킨다는 근거로 해석해서는 안 되며, 즉시 수술 대상으로 선택된 환자가 본질적으로 더 중증이다. 적응증이 될 때 72시간 이내 흉벽 재건술을 목표로 하되, 모든 환자에게 Day 0 수술을 강제하기보다 손상 중증도와 생리적 안정성에 맞춰 시기를 개별화해야 한다.",
+      "limitations": "Retrospective, non-randomized registry design with confounding by indication: Day-0 surgery is driven by life-threatening concomitant injuries and hemodynamic instability not fully captured. Matching did not eliminate residual imbalance (ISS, severe head injury, RISC III). Propensity model discrimination was modest (Nagelkerke R2 = 0.115); unmeasured factors (fracture morphology, intraoperative findings, real-time hemodynamics, hemodynamic trajectories) were unavailable. Survivorship bias from excluding deaths within 48 h, and 857 operative cases (25.5%) excluded for missing surgery date. Surgery timing recorded only as calendar date (not exact time), risking Day 0 vs Day 1 misclassification. Exact length-of-stay and ventilation values, implant/operative details, and post-discharge follow-up are not available in the accessible sources.",
+      "limitations_ko": "후향적·비무작위 레지스트리 설계로 적응증에 의한 교란이 존재: Day 0 수술은 충분히 포착되지 않은 생명을 위협하는 동반 손상과 혈역학적 불안정에 의해 결정됨. 매칭으로도 잔여 불균형(ISS, 중증 두부손상, RISC III)이 제거되지 않음. 성향점수 모델 판별력이 낮았고(Nagelkerke R2 = 0.115), 측정되지 않은 요인(골절 형태, 수술 중 소견, 실시간 혈역학, 혈역학 추세)을 반영하지 못함. 48시간 내 사망 제외에 따른 생존자 편향과 수술일 미상으로 제외된 857건(25.5%). 수술 시기가 정확한 시각이 아닌 달력 날짜로만 기록되어 Day 0 대 Day 1 오분류 위험. 정확한 재원기간·인공호흡 값, 임플란트/수술 세부, 퇴원 후 추적은 제공된 자료에 없음.",
+      "edIcuApplicability": "Directly relevant to trauma, emergency, and critical care teams managing flail chest and multiple rib fractures. The practical message is that timing of SSRF/CWR should be individualized: very early Day-0 fixation is appropriate when combined with damage-control or life-saving procedures, but the worse outcomes seen reflect patient severity, not a reason to delay indicated fixation beyond 72 h. EM/ICU clinicians should continue early multidisciplinary assessment for SSRF within 72 h while optimizing physiology. Note this is German/European registry data; surgical capabilities and pathways may differ by system.",
+      "edIcuApplicability_ko": "동요흉 및 다발성 늑골 골절을 다루는 외상·응급·중환자 팀에 직접적으로 관련됨. 실무적 메시지는 SSRF/CWR 시기를 개별화해야 한다는 것: 손상통제 또는 구명 수술과 병행할 때 매우 조기의 Day 0 고정이 적절하며, 관찰된 나쁜 결과는 환자 중증도를 반영할 뿐 적응증이 되는 고정을 72시간 이후로 미룰 근거는 아니다. 응급/중환자 임상의는 생리를 최적화하면서 72시간 이내 SSRF에 대한 조기 다학제 평가를 지속해야 한다. 본 자료는 독일/유럽 레지스트리 자료이므로 수술 역량과 진료 경로가 시스템마다 다를 수 있다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 6.5,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Primary and secondary outcome values taken directly from the abstract; exact LOS and ventilation values were not present in the abstract or provided full-text excerpt.",
+        "Setting/country detail (predominantly Germany ~90% plus other European countries and UAE) drawn from the open PMC full-text excerpt.",
+        "Evidence level rated Low because of retrospective design and explicit, unresolved confounding by indication and survivorship bias acknowledged by the authors.",
+        "No clinical trial registration; observational multicenter registry study (TR-DGU project 2024-018).",
+        "Authors explicitly interpret higher Day-0 mortality as confounding/selection rather than causal harm; analysis reflects this nuance."
+      ],
+      "paper": {
+        "pmid": "42351245",
+        "title": "Rapid sequence versus early surgical stabilization of severe chest wall injuries: a propensity score-matched analysis from a multicenter trauma registry.",
+        "abstract": "BACKGROUND: The optimal timing for post traumatic Chest Wall Reconstruction (CWR) in severely injured / polytraumatized patients with severe chest wall instability remains a subject of debate. While early surgery within 72 h is associated with improved outcomes, the efficacy and safety of an even earlier \"rapid sequence\" approach on the day of admission are unclear. This study aims to compare outcomes of severely injured patients undergoing rapid sequence surgery (Day 0) versus early surgery (Days 1-3).\nMETHODS: A retrospective analysis was conducted using data from the TraumaRegister DGU (2015-2023). Patients with serious chest wall injuries (AIS ≥3), an Injury Severity Score (ISS) ≥ 9, who survived the first 48 h and underwent CWR were included. Patients were stratified into a \"Rapid Sequence\" group (surgery on Day 0) and an \"Early\" group (surgery on Days 1-3). Propensity score matching (PSM) was performed to balance baseline characteristics, including injury patterns, demographics, and initial physiological status. Primary outcome was in-hospital mortality. Secondary outcomes included sepsis, multi-organ failure (MOF), and length of stay.\nRESULTS: From an initial cohort of 34,659 patients with severe chest wall injuries, 2,498 operatively treated patients with a known date of surgery were analyzed. 1,168 (46.8%) underwent rapid sequence surgery (Day 0) and 567 (22.7%) underwent early surgery (Days 1-3). Before matching, the Rapid Sequence group had a higher ISS (27.7 vs. 26.0), a higher incidence of severe head trauma (14.4% vs. 9.2%), and significantly higher mortality (8.4% vs. 4.1%). PSM yielded 500 matched pairs. Despite matching, the Rapid Sequence group retained a higher baseline injury burden (mean ISS: 28.1 vs. 26.2; mortality prognosis (Revised Injury Severity Classification, Version III (RISC III) Score): 16.2% vs. 10.7%). The primary outcome showed a nearly threefold higher mortality rate in the Rapid Sequence group (10.6% vs. 3.6%; p < .001). Rates of sepsis (14.6% vs. 12.0%) and MOF (33.6% vs. 28.3%) were also higher in the rapid group, though not statistically significant.\nCONCLUSION: In this large registry analysis, rapid sequence CWR on the day of admission identified a distinct subgroup of patients with more severe concomitant injuries and higher baseline risk. The higher mortality in this group likely reflects residual confounding by indication and survivorship bias, rather than a detrimental effect of rapid surgery per se. This suggests that the decision for immediate surgery is likely driven by life-threatening concomitant injuries not fully captured in the matching model, identifying a patient population with an intrinsically higher risk of death. Our findings therefore do not justify a blanket Day-0-for-all strategy, but are consistent with the broader literature suggesting that CWR performed within 72 h is beneficial when timing is individualized to overall injury severity and physiological stability.",
+        "authors": [
+          "Spering C",
+          "Lefering R",
+          "Lehmann W",
+          "Malik HA",
+          "Schulz-Drost S"
+        ],
+        "authorAffiliations": [
+          "Department of Trauma Surgery, Orthopaedics and Plastic Surgery, Goettingen University Medical Center, Universitaetsmedizin Goettingen, Robert-Koch-Strasse 40, Göttingen, 37075, Germany. christopher.spering@med.uni-goettingen.de.",
+          "Committee on Emergency Medicine, Intensive Care and Trauma Management (Sektion NIS) of the German Trauma Society (DGU), Berlin, Germany. christopher.spering@med.uni-goettingen.de.",
+          "Institute for Research in Operative Medicine (IFOM), University of Witten / Herdecke, Cologne, Germany.",
+          "Department of Trauma Surgery, Orthopaedics and Plastic Surgery, Goettingen University Medical Center, Universitaetsmedizin Goettingen, Robert-Koch-Strasse 40, Göttingen, 37075, Germany.",
+          "Department for Trauma Surgery, Helios Hospital Schwerin, Schwerin, Germany.",
+          "Department for Trauma- and Orthopedic Surgery, University Hospital Erlangen, Erlangen, Germany."
+        ],
+        "journal": "Critical care (London, England)",
+        "pubDate": "2026-Jun-25",
+        "publicationTypes": [
+          "Journal Article",
+          "Multicenter Study"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Registries",
+          "Retrospective Studies",
+          "Propensity Score",
+          "Female",
+          "Injury Severity Score",
+          "Thoracic Injuries",
+          "Thoracic Wall",
+          "Male",
+          "Middle Aged",
+          "Adult",
+          "Time Factors"
+        ],
+        "keywords": [
+          "Flail chest",
+          "Propensity score matching.",
+          "Rib fractures",
+          "Surgical stabilization",
+          "Thoracic trauma",
+          "Timing of surgery"
+        ],
+        "doi": "10.1186/s13054-026-06155-x",
+        "pmcid": "PMC13308483",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42351245/",
+        "collectedAt": "2026-06-28T21:17:15.412Z",
+        "screeningData": {
+          "score": 10,
+          "relevanceMatches": [
+            "critical care",
+            "sepsis",
+            "trauma"
+          ],
+          "studyType": "Observational",
+          "sampleSize": 34659,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: critical care, sepsis, trauma",
+            "study design: Observational",
+            "sample size signal: N=34659"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Severe chest wall injuries with serial rib fractures or flail chest are among the most important determinants of adverse outcome after blunt trauma. Rib fractures occur in up to 50% of patients with significant thoracic trauma and are associated with increased rates of pneumonia, prolonged mechanical ventilation, and mortality, particularly when multiple ribs are involved or when a flail segment is present [–]. Over the last decade, surgical stabilization of rib fractures (SSRF) has evolved from an experimental technique to an evidence-based component of modern chest trauma care. Because the chest wall consists of more than just ribs and the surgical approach involves more than simple rib repair, post-traumatic Chest Wall Reconstruction (CWR) also encompasses the management of muscles, nerves, vessels, and skin, as well as a thorough understanding of chest wall biomechanics [, ]. Randomized trials and high-quality meta-analyses have demonstrated that, in patients with flail chest, SSRF reduces pneumonia, need for tracheostomy, duration of mechanical ventilation, and length of ICU and hospital stay compared with non-operative management [, , ]. These findings have been extended to selected non-flail patterns with multiple displaced fractures [, ], and are reflected in consensus guidelines from the Chest Wall Injury Society (CWIS) and, more recently, in a joint position paper from the World Society of Emergency Surgery (WSES) and CWIS [, ]. Beyond the question of “whether” to operate, the timing of CWR has emerged as a major determinant of outcome. In a multicenter prospective evaluation, Pieracci et al. showed that for each day of delay in SSRF the odds of pneumonia increased by 31%, of tracheostomy by 26%, and of prolonged ventilation by 27%, leading to the recommendation that SSRF, when indicated, should be performed “as early as possible,” ideally within 72 h of injury []. Registry-based analyses and single-center series corroborate that early CWR within 48–72 h is associated with fewer pulmonary complications and shorter ICU and hospital stays compared with delayed fixation [, , , ]. These data have stimulated the hypothesis that an even more aggressive “rapid sequence” approach – CWR on the day of admission (Day 0), often within the first 12 h - might further improve outcomes by immediately restoring chest wall biomechanics, improving ventilation, and attenuating the inflammatory cascade of polytrauma [, , ]. Rapid stabilization has been shown in single-center series to permit ultra-early extubation, sometimes within hours after surgery, even in severely injured patients [, , , ]. Biomechanical work clearly supports that a flail or imploding chest wall segment causes paradoxical motion, impaired lung inflation, and increased spinal instability, and that rigid plate fixation restores near-physiologic mechanics []. However, the cohort selected for immediate “Day 0” surgery in routine practice likely differs systematically from those stabilized on Days 1–3. In real-world trauma systems, the decision to proceed to emergency thoracotomy, hemostatic laparotomy, or combined procedures with concomitant CWR is driven by life-threatening injuries and hemodynamic instability. In addition, the most severely injured polytrauma patients often present with profound shock, coagulopathy, and severe pulmonary contusion - conditions that may simultaneously mandate and complicate immediate CWR. Thus, any comparison of outcomes by timing of CWR is potentially confounded by indication and survival bias. To date, no large-scale, multicenter analysis has specifically compared “rapid sequence” Day 0 CWR with “early” CWR on Days 1–3 in a modern trauma system, after accounting for baseline differences in injury pattern, physiology, and care pathways. Using the TraumaRegister DGU (TR-DGU) of the German Trauma Society, we sought to address this gap. We hypothesized - based on the extrapolation from early versus late data - that Day-0-CWR would be associated with lower in-hospital mortality and fewer complications than CWR performed on Days 1–3. The primary objective of this study was to compare in-hospital mortality between polytrauma patients with severe chest wall injury undergoing rapid sequence CWR on Day 0 versus early CWR on Days 1–3, using propensity score matching to balance key prognostic variables. Secondary objectives were to compare the rates of sepsis and multi-organ failure (MOF), duration of mechanical ventilation, and ICU and hospital length of stay between the two groups. Methods Study design and data source We performed a retrospective cohort study using prospectively collected data from the TraumaRegister DGU (TR-DGU) of the German Trauma Society (Deutsche Gesellschaft für Unfallchirurgie, DGU). The TR-DGU was founded in 1993. The aim of this multicenter database is the pseudonymized and standardized documentation of severely injured patients. Data are collected prospectively in four consecutive phases: (A) prehospital phase, (B) resuscitation room and initial surgery, (C) intensive care unit, and (D) discharge. Documentation includes detailed information on demographics, injury patterns, comorbidities, prehospital and clinical management, intensive care unit (ICU) course, key laboratory findings including transfusion data, and outcome. Inclusion criteria are admission to the hospital via the trauma room with subsequent intensive or intermediate care (IMC) monitoring, or arrival to the hospital with vital signs and death before admission to the ICU. The infrastructure for documentation, data management and data analysis are provided by the AUC - Academy of Trauma surgery (AUC - Akademie der Unfallchirurgie GmbH), which is affiliated with the German Trauma Society. The scientific management of the registry is the responsibility of the Committee on Emergency Medicine, Intensive Care and Trauma Management (Sektion NIS) of the German Trauma Society. Participating hospitals enter their pseudonymized data into a central database via a web-based application. Scientific evaluations are approved after a review process by the Section NIS. Participating hospitals are primarily located in Germany (90%), but an increasing number of clinics from other countries are also contributing data (currently from Austria, Belgium, Finland, Luxembourg, Slovenia, Switzerland, the Netherlands, and the United Arab Emirates). Currently, approximately 30,000 cases from nearly 700 hospitals are entered into the database each year. Participation in TR-DGU is voluntary. For the clinics belonging to the German network of trauma care (TraumaNetzwerk DGU), at least the entry of a basic data set for quality assurance is mandatory. Data used in this analysis were extracted from the 2015–2023 dataset under project ID TR-DGU 2024-018. The study was approved by the scientific committee of the TR-DGU and conducted in accordance with the Declaration of Helsinki. All data were blinded for date, time, and hospital; data were routinely collected for the purpose of quality control, and patients gave their informed consent for the documentation. Patient selection We included (Fig. ) all patients in the TR-DGU between January 1, 2015, and December 31, 2023, who met the following criteria: Primary admission to a participating hospital in Europe. Age ≥ 16 years. Injury Severity Score (ISS) ≥ 9. Serious chest wall injury, defined as: – serial rib fractures involving ≥ 3 ribs (Abbreviated Injury Scale (2005), AIS 450203.3), or – flail chest (unilateral or bilateral; AIS 450211.3, 450213.4, 450214.5); (AAAM - Association for the Advancement of Automotive Medicine (2008). Abbreviated Injury Scale 2005, Update 2008. Barrington, IL, USA.) Survival for at least 48 h post-admission, to exclude early deaths unrelated to CWR timing. Documented surgical CWR, coded as rib fixation procedures in the registry. Valid calendar date of the CWR procedure, allowing classification by day relative to admission. We excluded (Fig. ): Fig. 1 Flow chart of inclusion and exclusion criteria and definition of chest wall instability (CWI). To exclude patients whose injury severity was too high for survival or whose death was not attributable to chest wall instability, all patients who died within 48 h were removed from the final dataset. Of the 34,659 patients meeting the inclusion criteria, 9.7% underwent surgical chest wall reconstruction (CWR), while 31,304 did not. The final dataset for further analysis comprised = 2,498 patients with complete required data secondary transfers from other hospitals. reduced basic documentation only (for quality management). cases with missing CWR date. To exclude early deaths that are unlikely to be influenced by the timing of CWR and to reduce extreme survivorship bias, we excluded all patients who died within the first 48 h after admission. We also excluded 857 operative cases (25.5% of all CWR patients) with missing surgery date, because a valid timing category could not be assigned. These exclusions may introduce selection bias; however, date imputation was not feasible for a robust timing analysis. Exposure and group definitions The exposure of interest was the timing of CWR, defined by the day of surgery relative to the day of admission (Day 0). Based on prior internal analyses and the clinical timing literature [, , ], we categorized patients into four groups: Rapid sequence CWR (“Rapid”): Day 0 (day of admission). Early CWR (“Early”): Days 1–3. Delayed CWR: Days 4–6. Late CWR: Day 7 or later. The primary comparative analysis focused on Rapid versus Early CWR, as these two groups most closely reflect the clinically relevant “rapid sequence” versus “early” strategies within the generally recommended < 72-h window. Patients in the Delayed and Late groups were described descriptively but not included in the primary matched analysis, because their survival beyond 3 days introduces substantial survivorship bias and reflects a primarily conservative initial strategy. In TR-DGU, the timing of CWR is recorded as calendar date but not as exact time for rib fixation procedures. Consequently, a small number of patients may have similar elapsed times from admission to surgery but fall into different day categories (e.g., surgery at 23:00 on Day 0 vs. 02:00 on Day 1). This introduces potential misclassification at the boundary between Day 0 and Day 1, although such situations are expected to be infrequent and unlikely to account for the substantial outcome differences observed between groups. Outcomes The primary outcome was all-cause in-hospital mortality. Secondary outcomes included: Sepsis, as defined in the TR-DGU (clinically diagnosed sepsis with organ dysfunction). Multi-organ failure (MOF), defined as failure of ≥ 2 organ systems. Duration of invasive mechanical ventilation (days). Length of stay (LOS) in the ICU (days). Total hospital LOS (days). Covariates and risk adjustment Baseline variables considered for adjustment were selected a priori by a multidisciplinary team of trauma surgeons and statisticians, based on their known or plausible association with both CWR timing and outcomes, and informed by CWIS/WSES guidance on SSRF [, ]. All clinically plausible variables available in TR-DGU that could influence the decision to operate on Day 0 versus Days 1–3 were considered. A liberal inclusion criterion ( < .15) in the propensity score model was used to avoid omitting relevant predictors, with final variable selection additionally guided by clinical plausibility. Composite prognostic scores such as RISC III were not included as covariates in the propensity model in order to avoid potential collider bias; instead, they were used descriptively to characterize baseline risk. These included: Demographics: age (continuous), sex. Injury severity: ISS (continuous), AIS, AIS, AIS, AIS. Presence of polytrauma according to the Berlin definition []. Presence of isolated thoracic trauma (AIS ≥3 with AIS ≤ 2 in other regions) versus multi-region injury. Presence of penetrating injury. Thoracic injury patterns: lung contusion, lung laceration, hemothorax. Physiological status and early resuscitation: base excess ≤ − 6 mmol/L, coagulopathy, hemoglobin < 7 g/dL, packed red blood cell transfusion in the emergency room or operating room, need for another emergency operation from a predefined list (thoracotomy, laparotomy, pelvic stabilization, emergency neurosurgical procedure, etc.) Hospital characteristics: treatment in a Level 1 trauma center. Admission characteristics: admission at night (6pm – 6 am), admission on a weekend (Friday 6 pm to Monday 6 am). Predicted mortality according to the RISC III score. Physiological variables (base excess, hemoglobin, coagulopathy, early packed red blood cell transfusion) were limited to those routinely collected at admission and during initial resuscitation. The registry does not capture continuous hemodynamic trajectories or repeated measurements during the first hours, which are likely relevant for the timing decision, and these unmeasured factors cannot be accounted for in the model. Propensity score model and matching To mitigate confounding by indication, we constructed a propensity score model estimating the probability of receiving Rapid sequence (Day 0) CWR versus Early CWR (Days 1–3). We restricted the derivation cohort to patients operated on Day 0–3 (Rapid + Early). A multivariable logistic regression model was fitted with the dependent variable “Rapid (Day 0) CWR” and the covariates listed above. Variables were retained in the final model if they met a liberal inclusion criterion ( < .15) and improved overall model fit, guided by clinical plausibility. Several alternative propensity score model specifications, including models incorporating ISS and RISC III, were explored. These variants modestly changed the matched sample but did not eliminate residual differences in ISS, severe head injury, and predicted mortality. Models including RISC III as a covariate markedly reduced the number of matched pairs without resolving the underlying indication bias. The final model thus reflects a pragmatic compromise between covariate balance and sample size. Model discrimination was modest (Nagelkerke’s R² = 0.115), consistent with substantial variation in timing decisions driven by unmeasured factors (e.g., detailed fracture morphology, intraoperative findings, and real-time hemodynamic trajectories). The final propensity score model included: AIS. Isolated thoracic trauma vs. combination trauma. Presence of relevant injuries outside the thorax (AIS ≥ 3 in other regions). Penetrating mechanism. Level 1 center. Age. Sex. Packed red blood cell transfusion in trauma room/OR. Weekend admission. Night-time admission. Presence of other thoracic injuries (lung contusion, laceration, hemothorax). “Relatively less severe” overall injury pattern (maximum AIS = 3 vs. > 3). Need for another emergency operation. We then performed an exact matching of the rounded percentages (W’keit for Rapid CWR), using a caliper of 0.2 SD of the logit of the propensity score. The matching was restricted to Rapid and Early patients (Day 0 vs. Days 1–3). Balance was assessed by standardized mean differences (SMDs), with values < 0.1 considered indicative of good balance. Statistical analysis Continuous variables are presented as mean ± standard deviation (SD) if normally distributed or median with interquartile range (IQR) otherwise. Categorical variables are presented as counts and percentages. In the unmatched cohort, group comparisons were conducted with Student’s t-test or Wilcoxon rank-sum test for continuous variables and χ² test or Fisher’s exact test for categorical variables. Within the matched cohort, paired analyses were performed. A two-sided p-value < 0.05 was considered statistically significant. All analyses were conducted using IBM SPSS Statistics (version 29, IBM Inc., Armonk, N.Y., USA). Missing data for key predi",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42351245\nDOI: 10.1186/s13054-026-06155-x\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Department of Trauma Surgery, Orthopaedics and Plastic Surgery, Goettingen University Medical Center, Universitaetsmedizin Goettingen, Robert-Koch-Strasse 40, Göttingen, 37075, Germany. christopher.spering@med.uni-goettingen.de.\n- Committee on Emergency Medicine, Intensive Care and Trauma Management (Sektion NIS) of the German Trauma Society (DGU), Berlin, Germany. christopher.spering@med.uni-goettingen.de.\n- Institute for Research in Operative Medicine (IFOM), University of Witten / Herdecke, Cologne, Germany.\n- Department of Trauma Surgery, Orthopaedics and Plastic Surgery, Goettingen University Medical Center, Universitaetsmedizin Goettingen, Robert-Koch-Strasse 40, Göttingen, 37075, Germany.\n- Department for Trauma Surgery, Helios Hospital Schwerin, Schwerin, Germany.\n- Department for Trauma- and Orthopedic Surgery, University Hospital Erlangen, Erlangen, Germany.\n\nPublic bibliographic metadata from Crossref:\nTitle: Rapid sequence versus early surgical stabilization of severe chest wall injuries: a propensity score-matched analysis from a multicenter trauma registry\nType: journal-article\nPublished: 2026-6-25\nPublisher: Springer Science and Business Media LLC\nFunders: Herzzentrum Göttingen\nCrossref abstract/snippet: Abstract Background The optimal timing for post traumatic Chest Wall Reconstruction (CWR) in severely injured / polytraumatized patients with severe chest wall instability remains a subject of debate. While early surgery within 72 h is associated with improved outcomes, the efficacy and safety of an even earlier “rapid sequence” approach on the day of admission are unclear. This study aims to compare outcomes of severely injured patients undergoing rapid sequence surgery (Day 0) versus early surgery (Days 1–3). Methods A retrospective analysis was conducted using data from the TraumaRegister DGU ® (2015–2023). Patients with serious chest wall injuries (AIS Thorax ≥3), an Injury Severity Score (ISS) ≥ 9, who survived the first 48 h and underwent CWR were included. Patients were stratified into a “Rapid Sequence” group (surgery on Day 0) and an “Early” group (surgery on Days 1–3). Propensity score matching (PSM) was performed to balance baseline characteristics, including injury patterns, demographics, and initial physiological status. Primary outcome was in-hospital mortality. Secondary outcomes included sepsis, multi-organ failure (MOF), and length of stay. Results From an initial cohort of 34,659 patients with severe chest wall injuries, 2,498 operatively treated patients with a known date of surgery were analyzed. 1,168 (46.8%) underwent rapid sequence surgery (Day 0) and 567 (22.7%) underwent early surgery (Days 1–3). Before matching, the Rapid Sequence group had a higher ISS (27.7 vs. 26.0), a higher incidence of severe head trauma (14.4% vs. 9.2%), and significantly higher mortality (8.4% vs. 4.1%). PSM yielded 500 matched pairs. Despite matching, the Rapid Sequence group retained a higher baseline injury burden (mean ISS: 28.1 vs. 26.2; mortality prognosis (Revise",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13308483"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13308483",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13308483"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-06-28T21:17:55.241Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42351245",
+          "rank": 1,
+          "clinicalPriorityScore": 6.5,
+          "rationale_ko": "고임팩트 저널인 Critical Care에 게재된 대규모 다기관 외상등록(TraumaRegister DGU, 34,659명 코호트) 기반 성향점수 매칭 연구로, 중증 흉벽손상에서 입원 당일(Day 0) 신속 수술 대 조기(Day 1-3) 수술의 사망률·패혈증·다장기부전 결과를 비교한다. 중증 다발외상 환자의 수술 타이밍이라는 실질적이고 논쟁적인 임상 질문을 다루며 응급·중환자 의사에게 직접적 의사결정 관련성이 높아 최우선 선정. 다만 관찰연구 설계로 인과추론에는 한계가 있다."
+        }
+      ],
+      "notes_ko": [
+        "후보 중 무작위배정 환자 대상 임상시험(RCT)으로 실제 환자 결과를 다룬 강력한 연구는 부족했고, 다수가 MIMIC/eICU 기반 후향적 머신러닝·예측모델 또는 단일기관 관찰연구로 직접적 진료변화 근거가 약함.",
+        "PMID 42362759(VL vs DL SALAD)은 RCT지만 시뮬레이션 연구라 임상 적용성에 제약이 있어 최우선에서 제외.",
+        "PMID 42329792(독일 패혈증 병원간 전원, N=347,826)은 표본은 크나 역학적 기술연구로 진료변화 영향이 제한적.",
+        "PMID 42351245(흉벽재건 수술 타이밍)은 고임팩트 저널·대규모 다기관·실질적 임상질문 측면에서 EM/CCM 뉴스레터 적합성이 가장 높다고 판단해 단독 선정.",
+        "다수 후보(교도소 여성건강, 정신증 NET, 만성기침 P2X3, 원위요골 골절 K-wire, 대퇴경부 내비게이션 등)는 EM/CCM 직접 관련성이 낮아 제외."
+      ]
+    }
+  },
+  "errors": []
+}
