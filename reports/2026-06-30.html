@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 6. 30. 오전 6:23</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-06-30</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Procalcitonin to Guide 7 vs 14 Days of Antibiotics in Bloodstream Infections: A Secondary Analysis of the BALANCE Trial.</h2>
+      <div class="paper-meta">
+        JAMA network open · 2026-Jun-01 · PMID 42371622
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Abstract + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Clinicians often feel uneasy stopping antibiotics at 7 days when a patient still looks inflamed. This secondary analysis tests whether a residually elevated day-7 PCT identifies bacteremia patients who would benefit from a longer course, directly informing antibiotic stewardship and the durability of the BALANCE 7-day strategy.</p>
+    <p class="ko">임상의는 7일째에도 환자가 여전히 염증 소견을 보일 때 항생제 중단을 망설인다. 이 이차 분석은 7일째 잔존 상승된 PCT가 더 긴 치료에서 이득을 볼 균혈증 환자를 식별하는지 검증하여, 항생제 관리와 BALANCE 7일 전략의 견고성에 직접적인 정보를 제공한다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Planned secondary analysis (cohort study) of the multicenter, randomized, noninferiority BALANCE trial; day-7 serum procalcitonin measured retrospectively by an antibody-based assay and blinded to treating clinicians.</p>
+      <p class="ko">다기관 무작위 비열등성 BALANCE 시험의 사전 계획된 이차 분석(코호트 연구); 7일째 혈청 프로칼시토닌을 항체 기반 검사로 후향적으로 측정했으며 치료 임상의에게는 비공개되었다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">BALANCE was conducted from 2014 to 2023; per author affiliations this was a Canadian multicenter effort (Toronto, Montreal, Sherbrooke, Calgary). The exact number of contributing sites for this PCT substudy is not available in the accessible sources.</p>
+      <p class="ko">BALANCE는 2014~2023년에 수행되었으며, 저자 소속에 따르면 캐나다 다기관 연구(토론토, 몬트리올, 셔브룩, 캘거리)였다. 이 PCT 하위연구의 정확한 기관 수는 접근 가능한 자료에 없다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">125 patients with available day-7 serum were included and analyzed: 65 (52%) with low PCT (&lt;250 pg/mL) and 60 (48%) with high PCT (≥250 pg/mL). This is the analyzed subset of the larger BALANCE trial, not the full BALANCE randomized cohort.</p>
+      <p class="ko">7일째 혈청이 확보된 125명이 포함·분석됨: 저PCT(&lt;250 pg/mL) 65명(52%), 고PCT(≥250 pg/mL) 60명(48%). 이는 전체 BALANCE 무작위 코호트가 아니라 분석된 하위집단이다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Patients enrolled in the BALANCE trial with bacteremia who had a serum sample collected on day 7 after antibiotic initiation. Median age 63 years (IQR 58-79); 80 (64.0%) male. Specific microbiology and exclusion criteria for the substudy are not detailed in the accessible sources.</p>
+      <p class="ko">항생제 시작 7일째 혈청 검체가 수집된 균혈증 BALANCE 시험 등록 환자. 중앙값 연령 63세(IQR 58-79), 남성 80명(64.0%). 하위연구의 구체적 미생물학 및 제외 기준은 접근 가능한 자료에 상세히 없다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Randomization to 7 days of antibiotics. Antibiotic selection, dosing, and route were at the discretion of the treating team; specific agents are not available in the accessible sources.</p>
+      <p class="ko">항생제 7일 치료로 무작위 배정. 항생제 선택, 용량, 투여 경로는 치료팀 재량이었으며, 구체적 약제는 접근 가능한 자료에 없다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Randomization to 14 days of antibiotics, also with agent/dose/route at the treating team&#39;s discretion.</p>
+      <p class="ko">항생제 14일 치료로 무작위 배정, 약제/용량/경로 역시 치료팀 재량.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Patients were followed for 90 days after study enrollment for the primary mortality outcome; secondary outcomes assessed within 28 days of the index positive blood culture. Substudy data analyzed January to June 2025.</p>
+      <p class="ko">1차 사망 결과를 위해 등록 후 90일간 추적; 2차 결과는 지표 양성 혈액배양 후 28일 이내 평가. 하위연구 데이터는 2025년 1월~6월 분석.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract and PubMed/Crossref metadata; no PMCID/open full text was available, so site counts and microbiology specifics could not be confirmed.</p>
+      <p class="ko">초록 및 PubMed/Crossref 메타데이터 기반; PMCID/공개 전문이 없어 기관 수와 미생물학 세부사항은 확인할 수 없었다.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">125 BALANCE-trial bacteremia patients with a day-7 serum sample (median age 63 years, IQR 58-79; 64.0% male); 65 had low PCT (&lt;250 pg/mL) and 60 had high PCT (≥250 pg/mL). The high-PCT group was older, had more comorbidities, and had more community-acquired bacteremia.</p>
+      <p class="ko">7일째 혈청 검체가 있는 BALANCE 시험 균혈증 환자 125명(중앙값 연령 63세, IQR 58-79; 남성 64.0%); 저PCT(&lt;250 pg/mL) 65명, 고PCT(≥250 pg/mL) 60명. 고PCT군은 더 고령이고 동반질환이 많으며 지역사회 획득 균혈증이 많았다.</p>
+      <p class="en"><strong>Setting:</strong> Canada (multicenter; Toronto, Montreal, Sherbrooke, Calgary per author affiliations), 2014-2023.</p>
+      <p class="ko">캐나다(다기관; 저자 소속 기준 토론토, 몬트리올, 셔브룩, 캘거리), 2014-2023년.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Day-7 serum PCT measured (blinded to clinicians) and dichotomized at 250 pg/mL; patients had received either 7 or 14 days of antibiotics by randomization in BALANCE. Antibiotic choice, dose, and route were at treating-team discretion.</p>
+      <p class="ko">7일째 혈청 PCT를 측정(임상의에게 비공개)하여 250 pg/mL 기준으로 이분; 환자는 BALANCE 무작위 배정에 따라 항생제를 7일 또는 14일 투여받았다. 항생제 선택·용량·경로는 치료팀 재량.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Comparison was between high vs low day-7 PCT groups for prognosis, and within the high-PCT group between 7-day and 14-day antibiotic durations.</p>
+      <p class="ko">비교는 예후에 대해 고PCT 대 저PCT 군 간, 그리고 고PCT 군 내에서 7일 대 14일 항생제 기간 간 이루어졌다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">All-cause 90-day mortality, high PCT vs low PCT group</p>
+    <p class="ko">전원인 90일 사망률, 고PCT 대 저PCT 군</p>
+    <p class="stat-line">21.6% (13/60) in high PCT vs 6.2% (4/65) in low PCT; ARD 15.5% (95% CI, 3.6%-27.5%) · ARD 15.5%, 95% CI 3.6%-27.5%</p>
+    <p class="ko">고PCT군 21.6%(13/60) 대 저PCT군 6.2%(4/65); 절대위험차 15.5%(95% CI, 3.6%-27.5%)</p>
+    <div class="interpretation">ⓘ Patients with a residually high day-7 PCT had roughly 3-fold higher 90-day mortality; the confidence interval excludes 0, so the prognostic association is statistically robust. This reflects sicker, older patients rather than proven causation.<br>7일째 잔존 고PCT 환자는 90일 사망률이 약 3배 높았고, 신뢰구간이 0을 포함하지 않아 예후 연관성이 통계적으로 견고하다. 이는 인과관계 입증이 아니라 더 중증·고령 환자를 반영한다.</div>
+    <div class="interpretation primer">ⓘ Absolute risk difference (ARD): 0 means no difference between groups; a 95% CI that does not cross 0 indicates a statistically significant difference at the conventional level.<br>절대위험차(ARD): 0은 군 간 차이 없음을 의미하며, 0을 포함하지 않는 95% CI는 통상적 수준에서 통계적으로 유의함을 나타낸다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Key subgroup</div>
+    <p class="en">90-day mortality with 7 vs 14 days of antibiotics among high-PCT patients</p>
+    <p class="ko">고PCT 환자에서 7일 대 14일 항생제의 90일 사망률</p>
+    <p class="stat-line">ARD -19.9% (95% CI, -1.7 to 41.7) · ARD -19.9%, 95% CI -1.7 to 41.7</p>
+    <p class="ko">절대위험차 -19.9%(95% CI, -1.7 ~ 41.7)</p>
+    <div class="interpretation">ⓘ Within the high-PCT group, longer therapy was not associated with lower mortality; the wide confidence interval crosses 0, so no benefit from prolonging antibiotics to 14 days was demonstrated. The small subgroup makes this estimate imprecise.<br>고PCT 군 내에서 더 긴 치료는 사망률 감소와 연관되지 않았고, 넓은 신뢰구간이 0을 포함하여 14일 연장의 이득이 입증되지 않았다. 작은 하위집단으로 추정치가 부정확하다.</div>
+    <div class="interpretation primer">ⓘ For an ARD, 0 means no absolute difference; when the 95% CI spans 0, a benefit or harm is not statistically established, especially in small subgroups.<br>ARD에서 0은 절대 차이 없음을 의미하며, 95% CI가 0을 가로지르면 특히 작은 하위집단에서 이득이나 해가 통계적으로 확립되지 않는다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">ICU mortality, hospital mortality, days alive and free of ICU/hospital within 28 days, and duration of mechanical ventilation</p>
+    <p class="ko">중환자실 사망률, 병원 사망률, 28일 이내 생존·비중환자실/비입원 일수, 기계환기 기간</p>
+    <p class="stat-line">Prespecified secondary outcomes; specific numeric values are not available in the accessible sources (abstract only). · Not available in accessible sources</p>
+    <p class="ko">사전 지정된 2차 결과; 구체적 수치는 접근 가능한 자료(초록만)에 없다.</p>
+    <div class="interpretation">ⓘ These secondary endpoints frame ICU/hospital-level burden, but without reported values their direction and significance cannot be judged from the accessible material.<br>이들 2차 종점은 중환자실/병원 수준의 부담을 보여주나, 수치가 보고되지 않아 접근 자료로는 방향과 유의성을 판단할 수 없다.</div>
+    <div class="interpretation primer">ⓘ Days-alive-and-free outcomes combine survival and avoidance of ICU/hospital; higher values are better and reflect both mortality and resource use.<br>생존·비입원 일수 결과는 생존과 중환자실/병원 회피를 결합하며, 값이 클수록 좋고 사망률과 자원 사용을 함께 반영한다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Elevated day-7 procalcitonin (≥250 pg/mL) was associated with markedly higher 90-day mortality (21.6% vs 6.2%; ARD 15.5%, 95% CI 3.6%-27.5%).</p><p class="ko">7일째 상승된 프로칼시토닌(≥250 pg/mL)은 현저히 높은 90일 사망률과 연관됐다(21.6% 대 6.2%; ARD 15.5%, 95% CI 3.6%-27.5%).</p></li>
+<li><p class="en">Among high-PCT patients, prolonging antibiotics to 14 days vs 7 days was not associated with improved 90-day mortality (ARD -19.9%, 95% CI -1.7 to 41.7).</p><p class="ko">고PCT 환자에서 항생제를 14일로 연장해도 7일 대비 90일 사망률 개선과 연관되지 않았다(ARD -19.9%, 95% CI -1.7 ~ 41.7).</p></li>
+<li><p class="en">High-PCT patients were older, had more comorbidities, and more community-acquired bacteremia, suggesting PCT marks baseline risk rather than need for longer therapy.</p><p class="ko">고PCT 환자는 더 고령이고 동반질환이 많으며 지역사회 획득 균혈증이 많아, PCT가 더 긴 치료의 필요보다 기저 위험을 표지함을 시사한다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In this planned secondary analysis of BALANCE, a residually elevated day-7 procalcitonin identified bacteremia patients at higher 90-day mortality risk, but extending antibiotics from 7 to 14 days did not improve mortality in those high-PCT patients. The authors conclude that 7 days of antibiotics appears sufficient for most patients with bloodstream infections regardless of the day-7 PCT level.</p>
+    <p class="ko">BALANCE의 사전 계획된 이차 분석에서 7일째 잔존 상승된 프로칼시토닌은 90일 사망 위험이 높은 균혈증 환자를 식별했으나, 항생제를 7일에서 14일로 연장해도 이들 고PCT 환자의 사망률을 개선하지 못했다. 저자들은 7일째 PCT 수치와 관계없이 대부분의 혈류감염 환자에게 7일 항생제가 충분해 보인다고 결론지었다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">This is a secondary cohort analysis of only 125 patients with available day-7 serum, far smaller than the full BALANCE trial, so the high-PCT subgroup comparison (ARD -19.9%, 95% CI -1.7 to 41.7) is underpowered and imprecise. PCT was measured retrospectively and blinded, so it was never used to guide therapy. The 250 pg/mL threshold is study-specific. High- and low-PCT groups differed in age, comorbidity, and community-acquired status (confounding by indication), and associations are not causal. Detailed microbiology, organism subgroups, specific antibiotics, baseline balance, and exact secondary outcome values are not available in the accessible sources.</p>
+    <p class="ko">이는 7일째 혈청이 확보된 125명만의 이차 코호트 분석으로 전체 BALANCE 시험보다 훨씬 작아, 고PCT 하위집단 비교(ARD -19.9%, 95% CI -1.7 ~ 41.7)는 검정력이 부족하고 부정확하다. PCT는 후향적·맹검으로 측정되어 치료 지침에 사용된 적이 없다. 250 pg/mL 기준은 연구 특이적이다. 고/저PCT 군은 연령, 동반질환, 지역사회 획득 여부에서 차이가 있어(적응증에 의한 교란) 연관성은 인과적이지 않다. 상세 미생물학, 균종 하위집단, 구체적 항생제, 기저 균형, 정확한 2차 결과 수치는 접근 가능한 자료에 없다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Highly relevant to ED and ICU antibiotic stewardship for bacteremia. It reinforces that a 7-day course is generally adequate for bloodstream infections and that a single biomarker (day-7 PCT) should not drive prolongation of therapy. Practically, clinicians can be reassured against reflexively extending antibiotics for a persistently elevated PCT, while still escalating evaluation for source control or complications in patients who remain clinically unwell. Because the evidence is hypothesis-generating and the high-PCT subgroup is small, individualized judgment remains necessary for complicated bacteremia (e.g., endovascular or undrained sources).</p>
+    <p class="ko">균혈증에 대한 응급실 및 중환자실 항생제 관리에 매우 관련이 높다. 혈류감염에 7일 치료가 일반적으로 충분하며 단일 바이오마커(7일째 PCT)가 치료 연장을 좌우해서는 안 됨을 강화한다. 실제로 임상의는 지속 상승된 PCT 때문에 반사적으로 항생제를 연장하지 않아도 안심할 수 있으며, 임상적으로 호전되지 않는 환자에서는 감염원 조절이나 합병증 평가를 강화해야 한다. 근거가 가설 생성적이고 고PCT 하위집단이 작으므로, 복잡 균혈증(예: 혈관내 또는 배농되지 않은 감염원)에는 개별화된 판단이 여전히 필요하다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Do not use a high day-7 procalcitonin to justify extending antibiotics beyond 7 days in bacteremia; it signals a sicker patient prognostically but did not identify a group that benefited from 14 days. Continue to apply the BALANCE 7-day strategy and address the underlying severity/source rather than reflexively prolonging therapy.</p>
+    <p class="ko">균혈증에서 7일째 높은 프로칼시토닌을 항생제를 7일 넘게 연장하는 근거로 사용하지 말 것. 이는 예후적으로 더 중증인 환자를 알릴 뿐 14일에서 이득을 본 군을 식별하지 못했다. BALANCE 7일 전략을 계속 적용하고 치료를 반사적으로 연장하기보다 기저 중증도/감염원을 다루어야 한다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42371622/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1001/jamanetworkopen.2026.20973" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
