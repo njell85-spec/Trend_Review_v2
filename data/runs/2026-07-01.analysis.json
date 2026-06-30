@@ -1,0 +1,266 @@
+{
+  "analyses": [
+    {
+      "pmid": "42337386",
+      "title": "Impact of Oxygen Targets on Sepsis Outcome: A Randomized Controlled Trial.",
+      "oneLineSummary": "In a single-center Chinese RCT of sepsis, a hyperoxygenation target (PaO2 >100-150 mmHg) lowered 28-day mortality versus a conservative target, but 90-day mortality did not differ.",
+      "oneLineSummary_ko": "중국 단일기관 패혈증 RCT에서 고산소화 목표(PaO2 >100-150 mmHg)가 보존적 목표보다 28일 사망률을 낮췄으나 90일 사망률에는 차이가 없었다.",
+      "whyItMatters": "The optimal oxygenation target in sepsis is unresolved, and large mechanically ventilated ICU trials (UK-ROX, PILOT, ICONIC) have produced conflicting signals; this trial directly tests targets in a sepsis-specific population and provocatively favors higher PaO2, challenging the prevailing trend toward conservative oxygenation.",
+      "whyItMatters_ko": "패혈증에서 최적의 산소화 목표는 아직 정립되지 않았고, 대규모 인공호흡 ICU 시험들(UK-ROX, PILOT, ICONIC)은 상충된 결과를 보였다. 본 시험은 패혈증 특정 환자군에서 목표치를 직접 비교하여 보존적 산소화 경향에 도전하며 더 높은 PaO2를 지지하는 도발적 결과를 제시한다.",
+      "clinicalQuestion": "In adult patients with sepsis, does the oxygenation target (conservative PaO2 60-80 mmHg, conventional 80-100 mmHg, or hyperoxygenation >100-150 mmHg) affect 28- and 90-day mortality?",
+      "clinicalQuestion_ko": "패혈증 성인 환자에서 산소화 목표(보존적 PaO2 60-80 mmHg, 통상 80-100 mmHg, 고산소화 >100-150 mmHg)가 28일 및 90일 사망률에 영향을 미치는가?",
+      "studyDetails": {
+        "design": "Prospective, single-center, single-blinded, three-arm randomized controlled trial; computer-generated random numbers with sealed, opaque envelopes managed by personnel independent of the research team.",
+        "design_ko": "전향적, 단일기관, 단일맹검, 3군 무작위 대조시험; 컴퓨터 생성 난수와 연구팀과 독립된 인력이 관리한 밀봉 불투명 봉투를 사용.",
+        "setting": "Emergency Department of Beijing Hospital (National Center of Gerontology), Beijing, China; enrollment November 2022 to January 2025. Funded by the National High Level Hospital Clinical Research Funding (Crossref metadata).",
+        "setting_ko": "중국 베이징 병원(국가노년의학센터) 응급의학과; 등록 기간 2022년 11월~2025년 1월. Crossref 메타데이터에 따르면 National High Level Hospital Clinical Research Funding 지원.",
+        "sampleSize": "330 patients enrolled (108/111/111 to conservative/conventional/hyperoxygenation); 60 (18%) excluded after randomization; 270 analyzed who completed the study: conservative n=86, conventional n=93, hyperoxygenation n=91.",
+        "sampleSize_ko": "330명 등록(보존적/통상/고산소화에 108/111/111명); 무작위배정 후 60명(18%) 제외; 연구를 완료한 270명 분석: 보존적 n=86, 통상 n=93, 고산소화 n=91.",
+        "eligibility": "Inclusion: age >=18 years; sepsis or septic shock by Sepsis-3 (2016) criteria; expected hospitalization >48 hours; informed consent. Exclusions listed in protocol included death within 48 h of enrollment, failure to achieve oxygenation target, diagnosis revised to exclude sepsis, and missing data (full exclusion list truncated in accessible excerpt).",
+        "eligibility_ko": "포함: 만 18세 이상; 2016 Sepsis-3 기준 패혈증 또는 패혈성 쇼크; 48시간 초과 입원 예상; 동의서 작성. 제외: 등록 48시간 내 사망, 산소화 목표 미달성, 패혈증 배제로 진단 변경, 결측 등(전체 제외 기준은 발췌문에서 잘림).",
+        "interventionDetails": "Hyperoxygenation target group: PaO2 >100 and <150 mmHg. Oxygen titrated by adjusting inspired oxygen concentration 5%-10% per step (1-2 L/min via nasal cannula or other precise-adjustment devices), escalating to advanced oxygen therapy devices as needed; ABG-guided with SpO2 monitoring on enrollment day and days 1, 3, 7, 14.",
+        "interventionDetails_ko": "고산소화 목표군: PaO2 >100 및 <150 mmHg. 흡입 산소농도를 단계당 5%-10%씩(비강 캐뉼라 또는 정밀 조절 기구로 1-2 L/min) 조정하고 필요시 고급 산소요법 기구로 단계적 상향; 동맥혈가스 기반으로 등록일과 1, 3, 7, 14일에 SpO2 모니터링.",
+        "comparatorDetails": "Two comparator arms: conservative oxygenation target (60 mmHg <= PaO2 < 80 mmHg) and conventional oxygenation target (PaO2 80-100 mmHg), titrated by the same protocol. Device choice and parameters individualized to clinical condition.",
+        "comparatorDetails_ko": "두 비교군: 보존적 산소화 목표(60 mmHg <= PaO2 < 80 mmHg)와 통상 산소화 목표(PaO2 80-100 mmHg)를 동일 프로토콜로 조정. 기구 선택과 설정은 임상 상태에 맞춰 개별화.",
+        "followUp": "Telephone follow-up at 28 and 90 days; in-hospital monitoring on enrollment day and days 1, 3, 7, and 14.",
+        "followUp_ko": "28일 및 90일에 전화 추적; 등록일과 1, 3, 7, 14일에 입원 중 모니터링.",
+        "sourceBasis": "PMC full text (PMC13313468) for design, eligibility, intervention/comparator targets, exclusions, and outcomes; PubMed metadata for affiliations; Crossref for publisher and funding.",
+        "sourceBasis_ko": "설계·적격성·중재/비교 목표·제외·결과는 PMC 전문(PMC13313468); 소속은 PubMed 메타데이터; 발행처와 연구비는 Crossref 기반."
+      },
+      "pico": {
+        "population": "Adults (>=18 y) with sepsis or septic shock (Sepsis-3) admitted to a Beijing emergency department, expected hospitalization >48 h",
+        "intervention": "Hyperoxygenation target PaO2 >100-150 mmHg, titrated by ABG-guided oxygen therapy",
+        "comparison": "Conservative target PaO2 60-80 mmHg and conventional target PaO2 80-100 mmHg",
+        "outcome": "Primary 28-day mortality; secondary 90-day mortality, mechanical ventilation, vasopressor use"
+      },
+      "pico_ko": {
+        "population": "베이징 응급실에 입원한 패혈증/패혈성 쇼크(Sepsis-3) 성인(만 18세 이상), 48시간 초과 입원 예상",
+        "intervention": "동맥혈가스 기반 산소요법으로 조정한 고산소화 목표 PaO2 >100-150 mmHg",
+        "comparison": "보존적 목표 PaO2 60-80 mmHg 및 통상 목표 PaO2 80-100 mmHg",
+        "outcome": "일차 28일 사망률; 이차 90일 사망률, 기계환기, 승압제 사용"
+      },
+      "detailedPico": {
+        "population": "270 analyzed adults with sepsis/septic shock (Sepsis-3) from one Beijing ED; baseline age, sex, vital signs, infection sites, comorbidities, WBC/PCT/CRP, PaO2, oxygenation ratio, and SOFA scores were comparable across groups.",
+        "population_ko": "베이징 한 응급실의 패혈증/패혈성 쇼크(Sepsis-3) 성인 270명 분석; 기저 연령·성별·활력징후·감염 부위·동반질환·WBC/PCT/CRP·PaO2·산소화비·SOFA 점수가 군 간 유사했다.",
+        "countrySetting": "China; single-center emergency department (Beijing Hospital), enrolled Nov 2022-Jan 2025.",
+        "countrySetting_ko": "중국; 단일기관 응급의학과(베이징 병원), 2022년 11월~2025년 1월 등록.",
+        "intervention": "Hyperoxygenation target PaO2 >100 and <150 mmHg, achieved by stepwise FiO2 titration (5%-10% increments; 1-2 L/min nasal cannula or escalation to advanced devices), ABG-guided.",
+        "intervention_ko": "고산소화 목표 PaO2 >100 및 <150 mmHg, 단계적 FiO2 조정(5%-10% 증가; 비강 캐뉼라 1-2 L/min 또는 고급 기구로 상향)으로 달성, 동맥혈가스 기반.",
+        "comparator": "Conservative target (PaO2 60 to <80 mmHg) and conventional target (PaO2 80-100 mmHg) using the same titration protocol.",
+        "comparator_ko": "동일 조정 프로토콜을 사용한 보존적 목표(PaO2 60~80 mmHg 미만)와 통상 목표(PaO2 80-100 mmHg).",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "28-day mortality",
+            "outcome_ko": "28일 사망률",
+            "result": "Conservative 40.7% (35/86), conventional 34.4% (32/93), hyperoxygenation 18.7% (17/91); omnibus P=0.005. Pairwise (Bonferroni) significant only conservative vs hyperoxygenation: chi2=10.132, P=0.001.",
+            "result_ko": "보존적 40.7%(35/86), 통상 34.4%(32/93), 고산소화 18.7%(17/91); 전체 P=0.005. 쌍별(Bonferroni) 보존적 대 고산소화에서만 유의: chi2=10.132, P=0.001.",
+            "statistics": "Omnibus chi-square P=0.005; pairwise chi2=10.132, P=0.001",
+            "interpretation": "Roughly half as many deaths in the hyperoxygenation group versus conservative; the conventional-vs-hyperoxygenation difference did not reach significance after correction.",
+            "interpretation_ko": "고산소화군 사망자가 보존적군의 약 절반 수준; 보정 후 통상 대 고산소화 차이는 유의하지 않았다.",
+            "statPrimer": "Chi-square P<0.05 indicates the group proportions differ more than expected by chance; it does not give an effect size or direction, so read the actual mortality percentages to see which arm fared better.",
+            "statPrimer_ko": "카이제곱 P<0.05는 군 간 비율이 우연 이상으로 다름을 의미하며 효과 크기나 방향은 주지 않으므로, 실제 사망률 백분율을 보고 어느 군이 더 나았는지 판단해야 한다."
+          },
+          {
+            "label": "Survival",
+            "outcome": "28-day Kaplan-Meier survival distribution (log-rank)",
+            "outcome_ko": "28일 Kaplan-Meier 생존 분포(log-rank)",
+            "result": "Survival time distributions differed significantly among the three groups: chi2=10.340, P=0.006.",
+            "result_ko": "세 군 간 생존시간 분포가 유의하게 달랐다: chi2=10.340, P=0.006.",
+            "statistics": "Log-rank chi2=10.340, P=0.006",
+            "interpretation": "Time-to-death curves separated across arms, consistent with the lower early mortality in the hyperoxygenation group.",
+            "interpretation_ko": "사망까지의 곡선이 군 간 분리되어 고산소화군의 낮은 초기 사망률과 일치한다.",
+            "statPrimer": "The log-rank test compares whole survival curves over time; P<0.05 means the curves differ. No hazard ratio or confidence interval was reported, so the magnitude of benefit cannot be quantified here.",
+            "statPrimer_ko": "Log-rank 검정은 시간에 따른 전체 생존곡선을 비교하며 P<0.05는 곡선이 다름을 의미한다. 위험비나 신뢰구간이 보고되지 않아 이득의 크기는 정량화할 수 없다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "90-day mortality",
+            "outcome_ko": "90일 사망률",
+            "result": "Conservative 50.0%, conventional 41.9%, hyperoxygenation 36.3%; P=0.179 (not significant).",
+            "result_ko": "보존적 50.0%, 통상 41.9%, 고산소화 36.3%; P=0.179(비유의).",
+            "statistics": "P=0.179",
+            "interpretation": "The numeric gradient still favored hyperoxygenation but the early mortality advantage was no longer statistically significant by 90 days.",
+            "interpretation_ko": "수치상 경향은 여전히 고산소화에 유리했으나 초기 사망 이득은 90일에는 통계적으로 유의하지 않았다.",
+            "statPrimer": "P>=0.05 means the observed differences are compatible with chance; a nonsignificant result is not proof of no difference, especially with this sample size.",
+            "statPrimer_ko": "P>=0.05는 관찰된 차이가 우연과 양립함을 의미하며, 비유의 결과가 차이 없음을 증명하지는 않는다(특히 이 표본 크기에서)."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Mechanical ventilation, endotracheal intubation, vasopressor use, ARDS incidence",
+            "outcome_ko": "기계환기, 기관삽관, 승압제 사용, ARDS 발생",
+            "result": "No significant differences among the three groups for mechanical ventilation, intubation, vasopressor use, or ARDS incidence (exact values not provided in accessible excerpt). Among ventilated patients, FiO2 differed significantly on days 3 and 7.",
+            "result_ko": "기계환기, 삽관, 승압제 사용, ARDS 발생에서 세 군 간 유의한 차이 없음(정확한 수치는 발췌문에 없음). 환기 환자 중 FiO2는 3일과 7일에 유의하게 달랐다.",
+            "statistics": "Reported as not significant; exact P/values not available in accessible sources",
+            "interpretation": "Major organ-support interventions were similar across arms, so the mortality signal was not explained by differing ventilation or vasopressor exposure.",
+            "interpretation_ko": "주요 장기지지 중재가 군 간 유사하여, 사망률 신호가 환기나 승압제 노출 차이로 설명되지 않는다.",
+            "statPrimer": "When a difference is reported as not significant, treat the arms as comparable for that endpoint; absence of exact values limits how confidently this can be judged.",
+            "statPrimer_ko": "비유의로 보고된 경우 해당 지표에서 군을 유사한 것으로 보되, 정확한 수치 부재로 판단의 확신은 제한된다."
+          },
+          {
+            "label": "Subgroup",
+            "outcome": "28-day mortality in older patients (>=65 y) and respiratory-source sepsis",
+            "outcome_ko": "고령(>=65세) 및 호흡기 기원 패혈증의 28일 사망률",
+            "result": "Older (>=65 y): significant difference among groups (P=0.006); pairwise conservative vs hyperoxygenation chi2=10.072, P=0.002. Respiratory-source sepsis: P=0.003 among groups.",
+            "result_ko": "고령(>=65세): 군 간 유의(P=0.006); 쌍별 보존적 대 고산소화 chi2=10.072, P=0.002. 호흡기 기원 패혈증: 군 간 P=0.003.",
+            "statistics": "Older: P=0.006, pairwise chi2=10.072 P=0.002; respiratory sepsis P=0.003",
+            "interpretation": "The hyperoxygenation benefit was directionally consistent in elderly and respiratory-infection subgroups, but these are exploratory and underpowered.",
+            "interpretation_ko": "고산소화 이득은 고령 및 호흡기감염 하위군에서 방향적으로 일관됐으나, 탐색적이고 검정력이 부족하다.",
+            "statPrimer": "Subgroup P values are hypothesis-generating; without interaction testing and with multiple comparisons, significant subgroup results can arise by chance.",
+            "statPrimer_ko": "하위군 P값은 가설 생성용으로, 교호작용 검정 없이 다중 비교가 이루어지면 유의한 하위군 결과가 우연히 나올 수 있다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "28-day mortality (primary outcome) differed significantly across the three groups: conservative 40.7% (35/86), conventional 34.4% (32/93), hyperoxygenation 18.7% (17/91), P=0.005; pairwise difference was significant only between conservative and hyperoxygenation (chi2=10.132, P=0.001).",
+        "Kaplan-Meier survival distributions differed significantly among groups (chi2=10.340, P=0.006); subgroup signals favored hyperoxygenation in patients >=65 years (P=0.006) and respiratory-source sepsis (P=0.003).",
+        "90-day mortality did not differ significantly (50.0% vs 41.9% vs 36.3%, P=0.179), and mechanical ventilation, intubation, vasopressor use, and ARDS incidence were similar across groups."
+      ],
+      "keyFindings_ko": [
+        "28일 사망률(일차 결과)이 세 군 간 유의하게 달랐다: 보존적 40.7%(35/86), 통상 34.4%(32/93), 고산소화 18.7%(17/91), P=0.005; 쌍별 비교에서 보존적 대 고산소화에서만 유의했다(chi2=10.132, P=0.001).",
+        "Kaplan-Meier 생존 분포가 군 간 유의하게 달랐고(chi2=10.340, P=0.006), 하위군에서 65세 이상(P=0.006) 및 호흡기 기원 패혈증(P=0.003)에서 고산소화가 유리했다.",
+        "90일 사망률은 유의한 차이가 없었고(50.0% 대 41.9% 대 36.3%, P=0.179), 기계환기·기관삽관·승압제 사용 및 ARDS 발생률도 군 간 유사했다."
+      ],
+      "conclusion": "In this single-center sepsis RCT, a hyperoxygenation target (PaO2 >100-150 mmHg) was associated with significantly lower 28-day mortality compared with a conservative target (PaO2 60-80 mmHg), but no significant differences were seen in 90-day mortality or in ventilation/vasopressor use. The early survival benefit did not persist to 90 days, and findings come from a single center with substantial post-randomization exclusions, warranting confirmation in multicenter trials.",
+      "conclusion_ko": "이 단일기관 패혈증 RCT에서 고산소화 목표(PaO2 >100-150 mmHg)는 보존적 목표(PaO2 60-80 mmHg)에 비해 28일 사망률이 유의하게 낮았으나, 90일 사망률이나 환기/승압제 사용에는 유의한 차이가 없었다. 초기 생존 이득은 90일까지 지속되지 않았고, 단일기관 연구이며 무작위배정 후 상당수가 제외되어 다기관 시험을 통한 확인이 필요하다.",
+      "clinicalTakeaway": "This hypothesis-generating single-center RCT suggests that in sepsis a higher PaO2 target (100-150 mmHg) may reduce early (28-day) mortality versus a conservative target, but with no 90-day benefit and notable methodologic limitations it should not yet change practice or override conservative-oxygenation guidance from larger ICU trials.",
+      "clinicalTakeaway_ko": "이 가설 생성적 단일기관 RCT는 패혈증에서 더 높은 PaO2 목표(100-150 mmHg)가 보존적 목표보다 초기(28일) 사망률을 낮출 수 있음을 시사하지만, 90일 이득이 없고 방법론적 한계가 뚜렷하여 아직 진료를 바꾸거나 대규모 ICU 시험의 보존적 산소화 권고를 대체해서는 안 된다.",
+      "limitations": "Single-center, single-blinded design at one Chinese emergency department limits generalizability and risks bias. Of 330 enrolled, 60 (18%) were excluded after randomization (refusal, death within 48 h, failure to reach target, diagnosis revision, missing data), leaving 270 analyzed—this post-randomization attrition (notably excluding early deaths) can bias mortality estimates and undermines intention-to-treat. The paradoxically high mortality in the conservative arm and the discordance between a significant 28-day but nonsignificant 90-day effect raise concerns about confounding, achieved separation, and chance. No effect estimate with confidence interval (e.g., adjusted HR/RR) for the primary outcome is provided in the accessible sources; only omnibus and pairwise P values are reported. Exact oxygen device/FiO2 dosing per arm, baseline table values, sample-size/power calculation, and adjustment for multiplicity beyond Bonferroni pairwise are not detailed in accessible excerpts. No clinical trial registration ID was found.",
+      "limitations_ko": "단일기관·단일맹검 설계(중국 한 응급실)로 일반화가 제한되고 비뚤림 위험이 있다. 등록된 330명 중 60명(18%)이 무작위배정 후 제외되어(거부, 48시간 내 사망, 목표 미달성, 진단 변경, 결측) 270명만 분석되었으며, 이러한 무작위배정 후 탈락(특히 조기 사망 제외)은 사망률 추정에 비뚤림을 일으키고 ITT 원칙을 약화시킨다. 보존적 군의 역설적으로 높은 사망률과 28일은 유의하나 90일은 비유의한 불일치는 교란·실제 분리 정도·우연 가능성을 시사한다. 접근 가능한 자료에는 일차 결과에 대한 신뢰구간 포함 효과추정치(예: 보정 HR/RR)가 없고 전체 및 쌍별 P값만 보고된다. 군별 정확한 산소 기구/FiO2 용량, 기저 표 수치, 표본수/검정력 계산, Bonferroni 외 다중성 보정은 제시되지 않았다. 임상시험 등록번호도 확인되지 않았다.",
+      "edIcuApplicability": "Directly relevant to ED and ICU clinicians managing sepsis/septic shock, since the intervention is bedside titration of oxygen to a PaO2 target using arterial blood gas guidance—routine in these settings. However, given the single-center design, large post-randomization exclusions, lack of a 90-day benefit, and conflict with larger ICU oxygen-target trials, clinicians should not adopt routine hyperoxygenation in sepsis. Reasonable current practice remains avoiding both hypoxemia and excessive hyperoxia while awaiting multicenter confirmation; this study is best used to flag that very conservative PaO2 (60-80 mmHg) targets may not be optimal in sepsis and to support equipoise for further trials.",
+      "edIcuApplicability_ko": "중재가 동맥혈가스를 기반으로 PaO2 목표에 맞춰 침상에서 산소를 조정하는 것이어서 패혈증/패혈성 쇼크를 다루는 응급실 및 ICU 임상의에게 직접 관련된다. 다만 단일기관 설계, 무작위배정 후 다수 제외, 90일 이득 부재, 대규모 ICU 산소목표 시험과의 상충을 고려할 때 패혈증에서 일상적 고산소화를 채택해서는 안 된다. 현재로서는 저산소혈증과 과도한 고산소를 모두 피하면서 다기관 확인을 기다리는 것이 합리적이며, 본 연구는 매우 보존적인 PaO2(60-80 mmHg) 목표가 패혈증에서 최적이 아닐 수 있음을 시사하고 추가 시험의 균형성을 뒷받침하는 데 활용하는 것이 좋다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 5,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "Primary outcome (28-day mortality) reported only as group proportions with omnibus P=0.005 and pairwise chi2/P; no adjusted effect estimate or 95% CI available in accessible sources.",
+        "Sample size: 330 enrolled, 60 excluded post-randomization, 270 analyzed (conservative n=86, conventional n=93, hyperoxygenation n=91); attrition asymmetry (early-death exclusion) is a key bias concern.",
+        "No ClinicalTrials.gov/registry ID found in PubMed; funded by National High Level Hospital Clinical Research Funding (Crossref).",
+        "Findings conflict with conservative-oxygenation signal of larger trials (UK-ROX 2025, PILOT, ICONIC); manual review recommended before any newsletter framing suggesting practice change."
+      ],
+      "paper": {
+        "pmid": "42337386",
+        "title": "Impact of Oxygen Targets on Sepsis Outcome: A Randomized Controlled Trial.",
+        "abstract": "BACKGROUND: Sepsis is a clinical syndrome marked by a dysregulated host response to infection, impairing oxygen delivery and utilization and causing organ dysfunction. Hypoxemia, which can cause significant tissue and organ damage, commonly occurs in sepsis. Thus, oxygen therapy is essential in patients with sepsis. However, the optimal oxygenation target for these patients remains controversial.\nOBJECTIVE: To evaluate the effects of different oxygenation targets on short- and medium-term outcomes in patients with sepsis.\nMETHODS: A prospective, single-center, randomized controlled trial was conducted. The primary outcome was 28-day mortality. Secondary outcomes included 90-day mortality and intergroup comparisons of mechanical ventilation and vasopressor use during hospitalization.\nRESULTS: In total, 270 patients were randomly assigned to the conservative oxygenation, conventional oxygenation, and hyperoxygenation target groups (n = 86, 93, and 91), of whom 35 (40.7%), 32 (34.4%), and 17 (18.7%) died by day 28, respectively. The 28-day mortality significantly differed between these groups ( P = 0.005). Pairwise comparison revealed a significant difference between the conservative oxygenation and hyperoxygenation target groups (χ 2 = 10.132, P = 0.001). Kaplan-Meier analysis showed significant differences in survival distributions among the groups (χ 2 = 10.340, P = 0.006). The 90-day mortality rates were 50.0%, 41.9%, and 36.3% in the conservative oxygenation, conventional oxygenation, and hyperoxygenation target groups, respectively, exhibiting no significant difference.\nCONCLUSION: Compared with conservative oxygen therapy, hyperoxygenation (PaO 2 : 100-150 mmHg) reduced 28-day mortality in patients with sepsis. However, no significant differences were observed among oxygenation targets regarding 90-day outcomes.",
+        "authors": [
+          "Chen X",
+          "Wen W",
+          "Zheng L"
+        ],
+        "authorAffiliations": [
+          "Emergency Department, Beijing Hospital, National Center of Gerontology, Beijing, China.",
+          "Institute of Geriatric Medicine, Chinese Academy of Medical Sciences, Beijing, China."
+        ],
+        "journal": "Shock (Augusta, Ga.)",
+        "pubDate": "2026-Jul-01",
+        "publicationTypes": [
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Sepsis",
+          "Female",
+          "Male",
+          "Prospective Studies",
+          "Oxygen",
+          "Oxygen Inhalation Therapy",
+          "Middle Aged",
+          "Aged",
+          "Respiration, Artificial",
+          "Treatment Outcome"
+        ],
+        "keywords": [
+          "Oxygen therapy",
+          "prognosis",
+          "sepsis"
+        ],
+        "doi": "10.1097/SHK.0000000000002865",
+        "pmcid": "PMC13313468",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42337386/",
+        "collectedAt": "2026-06-30T21:17:27.403Z",
+        "screeningData": {
+          "score": 10,
+          "relevanceMatches": [
+            "sepsis",
+            "mechanical ventilation",
+            "vasopressor"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 86,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: sepsis, mechanical ventilation, vasopressor",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=86"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "INTRODUCTION Sepsis is a life-threatening clinical syndrome that occurs when the body’s response to an infection becomes uncontrolled, disrupting oxygen delivery and usage within cells and subsequently damaging multiple organs (,). It is a common cause of death among patients in emergency departments and intensive care units (ICUs) (). According to 2018 data, sepsis has affected 27–30 million people worldwide every year, resulting in 6–9 million deaths annually (). Generally, sepsis is treated with antimicrobial therapy, fluid resuscitation, oxygen therapy, and other supportive measures. This condition frequently leads to hypoxemia, and the resulting tissue hypoxia can cause severe organ dysfunction. In clinical practice, oxygen therapy is one of the supportive treatments for patients with sepsis. Owing to microcirculatory and mitochondrial dysfunctions in sepsis cases, oxygen transport and utilization are often significantly impaired. Therefore, maintaining optimal oxygenation is significant in sepsis treatment. Oxygen therapy can improve the patient’s oxygenation status and alleviate tissue and organ dysfunction caused by hypoxemia, thereby improving patient prognosis. The hyperoxygenation target has demonstrated beneficial effects in sepsis and multiple organ dysfunction syndrome. According to studies on sepsis experimental models, hyperoxia regulates inflammatory cytokines and antioxidants, reduces apoptosis, improves organ function, and exerts anti-inflammatory effects (). However, oxygen therapy can also induce pathological effects. Supraphysiological concentrations of oxygen may induce increased production of reactive oxygen species, resulting in the exacerbation of oxidative stress, enhancement of inflammatory responses, causing lung injury and impaired oxygen uptake, and subsequent aggravation of cell death and organ dysfunction (–). Following suggestions of a U-shaped relationship between PaO and mortality in several observational studies, multiple trials have sought to define the optimal oxygenation range in ICU patients (–). However, the appropriate oxygenation target for critically ill patients remains uncertain, with both domestic and international studies yielding inconsistent findings. The 2025 UK-ROX trial, published in 2025, reported no significant difference in prognosis between patients receiving conservative oxygen therapy (maintaining SpO at 88% - 92%) and those managed with conventional oxygen therapy, in which oxygen administration was adjusted by clinicians according to routine practice (). Given that patients with sepsis have unique macro- and/or microcirculatory oxygen delivery and cellular utilization abnormalities, traditional oxygen therapy strategies aimed at maintaining partial pressure of oxygen in arterial blood (PaO) above 60 mmHg may be unsuitable for septic patients. A recent study examining oxygen targets in patients with sepsis reported that higher PaO levels (≥80 mmHg) may be associated with better prognosis compared with conservative PaO targets (). Presently, evidence-based oxygenation targets specifically for patients with sepsis remain unidentified. Hence, this study aimed to determine the optimal oxygenation target for oxygen therapy in patients with sepsis by comparing the short- and medium-term mortality of such patients exposed to different oxygenation targets. MATERIALS AND METHODS Study participants This study enrolled 330 patients with sepsis who were admitted to the Emergency Department of Beijing Hospital between November 2022 and January 2025. The inclusion criteria were as follows: aged ≥18 years; diagnosed with sepsis or septic shock according to the Sepsis 3.0 definition of 2016 and expected to be hospitalized for >48 hours; and voluntarily agreed to participate in the study and signed informed consent. Conversely, the exclusion criteria were as follows: STUDY METHODS Study design This study was a prospective, single-center, single-blinded, randomized controlled trial (RCT). Using the sealed envelope method, we randomly assigned the eligible patients to one of the three groups: conservative oxygenation, conventional oxygenation, and hyperoxygenation target groups. The hospital’s ethics committee approved the study protocol, and informed consent was obtained from the patients or their legal representative. Grouping and interventions After enrollment, patients were randomized into the three groups mentioned above, each with a corresponding oxygenation target: conservative oxygenation target group (PaO: 60 mmHg ≤ PaO < 80 mmHg), conventional oxygenation target group (PaO: 80–100 mmHg), and hyperoxygenation target group (PaO: >100 and <150 mmHg). If the arterial blood gas analysis at the initial data collection failed to meet the target, the inspired oxygen concentration was gradually adjusted by 5% - 10% each time (1–2 L/min via nasal cannula or other devices with precise adjustment). The choice of oxygen therapy methods and adjustment of parameters was based on the patient’s clinical condition. More advanced oxygen therapy devices were employed when necessary. To promptly achieve the target oxygenation level, oxygen delivery devices and parameters were adjusted without delay. Following adjustment, peripheral oxygen saturation (SpO) was monitored and compared with PaO values from arterial blood gas analysis. PaO measurements were derived from repeated arterial punctures as clinically indicated. Regarding the randomization method, after enrollment, patients were randomly assigned to the conservative oxygenation target group, conventional oxygenation target group, or hyperoxygenation target group. Each enrolled patient was numbered sequentially according to the order of enrollment. Personnel not involved in the study then used a computer to generate a random number corresponding to each patient. Patients were sorted in ascending order based on these random numbers and allocated to the three experimental groups accordingly. Sealed, opaque envelopes containing the random numbers and group assignments were prepared and managed by personnel independent of the research team. These envelopes were retrieved in the order of enrollment and handed to the treating physicians. Each envelope contained a sheet specifying the patient’s random number and assigned group (conservative oxygenation target group, conventional oxygenation target group, or hyperoxygenation target group). Data collection Basic information such as patient name, sex, age, admission time, primary symptoms during current admission, past medical history, main admission diagnosis, infection site, and other baseline data were recorded. Regarding observation indicators, we recorded the following on enrollment day and on days 1, 3, 7, and 14 after enrollment: body temperature, heart rate, respiratory rate, systolic blood pressure, oxygen saturation, consciousness, Glasgow Coma Scale score, respiratory support type and duration, oxygen concentration, complete blood count, liver and renal function, coagulation profile, blood gas analysis, myocardial enzymes, N-terminal pro-B-type natriuretic peptide, procalcitonin, C-reactive protein (CRP), lactate, and Sequential Organ Failure Assessment (SOFA) score. Clinical outcomes Patients were followed up via telephone call to assess outcomes at 28 and 90 days. The primary outcome was 28-day mortality after enrollment. Secondary outcomes included 90-day mortality and comparisons of mechanical ventilation and vasopressor use between the three groups during hospitalization. Mechanical ventilation was defined as encompassing both noninvasive ventilator-assisted ventilation and invasive ventilator-assisted ventilation. Statistical analysis Continuous variables with normal distribution are expressed as mean (standard deviation), with groups compared using Student’s -test. Those with non-normal distribution are expressed as median [interquartile range (IQR)] and were compared using the Wilcoxon rank-sum test. The normality of continuous variables was determined using Shapiro–Wilk test. Conversely, categorical variables, expressed as percentages or IQRs, were compared using the chi-square test or Fisher’s exact test. For survival analysis, Kaplan–Meier curves were plotted to evaluate 28- and 90-day mortality, comparing the effects of different oxygenation targets across the three groups. Differences in the distribution of 28- and 90-day survival times were assessed using the log-rank method. All statistical tests were two-sided, and a value below 0.05 was considered statistically significant. All statistical data were analyzed using SPSS software version 22.0. RESULTS Patient enrollment Among the 330 enrolled patients, 108, 111, and 111 were randomly assigned to the conservative oxygenation, conventional oxygenation, and hyperoxygenation target groups, respectively. However, 60 patients were subsequently excluded for the following reasons: patient or family refusal to continue participation, death within 48 hours of enrollment, failure to achieve oxygenation targets, diagnosis revision to exclude sepsis during the study period, discovery of exclusion criteria during the study, and missing data. Ultimately, 270 patients completed the study, with 86, 93, and 91 in the conservative oxygenation, conventional oxygenation, and hyperoxygenation target groups, respectively (Fig. ). Comparison of baseline characteristics Age, sex, and vital signs at enrollment demonstrated no statistically significant differences among the three groups. Infection sites, comorbidities, and laboratory parameters such as white blood cell, procalcitonin, and C-reactive protein were also comparable among the groups. Furthermore, no significant differences were noted in PaO or oxygenation ratio at enrollment, indicating that all three groups had a comparable baseline oxygenation status. Likewise, SOFA scores at enrollment showed no significant difference, suggesting that the severity of organ damage was similar among the groups (Table ). Comparison of indicators at each time point Unlike on day 1, SOFA scores significantly differ between the three groups on day 3 ( < 0.01), day 7 ( < 0.01), and day 14 ( = 0.013) (Table ). Primary and secondary outcomes On day 28, the hyperoxygenation target group recorded the lowest number of deaths [17 (18.7%)], whereas the conservative and conventional oxygenation target groups reported 35 (40.7%) and 32 (34.4%) deaths, respectively. Analysis showed that 28-day mortality significantly differed among the three groups ( = 0.005; Table ). In pairwise comparisons with Bonferroni correction, a significant difference was only observed between the conservative oxygenation and hyperoxygenation target groups (χ = 10.132, = 0.001; Table ). The overall survival time distribution significantly differed among the three groups (χ = 10.340, = 0.006) (Fig. ). At 90 days, mortality was highest in the conservative oxygenation target group, followed by the conventional oxygenation and hyperoxygenation target groups (50.0%, 41.9%, and 36.3%, respectively; = 0.179). No significant differences were observed among the groups in the use of mechanical ventilation, endotracheal intubation, or vasopressors. Similarly, the incidence of acute respiratory distress syndrome did not differ significantly (Table ). However, on days 3 and 7, FiO levels differed significantly among mechanically ventilated patients across the groups (Table ). Analysis further revealed that 28-day mortality varied significantly among older patients (≥65 years) ( = 0.006; Table ). In pairwise comparisons with Bonferroni correction, a significant difference was observed only between the conservative oxygenation and hyperoxygenation target groups (χ = 10.072, = 0.002; Table ), consistent with the overall trial population. Moreover, 28-day mortality also differed significantly among patients with respiratory infections leading to sepsis across the three groups ( = 0.003; Table ). DISCUSSION Sepsis is a life-threatening clinical syndrome. In patients with sepsis, tissue hypoxia caused by hypoxemia can significantly aggravate organ dysfunction, highlighting the urgent need for appropriate oxygen therapy to effectively improve the patient’s oxygenation status and prognosis. However, inappropriate oxygen therapy can be counterproductive. Particularly, hyperoxia caused by excessive oxygen therapy may result in several negative effects, such as direct pulmonary toxicity; tissue ischemia/reperfusion injury aggravation through reactive oxygen species and oxidative stress pathways; and excessive vasoconstriction caused by high oxygen concentrations, leading to inadequate organ perfusion (–). In modern medical practice, conservative oxygen therapy aims to maintain PaO around 60 mmHg, which can achieve approximately 90% hemoglobin saturation (). This target may be reasonable for patients with normal oxygen delivery and utilization. Hyperoxia is typically defined as PaO > 100 mmHg; in some studies, the threshold is set at 120 or 150 mmHg (,,). In patients with sepsis, macrocirculatory or microcirculatory oxygen delivery and consumption are often imbalanced. Therefore, oxygenation strategies in sepsis management remain debatable, with insufficient high-quality clinical evidence to support the superiority of either hyperoxia or conservative oxygen therapy. Currently, studies on oxygenation targets in critically ill patients continue to yield inconsistent results domestically and internationally. Multiple observational studies have shown a U-shaped relationship between PaO and mortality, indicating that excessively high and low PaO levels are associated with increased mortality risk (–). In RCTs, a single-center ICU trial published in JAMA in 2016 () showed that the absolute risk of mortality in patients admitted to the ICU decreased by 8.6% in the conservative oxygenation target group (PaO: 70–100 mmHg, SpO: 94% - 98%) compared with that in the conventional oxygenation target group (SpO: 97% - 100%). However, no subgroup analysis was conducted for patients with sepsis. According to the 2023 ICONIC study (), mortality among ICU patients receiving mechanical ventilation tended to increase in the low oxygen target group (PaO: 55–80 mmHg) compared with that in the high oxygen target group (PaO: 110–150 mmHg). The PILOT study (), a randomized crossover controlled trial in critically ill patients requiring mechanical ventilation, found no significant differences in 28-day ventilator-free days or 28-day mortality among groups assigned to lower SpO-targets (88% - 92%), intermediate targets (92% - 96%), or higher targets (96% - 100%). These findings do not support the U-shaped relationship between oxygenation and clinical outcomes suggested by earlier observational studies. The UK-ROX trial (), published in JAMA in 2025, is currently the largest RCT that examined oxygenation targets in mechanically ventilated ICU patients. This RCT enrolled 16,434 participants and found that 90-day all-cause mortality did not significantly differ between the conservative oxygenation target group (target SpO: 88% - 92% with minimal FiO) and the conventional oxygenation target group (oxygen therapy adjusted by clinicians without a predefined FiO or SpO target) (35.4% 34.9%; adjusted risk difference, 0.7 percentage points; = 0.28). Of note, the research population in these RCTs exhibited heterogeneity. Therefore, although these studies provide some evidence regarding oxygenation targets in critically ill patients, the optimal oxygenation range varies for patients with different diseases, including sepsis. Currently, the appropriate oxygenation target for patients with sepsis remains inconclusive. A 2023 retrospective analysis focusing on such patients () found no definitive correlation between hyperoxemia (PaO ≥ 100 mmHg) and patient survival. Conversely, a 2024 multicenter cohort study involving 2,422 critically ill adult patients with sepsis () found t",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42337386\nDOI: 10.1097/SHK.0000000000002865\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Emergency Department, Beijing Hospital, National Center of Gerontology, Beijing, China.\n- Institute of Geriatric Medicine, Chinese Academy of Medical Sciences, Beijing, China.\n\nPublic bibliographic metadata from Crossref:\nTitle: Impact of Oxygen Targets on Sepsis Outcome: A Randomized Controlled Trial\nType: journal-article\nPublished: 2026-5-13\nPublisher: Ovid Technologies (Wolters Kluwer Health)\nFunders: the National High Level Hospital Clinical Research Funding\nCrossref abstract/snippet: Background: Sepsis is a clinical syndrome marked by a dysregulated host response to infection, impairing oxygen delivery and utilization and causing organ dysfunction. Hypoxemia, which can cause significant tissue and organ damage, commonly occurs in sepsis. Thus, oxygen therapy is essential in patients with sepsis. However, the optimal oxygenation target for these patients remains controversial. Objective: To evaluate the effects of different oxygenation targets on short- and medium-term outcomes in patients with sepsis. Methods: A prospective, single-center, randomized controlled trial was conducted. The primary outcome was 28-day mortality. Secondary outcomes included 90-day mortality and intergroup comparisons of mechanical ventilation and vasopressor use during hospitalization. Results: In total, 270 patients were randomly assigned to the conservative oxygenation, conventional oxygenation, and hyperoxygenation target groups (n = 86, 93, and 91), of whom 35 (40.7%), 32 (34.4%), and 17 (18.7%) died by day 28, respectively. The 28-day mortality significantly differed between these groups ( P = 0.005). Pairwise comparison revealed a significant difference between the conservative oxygenation and hyperoxygenation target groups (χ 2 = 10.132, P = 0.001). Kaplan–Meier analysis showed significant differences in survival distributions among the groups (χ 2 = 10.340, P = 0.006). The 90-day mortality rates were 50.0%, 41.9%, and 36.3% in the conservative oxygenation, conventional oxygenation, and hyperoxygenation target groups, respectively, exhibiting no significant difference. Conclusion: Compared with conservative oxygen therapy, hyperoxygenation (PaO 2 : 100–150 mmHg) reduced 28-day mortality in patients with sepsis. However, no significant differences were observed among",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13313468"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13313468",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13313468"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-06-30T21:17:57.226Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42337386",
+          "rank": 1,
+          "clinicalPriorityScore": 7.5,
+          "rationale_ko": "패혈증 환자에서 산소 목표치(보존적 vs 통상 vs 고산소)를 비교한 전향적 무작위대조연구로, 28일 사망률이 통계적으로 유의하게 차이를 보였습니다(보존적 40.7%, 통상 34.4%, 고산소 18.7%). 산소 요법은 응급실/중환자실에서 보편적으로 시행되는 중재이며, 1차 결과로 사망률을 사용한 RCT라는 점에서 침상 진료에 직접적 시사점이 있어 최우선으로 선정했습니다. 다만 단일기관·소규모(N=270)이며 보존적 목표가 오히려 불리하게 나온 결과는 기존 문헌과 상충되므로 해석에 주의가 필요합니다."
+        }
+      ],
+      "notes_ko": [
+        "후보 중 환자 결과(사망률)를 1차 평가변수로 한 진정한 무작위대조연구는 PMID 42337386(패혈증 산소 목표)과 PMID 42362759(SALAD 후두경)뿐이었으나, 후자는 시뮬레이션 연구로 실제 환자 결과가 아니어서 우선순위를 낮췄습니다.",
+        "다수 후보(예: 42363536 마그네슘, 42332467 염소 궤적, 42363537/42350023/42343843 머신러닝 모델)는 MIMIC 등 데이터베이스 기반 후향적 관찰연구로, 실용적 가치는 있으나 인과성·실행 가능성 측면에서 즉각적 진료 변화 근거로는 약했습니다.",
+        "42348651(LMIC 손상통제개복술 메타분석)과 42356329(케톤식 스코핑 리뷰), 42366166(저가치 혈액배양 스코핑 리뷰)는 종설·근거합성이나 직접적 실행 권고보다는 현황 정리에 가까워 차순위로 평가했습니다.",
+        "정신과 자해(42373177), 간호 교육/QI(42374846, 42366876), 정형외과 술기(42364204, 42335459) 등은 EM/CCM 일선 진료와의 직접 관련성이 낮아 제외했습니다.",
+        "선정 논문은 단일기관·표본 규모가 작고 결과 방향이 기존 보존적 산소요법 근거와 상반되므로, 뉴스레터에서는 확정적 권고가 아닌 '논의 유발형' 근거로 제시하는 것이 바람직합니다."
+      ]
+    }
+  },
+  "errors": []
+}
