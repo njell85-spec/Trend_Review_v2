@@ -1,0 +1,263 @@
+{
+  "analyses": [
+    {
+      "pmid": "42362759",
+      "title": "Direct- versus video laryngoscopy during suction assisted laryngoscopy and airway decontamination (SALAD): A randomized controlled simulation study.",
+      "oneLineSummary": "In a SALAD massive-contamination manikin model, hyperangulated videolaryngoscopy dramatically outperformed direct laryngoscopy for first-pass success and speed.",
+      "oneLineSummary_ko": "SALAD 대량 오염 마네킹 모델에서 과각형 비디오후두경이 직접후두경보다 첫 시도 성공률과 속도에서 크게 우수했다.",
+      "whyItMatters": "Aspiration and contaminated airways are common, high-stakes emergency scenarios where first-pass success is critical; this trial adds controlled evidence that hyperangulated VL may be preferable within the SALAD workflow, though only in simulation.",
+      "whyItMatters_ko": "흡인과 오염된 기도는 첫 시도 성공이 매우 중요한 흔하고 위험한 응급 상황이며, 이 연구는 SALAD 워크플로우에서 과각형 VL이 선호될 수 있다는 통제된 근거를 더한다(다만 시뮬레이션에 한함).",
+      "clinicalQuestion": "In a standardized SALAD simulation of massive airway contamination, does hyperangulated videolaryngoscopy improve first-pass success and reduce intubation and ventilation times compared with direct laryngoscopy?",
+      "clinicalQuestion_ko": "대량 기도 오염을 표준화한 SALAD 시뮬레이션에서 과각형 비디오후두경이 직접후두경에 비해 첫 시도 성공률을 높이고 삽관 및 환기 시간을 단축하는가?",
+      "studyDetails": {
+        "design": "1:1 randomized controlled simulation (manikin) study, single-center, reported per CONSORT 2025; prospectively registered in the German Clinical Trials Register (DRKS00034683) on July 15, 2024. Allocation concealment via sequentially numbered sealed opaque envelopes prepared by an independent investigator; participants blinded to the study endpoint; outcomes collected by an external assessor not otherwise involved.",
+        "design_ko": "1:1 무작위 대조 시뮬레이션(마네킹) 연구, 단일기관, CONSORT 2025에 따라 보고; 독일 임상시험등록소(DRKS00034683)에 2024년 7월 15일 전향적 등록. 모집·등록·자료수집·결과평가에 관여하지 않은 독립 조사자가 준비한 순번 밀봉 불투명 봉투로 배정 은폐; 참가자는 종료점에 눈가림; 결과는 외부 평가자가 수집.",
+        "setting": "Heidelberg University Hospital, Germany (~2600-bed university maximum-care hospital), during in-house and external continuing medical education events between July 15, 2024 and September 30, 2025.",
+        "setting_ko": "독일 하이델베르크 대학병원(약 2600병상 대학 최상위 진료 병원)에서 2024년 7월 15일~2025년 9월 30일 사이 원내·외부 연수교육 행사 중 시행.",
+        "sampleSize": "215 physicians assessed for eligibility; 15 excluded before randomization (12 declined, 3 incomplete baseline data); 200 randomized and analyzed, 100 in DL and 100 in hyperangulated VL. No separate ITT/per-protocol split reported. (Sample-size calculation targeted ~109/group; final set at 100/group for feasibility.)",
+        "sampleSize_ko": "215명의 의사가 적격성 평가; 무작위화 전 15명 제외(12명 참여 거부, 3명 기저자료 불완전); 200명이 무작위 배정·분석되어 DL 100명, 과각형 VL 100명. 별도의 ITT/프로토콜순응 구분은 보고되지 않음. (표본수 계산은 군당 약 109명 목표였으나 실행 가능성 위해 군당 100명으로 설정.)",
+        "eligibility": "Inclusion: licensed physicians actively involved in clinical airway management with prior experience in both DL and VL and familiarity with the SALAD technique. Exclusion: refusal to participate or incomplete baseline data. Population was mostly anesthesiologists (86-87%), plus internal medicine, surgery, and other specialties.",
+        "eligibility_ko": "포함: DL과 VL 모두 경험이 있고 SALAD 기법에 익숙하며 임상 기도관리에 적극 참여하는 면허 의사. 제외: 참여 거부 또는 기저자료 불완전. 대상은 주로 마취과 의사(86-87%)이며 내과·외과·기타 전공 포함.",
+        "interventionDetails": "Hyperangulated videolaryngoscopy using the C-MAC D-Blade (Karl Storz, Germany) within a standardized SALAD workflow. Shared equipment: DuCanto rigid suction catheter (SSCOR), size 7.5 AEROtube endotracheal tube with stylet, Ambu Spur II bag, Nasco SALAD simulator with 750 mL of thickened, dyed simulated vomit delivered by manual pump; airway, tube and stylet lubricated.",
+        "interventionDetails_ko": "표준화된 SALAD 워크플로우 내에서 C-MAC D-Blade(Karl Storz, 독일)를 이용한 과각형 비디오후두경술. 공통 장비: DuCanto 경성 흡인 카테터(SSCOR), 스타일렛 포함 7.5 AEROtube 기관튜브, Ambu Spur II 백, 수동 펌프로 750 mL의 점도를 높이고 착색한 모의 구토물을 주입하는 Nasco SALAD 시뮬레이터; 기도·튜브·스타일렛 윤활 처리.",
+        "comparatorDetails": "Direct laryngoscopy using a HEINE Optotechnik Standard LED laryngoscope with a Macintosh blade size 3 (Gilching, Germany) within the same standardized SALAD workflow and identical shared equipment.",
+        "comparatorDetails_ko": "동일한 표준화 SALAD 워크플로우와 동일 공통 장비 하에서 Macintosh 3번 날의 HEINE Optotechnik Standard LED 후두경(독일 Gilching)을 이용한 직접후두경술.",
+        "followUp": "Outcomes captured during a single simulated intubation attempt per participant (first-pass success, time to successful intubation, time to first ventilation); no longitudinal follow-up applicable.",
+        "followUp_ko": "참가자당 단일 시뮬레이션 삽관 시도 동안 결과 측정(첫 시도 성공, 성공적 삽관까지 시간, 첫 환기까지 시간); 종단 추적은 해당되지 않음.",
+        "sourceBasis": "Based on the article abstract, open PMC full text (PMC13309530) including Methods/Results and Tables 1-2, and Crossref/PubMed metadata.",
+        "sourceBasis_ko": "논문 초록, 공개 PMC 전문(PMC13309530)의 방법/결과 및 표 1-2, Crossref/PubMed 메타데이터에 근거함."
+      },
+      "pico": {
+        "population": "200 licensed physicians (mostly anesthesiologists) performing intubation on a SALAD simulator of massive airway contamination",
+        "intervention": "Hyperangulated videolaryngoscopy (C-MAC D-Blade) within a standardized SALAD workflow",
+        "comparison": "Direct laryngoscopy (Macintosh 3) within the same SALAD workflow",
+        "outcome": "First-pass success (primary); time to successful intubation and time to first ventilation (secondary)"
+      },
+      "pico_ko": {
+        "population": "대량 기도 오염 SALAD 시뮬레이터에서 삽관을 수행하는 면허 의사 200명(주로 마취과)",
+        "intervention": "표준화 SALAD 워크플로우 내 과각형 비디오후두경(C-MAC D-Blade)",
+        "comparison": "동일 SALAD 워크플로우 내 직접후두경(Macintosh 3)",
+        "outcome": "첫 시도 성공(주요); 성공적 삽관까지 시간 및 첫 환기까지 시간(부차)"
+      },
+      "detailedPico": {
+        "population": "200 licensed physicians actively involved in clinical airway management, experienced in DL, VL and SALAD, recruited at CME events at a German university hospital. Predominantly anesthesiologists (DL 86, VL 87), with internal medicine, surgery and other specialties; mean age ~37 years, mean experience ~9 years; baseline characteristics balanced between arms.",
+        "population_ko": "임상 기도관리에 적극 참여하고 DL·VL·SALAD 경험이 있는 면허 의사 200명으로, 독일 대학병원 연수교육 행사에서 모집. 주로 마취과 의사(DL 86, VL 87)이며 내과·외과·기타 전공 포함; 평균 연령 약 37세, 평균 경력 약 9년; 기저 특성은 두 군 간 균형.",
+        "countrySetting": "Germany; single-center manikin simulation at Heidelberg University Hospital, 2024-2025.",
+        "countrySetting_ko": "독일; 하이델베르크 대학병원 단일기관 마네킹 시뮬레이션, 2024-2025년.",
+        "intervention": "Hyperangulated videolaryngoscopy with C-MAC D-Blade during standardized SALAD with DuCanto suction, 7.5 ETT with stylet, and 750 mL of thickened simulated vomit.",
+        "intervention_ko": "DuCanto 흡인, 스타일렛 포함 7.5 튜브, 750 mL 점도 상승 모의 구토물을 사용한 표준화 SALAD 중 C-MAC D-Blade를 이용한 과각형 비디오후두경술.",
+        "comparator": "Direct laryngoscopy with a HEINE Macintosh size 3 blade using the identical SALAD workflow and equipment.",
+        "comparator_ko": "동일 SALAD 워크플로우와 장비를 사용한 HEINE Macintosh 3번 날의 직접후두경술.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "First-pass success (successful intubation on first attempt without removing/reinserting the blade; esophageal misalignment counted as failure)",
+            "outcome_ko": "첫 시도 성공(날의 제거/재삽입 없이 첫 시도에 성공적 삽관; 식도 오정렬은 실패로 간주)",
+            "result": "VL 94.0% (94/100) vs DL 58.0% (58/100); risk difference 36% (95% CI 25-47); OR 11.34 (95% CI 4.54-28.35); p<0.001",
+            "result_ko": "VL 94.0% (94/100) 대 DL 58.0% (58/100); 위험차 36% (95% CI 25-47); OR 11.34 (95% CI 4.54-28.35); p<0.001",
+            "statistics": "OR 11.34, 95% CI 4.54-28.35; risk difference 36% (95% CI 25-47); p<0.001",
+            "interpretation": "Nearly all VL attempts succeeded first-pass versus roughly six in ten with DL, a large absolute and relative advantage for VL.",
+            "interpretation_ko": "VL은 거의 모든 시도가 첫 시도에 성공한 반면 DL은 약 열 중 여섯으로, VL이 절대적·상대적으로 큰 이점을 보였다.",
+            "statPrimer": "OR of 1 means no difference; >1 favors more first-pass success with VL, and the 95% CI well above 1 indicates statistical significance. Risk difference of 0 means no absolute difference; 36% with a CI excluding 0 confirms a significant absolute benefit.",
+            "statPrimer_ko": "OR 1은 차이 없음을 의미하며, 1보다 크면 VL에서 첫 시도 성공이 더 많음을 뜻하고 95% CI가 1을 크게 상회하므로 통계적으로 유의하다. 위험차 0은 절대 차이 없음을 의미하며, CI가 0을 배제한 36%는 유의한 절대 이득을 확인한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Time to successful tracheal intubation (blade/suction through teeth until tube placement and cuff inflation)",
+            "outcome_ko": "성공적 기관 삽관까지 시간(날/흡인기가 치아를 통과한 시점부터 튜브 거치 및 커프 팽창까지)",
+            "result": "Median 34 s (IQR 29-40) VL vs 41 s (IQR 35-48) DL; mean 36.2 (SD 13.3) vs 44.1 (SD 14.9); mean difference -7.9 s (95% CI -11.87 to -3.99); p<0.001",
+            "result_ko": "중앙값 VL 34초(IQR 29-40) 대 DL 41초(IQR 35-48); 평균 36.2(SD 13.3) 대 44.1(SD 14.9); 평균차 -7.9초(95% CI -11.87~-3.99); p<0.001",
+            "statistics": "Mann-Whitney U; mean difference -7.9 s (95% CI -11.87 to -3.99); p<0.001",
+            "interpretation": "VL shaved roughly 8 seconds off intubation time, a modest but statistically clear speed advantage.",
+            "interpretation_ko": "VL은 삽관 시간을 약 8초 단축해 크지 않지만 통계적으로 명확한 속도 이점을 보였다.",
+            "statPrimer": "For a mean difference, 0 means no difference; a negative value favors faster intubation with VL, and a 95% CI excluding 0 (here -11.87 to -3.99) indicates statistical significance. p<0.05 is conventionally significant.",
+            "statPrimer_ko": "평균차에서 0은 차이 없음을 의미하며, 음수는 VL에서 삽관이 더 빠름을 뜻하고 95% CI가 0을 배제하면(여기 -11.87~-3.99) 통계적으로 유의하다. p<0.05는 관례적으로 유의하다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Time to first successful ventilation (first visible ventilation of the model's lungs)",
+            "outcome_ko": "첫 성공적 환기까지 시간(모델 폐의 첫 가시적 환기)",
+            "result": "Median 40 s (IQR 34-44) VL vs 45 s (IQR 40-53) DL; p<0.001",
+            "result_ko": "중앙값 VL 40초(IQR 34-44) 대 DL 45초(IQR 40-53); p<0.001",
+            "statistics": "Mann-Whitney U; p<0.001",
+            "interpretation": "Patients (manikins) were ventilated several seconds sooner with VL, consistent with the faster intubation.",
+            "interpretation_ko": "VL에서 환기가 수 초 더 빨리 이루어져 더 빠른 삽관과 일치했다.",
+            "statPrimer": "Medians with IQRs describe the middle value and spread; p<0.05 (here p<0.001) indicates the between-group difference is statistically significant, though a few seconds may be of modest clinical magnitude.",
+            "statPrimer_ko": "중앙값과 IQR은 중간값과 분포를 나타내며, p<0.05(여기 p<0.001)는 군간 차이가 통계적으로 유의함을 뜻하나 수 초 차이는 임상적으로 크지 않을 수 있다."
+          },
+          {
+            "label": "Adjusted analysis",
+            "outcome": "Independent association of VL with first-pass success (multivariable logistic regression adjusting for age, sex, experience, specialty, additional qualifications)",
+            "outcome_ko": "첫 시도 성공과 VL의 독립적 연관성(연령·성별·경력·전공·부가자격 보정 다변량 로지스틱 회귀)",
+            "result": "Adjusted OR 13.42 (95% CI 5.18-34.78); p<0.001; other covariates not significantly associated",
+            "result_ko": "보정 OR 13.42 (95% CI 5.18-34.78); p<0.001; 다른 공변량은 유의한 연관 없음",
+            "statistics": "Adjusted OR 13.42, 95% CI 5.18-34.78; p<0.001",
+            "interpretation": "The VL advantage held after accounting for operator factors, indicating the device rather than experience or specialty drove success.",
+            "interpretation_ko": "시술자 요인을 보정한 후에도 VL의 이점이 유지되어, 경력이나 전공이 아니라 기기가 성공을 이끌었음을 시사한다.",
+            "statPrimer": "Adjusted OR isolates the device effect from measured confounders; OR 1 means no association, and a CI entirely above 1 (5.18-34.78) confirms a significant independent benefit.",
+            "statPrimer_ko": "보정 OR은 측정된 교란요인으로부터 기기 효과를 분리한다; OR 1은 연관 없음을 의미하며, CI 전체가 1을 상회하면(5.18-34.78) 유의한 독립적 이득을 확인한다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "First-pass success was markedly higher with hyperangulated VL than DL (94.0% vs 58.0%; risk difference 36% [95% CI 25-47]; OR 11.34, 95% CI 4.54-28.35; p<0.001).",
+        "Median time to successful intubation (34s [IQR 29-40] vs 41s [35-48]) and time to first ventilation (40s [34-44] vs 45s [40-53]) were both shorter with VL (p<0.001); mean intubation-time difference -7.9s (95% CI -11.87 to -3.99).",
+        "On multivariable logistic regression, VL remained independently associated with FPS (adjusted OR 13.42, 95% CI 5.18-34.78; p<0.001), while age, sex, experience, specialty, and additional qualifications were not."
+      ],
+      "keyFindings_ko": [
+        "첫 시도 성공률은 과각형 VL이 DL보다 뚜렷하게 높았다(94.0% 대 58.0%; 위험차 36% [95% CI 25-47]; OR 11.34, 95% CI 4.54-28.35; p<0.001).",
+        "성공적 삽관까지의 중앙값 시간(34초 [IQR 29-40] 대 41초 [35-48])과 첫 환기까지의 시간(40초 [34-44] 대 45초 [40-53]) 모두 VL에서 짧았다(p<0.001); 평균 삽관시간 차이 -7.9초(95% CI -11.87~-3.99).",
+        "다변량 로지스틱 회귀에서 VL은 FPS와 독립적으로 연관되었고(보정 OR 13.42, 95% CI 5.18-34.78; p<0.001), 연령·성별·경력·전공·부가자격은 그렇지 않았다."
+      ],
+      "conclusion": "In this simulation model of massive airway contamination, hyperangulated videolaryngoscopy significantly improved first-pass success and reduced intubation and ventilation times compared with direct laryngoscopy during SALAD-assisted airway management. Whether these procedural advantages translate into improved patient-centered outcomes requires confirmation in clinical studies.",
+      "conclusion_ko": "대량 기도 오염 시뮬레이션 모델에서 SALAD 보조 기도관리 중 과각형 비디오후두경은 직접후두경에 비해 첫 시도 성공률을 유의하게 높이고 삽관 및 환기 시간을 단축했다. 이러한 술기적 이점이 환자 중심 결과 개선으로 이어지는지는 임상 연구로 확인이 필요하다.",
+      "clinicalTakeaway": "In a heavily contaminated-airway SALAD scenario, hyperangulated VL yielded far higher first-pass success and faster intubation/ventilation than DL in a manikin; consider prioritizing hyperangulated VL for SALAD, recognizing this is simulation-only evidence pending clinical confirmation.",
+      "clinicalTakeaway_ko": "심하게 오염된 기도 SALAD 상황에서 과각형 VL은 마네킹에서 DL보다 훨씬 높은 첫 시도 성공률과 빠른 삽관/환기를 보였다; SALAD 시 과각형 VL 우선 사용을 고려하되, 이는 임상 확인이 필요한 시뮬레이션 근거임을 유념한다.",
+      "limitations": "Single-center manikin simulation, not patients, so results may not translate to clinical airways or patient-centered outcomes. Participants were predominantly anesthesiologists (~86-87%) at a maximum-care center, limiting generalizability to EM/prehospital providers. Prior DL/VL/SALAD training intensity and contaminated-airway exposure were not quantified or balanced. A single fixed 750 mL high-viscosity contamination volume and specific devices (C-MAC D-Blade vs HEINE Macintosh 3) were used; glottic visualization and complications were not assessed. Operators could not be blinded to device. Follow-up beyond the single simulated attempt is not applicable.",
+      "limitations_ko": "환자가 아닌 단일기관 마네킹 시뮬레이션으로 임상 기도나 환자 중심 결과로 일반화되지 않을 수 있다. 참가자 대부분(약 86-87%)이 최상위 진료센터의 마취과 의사여서 응급/병원전 제공자로의 일반화가 제한된다. 이전 DL/VL/SALAD 훈련 강도와 오염 기도 경험은 정량화·균형되지 않았다. 단일 고정 750 mL 고점도 오염량과 특정 기기(C-MAC D-Blade 대 HEINE Macintosh 3)를 사용했고, 성문 시야와 합병증은 평가하지 않았다. 시술자는 기기에 눈가림될 수 없었다. 단일 시뮬레이션 시도 이후의 추적은 해당되지 않는다.",
+      "edIcuApplicability": "Highly relevant conceptually to ED/ICU/prehospital intubation of contaminated airways (vomitus, blood, secretions), where first-pass success drives safety. It supports the SALAD technique and suggests hyperangulated VL as the laryngoscopy method of choice in that workflow. However, because this is a manikin study using a standardized 750 mL contamination and mostly anesthesiologist operators, it should inform training and device selection rather than serve as definitive clinical proof; the large effect size is encouraging but requires clinical validation.",
+      "edIcuApplicability_ko": "구토·혈액·분비물로 오염된 기도의 응급실/중환자실/병원전 삽관에서 첫 시도 성공이 안전을 좌우하므로 개념적으로 매우 관련성이 높다. SALAD 기법을 지지하며 해당 워크플로우에서 과각형 VL을 선택 후두경술로 제시한다. 다만 표준화된 750 mL 오염과 주로 마취과 시술자를 사용한 마네킹 연구이므로 확정적 임상 증거라기보다 훈련 및 기기 선택에 참고해야 한다; 큰 효과크기는 고무적이나 임상 검증이 필요하다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 6,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "This is a simulation (manikin) RCT, not a patient trial; evidence graded Low for clinical decision-making despite rigorous randomized design and large effect size.",
+        "Ventilation-time VL upper IQR bound and its p-value: abstract confirms 40s [34-44] vs 45s [40-53], p<0.001, though the full-text table row was truncated.",
+        "Sample: 215 assessed, 15 excluded pre-randomization (12 declined, 3 incomplete data), 200 randomized 100/100; analysis includes all 200.",
+        "Devices: intervention C-MAC D-Blade (Karl Storz), control HEINE Optotechnik Macintosh 3; DuCanto rigid suction catheter; 7.5 ETT with stylet; Nasco SALAD simulator with 750 mL simulated vomit."
+      ],
+      "paper": {
+        "pmid": "42362759",
+        "title": "Direct- versus video laryngoscopy during suction assisted laryngoscopy and airway decontamination (SALAD): A randomized controlled simulation study.",
+        "abstract": "Pulmonary aspiration during airway management is associated with increased morbidity and mortality. First-pass success during tracheal intubation is a key determinant of patient safety and has been shown to improve with videolaryngoscopy (VL). However, comparative evidence regarding hyperangulated VL and direct laryngoscopy (DL) during massive airway contamination remains limited, particularly within a standardized Suction-Assisted Laryngoscopy and Airway Decontamination (SALAD) workflow. This study aimed to compare DL and hyperangulated VL in a standardized SALAD simulation model. In this 1:1 randomized controlled simulation study, physicians performed tracheal intubation using a standardized regurgitation model. Participants were randomized to hyperangulated VL or DL. The primary endpoint was first-pass success (FPS). Secondary endpoints included time to successful tracheal intubation and time to first successful ventilation. Two hundred physicians from various specialties were enrolled and randomized. FPS was significantly higher in the VL group than in the DL group (94.0% vs. 58.0%; OR 11.34, 95% CI 4.54-28.35; p < 0.001). Time to successful tracheal intubation was significantly shorter in the VL group (median [IQR]: 34 s [29-40] vs. 41 s [35-48]; p < 0.001). Likewise, time to first ventilation was significantly reduced (median [IQR]: 40 s [34-44] vs. 45 s [40-53]; p < 0.001). In multivariable logistic regression analysis, VL remained independently associated with FPS (adjusted OR 13.42, 95% CI 5.18-34.78; p < 0.001), whereas age, sex, professional experience, specialty, and additional qualifications were not significantly associated with the primary outcome. In this simulation model of massive airway contamination, hyperangulated videolaryngoscopy significantly improved first-pass success and reduced both intubation and ventilation times compared with direct laryngoscopy during SALAD-assisted airway management. Whether these procedural advantages translate into improved patient-centered outcomes requires confirmation in future clinical studies. Trial Registration The registration of the clinical trial was initiated prospectively on July 15, 2024, in the German Clinical Trials Register (DRKS00034683).",
+        "authors": [
+          "Uzun DD",
+          "Waidner T",
+          "Zimmermann BP",
+          "Havel JC",
+          "Weiss S",
+          "Gruebl T",
+          "Zivkovic AR",
+          "Weigand MA"
+        ],
+        "authorAffiliations": [
+          "Medical Faculty Heidelberg, Department of Anesthesiology, Heidelberg University, 69120, Heidelberg, Germany. deniz.uzun@med.uni-heidelberg.de.",
+          "Medical Faculty Heidelberg, Department of Anesthesiology, Heidelberg University, 69120, Heidelberg, Germany.",
+          "Department of Anaesthesiology and Intensive Care Medicine, Bundeswehr Central Hospital, 56072, Koblenz, Germany.",
+          "Department of Anesthesiology and Intensive Care Medicine, Philipps University of Marburg, 35043, Marburg, Germany."
+        ],
+        "journal": "Scientific reports",
+        "pubDate": "2026-Jun-26",
+        "publicationTypes": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Comparative Study"
+        ],
+        "meshTerms": [
+          "Laryngoscopy",
+          "Humans",
+          "Intubation, Intratracheal",
+          "Suction",
+          "Female",
+          "Airway Management",
+          "Male",
+          "Decontamination",
+          "Video-Assisted Techniques and Procedures",
+          "Adult"
+        ],
+        "keywords": [
+          "Airway management",
+          "Aspiration",
+          "Regurgitation",
+          "SALAD; Tracheal intubation",
+          "Videolaryngoscopy"
+        ],
+        "doi": "10.1038/s41598-026-60056-1",
+        "pmcid": "PMC13309530",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42362759/",
+        "collectedAt": "2026-07-01T21:17:19.760Z",
+        "screeningData": {
+          "score": 9,
+          "relevanceMatches": [
+            "ICU",
+            "airway",
+            "intubation"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": null,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: ICU, airway, intubation",
+            "study design: Randomized Controlled Trial"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Advanced airway management represents a fundamental core competency of anesthesiologists, intensivists, and emergency physicians, as adequate oxygenation can be ensured only when the airway is patent and reliably secured. The process of regurgitation, along with the subsequent occurrence of pulmonary aspiration of gastric contents, constitutes a feared complication in advanced airway management and increases the risk of respiratory complications and mortality. The incidence of pulmonary aspiration during general anesthesia is subject to variation, with estimates ranging from 1 in 900 to 1 in 10,000 cases. Repeated tracheal intubation attempts further increase the risk of aspiration and hypoxemia, making first-pass success (FPS) a key quality metric in airway management. Airway contamination by blood, vomitus, or secretions is a frequent challenge during emergency airway management and may substantially impair visualization and intubation performance. A standardized and structured approach is imperative for effective advanced airway management, particularly in cases of contaminated airways. In this context, the role of effective suctioning for successful airway management is frequently underestimated. It is evident that adequate suction has the capacity to mitigate a multitude of difficulties that are often precipitated by airway contamination. However, it was not until recently that traditional airway management training incorporated instruction on the simultaneous suction and decontamination of the airway, particularly in cases of large-volume contamination. The Suction Assisted Laryngoscopy and Airway Decontamination (SALAD) technique was developed to overcome the challenges of a heavily contaminated airway. This method was initially used on training mannequins that had been specially modified to regurgitate simulated contamination material from the esophagus during intubation attempts. Meanwhile, the clinical application of the SALAD technique in vivo has also shown good subjective results. In this context, the role of the laryngoscopy method (DL vs. VL) using the SALAD technique has not yet been sufficiently investigated. In particular, the type of VL blade that should be used has not yet been evaluated in large physician groups. The inherent urgency of tracheal intubations, coupled with the unpredictable nature of pulmonary aspiration, renders the conduct of randomized controlled clinical trials unfeasible. Although the original SALAD technique was described using Macintosh blade geometry, hyperangulated VL may offer additional advantages in contaminated airways by reducing dependence on a direct line of sight and facilitating glottic identification during ongoing airway decontamination. Therefore, the present study specifically evaluated a hyperangulated VL within a standardized SALAD workflow. Recent multidisciplinary difficult airway guidelines increasingly support the use of VL as a primary airway management technique in both anticipated and unanticipated difficult airway scenarios. In addition to technical device characteristics, these guidelines emphasize the importance of structured airway algorithms, team training, and standardized approaches for improving patient safety during airway emergencies. In order to obtain data on this clinically highly relevant topic, the aim of this study is therefore to compare direct laryngoscopy with hyperangulated video laryngoscopy using the SALAD technique in a standardized regurgitation model. The primary objective was first-pass success. Secondary objectives included time to successful tracheal intubation and time to first ventilation. We hypothesized that hyperangulated videolaryngoscopy would improve first-pass success compared with direct laryngoscopy during SALAD-assisted airway management. Methods Between 15th July 2024 and 30th September 2025, two hundred physicians were recruited for this randomized controlled simulation study during in-house and external continuing education events held by the Department of Anesthesiology at Heidelberg University Hospital, Germany. Our hospital is a university maximum care hospital with around 2600 beds. The Department of Anesthesiology is responsible for the provision of comprehensive anesthesiologic services and the oversight of intensive care units, offering a complete range of intensive care therapies, including extracorporeal procedures. The university hospital is home to all the specialist medical departments. Inclusion criteria were licensed physicians actively involved in clinical airway management who had previous experience with both DL and VL. Individuals who declined participation or provided incomplete baseline data were excluded. Exclusion criteria were refusal to participate by the participants. Participation in the study was voluntary and free of charge. Informed consent was obtained from all participants before the start of the study. Participants were informed that their performance in the study would have no influence on their course results or other personal consequences. Participants were blinded to the study endpoint; they were only told that the aim was to perform the already familiar SALAD technique quickly and safely. Physicians from various specialties were recruited for the study. All participants were familiar with direct laryngoscopy, videolaryngoscopy, and the SALAD technique prior to study participation. However, previous DL, VL and SALAD-specific training intensity and contaminated airway exposure were not prospectively quantified. Participants were instructed to perform the already familiar SALAD technique; however, previous SALAD-specific training intensity and case exposure were not quantified and therefore could not be compared formally between groups. All methods were performed in accordance with the relevant guidelines and institutional regulations and in compliance with the Declaration of Helsinki of 1975, as revised in 2013. There was no patient and public involvement for this study. The study was approved by the local ethics committee of the medical faculty at the University of Heidelberg (registration number S-184/2024). The registration of the clinical trial was initiated prospectively on July 15, 2024, in the German Clinical Trials Register (DRKS00034683). This study is reported in accordance with the CONSORT 2025 statement (Supplementary Table ). Randomization and material The 1:1 randomization was performed using the online randomizer (randomizer.org Geoffrey C. Urbaniak and Scott Plous). Allocation concealment was ensured using sequentially numbered sealed opaque envelopes prepared by an independent investigator who was not involved in recruitment, enrollment, data collection, or outcome assessment. The intervention group performed tracheal intubation using hyperangulated VL (D-Blade, C-MAC, Karl Storz, Germany), while the control group used DL (HEINE Optotechnik Standard LED laryngoscope with a Macintosh blade 3, Gilching/Germany). The primary endpoint was first-pass success (FPS). Secondary endpoints included the time to successful tracheal intubation and to the first sufficient ventilation, defined as visible ventilation of the lungs. A size 7.5 endotracheal tube (AEROtube, HUM Luenen, Germany) including stylet was used for the study. A ventilation bag (Spur II, Ambu Germany) was used for ventilation after tracheal Intubation. A rigid suction catheter commonly used for the SALAD technique (SSCOR DuCanto Catheter™ (Medizintechnik werder, Germany)) was used for suction. A commercially available SALAD simulator (S.A.L.A.D. Simulator Nasco Healthcare Inc., Saugerties, NY, USA) was used for the study. To achieve a more realistic appearance, a thickening agent and a brown dye were employed to enhance the regurgitated fluid. Furthermore, a manual pump was used to deliver a standardized amount of simulated vomit of 750 ml. The selected volume was intended to create a standardized high-contamination airway scenario rather than replicate an average regurgitation event. To our knowledge, no evidence-based standard volume for simulated vomitus currently exists within the SALAD literature. Therefore, 750 ml of simulated vomitus with increased viscosity was used to generate a reproducible and challenging airway contamination model consistent with the educational objectives of the SALAD technique. The manikin’s airway, as well as the tube and stylet, were lubricated before use. Definition of outcomes First-pass success (FPS) was defined as successful tracheal intubation during the first intubation attempt without removal and reinsertion of the laryngoscope blade. Time to successful tracheal intubation (TTI) was defined as the interval from insertion of the laryngoscope blade/suction device through the teeth until successful placement and cuff inflation of the endotracheal tube. Time to first ventilation (TTV) was defined as the time to the first visible ventilation of the models lungs. Endpoints The primary endpoint was the FPS rate. Intubation attempts with misalignment of the esophagus were also considered failures. The secondary endpoints were TTI and TTV. Data on the FPS rate, TTI, and TTV were collected by an external investigator who was not involved in the study. Glottic visualization was deliberately not included as an outcome measure in the present study. Multiple prior studies across a wide range of clinical and simulated airway scenarios have consistently demonstrated that VL provides superior glottic visualization compared with DL. This advantage is well established and no longer considered a distinguishing or novel endpoint in comparative airway research. In addition, the study was specifically designed to evaluate performance-oriented airway management outcomes, including first-pass success and procedure times, rather than surrogate visualization metrics. Moreover, visualization scores such as the Cormack–Lehane classification were originally developed and validated for direct laryngoscopy and may therefore have limited applicability during videolaryngoscopy. Given the primary objective of assessing procedural performance during SALAD-assisted airway management, first-pass success and time-based outcomes were considered more informative than isolated visualization scores. Statistical analysis A sample size calculation was performed for a two-group, 1:1 randomized design with FPS as the primary binary endpoint. The sample size calculation was based on published studies reporting first-pass success rates for DL and VL in emergency and high-risk airway management settings. Based on these data, conservative first-pass success rates of 60% for direct laryngoscopy and 80% for videolaryngoscopy were assumed for study planning. Utilizing a two-sided alpha level of 0.05 and a desired statistical power of 90%, the requisite sample size was calculated by employing the standard formula for comparing two independent proportions. This resulted in a target enrollment of approximately 109 participants per group. In order to facilitate feasibility the final sample size was set at 100 participants per group, thus yielding a total of 200 participants included in the study. The final sample size of 100 participants per group was determined for logistical and feasibility reasons within the predefined recruitment period. No interim efficacy analyses were performed and recruitment was not terminated on the basis of study outcomes. A descriptive analysis of all variables was performed, specifying absolute and relative frequencies for categorical variables and median and interquartile range or mean and standard deviation for at least interval-scaled variables. Selected variables were graphically represented using bar charts and box plots, separated into the two groups “direct laryngoscopy” and “video laryngoscopy”. The endpoint variables first-pass success, time to successful intubation, and time to first ventilation were also initially evaluated descriptively, specifying the appropriate measures of location and dispersion for the respective variables. The difference in FPS between the two groups was then examined using a chi-square test at a significance level of 5%. Odds ratios with corresponding 95% confidence intervals were calculated to quantify the effect size for first-pass success. A two-sided p-value < 0.05 was considered statistically significant. This was followed by testing the continuous secondary endpoints (time to successful intubation and time to first ventilation) for normality. Both in the overall cohort and separately for the two groups, there were indications of a skewed distribution (Shapiro-Wilk test < 0.05, as well as a visually skewed distribution in the graphical representation (histogram and Q-Q plot)), so that further evaluation of significant differences between the two groups was performed using the Mann-Whitney U test at a significance level of 5%. To facilitate interpretation of effect size, mean differences between groups together with corresponding 95% confidence intervals were additionally calculated for the secondary endpoints. Factors associated with first-pass success were further examined using multivariable logistic regression analysis. The model included laryngoscopy technique, age, sex, professional experience, specialty, and additional qualifications. Regression coefficients, standard errors, p-values, odds ratios, and corresponding 95% confidence intervals are reported. Statistical analysis was performed using RStudio version 2025.09.2 + 418. Results A total of 215 individuals were assessed for eligibility; 15 were excluded prior to randomization, including 12 individuals who declined participation and 3 individuals with incomplete baseline data. Two hundred participants were randomized and allocated to either the direct laryngoscopy group ( = 100) or the videolaryngoscopy group ( = 100). Participant flow through the study is shown in Fig. . Fig. 1 CONSORT flow diagram of participants enrollment and randomization. The study population consisted of physicians from various specialties and with differing levels of clinical experience. The majority were anesthetists (DL group: 86 vs. VL group: 87), followed by physicians from internal medicine (DL: 9; VL: 10), surgery (DL: 4; VL: 3), and other specialties (DL: 1; VL: 0) (Fig. ). Fig. 2 Distribution of participating physicians by medical specialty. Mean age was 37.42 years in the DL group (minimum 25, maximum 65; range 40) and 36.66 years in the VL group (minimum 26, maximum 59; range 33). Mean professional experience was 9.62 years in the DL group (minimum 0, maximum 39; range 39) and 9.15 years in the VL group (minimum 1, maximum 30; range 29) (Table ). Table 1 Baseline characteristics of participants. Characteristic DL group ( = 100) VL group ( = 100) Age, years, mean ± SD 37.42 ± 8.62 36.66 ± 7.46 Sex, n (%) Female 42 (42) 38 (38) Male 58 (58) 62 (62) Specialty, n (%) Anesthesiology 86 (86) 87 (87) Internal medicine 9 (9) 10 (10) Surgery 4 (4) 3 (3) Other 1 (1) 0 (0) Additional qualification, n (%) None 32 (32) 28 (28) Emergency medicine 33 (33) 38 (38) Intensive care 0 (0) 0 (0) Emergency + intensive care 35 (35) 34 (34) Professional experience, years, median 8 (IQR 3–13; range 0–39) 7 (IQR 4–13; range 1–30) First-pass success was significantly higher in the VL group than in the DL group (94.0% vs. 58.0%; OR 11.34, 95% CI 4.54–28.35; < 0.001) (Table ). Table 2 Primary and secondary outcomes according to laryngoscopy technique. Outcome Direct laryngoscopy ( = 100) Videolaryngoscopy ( = 100) Effect estimate (95% CI) value Primary outcomes First-pass success, n (%) 58 (58) 94 (94) Risk difference 36% (25–47) OR 11.34 (4.54–28.35) < 0.001 Secondary outcomes Intubation time, s, median (IQR) 41 (35–48) 34 (29–40) — < 0.001 Intubation time, s, mean (SD) 44.1 (14.9) 36.2 (13.3) Mean difference − 7.9 s (− 11.87 to − 3.99) < 0.001 Ventilation time, s, median (IQR) 45 (40-53.25) 40 (",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42362759\nDOI: 10.1038/s41598-026-60056-1\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Medical Faculty Heidelberg, Department of Anesthesiology, Heidelberg University, 69120, Heidelberg, Germany. deniz.uzun@med.uni-heidelberg.de.\n- Medical Faculty Heidelberg, Department of Anesthesiology, Heidelberg University, 69120, Heidelberg, Germany.\n- Department of Anaesthesiology and Intensive Care Medicine, Bundeswehr Central Hospital, 56072, Koblenz, Germany.\n- Department of Anesthesiology and Intensive Care Medicine, Philipps University of Marburg, 35043, Marburg, Germany.\n\nPublic bibliographic metadata from Crossref:\nTitle: Direct- versus video laryngoscopy during suction assisted laryngoscopy and airway decontamination (SALAD): A randomized controlled simulation study\nType: journal-article\nPublished: 2026-6-26\nPublisher: Springer Science and Business Media LLC\nFunders: Medizinische Fakultät Heidelberg der Universität Heidelberg\nCrossref abstract/snippet: Abstract Pulmonary aspiration during airway management is associated with increased morbidity and mortality. First-pass success during tracheal intubation is a key determinant of patient safety and has been shown to improve with videolaryngoscopy (VL). However, comparative evidence regarding hyperangulated VL and direct laryngoscopy (DL) during massive airway contamination remains limited, particularly within a standardized Suction-Assisted Laryngoscopy and Airway Decontamination (SALAD) workflow. This study aimed to compare DL and hyperangulated VL in a standardized SALAD simulation model. In this 1:1 randomized controlled simulation study, physicians performed tracheal intubation using a standardized regurgitation model. Participants were randomized to hyperangulated VL or DL. The primary endpoint was first-pass success (FPS). Secondary endpoints included time to successful tracheal intubation and time to first successful ventilation. Two hundred physicians from various specialties were enrolled and randomized. FPS was significantly higher in the VL group than in the DL group (94.0% vs. 58.0%; OR 11.34, 95% CI 4.54–28.35; p &lt; 0.001). Time to successful tracheal intubation was significantly shorter in the VL group (median [IQR]: 34 s [29–40] vs. 41 s [35–48]; p &lt; 0.001). Likewise, time to first ventilation was significantly reduced (median [IQR]: 40 s [34–44] vs. 45 s [40–53]; p &lt; 0.001). In multivariable logistic regression analysis, VL remained independently associated with FPS (adjusted OR 13.42, 95% CI 5.18–34.78; p &lt; 0.001), whereas age, sex, professional experience, specialty, and additional qualifications were not significantly associated with the primary outcome. In this simulation model of massive airway contamination, hyperangulated videolaryngosc",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13309530"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13309530",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13309530"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-01T21:18:17.124Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42362759",
+          "rank": 1,
+          "clinicalPriorityScore": 7,
+          "rationale_ko": "대량 기도 오염(구토/흡인) 상황에서 SALAD 워크플로우를 적용한 무작위 대조 연구로, 응급/중환자 기도관리의 핵심 지표인 첫 시도 성공률(FPS)을 비교함. 200명 의사를 대상으로 과각도 비디오후두경(VL)이 직접후두경(DL) 대비 FPS를 극적으로 향상(94.0% vs 58.0%, OR 11.34)시켜 흡인 위험이 높은 기도에서 VL 우선 사용이라는 명확하고 실무 적용 가능한 메시지를 제공함. 시뮬레이션 연구라는 한계로 직접적 환자 결과 근거는 아니지만, 기도관리라는 EM/CCM 핵심 술기에 대한 실용성과 교육적 가치가 후보군 중 가장 높아 오늘의 최우선 논문으로 선정함."
+        }
+      ],
+      "notes_ko": [
+        "후보군 대부분은 성인 EM/CCM에 대한 직접적 실무 변경 근거가 약함(관찰연구, 예후예측 ML 모델, 프로토콜/현실주의 리뷰, 교육 QI, 단일기관 소규모 연구).",
+        "PMID 42377961(NCPAP vs NIPPV RCT)은 JAMA Netw Open의 다기관 RCT이나 신생아 NICU 대상으로 성인 EM/CCM 독자에게 직접 관련성이 낮고 조기 중단(목표의 32.5%)으로 검정력 제한.",
+        "PMID 42378681(ECPR 비용효과 모델링, Crit Care Med)은 고영향 저널이나 싱가포르 특정 의료체계 시뮬레이션 모델로 즉각적 임상 변경 근거로는 약함.",
+        "PMID 42339785(소아 두개골절 POCUS 메타분석)와 PMID 42348651(DCL 메타분석)은 근거등급은 높으나 각각 소아 특이적·CT 보조수단, LMIC 특정 맥락으로 대상 독자층 적용성이 제한적임.",
+        "PMID 42356117/42366166/42328(혈액배양 관련)은 진단수율/저가치검사 주제로 유용하나 관찰연구·범위리뷰 수준으로 실무 변경력이 제한적.",
+        "최종적으로 기도관리 핵심 술기에 대한 RCT라는 점에서 PMID 42362759를 선정하되 시뮬레이션 한계를 반영해 우선순위 점수를 중상위로 조정함."
+      ]
+    }
+  },
+  "errors": []
+}
