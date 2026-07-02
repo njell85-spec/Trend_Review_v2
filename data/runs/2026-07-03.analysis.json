@@ -1,0 +1,283 @@
+{
+  "analyses": [
+    {
+      "pmid": "42384077",
+      "title": "Alpha2 agonists for sedation to produce better outcomes for adults with critical illness: a synopsis of the A2B RCT with cost-effectiveness and process evaluation.",
+      "oneLineSummary": "In mechanically ventilated ICU adults, neither dexmedetomidine- nor clonidine-based sedation improved time to extubation, mortality, or cost-effectiveness versus propofol.",
+      "oneLineSummary_ko": "기계환기 중인 성인 중환자에서 덱스메데토미딘 또는 클로니딘 기반 진정은 발관까지 시간, 사망률, 비용효과성에서 프로포폴보다 우수하지 않았다.",
+      "whyItMatters": "Sedation choice is a daily ICU decision; this large pragmatic UK trial directly compares alpha2 agonists against the propofol-based standard of care and challenges the assumption that dexmedetomidine or clonidine speed liberation from ventilation, while highlighting more agitation and bradycardia.",
+      "whyItMatters_ko": "진정제 선택은 매일 이루어지는 중환자실 결정이며, 이 대규모 실용적 영국 시험은 알파2 작용제를 프로포폴 기반 표준치료와 직접 비교하여 덱스메데토미딘이나 클로니딘이 인공호흡기 이탈을 앞당긴다는 가정에 의문을 제기하는 동시에 더 많은 초조(agitation)와 서맥을 보여준다.",
+      "clinicalQuestion": "In critically ill adults requiring mechanical ventilation, do dexmedetomidine- or clonidine-based sedation strategies improve clinical outcomes and cost-effectiveness compared with propofol-based sedation?",
+      "clinicalQuestion_ko": "기계환기가 필요한 성인 중환자에서 덱스메데토미딘 또는 클로니딘 기반 진정 전략이 프로포폴 기반 진정에 비해 임상 결과와 비용효과성을 개선하는가?",
+      "studyDetails": {
+        "design": "Pragmatic, open-label, three-arm randomized controlled trial (A2B trial) with embedded process and health-economic (cost-effectiveness) evaluation.",
+        "design_ko": "실용적, 공개(open-label), 3군 무작위대조시험(A2B 시험)으로 과정 평가 및 보건경제(비용효과성) 평가가 포함됨.",
+        "setting": "Forty-one intensive care units in the UK; recruitment December 2018 to October 2023, spanning the COVID-19 pandemic which affected staffing and delivery.",
+        "setting_ko": "영국 41개 중환자실; 2018년 12월부터 2023년 10월까지 모집하였으며 인력과 시행에 영향을 준 COVID-19 팬데믹 기간과 겹침.",
+        "sampleSize": "1437 adults randomized/analyzed; analysis population by arm: propofol N=471, dexmedetomidine N=457, clonidine-based N=476.",
+        "sampleSize_ko": "무작위배정/분석된 성인 1437명; 군별 분석 대상: 프로포폴 471명, 덱스메데토미딘 457명, 클로니딘 기반 476명.",
+        "eligibility": "Adults within 48 hours of starting mechanical ventilation who were expected to require >=48 hours of mechanical ventilation. Median time from intubation to randomisation was 21.0 hours (Q1, Q3: 13.2, 31.3).",
+        "eligibility_ko": "기계환기 시작 후 48시간 이내이며 >=48시간의 기계환기가 필요할 것으로 예상되는 성인. 삽관에서 무작위배정까지 중앙값은 21.0시간(Q1, Q3: 13.2, 31.3).",
+        "interventionDetails": "Two intervention arms: dexmedetomidine-based and clonidine-based sedation. Bedside algorithms targeted a RASS of -2 to +1 (unless deeper sedation clinically requested) and supported alpha2-agonist up-titration with propofol down-titration, then sedation primarily with the allocated alpha2 agonist; supplemental propofol was permitted if required. Exact doses, routes, and titration ranges are not available in the accessible sources.",
+        "interventionDetails_ko": "두 개의 중재군: 덱스메데토미딘 기반 및 클로니딘 기반 진정. 침상 알고리즘은 RASS -2~+1을 목표로 하며(임상적으로 더 깊은 진정 요청 시 예외) 알파2 작용제 증량 및 프로포폴 감량을 지원한 후 배정된 알파2 작용제로 주로 진정하였고 필요 시 보조 프로포폴이 허용됨. 정확한 용량, 경로, 적정 범위는 접근 가능한 자료에 없음.",
+        "comparatorDetails": "Propofol-based sedation (usual care) plus an opioid analgesic, using the same RASS -2 to +1 target and bedside sedation algorithm.",
+        "comparatorDetails_ko": "동일한 RASS -2~+1 목표와 침상 진정 알고리즘을 사용하는 프로포폴 기반 진정(통상치료)과 아편유사제 진통제.",
+        "followUp": "Clinical outcomes assessed through 180 days for mortality; long-term outcomes included ICU experience, anxiety/depression/PTSD, cognitive function, and health-related quality of life. Exact long-term assessment timepoints are not detailed in the accessible sources.",
+        "followUp_ko": "사망률은 180일까지 평가; 장기 결과에는 중환자실 경험, 불안/우울/PTSD, 인지기능, 건강관련 삶의 질이 포함됨. 정확한 장기 평가 시점은 접근 가능한 자료에 상세히 없음.",
+        "sourceBasis": "Abstract plus PubMed and Crossref metadata. This HTA monograph is a synopsis of the A2B RCT primary paper in JAMA 2025;334:32-45. No PMCID for open full-text; no ClinicalTrials.gov ID in the PubMed record. Funded by NIHR HTA award 16/93/01.",
+        "sourceBasis_ko": "초록과 PubMed 및 Crossref 메타데이터 기반. 이 HTA 논문은 JAMA 2025;334:32-45에 게재된 A2B RCT 원논문의 요약본임. 공개 전문용 PMCID 없음; PubMed 기록에 ClinicalTrials.gov ID 없음. NIHR HTA 지원번호 16/93/01."
+      },
+      "pico": {
+        "population": "Adults within 48 hours of starting mechanical ventilation expected to require >=48 hours of ventilation in 41 UK ICUs (N=1437).",
+        "intervention": "Dexmedetomidine-based or clonidine-based sedation via bedside RASS-targeted algorithm.",
+        "comparison": "Propofol-based sedation (usual care) plus opioid analgesia.",
+        "outcome": "Time to successful extubation (death as competing risk); mortality, delirium, agitation, bradycardia, cost-effectiveness."
+      },
+      "pico_ko": {
+        "population": "영국 41개 중환자실에서 기계환기 시작 48시간 이내이며 >=48시간 환기가 필요할 것으로 예상되는 성인(N=1437).",
+        "intervention": "침상 RASS 목표 알고리즘을 통한 덱스메데토미딘 기반 또는 클로니딘 기반 진정.",
+        "comparison": "프로포폴 기반 진정(통상치료)과 아편유사제 진통.",
+        "outcome": "성공적 발관까지 시간(사망을 경쟁위험으로); 사망률, 섬망, 초조, 서맥, 비용효과성."
+      },
+      "detailedPico": {
+        "population": "1437 critically ill adults (mean age 59.2 years, SD 14.9; 65% male) within 48 hours of starting mechanical ventilation and expected to need >=48 hours of ventilation; median time from intubation to randomisation 21.0 hours.",
+        "population_ko": "기계환기 시작 48시간 이내이며 >=48시간 환기가 필요할 것으로 예상되는 성인 중환자 1437명(평균 연령 59.2세, SD 14.9; 남성 65%); 삽관에서 무작위배정까지 중앙값 21.0시간.",
+        "countrySetting": "Forty-one ICUs in the UK (NHS), December 2018 to October 2023; delivery influenced by COVID-19 staffing pressures per the process evaluation.",
+        "countrySetting_ko": "영국(NHS) 41개 중환자실, 2018년 12월~2023년 10월; 과정 평가에 따르면 COVID-19 인력 부담이 시행에 영향을 미침.",
+        "intervention": "Dexmedetomidine-based (N=457) or clonidine-based (N=476) sedation using bedside algorithms targeting RASS -2 to +1, with alpha2-agonist up-titration and propofol down-titration; supplemental propofol permitted.",
+        "intervention_ko": "RASS -2~+1을 목표로 하는 침상 알고리즘을 이용한 덱스메데토미딘 기반(457명) 또는 클로니딘 기반(476명) 진정, 알파2 작용제 증량 및 프로포폴 감량; 보조 프로포폴 허용.",
+        "comparator": "Propofol-based sedation (N=471) plus opioid analgesic, same RASS target and algorithm.",
+        "comparator_ko": "프로포폴 기반 진정(471명)과 아편유사제 진통제, 동일 RASS 목표와 알고리즘.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Time to successful extubation (death as competing risk)",
+            "outcome_ko": "성공적 발관까지 시간(사망을 경쟁위험으로 처리)",
+            "result": "Dexmedetomidine vs propofol subdistribution HR 1.09 (95% CI 0.96-1.25; p=0.20); clonidine vs propofol 1.05 (0.95-1.17; p=0.34). Median hours to extubation: propofol 162 (136-170), dexmedetomidine 136 (117-150), clonidine 146 (124-168).",
+            "result_ko": "덱스메데토미딘 vs 프로포폴 하위분포 HR 1.09 (95% CI 0.96-1.25; p=0.20); 클로니딘 vs 프로포폴 1.05 (0.95-1.17; p=0.34). 발관까지 중앙값 시간: 프로포폴 162 (136-170), 덱스메데토미딘 136 (117-150), 클로니딘 146 (124-168).",
+            "statistics": "sHR 1.09 (95% CI 0.96-1.25; p=0.20); sHR 1.05 (0.95-1.17; p=0.34)",
+            "interpretation": "No statistically significant difference; although median times were numerically shorter with alpha2 agonists, the confidence intervals cross 1 and p values exceed 0.05.",
+            "interpretation_ko": "통계적으로 유의한 차이 없음; 알파2 작용제에서 중앙값 시간이 수치상 짧았으나 신뢰구간이 1을 포함하고 p값이 0.05를 초과함.",
+            "statPrimer": "For a subdistribution hazard ratio, HR>1 favors faster extubation with the alpha2 agonist; if the 95% CI crosses 1 and p>=0.05, a significant difference is not established.",
+            "statPrimer_ko": "하위분포 위험비에서 HR>1은 알파2 작용제로 더 빠른 발관을 의미; 95% CI가 1을 포함하고 p>=0.05이면 유의한 차이가 입증되지 않음."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "180-day mortality",
+            "outcome_ko": "180일 사망률",
+            "result": "Dexmedetomidine vs propofol HR 0.98 (95% CI 0.77-1.24); clonidine vs propofol HR 1.04 (0.82-1.31).",
+            "result_ko": "덱스메데토미딘 vs 프로포폴 HR 0.98 (95% CI 0.77-1.24); 클로니딘 vs 프로포폴 HR 1.04 (0.82-1.31).",
+            "statistics": "HR 0.98 (0.77-1.24); HR 1.04 (0.82-1.31)",
+            "interpretation": "Mortality was similar across arms; both confidence intervals include 1, indicating no detectable survival difference.",
+            "interpretation_ko": "사망률은 군 간 유사; 두 신뢰구간 모두 1을 포함하여 생존 차이가 감지되지 않음.",
+            "statPrimer": "HR=1 means no difference in mortality risk; a 95% CI crossing 1 means no statistically significant difference.",
+            "statPrimer_ko": "HR=1은 사망 위험 차이 없음을 의미; 95% CI가 1을 포함하면 통계적으로 유의한 차이 없음."
+          },
+          {
+            "label": "Secondary (safety)",
+            "outcome": "Agitation",
+            "outcome_ko": "초조(agitation)",
+            "result": "Dexmedetomidine vs propofol RR 1.54 (95% CI 1.21-1.97); clonidine vs propofol RR 1.55 (1.22-1.97).",
+            "result_ko": "덱스메데토미딘 vs 프로포폴 RR 1.54 (95% CI 1.21-1.97); 클로니딘 vs 프로포폴 RR 1.55 (1.22-1.97).",
+            "statistics": "RR 1.54 (1.21-1.97); RR 1.55 (1.22-1.97)",
+            "interpretation": "Both alpha2 agonists produced roughly 50% more agitation than propofol, and the CIs exclude 1, so the increase is statistically significant.",
+            "interpretation_ko": "두 알파2 작용제 모두 프로포폴보다 약 50% 더 많은 초조를 유발했고 CI가 1을 제외하여 통계적으로 유의한 증가임.",
+            "statPrimer": "RR>1 means more agitation with the alpha2 agonist; a 95% CI entirely above 1 indicates a statistically significant increase.",
+            "statPrimer_ko": "RR>1은 알파2 작용제에서 초조가 더 많음을 의미; 95% CI가 전부 1 위에 있으면 통계적으로 유의한 증가."
+          },
+          {
+            "label": "Secondary (safety)",
+            "outcome": "Severe bradycardia (rate <50/minute)",
+            "outcome_ko": "심한 서맥(맥박 <50/분)",
+            "result": "Dexmedetomidine vs propofol rate ratio 1.62 (95% CI 1.36-1.93); clonidine vs propofol 1.58 (1.33-1.88).",
+            "result_ko": "덱스메데토미딘 vs 프로포폴 발생률비 1.62 (95% CI 1.36-1.93); 클로니딘 vs 프로포폴 1.58 (1.33-1.88).",
+            "statistics": "rate ratio 1.62 (1.36-1.93); 1.58 (1.33-1.88)",
+            "interpretation": "Severe bradycardia was significantly more frequent with both alpha2 agonists, consistent with their known cardiovascular effects.",
+            "interpretation_ko": "두 알파2 작용제 모두에서 심한 서맥이 유의하게 더 빈번했으며 이는 알려진 심혈관 효과와 일치함.",
+            "statPrimer": "A rate ratio >1 means more bradycardia events with the alpha2 agonist; a 95% CI above 1 indicates statistical significance.",
+            "statPrimer_ko": "발생률비 >1은 알파2 작용제에서 서맥 사건이 더 많음을 의미; 95% CI가 1 위에 있으면 통계적 유의성을 나타냄."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Delirium and cost-effectiveness",
+            "outcome_ko": "섬망 및 비용효과성",
+            "result": "Delirium rates were similar across arms; there was no difference in cost-effectiveness between the groups.",
+            "result_ko": "섬망 발생률은 군 간 유사; 군 간 비용효과성 차이가 없었음.",
+            "statistics": "No between-group difference reported (exact estimates not in accessible sources)",
+            "interpretation": "Alpha2 agonists did not reduce delirium and offered no economic advantage over propofol.",
+            "interpretation_ko": "알파2 작용제는 섬망을 줄이지 않았고 프로포폴 대비 경제적 이점도 없었음.",
+            "statPrimer": "When no difference is reported, effect estimates are near the null and confidence intervals include the no-difference value.",
+            "statPrimer_ko": "차이가 없다고 보고되면 효과 추정치가 무효값 근처에 있고 신뢰구간이 무차이 값을 포함함."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Time to successful extubation (competing risk of death) did not differ: dexmedetomidine vs propofol subdistribution HR 1.09 (95% CI 0.96-1.25, p=0.20); clonidine vs propofol 1.05 (0.95-1.17, p=0.34).",
+        "Both alpha2 agonists caused more agitation (RR ~1.54-1.55) and more severe bradycardia <50/min (rate ratio ~1.58-1.62) than propofol, with similar delirium rates.",
+        "180-day mortality (HR ~0.98-1.04) and cost-effectiveness were similar across all three arms."
+      ],
+      "keyFindings_ko": [
+        "성공적 발관까지 시간(사망을 경쟁위험으로 처리)은 차이가 없었다: 덱스메데토미딘 vs 프로포폴 하위분포 HR 1.09 (95% CI 0.96-1.25, p=0.20); 클로니딘 vs 프로포폴 1.05 (0.95-1.17, p=0.34).",
+        "두 알파2 작용제 모두 프로포폴보다 초조(RR 약 1.54-1.55)와 심한 서맥(<50/분, 발생률비 약 1.58-1.62)이 더 많았으나 섬망 발생률은 유사했다.",
+        "180일 사망률(HR 약 0.98-1.04)과 비용효과성은 세 군 모두 유사했다."
+      ],
+      "conclusion": "In mechanically ventilated critically ill adults, neither dexmedetomidine- nor clonidine-based sedation was superior to propofol-based sedation for time to extubation or other major clinical outcomes, nor was it more cost-effective, while both increased agitation and severe bradycardia.",
+      "conclusion_ko": "기계환기 중인 성인 중환자에서 덱스메데토미딘 또는 클로니딘 기반 진정은 발관까지 시간이나 기타 주요 임상 결과에서 프로포폴 기반 진정보다 우수하지 않았고 비용효과성도 더 낫지 않았으며, 두 약제 모두 초조와 심한 서맥을 증가시켰다.",
+      "clinicalTakeaway": "Routinely switching to dexmedetomidine- or clonidine-based sedation is not justified for faster ventilator liberation or better outcomes; propofol remains a reasonable default, and alpha2 agonists should be used selectively while watching for agitation and bradycardia.",
+      "clinicalTakeaway_ko": "더 빠른 인공호흡기 이탈이나 더 나은 결과를 위해 덱스메데토미딘 또는 클로니딘 기반 진정으로 일상적으로 전환하는 것은 정당화되지 않는다; 프로포폴은 합리적인 기본 선택으로 남아 있으며, 알파2 작용제는 초조와 서맥을 관찰하면서 선택적으로 사용해야 한다.",
+      "limitations": "Pragmatic, open-label (unblinded) design carries risk of performance and ascertainment bias. Supplemental propofol was permitted in the alpha2 arms, diluting contrast between strategies. Delivery was affected by ICU culture, clinician beliefs, and COVID-19 staffing pressures. Findings apply to general adult ICU patients and may not generalize to paediatric or acute brain injury populations. Exact drug doses, routes, titration ranges, baseline balance, and some per-outcome absolute values are not available in the accessible sources.",
+      "limitations_ko": "실용적, 공개(비맹검) 설계로 수행 및 확인 편향의 위험이 있다. 알파2 군에서 보조 프로포폴이 허용되어 전략 간 대비가 희석되었다. 중환자실 문화, 임상의 신념, COVID-19 인력 부담이 시행에 영향을 미쳤다. 결과는 일반 성인 중환자에 적용되며 소아나 급성 뇌손상 집단에는 일반화되지 않을 수 있다. 정확한 약물 용량, 투여 경로, 적정 범위, 기저 균형, 일부 결과별 절대값은 접근 가능한 자료에 없다.",
+      "edIcuApplicability": "Highly applicable to ICU sedation practice for mechanically ventilated adults. It supports keeping propofol-based sedation as the default and reserving alpha2 agonists for specific indications rather than routine substitution, with vigilance for bradycardia and agitation. Less directly relevant to brief ED procedural sedation but informs downstream ICU management of intubated patients.",
+      "edIcuApplicability_ko": "기계환기 중인 성인의 중환자실 진정 실무에 매우 적용 가능하다. 프로포폴 기반 진정을 기본으로 유지하고 알파2 작용제는 일상적 대체보다 특정 적응증에 사용하며 서맥과 초조를 경계하도록 뒷받침한다. 짧은 응급실 시술 진정에는 직접적 관련성이 낮으나 삽관 환자의 이후 중환자실 관리에는 참고가 된다.",
+      "evidenceLevel": "High",
+      "clinicalApplicabilityScore": 8.5,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "This HTA monograph is a synopsis of the A2B RCT primary results published in JAMA 2025;334:32-45 (doi:10.1001/jama.2025.7200), per Crossref metadata.",
+        "No PMCID available for open full-text; analysis based on abstract plus PubMed and Crossref metadata.",
+        "No ClinicalTrials.gov ID surfaced in the PubMed record; trial funded by NIHR HTA award 16/93/01.",
+        "Exact dosing, titration ranges, and baseline balance are not available in the accessible sources."
+      ],
+      "paper": {
+        "pmid": "42384077",
+        "title": "Alpha2 agonists for sedation to produce better outcomes for adults with critical illness: a synopsis of the A2B RCT with cost-effectiveness and process evaluation.",
+        "abstract": "BACKGROUND: Most mechanically ventilated intensive care unit patients require sedation and analgesia for comfort. Current usual care is propofol-based sedation plus an opioid analgesic. The alpha2 agonists dexmedetomidine and clonidine are potential alternative sedatives, but their clinical and cost-effectiveness are uncertain.\nOBJECTIVE(S): To evaluate the clinical and cost-effectiveness and safety of alpha2 agonists (dexmedetomidine and clonidine) compared with propofol for sedating adult intensive care unit patients.\nDESIGN AND METHODS: Pragmatic open-label three-arm trial. Embedded process and economic evaluation.\nSETTING AND PARTICIPANTS: Forty-one intensive care units in the UK. Recruitment from December 2018 to October 2023. Participants were 1437 adults within 48 hours of starting mechanical ventilation expected to require ≥ 48 hours of mechanical ventilation [analysis population: propofol ( = 471), dexmedetomidine ( = 457), and clonidine-based ( = 476) sedation]. Median time from intubation to randomisation was 21.0 (first, third quartile: 13.2, 31.3) hours.\nINTERVENTIONS: In all groups, bedside algorithms targeted a Richmond Agitation Sedation Scale of -2 to + 1 unless clinicians requested deeper sedation. Intervention groups' algorithms supported alpha2-agonist up-titration and propofol down-titration followed by sedation primarily with allocated alpha2 agonist. Supplemental propofol was permitted if required.\nOUTCOMES: Primary outcome was time to successful extubation, analysed allowing for death as a competing risk. Secondary outcomes included mortality, sedation quality, rates of delirium and cardiovascular adverse events. Long-term outcomes included: experience of intensive care unit care; anxiety, depression and post-traumatic stress; cognitive function; health-related quality of life.\nRESULTS: Mean (standard deviation) patient age was 59.2 (14.9) years; 901 (65%) male. The sub-distribution hazard ratio for time to successful extubation for dexmedetomidine versus propofol was 1.09 (95% confidence interval 0.96 to 1.25; = 0.20) and for clonidine versus propofol was 1.05 (0.95 to 1.17; = 0.34), with hazard ratio > 1 favouring alpha2 agonist. Median (95% confidence interval) hours from randomisation to successful extubation was: propofol 162 (136 to 170); dexmedetomidine 136 (117 to 150); and clonidine 146 (124 to 168). There was no effect interaction with age, sepsis status, median Sequential Organ Failure Assessment Score, or median Prediction of Delirium in intensive care unit patients' delirium risk score. Delirium rates were similar, but agitation occurred at higher rate than propofol with both alpha2 agonists [dexmedetomidine vs. propofol risk ratio (95% confidence intervals) 1.54 (1.21 to 1.97); clonidine vs. propofol 1.55 (1.22 to 1.97)]. Rates of severe bradycardia (rate < 50/minute) were higher with both alpha2 agonists compared with propofol [dexmedetomidine vs. propofol rate ratio (95% confidence interval) 1.62 (1.36 to 1.93); clonidine vs. propofol 1.58 (1.33 to 1.88)]. Mortality was similar over 180 days follow-up [dexmedetomidine vs. propofol hazard ratio (95% confidence interval) 0.98 (0.77 to 1.24); clonidine vs. propofol 1.04 (0.82 to 1.31)]. Process evaluation indicated a range of contextual factors at intensive care unit and individual level that influenced intervention delivery, including: intensive care unit culture, prior clinician opinions/beliefs, staffing pressures (exacerbated by the COVID-19 pandemic), clinician experience and concerns about alpha2-agonist side effects. There was no difference in cost-effectiveness between the groups.\nLIMITATIONS: This was a pragmatic unblinded trial, with associated risk of performance and ascertainment bias.\nFUTURE WORK: Future trials should explore the effectiveness of alpha2 agonists as sedatives in other populations, for example paediatric critical care and acute brain injury.\nCONCLUSIONS: In mechanically ventilated critically ill patients, neither dexmedetomidine- nor clonidine-based sedation was superior for major clinical outcomes or more cost-effective compared with propofol-based sedation.\nFUNDING: This synopsis presents independent research funded by the National Institute for Health and Care Research (NIHR) Health Technology Assessment programme as award number 16/93/01.",
+        "authors": [
+          "Walsh TS",
+          "Parker RA",
+          "Aitken LM",
+          "Emerson L",
+          "McKenzie CA",
+          "Boyd J",
+          "MacDonald A",
+          "Beveridge G"
+        ],
+        "authorAffiliations": [
+          "Usher Institute, The University of Edinburgh, Edinburgh, UK.",
+          "Edinburgh Clinical Trials Unit, Usher Institute, The University of Edinburgh, Edinburgh, UK.",
+          "City St George's, University of London, London, UK.",
+          "National Institute of Health and Social Care Research (NIHR), Biomedical Research Centre (BRC), Southampton, Perioperative and Critical Care Theme, University of Southampton, Southampton, UK.",
+          "Edinburgh Critical Care Research Group, NHS Lothian, Edinburgh, UK.",
+          "Faculty of Nursing, National and Kapodistrian, University of Athens, Athens, Greece.",
+          "School of Health and Social Care, Edinburgh Napier University, Edinburgh, UK.",
+          "Royal Surrey County Hospital NHS Foundation Trust, Surrey, UK.",
+          "Wellcome-Wolfson Institute for Experimental Medicine, Queen's University Belfast, Belfast, UK.",
+          "Critical Care Medicine, Division of Immunology, Faculty of Biology, Medicine and Health, University of Manchester, Manchester, UK.",
+          "Department of Adult Critical Care, University Hospital of Wales, Cardiff, UK.",
+          "Division of Anaesthetics, Pain Medicine and Intensive Care, Imperial College London, London, UK."
+        ],
+        "journal": "Health technology assessment (Winchester, England)",
+        "pubDate": "2026-Jun",
+        "publicationTypes": [
+          "Journal Article",
+          "Pragmatic Clinical Trial",
+          "Randomized Controlled Trial"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Dexmedetomidine",
+          "Clonidine",
+          "Critical Illness",
+          "Cost-Benefit Analysis",
+          "Male",
+          "Hypnotics and Sedatives",
+          "Female",
+          "Adrenergic alpha-2 Receptor Agonists",
+          "Middle Aged",
+          "Propofol",
+          "Respiration, Artificial"
+        ],
+        "keywords": [
+          "ADRENERGIC ALPHA-2 RECEPTOR AGONISTS",
+          "ARTIFICIAL",
+          "CLONIDINE",
+          "CRITICAL CARE",
+          "DEXMEDETOMIDINE",
+          "HYPNOTICS AND SEDATIVES",
+          "INTENSIVE CARE UNITS",
+          "RESPIRATION"
+        ],
+        "doi": "10.3310/GJTW3820",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42384077/",
+        "collectedAt": "2026-07-02T21:17:10.098Z",
+        "screeningData": {
+          "score": 16,
+          "relevanceMatches": [
+            "critical care",
+            "intensive care",
+            "sepsis",
+            "intubation",
+            "mechanical ventilation",
+            "trauma"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 1437,
+          "journalBoost": 2,
+          "reasons": [
+            "abstract available",
+            "topic match: critical care, intensive care, sepsis, intubation",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=1437",
+            "journal boost: Health technology assessment (Winchester, England)"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42384077\nDOI: 10.3310/GJTW3820\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Usher Institute, The University of Edinburgh, Edinburgh, UK.\n- Edinburgh Clinical Trials Unit, Usher Institute, The University of Edinburgh, Edinburgh, UK.\n- City St George's, University of London, London, UK.\n- National Institute of Health and Social Care Research (NIHR), Biomedical Research Centre (BRC), Southampton, Perioperative and Critical Care Theme, University of Southampton, Southampton, UK.\n- Edinburgh Critical Care Research Group, NHS Lothian, Edinburgh, UK.\n- Faculty of Nursing, National and Kapodistrian, University of Athens, Athens, Greece.\n- School of Health and Social Care, Edinburgh Napier University, Edinburgh, UK.\n- Royal Surrey County Hospital NHS Foundation Trust, Surrey, UK.\n\nPublic bibliographic metadata from Crossref:\nTitle: Alpha2 agonists for sedation to produce better outcomes for adults with critical illness: a synopsis of the A2B RCT with cost-effectiveness and process evaluation\nType: journal-article\nPublished: 2026-6\nPublisher: National Institute for Health and Care Research\nFunders: Health Technology Assessment programme\nCrossref abstract/snippet: Parts of this abstract have been reproduced with permission from Walsh TS, Parker RA, Aitken LM, McKenzie CA, Emerson L, Boyd J, et al .; A2B Trial Investigators. Dexmedetomidine- or clonidine-based sedation compared with propofol in critically ill patients: the A2B randomized clinical trial. JAMA 2025; 334 :32–45. https://doi.org/10.1001/jama.2025.7200. Copyright © 2025, American Medical Association. All rights reserved, including those for text and datamining, AI training, and similar technologies. Background Most mechanically ventilated intensive care unit patients require sedation and analgesia for comfort. Current usual care is propofol-based sedation plus an opioid analgesic. The alpha2 agonists dexmedetomidine and clonidine are potential alternative sedatives, but their clinical and cost-effectiveness are uncertain. Objective(s) To evaluate the clinical and cost-effectiveness and safety of alpha2 agonists (dexmedetomidine and clonidine) compared with propofol for sedating adult intensive care unit patients. Design and methods Pragmatic open-label three-arm trial. Embedded process and economic evaluation. Setting and participants Forty-one intensive care units in the UK. Recruitment from December 2018 to October 2023. Participants were 1437 adults within 48 hours of starting mechanical ventilation expected to require ≥ 48 hours of mechanical ventilation [analysis population: propofol ( N = 471), dexmedetomidine ( N = 457), and clonidine-based ( N = 476) sedation]. Median time from intubation to randomisation was 21.0 (first, third quartile: 13.2, 31.3) hours. Interventions In all groups, bedside algorithms targeted a Richmond Agitation Sedation Scale of −2 to + 1 unless clinicians requested deeper sedation. Intervention groups’ algorithms supported alpha2-agonist ",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-02T21:17:50.324Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42384077",
+          "rank": 1,
+          "clinicalPriorityScore": 9,
+          "rationale_ko": "A2B 다기관 실용적 무작위대조시험(41개 영국 ICU, N=1437)으로, 기계환기 성인 환자의 진정에서 표준요법인 프로포폴과 알파2 작용제(덱스메데토미딘·클로니딘)를 직접 비교하고 임상적 효과·비용효과·안전성까지 함께 평가한 대규모 연구입니다. ICU 진정 프로토콜은 EM/CCM 임상의가 매일 직면하는 핵심 의사결정이며, 대규모 무작위 근거는 진료 변화 가능성이 높아 최우선 선정 가치가 있습니다. 후보 중 가장 크고 직접적으로 실행 가능한 임상 근거를 제공합니다."
+        }
+      ],
+      "notes_ko": [
+        "최우선 선정: PMID 42384077 (A2B RCT) - ICU 진정에 대한 대규모 실용적 무작위대조시험으로 임상 실무 변화 잠재력이 가장 높음.",
+        "차순위 후보로는 PMID 42387305(고유량 비강캐뉼라 vs BiPAP 메타분석)과 PMID 42386310(소아 세기관지염 호흡보조 메타분석)이 성인/소아 급성기 호흡부전에 유용하나, A2B 시험이 성인 중환자 진료 관련성과 규모에서 우위.",
+        "다수 후보가 관찰연구, 예측모델(ML), QI/교육, 프로토콜, 질적연구로 직접적 진료 근거가 약해 우선순위에서 제외됨(예: PMID 42373179 리얼리스트 리뷰 프로토콜, 42366876 질적연구, 42374846 간호교육 QI).",
+        "성인 EM/CCM 뉴스레터 대상 독자를 고려해 신생아·소아 전용 연구(예: 42377961, 42380351)는 관련성 측면에서 후순위 처리."
+      ]
+    }
+  },
+  "errors": []
+}

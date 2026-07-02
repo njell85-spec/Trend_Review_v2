@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 7. 3. 오전 6:22</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-07-03</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Alpha2 agonists for sedation to produce better outcomes for adults with critical illness: a synopsis of the A2B RCT with cost-effectiveness and process evaluation.</h2>
+      <div class="paper-meta">
+        Health technology assessment (Winchester, England) · 2026-Jun · PMID 42384077
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Abstract + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Sedation choice is a daily ICU decision; this large pragmatic UK trial directly compares alpha2 agonists against the propofol-based standard of care and challenges the assumption that dexmedetomidine or clonidine speed liberation from ventilation, while highlighting more agitation and bradycardia.</p>
+    <p class="ko">진정제 선택은 매일 이루어지는 중환자실 결정이며, 이 대규모 실용적 영국 시험은 알파2 작용제를 프로포폴 기반 표준치료와 직접 비교하여 덱스메데토미딘이나 클로니딘이 인공호흡기 이탈을 앞당긴다는 가정에 의문을 제기하는 동시에 더 많은 초조(agitation)와 서맥을 보여준다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Pragmatic, open-label, three-arm randomized controlled trial (A2B trial) with embedded process and health-economic (cost-effectiveness) evaluation.</p>
+      <p class="ko">실용적, 공개(open-label), 3군 무작위대조시험(A2B 시험)으로 과정 평가 및 보건경제(비용효과성) 평가가 포함됨.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">Forty-one intensive care units in the UK; recruitment December 2018 to October 2023, spanning the COVID-19 pandemic which affected staffing and delivery.</p>
+      <p class="ko">영국 41개 중환자실; 2018년 12월부터 2023년 10월까지 모집하였으며 인력과 시행에 영향을 준 COVID-19 팬데믹 기간과 겹침.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">1437 adults randomized/analyzed; analysis population by arm: propofol N=471, dexmedetomidine N=457, clonidine-based N=476.</p>
+      <p class="ko">무작위배정/분석된 성인 1437명; 군별 분석 대상: 프로포폴 471명, 덱스메데토미딘 457명, 클로니딘 기반 476명.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Adults within 48 hours of starting mechanical ventilation who were expected to require &gt;=48 hours of mechanical ventilation. Median time from intubation to randomisation was 21.0 hours (Q1, Q3: 13.2, 31.3).</p>
+      <p class="ko">기계환기 시작 후 48시간 이내이며 &gt;=48시간의 기계환기가 필요할 것으로 예상되는 성인. 삽관에서 무작위배정까지 중앙값은 21.0시간(Q1, Q3: 13.2, 31.3).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Two intervention arms: dexmedetomidine-based and clonidine-based sedation. Bedside algorithms targeted a RASS of -2 to +1 (unless deeper sedation clinically requested) and supported alpha2-agonist up-titration with propofol down-titration, then sedation primarily with the allocated alpha2 agonist; supplemental propofol was permitted if required. Exact doses, routes, and titration ranges are not available in the accessible sources.</p>
+      <p class="ko">두 개의 중재군: 덱스메데토미딘 기반 및 클로니딘 기반 진정. 침상 알고리즘은 RASS -2~+1을 목표로 하며(임상적으로 더 깊은 진정 요청 시 예외) 알파2 작용제 증량 및 프로포폴 감량을 지원한 후 배정된 알파2 작용제로 주로 진정하였고 필요 시 보조 프로포폴이 허용됨. 정확한 용량, 경로, 적정 범위는 접근 가능한 자료에 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Propofol-based sedation (usual care) plus an opioid analgesic, using the same RASS -2 to +1 target and bedside sedation algorithm.</p>
+      <p class="ko">동일한 RASS -2~+1 목표와 침상 진정 알고리즘을 사용하는 프로포폴 기반 진정(통상치료)과 아편유사제 진통제.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Clinical outcomes assessed through 180 days for mortality; long-term outcomes included ICU experience, anxiety/depression/PTSD, cognitive function, and health-related quality of life. Exact long-term assessment timepoints are not detailed in the accessible sources.</p>
+      <p class="ko">사망률은 180일까지 평가; 장기 결과에는 중환자실 경험, 불안/우울/PTSD, 인지기능, 건강관련 삶의 질이 포함됨. 정확한 장기 평가 시점은 접근 가능한 자료에 상세히 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract plus PubMed and Crossref metadata. This HTA monograph is a synopsis of the A2B RCT primary paper in JAMA 2025;334:32-45. No PMCID for open full-text; no ClinicalTrials.gov ID in the PubMed record. Funded by NIHR HTA award 16/93/01.</p>
+      <p class="ko">초록과 PubMed 및 Crossref 메타데이터 기반. 이 HTA 논문은 JAMA 2025;334:32-45에 게재된 A2B RCT 원논문의 요약본임. 공개 전문용 PMCID 없음; PubMed 기록에 ClinicalTrials.gov ID 없음. NIHR HTA 지원번호 16/93/01.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">1437 critically ill adults (mean age 59.2 years, SD 14.9; 65% male) within 48 hours of starting mechanical ventilation and expected to need &gt;=48 hours of ventilation; median time from intubation to randomisation 21.0 hours.</p>
+      <p class="ko">기계환기 시작 48시간 이내이며 &gt;=48시간 환기가 필요할 것으로 예상되는 성인 중환자 1437명(평균 연령 59.2세, SD 14.9; 남성 65%); 삽관에서 무작위배정까지 중앙값 21.0시간.</p>
+      <p class="en"><strong>Setting:</strong> Forty-one ICUs in the UK (NHS), December 2018 to October 2023; delivery influenced by COVID-19 staffing pressures per the process evaluation.</p>
+      <p class="ko">영국(NHS) 41개 중환자실, 2018년 12월~2023년 10월; 과정 평가에 따르면 COVID-19 인력 부담이 시행에 영향을 미침.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Dexmedetomidine-based (N=457) or clonidine-based (N=476) sedation using bedside algorithms targeting RASS -2 to +1, with alpha2-agonist up-titration and propofol down-titration; supplemental propofol permitted.</p>
+      <p class="ko">RASS -2~+1을 목표로 하는 침상 알고리즘을 이용한 덱스메데토미딘 기반(457명) 또는 클로니딘 기반(476명) 진정, 알파2 작용제 증량 및 프로포폴 감량; 보조 프로포폴 허용.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Propofol-based sedation (N=471) plus opioid analgesic, same RASS target and algorithm.</p>
+      <p class="ko">프로포폴 기반 진정(471명)과 아편유사제 진통제, 동일 RASS 목표와 알고리즘.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">Time to successful extubation (death as competing risk)</p>
+    <p class="ko">성공적 발관까지 시간(사망을 경쟁위험으로 처리)</p>
+    <p class="stat-line">Dexmedetomidine vs propofol subdistribution HR 1.09 (95% CI 0.96-1.25; p=0.20); clonidine vs propofol 1.05 (0.95-1.17; p=0.34). Median hours to extubation: propofol 162 (136-170), dexmedetomidine 136 (117-150), clonidine 146 (124-168). · sHR 1.09 (95% CI 0.96-1.25; p=0.20); sHR 1.05 (0.95-1.17; p=0.34)</p>
+    <p class="ko">덱스메데토미딘 vs 프로포폴 하위분포 HR 1.09 (95% CI 0.96-1.25; p=0.20); 클로니딘 vs 프로포폴 1.05 (0.95-1.17; p=0.34). 발관까지 중앙값 시간: 프로포폴 162 (136-170), 덱스메데토미딘 136 (117-150), 클로니딘 146 (124-168).</p>
+    <div class="interpretation">ⓘ No statistically significant difference; although median times were numerically shorter with alpha2 agonists, the confidence intervals cross 1 and p values exceed 0.05.<br>통계적으로 유의한 차이 없음; 알파2 작용제에서 중앙값 시간이 수치상 짧았으나 신뢰구간이 1을 포함하고 p값이 0.05를 초과함.</div>
+    <div class="interpretation primer">ⓘ For a subdistribution hazard ratio, HR&gt;1 favors faster extubation with the alpha2 agonist; if the 95% CI crosses 1 and p&gt;=0.05, a significant difference is not established.<br>하위분포 위험비에서 HR&gt;1은 알파2 작용제로 더 빠른 발관을 의미; 95% CI가 1을 포함하고 p&gt;=0.05이면 유의한 차이가 입증되지 않음.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">180-day mortality</p>
+    <p class="ko">180일 사망률</p>
+    <p class="stat-line">Dexmedetomidine vs propofol HR 0.98 (95% CI 0.77-1.24); clonidine vs propofol HR 1.04 (0.82-1.31). · HR 0.98 (0.77-1.24); HR 1.04 (0.82-1.31)</p>
+    <p class="ko">덱스메데토미딘 vs 프로포폴 HR 0.98 (95% CI 0.77-1.24); 클로니딘 vs 프로포폴 HR 1.04 (0.82-1.31).</p>
+    <div class="interpretation">ⓘ Mortality was similar across arms; both confidence intervals include 1, indicating no detectable survival difference.<br>사망률은 군 간 유사; 두 신뢰구간 모두 1을 포함하여 생존 차이가 감지되지 않음.</div>
+    <div class="interpretation primer">ⓘ HR=1 means no difference in mortality risk; a 95% CI crossing 1 means no statistically significant difference.<br>HR=1은 사망 위험 차이 없음을 의미; 95% CI가 1을 포함하면 통계적으로 유의한 차이 없음.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary (safety)</div>
+    <p class="en">Agitation</p>
+    <p class="ko">초조(agitation)</p>
+    <p class="stat-line">Dexmedetomidine vs propofol RR 1.54 (95% CI 1.21-1.97); clonidine vs propofol RR 1.55 (1.22-1.97). · RR 1.54 (1.21-1.97); RR 1.55 (1.22-1.97)</p>
+    <p class="ko">덱스메데토미딘 vs 프로포폴 RR 1.54 (95% CI 1.21-1.97); 클로니딘 vs 프로포폴 RR 1.55 (1.22-1.97).</p>
+    <div class="interpretation">ⓘ Both alpha2 agonists produced roughly 50% more agitation than propofol, and the CIs exclude 1, so the increase is statistically significant.<br>두 알파2 작용제 모두 프로포폴보다 약 50% 더 많은 초조를 유발했고 CI가 1을 제외하여 통계적으로 유의한 증가임.</div>
+    <div class="interpretation primer">ⓘ RR&gt;1 means more agitation with the alpha2 agonist; a 95% CI entirely above 1 indicates a statistically significant increase.<br>RR&gt;1은 알파2 작용제에서 초조가 더 많음을 의미; 95% CI가 전부 1 위에 있으면 통계적으로 유의한 증가.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary (safety)</div>
+    <p class="en">Severe bradycardia (rate &lt;50/minute)</p>
+    <p class="ko">심한 서맥(맥박 &lt;50/분)</p>
+    <p class="stat-line">Dexmedetomidine vs propofol rate ratio 1.62 (95% CI 1.36-1.93); clonidine vs propofol 1.58 (1.33-1.88). · rate ratio 1.62 (1.36-1.93); 1.58 (1.33-1.88)</p>
+    <p class="ko">덱스메데토미딘 vs 프로포폴 발생률비 1.62 (95% CI 1.36-1.93); 클로니딘 vs 프로포폴 1.58 (1.33-1.88).</p>
+    <div class="interpretation">ⓘ Severe bradycardia was significantly more frequent with both alpha2 agonists, consistent with their known cardiovascular effects.<br>두 알파2 작용제 모두에서 심한 서맥이 유의하게 더 빈번했으며 이는 알려진 심혈관 효과와 일치함.</div>
+    <div class="interpretation primer">ⓘ A rate ratio &gt;1 means more bradycardia events with the alpha2 agonist; a 95% CI above 1 indicates statistical significance.<br>발생률비 &gt;1은 알파2 작용제에서 서맥 사건이 더 많음을 의미; 95% CI가 1 위에 있으면 통계적 유의성을 나타냄.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Delirium and cost-effectiveness</p>
+    <p class="ko">섬망 및 비용효과성</p>
+    <p class="stat-line">Delirium rates were similar across arms; there was no difference in cost-effectiveness between the groups. · No between-group difference reported (exact estimates not in accessible sources)</p>
+    <p class="ko">섬망 발생률은 군 간 유사; 군 간 비용효과성 차이가 없었음.</p>
+    <div class="interpretation">ⓘ Alpha2 agonists did not reduce delirium and offered no economic advantage over propofol.<br>알파2 작용제는 섬망을 줄이지 않았고 프로포폴 대비 경제적 이점도 없었음.</div>
+    <div class="interpretation primer">ⓘ When no difference is reported, effect estimates are near the null and confidence intervals include the no-difference value.<br>차이가 없다고 보고되면 효과 추정치가 무효값 근처에 있고 신뢰구간이 무차이 값을 포함함.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Time to successful extubation (competing risk of death) did not differ: dexmedetomidine vs propofol subdistribution HR 1.09 (95% CI 0.96-1.25, p=0.20); clonidine vs propofol 1.05 (0.95-1.17, p=0.34).</p><p class="ko">성공적 발관까지 시간(사망을 경쟁위험으로 처리)은 차이가 없었다: 덱스메데토미딘 vs 프로포폴 하위분포 HR 1.09 (95% CI 0.96-1.25, p=0.20); 클로니딘 vs 프로포폴 1.05 (0.95-1.17, p=0.34).</p></li>
+<li><p class="en">Both alpha2 agonists caused more agitation (RR ~1.54-1.55) and more severe bradycardia &lt;50/min (rate ratio ~1.58-1.62) than propofol, with similar delirium rates.</p><p class="ko">두 알파2 작용제 모두 프로포폴보다 초조(RR 약 1.54-1.55)와 심한 서맥(&lt;50/분, 발생률비 약 1.58-1.62)이 더 많았으나 섬망 발생률은 유사했다.</p></li>
+<li><p class="en">180-day mortality (HR ~0.98-1.04) and cost-effectiveness were similar across all three arms.</p><p class="ko">180일 사망률(HR 약 0.98-1.04)과 비용효과성은 세 군 모두 유사했다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In mechanically ventilated critically ill adults, neither dexmedetomidine- nor clonidine-based sedation was superior to propofol-based sedation for time to extubation or other major clinical outcomes, nor was it more cost-effective, while both increased agitation and severe bradycardia.</p>
+    <p class="ko">기계환기 중인 성인 중환자에서 덱스메데토미딘 또는 클로니딘 기반 진정은 발관까지 시간이나 기타 주요 임상 결과에서 프로포폴 기반 진정보다 우수하지 않았고 비용효과성도 더 낫지 않았으며, 두 약제 모두 초조와 심한 서맥을 증가시켰다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Pragmatic, open-label (unblinded) design carries risk of performance and ascertainment bias. Supplemental propofol was permitted in the alpha2 arms, diluting contrast between strategies. Delivery was affected by ICU culture, clinician beliefs, and COVID-19 staffing pressures. Findings apply to general adult ICU patients and may not generalize to paediatric or acute brain injury populations. Exact drug doses, routes, titration ranges, baseline balance, and some per-outcome absolute values are not available in the accessible sources.</p>
+    <p class="ko">실용적, 공개(비맹검) 설계로 수행 및 확인 편향의 위험이 있다. 알파2 군에서 보조 프로포폴이 허용되어 전략 간 대비가 희석되었다. 중환자실 문화, 임상의 신념, COVID-19 인력 부담이 시행에 영향을 미쳤다. 결과는 일반 성인 중환자에 적용되며 소아나 급성 뇌손상 집단에는 일반화되지 않을 수 있다. 정확한 약물 용량, 투여 경로, 적정 범위, 기저 균형, 일부 결과별 절대값은 접근 가능한 자료에 없다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Highly applicable to ICU sedation practice for mechanically ventilated adults. It supports keeping propofol-based sedation as the default and reserving alpha2 agonists for specific indications rather than routine substitution, with vigilance for bradycardia and agitation. Less directly relevant to brief ED procedural sedation but informs downstream ICU management of intubated patients.</p>
+    <p class="ko">기계환기 중인 성인의 중환자실 진정 실무에 매우 적용 가능하다. 프로포폴 기반 진정을 기본으로 유지하고 알파2 작용제는 일상적 대체보다 특정 적응증에 사용하며 서맥과 초조를 경계하도록 뒷받침한다. 짧은 응급실 시술 진정에는 직접적 관련성이 낮으나 삽관 환자의 이후 중환자실 관리에는 참고가 된다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Routinely switching to dexmedetomidine- or clonidine-based sedation is not justified for faster ventilator liberation or better outcomes; propofol remains a reasonable default, and alpha2 agonists should be used selectively while watching for agitation and bradycardia.</p>
+    <p class="ko">더 빠른 인공호흡기 이탈이나 더 나은 결과를 위해 덱스메데토미딘 또는 클로니딘 기반 진정으로 일상적으로 전환하는 것은 정당화되지 않는다; 프로포폴은 합리적인 기본 선택으로 남아 있으며, 알파2 작용제는 초조와 서맥을 관찰하면서 선택적으로 사용해야 한다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42384077/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.3310/GJTW3820" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
