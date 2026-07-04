@@ -1,0 +1,245 @@
+{
+  "analyses": [
+    {
+      "pmid": "42365349",
+      "title": "Interpreting protein dose trials in critical illness: a guide for the bedside clinician.",
+      "oneLineSummary": "This narrative review synthesizes recent RCT evidence and suggests starting ICU protein low and increasing gradually to a maximum of 1.2 g/kg/day.",
+      "oneLineSummary_ko": "이 종설은 최근 무작위 대조시험 근거를 종합하여 중환자 단백질 공급을 낮게 시작해 점진적으로 최대 1.2 g/kg/day까지 늘릴 것을 제안한다.",
+      "whyItMatters": "Critical care nutrition guidelines have long recommended high protein doses, but three large recent trials found no benefit and possible harm, so this bedside guide helps clinicians reconcile older recommendations with new data.",
+      "whyItMatters_ko": "중환자 영양 지침은 오랫동안 고단백 공급을 권고해 왔으나 최근 대규모 시험 3건에서 이득이 없고 오히려 해가 될 가능성이 확인되어, 이 침상 가이드는 임상의가 기존 권고와 새로운 근거를 조화시키는 데 도움을 준다.",
+      "clinicalQuestion": "In critically ill adults, does providing higher protein doses compared with usual/lower protein doses improve clinical and functional outcomes, and what protein target should clinicians use at the bedside?",
+      "clinicalQuestion_ko": "중환자 성인에서 고단백 공급이 통상/저단백 공급에 비해 임상 및 기능적 결과를 개선하는가, 그리고 임상의는 침상에서 어떤 단백질 목표를 사용해야 하는가?",
+      "studyDetails": {
+        "design": "Narrative review / bedside practice-guidance article (publication types: Journal Article, Review; study-type signal 'Practice Guideline') that interprets three recent multicentre randomised controlled trials of protein dose in critical illness.",
+        "design_ko": "중환자 단백질 용량에 관한 최근 다기관 무작위 대조시험 3건을 해석하는 서술적 종설/침상 진료 지침형 논문(문헌 유형: Journal Article, Review; 연구유형 신호 'Practice Guideline').",
+        "setting": "International perspective. Authors are intensive care and nutrition experts from Australia (Adelaide University; Royal Adelaide Hospital), the Netherlands (Maastricht University Medical Centre), Malaysia (University of Malaya, Kuala Lumpur), and Germany (University Hospital Würzburg; Charité, Berlin). Underlying evidence derives from international multicentre ICU trials.",
+        "setting_ko": "국제적 관점. 저자들은 호주(애들레이드 대학, 로얄 애들레이드 병원), 네덜란드(마스트리흐트 대학병원), 말레이시아(말라야 대학, 쿠알라룸푸르), 독일(뷔르츠부르크 대학병원, 베를린 샤리테)의 중환자·영양 전문가들이다. 근거는 국제 다기관 ICU 시험에서 도출되었다.",
+        "sampleSize": "This is a review, not a primary study, so it does not enroll patients itself. It synthesizes three recent international multicentre RCTs comprising a total of n = 5633 critically ill patients. Per-trial denominators and analyzed/ITT/per-protocol populations are not detailed in the accessible sources.",
+        "sampleSize_ko": "이 글은 원저 시험이 아니라 환자를 직접 등록하지 않는다. 최근 국제 다기관 RCT 3건(총 n = 5633명 중환자)을 종합한다. 각 시험별 분모나 분석/ITT/프로토콜 집단은 접근 가능한 자료에 상세히 명시되지 않았다.",
+        "eligibility": "The referenced trials enrolled critically ill adults in the ICU. Precise per-trial inclusion/exclusion criteria are not available in the accessible sources. The review notes trials included some patients with prolonged ICU stay, but none pre-identified that cohort before randomisation.",
+        "eligibility_ko": "인용된 시험들은 ICU의 중환자 성인을 등록했다. 각 시험별 정확한 포함/제외 기준은 접근 가능한 자료에 없다. 종설은 일부 시험이 장기 ICU 재원 환자를 포함했으나 무작위배정 전에 그 코호트를 사전 식별한 시험은 없었다고 지적한다.",
+        "interventionDetails": "Higher protein doses. The review's practical recommendation is to commence protein at a low dose once haemodynamically stable and increase progressively over the first 5 days to a maximum of 1.2 g/kg/day; the trials tested doses above this upper limit. Exact protein products, route (enteral vs parenteral), and per-trial target doses are not specified in the accessible sources, though keywords emphasise enteral nutrition.",
+        "interventionDetails_ko": "고단백 공급. 종설의 실용적 권고는 혈역학적으로 안정되면 저용량으로 시작해 첫 5일에 걸쳐 점진적으로 최대 1.2 g/kg/day까지 늘리는 것이며, 시험들은 이 상한을 초과하는 용량을 검증했다. 정확한 단백질 제제, 투여경로(장관 vs 정맥), 시험별 목표 용량은 접근 가능한 자료에 명시되지 않았으나 키워드는 장관 영양을 강조한다.",
+        "comparatorDetails": "Usual protein doses in critically ill patients, as used in the comparator arms of the three referenced RCTs. Exact comparator target doses are not specified in the accessible sources.",
+        "comparatorDetails_ko": "인용된 RCT 3건의 대조군에서 사용된 중환자의 통상 단백질 공급. 정확한 대조군 목표 용량은 접근 가능한 자료에 명시되지 않았다.",
+        "followUp": "Referenced outcomes were assessed up to day 90 (time-to-discharge alive; days free of index hospital and alive) and up to 180 days (EQ-5D-5L health utility). Exact follow-up schedules per trial are not available in the accessible sources.",
+        "followUp_ko": "인용된 결과는 90일까지(생존 퇴원까지의 시간; 원내 비입원·생존 일수)와 180일까지(EQ-5D-5L 건강 효용)로 평가되었다. 시험별 정확한 추적 일정은 접근 가능한 자료에 없다.",
+        "sourceBasis": "Based on the PubMed abstract, PubMed author-affiliation metadata, and Crossref bibliographic metadata (DOI 10.1186/s13054-026-06116-4). No PMCID was available for open full-text retrieval, and no ClinicalTrials.gov IDs were listed.",
+        "sourceBasis_ko": "PubMed 초록, PubMed 저자 소속 메타데이터, Crossref 서지 메타데이터(DOI 10.1186/s13054-026-06116-4)에 근거. 전문 확보를 위한 PMCID는 없었고 ClinicalTrials.gov ID도 없었다."
+      },
+      "pico": {
+        "population": "Critically ill adults in the ICU (evidence synthesized from three multicentre RCTs, total n = 5633).",
+        "intervention": "Higher protein doses (above ~1.2 g/kg/day).",
+        "comparison": "Usual/lower protein doses.",
+        "outcome": "Time-to-discharge alive, days free of index hospital and alive at day 90, and functional recovery (EQ-5D-5L) over 180 days."
+      },
+      "pico_ko": {
+        "population": "ICU의 중환자 성인(다기관 RCT 3건, 총 n = 5633에서 종합된 근거).",
+        "intervention": "고단백 공급(약 1.2 g/kg/day 초과).",
+        "comparison": "통상/저단백 공급.",
+        "outcome": "생존 퇴원까지의 시간, 90일째 원내 비입원·생존 일수, 180일간 기능적 회복(EQ-5D-5L)."
+      },
+      "detailedPico": {
+        "population": "Critically ill adults admitted to the ICU. The review draws on three recent international multicentre randomised trials totalling n = 5633 patients. Some trials included patients with prolonged ICU stay, but none identified this cohort before randomisation; a subgroup of interest is patients with acute kidney injury.",
+        "population_ko": "ICU에 입원한 중환자 성인. 종설은 총 n = 5633명을 포함한 최근 국제 다기관 무작위 시험 3건을 토대로 한다. 일부 시험은 장기 ICU 재원 환자를 포함했으나 무작위배정 전에 이 코호트를 식별한 시험은 없으며, 관심 하위군은 급성 신손상 환자다.",
+        "countrySetting": "International multicentre ICUs. The guidance article is authored by experts from Australia, the Netherlands, Malaysia, and Germany. Public metadata does not name the individual trials or their specific country networks.",
+        "countrySetting_ko": "국제 다기관 ICU. 지침 글은 호주, 네덜란드, 말레이시아, 독일 전문가가 저술했다. 공개 메타데이터는 개별 시험명이나 국가별 네트워크를 명시하지 않는다.",
+        "intervention": "Higher protein doses (trials tested doses above 1.2 g/kg/day). The review's practical protocol: start protein low once haemodynamically stable and up-titrate progressively over the first 5 days to a maximum of 1.2 g/kg/day. Route and exact products not specified, though enteral nutrition is emphasised.",
+        "intervention_ko": "고단백 공급(시험들은 1.2 g/kg/day 초과 용량을 검증). 종설의 실용 프로토콜: 혈역학적 안정 시 저용량으로 시작해 첫 5일에 걸쳐 점진적으로 최대 1.2 g/kg/day까지 증량. 경로와 정확한 제제는 명시되지 않았으나 장관 영양이 강조된다.",
+        "comparator": "Usual protein doses used in the control arms of the three referenced RCTs; exact target values not available in accessible sources.",
+        "comparator_ko": "인용된 RCT 3건의 대조군에서 사용된 통상 단백질 공급; 정확한 목표값은 접근 가능한 자료에 없다.",
+        "outcomes": [
+          {
+            "label": "Primary (survival/discharge)",
+            "outcome": "Time-to-discharge alive and number of days free of the index hospital and alive at day 90.",
+            "outcome_ko": "생존 퇴원까지의 시간 및 90일째 원내 비입원·생존 일수.",
+            "result": "Higher protein doses did NOT improve these primary outcomes compared with usual doses.",
+            "result_ko": "고단백 공급은 통상 용량 대비 이러한 일차 결과를 개선하지 못했다.",
+            "statistics": "Exact effect estimates, 95% CIs, and p values are not provided in the accessible sources.",
+            "interpretation": "Giving more protein early did not get patients home alive any sooner or increase alive-and-out-of-hospital days at 90 days.",
+            "interpretation_ko": "조기에 더 많은 단백질을 줌과 환자가 더 빨리 살아서 퇴원하거나 90일에 생존·퇴원 일수가 늘지 않았다.",
+            "statPrimer": "For 'days free/alive' and time-to-event outcomes, no difference means the intervention offered no advantage; without reported CIs or p values, statistical significance cannot be independently confirmed here.",
+            "statPrimer_ko": "'생존·비입원 일수'나 생존시간 결과에서 차이 없음은 중재의 이점이 없다는 뜻이며, CI나 p값이 제시되지 않아 통계적 유의성을 독립적으로 확인할 수 없다."
+          },
+          {
+            "label": "Functional recovery",
+            "outcome": "Functional recovery measured by EQ-5D-5L health utility score over 180 days.",
+            "outcome_ko": "180일간 EQ-5D-5L 건강 효용 점수로 측정한 기능적 회복.",
+            "result": "Higher protein doses were associated with WORSE functional recovery.",
+            "result_ko": "고단백 공급은 더 나ڌ 기능적 회복과 연관되었다.",
+            "statistics": "Exact effect estimates, 95% CIs, and p values are not provided in the accessible sources.",
+            "interpretation": "Beyond lack of benefit, higher protein may actually leave survivors with poorer self-reported health status up to 6 months.",
+            "interpretation_ko": "이득이 없을 뿐 아니라 고단백은 생존자의 6개월까지 자가보고 건강 상태를 오히려 나빴4게 할 수 있다.",
+            "statPrimer": "For a health-utility score, a lower/worse score in the intervention arm signals potential harm; exact between-group difference and CI are not available in the accessible sources.",
+            "statPrimer_ko": "건강 효용 점수에서 중재군의 낮은/나ڌ 점수는 잠재적 해를 시사하며, 정확한 군간 차이와 CI는 접근 가능한 자료에 없다."
+          },
+          {
+            "label": "Subgroup (AKI)",
+            "outcome": "Vulnerability to higher protein among patients with acute kidney injury (subgroup analyses).",
+            "outcome_ko": "급성 신손상 환자에서 고단백에 대한 취약성(하위군 분석).",
+            "result": "Subgroup analyses suggest AKI patients may be particularly vulnerable to higher protein.",
+            "result_ko": "하위군 분석은 AKI 환자가 고단백에 특히 취약할 수 있음을 시사한다.",
+            "statistics": "Hypothesis-generating subgroup signal; no exact estimates or interaction p values in the accessible sources.",
+            "interpretation": "Be especially cautious with high protein in patients who have acute kidney injury.",
+            "interpretation_ko": "급성 신손상이 있는 환자에서 고단백은 특히 주의해야 한다.",
+            "statPrimer": "Subgroup findings are hypothesis-generating, not confirmatory; they should be interpreted cautiously unless supported by a significant interaction test, which is not reported here.",
+            "statPrimer_ko": "하위군 결과는 확증이 아닌 가설 생성용이며, 유의한 상호작용 검정(여기서는 미보고)이 뒷받침하지 않는 한 신중히 해석해야 한다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Across three international multicentre RCTs (total n = 5633), higher protein doses did not improve time-to-discharge alive or days free of the index hospital and alive at day 90.",
+        "Higher protein was associated with worse functional recovery measured by the EQ-5D-5L health utility score over 180 days, and subgroup analyses suggest patients with acute kidney injury may be particularly vulnerable.",
+        "The authors suggest commencing protein at a low dose once haemodynamically stable and increasing progressively over the first 5 days to a maximum of 1.2 g/kg/day."
+      ],
+      "keyFindings_ko": [
+        "국제 다기관 무작위 대조시험 3건(총 n = 5633)에서 고단백 공급은 생존 퇴원까지의 시간이나 90일째 원내 비입원·생존 일수를 개선하지 못했다.",
+        "고단백 공급은 180일간 EQ-5D-5L 건강 효용 점수로 측정한 기능적 회복 악화와 연관되었으며, 하위군 분석은 급성 신손상 환자가 특히 취약할 수 있음을 시사한다.",
+        "저자들은 혈역학적으로 안정되면 단백질을 저용량으로 시작해 첫 5일에 걸쳐 점진적으로 최대 1.2 g/kg/day까지 늘릴 것을 제안한다."
+      ],
+      "conclusion": "In critically ill adults, based on recent randomised trials, the authors suggest protein doses be commenced low and increased progressively to a maximum of 1.2 g/kg/day, acknowledging the optimal dose may be lower and that important evidence gaps remain (minimum safe dose, prolonged-ICU-stay cohorts, late-recovery and post-ICU protein targets).",
+      "conclusion_ko": "중환자 성인에서 최근 무작위 대조시험에 근거하여, 저자들은 단백질을 저용량으로 시작해 점진적으로 최대 1.2 g/kg/day까지 늘릴 것을 제안하며, 최적 용량은 더 낮을 수 있고 최소 안전 용량, 장기 ICU 재원 코호트, 후기 회복 및 ICU 퇴원 후 단백질 목표 등 중요한 근거 공백이 남아 있음을 인정한다.",
+      "clinicalTakeaway": "Do not push high protein early in critical illness; start low once haemodynamically stable, up-titrate over ~5 days, cap at 1.2 g/kg/day, and be especially cautious in patients with acute kidney injury.",
+      "clinicalTakeaway_ko": "중증 질환 초기에 고단백을 밀어붙이지 말고, 혈역학적으로 안정되면 저용량으로 시작해 약 5일에 걸쳐 증량하되 1.2 g/kg/day를 상한으로 하며, 급성 신손상 환자에서는 특히 주의한다.",
+      "limitations": "This is a narrative review/practice-guidance article, not a systematic review or primary trial, so recommendations reflect expert interpretation. Exact effect estimates, confidence intervals, and p values from the three underlying trials are not provided in the accessible sources, and the specific trials are not named in the abstract. The authors themselves highlight major evidence gaps: no data on the minimum safe protein dose over the whole ICU stay, no trial pre-identifying prolonged-ICU-stay patients, uncertain benefit of higher protein later in recovery (after anabolic resistance subsides), and lack of evidence on optimal post-ICU-discharge protein targets. No PMCID was available for open full-text fetch.",
+      "limitations_ko": "이 글은 체계적 문헌고찰이나 원저 시험이 아닌 서술적 종설/진료 지침 성격의 글로, 권고는 전문가 해석을 반영한다. 근거가 된 3개 시험의 정확한 효과 추정치, 신뢰구간, p값은 접근 가능한 자료에 제시되지 않았고, 초록에는 개별 시험명도 명시되지 않았다. 저자들은 전체 ICU 재원 동안의 최소 안전 용량 자료 부재, 장기 ICU 재원 환자를 사전 식별한 시험 부재, 후기 회복기(동화 저항이 완화된 이후) 고단백의 이득 불확실성, ICU 퇴원 후 최적 단백질 목표 근거 부족 등 주요 공백을 강조한다. 전문 확보를 위한 PMCID는 없었다.",
+      "edIcuApplicability": "Highly relevant to ICU practice and to prolonged ED boarding of critically ill patients where early nutrition decisions begin. It supports a conservative early-protein strategy (low start, gradual increase, ≤1.2 g/kg/day) and heightened caution in acute kidney injury. It does not address acute ED resuscitation but directly informs ICU dietitian/intensivist nutrition prescribing.",
+      "edIcuApplicability_ko": "ICU 진료 및 조기 영양 결정이 시작되는 응급실 장기 대기 중환자에 매우 관련이 있다. 보수적인 조기 단백질 전략(저용량 시작, 점진적 증량, ≤1.2 g/kg/day)과 급성 신손상에서의 주의 강화를 뒷받침한다. 응급 소생술 자체를 다루지는 않으나 ICU 영양사·중환자의의 영양 처방에 직접적인 정보를 제공한다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 7.5,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Source is a narrative review/practice-guidance article; no PMCID for open full text, so analysis relies on abstract plus PubMed and Crossref metadata.",
+        "The three underlying trials (total n=5633) are referenced but not individually named in the abstract; likely correspond to recent high-protein ICU RCTs (e.g., EFFORT Protein, PRECISe, and a related trial), but names are not confirmed in accessible sources, so not asserted.",
+        "Numeric effect estimates, CIs, and p values were not provided in accessible sources; outcomes described qualitatively as stated by the authors.",
+        "detailedPico.outcomes capture the pooled qualitative conclusions of the referenced trials rather than novel data generated by this review."
+      ],
+      "paper": {
+        "pmid": "42365349",
+        "title": "Interpreting protein dose trials in critical illness: a guide for the bedside clinician.",
+        "abstract": "BACKGROUND: Critical illness induces a catabolic state, associated with profound muscle wasting and functional disability in survivors. Based on evidence at the time of development, international critical care nutrition guidelines recommend providing higher protein doses than in healthy populations.\nMAIN BODY: Three recent international multi-centre randomised trials (total n = 5633 patients) have compared higher protein doses to usual protein doses in critically ill patients. Based on the primary outcomes, these trials concluded that higher protein doses did not improve time-to-discharge alive or number of days free of the index hospital and alive at day 90, with worse functional recovery using the EQ-5D-5L health utility score over 180 days. Supported by evidence from recent trials, it appears preferable to commence protein delivery at low doses once patients are haemodynamically stable and increase progressively over the first 5 days to deliver a maximum of 1.2 g/kg/day. Based on current trial data, this upper limit may represent a safer alternative to doses >1.2 g/kg/day, acknowledging that the optimal dose may be lower. Subgroup analyses suggest that patients with an acute kidney injury may be particularly vulnerable to higher protein. There are no data to indicate the minimum protein dose that can be safely delivered to critically ill patients over their entire ICU stay. While existing trials included patients with a prolonged ICU stay, no trial identifying this cohort pre-randomisation has been conducted. It cannot be excluded that higher protein doses may provide benefit later in recovery, when the anabolic resistance to dietary protein observed early in the ICU admission has subsided. Evidence is also lacking on optimal protein targets for patients after ICU discharge.\nCONCLUSION: In critically ill adults, we suggest that protein doses be commenced at a low dose and increased progressively to a maximum of 1.2 g/kg/day based on recent randomised trials.",
+        "authors": [
+          "Chapple LA",
+          "Bels J",
+          "Lee ZY",
+          "Summers M",
+          "Ferrie S",
+          "Stoppe C",
+          "Mesotten D",
+          "Deane A"
+        ],
+        "authorAffiliations": [
+          "School of Medicine, College of Health, Adelaide University, Adelaide, South Australia, Australia. lee-anne.chapple@adelaide.edu.au.",
+          "Intensive Care Unit, Royal Adelaide Hospital, North Terrace, Adelaide, South Australia, Australia. lee-anne.chapple@adelaide.edu.au.",
+          "Department of Intensive Care Medicine, Maastricht University Medical Centre, Maastricht, The Netherlands.",
+          "School for Nutrition and Translational Research in Metabolism, Maastricht University, Maastricht, The Netherlands.",
+          "Department of Anaesthesiology, Faculty of Medicine, University of Malaya, Kuala Lumpur, Malaysia.",
+          "Department of Anaesthesiology, Intensive Care, Emergency and Pain Medicine, University Hospital Würzburg, Würzburg, Germany.",
+          "Department of Cardiac Anaesthesiology and Intensive Care Medicine, Charité, Berlin, Germany.",
+          "School of Medicine, College of Health, Adelaide University, Adelaide, South Australia, Australia.",
+          "Intensive Care Unit, Royal Adelaide Hospital, North Terrace, Adelaide, South Australia, Australia.",
+          "Department of Nutrition & Dietetics, Royal Prince Alfred Hospital, Camperdown, New South Wales, Australia.",
+          "Faculty of Medicine and Health, University of Sydney, Sydney, Australia.",
+          "Department of Intensive Care Medicine, Ziekenhuis Oost-Limburg Genk, Genk, Belgium."
+        ],
+        "journal": "Critical care (London, England)",
+        "pubDate": "2026-Jun-27",
+        "publicationTypes": [
+          "Journal Article",
+          "Review"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Critical Illness",
+          "Dietary Proteins",
+          "Intensive Care Units",
+          "Proteins"
+        ],
+        "keywords": [
+          "Critical care",
+          "Enteral nutrition",
+          "Intensive care",
+          "Nutrition",
+          "Protein"
+        ],
+        "doi": "10.1186/s13054-026-06116-4",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42365349/",
+        "collectedAt": "2026-07-04T21:17:21.634Z",
+        "screeningData": {
+          "score": 12,
+          "relevanceMatches": [
+            "critical care",
+            "intensive care",
+            "ICU"
+          ],
+          "studyType": "Practice Guideline",
+          "sampleSize": 5633,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: critical care, intensive care, ICU",
+            "study design: Practice Guideline",
+            "sample size signal: N=5633"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42365349\nDOI: 10.1186/s13054-026-06116-4\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- School of Medicine, College of Health, Adelaide University, Adelaide, South Australia, Australia. lee-anne.chapple@adelaide.edu.au.\n- Intensive Care Unit, Royal Adelaide Hospital, North Terrace, Adelaide, South Australia, Australia. lee-anne.chapple@adelaide.edu.au.\n- Department of Intensive Care Medicine, Maastricht University Medical Centre, Maastricht, The Netherlands.\n- School for Nutrition and Translational Research in Metabolism, Maastricht University, Maastricht, The Netherlands.\n- Department of Anaesthesiology, Faculty of Medicine, University of Malaya, Kuala Lumpur, Malaysia.\n- Department of Anaesthesiology, Intensive Care, Emergency and Pain Medicine, University Hospital Würzburg, Würzburg, Germany.\n- Department of Cardiac Anaesthesiology and Intensive Care Medicine, Charité, Berlin, Germany.\n- School of Medicine, College of Health, Adelaide University, Adelaide, South Australia, Australia.\n\nPublic bibliographic metadata from Crossref:\nTitle: Interpreting protein dose trials in critical illness: a guide for the bedside clinician\nType: journal-article\nPublished: 2026-6-27\nPublisher: Springer Science and Business Media LLC\nCrossref abstract/snippet: Abstract Background Critical illness induces a catabolic state, associated with profound muscle wasting and functional disability in survivors. Based on evidence at the time of development, international critical care nutrition guidelines recommend providing higher protein doses than in healthy populations. Main body Three recent international multi-centre randomised trials (total n = 5633 patients) have compared higher protein doses to usual protein doses in critically ill patients. Based on the primary outcomes, these trials concluded that higher protein doses did not improve time-to-discharge alive or number of days free of the index hospital and alive at day 90, with worse functional recovery using the EQ-5D-5L health utility score over 180 days. Supported by evidence from recent trials, it appears preferable to commence protein delivery at low doses once patients are haemodynamically stable and increase progressively over the first 5 days to deliver a maximum of 1.2 g/kg/day. Based on current trial data, this upper limit may represent a safer alternative to doses &gt;1.2 g/kg/day, acknowledging that the optimal dose may be lower. Subgroup analyses suggest that patients with an acute kidney injury may be particularly vulnerable to higher protein. There are no data to indicate the minimum protein dose that can be safely delivered to critically ill patients over their entire ICU stay. While existing trials included patients with a prolonged ICU stay, no trial identifying this cohort pre-randomisation has been conducted. It cannot be excluded that higher protein doses may provide benefit later in recovery, when the anabolic resistance to dietary protein observed early in the ICU admission has subsided. Evidence is also lacking on optimal protein targets for patients af",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-04T21:17:52.253Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42365349",
+          "rank": 1,
+          "clinicalPriorityScore": 8.5,
+          "rationale_ko": "최근 발표된 3개의 대규모 다기관 RCT(총 5633명)를 통합해 중환자 단백질 투여량을 해석하는 실전 지침 논문이다. 고용량 단백질이 생존 퇴원이나 무병일수를 개선하지 못하고 오히려 기능적 회복(EQ-5D-5L)을 악화시켰다는 명확한 결론과 함께, 혈역학적 안정 후 저용량에서 시작해 5일에 걸쳐 최대 1.2 g/kg/day까지 점진 증량하라는 구체적·실행 가능한 침상 권고를 제시한다. 급성신손상 환자 관련 하위군 분석도 포함되어 CCM 임상의에게 즉시 적용 가능한 실무 변화 가치가 높다. Critical Care 게재로 신뢰도도 높다."
+        }
+      ],
+      "notes_ko": [
+        "최우선 논문으로 #7(PMID 42365349)을 선정: 최신 3개 대규모 RCT를 통합·해석해 성인 중환자 단백질 투여 실무에 직접적인 변화(최대 1.2 g/kg/day, 점진 증량)를 제시하는 고수율·실행 가능 논문.",
+        "차순위 후보: #3(HFNC vs BiPAP 고탄산혈증 호흡부전 메타분석, 성인 응급/중환자 관련성 높음), #13(심정지 후 ICU 관리 리뷰, 저체온 대신 발열 예방 등 최신 가이드라인 반영).",
+        "#1, #4, #8, #17, #18, #30 등 신생아/소아 중심 논문은 성인 EM/CCM 뉴스레터 관련성이 낮아 제외.",
+        "#5, #10, #11, #23, #24는 프로토콜/QI/질적연구로 즉시 임상적용 가치가 낮아 제외.",
+        "#12, #15, #20, #29 등은 관찰/모델링 연구로 실무 변화 근거로는 약하다고 판단."
+      ]
+    }
+  },
+  "errors": []
+}

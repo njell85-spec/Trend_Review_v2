@@ -1,0 +1,13 @@
+{
+  "runId": "2026-07-04",
+  "status": "running",
+  "step": "analyze",
+  "startedAt": "2026-07-04T01:15:56.350Z",
+  "finishedAt": null,
+  "counts": {
+    "fetched": 300,
+    "screened": 30
+  },
+  "outputs": {},
+  "errors": []
+}
