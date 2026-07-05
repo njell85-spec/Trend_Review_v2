@@ -1,0 +1,284 @@
+{
+  "analyses": [
+    {
+      "pmid": "42387305",
+      "title": "High-Flow Nasal Cannula in Hypercapnic Respiratory Failure: An Updated Systematic Review and Meta-Analysis.",
+      "oneLineSummary": "In adults with acute hypercapnic respiratory failure, HFNC and BiPAP yield comparable intubation and mortality, with BiPAP giving minor physiologic gains and HFNC better comfort and fewer complications.",
+      "oneLineSummary_ko": "급성 고탄산혈증 호흡부전 성인에서 HFNC와 BiPAP는 삽관율·사망률이 유사하며, BiPAP는 경미한 생리학적 이점을, HFNC는 더 나은 편안함과 적은 합병증을 제공한다.",
+      "whyItMatters": "Clinicians frequently choose between HFNC and BiPAP for hypercapnic respiratory failure (especially AECOPD), and this updated pooled analysis suggests HFNC may be a reasonable, better-tolerated alternative when BiPAP is poorly tolerated, without a signal of worse intubation or death.",
+      "whyItMatters_ko": "임상의는 고탄산혈증 호흡부전(특히 AECOPD)에서 HFNC와 BiPAP 사이에서 자주 선택하는데, 이 업데이트된 통합 분석은 BiPAP 내약성이 나쁠 때 HFNC가 삽관·사망 악화 신호 없이 합리적이고 내약성이 더 좋은 대안이 될 수 있음을 시사한다.",
+      "clinicalQuestion": "In adults with acute hypercapnic respiratory failure (PaCO2 > 45 mmHg), how does HFNC compare with BiPAP for intubation, mortality, gas exchange, comfort, and complications?",
+      "clinicalQuestion_ko": "급성 고탄산혈증 호흡부전(PaCO2 > 45 mmHg) 성인에서 HFNC는 삽관율, 사망률, 가스교환, 편안함, 합병증 측면에서 BiPAP와 어떻게 비교되는가?",
+      "studyDetails": {
+        "design": "Updated systematic review and meta-analysis of parallel-group RCTs; PROSPERO-registered (CRD420251048698), PRISMA-reported. Dichotomous outcomes pooled as risk differences (RD), continuous as mean differences (MD) or standardized mean differences (SMD); fixed- or random-effects per heterogeneity (I2>50% substantial), with meta-regression, sensitivity, leave-one-out, and trim-and-fill analyses.",
+        "design_ko": "병렬군 RCT를 대상으로 한 업데이트된 체계적 문헌고찰 및 메타분석; PROSPERO 등록(CRD420251048698), PRISMA 준수. 이분형 결과는 위험차(RD), 연속형은 평균차(MD) 또는 표준화평균차(SMD)로 통합; 이질성(I2>50%면 상당)에 따라 고정 또는 무선효과 모델, 메타회귀·민감도·leave-one-out·trim-and-fill 분석 시행.",
+        "setting": "Databases searched (PubMed, Web of Science, Cochrane CENTRAL, CNKI, Wanfang) through June 2025. Included trials ran in emergency departments, ICUs, or respiratory ICUs (RICUs). Three were multicenter and eight single-center; six of eleven studies (54.5%) were conducted in China (four in Chinese, two in English), the remainder in other countries. Authors are from Soochow University-affiliated hospitals, Suzhou, China.",
+        "setting_ko": "PubMed, Web of Science, Cochrane CENTRAL, CNKI, Wanfang을 2025년 6월까지 검색. 포함 시험은 응급실, ICU, 호흡기 ICU(RICU)에서 시행. 3편은 다기관, 8편은 단일기관; 11편 중 6편(54.5%)이 중국에서 시행(중국어 4편, 영어 2편), 나머지는 다른 국가. 저자는 중국 쑤저우 소재 소주대학 부속병원 소속.",
+        "sampleSize": "11 parallel-group RCTs with 1069 total participants included in quantitative synthesis. Outcome-specific denominators: intubation 7 RCTs (n=721); mortality 8 RCTs (n=761); PaCO2 and pH 8 RCTs (n=902); oxygenation 6 RCTs (n=660); respiratory rate 5 RCTs (n=497); ICU stay 4 RCTs; comfort/complications 9 RCTs. Individual arm denominators not detailed in accessible sources.",
+        "sampleSize_ko": "정량적 종합에 포함된 병렬군 RCT 11편, 총 1069명. 결과별 분모: 삽관 7편(n=721); 사망률 8편(n=761); PaCO2 및 pH 8편(n=902); 산소화 6편(n=660); 호흡수 5편(n=497); ICU 재원 4편; 편안함/합병증 9편. 개별 군별 분모는 접근 가능한 자료에 상세히 없음.",
+        "eligibility": "Adults aged >=16 years with acute hypercapnic respiratory failure (PaCO2 > 45 mmHg) randomized to HFNC vs BiPAP in parallel-group RCTs. Most cohorts were AECOPD; one study did not specify etiology. Excluded: overlapping/duplicate data, studies missing predefined outcomes, non-RCTs, and patients weaning from invasive mechanical ventilation.",
+        "eligibility_ko": "급성 고탄산혈증 호흡부전(PaCO2 > 45 mmHg)이 있는 16세 이상 성인으로 병렬군 RCT에서 HFNC 대 BiPAP로 무작위 배정. 대부분 AECOPD였고 한 연구는 원인 미명시. 제외: 중복 데이터, 사전정의 결과 누락 연구, 비RCT, 침습적 기계환기 이탈 환자.",
+        "interventionDetails": "High-flow nasal cannula (HFNC) delivering heated, humidified oxygen; flow rates across trials ranged from 25 to 60 L/min, titrated to patient comfort. One included trial (Haciosman et al.) used a 50-L/min subgroup and was a notable source of heterogeneity for PaCO2/pH.",
+        "interventionDetails_ko": "가온·가습 산소를 전달하는 고유량 비강 캐뉼라(HFNC); 유량은 시험 간 25~60 L/min 범위로 환자 편안함에 맞춰 조절. 포함된 한 시험(Haciosman 등)은 50 L/min 하위군을 사용했고 PaCO2/pH의 주요 이질성 원인이었다.",
+        "comparatorDetails": "Bi-level positive airway pressure (BiPAP) delivering noninvasive positive-pressure ventilation via nasal, oronasal, or full-face interfaces. Specific IPAP/EPAP pressure settings are not detailed in the accessible sources.",
+        "comparatorDetails_ko": "비강, 구비강, 또는 전안면 인터페이스를 통해 비침습적 양압환기를 전달하는 이중기도양압(BiPAP). 구체적 IPAP/EPAP 압력 설정은 접근 가능한 자료에 상세히 없음.",
+        "followUp": "Blood-gas and respiratory-rate outcomes were assessed at approximately 48 hours after intervention initiation. Overall follow-up duration varied by included trial and is not uniformly specified in the accessible sources.",
+        "followUp_ko": "혈액가스 및 호흡수 결과는 중재 시작 약 48시간 후 평가. 전체 추적 기간은 포함 시험별로 다르며 접근 가능한 자료에 일관되게 명시되지 않음.",
+        "sourceBasis": "Derived from the PMC open full text (PMC13323174), PubMed metadata, and Crossref metadata for the abstract and pooled estimates.",
+        "sourceBasis_ko": "PMC 공개 전문(PMC13323174), PubMed 메타데이터, Crossref 메타데이터의 초록 및 통합 추정치에서 도출."
+      },
+      "pico": {
+        "population": "Adults (>=16 years) with acute hypercapnic respiratory failure (PaCO2 > 45 mmHg), mostly AECOPD",
+        "intervention": "High-flow nasal cannula (HFNC), 25-60 L/min",
+        "comparison": "Bi-level positive airway pressure (BiPAP)",
+        "outcome": "Intubation rate and mortality (primary); gas exchange, respiratory rate, ICU stay, comfort, complications (secondary)"
+      },
+      "pico_ko": {
+        "population": "급성 고탄산혈증 호흡부전(PaCO2 > 45 mmHg) 성인(16세 이상), 대부분 AECOPD",
+        "intervention": "고유량 비강 캐뉼라(HFNC), 25-60 L/min",
+        "comparison": "이중기도양압(BiPAP)",
+        "outcome": "삽관율 및 사망률(주요); 가스교환, 호흡수, ICU 재원, 편안함, 합병증(부차)"
+      },
+      "detailedPico": {
+        "population": "1069 adults across 11 parallel-group RCTs with acute hypercapnic respiratory failure (PaCO2 > 45 mmHg); most cohorts were AECOPD, one trial did not specify etiology.",
+        "population_ko": "11편의 병렬군 RCT에 걸친 급성 고탄산혈증 호흡부전(PaCO2 > 45 mmHg) 성인 1069명; 대부분 AECOPD 코호트, 한 시험은 원인 미명시.",
+        "countrySetting": "Multinational RCTs; six of eleven (54.5%) conducted in China, remainder in other countries. Settings included emergency departments, ICUs, and respiratory ICUs; three multicenter and eight single-center trials.",
+        "countrySetting_ko": "다국가 RCT; 11편 중 6편(54.5%)이 중국, 나머지는 다른 국가에서 시행. 응급실, ICU, 호흡기 ICU 세팅 포함; 다기관 3편, 단일기관 8편.",
+        "intervention": "HFNC delivering heated, humidified oxygen at 25-60 L/min titrated to comfort, generating low-level PEEP.",
+        "intervention_ko": "편안함에 맞춰 조절되는 25-60 L/min의 가온·가습 산소를 전달하며 낮은 수준의 PEEP를 생성하는 HFNC.",
+        "comparator": "BiPAP noninvasive positive-pressure ventilation via nasal, oronasal, or full-face masks; specific pressure settings not detailed in accessible sources.",
+        "comparator_ko": "비강, 구비강, 전안면 마스크를 통한 BiPAP 비침습적 양압환기; 구체적 압력 설정은 접근 가능한 자료에 없음.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Intubation rate",
+            "outcome_ko": "삽관율",
+            "result": "No significant difference between HFNC and BiPAP",
+            "result_ko": "HFNC와 BiPAP 간 유의한 차이 없음",
+            "statistics": "RD = -0.02, 95% CI -0.06 to 0.03 (7 RCTs, n=721); trim-and-fill adjusted RD 0.033, 95% CI -0.032 to 0.099",
+            "interpretation": "Intubation risk was essentially the same with either modality; the confidence interval includes zero, so no meaningful difference was detected.",
+            "interpretation_ko": "삽관 위험은 두 방식에서 본질적으로 동일했으며, 신뢰구간이 0을 포함하여 의미 있는 차이가 없었다.",
+            "statPrimer": "Risk difference (RD): 0 means no absolute difference between groups; a CI crossing 0 means statistical significance was not established.",
+            "statPrimer_ko": "위험차(RD): 0은 두 군 간 절대 차이 없음을 의미하며, CI가 0을 가로지르면 통계적 유의성이 확립되지 않음."
+          },
+          {
+            "label": "Primary",
+            "outcome": "Mortality",
+            "outcome_ko": "사망률",
+            "result": "No significant difference between HFNC and BiPAP",
+            "result_ko": "HFNC와 BiPAP 간 유의한 차이 없음",
+            "statistics": "RD = -0.02, 95% CI -0.06 to 0.02 (8 RCTs, n=761); trim-and-fill adjusted RD -0.011, 95% CI -0.043 to 0.021",
+            "interpretation": "Death rates were comparable between the two therapies, with the interval spanning zero.",
+            "interpretation_ko": "사망률은 두 치료 간 유사했으며 구간이 0을 포함했다.",
+            "statPrimer": "RD: 0 means no absolute difference; a CI including 0 indicates no statistically significant difference.",
+            "statPrimer_ko": "RD: 0은 절대 차이 없음을 의미하며, CI가 0을 포함하면 통계적으로 유의한 차이가 없음."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "PaCO2 reduction (and pH)",
+            "outcome_ko": "PaCO2 감소(및 pH)",
+            "result": "No significant difference overall (random-effects); fixed-effect favored BiPAP; pH equivalent",
+            "result_ko": "전반적 유의한 차이 없음(무선효과); 고정효과는 BiPAP 우세; pH는 동등",
+            "statistics": "PaCO2 MD = 0.74 mmHg, 95% CI -1.21 to 2.70 (8 RCTs, n=902); fixed-effect MD 1.44 (0.38-2.50); pH MD -0.01, 95% CI -0.01 to 0; substantial heterogeneity",
+            "interpretation": "CO2 clearance and pH correction were similar overall, but the PaCO2 result was model-dependent and sensitive to one 50-L/min trial, so the difference is not robust.",
+            "interpretation_ko": "CO2 제거와 pH 교정은 전반적으로 유사했으나 PaCO2 결과는 모델과 한 50 L/min 시험에 민감하여 차이가 견고하지 않다.",
+            "statPrimer": "Mean difference (MD): 0 means no difference; a CI crossing 0 means not statistically significant. Fixed vs random-effects models can flip conclusions when heterogeneity is high.",
+            "statPrimer_ko": "평균차(MD): 0은 차이 없음; CI가 0을 가로지르면 유의하지 않음. 이질성이 클 때 고정 대 무선효과 모델이 결론을 바꿀 수 있음."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Oxygenation (PaO2 or PaO2/FiO2)",
+            "outcome_ko": "산소화(PaO2 또는 PaO2/FiO2)",
+            "result": "Small statistically significant advantage for BiPAP",
+            "result_ko": "BiPAP에 소폭의 통계적으로 유의한 이점",
+            "statistics": "SMD = 0.18, 95% CI 0.03 to 0.33 (6 RCTs, n=660); high-PaCO2 subgroup SMD = 0.26, 95% CI 0.09 to 0.44",
+            "interpretation": "BiPAP improved oxygenation slightly more, and the effect was larger in patients with higher baseline PaCO2, but the magnitude is small.",
+            "interpretation_ko": "BiPAP가 산소화를 약간 더 개선했고 기저 PaCO2가 높은 환자에서 효과가 더 컸으나 크기는 작다.",
+            "statPrimer": "Standardized mean difference (SMD): 0 means no difference; ~0.2 is a small effect. A CI not crossing 0 indicates statistical significance.",
+            "statPrimer_ko": "표준화평균차(SMD): 0은 차이 없음; 약 0.2는 작은 효과. CI가 0을 포함하지 않으면 통계적으로 유의함."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Respiratory rate reduction",
+            "outcome_ko": "호흡수 감소",
+            "result": "Statistically significant favoring BiPAP",
+            "result_ko": "BiPAP 유리, 통계적으로 유의",
+            "statistics": "MD = 2.06 breaths/min, 95% CI 1.17 to 2.94 (5 RCTs, n=497); substantial heterogeneity",
+            "interpretation": "BiPAP lowered respiratory rate by about 2 breaths/min more than HFNC, a modest physiologic difference.",
+            "interpretation_ko": "BiPAP가 HFNC보다 호흡수를 약 2회/분 더 낮췄으며, 이는 중등도의 생리학적 차이다.",
+            "statPrimer": "MD: 0 means no difference; a CI entirely above 0 means a statistically significant difference favoring one arm.",
+            "statPrimer_ko": "MD: 0은 차이 없음; CI가 완전히 0보다 크면 한 군에 유리한 통계적으로 유의한 차이."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Patient comfort, complications, and ICU stay",
+            "outcome_ko": "환자 편안함, 합병증, ICU 재원",
+            "result": "Comfort/complications consistently favored HFNC; ICU stay not significantly different overall",
+            "result_ko": "편안함/합병증은 일관되게 HFNC 유리; ICU 재원은 전반적 유의차 없음",
+            "statistics": "9 RCTs comfort/complications: lower GI distension (2.0-26.2% vs 4.0-45.0%) and skin breakdown (0-8.7% vs 8.0-40.0%) with HFNC; ICU stay MD = -0.72 days, 95% CI -1.90 to 0.46 (4 RCTs), significant favoring HFNC after excluding high-risk studies",
+            "interpretation": "HFNC was more comfortable with fewer skin and GI complications; ICU stay was similar overall but trended shorter with HFNC in higher-quality trials.",
+            "interpretation_ko": "HFNC는 더 편안하고 피부·위장관 합병증이 적었으며; ICU 재원은 전반적으로 유사했으나 고품질 시험에서 HFNC가 더 짧은 경향을 보였다.",
+            "statPrimer": "Proportions/ranges show lower complication rates with HFNC; for ICU stay MD, 0 means no difference and a CI crossing 0 means not statistically significant.",
+            "statPrimer_ko": "비율/범위는 HFNC의 낮은 합병증율을 보여줌; ICU 재원 MD는 0이 차이 없음을, CI가 0을 가로지르면 유의하지 않음을 의미."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Across 11 RCTs (n=1069), HFNC and BiPAP had comparable intubation (RD -0.02, 95% CI -0.06 to 0.03) and mortality (RD -0.02, 95% CI -0.06 to 0.02).",
+        "BiPAP produced small but significant advantages in oxygenation (SMD 0.18, 95% CI 0.03-0.33) and respiratory rate reduction (MD 2.06, 95% CI 1.17-2.94), while PaCO2 and pH did not differ.",
+        "HFNC consistently provided higher comfort scores and fewer skin and gastrointestinal complications across nine RCTs."
+      ],
+      "keyFindings_ko": [
+        "11편 RCT(n=1069)에서 HFNC와 BiPAP는 삽관율(RD -0.02, 95% CI -0.06~0.03)과 사망률(RD -0.02, 95% CI -0.06~0.02)이 유사했다.",
+        "BiPAP는 산소화(SMD 0.18, 95% CI 0.03~0.33)와 호흡수 감소(MD 2.06, 95% CI 1.17~2.94)에서 작지만 유의한 이점을 보였고, PaCO2와 pH는 차이가 없었다.",
+        "HFNC는 9편의 RCT에서 일관되게 더 높은 편안함 점수와 적은 피부 및 위장관 합병증을 제공했다."
+      ],
+      "conclusion": "HFNC and BiPAP deliver comparable clinical outcomes (intubation, mortality, PaCO2, pH, ICU stay) in acute hypercapnic respiratory failure. BiPAP offers modest physiologic advantages in oxygenation and respiratory rate, whereas HFNC provides better patient comfort and fewer adverse events. Findings are limited by heterogeneity, small unblinded trials, and China-heavy evidence, so large multicenter RCTs are needed.",
+      "conclusion_ko": "HFNC와 BiPAP는 급성 고탄산혈증 호흡부전에서 임상 결과(삽관, 사망, PaCO2, pH, ICU 재원)가 유사하다. BiPAP는 산소화와 호흡수에서 경미한 생리학적 이점을, HFNC는 더 나은 편안함과 적은 이상반응을 제공한다. 이질성, 소규모 비맹검 시험, 중국 중심 근거로 제한되어 대규모 다기관 RCT가 필요하다.",
+      "clinicalTakeaway": "For acute hypercapnic respiratory failure (mostly AECOPD), BiPAP remains first-line, but HFNC is a reasonable, better-tolerated alternative with comparable intubation and mortality when patients cannot tolerate BiPAP; BiPAP retains small edges in oxygenation and respiratory-rate control, especially at higher PaCO2.",
+      "clinicalTakeaway_ko": "급성 고탄산혈증 호흡부전(대부분 AECOPD)에서 BiPAP가 여전히 1차 치료이지만, 환자가 BiPAP를 견디지 못할 때 HFNC는 삽관율·사망률이 비슷하면서 내약성이 더 좋은 합리적 대안이다; BiPAP는 특히 높은 PaCO2에서 산소화와 호흡수 조절에 소폭의 우위를 유지한다.",
+      "limitations": "Included RCTs were mostly small and single-center, with over half conducted in China, limiting generalizability. No trial blinded participants or personnel (inherent to interface differences), and five did not report randomization or allocation concealment. Substantial heterogeneity affected PaCO2, respiratory rate, and ICU stay; several results (PaCO2, pH, ICU stay) were model-dependent or driven by single trials (e.g., Haciosman 50-L/min). Funnel plots were slightly asymmetric for intubation and mortality, though trim-and-fill suggested minimal impact. HFNC flow settings and BiPAP pressures varied and individual arm denominators and baseline balance are not detailed in accessible sources.",
+      "limitations_ko": "포함된 RCT는 대부분 소규모 단일기관이고 절반 이상이 중국에서 시행되어 일반화가 제한된다. 인터페이스 차이로 어떤 시험도 참가자·의료진 맹검을 하지 못했고, 5편은 무작위화나 배정은폐를 보고하지 않았다. PaCO2, 호흡수, ICU 재원에서 상당한 이질성이 있었고, 일부 결과(PaCO2, pH, ICU 재원)는 모델 의존적이거나 단일 시험(예: Haciosman 50 L/min)에 좌우되었다. 삽관·사망 깔때기 도표가 약간 비대칭이었으나 trim-and-fill은 영향이 미미함을 시사했다. HFNC 유량과 BiPAP 압력이 다양했고 개별 군 분모와 기저 균형은 접근 가능한 자료에 상세히 없다.",
+      "edIcuApplicability": "Directly relevant to ED and ICU management of acute hypercapnic respiratory failure, particularly AECOPD. Supports BiPAP as first-line while validating HFNC as a comfortable, well-tolerated option with similar hard outcomes when BiPAP is refused or poorly tolerated. Clinicians should still monitor gas exchange closely, favor BiPAP when maximizing CO2/respiratory-rate control matters (e.g., acidotic or higher-PaCO2 patients), and be ready to escalate, since evidence rests on small unblinded trials.",
+      "edIcuApplicability_ko": "급성 고탄산혈증 호흡부전, 특히 AECOPD의 응급실 및 ICU 관리에 직접 관련된다. BiPAP를 1차 치료로 뒷받침하면서, BiPAP를 거부하거나 잘 견디지 못할 때 HFNC가 유사한 주요 결과를 보이는 편안하고 내약성 좋은 선택임을 입증한다. 임상의는 여전히 가스교환을 면밀히 감시하고, CO2·호흡수 조절이 중요한 경우(예: 산증 또는 높은 PaCO2 환자)에는 BiPAP를 선호하며, 근거가 소규모 비맹검 시험에 기반하므로 에스컬레이션 준비를 해야 한다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 7,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Statistics used only as explicitly stated in abstract and PMC full text; no values invented.",
+        "Outcome denominators and subgroup data drawn from PMC full-text excerpt (PMC13323174).",
+        "pH and ICU stay were folded into combined outcome entries to respect the 6-outcome schema limit.",
+        "Evidence graded Low given unblinded small RCTs, substantial heterogeneity, model-dependent secondary outcomes, and China-heavy evidence base.",
+        "Individual arm sample sizes, BiPAP pressure settings, and uniform follow-up duration not available in accessible sources."
+      ],
+      "paper": {
+        "pmid": "42387305",
+        "title": "High-Flow Nasal Cannula in Hypercapnic Respiratory Failure: An Updated Systematic Review and Meta-Analysis.",
+        "abstract": "BACKGROUND: High-flow nasal cannula (HFNC) and bi-level positive airway pressure (BiPAP) are both employed in the management of acute hypercapnic respiratory failure, yet their comparative benefits remain uncertain. We conducted an updated systematic review and meta-analysis of randomized controlled trials (RCTs) to compare efficacy, safety, and tolerability of HFNC versus BiPAP in adults with hypercapnic respiratory failure.\nMETHODS: We searched PubMed, Web of Science, the Cochrane Central Register of Controlled Trials (CENTRAL), CNKI, and Wanfang Data through June 2025 for RCTs enrolling patients aged ≥ 16 years with arterial carbon dioxide partial pressure (PaCO) > 45 mmHg. Primary outcomes were intubation rate and mortality. Secondary outcomes included arterial oxygen partial pressure (PaO2) or the ratio of PaO2 and inhaled oxygen fraction (FiO2; PaO/FiO), PaCO, pH, respiratory rate, intensive care unit (ICU) length of stay, patient comfort, and device-related complications.\nRESULTS: Eleven RCTs (n = 1069) met inclusion criteria. Intubation (risk difference [RD] = -0.02, 95% CI -0.06 to 0.03) and mortality rates (RD = -0.02, 95% CI -0.06 to 0.02) were similar between modalities. HFNC and BiPAP showed no significant difference in PaCO reduction (mean differences [MD] = 0.74 mmHg; 95% CI, -1.21 to 2.70) or pH normalization (MD = -0.01; 95% CI, -0.01 to 0), or ICU stay (MD = -0.72 days; 95% CI, -1.90 to 0.46). However, BiPAP yielded minor statistically significant improvements in oxygenation (standardized mean differences [SMD] = 0.18, 0.03-0.33) and respiratory rate reduction (MD = 2.06; 95% CI, 1.17 to 2.94). HFNC achieved higher comfort scores and fewer skin or gastrointestinal complications.\nCONCLUSION: HFNC and BiPAP offer comparable clinical outcomes in acute hypercapnic respiratory failure. BiPAP offers modest physiological advantages, whereas HFNC provides better patient comfort and less adverse events. Large-scale, multicenter RCTs are needed to further delineate the comparative benefits of HFNC versus BiPAP in diverse patient groups.",
+        "authors": [
+          "Huang Y",
+          "Li N",
+          "Qian Y",
+          "Shao M",
+          "Gao S",
+          "Zhang Z"
+        ],
+        "authorAffiliations": [
+          "Department of Respiratory and Critical Care Medicine, The Second Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China.",
+          "Department of Medicine, Respiratory, Emergency and Intensive Care Medicine, The Fourth Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China."
+        ],
+        "journal": "The clinical respiratory journal",
+        "pubDate": "2026-Jul",
+        "publicationTypes": [
+          "Journal Article",
+          "Systematic Review",
+          "Meta-Analysis",
+          "Review"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Respiratory Insufficiency",
+          "Hypercapnia",
+          "Cannula",
+          "Oxygen Inhalation Therapy",
+          "Randomized Controlled Trials as Topic",
+          "Treatment Outcome",
+          "Oxygen",
+          "Intensive Care Units"
+        ],
+        "keywords": [
+          "bi‐level positive airway pressure",
+          "high‐flow nasal cannula",
+          "hypercapnia",
+          "respiratory failure"
+        ],
+        "doi": "10.1111/crj.70207",
+        "pmcid": "PMC13323174",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42387305/",
+        "collectedAt": "2026-07-05T21:17:19.505Z",
+        "screeningData": {
+          "score": 13,
+          "relevanceMatches": [
+            "intensive care",
+            "ICU",
+            "airway",
+            "intubation"
+          ],
+          "studyType": "Meta-Analysis",
+          "sampleSize": 1069,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: intensive care, ICU, airway, intubation",
+            "study design: Meta-Analysis",
+            "sample size signal: N=1069"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "1 Background Hypercapnic respiratory failure arises when the respiratory system fails to adequately oxygenate arterial blood and eliminate carbon dioxide, leading to impaired gas exchange and elevated arterial carbon dioxide tension (PaCO). Bi‐level positive airway pressure (BiPAP) delivers positive‐pressure ventilation via nasal, oronasal, or full‐face interfaces to enhance alveolar ventilation and reduce respiratory muscle workload. By supporting both oxygenation and CO clearance, BiPAP is recommended as first‐line therapy for acute exacerbations of chronic obstructive pulmonary disease (COPD) with hypercapnic respiratory failure, as well as for selected cases of acute cardiogenic pulmonary edema [, , ]. However, its tolerability may be limited by patient discomfort, impaired secretion clearance, restricted oral intake, and claustrophobia []—highlighting the importance of individualized ventilator settings and careful patient selection. High‐flow nasal cannula (HFNC) therapy delivers heated, humidified oxygen at precisely controlled flow rates, generating a variable low‐level positive end‐expiratory pressure (PEEP) []. This approach improves pulmonary mechanics and enhances respiratory efficiency. Although HFNC is well established for the management of hypoxemic respiratory failure [, ], its role in carbon dioxide (CO) elimination remains debated. Early cross‐sectional studies suggested that HFNC may facilitate CO clearance and confirmed its safety in patients with chronic CO retention [, , ]. Subsequent cohort studies demonstrated that HFNC is noninferior to noninvasive positive‐pressure ventilation (NIV) in the treatment of hypercapnic respiratory failure [, ]. More recently, randomized controlled trials (RCTs) have further supported these findings. However, some studies have reported that HFNC use in nonacidotic patients with hypercapnic acute exacerbations of chronic obstructive pulmonary disease (AECOPD) and elevated baseline bicarbonate levels may be associated with prolonged hospital stays—potentially due to delayed initiation of NIV []. Additionally, a survey of ICU physicians found that only 33% considered hypercapnic respiratory failure an appropriate indication for HFNC, and just 2% anticipated its success in this setting []. Our previous systematic review and meta‐analysis comparing HFNC and BiPAP in hypercapnic respiratory failure found both modalities yielded comparable clinical outcomes, although the analysis was constrained by a limited number of studies []. Since then, several high‐quality RCTs have been published. In the present study, we incorporate these new data to update and refine the comparative evaluation of HFNC versus BiPAP in patients with hypercapnic respiratory failure. 2 Methods This updated systematic review and meta‐analysis evaluated the efficacy and safety of HFNC in hypercapnic respiratory failure based on the latest evidence. The protocol was registered at PROSPERO (; CRD: CRD420251048698) and reported in accordance with the PRISMA guideline []. 2.1 Inclusion and Exclusion Criteria The studies reviewed met the following criteria: adults (age ≥ 16 years) with acute hypercapnic respiratory failure (PaCO2 > 45 mmHg). HFNC versus BiPAP. parallel RCTs. the primary efficacy outcome was the intubation rate and mortality; secondary outcomes included arterial blood‐gas parameters (PaO2 or PaO2/FiO2, PaCO2, and pH); respiratory rate; patient comfort; and device‐related complications. Studies were excluded if (1) they used the same or overlapping data by the same authors or lacked any one of the predefined primary and secondary outcomes; or (2) non‐RCTs; or (3) studies on patients weaning from invasive mechanical ventilation. 2.2 Literature Search Strategy On April 28, 2025, a trained researcher (HYK) conducted a comprehensive search of PubMed, Web of Science, Cochrane Central Register of Controlled Trials (CENTRAL), CNKI, and Wanfang Data. The search strategy combined controlled vocabulary (e.g., MeSH terms in PubMed) with free‐text keywords and synonyms related to HFNC and hypercapnic respiratory failure. Strategies were tailored to each database's indexing system. In CNKI and Wanfang, results were further filtered to include only journals listed in (PKU filter). To minimize retrieval bias, reference lists of all included studies were manually screened for additional eligible trials. Full search strategies are provided in Appendix . 2.3 Study Selection Two independent reviewers (HYK and LN) screened studies for eligibility. Duplicate records were identified and removed by cross‐checking authorship, titles, and publication dates. Titles and abstracts of remaining citations were screened against the inclusion criteria. Full‐text articles of potentially eligible studies were retrieved and assessed in detail. Disagreements were resolved through consensus, and unresolved cases were adjudicated by a third reviewer (SMY). 2.4 Quality Assessment Risk of bias for each included RCT was independently assessed by two reviewers (LN and QYJ) using the Cochrane Risk of Bias Tool []. Domains evaluated included: random sequence generation, allocation concealment, blinding of participants and personnel, blinding of outcome assessment, incomplete outcome data, selective reporting, and other potential biases. Discrepancies were resolved through discussion or adjudicated by a third reviewer (SMY). 2.5 Data Extraction Two reviewers (GSY and SMY) independently extracted data using a standardized form. Extracted information included as follows: (1) Study characteristics: first author, publication year, country, trial registration number, and journal. (2) Design details: sample size, trial setting (e.g., ICU and ED), cause of hypercapnic respiratory failure, major inclusion criteria, HFNC flow rate setting, and follow‐up duration. (3) Participant demographics: age, sex, baseline arterial blood‐gas values (PaO, PaCO, and pH), and other key clinical metrics. (4) Outcomes: primary endpoints (intubation rate and mortality) and secondary endpoints (PaO or PaO/FiO, PaCO, pH, respiratory rate, comfort scores, device‐related complications, and ICU/hospital length of stay). When both intention‐to‐treat and per‐protocol analyses were presented, we prioritized intention‐to‐treat results. Discrepancies were resolved by discussion; unresolved disagreements were adjudicated by a third reviewer. If data such as mean and SDs values were missing or unclear, we contacted corresponding authors via email; when no reply was received, we estimated values from available information using validated formulas []. 2.6 Statistical Analysis All statistical analyses were performed by an independent author using Review Manager (RevMan) version 5.4 (Cochrane Collaboration) and R version 4.1.1 (R Foundation). Continuous outcomes were pooled as mean differences (MDs) with 95% confidence intervals (CIs) when units were consistent; otherwise, standardized mean differences (SMDs) were used. Dichotomous outcomes were pooled as risk differences (RDs) with 95% CIs. Heterogeneity was assessed using Cochran's test (significance threshold: < 0.10) and the statistic ( > 50% indicating substantial heterogeneity). A fixed‐effect model was applied in the absence of heterogeneity; otherwise, a random‐effects model was used. For primary efficacy outcomes, Galbraith radial plots were generated, and meta‐regression was conducted when data permitted to explore sources of heterogeneity. Pooled estimates were visualized using forest plots. Sensitivity analyses were performed to assess the robustness of findings. Publication bias was evaluated using funnel plots, Egger's test, and Duval and Tweedie's trim‐and‐fill method, where applicable. 3 Result 3.1 Study Selection and Characteristics A total of 541 records were identified through the literature search. After removing 225 duplicates based on title and author information, 316 unique records remained for title and abstract screening. Of these, 296 were excluded for not meeting the predefined inclusion criteria, and full texts were retrieved for the remaining 20 articles. After removing three duplicated studies and six studies with heterogeneous cohorts, 11 parallel‐group RCTs [, , , , , , , , , , ], comprising 1069 participants, were ultimately included in the quantitative synthesis. The detailed identification and screening process is illustrated in Figure . Among the included studies, three were multicenter trials and eight were single‐center studies conducted in emergency departments, intensive care units (ICUs), or respiratory ICUs (RICUs). Four trials were prospectively registered. Six studies (54.5%) were conducted in China—four published in Chinese and two in English—whereas the remaining were conducted in other countries. One study did not specify the etiology of hypercapnic respiratory failure, although most cohorts consisted of patients with AECOPD. HFNC flow rates ranged from 25 to 60 L/min and were titrated based on patient comfort. Detailed participant demographics and study characteristics are presented in Tables and . 3.2 Risk of Bias Within Studies Assessment using the Cochrane Risk of Bias tool revealed that five trials did not report methods for random sequence generation or allocation concealment, indicating potential selection bias. Due to the inherent differences between HFNC and BiPAP interfaces, none of the studies blinded participants or personnel. The trial by Bian et al. lacked baseline participant characteristics and listed only a single author, raising concerns about reporting and other biases. Similarly, Wang et al. did not specify the cause of admission, and Liu et al. listed only three authors, suggesting possible undisclosed biases. No evidence of attrition bias was found across the included trials. A summary of the quality assessment is provided in Figure . 3.3 Clinical Effectiveness 3.3.1 Intubation Rate and Mortality Seven RCTs ( = 721) reported intubation rates. Pooled analysis showed HFNC was comparable to BiPAP in preventing intubation (RD = −0.02; 95% CI, −0.06 to 0.03). Eight RCTs ( = 761) reported mortality outcomes, with no significant difference between HFNC and BiPAP (RD = 0.02; 95% CI, −0.06 to 0.02). Forest plots are shown in Figure . 3.3.2 Blood Gas Analysis and Respiratory Rate Among studies reporting blood‐gas parameters (PaO, PaCO, pH) and respiratory rate approximately 48 h after intervention initiation, data were pooled and analysed. Across 8 RCTs ( = 902), there was no significant difference between HFNC and BiPAP in PaCO reduction (MD = 0.74 mmHg; 95% CI –1.21 to 2.70) and pH normalization (MD = −0.01; 95% CI –0.01 to 0; 8 RCTs, = 902). In contrast, BiPAP conferred small but statistically significant advantages in oxygenation (SMD = 0.18; 95% CI 0.03 to 0.33; 6 RCTs, = 660), and reduction of respiratory rate (MD = 2.06 breaths/min; 95% CI 1.17 to 2.94; 5 RCTs, = 497). Forest plots summarizing these comparisons are presented in Figure . 3.3.3 ICU Stay Four RCTs reporting ICU length of stay were pooled. Overall, HFNC did not significantly alter ICU stay compared with BiPAP (MD = −0.72 days; 95% CI, −1.90 to 0.46). Forest plots for ICU stay are presented in Figure . 3.3.4 Patient Comfort and Complications of Therapy Nine RCTs assessed patient comfort and device‐related complications, including nasal/facial skin breakdown, gastrointestinal distension, and tolerability comfort scores. Every trial reported statistically significant advantages for HFNC over BiPAP in the aspects mentioned above. Specifically, HFNC was associated with a lower incidence of gastrointestinal distension (range 2.0%–26.2% vs. 4.0%–45.0%) and nasal/facial skin breakdown (0%–8.7% vs. 8.0%–40.0%), as well as higher mean tolerability comfort scores and better tolerance. A comprehensive summary of these comfort and complication outcomes is provided in Table . 3.4 Sensitivity Analysis Sensitivity analyses were conducted to assess the robustness of our efficacy findings, including subgroup analyses, changing statistical models, exclusion of low‐quality studies, and leave‐one‐out analysis. 3.4.1 Subgroup Analyses Subgroup analyses were stratified by PaCO levels. Studies in which the mean PaCO in the HFNC group was ≥ 60 mmHg were categorized as high PaCO; all others were classified as low PaCO. The subgroup results closely aligned with the overall analysis. Notably, BiPAP demonstrated a greater improvement in oxygenation within the high PaCO subgroup (SMD = 0.26; 95% CI, 0.09–0.44; 4 RCTs, = 512), whereas outcomes in the low PaCO subgroup were comparable between interventions (SMD = −0.10; 95% CI, −0.43–0.22; 2 RCTs, = 148). Reductions in respiratory rate were also more pronounced in the high PaCO subgroup (MD = 2.06; 95% CI, 1.13–2.99) compared to the low PaCO subgroup (MD = 2.00; 95% CI, −1.07–5.07). 3.4.2 Alternative Statistical Models All endpoints were reanalyzed using alternative statistical models. As shown in Table , most effect estimates remained consistent. The primary outcomes—intubation rate and mortality—preserved both their magnitude and statistical significance. However, pooled PaCO results differed by model: under the fixed‐effect model, BiPAP significantly reduced PaCO (MD = 1.44; 95% CI, 0.38–2.50), whereas the random‐effects model did not yield a significant difference (MD = 0.74; 95% CI, −1.21–2.70). The direction of effect for PaO and ICU stay remained unchanged, although statistical significance was reversed under the alternative model. 3.4.3 Exclusion Of Low‐Quality Studies And Leave‐One‐Out Analysis To assess the influence of study quality, we excluded trials with two or more domains rated as high risk of bias and repeated the meta‐analysis. Although point estimates shifted slightly, overall trends and significance levels remained stable—except for ICU stay, where HFNC maintained the same direction of effect but reached statistical significance after excluding high‐risk studies (Table ). Leave‐one‐out analyses, in which each study was sequentially omitted, were performed across the available meta‐analyses. These confirmed that no single trial disproportionately affected the pooled effect sizes for most outcomes. This supports the robustness of our findings. However, for PaCO and pH, statistical significance emerged only after removing the study by Haciosman O et al. (50‐L/min subgroup) (Figure ; Figures –). 3.5 Heterogeneity Analysis Heterogeneity was acceptable for most outcomes but substantial for PaCO, respiratory rate, and ICU length of stay. Meta‐regression was performed to explore sources of PaCO heterogeneity using HFNC flow settings (unreported, low, hybrid, and high) and PaCO level (high vs. low); neither covariate significantly explained the variance ( > 0.05). Radial plot analysis (Figure ) identified the subgroup trial by Haciosman et al., which used a 50‐L/min flow rate, as a potential source of heterogeneity. For ICU length of stay, the limited number of studies precluded meta‐regression; radial plots suggested trials by Tan et al. and Wang et al. as contributors. 3.6 Publication Bias Given the limited number of included studies ( < 10), Egger's regression test was deemed inappropriate for assessing publication bias. Instead, funnel plots (Figure ) were visually examined and appeared slightly asymmetrical for both intubation and mortality outcomes. To further evaluate potential bias, Duval and Tweedie's trim‐and‐fill method was applied. The adjusted results remained consistent with the original pooled estimates, suggesting minimal impact of publication bias. Specifically, for intubation, the risk difference (RD) was 0.033 (95% CI, −0.032 to 0.099) after imputing four hypothetical studies. For mortality, the adjusted RD was −0.011 (95% CI, −0.043 to 0.021) with one study added. 4 Discussion In this updated synthesis, we systematically reviewed RCTs published since our previous analysis. To enhance methodological rigor and minimize bias, th",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42387305\nDOI: 10.1111/crj.70207\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Department of Respiratory and Critical Care Medicine, The Second Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China.\n- Department of Medicine, Respiratory, Emergency and Intensive Care Medicine, The Fourth Affiliated Hospital of Soochow University, Suzhou, Jiangsu, China.\n\nPublic bibliographic metadata from Crossref:\nTitle: High‐Flow Nasal Cannula in Hypercapnic Respiratory Failure: An Updated Systematic Review and Meta‐Analysis\nType: journal-article\nPublished: 2026-7\nPublisher: Wiley\nCrossref abstract/snippet: ABSTRACT Background High‐flow nasal cannula (HFNC) and bi‐level positive airway pressure (BiPAP) are both employed in the management of acute hypercapnic respiratory failure, yet their comparative benefits remain uncertain. We conducted an updated systematic review and meta‐analysis of randomized controlled trials (RCTs) to compare efficacy, safety, and tolerability of HFNC versus BiPAP in adults with hypercapnic respiratory failure. Methods We searched PubMed, Web of Science, the Cochrane Central Register of Controlled Trials (CENTRAL), CNKI, and Wanfang Data through June 2025 for RCTs enrolling patients aged ≥ 16 years with arterial carbon dioxide partial pressure (PaCO 2 ) &gt; 45 mmHg. Primary outcomes were intubation rate and mortality. Secondary outcomes included arterial oxygen partial pressure (PaO2) or the ratio of PaO2 and inhaled oxygen fraction (FiO2; PaO 2 /FiO 2 ), PaCO 2 , pH, respiratory rate, intensive care unit (ICU) length of stay, patient comfort, and device‐related complications. Results Eleven RCTs ( n = 1069) met inclusion criteria. Intubation (risk difference [RD] = −0.02, 95% CI −0.06 to 0.03) and mortality rates (RD = −0.02, 95% CI −0.06 to 0.02) were similar between modalities. HFNC and BiPAP showed no significant difference in PaCO 2 reduction (mean differences [MD] = 0.74 mmHg; 95% CI, −1.21 to 2.70) or pH normalization (MD = −0.01; 95% CI, −0.01 to 0), or ICU stay (MD = −0.72 days; 95% CI, −1.90 to 0.46). However, BiPAP yielded minor statistically significant improvements in oxygenation (standardized mean differences [SMD] = 0.18, 0.03–0.33) and respiratory rate reduction (MD = 2.06; 95% CI, 1.17 to 2.94). HFNC achieved higher comfort scores and fewer skin or gastrointestinal complications. Conclusion HFNC and BiPAP offer comparable clinica",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13323174"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13323174",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13323174"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-05T21:18:06.694Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42387305",
+          "rank": 1,
+          "clinicalPriorityScore": 7.5,
+          "rationale_ko": "성인 급성 고탄산혈증성 호흡부전에서 HFNC와 BiPAP를 비교한 11개 RCT(n=1069)의 최신 체계적 문헌고찰/메타분석으로, 응급실·중환자실에서 흔히 마주치는 임상 결정에 직접 적용 가능하다. 삽관율과 사망률이 유사하다는 결과는 HFNC를 대안 또는 보조 요법으로 고려할 근거를 제공하는 실질적·실무적 정보다. 성인 대상, RCT 기반 근거 종합, 흔한 임상 질문이라는 점에서 신경신생아·QI·질적연구·모델링 연구보다 EM/CCM 임상 관련성이 높아 최우선으로 선정했다."
+        }
+      ],
+      "notes_ko": [
+        "후보 다수(1번 신생아 NCPAP/NIPPV, 4번 소아 세기관지염)는 성인 EM/CCM 대상이 아니어서 우선순위를 낮췄다.",
+        "12번(심정지 후 관리 원칙)과 28번은 임상적으로 유용하나 서술적 리뷰로 새로운 실무 변경 근거는 제한적이다.",
+        "5·13·21·24·25번은 프로토콜/질적/QI/간호교육 연구로 직접적 환자진료 관련성이 약해 제외했다.",
+        "8번 ECPR 비용효과 분석과 11·14번 전해질/마그네슘 관찰연구는 흥미롭지만 인과성 및 실무 변경력이 상대적으로 약하다.",
+        "3번은 성인 대상, RCT 기반 메타분석, 흔한 임상 질문이라는 점에서 최고 우선순위로 적합하다."
+      ]
+    }
+  },
+  "errors": []
+}
