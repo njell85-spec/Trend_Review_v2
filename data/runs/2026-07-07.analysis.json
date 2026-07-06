@@ -1,0 +1,230 @@
+{
+  "analyses": [
+    {
+      "pmid": "42377961",
+      "title": "Nasal Continuous Positive Airway Pressure vs Nasal Intermittent Positive Pressure Ventilation in Preterm Infants With Respiratory Distress Syndrome: A Randomized Clinical Trial.",
+      "oneLineSummary": "Automated detailed analysis was not available; manual review is needed. IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants.",
+      "oneLineSummary_ko": "자동 상세 분석을 사용할 수 없어 원문 또는 초록 확인이 필요합니다. IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants.",
+      "whyItMatters": "This paper matched the EM/CCM screening rules, but the automated analysis failed and should be reviewed manually before use.",
+      "whyItMatters_ko": "이 논문은 EM/CCM 스크리닝 기준에는 포함되었지만 자동 분석이 실패했으므로 실제 활용 전 수동 확인이 필요합니다.",
+      "clinicalQuestion": "What does this randomized controlled trial suggest for emergency medicine or critical care practice?",
+      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "studyDetails": {
+        "design": "Manual review needed. Study design details were not reliably extracted.",
+        "design_ko": "수동 검토 필요. 연구 설계를 안정적으로 추출하지 못했습니다.",
+        "setting": "Manual review needed. Country and site details were not reliably extracted.",
+        "setting_ko": "수동 검토 필요. 국가와 연구 기관 정보를 안정적으로 추출하지 못했습니다.",
+        "sampleSize": "Manual review needed. Actual enrolled, randomized, analyzed, or safety sample size was not reliably extracted.",
+        "sampleSize_ko": "수동 검토 필요. 실제 등록, 무작위 배정, 분석 대상, 안전성 분석 대상 수를 안정적으로 추출하지 못했습니다.",
+        "eligibility": "Manual review needed. Inclusion and exclusion criteria were not reliably extracted.",
+        "eligibility_ko": "수동 검토 필요. 포함 및 제외 기준을 안정적으로 추출하지 못했습니다.",
+        "interventionDetails": "Manual review needed. Intervention details were not reliably extracted.",
+        "interventionDetails_ko": "수동 검토 필요. 중재 세부 정보를 안정적으로 추출하지 못했습니다.",
+        "comparatorDetails": "Manual review needed. Comparator details were not reliably extracted.",
+        "comparatorDetails_ko": "수동 검토 필요. 비교군 세부 정보를 안정적으로 추출하지 못했습니다.",
+        "followUp": "Manual review needed. Follow-up details were not reliably extracted.",
+        "followUp_ko": "수동 검토 필요. 추적관찰 정보를 안정적으로 추출하지 못했습니다.",
+        "sourceBasis": "Fallback summary generated because: Claude Code CLI failed for analysis 42377961 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":217,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"5084e6c1-e3ba-4aff-a82b-756362483f91\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\"",
+        "sourceBasis_ko": "다음 이유로 fallback 요약을 생성했습니다: Claude Code CLI failed for analysis 42377961 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":217,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"5084e6c1-e3ba-4aff-a82b-756362483f91\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\""
+      },
+      "pico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
+        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
+        "outcome": "IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants."
+      },
+      "pico_ko": {
+        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
+        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
+        "outcome": "IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants."
+      },
+      "detailedPico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "population_ko": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "countrySetting": "Not reliably extracted.",
+        "countrySetting_ko": "국가와 연구 세팅을 안정적으로 추출하지 못했습니다.",
+        "intervention": "Manual review needed.",
+        "intervention_ko": "수동 검토가 필요합니다.",
+        "comparator": "Manual review needed or not reported.",
+        "comparator_ko": "수동 검토가 필요하거나 보고되지 않았습니다.",
+        "outcomes": [
+          {
+            "label": "Outcome",
+            "outcome": "Manual review needed.",
+            "outcome_ko": "수동 검토 필요.",
+            "result": "IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants.",
+            "result_ko": "IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants.",
+            "statistics": "Not reliably extracted.",
+            "interpretation": "Statistical interpretation was not available because structured analysis failed.",
+            "interpretation_ko": "구조화 분석 실패로 통계 해석을 제공하지 못했습니다.",
+            "statPrimer": "For ratio measures such as OR, RR, and HR, 1 means no relative difference; below 1 usually favors the intervention for harmful events, and above 1 suggests more events. For p values, p<0.05 is commonly treated as statistically significant; p>=0.05 is not.",
+            "statPrimer_ko": "OR/RR/HR 같은 비율 지표는 1이면 상대 차이가 없고, 해로운 사건에서는 1보다 작으면 중재군에 유리한 방향, 1보다 크면 사건이 더 많은 방향입니다. p-value는 보통 0.05 미만이면 통계적으로 유의, 0.05 이상이면 유의하다고 보기 어렵습니다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants."
+      ],
+      "keyFindings_ko": [
+        "IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants."
+      ],
+      "conclusion": "Automated conclusion was not available.",
+      "conclusion_ko": "자동 결론을 생성하지 못했습니다.",
+      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
+      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
+      "limitations": "Fallback summary generated because: Claude Code CLI failed for analysis 42377961 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":217,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"5084e6c1-e3ba-4aff-a82b-756362483f91\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\"",
+      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: Claude Code CLI failed for analysis 42377961 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":217,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"5084e6c1-e3ba-4aff-a82b-756362483f91\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\"",
+      "edIcuApplicability": "Manual review needed before applying this paper to ED or ICU practice.",
+      "edIcuApplicability_ko": "ED/ICU 진료에 적용하기 전 수동 검토가 필요합니다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 10,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "Claude Code CLI failed for analysis 42377961 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":217,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"5084e6c1-e3ba-4aff-a82b-756362483f91\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\""
+      ],
+      "paper": {
+        "pmid": "42377961",
+        "title": "Nasal Continuous Positive Airway Pressure vs Nasal Intermittent Positive Pressure Ventilation in Preterm Infants With Respiratory Distress Syndrome: A Randomized Clinical Trial.",
+        "abstract": "IMPORTANCE: Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants. Evidence regarding the optimal initial noninvasive ventilation (NIV) mode for extremely preterm infants (<30 weeks' gestation) with RDS is inconsistent.\nOBJECTIVE: To determine whether nasal continuous positive airway pressure (NCPAP) is noninferior to nasal intermittent positive pressure ventilation (NIPPV) as primary respiratory support before minimally invasive surfactant administration (MISA) for reducing intubation within 72 hours in preterm infants with RDS.\nDESIGN, SETTING, AND PARTICIPANTS: This multicenter, noninferiority randomized clinical trial was conducted across 11 tertiary neonatal intensive care units in China from December 2021 to October 2024. The trial was designed to enroll 960 infants but was stopped early after enrolling 312 (32.5% of the target) based on prespecified stopping criteria. The enrolled participants were spontaneously breathing preterm infants at 24 to 29+6 weeks' gestation with a diagnosis of RDS requiring noninvasive respiratory support after birth. Data were analyzed from January 7 to May 9, 2025.\nINTERVENTION: Infants were randomized 1:1 to receive NCPAP or NIPPV as initial respiratory support. All received MISA within 120 minutes after birth via a 1.67-mm catheter.\nMAIN OUTCOMES AND MEASURES: The primary outcome was NIV failure, defined as requiring intubation and invasive mechanical ventilation within 72 hours after birth. The noninferiority margin was set at a 10% risk difference. Secondary outcomes included NIV failure within 7 days, surfactant redosing, and major complications (eg, pneumothorax, bronchopulmonary dysplasia).\nRESULTS: A total of 312 preterm infants (median [IQR] gestational age, 28.0 [28.6-29.4] weeks; 174 boys [55.8%]) were randomized to the NCPAP group (153 infants) or the NIPPV group (159 infants). NIV failure within 72 hours occurred in 40 infants (26.1%) in the NCPAP group vs 21 infants (13.2%) in the NIPPV group (adjusted risk difference, 12.8%; 95% CI, 4.2%-21.6%; P = .004; O'Brien-Fleming adjusted α = .005), exceeding the noninferiority margin and conclusively demonstrating inferiority of NCPAP. NIV failure within 7 days was also higher in the NCPAP group (42 infants [27.5%] vs 24 infants [15.1%]; risk difference, 12.4%; 95% CI, 3.4%-21.4%; P = .008). No significant differences were observed between groups for most complications.\nCONCLUSIONS AND RELEVANCE: In this randomized clinical trial of preterm infants with RDS, NIPPV with MISA as initial respiratory support significantly reduced NIV failure within 72 hours compared with NCPAP. These findings suggest that NIPPV may be the preferred primary respiratory strategy for this high-risk population, although further evaluation of long-term outcomes is warranted due to early trial termination.\nTRIAL REGISTRATION: ClinicalTrials.gov Identifier: NCT05137340.",
+        "authors": [
+          "Zhang H",
+          "Zhang Y",
+          "Zeng L",
+          "Tong X",
+          "Piao M",
+          "He H",
+          "Zhao C",
+          "Xie H"
+        ],
+        "authorAffiliations": [
+          "Department of Pediatrics, Peking University Third Hospital, Beijing, China.",
+          "Research Center of Clinical Epidemiology, Peking University Third Hospital, Beijing, China.",
+          "Department of Neonatology, The Third Hospital of Baogang Group, Baotou, China.",
+          "Department of Neonatology, Affiliated Hospital of Chifeng University, Chifeng, China.",
+          "Department of Neonatology, Women and Children's Hospital Affiliated to Xiamen University, Xiamen, China.",
+          "Department of Neonatology, The Third Affiliated Hospital of Guangzhou Medical University, Guangzhou, China.",
+          "Department of Neonatology, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China.",
+          "Department of Neonatology, Dalian Women and Children's Medical Group, Dalian, China.",
+          "Department of Neonatology, Maternal and Child Health Hospital of Hubei Province, Wuhan, China.",
+          "Department of Neonatology, Tianjin Central Hospital of Gynecology Obstetrics, Tianjin, China.",
+          "Department of Neonatology, The First Hospital of Jilin University, Changchun, China.",
+          "Department of Pediatrics, The Affiliated Hospital of Southwest Medical University, Luzhou, China."
+        ],
+        "journal": "JAMA network open",
+        "pubDate": "2026-Jun-01",
+        "publicationTypes": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Multicenter Study",
+          "Equivalence Trial"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Respiratory Distress Syndrome, Newborn",
+          "Infant, Newborn",
+          "Continuous Positive Airway Pressure",
+          "Female",
+          "Male",
+          "Intermittent Positive-Pressure Ventilation",
+          "Infant, Premature",
+          "China",
+          "Pulmonary Surfactants"
+        ],
+        "keywords": [],
+        "doi": "10.1001/jamanetworkopen.2026.19785",
+        "pmcid": "PMC13320649",
+        "nctIds": [
+          "NCT05137340"
+        ],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42377961/",
+        "collectedAt": "2026-07-06T21:17:25.245Z",
+        "screeningData": {
+          "score": 14,
+          "relevanceMatches": [
+            "intensive care",
+            "airway",
+            "intubation",
+            "mechanical ventilation"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": null,
+          "journalBoost": 4,
+          "reasons": [
+            "abstract available",
+            "topic match: intensive care, airway, intubation, mechanical ventilation",
+            "study design: Randomized Controlled Trial",
+            "journal boost: JAMA network open"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants, particularly those born at less than 30 weeks’ gestation. While surfactant replacement therapy remains a cornerstone treatment, evolving delivery strategies aiming to mitigate ventilator-induced lung injury. The clinical paradigm has shifted from invasive approaches (intubation, surfactant, and extubation) toward minimally invasive techniques, exemplified by less-invasive surfactant administration (LISA), minimally invasive surfactant therapy (MIST), and minimally invasive surfactant administration (MISA) with specially designed minimally invasive tubes in China. These conceptually similar techniques reflect efforts to integrate gentle ventilation into early respiratory management. Despite advances, debate persists regarding optimal respiratory support after birth. Current guidelines recommend nasal continuous positive airway pressure (NCPAP) combined with LISA as a first-line strategy to avoid invasive mechanical ventilation (IMV). However, nasal intermittent positive pressure ventilation (NIPPV), which superimposes intermittent peak pressures on NCPAP, has shown potential benefits in reducing treatment failure in some populations, although evidence for its superiority in extremely preterm infants is inconclusive. Importantly, NIPPV is associated with increased risks of abdominal distention, vomiting, and gastrointestinal perforation vs NCPAP, raising safety concerns. Meta-analyses confirm NIPPV’ s efficacy in reducing reintubation after extubation compared to NCPAP. However, NIPPV as initial respiratory support with MISA remains unstudied in infants born at less than 30 weeks’ gestation. A multicenter trial in 200 infants with 26 to 32 weeks’ gestation showed that NIPPV with MIST reduced IMV within 72 hours and decreased the incidence of bronchopulmonary dysplasia (BPD), but no significant IMV reduction was observed in its prespecified subgroup of 115 infants with less than 30 week’s gestation. This inconsistency underscores the need for rigorous evaluation of NIPPV as primary support with MISA in this highest-risk population. To address this gap, we conducted a multicenter noninferiority randomized clinical trial comparing NCPAP with NIPPV as primary respiratory support prior to MISA in spontaneously breathing preterm infants (24-29 weeks’ gestation). The trial was halted prematurely after enrolling 312 infants (32.5% of planned 960) when prespecified interim analysis demonstrated conclusive NCPAP inferiority. This report focuses on prespecified 72-hour respiratory outcomes and complications profiles. Methods Study Design This multicenter, noninferiority randomized clinical trial was conducted across 11 tertiary neonatal intensive care units (NICUs) in China. Initially, 14 centers were planned; 3 centers withdrew due to concurrent trials, leaving 11 centers completing the study. The trial protocol was prospectively registered and initially published during the early enrollment phase, with the final trial protocol (including all amendments) and statistical analysis plan provided in . The study protocol was approved by the institutional review boards at all participating centers, and written informed consent was obtained from parents or legal guardians prior to enrollment. A data safety and monitoring committee (DSMC) of 2 independent neonatologists and an independent statistician oversaw trial progress and safety, all external to the participating centers. This study followed the Consolidated Standards of Reporting Trials () reporting guideline. Inclusion and Exclusion Criteria Eligible infants were those with gestational age 24 to 29 weeks, with spontaneous breathing at birth, requiring noninvasive respiratory support for respiratory distress, and with an RDS diagnosis within 2 hours after birth (fraction of inspired oxygen [Fi] >0.30 to maintain peripheral oxygen saturation [Sp] >85%; Silverman Anderson score [SAS] >5 or increase >2 points/h). SAS assesses the degree of respiratory effort by observing and scoring specific physical signs of labored breathing. The score ranges from 0 to 10, with higher scores indicating more severe respiratory distress. Exclusion criteria were intubation prior to surfactant, major congenital anomalies affecting respiration, transfer to other hospitals, parental withdrawal, or participation in other interventional trials. Randomization Infants were randomly assigned 1:1 to NCPAP or NIPPV on NICU admission. Randomization was stratified by clinical center, gestational age (24 to 26 weeks, 27 to 29 weeks), birth weight (<1000 g, ≥1000 g), sex, and maternal corticosteroid exposure (complete course, incomplete course, or none). Variable block sizes (4-6) ensured allocation concealment and balance across centers. Treatment allocations were computer generated (R software version X.X [R Project for Statistical Computing) by an independent statistician and concealed in sequentially numbered, sealed opaque envelopes. To minimize allocation bias, multiple-birth infants underwent separate randomization. Protocol Preterm infants with spontaneous breathing received standardized noninvasive respiratory support in the delivery room and during NICU admission, using a positive end-expiratory pressure (PEEP) of 6 cm HO and Fi 0.40 or less. After NICU admission, infants were randomly assigned to NCPAP or NIPPV. The NCPAP group received continuous pressure via nasal prongs (PEEP, 6-8 cm HO; flow rate, 6-12 L/min; Fi, 0.21-0.40). The NIPPV group received synchronized ventilation (PEEP, 6-8 cm HO; peak inspiratory pressure, 15-20 cm HO; inspiratory time, 0.3-0.4 seconds; respiratory rate, 20-40 breaths/min; flow rate, 8-10 L/min; Fi, 0.21-0.40). If maximal parameters were insufficient to maintain preductal saturation 90% to 95%, Fi was gradually increased up to 0.40. Calf pulmonary surfactant (Beijing Double-Crane Pharmaceutical Co. Ltd) was administered via MISA within 120 minutes after birth to infants with RDS receiving NCPAP or NIPPV. A 1.67-mm catheter was inserted 0.5 to 1.0 cm below the vocal cords via direct laryngoscopy, connected to a 5 mL surfactant syringe, and removed after nurse-administered miniboluses over 120 to 300 seconds. For procedural complications, bradycardia or desaturation (Sp <85%) prompted pausing administration with catheter retention, stimulation, and Fi adjustment until recovery; apnea required immediate positive pressure ventilation; regurgitation was managed by temporary suspension and slowed infusion. The initial surfactant dose was 100 mg/kg; repeat administration was permitted within 72 hours if it was at least 4 to 6 hours after prior dose, the infant experienced progressive respiratory distress, the infant had chest radiograph-confirmed RDS, and non-RDS etiologies had been excluded. Intubation and IMV within 72 hours or 7 days were indicated for meeting any of the following: (1) severe respiratory acidosis (arterial partial pressure of carbon dioxide [Pa] >65 mm Hg with pH <7.2); (2) hypoxemia (Sp <85% on Fi >0.4); (3) recurrent apnea (≥3 episodes/h or any requiring positive pressure ventilation), with an episode of apnea defined centrally as cessation of breathing for more than 20 seconds or a shorter pause accompanied by bradycardia or oxygen desaturation; (4) SAS increase more than 2 points/h or SAS greater than 5 for more than 2 hours after surfactant administration; (5) pulmonary hemorrhage; (6) cardiopulmonary arrest; or (7) clinical judgment of need for escalation, which required confirmation by 2 attending neonatologists and was used only when no objective criteria applied. The extubation criterion was mean airway pressure (MAP) less than 8 cm HO with Fi less than 0.3. NIV support weaning required resolved respiratory distress (SAS <3), NCPAP with PEEP 3 to 5 cm HO or NIPPV with MAP 6 to 7 cm HO at Fi 0.25 or less, or an apnea-free period of at least 24 hours. The different thresholds reflect physiologically comparable support levels and were applied consistently across all centers to ensure uniformity. Caffeine citrate was initiated after admission with a 20-mg/kg loading dose followed by 5 to 10 mg/kg per day maintenance. Masking Operators, clinicians, and nurses were not masked to intervention allocation due to procedural requirements, while independent outcome evaluators and data analysts remained masked. Although caregiver masking was not feasible, this design limits performance bias by relying on predefined objective criteria for treatment failure and eliminates detection bias through masked outcome assessment. These criteria included standardized thresholds for respiratory parameters and imaging findings, ensuring consistent adjudication. Outcomes Assessment The primary outcome was NIV failure within 72 hours after birth, defined as requiring intubation with IMV. Secondary outcomes included NIV failure within 7 days, surfactant redosing (≥2 doses), and complications, including pneumothorax, pulmonary hemorrhage, pneumonia, persistent pulmonary hypertension of the newborn, hemodynamically significant patent ductus arteriosus, BPD, severe intraventricular hemorrhage (IVH; grade III-IV per Papile classification), periventricular leukomalacia, blood culture-positive late-onset sepsis, necrotizing enterocolitis (NEC) of any grade, and retinopathy of prematurity. BPD severity was graded using Jensen’s 2019 criteria based on respiratory support at 36 weeks’ PMA: no BPD (no support), grade 1 (nasal cannula ≤2 L/min), grade 2 (>2 L/min or noninvasive ventilation), or grade 3 (IMV). Late-onset sepsis was defined as occurring after 72 hours of age with a positive bacterial or fungal culture from blood. The modified Bell staging system stratifies NEC severity through integrated clinical-radiological criteria: stage I (suspected) demonstrates systemic or abdominal signs without radiographic confirmation; stage II (confirmed), pneumatosis intestinalis or portal venous gas on abdominal imaging; and stage III (advanced), intestinal perforation or hemodynamic instability necessitating surgical intervention. Respiratory support durations (NIV, IMV, and oxygen days), length of hospital stay, and in-hospital mortality were also assessed. Independent outcome assessors, masked to treatment allocation, applied these criteria to all events. Disagreements were resolved by a third blinded adjudicator. DSMC The DSMC conducted prescheduled interim analyses at 30% and 60% enrollment to evaluate efficacy and safety end points. These statistical monitoring parameters, including the O’Brien-Fleming α-spending function thresholds (α = .005 at 30% enrollment; α = .038 at 60% enrollment) and stopping rules, were formally documented in the final trial protocol () approved prior to interim analyses. The DSMC applied 3 prespecified criteria: (1) futility boundary (conditional power <20%), (2) noninferiority margin violation (risk difference >10% with < .005 at 30% analysis), or (3) protocol-defined safety concerns. This rigorous approach maintained an overall type I error rate of 0.05. Statistical Analysis A 2020 trial in preterm infants with 32 weeks’ gestation with RDS reported treatment failure risks of 24.5% with NCPAP and 22.4% with NIPPV using LISA, with no statistically significant difference between the groups. The noninferiority margin was set at 10%, defining NCPAP as noninferior if the upper limit of the 95% CI for the risk difference between groups remained below this threshold. With 80% power (α = .05), 452 infants per group were required. Accounting for 6% potential attrition, the final sample size totaled 960 infants (480 per group) with 1:1 randomization. The primary intention-to-treat analysis included all randomized eligible infants according to original group assignment. In the primary analysis, primary and secondary outcomes were compared between groups using risk differences for binary outcomes (generalized linear models with binomial distribution or identity link), mean differences for continuous outcomes (linear regression), or median differences for skewed variables (quantile regression), all reported with 95% CIs, calculated using R software version 4.0.2 for i386 architecture (R Project for Statistical Computing). The primary outcome models were adjusted for the stratification factors used in randomization (gestational age, birth weight, infant sex, and maternal corticosteroid use) and included clinical site as a fixed effect to account for center variability. This adjusted analysis was prespecified as a sensitivity analysis for robustness. For secondary outcomes, analyses adjusted for clinical site only to prioritize control of center-level confounding. Missing data for baseline or secondary outcomes were minimal and were handled by using available cases. The trial was stopped for futility after enrolling 312 infants (32.5% of planned 960) based on a prespecified interim analysis. Using the O’Brien-Fleming α-spending function, the adjusted significance threshold at this stage was α = .014. To assess the robustness of our findings, a post hoc bayesian analysis was conducted with a neutral prior (normal distribution: mean [SD], 10% [5%]), placing 95% prior probability on the true risk difference being between 0% and 20%. A binomial likelihood model was used for the observed event counts in each group. values were 2-sided, and statistical significance was set at α = .05. All analyses were performed using R software version 4.0.2. All analyses followed intention-to-treat principles. Data were analyzed from January 7 to May 9, 2025. Results Trial Population From the 11 participating NICUs, 996 infants were assessed for eligibility. Among them, 670 infants (67.3%) did not meet the inclusion criteria, and an additional 14 infants were not enrolled, resulting in 312 randomized infants who received NCPAP (153 infants) or NIPPV (159 infants) (). Included infants had a median (IQR) gestational age of 28.0 (28.6-29.4) weeks and birth weight of 940.0 (1118.5-1280.0) g; there were 174 boys (55.8%) and 138 girls (44.2%). Baseline demographic and clinical characteristics of the study population were similar between groups (). The trial was terminated early in strict adherence to the prespecified stopping rule (risk difference >10% with < .005 at 30% analysis), as defined in the final trial protocol in , after interim analysis at 30% enrollment demonstrated conclusive inferiority of NCPAP. Primary Outcome The primary outcome was available for all infants. The incidence of NIV failure within 72 hours after birth occurred in 40 infants (26.1%) in the NCPAP group compared with 21 infants (13.2%) in the NIPPV group, demonstrating a statistically significant difference (adjusted risk difference, 12.8% [95% CI, 4.2%-21.6%]; = .004) (). In sensitivity analysis, the posterior probability that the true risk difference exceeded 10% was 98.7% (95% credible interval, 96.2%-99.8%), suggesting a high likelihood of NCPAP inferiority even if full recruitment had been achieved. Secondary Outcomes In secondary outcomes, the incidence of NIV failure within 7 days remained significantly higher in the NCPAP group (42 infants [27.5%]) compared with the NIPPV group (24 infants [15.1%]), with risk difference of 12.4% (95% CI, 3.4% to 21.4%) ( = .008). Surfactant redosing rates were similar between groups. No significant differences were observed in complications, including hemodynamically significant patent ductus arteriosus, persistent pulmonary hypertension of the newborn, pneumonia, or severe retinopathy of prematurity. NEC incidence was numerically higher in the NCPAP group, although this difference did not reach statistical significance (28 infants [18.3%] vs 17 infants [10.7%]; risk difference, 7.7% [95% CI, −0.1% to 15.5%]; = .06). Other outcomes, including pneumothorax, pulmonary hemorrhage, BPD severity grades, intraventricular hemorrhage (grade III or",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42377961\nDOI: 10.1001/jamanetworkopen.2026.19785\nClinical trial IDs found in PubMed record/abstract: NCT05137340\nAuthor affiliations:\n- Department of Pediatrics, Peking University Third Hospital, Beijing, China.\n- Research Center of Clinical Epidemiology, Peking University Third Hospital, Beijing, China.\n- Department of Neonatology, The Third Hospital of Baogang Group, Baotou, China.\n- Department of Neonatology, Affiliated Hospital of Chifeng University, Chifeng, China.\n- Department of Neonatology, Women and Children's Hospital Affiliated to Xiamen University, Xiamen, China.\n- Department of Neonatology, The Third Affiliated Hospital of Guangzhou Medical University, Guangzhou, China.\n- Department of Neonatology, The Second Affiliated Hospital of Xi'an Jiaotong University, Xi'an, China.\n- Department of Neonatology, Dalian Women and Children's Medical Group, Dalian, China.\n\nPublic trial registry from ClinicalTrials.gov (NCT05137340):\nBrief title: NIV-MISA-NRDS Trial: a Multicenter Study in China\nOfficial title: Nasal Continuous Positive Airway Pressure Versus Non-invasive Positive Pressure Ventilation as Primary Support Before Minimally Invasive Surfactant Administration for Preterm Infants With NRDS\nOverall status: TERMINATED\nStudy type / phase: INTERVENTIONAL, NA\nDesign: RANDOMIZED, PARALLEL, TREATMENT, masking SINGLE\nEnrollment: 312 (ACTUAL)\nCountries: China\nSample recruiting/participating locations:\n- Peking University Third Hospital, Beijing, China\nArms/groups:\n- NCPAP group (EXPERIMENTAL): The ventilator parameter of NCPAP group are set with positive end expiratory pressure \\[PEEP\\] of 6cmH2O (adjustment range 6-8cmH2O) and FiO2 of 0.21-0.40, in order to maintain an oxygen saturation level of 90%-95%.\n- NIPPV group (ACTIVE_COMPARATOR): NIPPV group are set with PEEP of 6cmH2O (adjustment range 6-8cmH2O), peak inspiratory pressure \\[PIP\\] of 15cmH2O (regulation range 15-20cmH2O), inspiratory time of 0.3s (regulation range 0.3-0.4s), respiratory rate of 30 times/min (regulation range 20-40 times/min) and FiO2 of 0.21-0.40.\nInterventions:\n- Nasal continuous positive airway pressure (OTHER): Preterm infants with spontaneous breathing are stabilized on non-invasive respiratory support (PEEP of 6 cmH2O and FiO2≤0.40) in the delivery room and during admission to NICU, and then randomly selected to start NCPAP within 30 minutes of birth. Under NCPAP, the calf pulmonary surfactant will be administered via MISA method within 120 minutes after birth if infants are clinically diagnosed with RDS.\n- Non-invasive positive pressure ventilation (OTHER): Preterm infants with spontaneous breathing are stabilized on non-invasive respiratory support (PEEP of 6 cmH2O and FiO2≤0.40) in the delivery room and during admission to NICU, and then randomly selected to start NIPPV within 30 minutes of birth. Under NIPPV, the calf pulmonary surfactant will be administered via MISA method within 120 minutes after birth if infants are clinically diagnosed with RDS.\nPrimary outcomes:\n- NIV treatment failure within the first 72 hours of life | time frame: From enrollment to the first 72 hours of life | The failure of non-invasive nasal respiratory support(NIPPV or NCPAP) within the first 72 hours of life\nSecondary outcomes:\n- NIV treatment failure within 7days after birth | time frame: From enrollment to 7days after birth | The failure of non-invasive nasal respiratory support(NIPPV or NCPAP) within 7days after birth\n- Rate of pneumothorax | time frame: Through study completion and up to corrected three months | Rate of pneumothorax\n- Rate of pulmonary hemorrhage | time frame: Through study completion and up to corrected three months | Rate of pulmonary hemorrhage\n- Rate of hemodynamically significant patent ductus arteriosus (hsPDA) | time frame: Through study completion and up to corrected three months | Rate of hemodynamically significant patent ductus arteriosus (hsPDA)\n- Rate of intraventricular hemorrhages (IVH, grade III or Ⅳ) | time frame: Through study completion and up to corrected three months | Rate of intraventricular hemorrhages (IVH, grade III or Ⅳ)\n- Rate of periventricular leukomalacia | time frame: Through study completion and up to corrected three months | Rate of periventricular leukomalacia\n- Rate of late-onset sepsis | time frame: Through study completion and up to corrected three months | Rate of late-onset sepsis\n- Rate of bronchopulmonary dysplasia (BPD) | time frame: At 36 weeks PMA | Rate of bronchopulmonary dysplasia (BPD)\nEligibility excerpt: Inclusion Criteria Infants who meet all of the following criteria will be included: 1. Infants of 24 to 29+6 weeks GA. 2. Infants with spontaneous breathing and signs of respiratory distress will receive non-invasive respiratory support (PEEP of 6 cmH2O and fraction of inspired oxygen\\[FiO2\\]≤0.40) immediately after birth in the delivery room and during transfer to NICU. Once the infant is settled down in the incubator, and the ventilation support of NCPAP or NIPPV by ventilator in NICU will by started according to the randomization of protocol. 3. Under NCPAP or NIPPV, the surfactant will be administered via MISA approach within 120 minutes after birth if the infant required FiO2\\>0.3 for transcutaneous oxygen saturation \\[SpO2\\]\\>85%, or Silverman Anderson Score \\[SAS\\] \\>5 points or SAS increasing \\>2 points per hour. 4. Parental consent will be obtained for all participants. Exclusion Criteria Infants who meet any of the following criteria will be excluded: 1. Infants who have been intubated prior to pulmonary surfactant administration due to postnatal resuscitation or other reasons. 2. Infants with obvious malformations affecting respiratory function. 3. Infants who have been transferred out to other hospitals for surgery or died for other complications with uncompleted data. 4. Infants who have participated in other interventional researches.\n\nPublic bibliographic metadata from Crossref:\nTitle: Nasal Continuous Positive Airway Pressure vs Nasal Intermittent Positive Pressure Ventilation in Preterm Infants With Respiratory Distress Syndrome\nType: journal-article\nPublished: 2026-6-30\nPublisher: American Medical Association (AMA)\nCrossref abstract/snippet: Importance Respiratory distress syndrome (RDS) remains a leading cause of morbidity and mortality in preterm infants. Evidence regarding the optimal initial noninvasive ventilation (NIV) mode for extremely preterm infants (&amp;amp;lt;30 weeks’ gestation) with RDS is inconsistent. Objective To determine whether nasal continuous positive airway pressure (NCPAP) is noninferior to nasal intermittent positive pressure ventilation (NIPPV) as primary respiratory support before minimally invasive surfactant administration (MISA) for reducing intubation within 72 hours in preterm infants with RDS. Design, Setting, and Participants This multicenter, noninferiority randomized clinical trial was conducted across 11 tertiary neonatal intensive care units in China from December 2021 to October 2024. The trial was designed to enroll 960 infants but was stopped early after enrolling 312 (32.5% of the target) based on prespecified stopping criteria. The enrolled participants were spontaneously breathing preterm infants at 24 to 29 +6 weeks’ gestation with a diagnosis of RDS requiring noninvasive respiratory support after birth. Data were analyzed from January 7 to May 9, 2025. Intervention Infants were randomized 1:1 to receive NCPAP or NIPPV as initial respiratory support. All received MISA within 120 minutes after birth via a 1.67-mm catheter. Main Outcomes and Measures The primary outcome was NIV failure, defined as requiring intubation and invasive mechanical ventilation within 72 hours after birth. The noninferiority margin was set at a 10% risk difference. Secondary outcomes included NIV failure within 7 days, surfactant redosing, and major complications (eg, pneumothorax, bronchopulmonary dysplasia). Results A total of 312 preterm infants (median [IQR] gestational age, 28.0 [28.",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13320649"
+          },
+          {
+            "type": "clinicaltrials",
+            "label": "ClinicalTrials.gov NCT05137340"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13320649",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13320649"
+            },
+            {
+              "type": "clinicaltrials",
+              "label": "ClinicalTrials.gov NCT05137340"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-06T21:17:38.205Z"
+        }
+      },
+      "source": "fallback"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 1,
+    "selection": {
+      "source": "deterministic-fallback",
+      "provider": "claude-code",
+      "reason": "Claude Code CLI failed for candidate ranking with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":241,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"16ddf31b-4441-4c68-9818-b15baad474d7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"uuid\":\"9eaabd25-4393-4719-9b5d-0a5db142b993\"}"
+    }
+  },
+  "errors": [
+    {
+      "step": "rank",
+      "message": "Claude Code CLI failed for candidate ranking with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":241,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"16ddf31b-4441-4c68-9818-b15baad474d7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"uuid\":\"9eaabd25-4393-4719-9b5d-0a5db142b993\"}"
+    },
+    {
+      "pmid": "42377961",
+      "step": "analysis",
+      "message": "Claude Code CLI failed for analysis 42377961 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":217,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"5084e6c1-e3ba-4aff-a82b-756362483f91\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\""
+    }
+  ]
+}
