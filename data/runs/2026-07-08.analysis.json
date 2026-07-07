@@ -1,0 +1,232 @@
+{
+  "analyses": [
+    {
+      "pmid": "42409407",
+      "title": "Helping Underdeveloped Lungs with Cells (HULC-2): mesenchymal stromal cells in extreme preterm infants at risk of developing bronchopulmonary dysplasia - a study protocol of a phase 2 multicentre double blind randomised controlled trial in Canada.",
+      "oneLineSummary": "Automated detailed analysis was not available; manual review is needed. INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences.",
+      "oneLineSummary_ko": "자동 상세 분석을 사용할 수 없어 원문 또는 초록 확인이 필요합니다. INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences.",
+      "whyItMatters": "This paper matched the EM/CCM screening rules, but the automated analysis failed and should be reviewed manually before use.",
+      "whyItMatters_ko": "이 논문은 EM/CCM 스크리닝 기준에는 포함되었지만 자동 분석이 실패했으므로 실제 활용 전 수동 확인이 필요합니다.",
+      "clinicalQuestion": "What does this randomized controlled trial suggest for emergency medicine or critical care practice?",
+      "clinicalQuestion_ko": "이 논문이 응급의학 또는 중환자의학 진료에 어떤 의미가 있는지 검토해야 합니다.",
+      "studyDetails": {
+        "design": "Manual review needed. Study design details were not reliably extracted.",
+        "design_ko": "수동 검토 필요. 연구 설계를 안정적으로 추출하지 못했습니다.",
+        "setting": "Manual review needed. Country and site details were not reliably extracted.",
+        "setting_ko": "수동 검토 필요. 국가와 연구 기관 정보를 안정적으로 추출하지 못했습니다.",
+        "sampleSize": "Manual review needed. Actual enrolled, randomized, analyzed, or safety sample size was not reliably extracted.",
+        "sampleSize_ko": "수동 검토 필요. 실제 등록, 무작위 배정, 분석 대상, 안전성 분석 대상 수를 안정적으로 추출하지 못했습니다.",
+        "eligibility": "Manual review needed. Inclusion and exclusion criteria were not reliably extracted.",
+        "eligibility_ko": "수동 검토 필요. 포함 및 제외 기준을 안정적으로 추출하지 못했습니다.",
+        "interventionDetails": "Manual review needed. Intervention details were not reliably extracted.",
+        "interventionDetails_ko": "수동 검토 필요. 중재 세부 정보를 안정적으로 추출하지 못했습니다.",
+        "comparatorDetails": "Manual review needed. Comparator details were not reliably extracted.",
+        "comparatorDetails_ko": "수동 검토 필요. 비교군 세부 정보를 안정적으로 추출하지 못했습니다.",
+        "followUp": "Manual review needed. Follow-up details were not reliably extracted.",
+        "followUp_ko": "수동 검토 필요. 추적관찰 정보를 안정적으로 추출하지 못했습니다.",
+        "sourceBasis": "Fallback summary generated because: Claude Code CLI failed for analysis 42409407 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":132,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"d840f8f2-d334-43e2-82f6-1723a0ce7be1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\"",
+        "sourceBasis_ko": "다음 이유로 fallback 요약을 생성했습니다: Claude Code CLI failed for analysis 42409407 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":132,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"d840f8f2-d334-43e2-82f6-1723a0ce7be1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\""
+      },
+      "pico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "intervention": "Manual review needed. Intervention or exposure details were not reliably extracted.",
+        "comparison": "Manual review needed. Comparator details were not reliably extracted or not reported.",
+        "outcome": "INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences."
+      },
+      "pico_ko": {
+        "population": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "intervention": "수동 검토 필요. 중재 또는 노출 정보를 안정적으로 추출하지 못했습니다.",
+        "comparison": "수동 검토 필요. 비교군 정보가 없거나 안정적으로 추출되지 않았습니다.",
+        "outcome": "INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences."
+      },
+      "detailedPico": {
+        "population": "Manual review needed. Population details were not reliably extracted.",
+        "population_ko": "수동 검토 필요. 대상 환자군을 안정적으로 추출하지 못했습니다.",
+        "countrySetting": "Not reliably extracted.",
+        "countrySetting_ko": "국가와 연구 세팅을 안정적으로 추출하지 못했습니다.",
+        "intervention": "Manual review needed.",
+        "intervention_ko": "수동 검토가 필요합니다.",
+        "comparator": "Manual review needed or not reported.",
+        "comparator_ko": "수동 검토가 필요하거나 보고되지 않았습니다.",
+        "outcomes": [
+          {
+            "label": "Outcome",
+            "outcome": "Manual review needed.",
+            "outcome_ko": "수동 검토 필요.",
+            "result": "INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences.",
+            "result_ko": "INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences.",
+            "statistics": "Not reliably extracted.",
+            "interpretation": "Statistical interpretation was not available because structured analysis failed.",
+            "interpretation_ko": "구조화 분석 실패로 통계 해석을 제공하지 못했습니다.",
+            "statPrimer": "For ratio measures such as OR, RR, and HR, 1 means no relative difference; below 1 usually favors the intervention for harmful events, and above 1 suggests more events. For p values, p<0.05 is commonly treated as statistically significant; p>=0.05 is not.",
+            "statPrimer_ko": "OR/RR/HR 같은 비율 지표는 1이면 상대 차이가 없고, 해로운 사건에서는 1보다 작으면 중재군에 유리한 방향, 1보다 크면 사건이 더 많은 방향입니다. p-value는 보통 0.05 미만이면 통계적으로 유의, 0.05 이상이면 유의하다고 보기 어렵습니다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences."
+      ],
+      "keyFindings_ko": [
+        "INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences."
+      ],
+      "conclusion": "Automated conclusion was not available.",
+      "conclusion_ko": "자동 결론을 생성하지 못했습니다.",
+      "clinicalTakeaway": "Automated analysis was not available. Review the abstract and original paper before changing practice.",
+      "clinicalTakeaway_ko": "자동 분석을 사용할 수 없습니다. 진료 변경 전 초록과 원문을 직접 확인해야 합니다.",
+      "limitations": "Fallback summary generated because: Claude Code CLI failed for analysis 42409407 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":132,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"d840f8f2-d334-43e2-82f6-1723a0ce7be1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\"",
+      "limitations_ko": "다음 이유로 fallback 요약을 생성했습니다: Claude Code CLI failed for analysis 42409407 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":132,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"d840f8f2-d334-43e2-82f6-1723a0ce7be1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\"",
+      "edIcuApplicability": "Manual review needed before applying this paper to ED or ICU practice.",
+      "edIcuApplicability_ko": "ED/ICU 진료에 적용하기 전 수동 검토가 필요합니다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 10,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "Claude Code CLI failed for analysis 42409407 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":132,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"d840f8f2-d334-43e2-82f6-1723a0ce7be1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\""
+      ],
+      "paper": {
+        "pmid": "42409407",
+        "title": "Helping Underdeveloped Lungs with Cells (HULC-2): mesenchymal stromal cells in extreme preterm infants at risk of developing bronchopulmonary dysplasia - a study protocol of a phase 2 multicentre double blind randomised controlled trial in Canada.",
+        "abstract": "INTRODUCTION: Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences. Despite advances in neonatal care, effective therapies to prevent BPD are lacking. Mesenchymal stromal cells (MSCs), particularly those derived from umbilical cord (UC-MSC), offer promise due to their pleiotropic effects. Preclinical and early-phase clinical studies have demonstrated safety and potential efficacy of MSC in neonatal lung injury. The Helping Underdeveloped Lungs with Cells (HULC)-2 trial aims to evaluate whether multiple intravenous doses of human allogenic UC-MSC can reduce mechanical ventilation duration and improve the respiratory outcome in ELGA infants at high risk of developing BPD.\nMETHODS AND ANALYSIS: HULC-2 is a multicentre, double-blind, randomised controlled Phase II trial conducted in Canadian Neonatal Intensive Care Units. ELGA infants (gestational age <28 weeks) who remain ventilator-dependent between 4 and 14 days of life will be randomised to receive either 3 weekly intravenous doses of UC-MSC (10×10 cells/kg/dose) or a sham procedure. The primary outcome is ventilation-free days (VFDs) at 120 days postrandomisation, accounting for mortality. Secondary outcomes include cell administration safety, respiratory and neurodevelopmental outcomes and complications of prematurity. A total of 168 participants will be enrolled to detect a clinically meaningful difference in VFDs.\nETHICS AND DISSEMINATION: The study was approved through Clinical Trials Ontario by the Ottawa Health Science Network Research Ethics Board. Results will be disseminated via peer-reviewed publications, conferences and public engagement platforms. Parent partners are actively involved in study design and dissemination to ensure relevance and transparency.\nTRIAL REGISTRATION NUMBER: NCT07058025.",
+        "authors": [
+          "Renesme L",
+          "Ferretti E",
+          "Horth C",
+          "Grimwood R",
+          "Da Sylva L",
+          "Olson V",
+          "Cyr-Depauw C",
+          "Freund D"
+        ],
+        "authorAffiliations": [
+          "Pediatrics, Children's Hospital of Eastern Ontario, Ottawa, Ontario, Canada laurenesme@toh.ca.",
+          "Regenerative Medicine, The Ottawa Hospital Research Institute, Ottawa, Ontario, Canada.",
+          "University of Ottawa Faculty of Medicine, Ottawa, Ontario, Canada.",
+          "Pediatrics, Children's Hospital of Eastern Ontario, Ottawa, Ontario, Canada.",
+          "Children's Hospital of Eastern Ontario Research Institute, Ottawa, Ontario, Canada.",
+          "Good Manufacturing Practice Facility, Center for Regenerative Therapies Dresden, Technische Universität Dresden, Dresden, Germany.",
+          "Neonatology and Pediatric Intensive Care, University Hospital Carl Gustav Carus, Dresden, SN, Germany.",
+          "The Ottawa Hospital Research Institute, Ottawa, Ontario, Canada."
+        ],
+        "journal": "BMJ open",
+        "pubDate": "2026-Jul-06",
+        "publicationTypes": [
+          "Journal Article",
+          "Clinical Trial Protocol"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Bronchopulmonary Dysplasia",
+          "Infant, Newborn",
+          "Double-Blind Method",
+          "Infant, Extremely Premature",
+          "Mesenchymal Stem Cell Transplantation",
+          "Canada",
+          "Multicenter Studies as Topic",
+          "Respiration, Artificial",
+          "Randomized Controlled Trials as Topic",
+          "Clinical Trials, Phase II as Topic",
+          "Gestational Age"
+        ],
+        "keywords": [
+          "Mesenchymal Stem Cells",
+          "NEONATOLOGY",
+          "Neonatal intensive & critical care",
+          "Randomized Controlled Trial"
+        ],
+        "doi": "10.1136/bmjopen-2025-112385",
+        "pmcid": "",
+        "nctIds": [
+          "NCT07058025"
+        ],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42409407/",
+        "collectedAt": "2026-07-07T21:17:15.259Z",
+        "screeningData": {
+          "score": 14,
+          "relevanceMatches": [
+            "critical care",
+            "intensive care",
+            "ICU",
+            "mechanical ventilation"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 168,
+          "journalBoost": 3,
+          "reasons": [
+            "abstract available",
+            "topic match: critical care, intensive care, ICU, mechanical ventilation",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=168",
+            "journal boost: BMJ open"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42409407\nDOI: 10.1136/bmjopen-2025-112385\nClinical trial IDs found in PubMed record/abstract: NCT07058025\nAuthor affiliations:\n- Pediatrics, Children's Hospital of Eastern Ontario, Ottawa, Ontario, Canada laurenesme@toh.ca.\n- Regenerative Medicine, The Ottawa Hospital Research Institute, Ottawa, Ontario, Canada.\n- University of Ottawa Faculty of Medicine, Ottawa, Ontario, Canada.\n- Pediatrics, Children's Hospital of Eastern Ontario, Ottawa, Ontario, Canada.\n- Children's Hospital of Eastern Ontario Research Institute, Ottawa, Ontario, Canada.\n- Good Manufacturing Practice Facility, Center for Regenerative Therapies Dresden, Technische Universität Dresden, Dresden, Germany.\n- Neonatology and Pediatric Intensive Care, University Hospital Carl Gustav Carus, Dresden, SN, Germany.\n- The Ottawa Hospital Research Institute, Ottawa, Ontario, Canada.\n\nPublic trial registry from ClinicalTrials.gov (NCT07058025):\nBrief title: Mesenchymal Stromal Cell Therapy to Prevent Bronchopulmonary Dysplasia in Extreme Preterm Infants\nOfficial title: Mesenchymal Stromal Cells in Extreme Preterm Infants at Risk of Developing Bronchopulmonary Dysplasia - A Phase 2 Multi-Centre Double Blind Randomized Controlled Trial\nOverall status: NOT_YET_RECRUITING\nStudy type / phase: INTERVENTIONAL, PHASE2\nDesign: RANDOMIZED, PARALLEL, PREVENTION, masking QUADRUPLE\nEnrollment: 168 (ESTIMATED)\nCountries: Canada\nSample recruiting/participating locations:\n- Royal Alexandra Hospital/Stollery Children's Hospital, Edmonton, Alberta, Canada\n- McMaster Children's Hospital, Hamilton, Ontario, Canada\n- The Ottawa Hospital, Ottawa, Ontario, Canada\n- Sunnybrook Health Sciences Ctr, Toronto, Ontario, Canada\n- Mount Sinai Hospital, Toronto, Ontario, Canada\n- CHU Sainte-Justine, Montreal, Quebec, Canada\n- McGill Montreal Children's Hospital, Montreal, Quebec, Canada\n- Université Laval, Québec, Quebec, Canada\nArms/groups:\n- Intervention group will receive multiple IV doses of UC-MSCs (EXPERIMENTAL): * Dose: each dose consists of 10 million cells/kilograms of bodyweight. * Administration protocol: weekly (7 days ± 1 day) IV dose of UC-MSCs for 3 weeks (Total of 3 doses) * Route of administration: IV infusion on peripheral intravenous catheter. The UC-MSC solution will be infused using a syringe pump over 15 minutes, and after the UCMSC infusion, an additional volume of normal saline will be infused over 15 minutes.\n- Control group (SHAM_COMPARATOR): Participants allocated in the control group will receive a sham procedure weekly for 3 weeks. A syringe of normal saline brought to bedside, but it will not be administered. The physician and bedside nurse will perform the sham procedure behind a screen (they will mimic IV catheter insertion and cell product injection)\nInterventions:\n- Human Allogenic Umbilical Cord Mesenchymal Stromal Cells (BIOLOGICAL): IV administration of uc-MSC every 7 days ± 1 day for 3 weeks. Randomized double blinded\n- Sham procedure control (OTHER): Sham procedure (mimic IV catheter insertion adn cell product infusion behing a screen). Repeated weekly for 3 weeks\nPrimary outcomes:\n- Number of mechanical ventilation-free days accounting for mortality | time frame: 120 days | The study primary outcome is the number of mechanical ventilation-free days accounting for mortality. Mechanical ventilation is defined by artificial ventilation using an endotracheal tube. For study purpose, this outcome will be measured at 120 days after randomization. To account for mortality, any death within 120 days post randomization will be counted as \"0\" mechanical ventilation-free day (worse outcome).\nSecondary outcomes:\n- Effects of uc-MSCs on the date of extubation for participants. | time frame: From date of randomization until the date of discharge home or date of death from any cause, whichever came first, assessed up to 12 months | This respiratory outcome will be measured to determine if uc-MSCs have an effect on the date of extubation for participants\n- Effects of uc-MSCs on the rate of survival without moderate or severe BPD at 36 weeks corrected age. | time frame: BPD severity will be assessed for each participant at 36 weeks of corrected age | This will assess if uc-MSCs impact survival with moderate or severe Bronchopulmonary dysplasia.\n- Effects of uc-MSCs on the Number of Participants receiving open-label dexamethasone for severe chronic lung disease | time frame: From date of randomization until the date of discharge home or date of death from any cause, whichever came first, assessed up to 12 months | This will help us determine if the intervention reduces use of dexamethasone for the treatment of severe chronic lung disease.\n- Effects of uc-MSCs on the duration of respiratory support. | time frame: From date of randomization until the date of discharge home or date of death from any cause, whichever came first, assessed up to 12 months | Since ventilation damages underdeveloped lungs, determining the duration of ventilation is important to monitor as an outcome of uc-MSCs. We will collect the total number of days on mechanical ventilation, non-invasive ventilation, and oxygen therapy during the NICU hospitalization for each participant\n- Effects of uc-MSCs on the levels of respiratory support at 36 weeks CA, 40 weeks CA and at hospital discharge. | time frame: From date of randomization until the date of discharge home or date of death from any cause, whichever came first, assessed up to 12 months | The different levels of intensity of ventilation will help us determine if uc-MSCs reduce ventilation days. The respiratory support being used are the following (Room air being the least intensive and best for participant health outcome.): mechanical ventilation vs. Continuous Positive Airway pressure/High Flow Nasal Canula, vs. Lo\n- Effects of uc-MSCs on the occurrence of pulmonary hypertension related to severe BPD | time frame: From date of randomization until the date of discharge home or date of death from any cause, whichever came first, assessed up to 12 months | This will help us determine the therapeutic properties of UC-MSCs in reducing the occurrence of pulmonary hypertension related to severe BPD. Participants will be screened by echocardiography for pulmonary hypertension at 36 weeks of corrected age. Medication for chronic pulmonary hypertension will be collected.\n- Neurodevelopment and health outcomes at 24 months corrected age (Bayleys) | time frame: Assessment will be scheduled at 24 months corrected age. | The neurodevelopmental assessment will be scheduled at 24 months CA with a window of +/- 6 months (i.e., between 18 to 30 months CA). Participants will be evaluated in the Neonatal Follow-Up clinic for high-risk infants. An assessment of general health and growth will be performed, and the most recent audiology and ophthalmology results will be recorded. The Bayley Scales of Infant Develpment-4th edition will be performed by a qualified professional\n- Evaluation of safety of IV administration of UC-MSCs: Dose Limiting toxicity | time frame: 24-hours post uc-MSC injection | Dose-limiting toxicity, defined as one of the following events, occurring within 24-hour post UC-MSC injection: * Death * Anaphylaxis * Increase need for respiratory support define by increase FiO2 \\>30% from baseline and/or increase in mean airway pressure \\> 5 cmH2O from baseline * Medications to support hemodynamic status (including management of cardiac arrest) including fluid boluses, inotropes, or vasopressors * Any SAE not expected in this patient population for wh\nEligibility excerpt: Inclusion Criteria: * Gestational age (GA) less than 28+0 weeks * Post-natal age between 4 and 14 days of life * Invasive ventilation with oxygen requirement: * On mechanical ventilation: intubated patient with any of the following ventilation modes: conventional, HFO or Jet ventilation: * With requirement of FiO2: FiO2 \\>= 30% and for at least 12 hours over 24 hours (i.e. flowsheets, FiO2 histogram) Exclusion Criteria: 1. Congenital anomaly: * Genetic and chromosomal syndromes (e.g., Trisomy 13, Trisomy 18, Trisomy 21): either patient with high suspicion (antenatal findings, clinical features) or documented syndrome by genetic testing. * Major congenital anomalies including cardiac (i.e., congenital heart defects, NB. PDA is not considered an exclusion criterion), neurological (e.g., holoprosencephaly, anencephaly), gastrointestinal (e.g., gastroschisis, omphalocele), pulmonary (e.g., congenital diaphragmatic hernia) anomalies. * Inborn errors of metabolism. 2. Hemodynamic instability (shock): * Hemodynamic instability with impaired end-organ perfusion (metabolic acidosis with increased lactate and/or decreased urine output). * Requirements for fluid bolus, inotrope or vasopressor medication 3. Severe sepsis: * Signs of hemodynamic instability and requiring at least one fluid bolus. * And a positive blood or cerebrospinal fluid culture. 4. Pneumothorax: Pneumothorax with a chest tube in place 5. Severe pulmonary hemorrhage: * Active pulmonary hemorrhage (i.e., frank blood coming from the endotracheal tube. * And at least one of the following criteria: a)hemodynamic instability. b) blood product transfusion (packed red blood cells, platelets, fresh frozen plasma) 6. Extubation: If Extubation planned within the next 24 hours (post first uc-MSC administration/sham procedure). 7. Patient is not expected to survive: * Redirection of care. * Patient is moribund\n\nPublic bibliographic metadata from Crossref:\nTitle: Helping Underdeveloped Lungs with Cells (HULC-2): mesenchymal stromal cells in extreme preterm infants at risk of developing bronchopulmonary dysplasia – a study protocol of a phase 2 multicentre double blind randomised controlled trial in Canada\nType: journal-article\nPublished: 2026-7\nPublisher: BMJ\nFunders: Canadian Institutes of Health Research, Canadian Stem Cell Network\nCrossref abstract/snippet: Introduction Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with long-term respiratory and neurodevelopmental consequences. Despite advances in neonatal care, effective therapies to prevent BPD are lacking. Mesenchymal stromal cells (MSCs), particularly those derived from umbilical cord (UC-MSC), offer promise due to their pleiotropic effects. Preclinical and early-phase clinical studies have demonstrated safety and potential efficacy of MSC in neonatal lung injury. The Helping Underdeveloped Lungs with Cells (HULC)-2 trial aims to evaluate whether multiple intravenous doses of human allogenic UC-MSC can reduce mechanical ventilation duration and improve the respiratory outcome in ELGA infants at high risk of developing BPD. Methods and analysis HULC-2 is a multicentre, double-blind, randomised controlled Phase II trial conducted in Canadian Neonatal Intensive Care Units. ELGA infants (gestational age &lt;28 weeks) who remain ventilator-dependent between 4 and 14 days of life will be randomised to receive either 3 weekly intravenous doses of UC-MSC (10×10 6 cells/kg/dose) or a sham procedure. The primary outcome is ventilation-free days (VFDs) at 120 days postrandomisation, accounting for mortality. Secondary outcomes include cell administration safety, respiratory and neurodevelopmental outcomes and complications of prematurity. A total of 168 participants will be enrolled to detect a clinically meaningful difference in VFDs. Ethics and dissemination The study was approved through Clinical Trials Ontario by the Ottawa Health Science Network Research Ethics Board. Results will be disseminated via peer-reviewed publications, conferences and public engagement platforms. Parent partners are actively involve\n\nPublic article landing-page metadata (https://bmjopen.bmj.com/content/16/7/e112385):\n- DC.Description: Introduction Bronchopulmonary dysplasia (BPD) remains a major complication among extremely low gestational age (ELGA) infants, with ",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "clinicaltrials",
+            "label": "ClinicalTrials.gov NCT07058025"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          },
+          {
+            "type": "doi-landing",
+            "label": "DOI landing metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "clinicaltrials",
+              "label": "ClinicalTrials.gov NCT07058025"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            },
+            {
+              "type": "doi-landing",
+              "label": "DOI landing metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-07T21:17:40.209Z"
+        }
+      },
+      "source": "fallback"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 1,
+    "selection": {
+      "source": "deterministic-fallback",
+      "provider": "claude-code",
+      "reason": "Claude Code CLI failed for candidate ranking with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":501,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"69fb84fd-cf3c-4f98-b10e-b0355ae67ba7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"uuid\":\"9a5e06bb-8edc-47fa-931a-98376fec683e\"}"
+    }
+  },
+  "errors": [
+    {
+      "step": "rank",
+      "message": "Claude Code CLI failed for candidate ranking with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":501,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"69fb84fd-cf3c-4f98-b10e-b0355ae67ba7\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\":0},\"service_tier\":\"standard\",\"cache_creation\":{\"ephemeral_1h_input_tokens\":0,\"ephemeral_5m_input_tokens\":0},\"inference_geo\":\"\",\"iterations\":[],\"speed\":\"standard\"},\"modelUsage\":{},\"permission_denials\":[],\"terminal_reason\":\"completed\",\"fast_mode_state\":\"off\",\"uuid\":\"9a5e06bb-8edc-47fa-931a-98376fec683e\"}"
+    },
+    {
+      "pmid": "42409407",
+      "step": "analysis",
+      "message": "Claude Code CLI failed for analysis 42409407 with exit 1: {\"type\":\"result\",\"subtype\":\"success\",\"is_error\":true,\"api_error_status\":null,\"duration_ms\":132,\"duration_api_ms\":0,\"num_turns\":1,\"result\":\"Not logged in · Please run /login\",\"stop_reason\":\"stop_sequence\",\"session_id\":\"d840f8f2-d334-43e2-82f6-1723a0ce7be1\",\"total_cost_usd\":0,\"usage\":{\"input_tokens\":0,\"cache_creation_input_tokens\":0,\"cache_read_input_tokens\":0,\"output_tokens\":0,\"server_tool_use\":{\"web_search_requests\":0,\"web_fetch_requests\""
+    }
+  ]
+}
