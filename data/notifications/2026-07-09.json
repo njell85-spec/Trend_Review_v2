@@ -1,0 +1,26 @@
+{
+  "runId": "2026-07-09",
+  "status": "sent",
+  "sentAt": "2026-07-08T21:23:51.690Z",
+  "reportPath": "C:\\Users\\njell\\Desktop\\Test\\Trend_Review v2\\public\\latest.json",
+  "results": [
+    {
+      "provider": "kakao",
+      "status": "skipped",
+      "reason": "KAKAO_REFRESH_TOKEN and KAKAO_REST_API_KEY, or KAKAO_ACCESS_TOKEN, are missing",
+      "preview": {
+        "object_type": "text",
+        "text": "[Trend Review] 리포트 생성 완료\n2026-07-09 · 최근 180일 300편 수집 · Top 1\n🥇 Opioid Use and Pain Resolution fo… (PMID:42412431)",
+        "link": {
+          "web_url": "https://njell85-spec.github.io/Trend_Review_v2/",
+          "mobile_web_url": "https://njell85-spec.github.io/Trend_Review_v2/"
+        },
+        "button_title": "리포트 보기"
+      }
+    },
+    {
+      "provider": "telegram",
+      "status": "sent"
+    }
+  ]
+}
