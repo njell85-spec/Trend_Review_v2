@@ -1,0 +1,291 @@
+{
+  "analyses": [
+    {
+      "pmid": "42386310",
+      "title": "Respiratory support in paediatric patients with bronchiolitis: a systematic review and meta-analysis.",
+      "oneLineSummary": "In infants with bronchiolitis, HFNC reduced treatment failure, PICU length of stay, and oxygen duration versus LFNC, but showed no advantage over CPAP.",
+      "oneLineSummary_ko": "세기관지염 영아에서 HFNC는 LFNC보다 치료 실패, PICU 재원기간, 산소 사용기간을 줄였으나 CPAP 대비 이점은 없었다.",
+      "whyItMatters": "Bronchiolitis is a leading cause of infant hospital and PICU admission, and clinicians frequently must choose between standard low-flow oxygen, HFNC, and CPAP for escalating respiratory support; this RCT-only meta-analysis helps clarify where HFNC actually adds value and where it does not.",
+      "whyItMatters_ko": "세기관지염은 영아 입원 및 PICU 입원의 주요 원인이며, 임상의는 호흡지원을 올릴 때 표준 저유량 산소, HFNC, CPAP 중에서 선택해야 한다. RCT만을 대상으로 한 이 메타분석은 HFNC가 실제로 어디에서 이점이 있고 없는지 명확히 하는 데 도움이 된다.",
+      "clinicalQuestion": "In paediatric patients aged ≤24 months with bronchiolitis, does high-flow nasal cannula (HFNC) improve clinical outcomes compared with low-flow nasal cannula (LFNC) or continuous positive airway pressure (CPAP)?",
+      "clinicalQuestion_ko": "24개월 이하 세기관지염 소아에서 HFNC는 저유량 비강 캐뉼라(LFNC) 또는 지속기도양압(CPAP)에 비해 임상 결과를 개선하는가?",
+      "studyDetails": {
+        "design": "Systematic review and meta-analysis of randomised controlled trials, following PRISMA guidelines, using random-effects (DerSimonian-Laird) pairwise meta-analysis; registered on PROSPERO (CRD42024504872). Risk of bias assessed with the Cochrane RoB-2 tool. Analysis performed in Review Manager v5.0; p<0.05 considered significant, I-squared used for heterogeneity (p-value cut-off 0.1).",
+        "design_ko": "PRISMA 지침을 따른 무작위대조시험의 체계적 문헌고찰 및 메타분석으로, 무작위효과(DerSimonian-Laird) 짝짓기 메타분석을 사용했으며 PROSPERO(CRD42024504872)에 등록됨. 비뚤림 위험은 Cochrane RoB-2 도구로 평가. Review Manager v5.0로 분석했으며 p<0.05를 유의하게 간주하고 이질성은 I제곱(p 절단값 0.1)으로 평가.",
+        "setting": "Multiple countries and care settings across included RCTs: 11 studies in emergency department/paediatric ward settings and 7 in PICUs. Author affiliations span the UK, Greece, Cyprus, and Ireland (per public metadata). Literature search covered PubMed, Scopus, Cochrane Library, Embase, CINAHL, WHO ICTRP, and ClinicalTrials.gov up to 21 January 2024.",
+        "setting_ko": "포함된 RCT들은 여러 국가와 진료 환경에 걸쳐 있음: 11개 연구는 응급실/소아병동, 7개는 PICU에서 수행됨. 저자 소속은 영국, 그리스, 키프로스, 아일랜드에 걸쳐 있음(공개 메타데이터 기준). 문헌 검색은 2024년 1월 21일까지 PubMed, Scopus, Cochrane Library, Embase, CINAHL, WHO ICTRP, ClinicalTrials.gov를 포함.",
+        "sampleSize": "18 RCTs with 4094 paediatric patients total. HFNC vs LFNC: 12 studies, 3273 patients (HFNC n=1633, LFNC n=1640). HFNC vs CPAP: 6 studies, 821 patients (HFNC n=415, CPAP n=406). Individual outcome analyses used varying study/patient subsets (e.g., mechanical ventilation HFNC vs LFNC: 11 studies, 3071 patients; length of PICU stay HFNC vs LFNC: 3 studies, 2306 patients).",
+        "sampleSize_ko": "총 18개 RCT, 4094명의 소아 환자. HFNC 대 LFNC: 12개 연구, 3273명(HFNC n=1633, LFNC n=1640). HFNC 대 CPAP: 6개 연구, 821명(HFNC n=415, CPAP n=406). 개별 결과 분석은 서로 다른 연구/환자 부분집합을 사용함(예: 기계환기 HFNC 대 LFNC: 11개 연구, 3071명; PICU 재원기간 HFNC 대 LFNC: 3개 연구, 2306명).",
+        "eligibility": "Randomised controlled studies including paediatric patients aged ≤24 months with bronchiolitis comparing HFNC versus LFNC (standard oxygen therapy) or versus CPAP. Articles in English, French, and Spanish were considered. One quasi-randomised study was included; three were pilot RCTs and one was terminated early during enrolment. One study published in 2011, the rest between 2017 and 2023.",
+        "eligibility_ko": "24개월 이하 세기관지염 소아를 대상으로 HFNC 대 LFNC(표준 산소요법) 또는 HFNC 대 CPAP를 비교한 무작위대조시험. 영어, 프랑스어, 스페인어 논문을 고려. 1개의 준무작위 연구가 포함되었고, 3개는 파일럿 RCT, 1개는 등록 중 조기 종료됨. 1개 연구는 2011년 출판, 나머지는 2017~2023년.",
+        "interventionDetails": "High-flow nasal cannula (HFNC) as initial or escalation respiratory support. LFNC comparators varied across studies (standard nasal cannula, reservoir/non-rebreather mask, head box oxygen, low-flow OxyMask). Escalation and weaning strategies were reported in 11 studies each and varied between studies. Specific HFNC flow rates, FiO2, and durations are not aggregated in the accessible sources.",
+        "interventionDetails_ko": "초기 또는 단계 상승 호흡지원으로서의 고유량 비강 캐뉼라(HFNC). LFNC 비교군은 연구마다 다양함(표준 비강 캐뉼라, 저장백/비재호흡 마스크, head box 산소, 저유량 OxyMask). 상승 및 이탈 전략은 각각 11개 연구에서 보고되었고 연구마다 달랐음. 구체적인 HFNC 유량, FiO2, 사용기간은 접근 가능한 자료에서 통합되어 있지 않음.",
+        "comparatorDetails": "Two comparators: (1) LFNC / standard oxygen therapy; (2) CPAP. In the HFNC vs CPAP group, three studies used CPAP, two used nasal CPAP, and one used CPAP/noninvasive positive-pressure ventilation. Specific CPAP pressures are not available in the accessible sources.",
+        "comparatorDetails_ko": "두 가지 비교군: (1) LFNC/표준 산소요법; (2) CPAP. HFNC 대 CPAP 그룹에서 3개 연구는 CPAP, 2개는 비강 CPAP, 1개는 CPAP/비침습 양압환기를 사용. 구체적인 CPAP 압력은 접근 가능한 자료에서 확인되지 않음.",
+        "followUp": "Outcomes were in-hospital measures (need for mechanical ventilation, treatment failure, PICU admission, length of hospital and PICU stay, days of total oxygen therapy, adverse events, in-hospital and PICU mortality). No longer-term follow-up beyond the hospitalization episode is described in the accessible sources.",
+        "followUp_ko": "결과는 입원 중 지표(기계환기 필요, 치료 실패, PICU 입원, 병원 및 PICU 재원기간, 총 산소요법 일수, 이상반응, 원내 및 PICU 사망)였음. 접근 가능한 자료에는 입원 에피소드 이후의 장기 추적은 기술되어 있지 않음.",
+        "sourceBasis": "Based on the PubMed abstract, Crossref metadata, and the open PMC full text (PMC13320613), including detailed per-outcome study/patient counts and adverse event tabulations.",
+        "sourceBasis_ko": "PubMed 초록, Crossref 메타데이터, 그리고 결과별 연구/환자 수 및 이상반응 표를 포함한 공개 PMC 전문(PMC13320613)에 기반함."
+      },
+      "pico": {
+        "population": "Paediatric patients aged ≤24 months with bronchiolitis",
+        "intervention": "High-flow nasal cannula (HFNC)",
+        "comparison": "Low-flow nasal cannula (LFNC)/standard oxygen or CPAP",
+        "outcome": "Need for mechanical ventilation, treatment failure, PICU/hospital stay, oxygen therapy duration"
+      },
+      "pico_ko": {
+        "population": "24개월 이하 세기관지염 소아 환자",
+        "intervention": "고유량 비강 캐뉼라(HFNC)",
+        "comparison": "저유량 비강 캐뉼라(LFNC)/표준 산소 또는 CPAP",
+        "outcome": "기계환기 필요, 치료 실패, PICU/병원 재원기간, 산소요법 기간"
+      },
+      "detailedPico": {
+        "population": "Paediatric patients aged ≤24 months with bronchiolitis (18 RCTs, 4094 patients), across emergency department, paediatric ward, and PICU settings; includes moderate-to-severe cases requiring respiratory support.",
+        "population_ko": "24개월 이하 세기관지염 소아 환자(18개 RCT, 4094명), 응급실·소아병동·PICU 환경을 포함; 호흡지원이 필요한 중증증도 사례를 포함.",
+        "countrySetting": "Included RCTs conducted across multiple countries in emergency department/paediatric ward (11 studies) and PICU (7 studies) settings; author institutions in UK, Greece, Cyprus, and Ireland.",
+        "countrySetting_ko": "포함된 RCT는 여러 국가에서 응급실/소아병동(11개 연구) 및 PICU(7개 연구) 환경에서 수행됨; 저자 소속은 영국, 그리스, 키프로스, 아일랜드.",
+        "intervention": "High-flow nasal cannula (HFNC) used as initial respiratory support or as escalation from LFNC in infants with bronchiolitis.",
+        "intervention_ko": "세기관지염 영아에서 초기 호흡지원 또는 LFNC로부터의 단계 상승으로 사용된 고유량 비강 캐뉼라(HFNC).",
+        "comparator": "Two separate comparisons: HFNC vs LFNC (standard oxygen therapy) in 12 studies, and HFNC vs CPAP in 6 studies.",
+        "comparator_ko": "두 개의 별도 비교: 12개 연구에서 HFNC 대 LFNC(표준 산소요법), 6개 연구에서 HFNC 대 CPAP.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Need for mechanical ventilation (HFNC vs LFNC)",
+            "outcome_ko": "기계환기 필요 (HFNC 대 LFNC)",
+            "result": "No significant reduction with HFNC (11 studies, 3071 patients).",
+            "result_ko": "HFNC로 유의한 감소 없음 (11개 연구, 3071명).",
+            "statistics": "RR 0.69, 95% CI 0.33–1.44; I²=42%; p=0.32",
+            "interpretation": "HFNC did not lower the chance of needing mechanical ventilation compared with LFNC; the wide CI crossing 1 reflects imprecision.",
+            "interpretation_ko": "HFNC는 LFNC 대비 기계환기 필요 가능성을 낮추지 못했으며, 1을 지나는 넓은 신뢰구간은 정밀도가 낮음을 반영함.",
+            "statPrimer": "RR of 1 means no difference; below 1 favours HFNC; because the 95% CI crosses 1 and p≥0.05, the result is not statistically significant.",
+            "statPrimer_ko": "RR 1은 차이 없음, 1 미만은 HFNC에 유리; 95% CI가 1을 지나고 p≥0.05이므로 통계적으로 유의하지 않음."
+          },
+          {
+            "label": "Primary",
+            "outcome": "Need for mechanical ventilation (HFNC vs CPAP)",
+            "outcome_ko": "기계환기 필요 (HFNC 대 CPAP)",
+            "result": "No difference between HFNC and CPAP (5 studies, 771 patients).",
+            "result_ko": "HFNC와 CPAP 간 차이 없음 (5개 연구, 771명).",
+            "statistics": "RR 0.90, 95% CI 0.65–1.24; I²=0%; p=0.52",
+            "interpretation": "HFNC and CPAP performed similarly for avoiding mechanical ventilation, with no heterogeneity between studies.",
+            "interpretation_ko": "HFNC와 CPAP는 기계환기 회피 측면에서 유사했으며 연구 간 이질성이 없었음.",
+            "statPrimer": "RR near 1 with a CI crossing 1 indicates no meaningful difference; I²=0% means results were consistent across studies.",
+            "statPrimer_ko": "RR이 1에 가깝고 CI가 1을 지나면 의미 있는 차이 없음; I²=0%는 연구 간 결과가 일관됨을 의미."
+          },
+          {
+            "label": "Primary",
+            "outcome": "Treatment failure (HFNC vs LFNC)",
+            "outcome_ko": "치료 실패 (HFNC 대 LFNC)",
+            "result": "Significantly less treatment failure with HFNC (11 studies, 3165 patients).",
+            "result_ko": "HFNC에서 치료 실패가 유의하게 적음 (11개 연구, 3165명).",
+            "statistics": "RR 0.44, 95% CI 0.23–0.87; I²=92%; p=0.02",
+            "interpretation": "HFNC roughly halved treatment failure vs LFNC, but very high heterogeneity (I²=92%) and authors' note on doubtful clinical significance temper confidence.",
+            "interpretation_ko": "HFNC는 LFNC 대비 치료 실패를 약 절반으로 줄였으나, 매우 높은 이질성(I²=92%)과 임상적 의의가 의심스럽다는 저자 지적으로 신뢰도는 제한됨.",
+            "statPrimer": "RR 0.44 means ~56% relative reduction; CI entirely below 1 with p<0.05 is statistically significant, but I²=92% signals major inconsistency across studies.",
+            "statPrimer_ko": "RR 0.44는 약 56% 상대 감소; CI 전체가 1 미만이고 p<0.05로 통계적으로 유의하나, I²=92%는 연구 간 큰 불일치를 나타냄."
+          },
+          {
+            "label": "Primary",
+            "outcome": "Treatment failure (HFNC vs CPAP)",
+            "outcome_ko": "치료 실패 (HFNC 대 CPAP)",
+            "result": "No significant difference between HFNC and CPAP (6 studies, 827 patients).",
+            "result_ko": "HFNC와 CPAP 간 유의한 차이 없음 (6개 연구, 827명).",
+            "statistics": "RR 1.28, 95% CI 0.90–1.80; I²=57%; p=0.17",
+            "interpretation": "Point estimate numerically favours CPAP but the CI crosses 1; HFNC was not associated with increased treatment failure vs CPAP.",
+            "interpretation_ko": "점추정치는 수치상 CPAP에 유리하나 CI가 1을 지남; HFNC가 CPAP 대비 치료 실패를 증가시키지는 않았음.",
+            "statPrimer": "RR above 1 suggests more failures with HFNC, but because the 95% CI crosses 1 and p≥0.05, no significant difference is established.",
+            "statPrimer_ko": "RR이 1보다 크면 HFNC에서 실패가 더 많음을 시사하나, 95% CI가 1을 지나고 p≥0.05이므로 유의한 차이는 확립되지 않음."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Length of PICU stay (HFNC vs LFNC)",
+            "outcome_ko": "PICU 재원기간 (HFNC 대 LFNC)",
+            "result": "Significant reduction with HFNC (3 studies, 2306 patients).",
+            "result_ko": "HFNC에서 유의한 감소 (3개 연구, 2306명).",
+            "statistics": "MD −0.40, 95% CI −0.78 to −0.02; I²=85%; p=0.04",
+            "interpretation": "HFNC shortened PICU stay by about 0.4 days vs LFNC—statistically significant but small in magnitude and with high heterogeneity.",
+            "interpretation_ko": "HFNC는 LFNC 대비 PICU 재원을 약 0.4일 단축—통계적으로 유의하나 크기가 작고 이질성이 높음.",
+            "statPrimer": "Mean difference of 0 means no difference; the entire CI below 0 with p<0.05 indicates a statistically significant shorter stay, though the ~0.4 day effect is clinically modest.",
+            "statPrimer_ko": "평균차 0은 차이 없음; CI 전체가 0 미만이고 p<0.05이면 통계적으로 유의한 재원 단축이나, 약 0.4일 효과는 임상적으로 미미함."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Days of total oxygen therapy (HFNC vs LFNC)",
+            "outcome_ko": "총 산소요법 일수 (HFNC 대 LFNC)",
+            "result": "Significant reduction with HFNC (9 studies, 2370 patients). Length of PICU stay vs CPAP (MD −0.24, 95% CI −0.91 to 0.43; p=0.47) and length of hospital stay vs LFNC (MD −0.31, 95% CI −0.72 to 0.09; p=0.13) showed no difference.",
+            "result_ko": "HFNC에서 유의한 감소 (9개 연구, 2370명). CPAP 대비 PICU 재원(MD −0.24, 95% CI −0.91~0.43; p=0.47) 및 LFNC 대비 병원 재원(MD −0.31, 95% CI −0.72~0.09; p=0.13)은 차이 없음.",
+            "statistics": "MD −0.37, 95% CI −0.63 to −0.12; I²=81%; p=0.004",
+            "interpretation": "HFNC modestly shortened total oxygen therapy duration vs LFNC; no significant differences in hospital stay or in any endpoint vs CPAP. No deaths in HFNC group across studies.",
+            "interpretation_ko": "HFNC는 LFNC 대비 총 산소요법 기간을 다소 단축; 병원 재원이나 CPAP 대비 모든 지표에서 유의한 차이 없음. 여러 연구에서 HFNC군 사망 없음.",
+            "statPrimer": "MD below 0 with a CI not crossing 0 and p<0.05 is significant; when the CI crosses 0 (as for hospital stay and CPAP comparisons), no significant difference is shown.",
+            "statPrimer_ko": "MD가 0 미만이고 CI가 0을 지나지 않으며 p<0.05이면 유의; CI가 0을 지나면(병원 재원 및 CPAP 비교처럼) 유의한 차이 없음."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Compared with LFNC, HFNC significantly reduced treatment failure (RR 0.44, 95% CI 0.23–0.87), length of PICU stay (MD −0.40 days), and total oxygen therapy duration (MD −0.37 days), but not need for mechanical ventilation (RR 0.69, 95% CI 0.33–1.44).",
+        "Compared with CPAP, HFNC showed no significant difference in any primary or secondary outcome, including mechanical ventilation (RR 0.90) and treatment failure (RR 1.28, 95% CI 0.90–1.80).",
+        "Mortality was very low with no deaths in the HFNC group; adverse events included pneumothorax (n=4), apnoea, and nasal injury, with heterogeneity often very high (I² up to 92%) and all studies rated 'some concerns' for bias."
+      ],
+      "keyFindings_ko": [
+        "LFNC 대비 HFNC는 치료 실패(RR 0.44, 95% CI 0.23–0.87), PICU 재원기간(MD −0.40일), 총 산소요법 기간(MD −0.37일)을 유의하게 줄였으나, 기계환기 필요(RR 0.69, 95% CI 0.33–1.44)는 줄이지 못함.",
+        "CPAP 대비 HFNC는 기계환기(RR 0.90) 및 치료 실패(RR 1.28, 95% CI 0.90–1.80)를 포함한 모든 일차·이차 결과에서 유의한 차이가 없었음.",
+        "사망률은 매우 낮았고 HFNC군에서는 사망이 없었으며, 이상반응으로 기흉(n=4), 무호흡, 비강 손상 등이 있었음. 이질성이 종종 매우 높았고(I² 최대 92%) 모든 연구가 비뚤림 '일부 우려'로 평가됨."
+      ],
+      "conclusion": "In infants aged ≤24 months with bronchiolitis, HFNC reduced treatment failure, PICU length of stay, and total oxygen therapy duration compared with LFNC, but did not reduce the need for mechanical ventilation and showed no advantage over CPAP for any outcome. HFNC could be considered as an initial modality, particularly for patients needing escalation from LFNC, though the clinical magnitude of benefits was small and heterogeneity was high.",
+      "conclusion_ko": "24개월 이하 세기관지염 영아에서 HFNC는 LFNC 대비 치료 실패, PICU 재원기간, 총 산소요법 기간을 줄였으나 기계환기 필요는 줄이지 못했고 CPAP 대비 어떤 결과에서도 이점을 보이지 않았다. HFNC는 특히 LFNC에서 단계 상승이 필요한 환자에서 초기 치료 방식으로 고려될 수 있으나, 이득의 임상적 크기는 작았고 이질성이 높았다.",
+      "clinicalTakeaway": "Use HFNC preferentially over LFNC when escalation is needed in bronchiolitis, expecting fewer treatment failures and modestly shorter PICU/oxygen days, but do not expect it to prevent intubation or to outperform CPAP—choose between HFNC and CPAP based on local resources, tolerability, and expertise.",
+      "clinicalTakeaway_ko": "세기관지염에서 단계 상승이 필요할 때 LFNC보다 HFNC를 우선 사용하면 치료 실패가 줄고 PICU/산소 사용일이 다소 단축될 수 있으나, 삽관 예방이나 CPAP 대비 우월성은 기대하지 말고, HFNC와 CPAP 중 선택은 지역 자원·내약성·숙련도에 따라 결정하라.",
+      "limitations": "All 18 studies were rated as 'some concerns' for risk of bias, and several outcomes showed very high heterogeneity (I² up to 92%, e.g., treatment failure vs LFNC). Definitions of treatment failure and escalation/weaning protocols varied across studies. Absolute effect sizes were small (PICU stay and oxygen ~0.4 days) and the authors themselves questioned the clinical significance of the treatment-failure reduction. Bronchiolitis age definitions differ internationally (≤12 vs ≤24 months). Some data required author communication and manual mean estimation from medians. Specific HFNC/CPAP flow, pressure, FiO2, and dosing parameters are not aggregated in the accessible sources.",
+      "limitations_ko": "18개 연구 모두 비뚤림 위험 '일부 우려'로 평가되었고, 여러 결과에서 매우 높은 이질성(I² 최대 92%, 예: LFNC 대비 치료 실패)을 보였다. 치료 실패의 정의와 상승/이탈 프로토콜이 연구마다 달랐다. 절대 효과 크기가 작았고(PICU 재원 및 산소 약 0.4일) 저자들 스스로 치료 실패 감소의 임상적 의의에 의문을 제기했다. 세기관지염 연령 정의가 국제적으로 다르다(≤12 대 ≤24개월). 일부 데이터는 저자 문의와 중앙값으로부터의 수동 평균 추정이 필요했다. 구체적인 HFNC/CPAP 유량, 압력, FiO2, 투여 파라미터는 접근 가능한 자료에서 통합되어 있지 않다.",
+      "edIcuApplicability": "Highly relevant to ED and PICU clinicians managing infant bronchiolitis. Supports HFNC over LFNC as an escalation strategy (fewer failures, slightly shorter PICU/oxygen days) while cautioning that HFNC neither prevents intubation nor beats CPAP. Given small absolute benefits and high heterogeneity, it reinforces starting with standard low-flow oxygen for mild disease and reserving HFNC for those failing or requiring escalation—consistent with current bronchiolitis guidance emphasizing supportive care.",
+      "edIcuApplicability_ko": "영아 세기관지염을 관리하는 응급실 및 PICU 임상의에게 매우 관련성이 높다. 단계 상승 전략으로 LFNC보다 HFNC를 지지하지만(실패 감소, PICU/산소일 소폭 단축), HFNC가 삽관을 예방하거나 CPAP를 능가하지 않는다는 점을 주의시킨다. 절대 이득이 작고 이질성이 높으므로 경증에는 표준 저유량 산소로 시작하고 실패하거나 상승이 필요한 경우에 HFNC를 사용하는 것을 강화하며, 이는 지지요법을 강조하는 현행 세기관지염 지침과 일치한다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 8,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Statistics drawn directly from the abstract and open PMC full text (PMC13320613); no values were invented.",
+        "Author affiliation countries (UK, Greece, Cyprus, Ireland) and PROSPERO registration (CRD42024504872) come from public metadata and full text, not the abstract alone.",
+        "Treatment-failure vs LFNC finding is statistically significant but authors explicitly note doubtful clinical significance and I² was 92%.",
+        "Total oxygen therapy duration reduction (MD −0.37, p=0.004) is a secondary outcome reported in the full text, not in the abstract numeric detail.",
+        "Publication type flagged as Practice Guideline by screening, but the paper is a systematic review/meta-analysis; treated as such."
+      ],
+      "paper": {
+        "pmid": "42386310",
+        "title": "Respiratory support in paediatric patients with bronchiolitis: a systematic review and meta-analysis.",
+        "abstract": "BACKGROUND: Recent evidence suggests that high-flow nasal cannula (HFNC) may confer better clinical outcomes compared with other respiratory support modalities in paediatric patients with bronchiolitis.\nMETHODS: We performed a literature search up to 21 January 2024 on PubMed, Scopus, Cochrane Library, Embase, Cumulative Index to Nursing and Allied Health Literature, World Health Organization International Clinical Trials Registry Platform and Clinicaltrials.gov. Randomised controlled studies including paediatric patients aged ≤24 months with bronchiolitis comparing the use of HFNC low-flow nasal cannula (LFNC) or continuous positive airway pressure (CPAP) were included. Preferred Reporting Items for Systematic Reviews and Meta-Analyses guidelines were followed. Random-effect modelling was used to estimate pooled effects.\nRESULTS: 18 studies with 4094 patients were included. HFNC did not reduce the need for mechanical ventilation compared to LFNC (risk ratio 0.69, 95% CI 0.33-1.44; p=0.32) or CPAP (risk ratio 0.90, 95% CI 0.65-1.24; p=0.52). HFNC resulted in less treatment failure compared to LFNC (risk ratio 0.44, 95% CI 0.23-0.87; p=0.02), whereas there was no difference compared to CPAP (risk ratio 1.28, 95% CI 0.90-1.80; p=0.17). HFNC was associated with significant reduction in length of paediatric intensive care unit (PICU) stay compared to LFNC (mean difference (MD) -0.40 95% CI -0.78- -0.02; p=0.04), but not compared to CPAP (MD -0.24, 95% CI -0.91-0.43; p=0.47).\nINTERPRETATION: HFNC significantly reduced treatment failure, length of PICU stay and total oxygen therapy duration compared to LFNC. No differences between HFNC and CPAP in primary and secondary outcomes. HFNC could be considered as initial treatment modality in paediatric patients with bronchiolitis, especially in patients requiring escalation of treatment from LFNC.",
+        "authors": [
+          "Karageorgos S",
+          "Chantzaras AP",
+          "Agouridis AP",
+          "Beegan A",
+          "O'Shea N",
+          "Davis T",
+          "Barrett M"
+        ],
+        "authorAffiliations": [
+          "Faculty of Medicine and Dentistry, Blizard Institute, Queen Mary University of London, London, UK.",
+          "Pediatric Emergency Department, Aghia Sophia Children's Hospital, National and Kapodistrian University of Athens, Athens, Greece.",
+          "Department of Pediatric Respiratory Medicine, Royal Brompton Hospital, London, UK.",
+          "School of Medicine, European University Cyprus, Nicosia, Cyprus.",
+          "Department of Internal Medicine, German Medical Institute, Limassol, Cyprus.",
+          "Research and Innovation, Children's Health Ireland, Dublin, Ireland.",
+          "Library and Information Service, Children's Health Ireland, Dublin, Ireland.",
+          "Faculty of Medicine and Dentistry, Blizard Institute, Queen Mary University of London, London, UK michael.barrett@ucd.ie.",
+          "Paediatric Emergency Research and Innovation (PERI), Department of Paediatric Emergency Medicine, Children's Health Ireland, Dublin, Ireland.",
+          "Women's and Children's Health, School of Medicine, University College Dublin, Dublin, Ireland."
+        ],
+        "journal": "European respiratory review : an official journal of the European Respiratory Society",
+        "pubDate": "2026-Jul",
+        "publicationTypes": [
+          "Journal Article",
+          "Systematic Review",
+          "Meta-Analysis",
+          "Review"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Bronchiolitis",
+          "Infant",
+          "Continuous Positive Airway Pressure",
+          "Treatment Outcome",
+          "Oxygen Inhalation Therapy",
+          "Age Factors",
+          "Female",
+          "Male",
+          "Risk Factors",
+          "Infant, Newborn",
+          "Lung"
+        ],
+        "keywords": [],
+        "doi": "10.1183/16000617.0223-2025",
+        "pmcid": "PMC13320613",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42386310/",
+        "collectedAt": "2026-07-09T21:17:22.565Z",
+        "screeningData": {
+          "score": 13,
+          "relevanceMatches": [
+            "intensive care",
+            "ICU",
+            "airway",
+            "mechanical ventilation"
+          ],
+          "studyType": "Practice Guideline",
+          "sampleSize": 4094,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: intensive care, ICU, airway, mechanical ventilation",
+            "study design: Practice Guideline",
+            "sample size signal: N=4094"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Bronchiolitis is one of the most common respiratory tract infections and a common cause of hospital and paediatric intensive care unit (PICU) admission in infants []. There are different definitions used worldwide, as in the United States of America bronchiolitis is a term used in infants aged ≤24 months, whereas in the United Kingdom/Ireland and Europe, it is a term used in children aged ≤12 months [–]. A proportion of paediatric patients presenting with bronchiolitis, especially those with moderate and severe clinical manifestations, may need respiratory support and potential PICU admission [, ]. There are currently multiple different respiratory support modalities available worldwide including low-flow nasal cannula (LFNC) or standard oxygen therapy, high-flow nasal cannula (HFNC), continuous positive airway pressure (CPAP), biphasic positive airway pressure (BiPAP) and mechanical ventilation [–]. During the past decade multiple studies focused on the optimisation of respiratory support in infants with bronchiolitis with the target to prevent the need for intubation and PICU admission. This study aims to systematically review and compare the clinical effectiveness and safety of different respiratory support modalities in paediatric patients aged ≤24 months with bronchiolitis. Methods We performed a systematic review and meta-analysis. Study protocol was registered at PROSPERO (identifier number CRD42024504872). Our study followed the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines for Meta-analysis () []. Participants/population, intervention, comparison and outcome components for this systematic review and meta-analysis are presented in . Search strategy A literature search was organised by two authors with the assistance of a medical librarian between 1 December 2023 and 21 January 2024 on PubMed, Scopus, Cochrane Library, Embase and the Cumulative Index to Nursing and Allied Health Literature. The search also included the World Health Organization International Clinical Trials Registry Platform and Clinicaltrials.gov for potential included studies published from inception up to 21 January 2024. Articles published in English, French and Spanish were considered. References of included studies and prior reviews were also reviewed for potential missed studies. Search terms used in different databases, after communication with the medical librarian, are presented in . If data were incomplete, personal communication with corresponding authors was undertaken. Inclusion criteria Studies were included if they met the following criteria. Exclusion criteria Studies meeting the following criteria were excluded from our analysis. Outcome measures and data extraction Two independent authors (S. Karageorgos and A.P. Chantzaras) reviewed and extracted relevant data from potentially included studies using Rayyan (). In case of potential disagreements, consensus with the participation of a third author (A.P. Agouridis) was reached. Data were extracted using an Excel (Microsoft Excel for Microsoft 365 MSO) spreadsheet organised . Extracted data included the trial design, country, inclusion and exclusion criteria for the population of the study, patients’ characteristics (age, sex, prior medical history, preterm rate, duration of symptoms), setting of the trial (emergency department, PICU, paediatric ward). Data regarding study methodology were also extracted (randomisation and sampling methods). The interventions, primary and secondary outcomes of included studies were recorded. Finally, potential conflicts of interest were identified. Outcomes recorded were based on the recent Delphi survey and consensus workshop on developing a bronchiolitis core outcomes set []. Risk of bias We used the Cochrane Collaboration's risk of bias for randomised trials-2 (RoB-2) tool to assess risk of bias in included studies []. This tool assesses bias due to potential bias during the process of randomising patients in the trial; aberrations from the initial interventions; potential omitted or missing data on primary and secondary outcomes; bias in the way outcomes were measured in the trial; and selection bias of the reported result. Each study was given an overall risk-of-bias score that was defined as low-risk, some concerns, or high-risk. Data synthesis and analysis Categorical variables were presented as frequencies and percentages. Continuous variables were summarised as mean±. If medians and ranges or interquartile ranges were provided for continuous variables, we manually estimated the corresponding mean± using methods described in H . [] and W . []. Data tabulation and processing was in line with the principles described in the Cochrane Handbook []. We calculated the risk ratio based on the numbers of subjects and events in the arms of each study. To estimate the pooled risk ratios, mean differences and their 95% confidence intervals, we used random-effects meta-analysis using the DS and L [] approach. Study proportion of variance in observed effects between studies and subgroups was assessed by using the I statistic (p-value cut-off=0.1). We used visual inspection of funnel plots to assess potential publication bias and small-study effects. We performed pairwise meta-analyses to compare treatments with available direct comparisons using random-effect models. Sensitivity analyses were decided based on the potential study risk of bias. We performed a sensitivity analysis excluding pilot studies and RCTs that were not completed, to minimise potential publication and reporting bias. Meta-analysis was performed using Review Manager version 5.0. software. p<0.05 was considered significant. Results Literature search results Literature review of databases identified a total of 9141 studies. After exclusion of duplicates, we double-screened 5636 studies, of which 119 were selected for full screening. Out of these, 18 studies were finally included in our study [–]. No publications were excluded from language restriction criteria. We contacted the authors of three studies [, , ] to enquire regarding data for paediatric patients aged ≤24 months. Data were provided for two of the studies [, ]. For one study, data on intention-to-treat and modified intention-to-treat for the primary and secondary outcomes were provided by the authors [], and for one study authors provided raw data on paediatric patients []; hence, they were included in our meta-analysis. One study was excluded, since no data could be extracted and could not be provided in time by the authors []. Literature review process and reasons for exclusion are presented graphically in the PRISMA flowchart (). Risk-of-bias assessment using the RoB-2 tool was performed, and all studies were characterised as some concerns. Detailed data on risk of bias assessment are presented in . Potential publication bias was assessed using visual inspection of funnel plots for each outcome and are presented in . Only one outcome (length of hospital stay between HFNC and LFNC) included 10 studies that are needed to assess for potential real asymmetry (). Characteristics of included studies We included 18 RCTs in our meta-analysis with a total of 4094 paediatric patients aged ≤24 months with bronchiolitis. We identified 12 studies that compared HFNC to LFNC including data for 3273 patients (HFNC n=1633, LFNC n=1640) [–, , , ]. Six studies with 821 patients compared the use of HFNC (n=415) CPAP (n=406) [, , , , , ]. 11 studies were performed in emergency department/paediatric ward settings [, –, –, , –], whereas seven studies were performed in PICUs [, , , , , , ]. One study [] was quasi-randomised and the remaining were RCTs. Three studies were pilot RCTs [, , ] and one study was terminated during enrolment []. One study was published in 2011 [] and the rest between 2017 and 2023. All studies followed a parallel-group design. Funding source was reported in detail in 12 studies and potential conflicts of interest were included in all except one study []. Details of included studies characteristics are presented in . Type of interventions In the CPAP HFNC group, three studies compared CPAP to HFNC [, , ], two studies used nasal CPAP HFNC [, ] and one study used CPAP/noninvasive positive-pressure ventilation HFNC []. In the LFNC HFNC group, eight studies compared LFNC HFNC [, –, , , ], two studies compared low-flow with the use of reservoir/non-rebreather mask HFNC [, ], one study compared low-flow provided head box oxygen to HFNC [] and one study compared low-flow OxyMask to HFNC []. 11 studies provided data on their strategy regarding escalation of treatment [, –, , –, , ] and 11 studies reported their weaning strategy [, –, –, , ]. Strategies in both escalation and weaning protocols varied between studies. Primary outcomes Need for mechanical ventilation 11 studies [–, , , , ] with 3071 paediatric patients comparing the use of HFNC (n=1532) LFNC (n=1539) provided data on the need for mechanical ventilation. Use of HFNC did not reduce the need for mechanical ventilation (risk ratio 0.69, 95% CI 0.33–1.44; I=42%, p=0.32; ). Five studies [, , , , ] including 771 patients compared the use of HNFC (n=393) CPAP (n=378) regarding the need for mechanical ventilation. There was no difference between the two therapeutics approaches (risk ratio 0.90, 95% CI 0.65–1.24; I=0%, p=0.52; ). Treatment failure Treatment failure definition was available in 17 studies (). 11 studies [–, , , ] including 3165 patients (HFNC n=1578, LFNC n=1587) provided sufficient information regarding treatment failure. Use of HFNC was associated with significantly reduced treatment failure compared to the use of LFNC (risk ratio 0.44, 95% CI 0.23–0.87; I=92%, p=0.02; ). Six studies [, , , , , ] comparing HFNC (n=417) CPAP (n=410) provided data on treatment failure. Use of HFNC was not associated with increased treatment failure (risk ratio 1.28, 95% CI 0.90–1.80; I=57%, p=0.17; ). Secondary outcomes Need for PICU admission Eight studies [, –, , , , ] with 3065 patients (HFNC n=1527, LFNC n=1538) provided data on admission of patients to PICU. There was no difference between the two treatment groups (risk ratio 1.22, 95% CI 0.93–1.60; I=23%, p=0.16; ). Length of hospital stay 10 studies [–, –, , ] including 3144 patients compared data on length of hospital stay between HFNC (n=1568) LFNC (n=1576). Use of HFNC did not reduce the length of stay compared to LFNC (mean difference (MD) −0.31, 95% CI −0.72–0.09; I=85%, p=0.13; ). Three studies [, , ] with 588 patients (HFNC n=300, CPAP n=288) reported data on the length of hospital stay. Use of HFNC was not associated with reduced length of hospital stay compared to use of CPAP (MD −0.38, 95% CI −1.75–0.98; I=32%, p=0.58; ). Length of PICU stay The use of HFNC was associated with a significant reduction in length of PICU stay in three studies including 2306 patients [, , ] (HFNC n=1152, LFNC n=1154) (MD −0.40, 95% CI −0.78– −0.02; I=85%, p=0.04; ). Length of PICU stay data were reported in four studies comparing HFNC CPAP [, , , ], with 513 patients (HFNC n=262, CPAP n=251). There was no difference between treatments regarding the length of PICU stay (MD −0.24, 95% CI −0.91–0.43; I=0%, p=0.47; ). Days of total oxygen therapy Nine studies [–, –, , ] with data on 2370 patients compared the total oxygen therapy duration between HFNC (n=1185) and LFNC (n=1185). Use of HFNC was associated with a significant reduction in the duration of total oxygen therapy compared to LFNC (MD −0.37, 95% CI −0.63– −0.12; I=81%, p=0.004; ). Adverse events Data on adverse events were available in 11 out of 18 studies [–, –, –, , ]. In three studies [, , ] there were no adverse events reported. In total, there were 28 adverse events reported in the HFNC group (apnoea n=8, abdominal distention n=3, pneumothorax n=4 (two of which were complicated by pneumomediastinum), epistaxis n=2, transient bradycardia n=3, desaturation due to disconnection n=1, inhalation injury n=1, skin lesions n=2, nasal injury n=4). In the CPAP group there were 34 adverse events reported (apnoea n=4, abdominal distention n=10, air leak (no additional information on the type of air leak were provided) n=2, skin lesions n=6, nasal injury n=12). Finally, there were seven adverse events in the LFNC group (apnoea n=3, pneumothorax n=1, transient bradycardia n=1, desaturation due to disconnection n=2). Hospital and PICU mortality 16 studies provided data on hospital mortality [–, –, –]. There were no deaths reported in 1856 patients treated with HFNC, whereas two deaths were reported in 1589 patients treated with LFNC, and one death was reported in 268 patients in the CPAP group. Regarding mortality in PICU, 10 studies provided available data [–, –, ]. There were no deaths in HFNC (n=1100), LFNC (n=953) and CPAP (n=117) groups. Rescue therapy 11 studies included data on rescue therapy after initial treatment failure [–, –, –, , ]. In seven studies with data on 344 HFNC patients who failed initial treatment [–, , , , ], 125 were switched to LFNC, 68 switched to CPAP, 36 to nasal CPAP, 19 to noninvasive ventilation (NIV) and six to BiPAP. Additionally, 40 patients received other unspecified respiratory treatment and no data were reported for 50 patients. In seven studies with data on 350 LFNC patients [, –, , , ], 207 were switched to HFNC, two to bubble CPAP, one to CPAP and one to NIV, whereas 20 received other respiratory support and there were no data for 119 patients. In three studies with data on 36 patients who required rescue therapy from CPAP [, , ], 24 received HFNC and seven switched to BiPAP. No data were provided for five patients. Other outcomes Six studies provided data regarding feeding method during respiratory support administration [, , , , , ]. Quality of life was assessed in two studies [, ], whereas it was mentioned as a secondary analysis plan in one study []. Pain and discomfort assessment was reported in five studies [, , , , ]. Only one study [] included cost analysis data, which showed reduced cost regarding the consumables for LFNC compared to HFNC, but a higher cost in the LFNC when accounting for treatment failure and intensive care unit stay. Sensitivity analysis After excluding three pilot studies [, , ] and one study that was terminated early due to results from another RCT that became available at the time of enrolment [], results remained unchanged regarding primary and secondary outcomes (). Discussion Results of our meta-analysis showed that the use of HFNC was associated with a significantly reduced treatment failure, reduced length of PICU stay and reduced total oxygen therapy duration compared to the use of LFNC. However, there were no differences between the use of HFNC and CPAP in any of the primary and secondary outcomes in our analysis. In our study, use of HFNC did not result in reduced need for mechanical ventilation compared to LFNC and CPAP. This is in line with results from the previous network meta-analysis that detected only a small difference in favour of HFNC in nonrandomised studies []. Of note, network meta-analysis results showed that NIV had the higher probability of being the most effective treatment in reducing mechanical ventilation (surface values under the cumulative ranking curve: NIV 57.03%, HFNC 50.87%, LFNC 42.11%) []. Regarding treatment failure, our results showed that HFNC reduced the risk of treatment failure compared to LFNC, whereas there was no difference between HFNC and CPAP groups. This corroborates data from previous studies that favoured HFNC LFNC, especially in studies including PICU patients []. In contrast, two previous meta-analyses on the basis of five studies comparing CPAP to HFNC showed a lower treatment failure rate in CPAP group [, ]. It should be noted that even though use of HFNC was associated with less treatment failure compared to LFNC, the clinical significance of this outcome is doubtful. This is b",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42386310\nDOI: 10.1183/16000617.0223-2025\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Faculty of Medicine and Dentistry, Blizard Institute, Queen Mary University of London, London, UK.\n- Pediatric Emergency Department, Aghia Sophia Children's Hospital, National and Kapodistrian University of Athens, Athens, Greece.\n- Department of Pediatric Respiratory Medicine, Royal Brompton Hospital, London, UK.\n- School of Medicine, European University Cyprus, Nicosia, Cyprus.\n- Department of Internal Medicine, German Medical Institute, Limassol, Cyprus.\n- Research and Innovation, Children's Health Ireland, Dublin, Ireland.\n- Library and Information Service, Children's Health Ireland, Dublin, Ireland.\n- Faculty of Medicine and Dentistry, Blizard Institute, Queen Mary University of London, London, UK michael.barrett@ucd.ie.\n\nPublic bibliographic metadata from Crossref:\nTitle: Respiratory support in paediatric patients with bronchiolitis: a systematic review and meta-analysis\nType: journal-article\nPublished: 2026-7\nPublisher: European Respiratory Society (ERS)\nCrossref abstract/snippet: Background Recent evidence suggests that high-flow nasal cannula (HFNC) may confer better clinical outcomes compared with other respiratory support modalities in paediatric patients with bronchiolitis. Methods We performed a literature search up to 21 January 2024 on PubMed, Scopus, Cochrane Library, Embase, Cumulative Index to Nursing and Allied Health Literature, World Health Organization International Clinical Trials Registry Platform and Clinicaltrials.gov . Randomised controlled studies including paediatric patients aged ≤24 months with bronchiolitis comparing the use of HFNC versus low-flow nasal cannula (LFNC) or continuous positive airway pressure (CPAP) were included. Preferred Reporting Items for Systematic Reviews and Meta-Analyses guidelines were followed. Random-effect modelling was used to estimate pooled effects. Results 18 studies with 4094 patients were included. HFNC did not reduce the need for mechanical ventilation compared to LFNC (risk ratio 0.69, 95% CI 0.33–1.44; p=0.32) or CPAP (risk ratio 0.90, 95% CI 0.65–1.24; p=0.52). HFNC resulted in less treatment failure compared to LFNC (risk ratio 0.44, 95% CI 0.23–0.87; p=0.02), whereas there was no difference compared to CPAP (risk ratio 1.28, 95% CI 0.90–1.80; p=0.17). HFNC was associated with significant reduction in length of paediatric intensive care unit (PICU) stay compared to LFNC (mean difference (MD) −0.40 95% CI −0.78– −0.02; p=0.04), but not compared to CPAP (MD −0.24, 95% CI −0.91–0.43; p=0.47). Interpretation HFNC significantly reduced treatment failure, length of PICU stay and total oxygen therapy duration compared to LFNC. No differences between HFNC and CPAP in primary and secondary outcomes. HFNC could be considered as initial treatment modality in paediatric patients with bronchiolit",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13320613"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13320613",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13320613"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-09T21:18:11.410Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42386310",
+          "rank": 1,
+          "clinicalPriorityScore": 8,
+          "rationale_ko": "18개 무작위대조시험(4094명)을 통합한 체계적 문헌고찰/메타분석으로, 최고 수준의 근거이며 소아 세기관지염에서 HFNC vs LFNC/CPAP 호흡보조 전략을 직접 비교한다. 세기관지염은 응급실/소아중환자실에서 매우 흔한 질환으로 임상적 실행 가능성이 높다. HFNC가 기계환기 필요성을 줄이지는 못했으나 LFNC 대비 치료 실패를 감소시켰다는 실용적 메시지를 제공하여 일일 뉴스레터의 최우선 논문으로 적합하다. 고영향 호흡기 저널(European Respiratory Review) 게재도 가치를 높인다."
+        }
+      ],
+      "notes_ko": [
+        "최종 선정: PMID 42386310 (소아 세기관지염 호흡보조 메타분석) — RCT 기반 메타분석으로 근거 수준이 가장 높고 흔한 응급 질환에 직접 적용 가능.",
+        "차순위 후보: PMID 42399868 (패혈성 폐쇄성 요관결석의 조기 감압) — N=9172 전국 비교효과연구, 사망률 감소(NNT≈41)로 응급의학적 실행성 높으나 관찰연구 한계.",
+        "PMID 42378681 (OHCA ECPR 비용효과 모델링, Critical Care Medicine)은 시뮬레이션/모델링 연구로 직접적 진료 변화 근거는 약해 우선순위 하향.",
+        "다수 후보(전해질 보충 변이, MIMIC 기반 궤적모델, ICU 간호/알람피로 설문 등)는 관찰적·기술적 성격으로 직접적 임상 실행성이 낮아 제외.",
+        "연구 프로토콜 논문(T-ROSS II, BALANCE+PRO)과 QI/검증 연구는 결과 미도출로 뉴스레터 우선순위에서 배제."
+      ]
+    }
+  },
+  "errors": []
+}
