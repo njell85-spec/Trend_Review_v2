@@ -1,0 +1,286 @@
+{
+  "analyses": [
+    {
+      "pmid": "42425738",
+      "title": "Low-dose corticosteroids in severe pulmonary infection: a meta-analysis of randomised controlled trials.",
+      "oneLineSummary": "Low-dose corticosteroids reduced short-term mortality in severe pulmonary infection, with the clearest benefit in community-acquired pneumonia and longer steroid courses.",
+      "oneLineSummary_ko": "저용량 코르티코스테로이드는 중증 폐감염에서 단기 사망률을 낮췄으며, 지역사회획득폐렴과 장기 스테로이드 요법에서 가장 뚜렷한 이득을 보였다.",
+      "whyItMatters": "Corticosteroid use in severe pulmonary infection remains contentious across CAP, COVID-19, sepsis, and ARDS; this pooled analysis quantifies a modest short-term mortality benefit and shows it is driven mainly by CAP and by courses longer than 7 days, informing bedside decisions in the ED and ICU.",
+      "whyItMatters_ko": "중증 폐감염에서 코르티코스테로이드 사용은 CAP, COVID-19, 패혈증, ARDS 전반에 걸쳐 여전히 논란이 있다. 이 통합 분석은 완만한 단기 사망률 이득을 정량화하고 그 이득이 주로 CAP와 7일 초과 요법에서 비롯됨을 보여주어 응급실 및 중환자실 침상 결정에 도움을 준다.",
+      "clinicalQuestion": "In adults with severe pulmonary infections, do low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily) compared with placebo or standard care reduce short-term mortality and other outcomes?",
+      "clinicalQuestion_ko": "중증 폐감염 성인에서 저용량 코르티코스테로이드(하이드로코르티손 환산 1일 ≤400mg)는 위약 또는 표준치료와 비교하여 단기 사망률 및 기타 결과를 감소시키는가?",
+      "studyDetails": {
+        "design": "Systematic review and meta-analysis of randomised controlled trials, with subgroup analyses (by infection type and steroid-course duration) and GRADE certainty assessment; PROSPERO registered (CRD42024627881).",
+        "design_ko": "무작위 대조시험의 체계적 문헌고찰 및 메타분석으로, 하위군 분석(감염 유형 및 스테로이드 요법 기간별)과 GRADE 확실성 평가를 포함하며 PROSPERO 등록(CRD42024627881)됨.",
+        "setting": "Evidence synthesis of RCTs in critically ill/hospitalised adults; the review was conducted by UK-based investigators (University College London and affiliated hospitals per author affiliations). Individual trial countries are not specified in the accessible sources.",
+        "setting_ko": "중증/입원 성인 대상 RCT를 종합한 근거 합성 연구로, 저자 소속상 영국(University College London 및 관련 병원) 연구진이 수행함. 개별 시험의 국가는 접근 가능한 자료에 명시되지 않음.",
+        "sampleSize": "12 RCTs including 4622 patients and 1203 events analysed. Per-arm denominators and per-trial sample sizes are not available in the accessible sources.",
+        "sampleSize_ko": "12개 RCT, 총 4622명 환자 및 1203건 이벤트 분석. 군별 분모 및 시험별 표본 크기는 접근 가능한 자료에 없음.",
+        "eligibility": "RCTs comparing low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily) to placebo or standard care in adults with severe pulmonary infections, including COVID-19, community-acquired pneumonia (CAP), pneumocystis pneumonia, sepsis, septic shock, and ARDS.",
+        "eligibility_ko": "COVID-19, 지역사회획득폐렴(CAP), 폐포자충폐렴, 패혈증, 패혈성 쇼크, ARDS 등 중증 폐감염 성인에서 저용량 코르티코스테로이드(하이드로코르티손 환산 1일 ≤400mg)를 위약 또는 표준치료와 비교한 RCT.",
+        "interventionDetails": "Low-dose corticosteroids defined as ≤400 mg hydrocortisone-equivalent daily. Specific agents, exact doses, routes, and durations per included trial are not available in the accessible sources; course duration was dichotomised as ≤7 days versus >7 days for subgroup analysis.",
+        "interventionDetails_ko": "저용량 코르티코스테로이드는 하이드로코르티손 환산 1일 ≤400mg으로 정의됨. 포함된 각 시험의 구체적 약제, 정확한 용량, 경로, 기간은 접근 가능한 자료에 없으며, 요법 기간은 하위군 분석에서 ≤7일 대 >7일로 이분화됨.",
+        "comparatorDetails": "Placebo or standard care, as defined within each included RCT. Specific comparator regimens per trial are not available in the accessible sources.",
+        "comparatorDetails_ko": "각 포함 RCT에서 정의된 위약 또는 표준치료. 시험별 구체적 대조 요법은 접근 가능한 자료에 없음.",
+        "followUp": "Primary outcome was short-term mortality (≤90 days); secondary mortality endpoints included 28-day and 30-day mortality. Exact follow-up per trial is not available in the accessible sources.",
+        "followUp_ko": "1차 결과는 단기 사망률(≤90일); 2차 사망 지표는 28일 및 30일 사망률 포함. 시험별 정확한 추적기간은 접근 가능한 자료에 없음.",
+        "sourceBasis": "Abstract, Crossref snippet, and DOI landing-page metadata; PubMed metadata (MeSH, affiliations). No PMCID available for open full-text fetch.",
+        "sourceBasis_ko": "초록, Crossref 발췌, DOI 랜딩 페이지 메타데이터 및 PubMed 메타데이터(MeSH, 소속). 오픈 전문 확보용 PMCID 없음."
+      },
+      "pico": {
+        "population": "Adults with severe pulmonary infections (COVID-19, CAP, pneumocystis pneumonia, sepsis, septic shock, ARDS)",
+        "intervention": "Low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily)",
+        "comparison": "Placebo or standard care",
+        "outcome": "Short-term mortality (≤90 days); 28- and 30-day mortality; serious adverse events; hospital and ICU length of stay"
+      },
+      "pico_ko": {
+        "population": "중증 폐감염 성인 (COVID-19, CAP, 폐포자충폐렴, 패혈증, 패혈성 쇼크, ARDS)",
+        "intervention": "저용량 코르티코스테로이드 (하이드로코르티손 환산 1일 ≤400mg)",
+        "comparison": "위약 또는 표준치료",
+        "outcome": "단기 사망률(≤90일); 28일 및 30일 사망률; 중대 이상반응; 병원 및 중환자실 재원기간"
+      },
+      "detailedPico": {
+        "population": "Adults with severe pulmonary infections spanning COVID-19, community-acquired pneumonia (CAP), pneumocystis pneumonia, sepsis, septic shock, and ARDS; 4622 patients across 12 RCTs.",
+        "population_ko": "COVID-19, 지역사회획득폐렴(CAP), 폐포자충폐렴, 패혈증, 패혈성 쇼크, ARDS를 아우르는 중증 폐감염 성인; 12개 RCT 4622명.",
+        "countrySetting": "Meta-analysis by UK-based investigators (University College London and affiliated hospitals); individual trial countries/settings not specified in accessible sources.",
+        "countrySetting_ko": "영국 연구진(University College London 및 관련 병원)에 의한 메타분석; 개별 시험의 국가/환경은 접근 가능한 자료에 명시되지 않음.",
+        "intervention": "Low-dose corticosteroids ≤400 mg hydrocortisone-equivalent daily; course duration analysed as ≤7 days vs >7 days. Specific agents/doses/routes per trial not available in accessible sources.",
+        "intervention_ko": "저용량 코르티코스테로이드 하이드로코르티손 환산 1일 ≤400mg; 요법 기간은 ≤7일 대 >7일로 분석. 시험별 구체적 약제/용량/경로는 접근 가능한 자료에 없음.",
+        "comparator": "Placebo or standard care as defined in each RCT.",
+        "comparator_ko": "각 RCT에서 정의된 위약 또는 표준치료.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Short-term mortality (≤90 days)",
+            "outcome_ko": "단기 사망률 (≤90일)",
+            "result": "Pooled OR 0.83 (95% CI 0.70–0.98; p=0.029; I²=2.0%; NNT 37.84; GRADE low certainty)",
+            "result_ko": "통합 OR 0.83 (95% CI 0.70–0.98; p=0.029; I²=2.0%; NNT 37.84; GRADE 낮은 확실성)",
+            "statistics": "OR 0.83, 95% CI 0.70–0.98, p=0.029, I²=2.0%, NNT 37.84",
+            "interpretation": "Corticosteroids were associated with ~17% lower relative odds of short-term death; about 38 patients need treatment to prevent one death, but GRADE certainty is low.",
+            "interpretation_ko": "코르티코스테로이드는 단기 사망 상대 오즈를 약 17% 낮췄으며, 약 38명 치료 시 1명의 사망을 예방하나 GRADE 확실성은 낮다.",
+            "statPrimer": "OR below 1 means fewer deaths with treatment; the 95% CI (0.70–0.98) does not cross 1 and p<0.05, so the effect is statistically significant. NNT is the number needed to treat to prevent one event. I²=2.0% indicates minimal heterogeneity.",
+            "statPrimer_ko": "OR이 1 미만이면 치료군 사망이 적음을 의미하며, 95% CI(0.70–0.98)가 1을 넘지 않고 p<0.05이므로 통계적으로 유의하다. NNT는 한 건의 이벤트를 예방하는 데 필요한 치료 인원수다. I²=2.0%는 이질성이 거의 없음을 뜻한다."
+          },
+          {
+            "label": "Subgroup",
+            "outcome": "Short-term mortality by course duration (≤7 days vs >7 days)",
+            "outcome_ko": "요법 기간별 단기 사망률 (≤7일 대 >7일)",
+            "result": ">7 days: OR 0.69 (95% CI 0.53–0.89; p=0.039); ≤7 days: OR 0.96 (95% CI 0.813–1.14; p=0.67); subgroup difference p=0.03",
+            "result_ko": ">7일: OR 0.69 (95% CI 0.53–0.89; p=0.039); ≤7일: OR 0.96 (95% CI 0.813–1.14; p=0.67); 하위군 차이 p=0.03",
+            "statistics": "OR 0.69 (0.53–0.89) vs OR 0.96 (0.813–1.14); subgroup p=0.03",
+            "interpretation": "Mortality benefit was seen only with courses longer than 7 days; shorter courses showed no significant effect, and the difference between subgroups was significant.",
+            "interpretation_ko": "사망률 이득은 7일을 넘는 요법에서만 나타났고, 짧은 요법은 유의한 효과가 없었으며 하위군 간 차이가 유의했다.",
+            "statPrimer": "For each subgroup, OR below 1 with a CI not crossing 1 indicates a significant benefit; the >7-day CI excludes 1 while the ≤7-day CI crosses 1. The subgroup interaction p=0.03 (<0.05) suggests the effect genuinely differs by course length.",
+            "statPrimer_ko": "각 하위군에서 OR이 1 미만이고 CI가 1을 넘지 않으면 유의한 이득을 의미한다. >7일 CI는 1을 배제하나 ≤7일 CI는 1을 포함한다. 하위군 교호작용 p=0.03(<0.05)은 효과가 요법 기간에 따라 실제로 다름을 시사한다."
+          },
+          {
+            "label": "Subgroup",
+            "outcome": "Short-term mortality in CAP",
+            "outcome_ko": "CAP에서의 단기 사망률",
+            "result": "OR 0.72 (95% CI 0.54–0.98; p=0.034; NNT 28.10)",
+            "result_ko": "OR 0.72 (95% CI 0.54–0.98; p=0.034; NNT 28.10)",
+            "statistics": "OR 0.72, 95% CI 0.54–0.98, p=0.034, NNT 28.10",
+            "interpretation": "In CAP specifically, corticosteroids reduced short-term mortality, with about 28 patients treated to prevent one death.",
+            "interpretation_ko": "CAP에서 코르티코스테로이드는 단기 사망률을 낮췄으며, 약 28명 치료 시 1명의 사망을 예방했다.",
+            "statPrimer": "OR 0.72 below 1 with a 95% CI (0.54–0.98) not crossing 1 and p<0.05 indicates a statistically significant mortality reduction in this subgroup; NNT ~28 is the number treated to prevent one death.",
+            "statPrimer_ko": "OR 0.72로 1 미만이고 95% CI(0.54–0.98)가 1을 넘지 않으며 p<0.05이면 이 하위군에서 통계적으로 유의한 사망 감소를 의미한다. NNT 약 28은 1명의 사망을 예방하는 데 치료할 인원수다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "ICU length of stay in CAP",
+            "outcome_ko": "CAP에서 중환자실 재원기간",
+            "result": "Pooled mean difference −0.78 days (95% CI −1.46 to −0.10; p=0.025)",
+            "result_ko": "통합 평균차 −0.78일 (95% CI −1.46~−0.10; p=0.025)",
+            "statistics": "MD −0.78 days, 95% CI −1.46 to −0.10, p=0.025",
+            "interpretation": "In CAP, corticosteroids shortened ICU stay by roughly three-quarters of a day on average.",
+            "interpretation_ko": "CAP에서 코르티코스테로이드는 중환자실 재원기간을 평균 약 0.78일 단축했다.",
+            "statPrimer": "Mean difference of 0 means no difference; a negative value favors the intervention (shorter stay). The 95% CI (−1.46 to −0.10) does not cross 0 and p<0.05, so the reduction is statistically significant, though small in absolute terms.",
+            "statPrimer_ko": "평균차 0은 차이 없음을 뜻하며 음수는 중재군에 유리(짧은 재원)함을 의미한다. 95% CI(−1.46~−0.10)가 0을 넘지 않고 p<0.05이므로 통계적으로 유의하나 절대적 크기는 작다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Hospital length of stay and serious adverse events",
+            "outcome_ko": "병원 재원기간 및 중대 이상반응",
+            "result": "No significant effect on hospital length of stay or serious adverse events (exact values not reported in accessible sources)",
+            "result_ko": "병원 재원기간 또는 중대 이상반응에 유의한 영향 없음 (정확한 수치는 접근 가능한 자료에 미보고)",
+            "statistics": "Reported as not statistically significant; specific estimates not available in accessible sources",
+            "interpretation": "Corticosteroids did not clearly change overall hospital stay or serious adverse event rates in this analysis.",
+            "interpretation_ko": "코르티코스테로이드는 이 분석에서 전체 병원 재원기간이나 중대 이상반응 발생률을 뚜렷이 변화시키지 않았다.",
+            "statPrimer": "\"Not significant\" means the confidence interval crossed the no-effect value (1 for ratios, 0 for differences) or p≥0.05; this does not prove equivalence, only that a difference was not demonstrated.",
+            "statPrimer_ko": "\"유의하지 않음\"은 신뢰구간이 무효과 값(비율은 1, 차이는 0)을 포함하거나 p≥0.05임을 의미하며, 이는 동등성을 입증하는 것이 아니라 차이를 입증하지 못했음을 뜻한다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Pooled short-term mortality (≤90 days) favored low-dose corticosteroids: OR 0.83 (95% CI 0.70–0.98; p=0.029; I²=2.0%; NNT 37.84; GRADE low certainty) across 12 RCTs and 4622 patients.",
+        "The benefit was significant with longer courses (>7 days: OR 0.69, 95% CI 0.53–0.89) but not shorter courses (≤7 days: OR 0.96, 95% CI 0.81–1.14); subgroup difference p=0.03.",
+        "In CAP, corticosteroids reduced short-term mortality (OR 0.72, 95% CI 0.54–0.98; NNT 28.10) and shortened ICU stay (mean difference −0.78 days); no significant effect on hospital length of stay or serious adverse events."
+      ],
+      "keyFindings_ko": [
+        "통합 단기 사망률(≤90일)은 저용량 코르티코스테로이드에 유리: OR 0.83 (95% CI 0.70–0.98; p=0.029; I²=2.0%; NNT 37.84; GRADE 낮은 확실성), 12개 RCT 4622명 대상.",
+        "이득은 장기 요법(>7일: OR 0.69, 95% CI 0.53–0.89)에서 유의했으나 단기 요법(≤7일: OR 0.96, 95% CI 0.81–1.14)에서는 없었다; 하위군 차이 p=0.03.",
+        "CAP에서 코르티코스테로이드는 단기 사망률을 낮추고(OR 0.72, 95% CI 0.54–0.98; NNT 28.10) 중환자실 재원기간을 단축(평균차 −0.78일); 병원 재원기간과 중대 이상반응에는 유의한 영향 없음."
+      ],
+      "conclusion": "Low-dose corticosteroids significantly reduce short-term (≤90-day) mortality in severe pulmonary infection, with benefit concentrated in severe CAP and in courses longer than 7 days; evidence for benefit in other severe pulmonary infections and at shorter follow-up remains inconclusive, and overall certainty is low (GRADE).",
+      "conclusion_ko": "저용량 코르티코스테로이드는 중증 폐감염에서 단기(≤90일) 사망률을 유의하게 감소시키며, 이 이득은 중증 CAP와 7일 초과 요법에 집중된다. 다른 중증 폐감염 및 더 짧은 추적 시점에서의 이득 근거는 결론이 나지 않았으며, 전반적 확실성은 낮다(GRADE).",
+      "clinicalTakeaway": "Consider low-dose corticosteroids (≤400 mg hydrocortisone-equivalent/day) particularly in severe CAP, where a course longer than 7 days is associated with a short-term mortality benefit (NNT ~28), while acknowledging low GRADE certainty and inconclusive benefit for other pulmonary infections.",
+      "clinicalTakeaway_ko": "특히 중증 CAP에서 저용량 코르티코스테로이드(하이드로코르티손 환산 1일 ≤400mg)를 고려하되, 7일 초과 요법이 단기 사망률 이득(NNT 약 28)과 연관됨을 참고한다. 다만 GRADE 확실성은 낮고 다른 폐감염에서의 이득은 결론적이지 않다.",
+      "limitations": "GRADE certainty was low for the primary outcome. The pooled population is heterogeneous (COVID-19, CAP, pneumocystis pneumonia, sepsis, septic shock, ARDS), so a single pooled estimate may mask disease-specific effects; benefit depended on course duration and the CAP subgroup. Individual trial-level details (specific steroid agents, doses, routes, countries, baseline balance, per-trial follow-up) are not available in the accessible sources. Steroid dosing definitions varied within the ≤400 mg hydrocortisone-equivalent threshold. The absolute mortality benefit is modest (NNT ~38 overall), and adverse-event capture across heterogeneous trials may be incomplete. Exact values for hospital length of stay and serious adverse events were not reported in the accessible sources.",
+      "limitations_ko": "1차 결과의 GRADE 확실성은 낮았다. 통합 대상군이 이질적(COVID-19, CAP, 폐포자충폐렴, 패혈증, 패혈성 쇼크, ARDS)이어서 단일 통합 추정치가 질환별 효과를 가릴 수 있으며, 이득은 요법 기간과 CAP 하위군에 의존했다. 개별 시험 수준의 세부사항(구체적 스테로이드 약제, 용량, 경로, 국가, 기저 균형, 시험별 추적기간)은 접근 가능한 자료에 없다. 스테로이드 용량 정의는 하이드로코르티손 환산 ≤400mg 범위 내에서 다양했다. 절대 사망률 이득은 완만하며(전체 NNT 약 38), 이질적 시험 전반의 이상반응 포착이 불완전할 수 있다. 병원 재원기간과 중대 이상반응의 정확한 수치는 접근 가능한 자료에 보고되지 않았다.",
+      "edIcuApplicability": "Directly relevant to ED and ICU clinicians managing severe pulmonary infection and considering steroid therapy. Findings support low-dose corticosteroids for severe CAP with a course beyond 7 days, aligning with existing CAP steroid evidence, while cautioning that pooled benefit is of low certainty and not clearly generalizable to sepsis, ARDS, or COVID-19 in this analysis. Because agent, dose, and timing details are not extractable from accessible sources, clinicians should defer to disease-specific trial protocols for exact regimens.",
+      "edIcuApplicability_ko": "중증 폐감염을 관리하며 스테로이드 요법을 고려하는 응급실 및 중환자실 임상의에게 직접 관련된다. 이 결과는 7일을 넘는 요법으로 중증 CAP에 저용량 코르티코스테로이드 사용을 지지하며 기존 CAP 스테로이드 근거와 부합한다. 다만 통합 이득은 확실성이 낮고 본 분석에서 패혈증, ARDS, COVID-19로 명확히 일반화되지 않음에 유의해야 한다. 약제, 용량, 시점 세부는 접근 자료에서 추출할 수 없으므로 정확한 요법은 질환별 시험 프로토콜을 따라야 한다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 7,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Analysis based on abstract plus public metadata (PubMed, Crossref, DOI landing page); no PMCID available for open full-text fetch.",
+        "Individual included-trial names, per-trial doses/agents/countries, and baseline balance are not available in the accessible sources.",
+        "GRADE certainty for the primary outcome was stated as low by the authors, informing the assigned evidence level.",
+        "All statistics used are those explicitly reported in the abstract/Crossref snippet; none were invented.",
+        "PROSPERO registration CRD42024627881; DOI 10.1136/bmjresp-2025-003934."
+      ],
+      "paper": {
+        "pmid": "42425738",
+        "title": "Low-dose corticosteroids in severe pulmonary infection: a meta-analysis of randomised controlled trials.",
+        "abstract": "PURPOSE: Pulmonary infections are one of the leading causes of intensive care unit (ICU) admission and contribute to high mortality rates. This paper aimed to determine the effect of low-dose corticosteroids on outcomes in patients with severe pulmonary infections, including coronavirus disease of 2019, community-acquired pneumonia (CAP), pneumocystis pneumonia, sepsis, septic shock, and acute respiratory distress syndrome.\nMETHODS: We systematically reviewed randomised controlled trials (RCTs) comparing low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily) to placebo or standard care in adults with severe pulmonary infections. The primary outcome was short-term mortality (≤90 days). Secondary outcomes included 28-day mortality, 30-day mortality, number of patients with at least one serious adverse event, length of hospital stay and ICU stay.\nRESULTS: We analysed twelve RCTs including 4622 patients and 1203 events. The pooled OR showed a short-term mortality benefit: 0.83 (95% CI 0.70 to 0.98; p=0.029; I²=2.0%; number needed to treat: 37.84; Grading of Recommendations Assessment, Development and Evaluation (GRADE): low certainty). There was a reduction in length of ICU stay in patients with CAP, with a pooled mean difference of -0.78 days (95% CI -1.46 to -0.10, p=0.025). The use of corticosteroids did not significantly affect the length of hospital stay or severe adverse events. A significant difference remained in longer courses of steroids, whereas shorter courses had no significant difference (≤7 days vs >7 days; OR: 0.69; 95% CI 0.53 to 0.89; p=0.039 vs OR: 0.96; 95% CI 0.813 to 1.14; p=0.67; subgroup differences: p=0.03). Subgroup analyses in patients with CAP showed a significant benefit in short-term mortality (OR: 0.72, 95% CI 0.54 to 0.98; p=0.034; number needed to treat: 28.10).\nCONCLUSION: We found that low-dose corticosteroids significantly reduce 90-day mortality in severe CAP, although evidence for their benefit in other severe pulmonary infections and at shorter follow-up intervals remains inconclusive.\nPROSPERO REGISTRATION NUMBER: CRD42024627881.",
+        "authors": [
+          "Lac J",
+          "Han S",
+          "Ahmad M",
+          "Starey H",
+          "Ganguly S",
+          "Tett M",
+          "Adeyemi O",
+          "Bray JJH"
+        ],
+        "authorAffiliations": [
+          "University College London Medical School, London, UK.",
+          "Cardiology Department, Royal Free Hospital, London, UK.",
+          "University College London Medical School, London, UK harvey.ul26@gmail.com.",
+          "Pharmacy Department, Luton and Dunstable Hospital NHS Foundation Trust, Luton, UK.",
+          "Oxford Heart Centre, John Radcliffe Hospital, Oxford, UK.",
+          "King's College London Department of Medical Education, London, UK.",
+          "Institute of Health Informatics Research, University College London, London, UK.",
+          "Barts Heart Centre, St Bartholomew's Hospital, London, UK.",
+          "Cardiology Department, Hospital da Luz Arrábida, Vila Nova de Gaia, Portugal."
+        ],
+        "journal": "BMJ open respiratory research",
+        "pubDate": "2026-Jul-09",
+        "publicationTypes": [
+          "Journal Article",
+          "Meta-Analysis",
+          "Systematic Review"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Randomized Controlled Trials as Topic",
+          "Adrenal Cortex Hormones",
+          "Length of Stay",
+          "Community-Acquired Pneumonia",
+          "Intensive Care Units",
+          "Respiratory Distress Syndrome",
+          "COVID-19",
+          "COVID-19 Drug Treatment",
+          "Pneumonia, Pneumocystis",
+          "Community-Acquired Infections",
+          "SARS-CoV-2"
+        ],
+        "keywords": [
+          "ARDS",
+          "Bacterial Infection",
+          "COVID-19",
+          "Critical Care",
+          "Pneumonia"
+        ],
+        "doi": "10.1136/bmjresp-2025-003934",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42425738/",
+        "collectedAt": "2026-07-10T21:17:07.204Z",
+        "screeningData": {
+          "score": 17,
+          "relevanceMatches": [
+            "critical care",
+            "intensive care",
+            "ICU",
+            "sepsis",
+            "septic shock"
+          ],
+          "studyType": "Meta-Analysis",
+          "sampleSize": 4622,
+          "journalBoost": 3,
+          "reasons": [
+            "abstract available",
+            "topic match: critical care, intensive care, ICU, sepsis",
+            "study design: Meta-Analysis",
+            "sample size signal: N=4622",
+            "journal boost: BMJ open respiratory research"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42425738\nDOI: 10.1136/bmjresp-2025-003934\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- University College London Medical School, London, UK.\n- Cardiology Department, Royal Free Hospital, London, UK.\n- University College London Medical School, London, UK harvey.ul26@gmail.com.\n- Pharmacy Department, Luton and Dunstable Hospital NHS Foundation Trust, Luton, UK.\n- Oxford Heart Centre, John Radcliffe Hospital, Oxford, UK.\n- King's College London Department of Medical Education, London, UK.\n- Institute of Health Informatics Research, University College London, London, UK.\n- Barts Heart Centre, St Bartholomew's Hospital, London, UK.\n\nPublic bibliographic metadata from Crossref:\nTitle: Low-dose corticosteroids in severe pulmonary infection: a meta-analysis of randomised controlled trials\nType: journal-article\nPublished: 2026-7\nPublisher: BMJ\nCrossref abstract/snippet: Purpose Pulmonary infections are one of the leading causes of intensive care unit (ICU) admission and contribute to high mortality rates. This paper aimed to determine the effect of low-dose corticosteroids on outcomes in patients with severe pulmonary infections, including coronavirus disease of 2019, community-acquired pneumonia (CAP), pneumocystis pneumonia, sepsis, septic shock, and acute respiratory distress syndrome. Methods We systematically reviewed randomised controlled trials (RCTs) comparing low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily) to placebo or standard care in adults with severe pulmonary infections. The primary outcome was short-term mortality (≤90 days). Secondary outcomes included 28-day mortality, 30-day mortality, number of patients with at least one serious adverse event, length of hospital stay and ICU stay. Results We analysed twelve RCTs including 4622 patients and 1203 events. The pooled OR showed a short-term mortality benefit: 0.83 (95% CI 0.70 to 0.98; p=0.029; I²=2.0%; number needed to treat: 37.84; Grading of Recommendations Assessment, Development and Evaluation (GRADE): low certainty). There was a reduction in length of ICU stay in patients with CAP, with a pooled mean difference of –0.78 days (95% CI –1.46 to –0.10, p=0.025). The use of corticosteroids did not significantly affect the length of hospital stay or severe adverse events. A significant difference remained in longer courses of steroids, whereas shorter courses had no significant difference (≤7 days vs &gt;7 days; OR: 0.69; 95% CI 0.53 to 0.89; p=0.039 vs OR: 0.96; 95% CI 0.813 to 1.14; p=0.67; subgroup differences: p=0.03). Subgroup analyses in patients with CAP showed a significant benefit in short-term mortality (OR: 0.72, 95% CI 0.54 to 0.98; p=0.034\n\nPublic article landing-page metadata (https://bmjopenrespres.bmj.com/content/13/1/e003934):\n- description: Purpose Pulmonary infections are one of the leading causes of intensive care unit (ICU) admission and contribute to high mortality rates. This paper aimed to determine the effect of low-dose corticosteroids on outcomes in patients with severe pulmonary infections, including coronavirus disease of 2019, community-acquired pneumonia (CAP), pneumocystis pneumonia, sepsis, septic shock, and acute respiratory distress syndrome.Methods We systematically reviewed randomised controlled trials (RCTs) comparing low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily) to placebo or standard care in adults with severe pulmonary infections. The primary outcome was short-term mortality (≤90 days). Secondary outcomes included 28-day mortality, 30-day mortality, number of patients with at least \n- DC.Description: Purpose Pulmonary infections are one of the leading causes of intensive care unit (ICU) admission and contribute to high mortality rates. This paper aimed to determine the effect of low-dose corticosteroids on outcomes in patients with severe pulmonary infections, including coronavirus disease of 2019, community-acquired pneumonia (CAP), pneumocystis pneumonia, sepsis, septic shock, and acute respiratory distress syndrome.Methods We systematically reviewed randomised controlled trials (RCTs) comparing low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily) to placebo or standard care in adults with severe pulmonary infections. The primary outcome was short-term mortality (≤90 days). Secondary outcomes included 28-day mortality, 30-day mortality, number of patients with at least \n- citation_title: Low-dose corticosteroids in severe pulmonary infection: a meta-analysis of randomised controlled trials\n- citation_journal_title: BMJ Open Respiratory Research\n- citation_publication_date: 2026-07-09\n- citation_doi: 10.1136/bmjresp-2025-003934\n- og:description: Purpose Pulmonary infections are one of the leading causes of intensive care unit (ICU) admission and contribute to high mortality rates. This paper aimed to determine the effect of low-dose corticosteroids on outcomes in patients with severe pulmonary infections, including coronavirus disease of 2019, community-acquired pneumonia (CAP), pneumocystis pneumonia, sepsis, septic shock, and acute respiratory distress syndrome.Methods We systematically reviewed randomised controlled trials (RCTs) comparing low-dose corticosteroids (≤400 mg hydrocortisone-equivalent daily) to placebo or standard care in adults with severe pulmonary infections. The primary outcome was short-term mortality (≤90 days). Secondary outcomes included 28-day mortality, 30-day mortality, number of patients with at least ",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          },
+          {
+            "type": "doi-landing",
+            "label": "DOI landing metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            },
+            {
+              "type": "doi-landing",
+              "label": "DOI landing metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-10T21:17:51.821Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42425738",
+          "rank": 1,
+          "clinicalPriorityScore": 8.5,
+          "rationale_ko": "12개 RCT, 4622명을 포함한 메타분석으로 폐렴, 패혈증, 패혈성 쇼크, ARDS 등 중증 폐감염 환자에서 저용량 코르티코스테로이드(≤400mg 하이드로코르티손 상당)가 단기 사망률을 유의하게 감소시켰다(OR 0.83, 95% CI 0.70-0.98, I²=2.0%, NNT 약 38). 응급의학·중환자의학 임상의가 매일 마주하는 질환군에 직접 적용 가능하고, RCT 근거를 종합해 실무 결정에 영향을 줄 수 있는 고수익 자료라 최우선으로 선정. 다만 GRADE 근거 수준이 낮고 다양한 감염군을 통합한 점은 한계."
+        }
+      ],
+      "notes_ko": [
+        "1순위 42425738(저용량 스테로이드 메타분석)은 결정론적 점수 최고(17)이자 사망률 개선을 보여주는 대규모 RCT 종합으로 EM/CCM 실무 관련성이 가장 높음.",
+        "경쟁 후보 42384633(비타민C 우산리뷰)은 관련성은 있으나 조합요법의 사망률 이점 부재를 재확인하는 수준으로 실무 변화 폭이 작음.",
+        "42409421(qREDS 점수)과 42392606(빈호흡 진단정확도)은 예후예측/진단 도구로 유용하나 사망률 개선 근거보다 우선순위 낮음.",
+        "42427323(횡격막 페이싱 RCT)은 단일기관 소규모(N=174)로 일반화 제한, 42410654(정밀중환자 리뷰)는 개념적 리뷰로 즉시 적용성 낮음.",
+        "QI/검증/프로토콜/관찰연구 다수는 직접 환자진료 영향이 제한적이어서 제외."
+      ]
+    }
+  },
+  "errors": []
+}
