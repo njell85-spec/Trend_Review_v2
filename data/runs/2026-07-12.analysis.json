@@ -1,0 +1,267 @@
+{
+  "analyses": [
+    {
+      "pmid": "42399868",
+      "title": "Early urinary decompression and mortality in septic obstructing ureteral stones: a nationwide comparative-effectiveness study.",
+      "oneLineSummary": "In a US national inpatient cohort, urinary decompression—especially within 24 hours—was associated with lower in-hospital mortality in septic obstructing ureteral stones.",
+      "oneLineSummary_ko": "미국 전국 입원 코호트에서 요관결석에 의한 패혈증 환자에서 특히 24시간 이내의 요로감압술이 원내 사망률 감소와 연관되었다.",
+      "whyItMatters": "Septic obstructing ureteral stones are a time-critical urologic emergency in which source control by decompression is the cornerstone of care, yet high-quality comparative evidence on whether and how quickly to intervene is scarce. This large, nationally representative observational study quantifies the mortality benefit of early decompression and directly supports urgent ED/ICU source-control decisions.",
+      "whyItMatters_ko": "요관결석에 의한 패혈증은 감압을 통한 원인 조절이 치료의 핵심인 시간 민감성 비뇨기 응급질환이지만, 언제·얼마나 빨리 개입해야 하는지에 대한 양질의 비교 근거가 부족하다. 이 대규모 전국 대표성 관찰연구는 조기 감압의 사망률 이점을 정량화하여 응급실/중환자실의 신속한 원인 조절 결정을 직접 뒷받침한다.",
+      "clinicalQuestion": "In adults with sepsis or septic shock from obstructing ureteral stones, does urinary decompression—and its timing (≤24 h vs >24 h) and modality (ureteral stent vs percutaneous nephrostomy)—reduce in-hospital mortality compared with conservative management?",
+      "clinicalQuestion_ko": "요관결석에 의한 패혈증 또는 패혈성 쇼크 성인에서, 요로감압술과 그 시행 시점(≤24시간 대 >24시간) 및 방식(요관 스텐트 대 경피적 신루설치술)이 보존적 치료에 비해 원내 사망률을 감소시키는가?",
+      "studyDetails": {
+        "design": "Retrospective observational comparative-effectiveness cohort study using nationally representative administrative data, with prespecified causal-inference methods (propensity score matching, overlap weighting, instrumental variable analysis, and landmark/time-dependent survival models). Reporting followed STROBE and RECORD guidelines.",
+        "design_ko": "전국 대표 행정 데이터를 이용한 후향적 관찰 비교효과 코호트 연구로, 사전 지정된 인과추론 방법(성향점수매칭, 중첩가중치, 도구변수 분석, 랜드마크/시간의존 생존모형)을 사용했다. 보고는 STROBE 및 RECORD 지침을 따랐다.",
+        "setting": "U.S. HCUP National Inpatient Sample (NIS), 2016–2022, approximating a 20% stratified sample of U.S. community hospital discharges. Per PubMed affiliation metadata, the authors are based at institutions in Egypt (Fayoum, Al-Azhar, Banha universities) and Saudi Arabia (Najran University), analyzing the US dataset remotely.",
+        "setting_ko": "미국 HCUP 전국입원표본(NIS) 2016–2022로, 미국 지역병원 퇴원의 약 20% 층화표본에 해당한다. PubMed 소속 정보에 따르면 저자들은 이집트(파이윰, 알아자르, 반하 대학)와 사우디아라비아(나즈란 대학) 소속으로, 미국 데이터를 원격 분석했다.",
+        "sampleSize": "9,172 adult hospitalizations analyzed (conservative 3,458 [37.7%]; ureteral stent 4,982 [54.3%]; PCN 732 [8.0%]); 228 in-hospital deaths (2.5%). For the decompression-vs-conservative PSM, 3,262 matched pairs (57.1% of 5,714 treated). PCN-vs-stent overlap weighting had an effective weighted sample size of 1,836. Sensitivity timing strata: early ≤24 h n=3,821 and >24 h n=1,893 (alternate coding 4,795 vs 919).",
+        "sampleSize_ko": "분석 대상 성인 입원 9,172건(보존적 3,458명[37.7%]; 요관 스텐트 4,982명[54.3%]; PCN 732명[8.0%]); 원내 사망 228건(2.5%). 감압 대 보존적 PSM에서는 3,262쌍 매칭(치료군 5,714명 중 57.1%). PCN 대 스텐트 중첩가중치의 유효 가중 표본수는 1,836. 시점 민감도 분석 층: 조기 ≤24h n=3,821, >24h n=1,893(대체 코딩 4,795 대 919).",
+        "eligibility": "Adults (≥18 years) hospitalized with sepsis or septic shock and obstructing ureteral stones (calculi) identified from ICD diagnosis fields, with procedure fields scanned for urinary decompression (ureteral stent or PCN). MeSH indexing includes adults, middle-aged, aged; both sexes (57.9% female).",
+        "eligibility_ko": "ICD 진단 필드로 확인된 패혈증 또는 패혈성 쇼크 및 요관결석을 동반한 성인(≥18세) 입원 환자로, 시술 필드에서 요로감압술(요관 스텐트 또는 PCN)을 검색했다. MeSH 색인에는 성인·중년·노년이 포함되며 양성(여성 57.9%).",
+        "interventionDetails": "Urinary decompression = initial ureteral stent or percutaneous nephrostomy (PCN) identified from procedure fields. Timing derived as 24 × procedure calendar-day, so values are multiples of 24 h; ≤24 h corresponds to day 0 and >24 h to day ≥1. No specific stent size, PCN caliber, sedation, or antibiotic details are available in the accessible sources.",
+        "interventionDetails_ko": "요로감압술 = 시술 필드에서 확인된 초기 요관 스텐트 또는 경피적 신루설치술(PCN). 시점은 24×시술 달력일로 산출되어 24시간의 배수이며, ≤24h는 0일차, >24h는 1일차 이상에 해당한다. 구체적 스텐트 크기, PCN 굵기, 진정, 항생제 세부사항은 제공된 자료에 없다.",
+        "comparatorDetails": "Primary comparator: conservative management (no decompression, coded NONE), n=3,458. Secondary head-to-head exploratory comparator: PCN versus ureteral stent among decompressed patients. Timing comparator: late (>24 h) versus early (≤24 h) decompression.",
+        "comparatorDetails_ko": "주요 비교군: 보존적 치료(감압 없음, NONE 코딩), n=3,458. 이차 직접비교(탐색적): 감압 환자 중 PCN 대 요관 스텐트. 시점 비교: 지연(>24h) 대 조기(≤24h) 감압.",
+        "followUp": "In-hospital follow-up only (index hospitalization); outcomes are in-hospital mortality and inpatient event/resource measures. No post-discharge follow-up is available in NIS/accessible sources. Mean length of stay 7.5 ± 8.9 days overall.",
+        "followUp_ko": "원내 추적만(색인 입원); 결과는 원내 사망률 및 입원 중 사건/자원 지표이다. NIS/제공 자료에는 퇴원 후 추적이 없다. 전체 평균 재원기간 7.5 ± 8.9일.",
+        "sourceBasis": "Abstract, PMC open full-text excerpt (PMC13335030) including baseline Table 1 and results, PubMed metadata/affiliations, and Crossref bibliographic metadata.",
+        "sourceBasis_ko": "초록, PMC 공개 전문 발췌(PMC13335030, 기저 Table 1 및 결과 포함), PubMed 메타데이터/소속, Crossref 서지 메타데이터."
+      },
+      "pico": {
+        "population": "Adults (≥18 y) hospitalized with sepsis or septic shock and obstructing ureteral stones in the U.S. HCUP NIS, 2016–2022 (n=9,172)",
+        "intervention": "Urinary decompression (ureteral stent or PCN), and early (≤24 h) decompression",
+        "comparison": "Conservative management (no decompression); late (>24 h) decompression; PCN vs stent",
+        "outcome": "In-hospital mortality (primary); AKI, mechanical ventilation, dialysis, length of stay (secondary)"
+      },
+      "pico_ko": {
+        "population": "미국 HCUP NIS 2016–2022에서 요관결석에 의한 패혈증 또는 패혈성 쇼크로 입원한 성인(≥18세)(n=9,172)",
+        "intervention": "요로감압술(요관 스텐트 또는 PCN), 및 조기(≤24시간) 감압",
+        "comparison": "보존적 치료(감압 없음); 지연(>24시간) 감압; PCN 대 스텐트",
+        "outcome": "원내 사망률(일차); 급성신손상, 기계환기, 투석, 재원기간(이차)"
+      },
+      "detailedPico": {
+        "population": "Adults (≥18 y) with sepsis or septic shock and obstructing ureteral stones, U.S. HCUP NIS 2016–2022 (n=9,172; mean age 63.9±15.5 y; 57.9% female; overall mortality 2.5%). Groups: conservative 3,458, stent 4,982, PCN 732; PCN patients were sicker (AKI 75.8%, higher Charlson, more transfers).",
+        "population_ko": "요관결석에 의한 패혈증 또는 패혈성 쇼크 성인(≥18세), 미국 HCUP NIS 2016–2022(n=9,172; 평균 연령 63.9±15.5세; 여성 57.9%; 전체 사망률 2.5%). 군: 보존적 3,458, 스텐트 4,982, PCN 732; PCN 환자가 더 중증(급성신손상 75.8%, 높은 Charlson, 많은 전원).",
+        "countrySetting": "United States, HCUP National Inpatient Sample, 2016–2022 (~20% stratified sample of community hospital discharges). Authors affiliated with institutions in Egypt and Saudi Arabia per public metadata.",
+        "countrySetting_ko": "미국, HCUP 전국입원표본, 2016–2022(지역병원 퇴원의 약 20% 층화표본). 공개 메타데이터상 저자는 이집트 및 사우디아라비아 소속.",
+        "intervention": "Urinary decompression via ureteral stent or percutaneous nephrostomy (PCN), with timing modeled by calendar day (≤24 h = day 0 vs >24 h = day ≥1). Analyzed with propensity score matching, overlap weighting, instrumental variable analysis (hospital prior-year PCN preference, first-stage F=66.85), and time-dependent/landmark Cox models to mitigate immortal-time bias, using a prespecified 12-variable adjustment set.",
+        "intervention_ko": "요관 스텐트 또는 경피적 신루설치술(PCN)을 통한 요로감압술로, 시점은 달력일 기준(≤24h = 0일차 대 >24h = 1일차 이상)으로 모델링. 성향점수매칭, 중첩가중치, 도구변수 분석(병원 전년도 PCN 선호도, 1단계 F=66.85), 불멸시간편향을 줄이기 위한 시간의존/랜드마크 Cox 모형으로 분석했으며 사전 지정된 12개 변수 보정 세트를 사용했다.",
+        "comparator": "Conservative management (no decompression) for the primary question; ≤24 h vs >24 h for timing; PCN vs ureteral stent for the exploratory modality comparison.",
+        "comparator_ko": "일차 질문에서는 보존적 치료(감압 없음); 시점 비교에서는 ≤24h 대 >24h; 탐색적 방식 비교에서는 PCN 대 요관 스텐트.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "In-hospital mortality: decompression vs conservative",
+            "outcome_ko": "원내 사망률: 감압 대 보존적 치료",
+            "result": "Standardized (g-computation) treated risk 1.6% vs untreated 4.0%; RD −2.4% (95% CI −3.2% to −1.7%), RR 0.39 (95% CI 0.30–0.50), NNT ≈41. PSM (3,262 pairs) showed −2.5 percentage-point absolute reduction (p<0.0001), mean post-match |SMD|≈0.019.",
+            "result_ko": "표준화(g-계산) 치료군 위험 1.6% 대 비치료군 4.0%; 위험차 −2.4%(95% CI −3.2%~−1.7%), RR 0.39(95% CI 0.30–0.50), NNT ≈41. PSM(3,262쌍)에서 −2.5%p 절대 감소(p<0.0001), 매칭 후 평균 |SMD|≈0.019.",
+            "statistics": "RD −2.4% (95% CI −3.2 to −1.7); RR 0.39 (0.30–0.50); NNT ≈41; PSM p<0.0001",
+            "interpretation": "Decompression was associated with roughly 60% lower relative and 2.4-point lower absolute in-hospital mortality, meaning about 1 death avoided per 41 patients decompressed—consistent across matching and standardization.",
+            "interpretation_ko": "감압은 상대적으로 약 60%, 절대적으로 2.4%p 낮은 원내 사망률과 연관되어 감압 41명당 약 1명의 사망을 피하는 것을 의미하며, 매칭과 표준화에서 일관되게 나타났다.",
+            "statPrimer": "RR of 0.39 means fewer deaths with decompression (below 1 = benefit); the 95% CI (0.30–0.50) excludes 1, so the association is statistically significant. For the risk difference, 0 means no absolute difference; NNT 41 = treat 41 to prevent 1 death. p<0.05 is the usual significance threshold.",
+            "statPrimer_ko": "RR 0.39는 감압 시 사망이 적음을 의미(1 미만 = 이익); 95% CI(0.30–0.50)가 1을 포함하지 않아 통계적으로 유의하다. 위험차는 0이 절대 차이 없음; NNT 41은 41명 치료 시 1명의 사망을 예방. p<0.05가 통상적 유의성 기준이다."
+          },
+          {
+            "label": "Timing",
+            "outcome": "In-hospital mortality: late (>24 h) vs early (≤24 h) decompression",
+            "outcome_ko": "원내 사망률: 지연(>24h) 대 조기(≤24h) 감압",
+            "result": "Late decompression had higher odds of mortality (OR 2.17, 95% CI 1.38–3.41), and higher AKI, mechanical ventilation, and dialysis. Prespecified sensitivity coding confirmed lower early mortality (45/3,821 [1.18%] vs 48/1,893 [2.54%]; and 66/4,795 [1.38%] vs 27/919 [2.94%]).",
+            "result_ko": "지연 감압은 사망 오즈가 더 높았고(OR 2.17, 95% CI 1.38–3.41), 급성신손상·기계환기·투석도 증가했다. 사전 지정 민감도 코딩에서 조기 사망률이 더 낮음을 확인(45/3,821[1.18%] 대 48/1,893[2.54%]; 66/4,795[1.38%] 대 27/919[2.94%]).",
+            "statistics": "OR 2.17 (95% CI 1.38–3.41)",
+            "interpretation": "Waiting beyond 24 hours was associated with roughly double the odds of dying and more organ-failure events, reinforcing that faster source control is better.",
+            "interpretation_ko": "24시간을 넘겨 지연할수록 사망 오즈가 약 2배 높고 장기부전 사건도 많아, 더 빠른 원인 조절이 유리함을 강화한다.",
+            "statPrimer": "OR above 1 means more events with the exposure (here, late decompression); OR 2.17 = about twice the odds of death. The 95% CI (1.38–3.41) does not cross 1, so it is statistically significant.",
+            "statPrimer_ko": "OR 1 초과는 노출(여기서는 지연 감압) 시 사건이 더 많음을 의미; OR 2.17은 사망 오즈가 약 2배. 95% CI(1.38–3.41)가 1을 가로지르지 않아 통계적으로 유의하다."
+          },
+          {
+            "label": "Secondary/Exploratory",
+            "outcome": "In-hospital mortality: PCN vs ureteral stent (among decompressed)",
+            "outcome_ko": "원내 사망률: PCN 대 요관 스텐트(감압 환자 중)",
+            "result": "Adjusted mortality higher with PCN than stent (5.5% vs 2.8%; OR 2.05, 95% CI 1.31–3.09). Unadjusted: PCN 5.46% (40/732) vs STENT 1.06% (53/4,982). PCN patients had markedly greater acuity (AKI 75.8%, ventilation 13.5%, higher Charlson, more transfers). IV results directionally consistent but likely reflect residual confounding by indication/feasibility.",
+            "result_ko": "보정 후 사망률이 스텐트보다 PCN에서 높음(5.5% 대 2.8%; OR 2.05, 95% CI 1.31–3.09). 비보정: PCN 5.46%(40/732) 대 스텐트 1.06%(53/4,982). PCN 환자는 중증도가 훨씬 높았다(급성신손상 75.8%, 기계환기 13.5%, 높은 Charlson, 많은 전원). 도구변수 결과는 방향이 일치하나 적응증/실행가능성에 의한 잔여 교란을 반영할 가능성이 크다.",
+            "statistics": "OR 2.05 (95% CI 1.31–3.09); unadjusted PCN 5.46% vs STENT 1.06%",
+            "interpretation": "PCN was associated with higher mortality than stenting, but PCN patients were far sicker; this is hypothesis-generating confounding by indication, not evidence that PCN causes harm—PCN remains essential when retrograde stenting is not feasible.",
+            "interpretation_ko": "PCN은 스텐트보다 높은 사망률과 연관되었으나 PCN 환자가 훨씬 중증이었으므로, 이는 PCN이 해를 끼친다는 근거가 아니라 적응증에 의한 교란(가설 생성적)이다—역행성 스텐트가 어려울 때 PCN은 여전히 필수적이다.",
+            "statPrimer": "OR 2.05 (>1) suggests more deaths with PCN, CI (1.31–3.09) excludes 1; but observational OR reflects who received PCN (sicker patients), so confounding by indication limits causal reading.",
+            "statPrimer_ko": "OR 2.05(>1)은 PCN에서 사망이 더 많음을 시사하며 CI(1.31–3.09)가 1을 제외하지만, 관찰 OR은 PCN을 받은 환자(더 중증)를 반영하므로 적응증에 의한 교란이 인과 해석을 제한한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Organ-failure and resource outcomes (AKI, ventilation, dialysis, LOS)",
+            "outcome_ko": "장기부전 및 자원 사용 결과(급성신손상, 기계환기, 투석, 재원기간)",
+            "result": "Overall AKI 52.0%, mechanical ventilation 7.4%, vasopressor 6.4%, dialysis 1.9%; mean LOS 7.5 ± 8.9 days. LOS longest with PCN (11.0 ± 10.4 d) and shortest with STENT (6.7 ± 8.1 d). Late decompression was associated with higher AKI, ventilation, and dialysis.",
+            "result_ko": "전체 급성신손상 52.0%, 기계환기 7.4%, 승압제 6.4%, 투석 1.9%; 평균 재원 7.5 ± 8.9일. 재원기간은 PCN에서 가장 길고(11.0 ± 10.4일) 스텐트에서 가장 짧았다(6.7 ± 8.1일). 지연 감압은 급성신손상·기계환기·투석 증가와 연관.",
+            "statistics": "Descriptive proportions and means; group differences p<0.001 in Table 1",
+            "interpretation": "Secondary organ-failure and resource-use outcomes moved in the same direction as mortality, but these were exploratory without family-wise error control, so treat as supportive rather than confirmatory.",
+            "interpretation_ko": "이차 장기부전 및 자원 사용 결과는 사망률과 같은 방향이었으나 다중검정 보정 없는 탐색적 분석이므로 확증이 아닌 보조적 근거로 해석해야 한다.",
+            "statPrimer": "These are descriptive comparisons; p<0.001 indicates the groups differ statistically, but because outcomes were exploratory without family-wise error control, statistical significance here does not confirm causal effect.",
+            "statPrimer_ko": "이들은 기술적 비교이며 p<0.001은 그룹 간 통계적 차이를 나타내지만, 이차/탐색적이고 다중검정 보정이 없어 여기서의 통계적 유의성이 인과 효과를 확증하지 않는다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Decompression (stent or PCN) vs conservative care was associated with lower in-hospital mortality: 1.6% vs 4.0%, RD −2.4% (95% CI −3.2 to −1.7), RR 0.39 (0.30–0.50), NNT ≈41.",
+        "Late decompression (>24 h) vs early (≤24 h) carried roughly double the odds of death (OR 2.17, 95% CI 1.38–3.41) plus more AKI, ventilation, and dialysis.",
+        "In exploratory adjusted analysis, PCN had higher mortality than stenting (5.5% vs 2.8%; OR 2.05, 1.31–3.09), but PCN patients were markedly sicker—likely confounding by indication."
+      ],
+      "keyFindings_ko": [
+        "감압(스텐트 또는 PCN) 대 보존적 치료는 낮은 원내 사망률과 연관: 1.6% 대 4.0%, 위험차 −2.4%(95% CI −3.2~−1.7), RR 0.39(0.30–0.50), NNT ≈41.",
+        "지연 감압(>24h) 대 조기(≤24h)는 사망 오즈가 약 2배(OR 2.17, 95% CI 1.38–3.41)이며 급성신손상·기계환기·투석도 증가.",
+        "탐색적 보정 분석에서 PCN은 스텐트보다 사망률이 높았으나(5.5% 대 2.8%; OR 2.05, 1.31–3.09) PCN 환자가 훨씬 중증이어서 적응증에 의한 교란 가능성이 크다."
+      ],
+      "conclusion": "Urgent urinary decompression, particularly within 24 hours, was associated with lower in-hospital mortality and fewer organ-failure outcomes in septic obstructing ureteral stones. Modality differences (PCN vs stent) should be interpreted as hypothesis-generating owing to confounding by indication; PCN remains essential when retrograde stenting is not feasible.",
+      "conclusion_ko": "요관결석에 의한 패혈증에서 특히 24시간 이내의 응급 요로감압술은 낮은 원내 사망률 및 적은 장기부전 결과와 연관되었다. 방식 차이(PCN 대 스텐트)는 적응증에 의한 교란 때문에 가설 생성적으로 해석해야 하며, 역행성 스텐트가 어려울 때 PCN은 여전히 필수적이다.",
+      "clinicalTakeaway": "For septic obstructing ureteral stones, pursue urgent source control—decompress as early as feasible, ideally within 24 hours—since delay is associated with substantially higher mortality and organ failure. Choose stent vs PCN based on clinical feasibility, not on this study's exploratory modality signal.",
+      "clinicalTakeaway_ko": "요관결석에 의한 패혈증에서는 신속한 원인 조절을 추구하라—가능한 한 조기에, 이상적으로 24시간 이내에 감압하라. 지연은 훨씬 높은 사망률 및 장기부전과 연관되기 때문이다. 스텐트 대 PCN 선택은 이 연구의 탐색적 방식 신호가 아니라 임상적 실행가능성에 근거해야 한다.",
+      "limitations": "Observational retrospective design using administrative claims (NIS) cannot establish causation and is subject to residual and unmeasured confounding, notably confounding by indication and feasibility for the PCN-vs-stent comparison (sicker patients received PCN). Timing is only available as calendar-day integers (multiples of 24 h), so no sub-24-hour granularity exists and \"≤24 h\" equals day 0. ICD-based diagnosis/procedure coding may misclassify sepsis severity, stones, and modality; NIS lacks physiologic, laboratory, microbiologic, and post-discharge data. Only 57.1% of treated patients matched in PSM. Secondary/exploratory outcomes lacked family-wise error control. Unweighted analyses were used for causal estimands (national extrapolation limited to descriptive sensitivity analyses). Exact drug/antibiotic, sedation, stent size, and PCN caliber details are not available in the accessible sources.",
+      "limitations_ko": "행정 청구자료(NIS)를 이용한 관찰적 후향 설계로 인과관계를 확립할 수 없으며 잔여 및 미측정 교란, 특히 PCN 대 스텐트 비교에서 적응증·실행가능성에 의한 교란(중증 환자가 PCN을 받음)에 취약하다. 시점은 달력일 정수(24시간 배수)로만 제공되어 24시간 미만 세분화가 없고 \"≤24h\"는 0일차와 같다. ICD 기반 진단/시술 코딩은 패혈증 중증도·결석·방식을 오분류할 수 있고, NIS에는 생리·검사·미생물·퇴원 후 데이터가 없다. PSM에서 치료 환자의 57.1%만 매칭되었다. 이차/탐색적 결과는 다중검정 보정이 없었다. 인과 추정에는 비가중 분석을 사용했다(전국 외삽은 기술적 민감도 분석에 한정). 정확한 약물/항생제, 진정, 스텐트 크기, PCN 굵기 세부사항은 제공된 자료에 없다.",
+      "edIcuApplicability": "Highly relevant to ED and ICU practice: septic obstructing stones are a common time-critical presentation where emergency physicians and intensivists coordinate resuscitation and urgent urologic source control. The data reinforce guideline-concordant urgent decompression, ideally within 24 hours, and support activating urology/IR early rather than pursuing prolonged conservative management. The findings are directional (associations, not causal effects) and should complement, not replace, bedside judgment; modality choice remains driven by anatomy, coagulopathy, hemodynamics, and local availability.",
+      "edIcuApplicability_ko": "응급실과 중환자실 진료에 매우 관련성이 높다: 요관결석에 의한 패혈증은 응급의학과 의사와 중환자의학 의사가 소생과 응급 비뇨기 원인 조절을 협조하는 흔한 시간 민감성 상황이다. 이 데이터는 지침에 부합하는 응급 감압, 이상적으로 24시간 이내를 강화하고, 장기간 보존적 치료보다 조기 비뇨기과/중재영상의학 활성화를 뒷받침한다. 결과는 방향성(인과가 아닌 연관성)이므로 임상 판단을 보완할 뿐 대체하지 않으며, 방식 선택은 해부학·응고장애·혈역학·현지 가용성에 따라 결정된다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 8,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Study is observational (HCUP NIS 2016–2022); all estimates are associations despite causal-inference methods (PSM, overlap weighting, IV, time-dependent Cox). Evidence level rated Low accordingly.",
+        "Actual analyzed sample = 9,172 hospitalizations (conservative 3,458; stent 4,982; PCN 732); PSM used 3,262 matched pairs; PCN-vs-stent overlap weighting effective n=1,836. No trial registry (observational, no NCT).",
+        "Timing granularity limited to 24-h multiples; '≤24 h' = day 0. PCN-vs-stent mortality signal is explicitly exploratory/hypothesis-generating with confounding by indication.",
+        "Authors affiliated with Egyptian and Saudi institutions per PubMed metadata, analyzing a US dataset; setting/country drawn from full-text and metadata.",
+        "Drug/antibiotic dosing, sedation, stent size, PCN caliber, and post-discharge follow-up not available in accessible sources."
+      ],
+      "paper": {
+        "pmid": "42399868",
+        "title": "Early urinary decompression and mortality in septic obstructing ureteral stones: a nationwide comparative-effectiveness study.",
+        "abstract": "BACKGROUND: Septic obstructing ureteral stones are a time-critical urological emergency. Although urgent drainage is recommended, uncertainty persists regarding the comparative effectiveness of decompression strategies and the influence of timing in real-world practice.\nMETHODS: We analyzed adults with sepsis or septic shock and obstructing ureteral stones (n = 9,172) from the U.S. HCUP National Inpatient Sample (2016-2022). Exposures included any decompression (ureteral stent or percutaneous nephrostomy [PCN]) versus conservative care, and decompression timing (same-day [day 0] vs. ≥ day 1; ≤ 24 h vs. > 24 h). The primary outcome was in-hospital mortality; secondary outcomes were acute kidney injury (AKI), mechanical ventilation, dialysis, and length of stay. Adjusted associations were estimated using propensity score matching, overlap weighting, instrumental variable (IV) analysis, and landmark/time-dependent survival models with a prespecified 12-variable adjustment set.\nRESULTS: Overall mortality was 2.5%. Decompression was associated with lower mortality than conservative care (1.6% vs. 4.0%; risk difference - 2.4% [95% CI - 3.2 to - 1.7]; number needed to treat ≈ 41). Late decompression (> 24 h) versus early (≤ 24 h) was associated with higher odds of mortality (OR 2.17 [1.38-3.41]), AKI, ventilation, and dialysis. In exploratory analyses among decompressed patients, PCN showed higher adjusted mortality than stenting (5.5% vs. 2.8%; OR 2.05 [1.31-3.09]); IV results were directionally consistent but likely reflect residual confounding by indication and feasibility.\nCONCLUSION: Urgent decompression, particularly within 24 h, was associated with lower in-hospital mortality and fewer organ-failure outcomes. Modality differences should be interpreted as hypothesis-generating; PCN remains essential when retrograde stenting is not feasible.",
+        "authors": [
+          "Dogha MM",
+          "Hassan AA",
+          "Mohamed OM",
+          "Farag M",
+          "Nouh IS",
+          "Ibrahim MH",
+          "Mesbah AA",
+          "Elebiary MF"
+        ],
+        "authorAffiliations": [
+          "Urology Department, Faculty of Medicine, Fayoum University, Fayoum, Egypt.",
+          "Faculty of Medicine, Al-Azhar University, Nasr City, Cairo, Egypt. atefabdo26399@gmail.com.",
+          "Urology Department, Faculty of Medicine, Banha University, Banha, Egypt.",
+          "Urology Department, Faculty of Medicine, Al-Azhar University, Cairo, Egypt.",
+          "Urology and Surgery Department, Faculty of Medicine, Najran University, Najran, Saudi Arabia."
+        ],
+        "journal": "BMC urology",
+        "pubDate": "2026-Jul-03",
+        "publicationTypes": [
+          "Journal Article",
+          "Comparative Study"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Female",
+          "Ureteral Calculi",
+          "Male",
+          "Middle Aged",
+          "Decompression, Surgical",
+          "Ureteral Obstruction",
+          "Sepsis",
+          "Aged",
+          "Hospital Mortality",
+          "Stents",
+          "Adult"
+        ],
+        "keywords": [
+          "causal inference",
+          "obstructing ureteral stone",
+          "percutaneous nephrostomy",
+          "treatment timing",
+          "ureteral stent",
+          "urinary decompression",
+          "urosepsis"
+        ],
+        "doi": "10.1186/s12894-026-02119-z",
+        "pmcid": "PMC13335030",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42399868/",
+        "collectedAt": "2026-07-11T21:17:19.278Z",
+        "screeningData": {
+          "score": 9,
+          "relevanceMatches": [
+            "ICU",
+            "sepsis",
+            "septic shock",
+            "mechanical ventilation"
+          ],
+          "studyType": "Other",
+          "sampleSize": 9172,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: ICU, sepsis, septic shock, mechanical ventilation",
+            "sample size signal: N=9172"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Septic obstructing ureteral stones represent a critical urological emergency; reported mortality varies widely, often in the low single digits in contemporary urosepsis cohorts, but substantially higher in septic shock and selected severe presentations, reaching 25.9% in severe cases []. With kidney stones affecting approximately 10.1% of the American population, the potential for life-threatening obstructive complications continues to escalate []. This condition merges urinary tract obstruction with systemic infection, creating a medical emergency that requires immediate intervention. The clinical burden is substantial, with urosepsis carrying significant morbidity and mortality rates. Globally, the incidence of urolithiasis has increased substantially over recent decades, affecting millions of patients annually []. In the United States, sepsis is the third leading cause of death in hospitals, with associated healthcare costs exceeding billions of dollars annually []. Timely source control through urgent decompression is the cornerstone of management and is considered critical for improving outcomes, although much of the comparative evidence is observational. Current guidelines recommend emergency decompression within specific timeframes, with evidence suggesting that earlier intervention may optimize outcomes. Delayed decompression significantly increases the risk of mortality []. The primary decompression modalities are ureteral stenting and percutaneous nephrostomy (PCN). Recent systematic analyses have found variable success rates between techniques, with each modality offering distinct advantages depending on the clinical circumstances []. Clinical prediction models have identified key sepsis risk factors, including demographic factors, laboratory parameters, and infection markers []. Despite a consensus on the urgency of intervention, clinical uncertainty persists regarding the optimal timing and modality selection. Previous research has been limited by methodological constraints, including confounding bias and insufficient adjustment for illness severity. Notable healthcare disparities exist in the delivery of timely care across different patient populations and clinical settings []. This study addresses two primary questions in the management of septic obstructing ureteral stones: Does urgent decompression reduce mortality compared with conservative approaches? How does the timing of intervention modify patient outcomes? The head-to-head comparison of decompression modalities (ureteral stenting versus PCN) was examined as a secondary, exploratory analysis. Using nationally representative data and prespecified analytic methods, this study aimed to provide observational comparative-effectiveness evidence to inform clinical decision-making for this life-threatening urological emergency. Methods Data source and study design Retrospective cohort study of 9,172 adult hospitalizations for septic obstructing ureteral stones from the Healthcare Cost and Utilization Project (HCUP) National Inpatient Sample (NIS), 2016–2022. The NIS approximates a 20% stratified sample of U.S. community hospital discharges. Primary comparative-effectiveness analyses used unweighted data (propensity score matching [PSM], overlap weighting [OW], and instrumental variable [IV] methods are incompatible with discharge weights); survey-weighted results were limited to descriptive sensitivity analyses. Cohort assembly, variable construction, and statistical analyses were executed via a fully scripted, reproducible workflow; all tables/figures were programmatically generated and archived Fig. . Analyses complied with the HCUP Data Use Agreement; no hospital or state identifiers are reported []. Fig. 1 STROBE/RECORD flow diagram of cohort assembly Cohort construction Adults (≥ 18 years) hospitalized with sepsis/septic shock and obstructing ureteral stones identified from diagnosis fields; procedure fields scanned for urinary decompression (ureteral stent or percutaneous nephrostomy). The pipeline extracted the initial decompression modality (STENT, PCN, or NONE), procedure timing, crossover, Charlson comorbidity index/components, hospital attributes, and equity variables (race/ethnicity, payer, neighborhood income quartile). All diagnosis/procedure definitions are presented in Supplementary Table 1. Exposures Primary Any decompression (STENT or PCN) versus conservative management (NONE). Head-to-head PCN versus STENT among decompressed patients. Timing Examined same-day (day 0) vs. ≥ day 1 and 24-hour cutoffs from admission using landmark and time-dependent approaches to mitigate immortal-time bias. Because NIS records the procedure day as a calendar-day integer (day 0, day 1, day 2, …) and we derived timing as 24 × procedure day, all timing values are multiples of 24 h (0, 24, 48 h, etc.), with no intermediate values between 0 and 24 h available in the dataset. As reported in the Abstract, comparisons of ≤ 24 h versus > 24 h therefore correspond to day 0 (coded as 0 h) versus day ≥ 1 (coded as ≥ 24 h). The pre-specified sensitivity analysis reclassified procedures at exactly 24 h from “early (≤ 24 h)” to “late (> 24 h)”; early mortality remained lower (45/3,821 [1.18%] vs. 48/1,893 [2.54%]), corroborating the primary results (66/4,795 [1.38%] vs. 27/919 [2.94%]). Outcomes We prespecified in-hospital mortality as the primary outcome of this study. Analyses of acute kidney injury (AKI), mechanical ventilation, dialysis, vasopressors, and length of stay (LOS) were secondary and exploratory. Given the strong coherence in direction and magnitude across analytic approaches, we present two-sided p-values without formal family-wise error control; the interpretation emphasizes effect sizes and precision. (In a sensitivity analysis, Holm–Bonferroni adjustments did not alter the qualitative conclusions.) Covariates (pre-exposure adjustment set) We prespecified a 12-variable adjustment set measured at or before exposure: age, sex, Charlson index, weekend admission, inter-facility transfer, teaching hospital status, hospital region, race/ethnicity, ZIP income quartile, insurance/payer, shock on admission, and acute renal failure on day 0. These variables informed confounding control across analyses and were harmonized from the core dataset fields and derived features. Statistical analysis Primary causal identification strategies Propensity score matching (PSM): decompression versus conservative Propensity scores were estimated using 12 covariates: 1:1 nearest-neighbour matching without replacement (calliper 0.2 SD logit-PS). Of the 5,714 treated patients, 3,262 (57.1%) matched, yielding 3,262 pairs. Balance was assessed via standardized mean differences (SMDs); post-match |SMD| < 0.10 for all covariates (mean ≈ 0.019). The reported matched risk difference in mortality was significant []. Overlap weighting (OW): PCN vs. STENT Propensity scores for PCN were estimated using logistic regression on 12 covariates. Overlap weights applied without trimming; covariate balance targeted |SMD| < 0.10. Effective weighted sample size: 1,836. The reported weighted risks, risk differences, odds ratios (95% CIs), and NNT/NNH were calculated using hospital-clustered robust standard errors []. (Supplementary Material 2). Instrumental variables (IV): PCN vs. STENT. For each hospital, we computed the prior-year share of PCN among all decompressions for septic obstructing stones and categorized hospitals into tertiles (PCN-preference). The unit of analysis for the instrument was the hospital identifier available in NIS; no hospital identifiers are reported per HCUP DUA. The first stage regressed PCN on the instrument and covariates; the second stage estimated the association between instrument-predicted modality and in-hospital mortality using an IV approach specified for a binary outcome, with hospital-clustered standard errors. Instrument strength was F = 66.85; covariate balance and over-identification checks are reported []. Time-dependent Cox models treated decompression as time-varying (switching from 0 to 1 at decompression time), adjusting for age, sex, Charlson index, shock, and acute renal failure on day 0. Proportional hazards were verified (Schoenfeld global = 0.23; treatment = 0.31). Landmark analyses at the admission day (day 0) and at 24 h from admission compared patients treated after each landmark with those untreated at the landmark, eliminating immortal-time bias. Additional analysis Kaplan–Meier curves were generated by modality, extended Cox models, early versus-late timing summaries, hospital-level practice variation, and equity analyses by race/ethnicity, payer, and neighborhood income. As a transparency supplement (predictive, not causal), eight pre-treatment models were trained via hospital-grouped 10-fold cross-validation (training + held-out test sets) to limit information leakage using only pre-treatment variables: K-Nearest Neighbors (k = 5, Euclidean), SVM, RF, GBM, and XGBoost with class_weight=’balanced’/scale_pos_weight where applicable. All outcome models used hospital-clustered robust standard errors. Propensity distributions showed adequate common support, and post-matching/weighting balance met |SMD| < 0.10. Using the full adjustment set, we estimated the standardized treated/untreated risks, risk difference, risk ratio, and NNT with bootstrap confidence intervals. Primary comparative-effectiveness analyses used unweighted data because NIS discharge weights distort individual-level causal estimands (matching, overlap weighting, IV). Descriptive survey-weighted sensitivity analyses were planned separately. Ethics, data use, and reporting Retrospective analysis of de-identified HCUP National Inpatient Sample (NIS) data. Per federal regulations, de-identified secondary data analyses do not constitute human subjects research and require no IRB/informed consent. Investigators completed the HCUP DUA training and complied with the Data Use Agreement: no cell sizes ≤ 10 published, no hospital/state identification, research-only use. Version-controlled code and synthetic non-identifiable data artifacts archived; scripts reproduce all tables/figures. Reporting followed the STROBE and RECORD guidelines [, ]. Results Cohort characteristics The final cohort included 9,172 patients: conservative, 3,458 (37.7%); STENT, 4,982 (54.3%); and PCN, 732 (8.0%). Overall, the in-hospital mortality rate was 2.5% (228 deaths). Compared with the STENT and conservative groups, PCN patients had greater acuity and comorbidity: higher transfer-in rates (37.4% vs. 17.5% in the STENT group; 23.1% in the conservative group), higher Charlson index (3.0 vs. 1.9 in the STENT group; 2.6 in the conservative group), and higher frequencies of AKI (75.8%), vasopressor use (11.6%), and mechanical ventilation (13.5%). The LOS was longest with PCN (mean 11.0 ± 10.4 days) and shortest with STENT (6.7 ± 8.1 days) (Table ). Table 1 Baseline Demographics and Clinical Characteristics of the Cohort, Overall and by Management Strategy Characteristic Overall ( = 9,172) Conservative ( = 3,458) STENT Early ≤ 24 h ( = 4,259) STENT Late > 24 h ( = 723) PCN Early ≤ 24 h ( = 536) PCN Late > 24 h ( = 196) -value N (%) 9,172 (100.0%) 3,458 (37.7%) 4,259 (46.4%) 723 (7.9%) 536 (5.8%) 196 (2.1%) DEMOGRAPHICS Age (years) 63.9 ± 15.5 65.2 ± 15.5 63.0 ± 15.7 63.2 ± 15.0 64.7 ± 14.7 60.2 ± 15.5 < 0.001 Female sex 5,310 (57.9%) 1,705 (49.3%) 2,883 (67.7%) 403 (55.7%) 251 (46.8%) 68 (34.7%) < 0.001 Weekend admission 2,336 (25.5%) 918 (26.5%) 1,101 (25.9%) 131 (18.1%) 152 (28.4%) 34 (17.3%) < 0.001 Inter-facility transfer 746 (8.1%) 222 (6.4%) 331 (7.8%) 79 (10.9%) 79 (14.7%) 35 (17.9%) < 0.001 CLINICAL CHARACTERISTICS Charlson Comorbidity Index 2.2 ± 2.4 2.6 ± 2.5 1.8 ± 2.1 2.4 ± 2.5 2.8 ± 3.0 3.7 ± 3.3 < 0.001 Acute kidney injury 4,774 (52.0%) 1,698 (49.1%) 2,136 (50.2%) 385 (53.3%) 380 (70.9%) 175 (89.3%) < 0.001 Shock on admission 583 (6.4%) 191 (5.5%) 225 (5.3%) 82 (11.3%) 47 (8.8%) 38 (19.4%) < 0.001 COMORBIDITIES Myocardial infarction 789 (8.6%) 262 (7.6%) 353 (8.3%) 88 (12.2%) 60 (11.2%) 26 (13.3%) < 0.001 Congestive heart failure 1,399 (15.3%) 610 (17.6%) 537 (12.6%) 148 (20.5%) 58 (10.8%) 46 (23.5%) < 0.001 Peripheral vascular disease 461 (5.0%) 180 (5.2%) 195 (4.6%) 26 (3.6%) 34 (6.3%) 26 (13.3%) < 0.001 Cerebrovascular disease 470 (5.1%) 221 (6.4%) 168 (3.9%) 34 (4.7%) 47 (8.8%) ≤ 10 < 0.001 Dementia 646 (7.0%) 314 (9.1%) 248 (5.8%) 33 (4.6%) 37 (6.9%) 14 (7.1%) < 0.001 COPD 2,015 (22.0%) 780 (22.6%) 928 (21.8%) 177 (24.5%) 90 (16.8%) 40 (20.4%) 0.017 Rheumatic disease 261 (2.8%) 77 (2.2%) 112 (2.6%) 27 (3.7%) 32 (6.0%) 13 (6.6%) < 0.001 Peptic ulcer disease 69 (0.8%) 41 (1.2%) 14 (0.3%) ≤ 10 ≤ 10 ≤ 10 < 0.001 Mild liver disease 539 (5.9%) 191 (5.5%) 293 (6.9%) 20 (2.8%) 21 (3.9%) 14 (7.1%) < 0.001 Diabetes without complications 2,176 (23.7%) 793 (22.9%) 1,025 (24.1%) 240 (33.2%) 85 (15.9%) 33 (16.8%) < 0.001 Diabetes with complications 1,247 (13.6%) 567 (16.4%) 447 (10.5%) 98 (13.6%) 75 (14.0%) 60 (30.6%) < 0.001 Hemiplegia/paraplegia 444 (4.8%) 213 (6.2%) 121 (2.8%) 47 (6.5%) 49 (9.1%) 14 (7.1%) < 0.001 Chronic kidney disease 2,106 (23.0%) 937 (27.1%) 766 (18.0%) 181 (25.0%) 150 (28.0%) 72 (36.7%) < 0.001 Malignancy 836 (9.1%) 426 (12.3%) 238 (5.6%) 46 (6.4%) 77 (14.4%) 49 (25.0%) < 0.001 Moderate/severe liver disease 89 (1.0%) 20 (0.6%) 35 (0.8%) 20 (2.8%) ≤ 10 14 (7.1%) < 0.001 Metastatic solid tumor 309 (3.4%) 157 (4.5%) 73 (1.7%) 20 (2.8%) 47 (8.8%) 12 (6.1%) < 0.001 INFECTION CHARACTERISTICS Pyelonephritis 1,594 (17.4%) 500 (14.5%) 851 (20.0%) 112 (15.5%) 96 (17.9%) 35 (17.9%) < 0.001 Bacteremia 5,353 (58.4%) 1,983 (57.3%) 2,572 (60.4%) 400 (55.3%) 279 (52.1%) 119 (60.7%) < 0.001 Urosepsis 6,795 (74.1%) 2,533 (73.3%) 3,193 (75.0%) 551 (76.2%) 385 (71.8%) 133 (67.9%) 0.039 HOSPITAL CHARACTERISTICS Teaching hospital 4,854 (52.9%) 1,807 (52.3%) 2,262 (53.1%) 410 (56.7%) 267 (49.8%) 108 (55.1%) 0.121 SOCIOECONOMIC FACTORS ZIP income quartile 2.9 ± 1.1 3.0 ± 1.1 2.9 ± 1.1 3.0 ± 1.0 3.0 ± 1.1 2.6 ± 1.2 < 0.001 OUTCOMES & RESOURCE UTILIZATION In-hospital mortality 228 (2.5%) 135 (3.9%) 32 (0.8%) 21 (2.9%) 34 (6.3%) ≤ 10 < 0.001 Mechanical ventilation 679 (7.4%) 311 (9.0%) 117 (2.7%) 152 (21.0%) 41 (7.6%) 58 (29.6%) < 0.001 Vasopressor use 583 (6.4%) 191 (5.5%) 225 (5.3%) 82 (11.3%) 47 (8.8%) 38 (19.4%) < 0.001 Dialysis requirement 170 (1.9%) 85 (2.5%) 40 (0.9%) 20 (2.8%) ≤ 10 18 (9.2%) < 0.001 Length of stay (days) 7.5 ± 8.9 7.7 ± 9.5 5.6 ± 5.6 13.2 ± 14.8 7.9 ± 5.3 19.4 ± 15.2 < 0.001 Non-home discharge 2,701 (29.4%) 1,253 (36.2%) 846 (19.9%) 268 (37.1%) 253 (47.2%) 81 (41.3%) < 0.001 TIMING VARIABLES (Decompressed Patients) Time to decompression (hours; 0, 24, 48, …)* 15.7 ± 31.4 4.7 ± 9.6 68.3 ± 35.5 5.9 ± 10.3 87.6 ± 60.7 < 0.001 Note: Per HCUP DUA, exact counts ≤10 are suppressed and replaced with ‘≤10’. Time to decompression is computed as 24 × procedure day; values are multiples of 24 h. Where suppression applies, percentages represent upper bounds. Primary outcome patterns by modality Unadjusted mortality differed markedly: conservative 3.90% (135/3,458), STENT 1.06% (53/4,982), and PCN 5.46% (40/732). Kaplan–Meier curves show lower in-hospital mortality with STENT than with PCN or conservative management, with a divergence within approximately 5–10 days that persists through discharge. (Fig. ). Fig. 2 Kaplan–Meier survival curves by treatment modality Decompression vs. conservative (primary question) Propensity score–matched analysis (3,262 matched pairs; 57.1% of treated matched) demonstrated a − 2.5% point absolute reduction in mortality with decompression ( < 0.0001) and excellent covariate balance (mean post-match SMD ≈ 0.019) (Table ). Marginal standardized risks (g-computation) yielded a treated risk of 1.6% versus an untreated risk of 4.0%; RD − 2.4% (95% CI − 3.2% to − 1.7%), RR 0.39 (95% CI 0.30–0.50), NNT 41. Table 2 Summary of Propensity Sc",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42399868\nDOI: 10.1186/s12894-026-02119-z\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Urology Department, Faculty of Medicine, Fayoum University, Fayoum, Egypt.\n- Faculty of Medicine, Al-Azhar University, Nasr City, Cairo, Egypt. atefabdo26399@gmail.com.\n- Urology Department, Faculty of Medicine, Banha University, Banha, Egypt.\n- Urology Department, Faculty of Medicine, Al-Azhar University, Cairo, Egypt.\n- Urology and Surgery Department, Faculty of Medicine, Najran University, Najran, Saudi Arabia.\n\nPublic bibliographic metadata from Crossref:\nTitle: Early urinary decompression and mortality in septic obstructing ureteral stones: a nationwide comparative-effectiveness study\nType: journal-article\nPublished: 2026-7-3\nPublisher: Springer Science and Business Media LLC",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13335030"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13335030",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13335030"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-11T21:18:02.481Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42399868",
+          "rank": 1,
+          "clinicalPriorityScore": 7,
+          "rationale_ko": "패혈증 동반 폐쇄성 요관결석은 응급실에서 흔히 마주치는 시간 민감성 비뇨기 응급질환으로, 본 연구는 전국 규모(NIS, n=9,172) 비교효과 분석에서 조기 요로감압(스텐트/신루)이 보존적 치료 대비 원내 사망률을 유의하게 낮추고(1.6% vs 4.0%, NNT≈41), 24시간 이내 조기 감압의 이점을 성향점수매칭·도구변수 등 다중 방법으로 견고하게 제시함. 관찰연구라는 한계는 있으나 대규모이고 EM/CCM 임상 의사결정(비뇨기·중재영상 협진 및 감압 시점)에 직접적으로 실행 가능한 메시지를 제공하여 최우선 선정."
+        }
+      ],
+      "notes_ko": [
+        "후보 중 진정한 무작위 대조시험인 42427323(AECOPD 외부 횡격막 페이싱, N=174)은 이탈 성공률이라는 임상 결과를 다루나 단일기관·특수장비 의존으로 일반화·보급성이 낮아 2순위 후보로 평가.",
+        "42392606(영아 빈호흡 진단정확도 메타분석)은 방법론은 견고하나 민감도가 낮고 신생아 영역으로 핵심 성인 EM/CCM 관련성이 제한적.",
+        "42391217(전해질 보충, N=47,988)은 표본은 크나 병원간 변이 기술에 그쳐 실무 변화 근거로는 약함. 여러 MIMIC-IV 기반 관찰연구(42416900, 42422678, 42393997)와 QI/설문/프로토콜 논문(42425561, 42392635, 42392679, 42418363 등)은 직접적 진료 변화 가치가 낮아 배제.",
+        "JAMA network open 게재작(42430168, 42418199)은 저널 영향력은 높으나 사회역학/정신건강 주제로 EM/CCM 급성진료 관련성이 낮음."
+      ]
+    }
+  },
+  "errors": []
+}

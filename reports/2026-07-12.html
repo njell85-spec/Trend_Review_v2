@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 7. 12. 오전 6:26</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-07-12</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Early urinary decompression and mortality in septic obstructing ureteral stones: a nationwide comparative-effectiveness study.</h2>
+      <div class="paper-meta">
+        BMC urology · 2026-Jul-03 · PMID 42399868
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">Low</span>
+      <span class="pill">PMC + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Septic obstructing ureteral stones are a time-critical urologic emergency in which source control by decompression is the cornerstone of care, yet high-quality comparative evidence on whether and how quickly to intervene is scarce. This large, nationally representative observational study quantifies the mortality benefit of early decompression and directly supports urgent ED/ICU source-control decisions.</p>
+    <p class="ko">요관결석에 의한 패혈증은 감압을 통한 원인 조절이 치료의 핵심인 시간 민감성 비뇨기 응급질환이지만, 언제·얼마나 빨리 개입해야 하는지에 대한 양질의 비교 근거가 부족하다. 이 대규모 전국 대표성 관찰연구는 조기 감압의 사망률 이점을 정량화하여 응급실/중환자실의 신속한 원인 조절 결정을 직접 뒷받침한다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Retrospective observational comparative-effectiveness cohort study using nationally representative administrative data, with prespecified causal-inference methods (propensity score matching, overlap weighting, instrumental variable analysis, and landmark/time-dependent survival models). Reporting followed STROBE and RECORD guidelines.</p>
+      <p class="ko">전국 대표 행정 데이터를 이용한 후향적 관찰 비교효과 코호트 연구로, 사전 지정된 인과추론 방법(성향점수매칭, 중첩가중치, 도구변수 분석, 랜드마크/시간의존 생존모형)을 사용했다. 보고는 STROBE 및 RECORD 지침을 따랐다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">U.S. HCUP National Inpatient Sample (NIS), 2016–2022, approximating a 20% stratified sample of U.S. community hospital discharges. Per PubMed affiliation metadata, the authors are based at institutions in Egypt (Fayoum, Al-Azhar, Banha universities) and Saudi Arabia (Najran University), analyzing the US dataset remotely.</p>
+      <p class="ko">미국 HCUP 전국입원표본(NIS) 2016–2022로, 미국 지역병원 퇴원의 약 20% 층화표본에 해당한다. PubMed 소속 정보에 따르면 저자들은 이집트(파이윰, 알아자르, 반하 대학)와 사우디아라비아(나즈란 대학) 소속으로, 미국 데이터를 원격 분석했다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">9,172 adult hospitalizations analyzed (conservative 3,458 [37.7%]; ureteral stent 4,982 [54.3%]; PCN 732 [8.0%]); 228 in-hospital deaths (2.5%). For the decompression-vs-conservative PSM, 3,262 matched pairs (57.1% of 5,714 treated). PCN-vs-stent overlap weighting had an effective weighted sample size of 1,836. Sensitivity timing strata: early ≤24 h n=3,821 and &gt;24 h n=1,893 (alternate coding 4,795 vs 919).</p>
+      <p class="ko">분석 대상 성인 입원 9,172건(보존적 3,458명[37.7%]; 요관 스텐트 4,982명[54.3%]; PCN 732명[8.0%]); 원내 사망 228건(2.5%). 감압 대 보존적 PSM에서는 3,262쌍 매칭(치료군 5,714명 중 57.1%). PCN 대 스텐트 중첩가중치의 유효 가중 표본수는 1,836. 시점 민감도 분석 층: 조기 ≤24h n=3,821, &gt;24h n=1,893(대체 코딩 4,795 대 919).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Adults (≥18 years) hospitalized with sepsis or septic shock and obstructing ureteral stones (calculi) identified from ICD diagnosis fields, with procedure fields scanned for urinary decompression (ureteral stent or PCN). MeSH indexing includes adults, middle-aged, aged; both sexes (57.9% female).</p>
+      <p class="ko">ICD 진단 필드로 확인된 패혈증 또는 패혈성 쇼크 및 요관결석을 동반한 성인(≥18세) 입원 환자로, 시술 필드에서 요로감압술(요관 스텐트 또는 PCN)을 검색했다. MeSH 색인에는 성인·중년·노년이 포함되며 양성(여성 57.9%).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Urinary decompression = initial ureteral stent or percutaneous nephrostomy (PCN) identified from procedure fields. Timing derived as 24 × procedure calendar-day, so values are multiples of 24 h; ≤24 h corresponds to day 0 and &gt;24 h to day ≥1. No specific stent size, PCN caliber, sedation, or antibiotic details are available in the accessible sources.</p>
+      <p class="ko">요로감압술 = 시술 필드에서 확인된 초기 요관 스텐트 또는 경피적 신루설치술(PCN). 시점은 24×시술 달력일로 산출되어 24시간의 배수이며, ≤24h는 0일차, &gt;24h는 1일차 이상에 해당한다. 구체적 스텐트 크기, PCN 굵기, 진정, 항생제 세부사항은 제공된 자료에 없다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Primary comparator: conservative management (no decompression, coded NONE), n=3,458. Secondary head-to-head exploratory comparator: PCN versus ureteral stent among decompressed patients. Timing comparator: late (&gt;24 h) versus early (≤24 h) decompression.</p>
+      <p class="ko">주요 비교군: 보존적 치료(감압 없음, NONE 코딩), n=3,458. 이차 직접비교(탐색적): 감압 환자 중 PCN 대 요관 스텐트. 시점 비교: 지연(&gt;24h) 대 조기(≤24h) 감압.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">In-hospital follow-up only (index hospitalization); outcomes are in-hospital mortality and inpatient event/resource measures. No post-discharge follow-up is available in NIS/accessible sources. Mean length of stay 7.5 ± 8.9 days overall.</p>
+      <p class="ko">원내 추적만(색인 입원); 결과는 원내 사망률 및 입원 중 사건/자원 지표이다. NIS/제공 자료에는 퇴원 후 추적이 없다. 전체 평균 재원기간 7.5 ± 8.9일.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract, PMC open full-text excerpt (PMC13335030) including baseline Table 1 and results, PubMed metadata/affiliations, and Crossref bibliographic metadata.</p>
+      <p class="ko">초록, PMC 공개 전문 발췌(PMC13335030, 기저 Table 1 및 결과 포함), PubMed 메타데이터/소속, Crossref 서지 메타데이터.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Adults (≥18 y) with sepsis or septic shock and obstructing ureteral stones, U.S. HCUP NIS 2016–2022 (n=9,172; mean age 63.9±15.5 y; 57.9% female; overall mortality 2.5%). Groups: conservative 3,458, stent 4,982, PCN 732; PCN patients were sicker (AKI 75.8%, higher Charlson, more transfers).</p>
+      <p class="ko">요관결석에 의한 패혈증 또는 패혈성 쇼크 성인(≥18세), 미국 HCUP NIS 2016–2022(n=9,172; 평균 연령 63.9±15.5세; 여성 57.9%; 전체 사망률 2.5%). 군: 보존적 3,458, 스텐트 4,982, PCN 732; PCN 환자가 더 중증(급성신손상 75.8%, 높은 Charlson, 많은 전원).</p>
+      <p class="en"><strong>Setting:</strong> United States, HCUP National Inpatient Sample, 2016–2022 (~20% stratified sample of community hospital discharges). Authors affiliated with institutions in Egypt and Saudi Arabia per public metadata.</p>
+      <p class="ko">미국, HCUP 전국입원표본, 2016–2022(지역병원 퇴원의 약 20% 층화표본). 공개 메타데이터상 저자는 이집트 및 사우디아라비아 소속.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Urinary decompression via ureteral stent or percutaneous nephrostomy (PCN), with timing modeled by calendar day (≤24 h = day 0 vs &gt;24 h = day ≥1). Analyzed with propensity score matching, overlap weighting, instrumental variable analysis (hospital prior-year PCN preference, first-stage F=66.85), and time-dependent/landmark Cox models to mitigate immortal-time bias, using a prespecified 12-variable adjustment set.</p>
+      <p class="ko">요관 스텐트 또는 경피적 신루설치술(PCN)을 통한 요로감압술로, 시점은 달력일 기준(≤24h = 0일차 대 &gt;24h = 1일차 이상)으로 모델링. 성향점수매칭, 중첩가중치, 도구변수 분석(병원 전년도 PCN 선호도, 1단계 F=66.85), 불멸시간편향을 줄이기 위한 시간의존/랜드마크 Cox 모형으로 분석했으며 사전 지정된 12개 변수 보정 세트를 사용했다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Conservative management (no decompression) for the primary question; ≤24 h vs &gt;24 h for timing; PCN vs ureteral stent for the exploratory modality comparison.</p>
+      <p class="ko">일차 질문에서는 보존적 치료(감압 없음); 시점 비교에서는 ≤24h 대 &gt;24h; 탐색적 방식 비교에서는 PCN 대 요관 스텐트.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">In-hospital mortality: decompression vs conservative</p>
+    <p class="ko">원내 사망률: 감압 대 보존적 치료</p>
+    <p class="stat-line">Standardized (g-computation) treated risk 1.6% vs untreated 4.0%; RD −2.4% (95% CI −3.2% to −1.7%), RR 0.39 (95% CI 0.30–0.50), NNT ≈41. PSM (3,262 pairs) showed −2.5 percentage-point absolute reduction (p&lt;0.0001), mean post-match |SMD|≈0.019. · RD −2.4% (95% CI −3.2 to −1.7); RR 0.39 (0.30–0.50); NNT ≈41; PSM p&lt;0.0001</p>
+    <p class="ko">표준화(g-계산) 치료군 위험 1.6% 대 비치료군 4.0%; 위험차 −2.4%(95% CI −3.2%~−1.7%), RR 0.39(95% CI 0.30–0.50), NNT ≈41. PSM(3,262쌍)에서 −2.5%p 절대 감소(p&lt;0.0001), 매칭 후 평균 |SMD|≈0.019.</p>
+    <div class="interpretation">ⓘ Decompression was associated with roughly 60% lower relative and 2.4-point lower absolute in-hospital mortality, meaning about 1 death avoided per 41 patients decompressed—consistent across matching and standardization.<br>감압은 상대적으로 약 60%, 절대적으로 2.4%p 낮은 원내 사망률과 연관되어 감압 41명당 약 1명의 사망을 피하는 것을 의미하며, 매칭과 표준화에서 일관되게 나타났다.</div>
+    <div class="interpretation primer">ⓘ RR of 0.39 means fewer deaths with decompression (below 1 = benefit); the 95% CI (0.30–0.50) excludes 1, so the association is statistically significant. For the risk difference, 0 means no absolute difference; NNT 41 = treat 41 to prevent 1 death. p&lt;0.05 is the usual significance threshold.<br>RR 0.39는 감압 시 사망이 적음을 의미(1 미만 = 이익); 95% CI(0.30–0.50)가 1을 포함하지 않아 통계적으로 유의하다. 위험차는 0이 절대 차이 없음; NNT 41은 41명 치료 시 1명의 사망을 예방. p&lt;0.05가 통상적 유의성 기준이다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Timing</div>
+    <p class="en">In-hospital mortality: late (&gt;24 h) vs early (≤24 h) decompression</p>
+    <p class="ko">원내 사망률: 지연(&gt;24h) 대 조기(≤24h) 감압</p>
+    <p class="stat-line">Late decompression had higher odds of mortality (OR 2.17, 95% CI 1.38–3.41), and higher AKI, mechanical ventilation, and dialysis. Prespecified sensitivity coding confirmed lower early mortality (45/3,821 [1.18%] vs 48/1,893 [2.54%]; and 66/4,795 [1.38%] vs 27/919 [2.94%]). · OR 2.17 (95% CI 1.38–3.41)</p>
+    <p class="ko">지연 감압은 사망 오즈가 더 높았고(OR 2.17, 95% CI 1.38–3.41), 급성신손상·기계환기·투석도 증가했다. 사전 지정 민감도 코딩에서 조기 사망률이 더 낮음을 확인(45/3,821[1.18%] 대 48/1,893[2.54%]; 66/4,795[1.38%] 대 27/919[2.94%]).</p>
+    <div class="interpretation">ⓘ Waiting beyond 24 hours was associated with roughly double the odds of dying and more organ-failure events, reinforcing that faster source control is better.<br>24시간을 넘겨 지연할수록 사망 오즈가 약 2배 높고 장기부전 사건도 많아, 더 빠른 원인 조절이 유리함을 강화한다.</div>
+    <div class="interpretation primer">ⓘ OR above 1 means more events with the exposure (here, late decompression); OR 2.17 = about twice the odds of death. The 95% CI (1.38–3.41) does not cross 1, so it is statistically significant.<br>OR 1 초과는 노출(여기서는 지연 감압) 시 사건이 더 많음을 의미; OR 2.17은 사망 오즈가 약 2배. 95% CI(1.38–3.41)가 1을 가로지르지 않아 통계적으로 유의하다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary/Exploratory</div>
+    <p class="en">In-hospital mortality: PCN vs ureteral stent (among decompressed)</p>
+    <p class="ko">원내 사망률: PCN 대 요관 스텐트(감압 환자 중)</p>
+    <p class="stat-line">Adjusted mortality higher with PCN than stent (5.5% vs 2.8%; OR 2.05, 95% CI 1.31–3.09). Unadjusted: PCN 5.46% (40/732) vs STENT 1.06% (53/4,982). PCN patients had markedly greater acuity (AKI 75.8%, ventilation 13.5%, higher Charlson, more transfers). IV results directionally consistent but likely reflect residual confounding by indication/feasibility. · OR 2.05 (95% CI 1.31–3.09); unadjusted PCN 5.46% vs STENT 1.06%</p>
+    <p class="ko">보정 후 사망률이 스텐트보다 PCN에서 높음(5.5% 대 2.8%; OR 2.05, 95% CI 1.31–3.09). 비보정: PCN 5.46%(40/732) 대 스텐트 1.06%(53/4,982). PCN 환자는 중증도가 훨씬 높았다(급성신손상 75.8%, 기계환기 13.5%, 높은 Charlson, 많은 전원). 도구변수 결과는 방향이 일치하나 적응증/실행가능성에 의한 잔여 교란을 반영할 가능성이 크다.</p>
+    <div class="interpretation">ⓘ PCN was associated with higher mortality than stenting, but PCN patients were far sicker; this is hypothesis-generating confounding by indication, not evidence that PCN causes harm—PCN remains essential when retrograde stenting is not feasible.<br>PCN은 스텐트보다 높은 사망률과 연관되었으나 PCN 환자가 훨씬 중증이었으므로, 이는 PCN이 해를 끼친다는 근거가 아니라 적응증에 의한 교란(가설 생성적)이다—역행성 스텐트가 어려울 때 PCN은 여전히 필수적이다.</div>
+    <div class="interpretation primer">ⓘ OR 2.05 (&gt;1) suggests more deaths with PCN, CI (1.31–3.09) excludes 1; but observational OR reflects who received PCN (sicker patients), so confounding by indication limits causal reading.<br>OR 2.05(&gt;1)은 PCN에서 사망이 더 많음을 시사하며 CI(1.31–3.09)가 1을 제외하지만, 관찰 OR은 PCN을 받은 환자(더 중증)를 반영하므로 적응증에 의한 교란이 인과 해석을 제한한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Organ-failure and resource outcomes (AKI, ventilation, dialysis, LOS)</p>
+    <p class="ko">장기부전 및 자원 사용 결과(급성신손상, 기계환기, 투석, 재원기간)</p>
+    <p class="stat-line">Overall AKI 52.0%, mechanical ventilation 7.4%, vasopressor 6.4%, dialysis 1.9%; mean LOS 7.5 ± 8.9 days. LOS longest with PCN (11.0 ± 10.4 d) and shortest with STENT (6.7 ± 8.1 d). Late decompression was associated with higher AKI, ventilation, and dialysis. · Descriptive proportions and means; group differences p&lt;0.001 in Table 1</p>
+    <p class="ko">전체 급성신손상 52.0%, 기계환기 7.4%, 승압제 6.4%, 투석 1.9%; 평균 재원 7.5 ± 8.9일. 재원기간은 PCN에서 가장 길고(11.0 ± 10.4일) 스텐트에서 가장 짧았다(6.7 ± 8.1일). 지연 감압은 급성신손상·기계환기·투석 증가와 연관.</p>
+    <div class="interpretation">ⓘ Secondary organ-failure and resource-use outcomes moved in the same direction as mortality, but these were exploratory without family-wise error control, so treat as supportive rather than confirmatory.<br>이차 장기부전 및 자원 사용 결과는 사망률과 같은 방향이었으나 다중검정 보정 없는 탐색적 분석이므로 확증이 아닌 보조적 근거로 해석해야 한다.</div>
+    <div class="interpretation primer">ⓘ These are descriptive comparisons; p&lt;0.001 indicates the groups differ statistically, but because outcomes were exploratory without family-wise error control, statistical significance here does not confirm causal effect.<br>이들은 기술적 비교이며 p&lt;0.001은 그룹 간 통계적 차이를 나타내지만, 이차/탐색적이고 다중검정 보정이 없어 여기서의 통계적 유의성이 인과 효과를 확증하지 않는다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Decompression (stent or PCN) vs conservative care was associated with lower in-hospital mortality: 1.6% vs 4.0%, RD −2.4% (95% CI −3.2 to −1.7), RR 0.39 (0.30–0.50), NNT ≈41.</p><p class="ko">감압(스텐트 또는 PCN) 대 보존적 치료는 낮은 원내 사망률과 연관: 1.6% 대 4.0%, 위험차 −2.4%(95% CI −3.2~−1.7), RR 0.39(0.30–0.50), NNT ≈41.</p></li>
+<li><p class="en">Late decompression (&gt;24 h) vs early (≤24 h) carried roughly double the odds of death (OR 2.17, 95% CI 1.38–3.41) plus more AKI, ventilation, and dialysis.</p><p class="ko">지연 감압(&gt;24h) 대 조기(≤24h)는 사망 오즈가 약 2배(OR 2.17, 95% CI 1.38–3.41)이며 급성신손상·기계환기·투석도 증가.</p></li>
+<li><p class="en">In exploratory adjusted analysis, PCN had higher mortality than stenting (5.5% vs 2.8%; OR 2.05, 1.31–3.09), but PCN patients were markedly sicker—likely confounding by indication.</p><p class="ko">탐색적 보정 분석에서 PCN은 스텐트보다 사망률이 높았으나(5.5% 대 2.8%; OR 2.05, 1.31–3.09) PCN 환자가 훨씬 중증이어서 적응증에 의한 교란 가능성이 크다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Urgent urinary decompression, particularly within 24 hours, was associated with lower in-hospital mortality and fewer organ-failure outcomes in septic obstructing ureteral stones. Modality differences (PCN vs stent) should be interpreted as hypothesis-generating owing to confounding by indication; PCN remains essential when retrograde stenting is not feasible.</p>
+    <p class="ko">요관결석에 의한 패혈증에서 특히 24시간 이내의 응급 요로감압술은 낮은 원내 사망률 및 적은 장기부전 결과와 연관되었다. 방식 차이(PCN 대 스텐트)는 적응증에 의한 교란 때문에 가설 생성적으로 해석해야 하며, 역행성 스텐트가 어려울 때 PCN은 여전히 필수적이다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Observational retrospective design using administrative claims (NIS) cannot establish causation and is subject to residual and unmeasured confounding, notably confounding by indication and feasibility for the PCN-vs-stent comparison (sicker patients received PCN). Timing is only available as calendar-day integers (multiples of 24 h), so no sub-24-hour granularity exists and &quot;≤24 h&quot; equals day 0. ICD-based diagnosis/procedure coding may misclassify sepsis severity, stones, and modality; NIS lacks physiologic, laboratory, microbiologic, and post-discharge data. Only 57.1% of treated patients matched in PSM. Secondary/exploratory outcomes lacked family-wise error control. Unweighted analyses were used for causal estimands (national extrapolation limited to descriptive sensitivity analyses). Exact drug/antibiotic, sedation, stent size, and PCN caliber details are not available in the accessible sources.</p>
+    <p class="ko">행정 청구자료(NIS)를 이용한 관찰적 후향 설계로 인과관계를 확립할 수 없으며 잔여 및 미측정 교란, 특히 PCN 대 스텐트 비교에서 적응증·실행가능성에 의한 교란(중증 환자가 PCN을 받음)에 취약하다. 시점은 달력일 정수(24시간 배수)로만 제공되어 24시간 미만 세분화가 없고 &quot;≤24h&quot;는 0일차와 같다. ICD 기반 진단/시술 코딩은 패혈증 중증도·결석·방식을 오분류할 수 있고, NIS에는 생리·검사·미생물·퇴원 후 데이터가 없다. PSM에서 치료 환자의 57.1%만 매칭되었다. 이차/탐색적 결과는 다중검정 보정이 없었다. 인과 추정에는 비가중 분석을 사용했다(전국 외삽은 기술적 민감도 분석에 한정). 정확한 약물/항생제, 진정, 스텐트 크기, PCN 굵기 세부사항은 제공된 자료에 없다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Highly relevant to ED and ICU practice: septic obstructing stones are a common time-critical presentation where emergency physicians and intensivists coordinate resuscitation and urgent urologic source control. The data reinforce guideline-concordant urgent decompression, ideally within 24 hours, and support activating urology/IR early rather than pursuing prolonged conservative management. The findings are directional (associations, not causal effects) and should complement, not replace, bedside judgment; modality choice remains driven by anatomy, coagulopathy, hemodynamics, and local availability.</p>
+    <p class="ko">응급실과 중환자실 진료에 매우 관련성이 높다: 요관결석에 의한 패혈증은 응급의학과 의사와 중환자의학 의사가 소생과 응급 비뇨기 원인 조절을 협조하는 흔한 시간 민감성 상황이다. 이 데이터는 지침에 부합하는 응급 감압, 이상적으로 24시간 이내를 강화하고, 장기간 보존적 치료보다 조기 비뇨기과/중재영상의학 활성화를 뒷받침한다. 결과는 방향성(인과가 아닌 연관성)이므로 임상 판단을 보완할 뿐 대체하지 않으며, 방식 선택은 해부학·응고장애·혈역학·현지 가용성에 따라 결정된다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">For septic obstructing ureteral stones, pursue urgent source control—decompress as early as feasible, ideally within 24 hours—since delay is associated with substantially higher mortality and organ failure. Choose stent vs PCN based on clinical feasibility, not on this study&#39;s exploratory modality signal.</p>
+    <p class="ko">요관결석에 의한 패혈증에서는 신속한 원인 조절을 추구하라—가능한 한 조기에, 이상적으로 24시간 이내에 감압하라. 지연은 훨씬 높은 사망률 및 장기부전과 연관되기 때문이다. 스텐트 대 PCN 선택은 이 연구의 탐색적 방식 신호가 아니라 임상적 실행가능성에 근거해야 한다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42399868/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1186/s12894-026-02119-z" target="_blank" rel="noopener">DOI</a> · <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13335030/" target="_blank" rel="noopener">PMC</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
