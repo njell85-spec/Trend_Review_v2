@@ -1,0 +1,282 @@
+{
+  "analyses": [
+    {
+      "pmid": "42432993",
+      "title": "Flexible family visitation and postoperative delirium in an orthopedic intensive care unit: A randomized trial examining surgical-type heterogeneity and cost outcomes.",
+      "oneLineSummary": "Daytime flexible family visitation reduced postoperative delirium, sedative use, and hospitalization costs in older orthopedic ICU patients without raising infections or prolonging stay.",
+      "oneLineSummary_ko": "주간 유연 가족 면회는 고령 정형외과 중환자실 환자에서 감염 증가나 재원 연장 없이 수술 후 섬망, 진정제 사용, 입원 비용을 감소시켰다.",
+      "whyItMatters": "Postoperative delirium affects >30–40% of older orthopedic ICU patients and drives poor recovery, cognitive decline, and mortality; this trial shows a simple, non-pharmacologic, low-cost policy change—liberalizing family visitation—can meaningfully cut delirium and costs.",
+      "whyItMatters_ko": "수술 후 섬망은 고령 정형외과 중환자실 환자의 30~40% 이상에서 발생하며 회복 저하, 인지 저하, 사망률 증가로 이어진다. 이 연구는 가족 면회 자유화라는 단순하고 비약물적이며 저비용의 정책 변화가 섬망과 비용을 의미 있게 줄일 수 있음을 보여준다.",
+      "clinicalQuestion": "In older patients admitted to an orthopedic ICU after surgery, does daytime flexible family visitation, compared with routine restricted visitation, reduce postoperative delirium, and does the effect vary by surgical type?",
+      "clinicalQuestion_ko": "수술 후 정형외과 중환자실에 입원한 고령 환자에서 주간 유연 가족 면회는 통상적 제한 면회에 비해 수술 후 섬망을 감소시키는가, 그리고 그 효과는 수술 유형에 따라 다른가?",
+      "studyDetails": {
+        "design": "Single-center, parallel-group, 1:1 randomized controlled trial (CONSORT-compliant), with prespecified exploratory subgroup analyses by surgical type.",
+        "design_ko": "단일기관, 평행군, 1:1 무작위대조시험(CONSORT 준수), 수술 유형별 사전 지정 탐색적 하위군 분석 포함.",
+        "setting": "Orthopedic ICU of Beijing Jishuitan Hospital Guizhou Hospital, China; flexible and restricted patients managed in two physically separated ICU areas ~5 m apart. Registered as ChiCTR2600117290 (public registry metadata); ethics approval 21 July 2023.",
+        "setting_ko": "중국 베이징 지수이탄병원 구이저우병원 정형외과 중환자실; 유연군과 제한군은 약 5m 떨어진 물리적으로 분리된 두 구역에서 관리됨. ChiCTR2600117290로 등록(공개 등록 정보); 2023년 7월 21일 윤리 승인.",
+        "sampleSize": "420 patients randomized (210 per arm); 405 analyzed in complete-case primary analysis (200 flexible, 205 restricted). 15/420 (3.6%) excluded: flexible group 10/210 (unplanned discharge/transfer n=6, clinical deterioration n=4); restricted group 5/210 (incomplete data). Sample size planned a priori (PASS): 170/arm for 80% power, two-sided alpha 0.05 to detect 45% vs 30% delirium, inflated to 400 for 15% dropout.",
+        "sampleSize_ko": "420명 무작위배정(군당 210명); 완전사례 일차분석에 405명 분석(유연 200명, 제한 205명). 15/420명(3.6%) 제외: 유연군 10/210명(비계획 퇴원/전원 6명, 임상 악화 4명), 제한군 5/210명(자료 불완전). 사전 표본수 산정(PASS): 섬망 45% 대 30% 검출을 위해 양측 alpha 0.05, 검정력 80%로 군당 170명, 15% 탈락 고려하여 400명으로 상향.",
+        "eligibility": "Inclusion: age >=60; admitted to orthopedic ICU within 24 h after orthopedic surgery; negative CAM-ICU preoperatively and at ICU admission; able to communicate for delirium assessment; expected ICU stay >=24 h; at least one fixed family member/caregiver willing to visit. Exclusion: moderate-to-severe dementia/severe psychiatric disorder; severe sensory/communication barriers; acute CNS disorders (TBI, stroke, status epilepticus); anticipated deep sedation or NMB >=24 h or delirium at admission; mandatory isolation; expected survival <24 h or comfort care.",
+        "eligibility_ko": "포함: 60세 이상; 정형외과 수술 후 24시간 이내 정형외과 중환자실 입원; 수술 전 및 입실 시 CAM-ICU 음성; 섬망 평가가 가능한 의사소통 능력; 예상 재실 24시간 이상; 면회 가능한 고정 가족/보호자 1인 이상. 제외: 중등도-중증 치매/중증 정신질환; 심한 감각/의사소통 장애; 급성 중추신경계 질환(외상성 뇌손상, 뇌졸중, 간질지속상태); 24시간 이상 심부 진정/신경근차단 예상 또는 입실 시 섬망; 강제 격리; 예상 생존 24시간 미만 또는 완화의료.",
+        "interventionDetails": "Daytime flexible visitation: up to two family members per day with no predefined time limit; members could alternate; visits initiated at patient request or staff recommendation. For mechanically ventilated patients, bedside visitation permitted after extubation per infection control policy. Achieved median daily visiting time 5.0 h.",
+        "interventionDetails_ko": "주간 유연 면회: 하루 최대 2명 가족, 시간 제한 없음; 가족 교대 가능; 환자 요청 또는 의료진 권고로 면회 시작. 인공호흡기 환자는 감염관리 정책에 따라 발관 후 침상 면회 허용. 실제 중앙값 일일 면회 5.0시간 달성.",
+        "comparatorDetails": "Routine restricted visitation: one visit per day from 16:00–17:00, no other visits and no overnight bedside stay. Achieved median daily visiting time 0.9 h. All other postoperative ICU care identical (VAS-guided analgesia titrated to pain <4, monitoring, respiratory/hemodynamic management, routine non-pharmacologic delirium prevention).",
+        "comparatorDetails_ko": "통상 제한 면회: 하루 1회 16:00~17:00, 그 외 면회 및 야간 침상 체류 불가. 실제 중앙값 일일 면회 0.9시간. 그 외 수술 후 중환자실 치료는 동일(VAS 기반 통증 4점 미만 진통 조절, 모니터링, 호흡/혈역학 관리, 일상적 비약물적 섬망 예방).",
+        "followUp": "Daily delirium assessment (CAM-ICU and ICDSC) until ICU discharge, transfer out of ICU, or in-hospital death; resource-use and cost data collected prospectively until hospital discharge or death. Exact overall follow-up duration not specified beyond hospitalization; median hospital LOS 16 days in both groups.",
+        "followUp_ko": "중환자실 퇴실, 전실 또는 원내 사망까지 매일 섬망 평가(CAM-ICU, ICDSC); 자원 사용 및 비용 자료는 퇴원 또는 사망까지 전향적으로 수집. 입원 외 전체 추적 기간은 명시되지 않음; 양군 모두 입원 재원기간 중앙값 16일.",
+        "sourceBasis": "Open full text (PMC13354881), PubMed metadata, and Crossref metadata.",
+        "sourceBasis_ko": "공개 전문(PMC13354881), PubMed 메타데이터 및 Crossref 메타데이터."
+      },
+      "pico": {
+        "population": "Patients aged >=60 years admitted to an orthopedic ICU within 24 h after orthopedic surgery, without delirium at baseline (n=405 analyzed).",
+        "intervention": "Daytime flexible family visitation (up to 2 members, no fixed time limit; median 5.0 h/day).",
+        "comparison": "Routine restricted visitation (one visit daily 16:00–17:00; median 0.9 h/day).",
+        "outcome": "ICU delirium incidence (primary); sedative use, hospital-acquired infection, length of stay, hospitalization costs (secondary)."
+      },
+      "pico_ko": {
+        "population": "정형외과 수술 후 24시간 이내 정형외과 중환자실에 입원하고 기저 섬망이 없는 60세 이상 환자(분석 405명).",
+        "intervention": "주간 유연 가족 면회(최대 2명, 시간 제한 없음; 중앙값 5.0시간/일).",
+        "comparison": "통상 제한 면회(하루 1회 16:00~17:00; 중앙값 0.9시간/일).",
+        "outcome": "중환자실 섬망 발생률(일차); 진정제 사용, 병원 획득 감염, 재원기간, 입원 비용(이차)."
+      },
+      "detailedPico": {
+        "population": "405 older orthopedic ICU patients (200 flexible, 205 restricted); median age ~76.5–77.0 years, ~37–44% male, high comorbidity burden (hypertension, diabetes, pneumonia, coronary disease), ~20–25% on mechanical ventilation at admission. Hip fracture was the most common procedure (48.0% vs 58.5%), cervical spine surgery ~26–29%, other orthopedic procedures 26.0% vs 12.7%.",
+        "population_ko": "고령 정형외과 중환자실 환자 405명(유연 200명, 제한 205명); 중앙 연령 약 76.5~77.0세, 남성 약 37~44%, 높은 동반질환 부담(고혈압, 당뇨, 폐렴, 관상동맥질환), 입실 시 약 20~25% 인공호흡기 사용. 고관절 골절이 가장 흔한 수술(48.0% 대 58.5%), 경추 수술 약 26~29%, 기타 정형외과 수술 26.0% 대 12.7%.",
+        "countrySetting": "Single orthopedic ICU, Beijing Jishuitan Hospital Guizhou Hospital, China.",
+        "countrySetting_ko": "중국 베이징 지수이탄병원 구이저우병원 단일 정형외과 중환자실.",
+        "intervention": "Daytime flexible family visitation with up to two members and no predefined duration limit; achieved median 5.0 h/day of bedside family presence.",
+        "intervention_ko": "하루 최대 2명, 시간 제한 없는 주간 유연 가족 면회; 실제 침상 가족 동석 중앙값 5.0시간/일 달성.",
+        "comparator": "Routine restricted visitation limited to 16:00–17:00 once daily; achieved median 0.9 h/day (good separation, P<0.001).",
+        "comparator_ko": "하루 1회 16:00~17:00로 제한된 통상 면회; 실제 중앙값 0.9시간/일(양군 분리 양호, P<0.001).",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "ICU delirium incidence (>=1 positive CAM-ICU and/or ICDSC >=4)",
+            "outcome_ko": "중환자실 섬망 발생률(CAM-ICU 양성 1회 이상 및/또는 ICDSC 4점 이상)",
+            "result": "29.5% (59/200) with flexible vs 44.4% (91/205) with restricted",
+            "result_ko": "유연군 29.5%(59/200) 대 제한군 44.4%(91/205)",
+            "statistics": "P=0.002",
+            "interpretation": "Flexible visitation cut delirium by about 15 absolute percentage points—roughly a third relative reduction.",
+            "interpretation_ko": "유연 면회는 섬망을 약 15%p 절대 감소시켰으며, 상대적으로 약 3분의 1 감소에 해당한다.",
+            "statPrimer": "P<0.05 is conventionally statistically significant; here P=0.002 indicates the difference is unlikely due to chance, though this reflects statistical, not necessarily clinical, importance.",
+            "statPrimer_ko": "P<0.05는 통상 통계적으로 유의함을 의미하며, P=0.002는 이 차이가 우연에 의한 것일 가능성이 낮음을 나타낸다. 다만 이는 통계적 유의성이며 반드시 임상적 중요성을 의미하지는 않는다."
+          },
+          {
+            "label": "Subgroup (exploratory)",
+            "outcome": "Delirium in cervical spine surgery patients",
+            "outcome_ko": "경추 수술 환자의 섬망",
+            "result": "36.5% with flexible vs 57.6% with restricted",
+            "result_ko": "유연군 36.5% 대 제한군 57.6%",
+            "statistics": "P=0.026",
+            "interpretation": "Cervical spine patients showed the largest benefit, but this was a prespecified exploratory subgroup and is hypothesis-generating.",
+            "interpretation_ko": "경추 수술 환자에서 가장 큰 이익을 보였으나 이는 사전 지정 탐색적 하위군으로 가설 생성 수준이다.",
+            "statPrimer": "Subgroup P values are exploratory; with multiple subgroups a single P<0.05 should be interpreted cautiously and not as confirmatory.",
+            "statPrimer_ko": "하위군 P값은 탐색적이며, 여러 하위군을 검정할 때 단일 P<0.05는 확정적 근거가 아니라 신중히 해석해야 한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Sedative use (dexmedetomidine, estazolam, amobarbital, midazolam) during non-ventilated periods",
+            "outcome_ko": "비인공호흡 기간 진정제 사용(덱스메데토미딘, 에스타졸람, 아모바르비탈, 미다졸람)",
+            "result": "32.0% with flexible vs 44.9% with restricted",
+            "result_ko": "유연군 32.0% 대 제한군 44.9%",
+            "statistics": "P=0.008",
+            "interpretation": "Flexible visitation was associated with less sedative exposure, consistent with reduced agitation/anxiety.",
+            "interpretation_ko": "유연 면회는 진정제 노출 감소와 연관되어 초조/불안 감소와 일치한다.",
+            "statPrimer": "P=0.008 (<0.05) is statistically significant; percentages compare the proportion of patients receiving sedatives in each arm.",
+            "statPrimer_ko": "P=0.008(<0.05)은 통계적으로 유의하다; 백분율은 각 군에서 진정제를 받은 환자 비율을 비교한다."
+          },
+          {
+            "label": "Secondary (safety)",
+            "outcome": "Hospital-acquired infection",
+            "outcome_ko": "병원 획득 감염",
+            "result": "3.5% with flexible vs 3.9% with restricted",
+            "result_ko": "유연군 3.5% 대 제한군 3.9%",
+            "statistics": "P=0.916",
+            "interpretation": "No signal of increased infection with liberalized visitation, an important safety reassurance.",
+            "interpretation_ko": "면회 자유화로 감염 증가 신호가 없어 중요한 안전성 근거가 된다.",
+            "statPrimer": "P>=0.05 means no statistically significant difference was detected; note the study was powered for delirium, not infection, so it may be underpowered for rare safety events.",
+            "statPrimer_ko": "P>=0.05는 통계적으로 유의한 차이가 검출되지 않았음을 의미한다; 이 연구는 섬망을 위한 검정력으로 설계되어 드문 안전성 사건에는 검정력이 부족할 수 있다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Length of stay (hospital)",
+            "outcome_ko": "재원기간(입원)",
+            "result": "Median 16 days in both groups",
+            "result_ko": "양군 모두 중앙값 16일",
+            "statistics": "P=0.367",
+            "interpretation": "Visitation policy did not shorten or prolong hospitalization length.",
+            "interpretation_ko": "면회 정책은 입원기간을 단축하거나 연장하지 않았다.",
+            "statPrimer": "P>=0.05 indicates no statistically significant difference; medians are compared for non-normally distributed length-of-stay data.",
+            "statPrimer_ko": "P>=0.05는 통계적으로 유의한 차이가 없음을 나타낸다; 정규분포하지 않는 재원기간 자료는 중앙값으로 비교한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Total hospitalization cost",
+            "outcome_ko": "총 입원 비용",
+            "result": "Lower with flexible visitation (exact values not reported in accessible sources)",
+            "result_ko": "유연 면회에서 더 낮음(접근 가능한 자료에 정확한 값 없음)",
+            "statistics": "P<0.001",
+            "interpretation": "Costs were significantly lower with flexible visitation, likely reflecting less delirium and sedative use; absolute cost figures are not available in the accessible sources.",
+            "interpretation_ko": "유연 면회에서 비용이 유의하게 낮았으며 이는 섬망 및 진정제 사용 감소를 반영할 가능성이 있다; 절대 비용 수치는 접근 가능한 자료에 없다.",
+            "statPrimer": "P<0.001 is highly statistically significant, but without reported absolute cost values the magnitude and clinical/economic relevance cannot be judged.",
+            "statPrimer_ko": "P<0.001은 통계적으로 매우 유의하나, 절대 비용 값이 보고되지 않아 크기와 임상/경제적 의미는 판단할 수 없다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Flexible daytime family visitation reduced ICU delirium incidence (29.5% vs 44.4%, P=0.002) and sedative use (32.0% vs 44.9%, P=0.008) versus restricted visitation.",
+        "The largest benefit appeared in cervical spine surgery patients (36.5% vs 57.6%, P=0.026) in a prespecified exploratory subgroup.",
+        "Flexible visitation lowered total hospitalization costs (P<0.001) without increasing hospital-acquired infection (3.5% vs 3.9%, P=0.916) or changing length of stay (median 16 days, P=0.367)."
+      ],
+      "keyFindings_ko": [
+        "유연 주간 가족 면회는 제한 면회 대비 중환자실 섬망 발생률(29.5% 대 44.4%, P=0.002)과 진정제 사용(32.0% 대 44.9%, P=0.008)을 감소시켰다.",
+        "가장 큰 이익은 사전 지정 탐색적 하위군인 경추 수술 환자에서 나타났다(36.5% 대 57.6%, P=0.026).",
+        "유연 면회는 병원 획득 감염 증가(3.5% 대 3.9%, P=0.916)나 재원기간 변화(중앙값 16일, P=0.367) 없이 총 입원 비용을 감소시켰다(P<0.001)."
+      ],
+      "conclusion": "In this single-center RCT of older orthopedic ICU patients, daytime flexible family visitation was associated with lower delirium burden, reduced sedative exposure, and lower hospitalization costs, without increasing hospital-acquired infection or prolonging hospitalization, with the most pronounced benefit after cervical spine surgery.",
+      "conclusion_ko": "고령 정형외과 중환자실 환자를 대상으로 한 이 단일기관 무작위대조시험에서 주간 유연 가족 면회는 병원 획득 감염 증가나 입원 연장 없이 낮은 섬망 부담, 진정제 노출 감소, 입원 비용 감소와 연관되었으며, 경추 수술 후 가장 뚜렷한 이익을 보였다.",
+      "clinicalTakeaway": "Liberalizing daytime family visitation is a low-cost, non-pharmacologic intervention that appears to reduce delirium and sedative use in older post-surgical orthopedic ICU patients without added infection risk; it is a reasonable, safe policy to adopt while awaiting multicenter confirmation.",
+      "clinicalTakeaway_ko": "주간 가족 면회 자유화는 저비용의 비약물적 중재로, 감염 위험 증가 없이 고령 수술 후 정형외과 중환자실 환자의 섬망과 진정제 사용을 줄이는 것으로 보인다; 다기관 확인을 기다리는 동안 채택할 만한 합리적이고 안전한 정책이다.",
+      "limitations": "Single-center trial in one Chinese orthopedic ICU limits generalizability. The intervention cannot be blinded, risking performance/assessment bias despite standardized daily CAM-ICU/ICDSC screening. Physical separation of arms (~5 m within the same ICU) could allow contamination or differences in ambient conditions. Subgroup analyses (including cervical spine benefit) were prespecified but exploratory and underpowered. Safety surveillance focused only on hospital-acquired infection, with no systematic adverse-event capture. Complete-case analysis without imputation (3.6% excluded) assumes missingness completely at random. Absolute cost values, and effect estimates with confidence intervals, are not available in the accessible sources; a borderline baseline hypertension imbalance (55.8% vs 40.0%, P=0.054) and differing surgical-type distribution were present.",
+      "limitations_ko": "중국 단일 정형외과 중환자실에서 시행되어 일반화에 제한이 있다. 중재는 눈가림이 불가능하여 표준화된 매일 CAM-ICU/ICDSC 선별에도 불구하고 수행/평가 편향 위험이 있다. 같은 중환자실 내 약 5m 물리적 분리는 오염이나 환경 조건 차이를 유발할 수 있다. 하위군 분석(경추 이익 포함)은 사전 지정되었으나 탐색적이고 검정력이 부족하다. 안전성 감시는 병원 획득 감염에만 초점을 맞췄고 체계적 이상반응 수집은 없었다. 대체 없는 완전사례 분석(3.6% 제외)은 완전 무작위 결측을 가정한다. 절대 비용 값과 신뢰구간을 포함한 효과 추정치는 접근 가능한 자료에 없다; 기저 고혈압의 경계선 불균형(55.8% 대 40.0%, P=0.054)과 수술 유형 분포 차이가 존재했다.",
+      "edIcuApplicability": "Highly relevant to ICU and perioperative care. Delirium prevention bundles increasingly emphasize family engagement; this trial supports operationalizing flexible daytime visitation as part of non-pharmacologic delirium prevention in older post-surgical patients, and reinforces reassurance that liberalized visitation did not increase hospital-acquired infection. Direct ED applicability is limited, but the principle of early family presence to reduce delirium and sedation is transferable to ED boarding and observation of high-risk older patients. Local infection-control policies (e.g., visitation after extubation) and single-center Chinese context should be considered before broad adoption.",
+      "edIcuApplicability_ko": "중환자 및 수술 전후 진료에 매우 관련이 있다. 섬망 예방 번들은 점점 가족 참여를 강조하며, 이 연구는 고령 수술 후 환자의 비약물적 섬망 예방의 일부로 유연 주간 면회 시행을 지지하고, 면회 자유화가 병원 획득 감염을 증가시키지 않았다는 안심을 강화한다. 응급실 직접 적용성은 제한적이나, 섬망과 진정을 줄이기 위한 조기 가족 동석 원칙은 고위험 고령 환자의 응급실 체류 및 관찰에 적용 가능하다. 광범위한 채택 전 지역 감염관리 정책(예: 발관 후 면회)과 중국 단일기관 맥락을 고려해야 한다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 7,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Sample size: 420 randomized (210/arm), 405 analyzed complete-case (200 flexible, 205 restricted); a priori PASS calculation required 170/arm inflated to 400 for 15% dropout.",
+        "Effect estimates reported as raw percentages with P values only; no odds ratios, risk ratios, or confidence intervals available in accessible sources.",
+        "Absolute hospitalization cost values not reported in provided abstract or full-text excerpt (only P<0.001).",
+        "Trial registered as ChiCTR2600117290 (from PMC full text); not listed in the PubMed structured record.",
+        "Cervical spine subgroup benefit is prespecified but explicitly exploratory and hypothesis-generating.",
+        "Full-text excerpt truncated mid-sentence in the 'delirium by surgical type' results; secondary cost breakdown detail may be incomplete."
+      ],
+      "paper": {
+        "pmid": "42432993",
+        "title": "Flexible family visitation and postoperative delirium in an orthopedic intensive care unit: A randomized trial examining surgical-type heterogeneity and cost outcomes.",
+        "abstract": "ObjectiveTo evaluate whether flexible family visitation reduces postoperative delirium in older patients admitted to an orthopedic intensive care unit and to explore whether its effects vary by surgical type.MethodsThis single-center, parallel-group randomized controlled trial enrolled patients aged ≥60 years who were admitted to the orthopedic intensive care unit within 24 h following orthopedic surgery. Participants were randomized to daytime flexible family visitation or routine restricted visitation. Delirium during intensive care unit stay was assessed daily using the Confusion Assessment Method for the Intensive Care Unit and the Intensive Care Delirium Screening Checklist. Secondary outcomes included sedative use, hospital-acquired infection, length of stay, and hospitalization costs.ResultsAmong 405 participants, flexible visitation reduced delirium incidence (29.5% vs 44.4%, =0.002) and sedative use (32.0% vs 44.9%, =0.008). Patients undergoing cervical spine surgery showed the greatest benefit (36.5% vs 57.6%, =0.026). Flexible visitation did not increase hospital-acquired infections (3.5% vs 3.9%, =0.916) or length of stay (median, 16 days in both groups, =0.367) but lowered total hospitalization costs (<0.001). Flexible visitation may improve outcomes and reduce costs in high-risk orthopedic intensive care unit patients.ConclusionsFlexible family visitation was associated with lower delirium burden, reduced sedative exposure, and lower hospitalization costs in older orthopedic intensive care unit patients, without increasing infection or prolonging hospitalization. The benefit appeared most pronounced after cervical spine surgery.",
+        "authors": [
+          "Ke Z",
+          "He T",
+          "Luo P",
+          "Jiang W"
+        ],
+        "authorAffiliations": [
+          "Beijing Jishuitan Hospital Guizhou Hospital, China."
+        ],
+        "journal": "The Journal of international medical research",
+        "pubDate": "2026-Jul",
+        "publicationTypes": [
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Female",
+          "Intensive Care Units",
+          "Delirium",
+          "Male",
+          "Aged",
+          "Length of Stay",
+          "Postoperative Complications",
+          "Orthopedic Procedures",
+          "Visitors to Patients",
+          "Middle Aged",
+          "Family"
+        ],
+        "keywords": [
+          "Flexible family visitation",
+          "cervical spine surgery",
+          "hip fracture",
+          "older adults",
+          "orthopedic intensive care unit",
+          "postoperative delirium"
+        ],
+        "doi": "10.1177/03000605261452566",
+        "pmcid": "PMC13354881",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42432993/",
+        "collectedAt": "2026-07-12T21:17:09.153Z",
+        "screeningData": {
+          "score": 9,
+          "relevanceMatches": [
+            "intensive care"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 405,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: intensive care",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=405"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Postoperative delirium (POD) is a common acute cognitive disorder, particularly prevalent among older critically ill patients. It is characterized by fluctuations in consciousness, inattention, and cognitive decline, often accompanied by symptoms such as anxiety and hallucinations. POD significantly impairs short-term recovery and is associated with long-term cognitive deterioration, functional loss, and increased mortality rates. Older patients, owing to their baseline cognitive decline, increased comorbidities, and the stress of surgical trauma, are considered to be at high-risk for developing POD. The incidence of POD in these patients can exceed 30%, with intensive care unit (ICU) patients, particularly those undergoing orthopedic surgery or admitted because of severe illness, showing an even higher incidence rate, reaching ≥40%. The mechanisms through which different types of orthopedic surgeries contribute to POD may vary. For example, older patients undergoing spinal surgeries often experience prolonged bed rest, the use of immobilizing devices, and anxiety regarding potential neurological impairments, all of which may increase their anxiety and psychological burden and thereby raise the risk of developing delirium. In contrast, hip surgery patients are generally older and more frail, and the occurrence of POD is influenced by a combination of physiological and psychological factors, such as advanced age, cognitive impairment, and surgical trauma. Although both groups are considered high-risk for delirium, their recovery needs and postsurgical response mechanisms differ. Therefore, individualized interventions, particularly for delirium prevention and management, should be thoroughly addressed in future studies involving patients undergoing these distinct types of surgeries. Family visitation, a non-pharmacological intervention, has been increasingly recognized for its positive effects on improving patients’ psychological well-being, reducing anxiety, and promoting recovery. Traditional ICU visitation policies are often strict, limiting the duration and frequency of family visits primarily for infection control and ICU environment management. However, studies have demonstrated that these restrictive policies may exacerbate patients’ feelings of loneliness and elevate their anxiety levels, which, in turn, can contribute to an increased incidence of POD. In contrast, flexible visitation policies, which allow family members to stay at the bedside for longer periods, provide patients with more emotional support. Studies have shown that flexible visitation policies can effectively improve patients’ emotional states, reduce the incidence of delirium, and are associated with lower rates of delirium and sedative use in various ICU settings. The primary aim of this study was to investigate the effect of flexible visitation on the prevention of POD in older orthopedic ICU patients and to examine its heterogeneous effects across different types of orthopedic surgeries. We focused on assessing the incidence of delirium in patients undergoing spinal and hip surgeries under a flexible visitation policy, further exploring whether this strategy can reduce patient anxiety and sedative use, thereby decreasing the incidence of delirium. Through this study, we aimed to provide new evidence for developing more personalized visitation policies and alleviating the burden of POD, particularly for older orthopedic patients. Methods Study design and setting This study was a single-center, parallel-group, randomized controlled trial conducted in the orthopedic ICU of Beijing Jishuitan Hospital Guizhou Hospital. The trial protocol was approved by the institutional ethics committee of Guizhou Hospital of Beijing Jishuitan Hospital (21 July 2023, Approval Number: KY20230721-16) and was registered with the Chinese Clinical Trial Registry (ChiCTR2600117290). The study was conducted in accordance with the 1975 Declaration of Helsinki, as revised in 2024. Eligible patients were screened within 24 h after ICU admission following orthopedic surgery. Written informed consent was obtained from all participants or their legal representatives before enrollment. This study report complies with the Consolidated Standards of Reporting Trials (CONSORT) statement, and no patients or members of the public were directly involved in the design, conduct, or reporting of this study. Participants Patients were eligible for inclusion if they met all of the following criteria: (a) age ≥60 years; (b) admission to the orthopedic ICU within 24 h following orthopedic surgery; (c) no evidence of delirium both before surgery and at ICU admission, as indicated by negative Confusion Assessment Method for the Intensive Care Unit (CAM-ICU) assessments at both time points; (d) preserved ability to communicate sufficiently for delirium assessment at ICU admission; (e) an expected ICU stay of at least 24 h; and (f) availability of at least one fixed family member or primary caregiver willing to participate in bedside visitation according to the study protocol. To improve the transparency of the eligibility assessment, communication ability at ICU admission was operationally defined as the patient being awake enough to cooperate with bedside questioning and complete delirium screening by the study nurses. Patients with negative preoperative and ICU admission CAM-ICU results were considered eligible with respect to baseline delirium status. Exclusion criteria were as follows: (a) documented moderate-to-severe dementia, severe cognitive impairment, or severe psychiatric disorders requiring long-term psychotropic treatment; (b) severe hearing or visual impairment, aphasia, or other communication barriers that precluded reliable delirium assessment; (c) acute central nervous system disorders, such as traumatic brain injury, acute stroke, or status epilepticus, that could interfere with delirium evaluation; (d) anticipated continuous deep sedation or neuromuscular blockade for ≥24 h after surgery or delirium already present at ICU admission; (e) mandatory isolation due to highly transmissible infection or multidrug-resistant organisms that precluded family visitation; (f) expected survival of <24 h or a treatment plan focused on comfort care; and (g) any other condition considered by the investigators to make study participation inappropriate. For pre-specified subgroup analyses, surgical procedures were classified into three categories: cervical spine surgery, hip fracture surgery, and other orthopedic procedures. The category of other orthopedic procedures included pelvic fracture fixation, internal fixation for femoral shaft or tibial plateau fractures, primary or revision shoulder or knee arthroplasty, and upper-extremity fracture surgery. Randomization and allocation concealment Patients were randomized within 24 h of ICU admission after confirmation of eligibility and acquisition of written informed consent. Participants were assigned to either the flexible visitation group or the restricted visitation group in a 1:1 ratio. The random allocation sequence was generated using Research Randomizer and implemented through sequentially numbered, opaque, sealed envelopes. The envelopes were prepared and kept by an investigator who was not involved in patient recruitment, clinical management, or outcome assessment. Allocation was disclosed only after enrollment had been completed. Visitation protocol and peri-ICU management Before initiation of the study, the routine ICU visitation policy was one visit per day from 16:00 to 17:00, with no visits allowed at other times and no overnight bedside stay permitted. The restricted visitation group followed the same routine ICU visitation policy. After randomization, patients were managed in two physically separated ICU areas, one for flexible visitation and one for restricted visitation, with the areas separated by screens and located approximately 5 m apart. Patients who were not enrolled in the trial were admitted to single rooms outside the study areas. Apart from the visitation policy, all participants received the same standard postoperative ICU care according to institutional protocols. Analgesia was guided by the visual analog scale (VAS), and analgesics were titrated to maintain a pain score <4 in both groups. Monitoring, respiratory support, hemodynamic management, and routine non-pharmacological delirium prevention measures were otherwise identical between groups. In the flexible visitation group, up to two family members were allowed to visit each day without a predefined limit on the total duration of visitation, and family members could alternate during the day. Visits could be initiated at the patient’s request or on the recommendation of the clinical staff. For patients who required invasive mechanical ventilation, bedside visitation was permitted after extubation in accordance with local infection control policy. In the restricted visitation group, family members were allowed to visit only once daily from 16:00 to 17:00, and visits at other times or overnight bedside presence were not permitted. Outcome assessment The primary outcome was the occurrence of delirium during the ICU stay. Delirium was assessed once daily using both the CAM-ICU and the Intensive Care Delirium Screening Checklist (ICDSC). Delirium was defined as at least one positive CAM-ICU assessment and/or an ICDSC score ≥4 during ICU admission. Assessments continued until ICU discharge, transfer out of the ICU, or in-hospital death. Secondary outcomes included hospital-acquired infection, ICU length of stay, total hospital length of stay, total hospitalization cost, ICU-related cost, and sedative use during periods without invasive mechanical ventilation. Sedatives of interest included dexmedetomidine, estazolam, amobarbital, and midazolam. Hospital-acquired infections were defined as new infections occurring 48 h or more following admission and diagnosed according to institutional criteria. Safety evaluation in this study focused primarily on hospital-acquired infections because of their potential relevance to the visitation policy. No separate structured surveillance system or dedicated assessment scale was used to actively capture all intervention-related adverse events. Therefore, beyond the pre-specified infection outcome, the study did not include a systematic evaluation of other potential adverse events related to the visitation strategy, and any such events would only have been identifiable if documented during routine clinical care. Clinical and resource-use data were collected prospectively from bedside records and the electronic medical record until hospital discharge or death. Statistical analysis Sample size estimation was performed a priori using Power Analysis and Sample Size (PASS) software. The required sample size was calculated based on the expected difference in POD incidence between the two groups. Assuming incidences of 45% in the restricted visitation group and 30% in the flexible visitation group, with a two-sided α of 0.05 and 80% power, at least 170 patients were required in each group. To account for an anticipated dropout rate of 15%, the planned total sample size was increased to 400 patients. Statistical analyses were performed using Statistical Package for the Social Sciences (SPSS) version 25.0 (IBM Corp.; Armonk, NY, USA). Continuous variables were first evaluated for normality. Normally distributed variables were presented as mean ± SD and compared using the independent-samples t test. Non-normally distributed variables were summarized as median and interquartile range (IQR) and compared using the Mann–Whitney U test. Categorical variables were presented as counts and percentages and compared using the Pearson chi-squared test or Fisher’s exact test, as appropriate. All tests were two-sided, and a -value <0.05 was considered statistically significant. Pre-specified subgroup analyses were conducted according to surgical category, including cervical spine surgery, hip fracture surgery, and other orthopedic procedures; these analyses were considered exploratory. After randomization, 10 patients in the flexible visitation group did not complete follow-up because of unplanned discharge or transfer (n = 6) or marked clinical deterioration (n = 4). In the restricted visitation group, five patients were excluded from the final analysis because of incomplete data. Overall, 15 of 420 randomized patients (3.6%) were not included in the final analysis. Missing outcome data were not imputed. Because the missingness was assumed to be completely at random, the primary analysis was conducted using a complete-case approach. Results Baseline characteristics of the older orthopedic ICU cohort A total of 420 patients were randomized, of whom 405 with available outcome data were included in the final analysis, including 200 in the flexible visitation group and 205 in the restricted visitation group. Overall, 15 randomized patients (3.6%) were not included in the final analysis. In the flexible visitation group, 10 of 210 patients (4.8%) did not complete follow-up because of unplanned discharge or transfer (n = 6) or significant clinical deterioration (n = 4). In the restricted visitation group, 5 of 210 patients (2.4%) were excluded from the final analysis because of incomplete data (). As shown in , the two groups were broadly comparable at baseline. The median age was 76.5 years (69–84) in the flexible visitation group and 77.0 years (70–84) in the restricted visitation group, and the proportions of male patients were 37.0% and 43.9%, respectively (>0.05). Disease severity and pain at ICU admission were similar between groups, with comparable acute physiology and chronic health evaluation (APACHE) II scores and VAS pain scores. The burden of comorbidities reflected a high-risk population but did not differ significantly between groups. The rates of diabetes (17.5% vs 15.1%), pneumonia (37.5% vs 35.1%), and coronary heart disease (23.5% vs 20.0%) were similar, and approximately one-quarter of patients in each group were receiving mechanical ventilation at ICU admission (24.5% vs 20.5%). There was a borderline higher prevalence of hypertension in the flexible visitation group (55.8% vs 40.0%, =0.054). With respect to surgical type, hip fracture surgery was the most common procedure, particularly in the restricted visitation group (48.0% vs 58.5%), whereas cervical spine surgery accounted for roughly one-quarter of cases in both groups (26.0% vs 28.8%). Other orthopedic procedures were more frequent in the flexible visitation group (26.0% vs 12.7%). Overall, these findings indicate that the randomized groups were generally well balanced in terms of key demographic and clinical characteristics, providing an appropriate basis for evaluating the effects of flexible visitation on delirium and healthcare costs in this older orthopedic ICU population. Effect of flexible visitation on delirium and sedative use by surgical type Implementation of the visitation policy resulted in a clear difference in family presence at the bedside (). Median daily visiting time was 5.0 h in the flexible visitation group compared with 0.9 h in the restricted group (<0.001), confirming good separation of the two strategies. In the overall cohort, flexible visitation was associated with a lower delirium burden. Delirium occurred in 59 of 200 patients (29.5%) in the flexible visitation group and in 91 of 205 patients (44.4%) in the restricted group (=0.002). Consistently, the median ICDSC score was lower in the flexible group than in the restricted group (=0.011). The proportion of patients with at least one positive CAM-ICU assessment was numerically lower with flexible visitation (32.0% vs 36.1%), although this difference did not reach statistical significance (=0.081). Subgroup analyses by surgical type suggested heterogeneous treatmen",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42432993\nDOI: 10.1177/03000605261452566\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Beijing Jishuitan Hospital Guizhou Hospital, China.\n\nPublic bibliographic metadata from Crossref:\nTitle: Flexible family visitation and postoperative delirium in an orthopedic intensive care unit: A randomized trial examining surgical-type heterogeneity and cost outcomes\nType: journal-article\nPublished: 2026-7\nPublisher: SAGE Publications\nFunders: Wu Jieping Medical Foundation, Advantageous Discipline Construction Project of Guizhou Provincial Health Commission in 2025, Beijing Jishuitan Hospital Guizhou Hospital Youth Innovation Fund\nCrossref abstract/snippet: Objective To evaluate whether flexible family visitation reduces postoperative delirium in older patients admitted to an orthopedic intensive care unit and to explore whether its effects vary by surgical type. Methods This single-center, parallel-group randomized controlled trial enrolled patients aged ≥60 years who were admitted to the orthopedic intensive care unit within 24 h following orthopedic surgery. Participants were randomized to daytime flexible family visitation or routine restricted visitation. Delirium during intensive care unit stay was assessed daily using the Confusion Assessment Method for the Intensive Care Unit and the Intensive Care Delirium Screening Checklist. Secondary outcomes included sedative use, hospital-acquired infection, length of stay, and hospitalization costs. Results Among 405 participants, flexible visitation reduced delirium incidence (29.5% vs 44.4%, P = 0.002) and sedative use (32.0% vs 44.9%, P = 0.008). Patients undergoing cervical spine surgery showed the greatest benefit (36.5% vs 57.6%, P = 0.026). Flexible visitation did not increase hospital-acquired infections (3.5% vs 3.9%, P = 0.916) or length of stay (median, 16 days in both groups, P = 0.367) but lowered total hospitalization costs ( P &lt; 0.001). Flexible visitation may improve outcomes and reduce costs in high-risk orthopedic intensive care unit patients. Conclusions Flexible family visitation was associated with lower delirium burden, reduced sedative exposure, and lower hospitalization costs in older orthopedic intensive care unit patients, without increasing infection or prolonging hospitalization. The benefit appeared most pronounced after cervical spine surgery.",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13354881"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13354881",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13354881"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-12T21:18:01.442Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42432993",
+          "rank": 1,
+          "clinicalPriorityScore": 6.5,
+          "rationale_ko": "고령 정형외과 ICU 환자를 대상으로 한 단일기관 무작위대조시험(N=405)으로, 주간 유연 가족 면회가 수술 후 섬망 발생률(29.5% vs 44.4%, p=0.002)과 진정제 사용(32.0% vs 44.9%)을 유의하게 감소시켰고 병원감염이나 재원기간 증가는 없었다. 섬망은 중환자 예후에 직접적 영향을 주는 중요한 문제이며, 약물이 아닌 저비용·저위험 비약물적 중재라는 점에서 즉시 임상 적용 가능성이 높아 뉴스레터 우선순위로 적합하다. 후보군 대부분이 MIMIC-IV 기반 관찰연구, QI, 프로토콜, 예후 바이오마커 연구로 실제 진료 변경 근거가 약한 데 비해, 본 연구는 긍정적 결과를 보인 실행 가능한 RCT라는 강점이 있다. 다만 단일기관·정형외과 ICU에 국한되어 일반화에는 한계가 있다."
+        }
+      ],
+      "notes_ko": [
+        "후보 목록의 다수는 MIMIC-IV 등 데이터베이스 기반 관찰연구(예: PMID 42432931, 42416900, 42432930)로, 예후 바이오마커 탐색 수준이라 직접적 진료 변경 근거가 약해 우선순위를 낮췄다.",
+        "PMID 42427323(외부 횡격막 페이싱과 AECOPD 이탈)은 긍정적 RCT지만 특수 장비 의존적이고 중국 단일기관·비영어권 저널로 일반화가 제한적이라 차순위로 평가했다.",
+        "다수 항목이 연구 프로토콜(PMID 42425561, 42431709, 42431662, 42392635, 42429091)이거나 QI(PMID 42392679, 42418363)로, 결과 데이터가 없어 뉴스레터 가치가 낮다.",
+        "PMID 42392606(영아 빈호흡 진단정확도 메타분석)은 근거 수준이 있으나 성인 EM/CCM 대상에는 관련성이 낮다.",
+        "최종 선정된 PMID 42432993은 긍정적 결과를 가진 무작위대조시험으로 섬망 예방이라는 고관심·실행 가능 주제를 다뤄 임상 유용성이 가장 높다고 판단했다."
+      ]
+    }
+  },
+  "errors": []
+}
