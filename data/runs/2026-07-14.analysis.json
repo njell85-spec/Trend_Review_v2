@@ -1,0 +1,252 @@
+{
+  "analyses": [
+    {
+      "pmid": "42427323",
+      "title": "[Effect of external diaphragmatic pacing on diaphragmatic function and weaning success rate in patients with acute exacerbations of chronic obstructive pulmonary disease undergoing invasive mechanical ventilation].",
+      "oneLineSummary": "In ventilated AECOPD patients, adding external diaphragmatic pacing to standard care raised weaning success to 93% vs 61% and lowered mortality.",
+      "oneLineSummary_ko": "침습적 기계환기를 받는 AECOPD 환자에서 표준치료에 체외 횡격막 페이싱을 추가하니 이탈 성공률이 61%에서 93%로 상승하고 사망률이 감소했다.",
+      "whyItMatters": "Diaphragmatic dysfunction is a major driver of weaning failure in COPD, and this single-center RCT suggests a noninvasive, drug-free adjunct could meaningfully improve liberation from mechanical ventilation and survival.",
+      "whyItMatters_ko": "횡격막 기능장애는 COPD에서 이탈 실패의 주요 원인으로, 이 단일기관 RCT는 비침습적이고 약물이 필요 없는 보조요법이 기계환기 이탈과 생존을 의미 있게 개선할 수 있음을 시사한다.",
+      "clinicalQuestion": "In AECOPD patients on invasive mechanical ventilation, does adding external diaphragmatic pacing to standard therapy improve diaphragmatic function and weaning success compared with standard therapy alone?",
+      "clinicalQuestion_ko": "침습적 기계환기를 받는 AECOPD 환자에서 표준치료에 체외 횡격막 페이싱을 추가하면 표준치료 단독에 비해 횡격막 기능과 이탈 성공률이 개선되는가?",
+      "studyDetails": {
+        "design": "Prospective, single-center randomized controlled trial using block randomization into two parallel arms.",
+        "design_ko": "블록 무작위배정을 이용해 두 개의 평행군으로 나눈 전향적 단일기관 무작위 대조시험.",
+        "setting": "Department of Critical Care Medicine, Hengshui People's Hospital, Hengshui, China, from November 1, 2022 to January 31, 2025.",
+        "setting_ko": "중국 헝수이 인민병원 중환자의학과, 2022년 11월 1일부터 2025년 1월 31일까지.",
+        "sampleSize": "174 AECOPD patients on invasive mechanical ventilation were enrolled and randomized, 87 per group (control vs EDP). The abstract reports outcomes on all 87 per arm; separate ITT, per-protocol, and safety populations are not distinguished in the accessible sources.",
+        "sampleSize_ko": "침습적 기계환기를 받는 AECOPD 환자 174명이 등록·무작위배정되어 각 군 87명(대조군 vs EDP군)이었다. 초록은 각 군 87명 전체의 결과를 보고하며, 접근 가능한 자료에서 ITT·프로토콜순응·안전성 집단은 별도로 구분되지 않는다.",
+        "eligibility": "Patients with acute exacerbations of COPD (AECOPD) requiring invasive mechanical ventilation admitted to the ICU. MeSH indexing indicates adults spanning middle-aged and aged, both male and female. Detailed inclusion/exclusion criteria are not available in the accessible sources.",
+        "eligibility_ko": "침습적 기계환기가 필요한 COPD 급성 악화(AECOPD)로 중환자실에 입원한 환자. MeSH 색인상 중년 및 고령의 남녀 성인을 포함한다. 구체적 포함/배제 기준은 접근 가능한 자료에 없다.",
+        "interventionDetails": "Conventional therapy plus external diaphragmatic pacing (EDP), a noninvasive technique that electrically stimulates the phrenic nerve/diaphragm via surface electrodes. Exact stimulation parameters, session frequency, duration per session, and total treatment duration are not available in the accessible sources.",
+        "interventionDetails_ko": "표준치료에 더해 체외 횡격막 페이싱(EDP)을 시행했으며, 이는 표면 전극을 통해 횡격막 신경/횡격막을 전기적으로 자극하는 비침습적 기법이다. 정확한 자극 파라미터, 세션 빈도, 세션당 시간, 총 치료 기간은 접근 가능한 자료에 없다.",
+        "comparatorDetails": "Conventional (standard) therapy alone for ventilated AECOPD without external diaphragmatic pacing. Specific components of conventional therapy are not detailed in the accessible sources.",
+        "comparatorDetails_ko": "체외 횡격막 페이싱 없이 기계환기 AECOPD에 대한 표준치료 단독. 표준치료의 구체적 구성요소는 접근 가능한 자료에 기술되어 있지 않다.",
+        "followUp": "Outcomes tracked through the ICU stay and included 28-day post-ICU discharge mortality and overall mortality; exact total follow-up window beyond this is not specified in the accessible sources.",
+        "followUp_ko": "결과는 중환자실 재원 기간 동안 추적되었고 중환자실 퇴실 후 28일 사망률 및 전체 사망률을 포함했으며, 이를 넘어서는 정확한 총 추적 기간은 접근 가능한 자료에 명시되어 있지 않다.",
+        "sourceBasis": "Based on the English abstract and PubMed metadata (affiliations, MeSH, publication types). No PMCID or trial registry ID was available for open full-text or registry enrichment.",
+        "sourceBasis_ko": "영문 초록과 PubMed 메타데이터(소속, MeSH, 출판 유형)에 근거함. 전문 또는 등록 정보 보강을 위한 PMCID나 임상시험 등록번호는 없었다."
+      },
+      "pico": {
+        "population": "Adults with AECOPD requiring invasive mechanical ventilation in the ICU",
+        "intervention": "External diaphragmatic pacing (EDP) added to conventional therapy",
+        "comparison": "Conventional therapy alone",
+        "outcome": "Weaning success rate (primary); diaphragmatic function, respiratory/ABG parameters, ventilation duration, ICU stay, mortality (secondary)"
+      },
+      "pico_ko": {
+        "population": "중환자실에서 침습적 기계환기가 필요한 AECOPD 성인",
+        "intervention": "표준치료에 추가한 체외 횡격막 페이싱(EDP)",
+        "comparison": "표준치료 단독",
+        "outcome": "이탈 성공률(일차); 횡격막 기능, 호흡/동맥혈가스 지표, 환기 기간, 중환자실 재원, 사망률(이차)"
+      },
+      "detailedPico": {
+        "population": "174 ICU patients with AECOPD on invasive mechanical ventilation; baseline gender, age, BMI, COPD duration, comorbidities, PaO2/FiO2, APACHE II, and SOFA were balanced between groups.",
+        "population_ko": "침습적 기계환기를 받는 AECOPD 중환자 174명; 기저 성별, 연령, BMI, COPD 유병기간, 동반질환, PaO2/FiO2, APACHE II, SOFA는 두 군 간 균형을 이루었다.",
+        "countrySetting": "Single center in China (Hengshui People's Hospital, Critical Care Medicine), 2022-2025.",
+        "countrySetting_ko": "중국 단일기관(헝수이 인민병원 중환자의학과), 2022-2025년.",
+        "intervention": "Conventional ICU therapy for ventilated AECOPD plus external diaphragmatic pacing (EDP), a noninvasive electrical stimulation applied to the diaphragm/phrenic nerve. Dosing parameters and treatment schedule are not available in the accessible sources.",
+        "intervention_ko": "기계환기 AECOPD에 대한 표준 중환자실 치료에 더해 횡격막/횡격막신경에 적용하는 비침습적 전기자극인 체외 횡격막 페이싱(EDP). 자극 파라미터와 치료 일정은 접근 가능한 자료에 없다.",
+        "comparator": "Conventional ICU therapy alone without EDP.",
+        "comparator_ko": "EDP 없이 표준 중환자실 치료 단독.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Weaning success rate",
+            "outcome_ko": "이탈 성공률",
+            "result": "EDP 93% (81/87) vs control 61% (53/87), P<0.05",
+            "result_ko": "EDP군 93%(81/87) vs 대조군 61%(53/87), P<0.05",
+            "statistics": "93% vs 61%, P<0.05",
+            "interpretation": "Nearly all EDP patients were successfully weaned versus about six in ten controls, a large absolute improvement of roughly 32 percentage points.",
+            "interpretation_ko": "EDP군은 거의 모든 환자가 성공적으로 이탈한 반면 대조군은 약 10명 중 6명으로, 약 32%포인트의 큰 절대 개선을 보였다.",
+            "statPrimer": "For proportions, a higher percentage with the intervention and P<0.05 indicates a statistically significant benefit; the absolute difference here (~32%) reflects clinical magnitude.",
+            "statPrimer_ko": "비율에서 중재군의 백분율이 더 높고 P<0.05이면 통계적으로 유의한 이득을 의미하며, 여기서의 절대 차이(약 32%)는 임상적 크기를 반영한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Diaphragmatic function (diaphragmatic excursion DE and thickening fraction DTF) after treatment",
+            "outcome_ko": "치료 후 횡격막 기능(횡격막 이동거리 DE 및 두께변화율 DTF)",
+            "result": "DE (mm) 3.49±0.56 vs 2.82±0.47; DTF 35.72±4.59% vs 29.61±4.81%, all P<0.05",
+            "result_ko": "DE(mm) 3.49±0.56 vs 2.82±0.47; DTF 35.72±4.59% vs 29.61±4.81%, 모두 P<0.05",
+            "statistics": "DE 3.49 vs 2.82; DTF 35.72% vs 29.61%, P<0.05",
+            "interpretation": "EDP produced greater diaphragmatic excursion and thickening, indicating better restored diaphragm contractile function than standard care.",
+            "interpretation_ko": "EDP는 더 큰 횡격막 이동거리와 두께 변화를 만들어 표준치료보다 횡격막 수축 기능이 더 잘 회복되었음을 시사한다.",
+            "statPrimer": "These are mean ± SD values; higher DE and DTF mean better diaphragm function, and P<0.05 indicates the between-group difference is statistically significant.",
+            "statPrimer_ko": "이들은 평균 ± 표준편차 값으로, DE와 DTF가 높을수록 횡격막 기능이 좋으며 P<0.05는 군 간 차이가 통계적으로 유의함을 의미한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Respiratory mechanics and gas exchange after treatment (peak/plateau pressure, airway resistance, respiratory rate, PaCO2, PaO2, PaO2/FiO2)",
+            "outcome_ko": "치료 후 호흡역학 및 가스교환(최고/평탄 기도압, 기도저항, 호흡수, PaCO2, PaO2, PaO2/FiO2)",
+            "result": "Peak 24.86±7.12 vs 31.03±8.05; plateau 18.05±4.97 vs 23.08±6.21; resistance 28.96±4.85 vs 34.12±5.61; RR 20.13±2.46 vs 25.52±2.78; PaCO2 45.36±7.54 vs 49.81±8.05; PaO2 86.07±7.82 vs 82.18±8.14; PaO2/FiO2 253.57±51.96 vs 201.83±45.37, all P<0.05",
+            "result_ko": "최고압 24.86±7.12 vs 31.03±8.05; 평탄압 18.05±4.97 vs 23.08±6.21; 저항 28.96±4.85 vs 34.12±5.61; 호흡수 20.13±2.46 vs 25.52±2.78; PaCO2 45.36±7.54 vs 49.81±8.05; PaO2 86.07±7.82 vs 82.18±8.14; PaO2/FiO2 253.57±51.96 vs 201.83±45.37, 모두 P<0.05",
+            "statistics": "All comparisons P<0.05 favoring EDP",
+            "interpretation": "EDP lowered airway pressures, resistance, respiratory rate and PaCO2 while improving oxygenation, consistent with reduced respiratory load and better lung mechanics.",
+            "interpretation_ko": "EDP는 기도압, 저항, 호흡수, PaCO2를 낮추고 산소화를 개선하여 호흡 부하 감소와 폐역학 향상과 일치한다.",
+            "statPrimer": "Mean ± SD comparisons; direction of benefit depends on the parameter (lower pressures/resistance/RR/PaCO2 are better, higher PaO2/FiO2 is better), and P<0.05 marks statistical significance.",
+            "statPrimer_ko": "평균 ± 표준편차 비교로, 이득 방향은 지표에 따라 다르며(압력/저항/호흡수/PaCO2는 낮을수록, PaO2/FiO2는 높을수록 좋음), P<0.05는 통계적 유의성을 나타낸다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Duration of mechanical ventilation and ICU length of stay",
+            "outcome_ko": "기계환기 기간 및 중환자실 재원기간",
+            "result": "MV 5.84±1.72 vs 10.53±2.18 days; ICU LOS 9.74±2.15 vs 14.38±3.06 days, P<0.05",
+            "result_ko": "기계환기 5.84±1.72 vs 10.53±2.18일; 중환자실 재원 9.74±2.15 vs 14.38±3.06일, P<0.05",
+            "statistics": "MV ~4.7 days shorter; ICU LOS ~4.6 days shorter, P<0.05",
+            "interpretation": "EDP shortened ventilation by roughly 4.7 days and ICU stay by about 4.6 days, a substantial resource and patient benefit.",
+            "interpretation_ko": "EDP는 환기 기간을 약 4.7일, 중환자실 재원을 약 4.6일 단축시켜 상당한 자원 및 환자 이득을 보였다.",
+            "statPrimer": "Mean ± SD in days; a lower value with the intervention and P<0.05 indicates a statistically significant reduction.",
+            "statPrimer_ko": "일수의 평균 ± 표준편차로, 중재군에서 값이 더 낮고 P<0.05이면 통계적으로 유의한 감소를 의미한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Mortality (28-day post-ICU discharge and overall) and reintubation/ICU mortality",
+            "outcome_ko": "사망률(중환자실 퇴실 후 28일 및 전체) 및 재삽관/중환자실 사망률",
+            "result": "28-day post-discharge mortality 7% (6/87) vs 20% (17/87); overall mortality 9% (8/87) vs 29% (25/87), P<0.05; no significant difference in reintubation rate or ICU mortality",
+            "result_ko": "퇴실 후 28일 사망률 7%(6/87) vs 20%(17/87); 전체 사망률 9%(8/87) vs 29%(25/87), P<0.05; 재삽관율 및 중환자실 사망률은 유의한 차이 없음",
+            "statistics": "28-day 7% vs 20%; overall 9% vs 29%, P<0.05; reintubation and ICU mortality NS",
+            "interpretation": "EDP was associated with lower post-discharge and overall mortality, though reintubation and in-ICU mortality did not differ significantly, suggesting benefit may accrue after ICU discharge.",
+            "interpretation_ko": "EDP는 퇴실 후 및 전체 사망률 감소와 연관되었으나 재삽관과 중환자실 내 사망률은 유의한 차이가 없어, 이득이 주로 중환자실 퇴실 후 나타날 수 있음을 시사한다.",
+            "statPrimer": "For proportions, lower percentage with the intervention and P<0.05 means statistically significant; 'NS' (not significant) means the difference could be due to chance.",
+            "statPrimer_ko": "비율에서 중재군의 백분율이 더 낮고 P<0.05이면 통계적으로 유의하며, 'NS'(유의하지 않음)는 차이가 우연에 의한 것일 수 있음을 의미한다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Weaning success rate was markedly higher with EDP than standard care (93% vs 61%, P<0.05).",
+        "EDP improved diaphragmatic function (DE and DTF), respiratory mechanics, and gas exchange, and shortened mechanical ventilation (5.84 vs 10.53 days) and ICU stay (9.74 vs 14.38 days).",
+        "28-day post-ICU-discharge mortality (7% vs 20%) and overall mortality (9% vs 29%) were lower with EDP, but reintubation rate and ICU mortality did not differ significantly."
+      ],
+      "keyFindings_ko": [
+        "이탈 성공률이 EDP군에서 표준치료보다 현저히 높았다(93% vs 61%, P<0.05).",
+        "EDP는 횡격막 기능(DE, DTF), 호흡역학, 가스교환을 개선하고 기계환기 기간(5.84 vs 10.53일)과 중환자실 재원(9.74 vs 14.38일)을 단축시켰다.",
+        "중환자실 퇴실 후 28일 사망률(7% vs 20%)과 전체 사망률(9% vs 29%)이 EDP군에서 낮았으나, 재삽관율과 중환자실 사망률은 유의한 차이가 없었다."
+      ],
+      "conclusion": "In this single-center RCT of 174 ventilated AECOPD patients, adding external diaphragmatic pacing to conventional therapy significantly improved diaphragmatic function, reduced airway pressures and respiratory rate, shortened ventilation duration and ICU stay, increased weaning success, and lowered post-discharge and overall mortality.",
+      "conclusion_ko": "기계환기를 받는 AECOPD 환자 174명을 대상으로 한 이 단일기관 RCT에서 표준치료에 체외 횡격막 페이싱을 추가하니 횡격막 기능이 유의하게 개선되고 기도압과 호흡수가 감소했으며 환기 기간과 중환자실 재원이 단축되고 이탈 성공률이 증가하며 퇴실 후 및 전체 사망률이 낮아졌다.",
+      "clinicalTakeaway": "External diaphragmatic pacing is a promising noninvasive adjunct to accelerate weaning in ventilated AECOPD, but the large single-center effect sizes need multicenter confirmation before routine adoption.",
+      "clinicalTakeaway_ko": "체외 횡격막 페이싱은 기계환기 AECOPD의 이탈을 촉진하는 유망한 비침습적 보조요법이지만, 단일기관의 큰 효과 크기는 일상 도입 전에 다기관 검증이 필요하다.",
+      "limitations": "Single-center trial from one Chinese hospital limits generalizability. The unusually large effect sizes (e.g., 32-point weaning difference, halved mortality) raise concern for overestimation. No trial registry ID or PMCID was available, blinding and allocation concealment are not described in the accessible sources, and EDP stimulation parameters, treatment schedule, weaning protocol, and detailed inclusion/exclusion criteria are not available. Whether outcome assessors were blinded is unclear, and the mortality benefit despite no difference in ICU mortality warrants cautious interpretation.",
+      "limitations_ko": "중국 단일기관 시험으로 일반화에 제한이 있다. 비정상적으로 큰 효과 크기(예: 32%포인트 이탈 차이, 절반의 사망률)는 과대추정 우려를 낳는다. 임상시험 등록번호나 PMCID가 없고 눈가림 및 배정은폐가 접근 가능한 자료에 기술되어 있지 않으며, EDP 자극 파라미터, 치료 일정, 이탈 프로토콜, 상세 포함/배제 기준도 확인할 수 없다. 결과 평가자의 눈가림 여부가 불분명하고, 중환자실 사망률 차이가 없음에도 사망률 이득이 나타난 점은 신중한 해석이 필요하다.",
+      "edIcuApplicability": "Directly relevant to ICU management of ventilated AECOPD, where diaphragm dysfunction and weaning failure are common. EDP is noninvasive and potentially deployable at the bedside, and diaphragm ultrasound (DE/DTF) is an accessible monitoring tool. However, given the single-center design, undescribed protocol, and implausibly large mortality benefit, findings should be viewed as hypothesis-generating rather than practice-changing until validated in larger multicenter trials.",
+      "edIcuApplicability_ko": "횡격막 기능장애와 이탈 실패가 흔한 기계환기 AECOPD의 중환자실 관리에 직접적으로 관련된다. EDP는 비침습적이며 침상에서 적용 가능성이 있고, 횡격막 초음파(DE/DTF)는 접근성 좋은 모니터링 도구다. 다만 단일기관 설계, 기술되지 않은 프로토콜, 비현실적으로 큰 사망률 이득을 고려할 때, 대규모 다기관 시험으로 검증되기 전까지는 진료 변경보다는 가설 생성 근거로 보아야 한다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 5,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "Analysis based solely on English abstract plus PubMed metadata; no PMCID or trial registry ID available for full-text or registry enrichment.",
+        "Effect sizes are unusually large (weaning 93% vs 61%; overall mortality 9% vs 29%), suggesting possible bias or single-center overestimation; manual review recommended.",
+        "Blinding, allocation concealment, EDP dosing parameters, weaning protocol, and detailed eligibility criteria are not available in the accessible sources.",
+        "Inconsistency noted: overall and 28-day post-discharge mortality reduced but ICU mortality and reintubation not significantly different."
+      ],
+      "paper": {
+        "pmid": "42427323",
+        "title": "[Effect of external diaphragmatic pacing on diaphragmatic function and weaning success rate in patients with acute exacerbations of chronic obstructive pulmonary disease undergoing invasive mechanical ventilation].",
+        "abstract": "OBJECTIVE: To investigate whether the addition of external diaphragmatic pacing (EDP) to standard therapy can effectively improve diaphragmatic dysfunction in patients with acute exacerbations of chronic obstructive pulmonary disease (AECOPD) requiring invasive mechanical ventilation, and increase the likelihood of successful weaning.\nMETHODS: A prospective randomized controlled trial (RCT) was conducted. A total of 174 patients with AECOPD undergoing invasive mechanical ventilation who were admitted to the Department of Critical Care Medicine of Hengshui People's Hospital from November 1, 2022 to January 31, 2025 were enrolled. Patients were divided into a control group and an EDP group using a block randomization method, with 87 patients in each group. The control group received conventional therapy; the EDP group received conventional treatment combined with EDP. Baseline characteristics, primary outcome, and secondary outcomes were collected and compared between the two groups. The primary outcome was weaning success rate. Secondary outcomes included respiratory function parameters (peak airway pressure, plateau pressure, airway resistance, and respiratory rate), heart rate, arterial blood gas results [partial pressure of arterial carbon dioxide (PaCO), partial pressure of arterial oxygen (PaO), and oxygenation index (PaO/FiO)], diaphragmatic function [diaphragmatic excursion (DE) and diaphragmatic thickening fraction (DTF)], and prognostic indicators [duration of mechanical ventilation, intensive care unit (ICU) length of stay, reintubation rate, ICU mortality, 28-day post-ICU discharge mortality, and overall mortality].\nRESULTS: There were no statistically significant differences in baseline characteristics such as gender, age, body mass index (BMI), COPD duration, comorbidities, PaO/FiO, Acute Physiology and Chronic Health Evaluation II(APACHE II), and Sequential Organ Failure Assessment (SOFA) between the two groups. In terms of the primary outcome, the weaning success rate after treatment in the EDP group was higher than that in the control group [93% (81/87) vs. 61% (53/87), P<0.05]. Regarding secondary outcomes, there were no statistically significant differences in airway peak pressure, plateau pressure, airway resistance, respiratory rate, heart rate, PaCO, PaO, PaO/FiO, DE, and DTF between the two groups before treatment. However, after treatment, all these parameters showed improvement, with more pronounced changes in the EDP group compared to the control group [peak airway pressure (cmHO, 1 cmHO=0.098 kPa): 24.86±7.12 vs. 31.03±8.05, plateau pressure (cmHO): 18.05±4.97 vs. 23.08±6.21, airway resistance (cmHO×L×s): 28.96±4.85 vs. 34.12±5.61, respiratory rate (breaths/min): 20.13±2.46 vs. 25.52±2.78, heart rate (beats/min): 71.32±3.68 vs. 79.06±3.24, PaCO (mmHg, 1 mmHg=0.133 kPa): 45.36±7.54 vs. 49.81±8.05, PaO (mmHg): 86.07±7.82 vs. 82.18±8.14, PaO/FiO (mmHg): 253.57±51.96 vs. 201.83±45.37, DE (mm): 3.49±0.56 vs. 2.82±0.47, DTF: (35.72±4.59)% vs. (29.61±4.81)%, all P<0.05]. In addition, the duration of mechanical ventilation (days: 5.84±1.72 vs. 10.53±2.18) and length of ICU stay (days: 9.74±2.15 vs. 14.38±3.06) in the EDP group were shorter than those in the control group, and the 28-day post-ICU discharge mortality [7% (6/87) vs. 20% (17/87)] and overall mortality [9% (8/87) vs. 29% (25/87)] in the EDP group were lower than those in the control group (all P<0.05). However, there were no statistically significant differences between the two groups in reintubation rate or ICU mortality.\nCONCLUSIONS: EDP intervention can significantly improve diaphragmatic function, reduce airway pressure and respiratory rate, shorten the duration of mechanical ventilation and length of ICU stay, increase weaning success rate, and reduce mortality. Thus, it provides high-quality, evidence-based support with clinical translational value for this high-risk patient population.",
+        "authors": [
+          "Guo C",
+          "Du Y",
+          "Xiao Q",
+          "Gao X",
+          "Wang W"
+        ],
+        "authorAffiliations": [
+          "Department of Rehabilitation Medicine, Hengshui People's Hospital, Hengshui 053000, China.",
+          "Department of Emergency, Hengshui People's Hospital, Hengshui 053000, China. Corresponding author: Xiao Qingmian, Email: 519646691@qq.com."
+        ],
+        "journal": "Zhonghua wei zhong bing ji jiu yi xue",
+        "pubDate": "2026-Jun",
+        "publicationTypes": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "English Abstract"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Pulmonary Disease, Chronic Obstructive",
+          "Diaphragm",
+          "Ventilator Weaning",
+          "Female",
+          "Male",
+          "Prospective Studies",
+          "Respiration, Artificial",
+          "Aged",
+          "Middle Aged",
+          "Treatment Outcome"
+        ],
+        "keywords": [],
+        "doi": "10.3760/cma.j.cn121430-20251215-00606",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42427323/",
+        "collectedAt": "2026-07-13T21:17:15.610Z",
+        "screeningData": {
+          "score": 12,
+          "relevanceMatches": [
+            "critical care",
+            "intensive care",
+            "ICU",
+            "airway",
+            "intubation",
+            "mechanical ventilation"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 174,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: critical care, intensive care, ICU, airway",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=174"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42427323\nDOI: 10.3760/cma.j.cn121430-20251215-00606\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Department of Rehabilitation Medicine, Hengshui People's Hospital, Hengshui 053000, China.\n- Department of Emergency, Hengshui People's Hospital, Hengshui 053000, China. Corresponding author: Xiao Qingmian, Email: 519646691@qq.com.",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-13T21:18:07.095Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42427323",
+          "rank": 1,
+          "clinicalPriorityScore": 6.5,
+          "rationale_ko": "AECOPD 침습적 기계환기 환자에서 외부 횡격막 페이싱(EDP) 추가가 이탈 성공률과 호흡기능에 미치는 영향을 평가한 전향적 무작위대조시험(N=174, 군당 87명)으로, 이번 후보군 중 실제 임상 결과 지표(이탈 성공률)를 일차 결과로 둔 유일한 중환자실 중재 RCT임. 이탈 지연은 중환자 예후에 직결되는 실무적 문제이며, 비침습적·저비용 보조요법의 효과를 검증한다는 점에서 EM/CCM 임상의에게 직접적 관련성이 높음. 다만 단일기관, 중간 규모, 비교적 좁은 중재라는 한계로 최상위 점수는 부여하지 않음. 그럼에도 나머지 후보 대부분이 MIMIC-IV 기반 회귀·바이오마커 관찰연구, 프로토콜, 설문·검증 연구여서 직접적 진료 변화 근거가 약한 반면, 본 논문은 명확한 무작위배정과 임상 결과를 제시하여 뉴스레터 Top 1으로 선정함."
+        }
+      ],
+      "notes_ko": [
+        "후보군 다수가 MIMIC-IV/eICU 등 공개 데이터베이스 기반 회귀·바이오마커 관찰연구(예: 5, 12, 14, 11)로, 새로운 예후 지표를 제시하지만 즉각적 진료 변경 근거로는 약해 우선순위에서 제외함.",
+        "PMID 42438902(패혈증 스테로이드 서술적 리뷰)와 PMID 42410654(정밀중환자의학 오믹스 리뷰)는 주제 관련성은 높으나 서술형 리뷰로 새로운 근거 제공이 제한적임.",
+        "PMID 42410774(PICS-F 비약물 중재 체계적 문헌고찰/메타분석)는 설계 강점이 있으나 환자가 아닌 보호자 대상이라 직접 진료 관련성이 낮음.",
+        "PMID 42431658, 42430168, 42418199, 42410779, 42419811/42419813, 42431709, 42431662 등은 산과·사회역학·재활·프로토콜 주제로 EM/CCM 급성 진료와 거리가 있어 제외함.",
+        "PMID 42427323을 유일한 명확한 중환자 임상결과 RCT로 판단해 Top 1으로 선정했으나, 단일기관·중간 규모라는 근거 등급 한계가 있어 임상 우선순위 점수는 중상위 수준으로 조정함."
+      ]
+    }
+  },
+  "errors": []
+}

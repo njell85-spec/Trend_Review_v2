@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 7. 14. 오전 6:21</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-07-14</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">[Effect of external diaphragmatic pacing on diaphragmatic function and weaning success rate in patients with acute exacerbations of chronic obstructive pulmonary disease undergoing invasive mechanical ventilation].</h2>
+      <div class="paper-meta">
+        Zhonghua wei zhong bing ji jiu yi xue · 2026-Jun · PMID 42427323
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Abstract + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Diaphragmatic dysfunction is a major driver of weaning failure in COPD, and this single-center RCT suggests a noninvasive, drug-free adjunct could meaningfully improve liberation from mechanical ventilation and survival.</p>
+    <p class="ko">횡격막 기능장애는 COPD에서 이탈 실패의 주요 원인으로, 이 단일기관 RCT는 비침습적이고 약물이 필요 없는 보조요법이 기계환기 이탈과 생존을 의미 있게 개선할 수 있음을 시사한다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Prospective, single-center randomized controlled trial using block randomization into two parallel arms.</p>
+      <p class="ko">블록 무작위배정을 이용해 두 개의 평행군으로 나눈 전향적 단일기관 무작위 대조시험.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">Department of Critical Care Medicine, Hengshui People&#39;s Hospital, Hengshui, China, from November 1, 2022 to January 31, 2025.</p>
+      <p class="ko">중국 헝수이 인민병원 중환자의학과, 2022년 11월 1일부터 2025년 1월 31일까지.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">174 AECOPD patients on invasive mechanical ventilation were enrolled and randomized, 87 per group (control vs EDP). The abstract reports outcomes on all 87 per arm; separate ITT, per-protocol, and safety populations are not distinguished in the accessible sources.</p>
+      <p class="ko">침습적 기계환기를 받는 AECOPD 환자 174명이 등록·무작위배정되어 각 군 87명(대조군 vs EDP군)이었다. 초록은 각 군 87명 전체의 결과를 보고하며, 접근 가능한 자료에서 ITT·프로토콜순응·안전성 집단은 별도로 구분되지 않는다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Patients with acute exacerbations of COPD (AECOPD) requiring invasive mechanical ventilation admitted to the ICU. MeSH indexing indicates adults spanning middle-aged and aged, both male and female. Detailed inclusion/exclusion criteria are not available in the accessible sources.</p>
+      <p class="ko">침습적 기계환기가 필요한 COPD 급성 악화(AECOPD)로 중환자실에 입원한 환자. MeSH 색인상 중년 및 고령의 남녀 성인을 포함한다. 구체적 포함/배제 기준은 접근 가능한 자료에 없다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Conventional therapy plus external diaphragmatic pacing (EDP), a noninvasive technique that electrically stimulates the phrenic nerve/diaphragm via surface electrodes. Exact stimulation parameters, session frequency, duration per session, and total treatment duration are not available in the accessible sources.</p>
+      <p class="ko">표준치료에 더해 체외 횡격막 페이싱(EDP)을 시행했으며, 이는 표면 전극을 통해 횡격막 신경/횡격막을 전기적으로 자극하는 비침습적 기법이다. 정확한 자극 파라미터, 세션 빈도, 세션당 시간, 총 치료 기간은 접근 가능한 자료에 없다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Conventional (standard) therapy alone for ventilated AECOPD without external diaphragmatic pacing. Specific components of conventional therapy are not detailed in the accessible sources.</p>
+      <p class="ko">체외 횡격막 페이싱 없이 기계환기 AECOPD에 대한 표준치료 단독. 표준치료의 구체적 구성요소는 접근 가능한 자료에 기술되어 있지 않다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Outcomes tracked through the ICU stay and included 28-day post-ICU discharge mortality and overall mortality; exact total follow-up window beyond this is not specified in the accessible sources.</p>
+      <p class="ko">결과는 중환자실 재원 기간 동안 추적되었고 중환자실 퇴실 후 28일 사망률 및 전체 사망률을 포함했으며, 이를 넘어서는 정확한 총 추적 기간은 접근 가능한 자료에 명시되어 있지 않다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Based on the English abstract and PubMed metadata (affiliations, MeSH, publication types). No PMCID or trial registry ID was available for open full-text or registry enrichment.</p>
+      <p class="ko">영문 초록과 PubMed 메타데이터(소속, MeSH, 출판 유형)에 근거함. 전문 또는 등록 정보 보강을 위한 PMCID나 임상시험 등록번호는 없었다.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">174 ICU patients with AECOPD on invasive mechanical ventilation; baseline gender, age, BMI, COPD duration, comorbidities, PaO2/FiO2, APACHE II, and SOFA were balanced between groups.</p>
+      <p class="ko">침습적 기계환기를 받는 AECOPD 중환자 174명; 기저 성별, 연령, BMI, COPD 유병기간, 동반질환, PaO2/FiO2, APACHE II, SOFA는 두 군 간 균형을 이루었다.</p>
+      <p class="en"><strong>Setting:</strong> Single center in China (Hengshui People&#39;s Hospital, Critical Care Medicine), 2022-2025.</p>
+      <p class="ko">중국 단일기관(헝수이 인민병원 중환자의학과), 2022-2025년.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Conventional ICU therapy for ventilated AECOPD plus external diaphragmatic pacing (EDP), a noninvasive electrical stimulation applied to the diaphragm/phrenic nerve. Dosing parameters and treatment schedule are not available in the accessible sources.</p>
+      <p class="ko">기계환기 AECOPD에 대한 표준 중환자실 치료에 더해 횡격막/횡격막신경에 적용하는 비침습적 전기자극인 체외 횡격막 페이싱(EDP). 자극 파라미터와 치료 일정은 접근 가능한 자료에 없다.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Conventional ICU therapy alone without EDP.</p>
+      <p class="ko">EDP 없이 표준 중환자실 치료 단독.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">Weaning success rate</p>
+    <p class="ko">이탈 성공률</p>
+    <p class="stat-line">EDP 93% (81/87) vs control 61% (53/87), P&lt;0.05 · 93% vs 61%, P&lt;0.05</p>
+    <p class="ko">EDP군 93%(81/87) vs 대조군 61%(53/87), P&lt;0.05</p>
+    <div class="interpretation">ⓘ Nearly all EDP patients were successfully weaned versus about six in ten controls, a large absolute improvement of roughly 32 percentage points.<br>EDP군은 거의 모든 환자가 성공적으로 이탈한 반면 대조군은 약 10명 중 6명으로, 약 32%포인트의 큰 절대 개선을 보였다.</div>
+    <div class="interpretation primer">ⓘ For proportions, a higher percentage with the intervention and P&lt;0.05 indicates a statistically significant benefit; the absolute difference here (~32%) reflects clinical magnitude.<br>비율에서 중재군의 백분율이 더 높고 P&lt;0.05이면 통계적으로 유의한 이득을 의미하며, 여기서의 절대 차이(약 32%)는 임상적 크기를 반영한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Diaphragmatic function (diaphragmatic excursion DE and thickening fraction DTF) after treatment</p>
+    <p class="ko">치료 후 횡격막 기능(횡격막 이동거리 DE 및 두께변화율 DTF)</p>
+    <p class="stat-line">DE (mm) 3.49±0.56 vs 2.82±0.47; DTF 35.72±4.59% vs 29.61±4.81%, all P&lt;0.05 · DE 3.49 vs 2.82; DTF 35.72% vs 29.61%, P&lt;0.05</p>
+    <p class="ko">DE(mm) 3.49±0.56 vs 2.82±0.47; DTF 35.72±4.59% vs 29.61±4.81%, 모두 P&lt;0.05</p>
+    <div class="interpretation">ⓘ EDP produced greater diaphragmatic excursion and thickening, indicating better restored diaphragm contractile function than standard care.<br>EDP는 더 큰 횡격막 이동거리와 두께 변화를 만들어 표준치료보다 횡격막 수축 기능이 더 잘 회복되었음을 시사한다.</div>
+    <div class="interpretation primer">ⓘ These are mean ± SD values; higher DE and DTF mean better diaphragm function, and P&lt;0.05 indicates the between-group difference is statistically significant.<br>이들은 평균 ± 표준편차 값으로, DE와 DTF가 높을수록 횡격막 기능이 좋으며 P&lt;0.05는 군 간 차이가 통계적으로 유의함을 의미한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Respiratory mechanics and gas exchange after treatment (peak/plateau pressure, airway resistance, respiratory rate, PaCO2, PaO2, PaO2/FiO2)</p>
+    <p class="ko">치료 후 호흡역학 및 가스교환(최고/평탄 기도압, 기도저항, 호흡수, PaCO2, PaO2, PaO2/FiO2)</p>
+    <p class="stat-line">Peak 24.86±7.12 vs 31.03±8.05; plateau 18.05±4.97 vs 23.08±6.21; resistance 28.96±4.85 vs 34.12±5.61; RR 20.13±2.46 vs 25.52±2.78; PaCO2 45.36±7.54 vs 49.81±8.05; PaO2 86.07±7.82 vs 82.18±8.14; PaO2/FiO2 253.57±51.96 vs 201.83±45.37, all P&lt;0.05 · All comparisons P&lt;0.05 favoring EDP</p>
+    <p class="ko">최고압 24.86±7.12 vs 31.03±8.05; 평탄압 18.05±4.97 vs 23.08±6.21; 저항 28.96±4.85 vs 34.12±5.61; 호흡수 20.13±2.46 vs 25.52±2.78; PaCO2 45.36±7.54 vs 49.81±8.05; PaO2 86.07±7.82 vs 82.18±8.14; PaO2/FiO2 253.57±51.96 vs 201.83±45.37, 모두 P&lt;0.05</p>
+    <div class="interpretation">ⓘ EDP lowered airway pressures, resistance, respiratory rate and PaCO2 while improving oxygenation, consistent with reduced respiratory load and better lung mechanics.<br>EDP는 기도압, 저항, 호흡수, PaCO2를 낮추고 산소화를 개선하여 호흡 부하 감소와 폐역학 향상과 일치한다.</div>
+    <div class="interpretation primer">ⓘ Mean ± SD comparisons; direction of benefit depends on the parameter (lower pressures/resistance/RR/PaCO2 are better, higher PaO2/FiO2 is better), and P&lt;0.05 marks statistical significance.<br>평균 ± 표준편차 비교로, 이득 방향은 지표에 따라 다르며(압력/저항/호흡수/PaCO2는 낮을수록, PaO2/FiO2는 높을수록 좋음), P&lt;0.05는 통계적 유의성을 나타낸다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Duration of mechanical ventilation and ICU length of stay</p>
+    <p class="ko">기계환기 기간 및 중환자실 재원기간</p>
+    <p class="stat-line">MV 5.84±1.72 vs 10.53±2.18 days; ICU LOS 9.74±2.15 vs 14.38±3.06 days, P&lt;0.05 · MV ~4.7 days shorter; ICU LOS ~4.6 days shorter, P&lt;0.05</p>
+    <p class="ko">기계환기 5.84±1.72 vs 10.53±2.18일; 중환자실 재원 9.74±2.15 vs 14.38±3.06일, P&lt;0.05</p>
+    <div class="interpretation">ⓘ EDP shortened ventilation by roughly 4.7 days and ICU stay by about 4.6 days, a substantial resource and patient benefit.<br>EDP는 환기 기간을 약 4.7일, 중환자실 재원을 약 4.6일 단축시켜 상당한 자원 및 환자 이득을 보였다.</div>
+    <div class="interpretation primer">ⓘ Mean ± SD in days; a lower value with the intervention and P&lt;0.05 indicates a statistically significant reduction.<br>일수의 평균 ± 표준편차로, 중재군에서 값이 더 낮고 P&lt;0.05이면 통계적으로 유의한 감소를 의미한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Mortality (28-day post-ICU discharge and overall) and reintubation/ICU mortality</p>
+    <p class="ko">사망률(중환자실 퇴실 후 28일 및 전체) 및 재삽관/중환자실 사망률</p>
+    <p class="stat-line">28-day post-discharge mortality 7% (6/87) vs 20% (17/87); overall mortality 9% (8/87) vs 29% (25/87), P&lt;0.05; no significant difference in reintubation rate or ICU mortality · 28-day 7% vs 20%; overall 9% vs 29%, P&lt;0.05; reintubation and ICU mortality NS</p>
+    <p class="ko">퇴실 후 28일 사망률 7%(6/87) vs 20%(17/87); 전체 사망률 9%(8/87) vs 29%(25/87), P&lt;0.05; 재삽관율 및 중환자실 사망률은 유의한 차이 없음</p>
+    <div class="interpretation">ⓘ EDP was associated with lower post-discharge and overall mortality, though reintubation and in-ICU mortality did not differ significantly, suggesting benefit may accrue after ICU discharge.<br>EDP는 퇴실 후 및 전체 사망률 감소와 연관되었으나 재삽관과 중환자실 내 사망률은 유의한 차이가 없어, 이득이 주로 중환자실 퇴실 후 나타날 수 있음을 시사한다.</div>
+    <div class="interpretation primer">ⓘ For proportions, lower percentage with the intervention and P&lt;0.05 means statistically significant; &#39;NS&#39; (not significant) means the difference could be due to chance.<br>비율에서 중재군의 백분율이 더 낮고 P&lt;0.05이면 통계적으로 유의하며, &#39;NS&#39;(유의하지 않음)는 차이가 우연에 의한 것일 수 있음을 의미한다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Weaning success rate was markedly higher with EDP than standard care (93% vs 61%, P&lt;0.05).</p><p class="ko">이탈 성공률이 EDP군에서 표준치료보다 현저히 높았다(93% vs 61%, P&lt;0.05).</p></li>
+<li><p class="en">EDP improved diaphragmatic function (DE and DTF), respiratory mechanics, and gas exchange, and shortened mechanical ventilation (5.84 vs 10.53 days) and ICU stay (9.74 vs 14.38 days).</p><p class="ko">EDP는 횡격막 기능(DE, DTF), 호흡역학, 가스교환을 개선하고 기계환기 기간(5.84 vs 10.53일)과 중환자실 재원(9.74 vs 14.38일)을 단축시켰다.</p></li>
+<li><p class="en">28-day post-ICU-discharge mortality (7% vs 20%) and overall mortality (9% vs 29%) were lower with EDP, but reintubation rate and ICU mortality did not differ significantly.</p><p class="ko">중환자실 퇴실 후 28일 사망률(7% vs 20%)과 전체 사망률(9% vs 29%)이 EDP군에서 낮았으나, 재삽관율과 중환자실 사망률은 유의한 차이가 없었다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In this single-center RCT of 174 ventilated AECOPD patients, adding external diaphragmatic pacing to conventional therapy significantly improved diaphragmatic function, reduced airway pressures and respiratory rate, shortened ventilation duration and ICU stay, increased weaning success, and lowered post-discharge and overall mortality.</p>
+    <p class="ko">기계환기를 받는 AECOPD 환자 174명을 대상으로 한 이 단일기관 RCT에서 표준치료에 체외 횡격막 페이싱을 추가하니 횡격막 기능이 유의하게 개선되고 기도압과 호흡수가 감소했으며 환기 기간과 중환자실 재원이 단축되고 이탈 성공률이 증가하며 퇴실 후 및 전체 사망률이 낮아졌다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Single-center trial from one Chinese hospital limits generalizability. The unusually large effect sizes (e.g., 32-point weaning difference, halved mortality) raise concern for overestimation. No trial registry ID or PMCID was available, blinding and allocation concealment are not described in the accessible sources, and EDP stimulation parameters, treatment schedule, weaning protocol, and detailed inclusion/exclusion criteria are not available. Whether outcome assessors were blinded is unclear, and the mortality benefit despite no difference in ICU mortality warrants cautious interpretation.</p>
+    <p class="ko">중국 단일기관 시험으로 일반화에 제한이 있다. 비정상적으로 큰 효과 크기(예: 32%포인트 이탈 차이, 절반의 사망률)는 과대추정 우려를 낳는다. 임상시험 등록번호나 PMCID가 없고 눈가림 및 배정은폐가 접근 가능한 자료에 기술되어 있지 않으며, EDP 자극 파라미터, 치료 일정, 이탈 프로토콜, 상세 포함/배제 기준도 확인할 수 없다. 결과 평가자의 눈가림 여부가 불분명하고, 중환자실 사망률 차이가 없음에도 사망률 이득이 나타난 점은 신중한 해석이 필요하다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Directly relevant to ICU management of ventilated AECOPD, where diaphragm dysfunction and weaning failure are common. EDP is noninvasive and potentially deployable at the bedside, and diaphragm ultrasound (DE/DTF) is an accessible monitoring tool. However, given the single-center design, undescribed protocol, and implausibly large mortality benefit, findings should be viewed as hypothesis-generating rather than practice-changing until validated in larger multicenter trials.</p>
+    <p class="ko">횡격막 기능장애와 이탈 실패가 흔한 기계환기 AECOPD의 중환자실 관리에 직접적으로 관련된다. EDP는 비침습적이며 침상에서 적용 가능성이 있고, 횡격막 초음파(DE/DTF)는 접근성 좋은 모니터링 도구다. 다만 단일기관 설계, 기술되지 않은 프로토콜, 비현실적으로 큰 사망률 이득을 고려할 때, 대규모 다기관 시험으로 검증되기 전까지는 진료 변경보다는 가설 생성 근거로 보아야 한다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">External diaphragmatic pacing is a promising noninvasive adjunct to accelerate weaning in ventilated AECOPD, but the large single-center effect sizes need multicenter confirmation before routine adoption.</p>
+    <p class="ko">체외 횡격막 페이싱은 기계환기 AECOPD의 이탈을 촉진하는 유망한 비침습적 보조요법이지만, 단일기관의 큰 효과 크기는 일상 도입 전에 다기관 검증이 필요하다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42427323/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.3760/cma.j.cn121430-20251215-00606" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
