@@ -1,0 +1,229 @@
+{
+  "analyses": [
+    {
+      "pmid": "42461154",
+      "title": "Assessing Risk of Early ICU Admission or Death at Emergency Department Triage: Clinical Judgment Versus Early Warning Scores.",
+      "oneLineSummary": "In a large retrospective ED cohort, triage clinical judgment predicted 24-h ICU admission or death as well as the best Early Warning Score and better than the others.",
+      "oneLineSummary_ko": "대규모 후향적 응급실 코호트에서 분류(triage) 임상 판단은 24시간 내 중환자실 입실 또는 사망 예측에서 최고 성능의 조기경보점수와 대등했고 나머지 점수보다는 우수했다.",
+      "whyItMatters": "Early Warning Scores are increasingly promoted or mandated in EDs, but this large study suggests structured scores do not clearly outperform experienced triage judgment for early adverse outcomes, cautioning against assuming EWS should replace clinician gestalt.",
+      "whyItMatters_ko": "조기경보점수는 응급실에서 점점 더 권장되거나 의무화되고 있으나, 이 대규모 연구는 구조화된 점수가 조기 악화 결과 예측에서 숙련된 분류 판단을 명확히 능가하지 못함을 시사하며 EWS가 임상적 직관을 대체해야 한다는 가정에 신중을 요한다.",
+      "clinicalQuestion": "In adult ED triage, do commonly used Early Warning Scores match or outperform clinical judgment (triage category) in predicting 24-h mortality or ICU admission?",
+      "clinicalQuestion_ko": "성인 응급실 분류에서 흔히 사용되는 조기경보점수는 24시간 사망 또는 중환자실 입실 예측에 있어 임상 판단(분류 등급)과 대등하거나 우수한가?",
+      "studyDetails": {
+        "design": "Retrospective, single-center observational comparative study (registered publication types: Observational Study, Comparative Study). Predictive performance of triage clinical judgment was compared with five computed EWS using discrimination (AUC), calibration, decision curve analysis, and reclassification metrics.",
+        "design_ko": "후향적 단일기관 관찰 비교 연구(등록된 출판 유형: 관찰 연구, 비교 연구). 분류 임상 판단의 예측 성능을 판별력(AUC), 보정, 결정곡선분석, 재분류 지표를 사용해 다섯 가지 산출된 EWS와 비교했다.",
+        "setting": "Tertiary-care academic center. Author affiliations indicate Fondazione Policlinico Universitario A. Gemelli IRCCS and Universita Cattolica del Sacro Cuore, Rome, Italy; ED presentations spanned 2015-2024.",
+        "setting_ko": "3차 학술 의료기관. 저자 소속은 이탈리아 로마의 Fondazione Policlinico Universitario A. Gemelli IRCCS 및 Universita Cattolica del Sacro Cuore로 표시됨; 응급실 방문은 2015-2024년에 걸침.",
+        "sampleSize": "361,927 adult ED presentations were included over 2015-2024. The abstract does not separately report distinct enrolled versus analyzed subpopulations or per-arm denominators (this is a prognostic model comparison, not randomized arms).",
+        "sampleSize_ko": "2015-2024년 동안 361,927건의 성인 응급실 방문이 포함되었다. 초록은 등록 대비 분석 하위집단이나 군별 분모를 별도로 보고하지 않는다(무작위 배정 군이 아닌 예후 모델 비교임).",
+        "eligibility": "Adult ED presentations at the tertiary-care academic center. Exact inclusion/exclusion criteria and handling of missing vital signs are not available in the accessible sources.",
+        "eligibility_ko": "3차 학술 의료기관의 성인 응급실 방문. 정확한 포함/제외 기준과 활력징후 결측 처리는 접근 가능한 자료에서 확인할 수 없다.",
+        "interventionDetails": "No treatment intervention; the 'index test' was clinical judgment operationalized as the triage category assigned at initial evaluation. No dosing/route applies.",
+        "interventionDetails_ko": "치료 중재는 없음; '지표 검사'는 초기 평가 시 배정된 분류 등급으로 조작적으로 정의된 임상 판단이었다. 용량/투여 경로는 해당되지 않는다.",
+        "comparatorDetails": "Five Early Warning Scores computed from vital signs recorded at ED presentation: NEWS, NEWS2, MEWS, REMS, and ViEWS. Exact vital-sign components and thresholds are per each published score; specific cutoffs used are not detailed in accessible sources.",
+        "comparatorDetails_ko": "응급실 방문 시 기록된 활력징후로 산출된 다섯 가지 조기경보점수: NEWS, NEWS2, MEWS, REMS, ViEWS. 정확한 활력징후 구성요소와 임계값은 각 발표된 점수에 따르며, 사용된 구체적 절단값은 접근 가능한 자료에 상세히 나와 있지 않다.",
+        "followUp": "Outcomes assessed within 24 hours of ED presentation (24-h mortality or ICU admission).",
+        "followUp_ko": "결과는 응급실 방문 후 24시간 이내에 평가됨(24시간 사망 또는 중환자실 입실).",
+        "sourceBasis": "Abstract and Crossref snippet for design, sample size, scores, and outcome; PubMed author affiliations for country/setting. No open full text (no PMCID).",
+        "sourceBasis_ko": "설계, 표본 크기, 점수, 결과는 초록 및 Crossref 발췌; 국가/세팅은 PubMed 저자 소속. 오픈 전문 없음(PMCID 없음)."
+      },
+      "pico": {
+        "population": "361,927 adult ED presentations at a tertiary-care academic center (Rome, Italy), 2015-2024.",
+        "intervention": "Clinical judgment operationalized as the assigned triage category at initial evaluation.",
+        "comparison": "Five Early Warning Scores (NEWS, NEWS2, MEWS, REMS, ViEWS) computed from presentation vital signs.",
+        "outcome": "Composite of 24-h mortality or ICU admission; compared via discrimination, calibration, decision curve analysis, and reclassification."
+      },
+      "pico_ko": {
+        "population": "3차 학술 의료기관(이탈리아 로마)의 성인 응급실 방문 361,927건, 2015-2024년.",
+        "intervention": "초기 평가 시 배정된 분류 등급으로 정의된 임상 판단.",
+        "comparison": "방문 시 활력징후로 산출된 다섯 가지 조기경보점수(NEWS, NEWS2, MEWS, REMS, ViEWS).",
+        "outcome": "24시간 사망 또는 중환자실 입실의 복합 결과; 판별력, 보정, 결정곡선분석, 재분류로 비교."
+      },
+      "detailedPico": {
+        "population": "361,927 adult ED presentations at a single tertiary-care academic center over 2015-2024. The primary composite outcome occurred in 1.17% of patients, indicating a low event rate typical of undifferentiated ED populations.",
+        "population_ko": "2015-2024년 단일 3차 학술 의료기관의 성인 응급실 방문 361,927건. 일차 복합 결과는 환자의 1.17%에서 발생하여 미분화 응급실 인구에서 전형적인 낮은 사건 발생률을 나타낸다.",
+        "countrySetting": "Italy; tertiary-care academic ED (Fondazione Policlinico Universitario A. Gemelli IRCCS / Universita Cattolica del Sacro Cuore, Rome), per public author-affiliation metadata.",
+        "countrySetting_ko": "이탈리아; 3차 학술 응급실(로마 Fondazione Policlinico Universitario A. Gemelli IRCCS / Universita Cattolica del Sacro Cuore), 공개 저자 소속 메타데이터 기준.",
+        "intervention": "Clinical judgment, operationalized as the triage acuity category assigned by triage staff at initial evaluation, used as a predictor of early adverse outcome.",
+        "intervention_ko": "분류 담당자가 초기 평가 시 배정한 분류 중증도 등급으로 조작적으로 정의된 임상 판단을 조기 악화 결과의 예측 인자로 사용.",
+        "comparator": "Five vital-sign-based Early Warning Scores computed at presentation: NEWS, NEWS2, MEWS, REMS, and ViEWS.",
+        "comparator_ko": "방문 시 산출된 다섯 가지 활력징후 기반 조기경보점수: NEWS, NEWS2, MEWS, REMS, ViEWS.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Discrimination (AUC) for the composite of 24-h mortality or ICU admission.",
+            "outcome_ko": "24시간 사망 또는 중환자실 입실 복합 결과에 대한 판별력(AUC).",
+            "result": "ViEWS AUC 0.875 (highest) and clinical judgment AUC 0.872, with no significant difference between them; other EWS (NEWS, NEWS2, MEWS, REMS) had significantly lower AUCs. Event rate 1.17%.",
+            "result_ko": "ViEWS AUC 0.875(최고)와 임상 판단 AUC 0.872, 둘 사이 유의한 차이 없음; 다른 EWS(NEWS, NEWS2, MEWS, REMS)는 유의하게 낮은 AUC. 사건 발생률 1.17%.",
+            "statistics": "AUC 0.875 (ViEWS) vs 0.872 (clinical judgment), no significant difference; other EWS significantly lower.",
+            "interpretation": "Clinician triage judgment discriminated early deterioration essentially as well as the top-performing score and better than the rest.",
+            "interpretation_ko": "임상의 분류 판단은 조기 악화를 최고 성능 점수와 사실상 대등하게, 나머지보다는 더 잘 판별했다.",
+            "statPrimer": "AUC ranges 0.5 (no better than chance) to 1.0 (perfect); ~0.87 indicates good discrimination, and overlapping/non-significant differences mean models perform comparably.",
+            "statPrimer_ko": "AUC는 0.5(우연 수준)에서 1.0(완벽)까지의 범위이며, 약 0.87은 좋은 판별력을 의미하고, 겹치거나 유의하지 않은 차이는 모델들이 유사하게 작동함을 뜻한다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Threshold-based / precision-recall performance and net clinical benefit.",
+            "outcome_ko": "임계값 기반/정밀도-재현율 성능 및 순임상이익.",
+            "result": "Clinical judgment maintained higher specificity at higher-risk thresholds while preserving adequate sensitivity; decision curve analysis showed comparable or greater net benefit for clinical judgment than all tested EWS; reclassification metrics showed no improvement with EWS over clinical judgment. Exact values not available in accessible sources.",
+            "result_ko": "임상 판단은 고위험 임계값에서 더 높은 특이도를 유지하면서 적절한 민감도를 보존했다; 결정곡선분석에서 임상 판단은 모든 시험된 EWS보다 대등하거나 더 큰 순이익을 보였다; 재분류 지표는 EWS가 임상 판단 대비 개선을 보이지 않았다. 정확한 수치는 접근 가능한 자료에 없음.",
+            "statistics": "Decision curve analysis (net benefit) and reclassification metrics; no numeric estimates reported in accessible sources.",
+            "interpretation": "Across clinically relevant decision thresholds, adopting an EWS instead of triage judgment did not add value and sometimes offered less net benefit.",
+            "interpretation_ko": "임상적으로 관련된 결정 임계값 전반에서 분류 판단 대신 EWS를 채택하는 것은 가치를 더하지 않았고 때로는 더 적은 순이익을 제공했다.",
+            "statPrimer": "Decision curve net benefit: higher curves across threshold probabilities indicate a more clinically useful model; reclassification (e.g., NRI/IDI) near zero means no meaningful improvement in risk classification.",
+            "statPrimer_ko": "결정곡선 순이익: 임계 확률 전반에서 더 높은 곡선은 임상적으로 더 유용한 모델을 의미하며, 재분류 지표(예: NRI/IDI)가 0에 가까우면 위험 분류에서 의미 있는 개선이 없음을 뜻한다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "ViEWS had the highest discrimination (AUC 0.875) and clinical judgment was nearly identical (AUC 0.872), with no significant difference between them; other EWS (NEWS, NEWS2, MEWS, REMS) had significantly lower AUCs.",
+        "Clinical judgment maintained higher specificity at higher-risk thresholds while preserving adequate sensitivity in precision-recall and threshold-based analyses.",
+        "Decision curve analysis showed comparable or greater net benefit for clinical judgment than all tested EWS, and reclassification metrics showed no improvement with EWS over clinical judgment."
+      ],
+      "keyFindings_ko": [
+        "ViEWS가 가장 높은 판별력(AUC 0.875)을 보였고 임상 판단도 거의 동일했으며(AUC 0.872) 둘 사이에 유의한 차이가 없었다; 다른 EWS(NEWS, NEWS2, MEWS, REMS)는 유의하게 낮은 AUC를 보였다.",
+        "정밀도-재현율 및 임계값 기반 분석에서 임상 판단은 고위험 임계값에서 더 높은 특이도를 유지하면서 적절한 민감도를 보존했다.",
+        "결정곡선분석에서 임상 판단은 모든 시험된 EWS보다 대등하거나 더 큰 순이익을 보였고, 재분류 지표에서도 EWS가 임상 판단 대비 개선을 보이지 않았다."
+      ],
+      "conclusion": "Commonly used Early Warning Scores did not clearly outperform triage clinical judgment in predicting early ICU admission or death; only ViEWS matched clinical judgment while the remaining scores were inferior on discrimination. The authors suggest structured scores and clinical judgment may be complementary, particularly for identifying patients whose risk is modifiable by timely escalation of care.",
+      "conclusion_ko": "흔히 사용되는 조기경보점수는 조기 중환자실 입실 또는 사망 예측에서 분류 임상 판단을 명확히 능가하지 못했으며, ViEWS만 임상 판단과 대등했고 나머지 점수들은 판별력에서 열등했다. 저자들은 구조화된 점수와 임상 판단이 특히 적시의 치료 강화로 위험이 조정될 수 있는 환자를 식별하는 데 상호 보완적일 수 있다고 제안한다.",
+      "clinicalTakeaway": "Experienced triage judgment remains a strong predictor of early deterioration and should not be discarded in favor of EWS; scores may best serve as a complementary safety net rather than a replacement for clinician assessment.",
+      "clinicalTakeaway_ko": "숙련된 분류 판단은 조기 악화의 강력한 예측 인자로 남아 있으며 EWS로 대체되어서는 안 된다; 점수는 임상의 평가를 대체하기보다는 보완적 안전망으로 활용하는 것이 가장 적절할 수 있다.",
+      "limitations": "Single-center, retrospective design from one Italian tertiary academic ED limits generalizability and introduces potential unmeasured confounding and data-quality/missing vital-sign issues. Clinical judgment was operationalized only as the assigned triage category, which may not fully capture clinician reasoning. The composite outcome was rare (1.17%), and calibration and subgroup details, exact confidence intervals, sensitivity/specificity values, and net-benefit figures are not available in the accessible sources. Whether an integrated judgment-plus-EWS approach improves outcomes was not tested prospectively.",
+      "limitations_ko": "이탈리아 단일 3차 학술 응급실의 단일기관 후향적 설계로 일반화 가능성이 제한되며 측정되지 않은 교란 및 자료 품질/활력징후 결측 문제의 가능성이 있다. 임상 판단은 배정된 분류 등급으로만 조작적으로 정의되어 임상의의 추론을 완전히 반영하지 못할 수 있다. 복합 결과는 드물었고(1.17%), 보정 및 하위군 세부사항, 정확한 신뢰구간, 민감도/특이도 값, 순이익 수치는 접근 가능한 자료에서 확인할 수 없다. 판단과 EWS를 통합한 접근이 결과를 개선하는지는 전향적으로 검증되지 않았다.",
+      "edIcuApplicability": "Directly relevant to ED triage and ICU triage workflows. Supports continued reliance on skilled triage assessment while using EWS as an adjunct rather than a substitute. As a single-center retrospective prognostic comparison, it should inform local triage policy discussions rather than mandate practice change, and does not establish whether acting on scores changes patient outcomes.",
+      "edIcuApplicability_ko": "응급실 분류 및 중환자실 분류 워크플로에 직접 관련된다. EWS를 대체가 아닌 보조로 사용하면서 숙련된 분류 평가에 대한 지속적 의존을 뒷받침한다. 단일기관 후향적 예후 비교이므로 진료 변경을 의무화하기보다는 지역 분류 정책 논의에 참고해야 하며, 점수에 따라 조치하는 것이 환자 결과를 바꾸는지는 입증하지 않는다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 7,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Analysis based on abstract plus PubMed/Crossref metadata; no PMCID available for open full-text fetch.",
+        "Only two AUC values are explicitly reported (ViEWS 0.875, clinical judgment 0.872); exact AUCs, CIs, and NRI/IDI values for other scores were not provided in accessible sources.",
+        "Country/setting (Rome, Italy; Gemelli IRCCS tertiary academic center) derived from author affiliations in public metadata.",
+        "Sample size 361,927 adult ED presentations stated in abstract; distinct enrolled/analyzed populations not separately reported."
+      ],
+      "paper": {
+        "pmid": "42461154",
+        "title": "Assessing Risk of Early ICU Admission or Death at Emergency Department Triage: Clinical Judgment Versus Early Warning Scores.",
+        "abstract": "BACKGROUND: Early Warning Scores (EWS) are widely used to standardize the identification of clinical deterioration, yet their comparative performance against clinical judgment in Emergency Department (ED) triage remains uncertain. We aimed to evaluate whether commonly used EWS match or outperform clinical judgment in predicting early adverse outcomes.\nMETHODS: We conducted a retrospective observational study including 361,927 adult ED presentations at a tertiary-care academic center from 2015 to 2024. Clinical judgment was operationalized as the triage category assigned at the initial evaluation. Five EWS (NEWS, NEWS2, MEWS, REMS, and ViEWS) were computed using vital signs recorded at ED presentation. The primary outcome was a composite of 24-h mortality or intensive care unit (ICU) admission. Discrimination, calibration, decision curve analysis, and reclassification metrics were used to compare models.\nRESULTS: The primary outcome occurred in 1.17% of patients. Discriminatory performance was highest for ViEWS (AUC 0.875) and clinical judgment (AUC 0.872), with no significant difference between them. Other EWS demonstrated significantly lower AUCs. In precision-recall and threshold-based analyses, clinical judgment maintained higher specificity at higher-risk thresholds while preserving adequate sensitivity. Decision curve analysis showed comparable or greater net benefit for clinical judgment than for all tested EWS across clinically relevant thresholds. Reclassification metrics showed no improvement with EWS over clinical judgment.\nCONCLUSION: Commonly used EWS did not clearly outperform triage clinical judgment in predicting early ICU admission or death. These findings support further investigation of how structured scores and clinical judgment may provide complementary information, particularly in identifying patients whose risk may be modified by timely escalation of care.",
+        "authors": [
+          "Bonadia N",
+          "Fanelli PMC",
+          "Polla DAD",
+          "Maccauro V",
+          "De Matteis G",
+          "Piccioni A",
+          "Gasbarrini A",
+          "Sandroni C"
+        ],
+        "authorAffiliations": [
+          "Emergency Department, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy.",
+          "Department of Geriatrics, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy.",
+          "Department of Internal Medicine and Gastroenterology, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy.",
+          "Università Cattolica del Sacro Cuore, Rome, Italy.",
+          "Department of Anesthesiology and Intensive Care Medicine, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy."
+        ],
+        "journal": "Academic emergency medicine : official journal of the Society for Academic Emergency Medicine",
+        "pubDate": "2026-Jul",
+        "publicationTypes": [
+          "Journal Article",
+          "Observational Study",
+          "Comparative Study"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Triage",
+          "Retrospective Studies",
+          "Emergency Service, Hospital",
+          "Early Warning Score",
+          "Female",
+          "Intensive Care Units",
+          "Male",
+          "Middle Aged",
+          "Risk Assessment",
+          "Hospital Mortality",
+          "Aged"
+        ],
+        "keywords": [],
+        "doi": "10.1111/acem.70377",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42461154/",
+        "collectedAt": "2026-07-17T21:17:17.651Z",
+        "screeningData": {
+          "score": 11,
+          "relevanceMatches": [
+            "emergency department",
+            "emergency medicine",
+            "intensive care",
+            "ICU"
+          ],
+          "studyType": "Other",
+          "sampleSize": 361927,
+          "journalBoost": 2,
+          "reasons": [
+            "abstract available",
+            "topic match: emergency department, emergency medicine, intensive care, ICU",
+            "sample size signal: N=361927",
+            "journal boost: Academic emergency medicine : official journal of the Society for Academic Emergency Medicine"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42461154\nDOI: 10.1111/acem.70377\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Emergency Department, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy.\n- Department of Geriatrics, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy.\n- Department of Internal Medicine and Gastroenterology, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy.\n- Università Cattolica del Sacro Cuore, Rome, Italy.\n- Department of Anesthesiology and Intensive Care Medicine, Fondazione Policlinico Universitario A. Gemelli IRCCS, Rome, Italy.\n\nPublic bibliographic metadata from Crossref:\nTitle: Assessing Risk of Early <scp>ICU</scp> Admission or Death at Emergency Department Triage: Clinical Judgment Versus Early Warning Scores\nType: journal-article\nPublished: 2026-7\nPublisher: Wiley\nCrossref abstract/snippet: ABSTRACT Background Early Warning Scores (EWS) are widely used to standardize the identification of clinical deterioration, yet their comparative performance against clinical judgment in Emergency Department (ED) triage remains uncertain. We aimed to evaluate whether commonly used EWS match or outperform clinical judgment in predicting early adverse outcomes. Methods We conducted a retrospective observational study including 361,927 adult ED presentations at a tertiary‐care academic center from 2015 to 2024. Clinical judgment was operationalized as the triage category assigned at the initial evaluation. Five EWS (NEWS, NEWS2, MEWS, REMS, and ViEWS) were computed using vital signs recorded at ED presentation. The primary outcome was a composite of 24‐h mortality or intensive care unit (ICU) admission. Discrimination, calibration, decision curve analysis, and reclassification metrics were used to compare models. Results The primary outcome occurred in 1.17% of patients. Discriminatory performance was highest for ViEWS (AUC 0.875) and clinical judgment (AUC 0.872), with no significant difference between them. Other EWS demonstrated significantly lower AUCs. In precision–recall and threshold‐based analyses, clinical judgment maintained higher specificity at higher‐risk thresholds while preserving adequate sensitivity. Decision curve analysis showed comparable or greater net benefit for clinical judgment than for all tested EWS across clinically relevant thresholds. Reclassification metrics showed no improvement with EWS over clinical judgment. Conclusion Commonly used EWS did not clearly outperform triage clinical judgment in predicting early ICU admission or death. These findings support further investigation of how structured scores and clinical judgment may provide compl",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-17T21:18:03.822Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42461154",
+          "rank": 1,
+          "clinicalPriorityScore": 8,
+          "rationale_ko": "응급실 초기 분류에서 조기경보점수(NEWS, NEWS2, MEWS, REMS, ViEWS)와 임상판단(분류 등급)을 24시간 사망 또는 ICU 입실 예측력으로 비교한 대규모(N=361,927) 관찰연구로, ViEWS(AUC 0.875)와 임상판단(AUC 0.872)이 유의차 없이 최상위였습니다. EM 임상의의 일상적 트리아지 의사결정에 직접적으로 실무 관련성이 높고, 자동화된 EWS가 숙련된 임상판단을 능가하지 못한다는 실용적 함의를 제공하며 고영향 EM 저널(Academic Emergency Medicine)에 게재되어 뉴스레터 최우선 선정에 적합합니다."
+        }
+      ],
+      "notes_ko": [
+        "후보 대부분은 MIMIC-IV/eICU 기반 후향적 바이오마커·노모그램 연구(예: PMID 42432931, 42462220, 42432930, 42416900)로 임상 실용성이 낮아 우선순위에서 제외했습니다.",
+        "다수의 논문이 신생아·소아 중환자실(PMID 42448611, 42455570) 또는 정신건강/사회역학(PMID 42430168, 42418199, 42446882)으로 성인 EM/CCM 진료와 직접 관련성이 약합니다.",
+        "프로토콜 논문(PMID 42442814, 42431709, 42404 등)과 QI/교육 연구는 결과가 아직 없어 실무 변화 가치가 제한적입니다.",
+        "PMID 42418849(초음파 vs 촉진 윤상갑상막 확인 RCT)는 실무적 가치가 있으나 표본·범위가 좁아 차순위로 평가했습니다.",
+        "최종 선정한 PMID 42461154는 대규모(36만+)로 ED 초기 분류에서 조기경보점수 대 임상판단을 직접 비교해 EM 일상 진료에 즉시 적용 가능한 고수익 근거를 제공합니다."
+      ]
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 7. 18. 오전 6:21</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-07-18</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Assessing Risk of Early ICU Admission or Death at Emergency Department Triage: Clinical Judgment Versus Early Warning Scores.</h2>
+      <div class="paper-meta">
+        Academic emergency medicine : official journal of the Society for Academic Emergency Medicine · 2026-Jul · PMID 42461154
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">Low</span>
+      <span class="pill">Abstract + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Early Warning Scores are increasingly promoted or mandated in EDs, but this large study suggests structured scores do not clearly outperform experienced triage judgment for early adverse outcomes, cautioning against assuming EWS should replace clinician gestalt.</p>
+    <p class="ko">조기경보점수는 응급실에서 점점 더 권장되거나 의무화되고 있으나, 이 대규모 연구는 구조화된 점수가 조기 악화 결과 예측에서 숙련된 분류 판단을 명확히 능가하지 못함을 시사하며 EWS가 임상적 직관을 대체해야 한다는 가정에 신중을 요한다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Retrospective, single-center observational comparative study (registered publication types: Observational Study, Comparative Study). Predictive performance of triage clinical judgment was compared with five computed EWS using discrimination (AUC), calibration, decision curve analysis, and reclassification metrics.</p>
+      <p class="ko">후향적 단일기관 관찰 비교 연구(등록된 출판 유형: 관찰 연구, 비교 연구). 분류 임상 판단의 예측 성능을 판별력(AUC), 보정, 결정곡선분석, 재분류 지표를 사용해 다섯 가지 산출된 EWS와 비교했다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">Tertiary-care academic center. Author affiliations indicate Fondazione Policlinico Universitario A. Gemelli IRCCS and Universita Cattolica del Sacro Cuore, Rome, Italy; ED presentations spanned 2015-2024.</p>
+      <p class="ko">3차 학술 의료기관. 저자 소속은 이탈리아 로마의 Fondazione Policlinico Universitario A. Gemelli IRCCS 및 Universita Cattolica del Sacro Cuore로 표시됨; 응급실 방문은 2015-2024년에 걸침.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">361,927 adult ED presentations were included over 2015-2024. The abstract does not separately report distinct enrolled versus analyzed subpopulations or per-arm denominators (this is a prognostic model comparison, not randomized arms).</p>
+      <p class="ko">2015-2024년 동안 361,927건의 성인 응급실 방문이 포함되었다. 초록은 등록 대비 분석 하위집단이나 군별 분모를 별도로 보고하지 않는다(무작위 배정 군이 아닌 예후 모델 비교임).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Adult ED presentations at the tertiary-care academic center. Exact inclusion/exclusion criteria and handling of missing vital signs are not available in the accessible sources.</p>
+      <p class="ko">3차 학술 의료기관의 성인 응급실 방문. 정확한 포함/제외 기준과 활력징후 결측 처리는 접근 가능한 자료에서 확인할 수 없다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">No treatment intervention; the &#39;index test&#39; was clinical judgment operationalized as the triage category assigned at initial evaluation. No dosing/route applies.</p>
+      <p class="ko">치료 중재는 없음; &#39;지표 검사&#39;는 초기 평가 시 배정된 분류 등급으로 조작적으로 정의된 임상 판단이었다. 용량/투여 경로는 해당되지 않는다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Five Early Warning Scores computed from vital signs recorded at ED presentation: NEWS, NEWS2, MEWS, REMS, and ViEWS. Exact vital-sign components and thresholds are per each published score; specific cutoffs used are not detailed in accessible sources.</p>
+      <p class="ko">응급실 방문 시 기록된 활력징후로 산출된 다섯 가지 조기경보점수: NEWS, NEWS2, MEWS, REMS, ViEWS. 정확한 활력징후 구성요소와 임계값은 각 발표된 점수에 따르며, 사용된 구체적 절단값은 접근 가능한 자료에 상세히 나와 있지 않다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Outcomes assessed within 24 hours of ED presentation (24-h mortality or ICU admission).</p>
+      <p class="ko">결과는 응급실 방문 후 24시간 이내에 평가됨(24시간 사망 또는 중환자실 입실).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract and Crossref snippet for design, sample size, scores, and outcome; PubMed author affiliations for country/setting. No open full text (no PMCID).</p>
+      <p class="ko">설계, 표본 크기, 점수, 결과는 초록 및 Crossref 발췌; 국가/세팅은 PubMed 저자 소속. 오픈 전문 없음(PMCID 없음).</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">361,927 adult ED presentations at a single tertiary-care academic center over 2015-2024. The primary composite outcome occurred in 1.17% of patients, indicating a low event rate typical of undifferentiated ED populations.</p>
+      <p class="ko">2015-2024년 단일 3차 학술 의료기관의 성인 응급실 방문 361,927건. 일차 복합 결과는 환자의 1.17%에서 발생하여 미분화 응급실 인구에서 전형적인 낮은 사건 발생률을 나타낸다.</p>
+      <p class="en"><strong>Setting:</strong> Italy; tertiary-care academic ED (Fondazione Policlinico Universitario A. Gemelli IRCCS / Universita Cattolica del Sacro Cuore, Rome), per public author-affiliation metadata.</p>
+      <p class="ko">이탈리아; 3차 학술 응급실(로마 Fondazione Policlinico Universitario A. Gemelli IRCCS / Universita Cattolica del Sacro Cuore), 공개 저자 소속 메타데이터 기준.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Clinical judgment, operationalized as the triage acuity category assigned by triage staff at initial evaluation, used as a predictor of early adverse outcome.</p>
+      <p class="ko">분류 담당자가 초기 평가 시 배정한 분류 중증도 등급으로 조작적으로 정의된 임상 판단을 조기 악화 결과의 예측 인자로 사용.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Five vital-sign-based Early Warning Scores computed at presentation: NEWS, NEWS2, MEWS, REMS, and ViEWS.</p>
+      <p class="ko">방문 시 산출된 다섯 가지 활력징후 기반 조기경보점수: NEWS, NEWS2, MEWS, REMS, ViEWS.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">Discrimination (AUC) for the composite of 24-h mortality or ICU admission.</p>
+    <p class="ko">24시간 사망 또는 중환자실 입실 복합 결과에 대한 판별력(AUC).</p>
+    <p class="stat-line">ViEWS AUC 0.875 (highest) and clinical judgment AUC 0.872, with no significant difference between them; other EWS (NEWS, NEWS2, MEWS, REMS) had significantly lower AUCs. Event rate 1.17%. · AUC 0.875 (ViEWS) vs 0.872 (clinical judgment), no significant difference; other EWS significantly lower.</p>
+    <p class="ko">ViEWS AUC 0.875(최고)와 임상 판단 AUC 0.872, 둘 사이 유의한 차이 없음; 다른 EWS(NEWS, NEWS2, MEWS, REMS)는 유의하게 낮은 AUC. 사건 발생률 1.17%.</p>
+    <div class="interpretation">ⓘ Clinician triage judgment discriminated early deterioration essentially as well as the top-performing score and better than the rest.<br>임상의 분류 판단은 조기 악화를 최고 성능 점수와 사실상 대등하게, 나머지보다는 더 잘 판별했다.</div>
+    <div class="interpretation primer">ⓘ AUC ranges 0.5 (no better than chance) to 1.0 (perfect); ~0.87 indicates good discrimination, and overlapping/non-significant differences mean models perform comparably.<br>AUC는 0.5(우연 수준)에서 1.0(완벽)까지의 범위이며, 약 0.87은 좋은 판별력을 의미하고, 겹치거나 유의하지 않은 차이는 모델들이 유사하게 작동함을 뜻한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Threshold-based / precision-recall performance and net clinical benefit.</p>
+    <p class="ko">임계값 기반/정밀도-재현율 성능 및 순임상이익.</p>
+    <p class="stat-line">Clinical judgment maintained higher specificity at higher-risk thresholds while preserving adequate sensitivity; decision curve analysis showed comparable or greater net benefit for clinical judgment than all tested EWS; reclassification metrics showed no improvement with EWS over clinical judgment. Exact values not available in accessible sources. · Decision curve analysis (net benefit) and reclassification metrics; no numeric estimates reported in accessible sources.</p>
+    <p class="ko">임상 판단은 고위험 임계값에서 더 높은 특이도를 유지하면서 적절한 민감도를 보존했다; 결정곡선분석에서 임상 판단은 모든 시험된 EWS보다 대등하거나 더 큰 순이익을 보였다; 재분류 지표는 EWS가 임상 판단 대비 개선을 보이지 않았다. 정확한 수치는 접근 가능한 자료에 없음.</p>
+    <div class="interpretation">ⓘ Across clinically relevant decision thresholds, adopting an EWS instead of triage judgment did not add value and sometimes offered less net benefit.<br>임상적으로 관련된 결정 임계값 전반에서 분류 판단 대신 EWS를 채택하는 것은 가치를 더하지 않았고 때로는 더 적은 순이익을 제공했다.</div>
+    <div class="interpretation primer">ⓘ Decision curve net benefit: higher curves across threshold probabilities indicate a more clinically useful model; reclassification (e.g., NRI/IDI) near zero means no meaningful improvement in risk classification.<br>결정곡선 순이익: 임계 확률 전반에서 더 높은 곡선은 임상적으로 더 유용한 모델을 의미하며, 재분류 지표(예: NRI/IDI)가 0에 가까우면 위험 분류에서 의미 있는 개선이 없음을 뜻한다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">ViEWS had the highest discrimination (AUC 0.875) and clinical judgment was nearly identical (AUC 0.872), with no significant difference between them; other EWS (NEWS, NEWS2, MEWS, REMS) had significantly lower AUCs.</p><p class="ko">ViEWS가 가장 높은 판별력(AUC 0.875)을 보였고 임상 판단도 거의 동일했으며(AUC 0.872) 둘 사이에 유의한 차이가 없었다; 다른 EWS(NEWS, NEWS2, MEWS, REMS)는 유의하게 낮은 AUC를 보였다.</p></li>
+<li><p class="en">Clinical judgment maintained higher specificity at higher-risk thresholds while preserving adequate sensitivity in precision-recall and threshold-based analyses.</p><p class="ko">정밀도-재현율 및 임계값 기반 분석에서 임상 판단은 고위험 임계값에서 더 높은 특이도를 유지하면서 적절한 민감도를 보존했다.</p></li>
+<li><p class="en">Decision curve analysis showed comparable or greater net benefit for clinical judgment than all tested EWS, and reclassification metrics showed no improvement with EWS over clinical judgment.</p><p class="ko">결정곡선분석에서 임상 판단은 모든 시험된 EWS보다 대등하거나 더 큰 순이익을 보였고, 재분류 지표에서도 EWS가 임상 판단 대비 개선을 보이지 않았다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Commonly used Early Warning Scores did not clearly outperform triage clinical judgment in predicting early ICU admission or death; only ViEWS matched clinical judgment while the remaining scores were inferior on discrimination. The authors suggest structured scores and clinical judgment may be complementary, particularly for identifying patients whose risk is modifiable by timely escalation of care.</p>
+    <p class="ko">흔히 사용되는 조기경보점수는 조기 중환자실 입실 또는 사망 예측에서 분류 임상 판단을 명확히 능가하지 못했으며, ViEWS만 임상 판단과 대등했고 나머지 점수들은 판별력에서 열등했다. 저자들은 구조화된 점수와 임상 판단이 특히 적시의 치료 강화로 위험이 조정될 수 있는 환자를 식별하는 데 상호 보완적일 수 있다고 제안한다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Single-center, retrospective design from one Italian tertiary academic ED limits generalizability and introduces potential unmeasured confounding and data-quality/missing vital-sign issues. Clinical judgment was operationalized only as the assigned triage category, which may not fully capture clinician reasoning. The composite outcome was rare (1.17%), and calibration and subgroup details, exact confidence intervals, sensitivity/specificity values, and net-benefit figures are not available in the accessible sources. Whether an integrated judgment-plus-EWS approach improves outcomes was not tested prospectively.</p>
+    <p class="ko">이탈리아 단일 3차 학술 응급실의 단일기관 후향적 설계로 일반화 가능성이 제한되며 측정되지 않은 교란 및 자료 품질/활력징후 결측 문제의 가능성이 있다. 임상 판단은 배정된 분류 등급으로만 조작적으로 정의되어 임상의의 추론을 완전히 반영하지 못할 수 있다. 복합 결과는 드물었고(1.17%), 보정 및 하위군 세부사항, 정확한 신뢰구간, 민감도/특이도 값, 순이익 수치는 접근 가능한 자료에서 확인할 수 없다. 판단과 EWS를 통합한 접근이 결과를 개선하는지는 전향적으로 검증되지 않았다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Directly relevant to ED triage and ICU triage workflows. Supports continued reliance on skilled triage assessment while using EWS as an adjunct rather than a substitute. As a single-center retrospective prognostic comparison, it should inform local triage policy discussions rather than mandate practice change, and does not establish whether acting on scores changes patient outcomes.</p>
+    <p class="ko">응급실 분류 및 중환자실 분류 워크플로에 직접 관련된다. EWS를 대체가 아닌 보조로 사용하면서 숙련된 분류 평가에 대한 지속적 의존을 뒷받침한다. 단일기관 후향적 예후 비교이므로 진료 변경을 의무화하기보다는 지역 분류 정책 논의에 참고해야 하며, 점수에 따라 조치하는 것이 환자 결과를 바꾸는지는 입증하지 않는다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Experienced triage judgment remains a strong predictor of early deterioration and should not be discarded in favor of EWS; scores may best serve as a complementary safety net rather than a replacement for clinician assessment.</p>
+    <p class="ko">숙련된 분류 판단은 조기 악화의 강력한 예측 인자로 남아 있으며 EWS로 대체되어서는 안 된다; 점수는 임상의 평가를 대체하기보다는 보완적 안전망으로 활용하는 것이 가장 적절할 수 있다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42461154/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1111/acem.70377" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
