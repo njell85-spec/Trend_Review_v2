@@ -1,0 +1,223 @@
+{
+  "analyses": [
+    {
+      "pmid": "42418849",
+      "title": "Landmark Versus Ultrasound-Guided Identification of the Cricothyroid Membrane: A Randomized, Prospective Trial.",
+      "oneLineSummary": "In stable ED patients undergoing neck CT, ultrasound-guided and landmark palpation methods showed no significant difference in accurately locating the cricothyroid membrane.",
+      "oneLineSummary_ko": "경부 CT를 받는 안정적인 응급실 환자에서 초음파 유도와 촉진 방법은 윤상갑상막 위치 확인 정확도에 유의한 차이가 없었다.",
+      "whyItMatters": "Surgical cricothyrotomy is a rare, time-critical rescue procedure where correct cricothyroid membrane (CTM) identification is essential; whether point-of-care ultrasound improves localization over palpation directly informs difficult-airway preparation.",
+      "whyItMatters_ko": "외과적 윤상갑상막절개술은 드물지만 시간이 중요한 구조 시술로 정확한 윤상갑상막(CTM) 확인이 필수적이며, 초음파가 촉진보다 위치 확인을 개선하는지는 어려운 기도 준비에 직접적인 영향을 준다.",
+      "clinicalQuestion": "In adult patients undergoing neck CT, does point-of-care ultrasound-guided identification of the cricothyroid membrane improve accuracy compared with landmark palpation, using CT as the reference standard?",
+      "clinicalQuestion_ko": "경부 CT를 받는 성인 환자에서 초음파 유도 윤상갑상막 확인이 CT를 기준으로 촉진법에 비해 정확도를 개선하는가?",
+      "studyDetails": {
+        "design": "Prospective randomized controlled trial comparing two CTM identification techniques with neck CT as the reference standard.",
+        "design_ko": "두 가지 CTM 확인 기법을 경부 CT 기준으로 비교한 전향적 무작위 대조 시험.",
+        "setting": "Single university-based tertiary care center; per author affiliations the corresponding department is The George Washington University (Washington DC, USA).",
+        "setting_ko": "단일 대학 기반 3차 진료 센터; 저자 소속에 따르면 교신 부서는 조지워싱턴대학교(미국 워싱턴 DC)이다.",
+        "sampleSize": "67 patients enrolled and analyzed: 31 randomized to ultrasound-guided and 36 to landmark palpation.",
+        "sampleSize_ko": "총 67명 등록 및 분석: 초음파 유도군 31명, 촉진군 36명.",
+        "eligibility": "Adult patients receiving a CT of the neck, identified through the electronic health record. Mean age 54.7 +/- 18.2 years; 56.7% female; median BMI 26.7 (IQR 18.3-35.1).",
+        "eligibility_ko": "전자의무기록으로 확인된 경부 CT를 받는 성인 환자. 평균 연령 54.7±18.2세, 여성 56.7%, 중앙값 BMI 26.7(IQR 18.3-35.1).",
+        "interventionDetails": "Ultrasound-guided (point-of-care ultrasound) visualization of the CTM by emergency physicians; after identification a 1.5 mm radiopaque metallic pellet sticker was placed over the site. Exact ultrasound technique/probe orientation not detailed in the accessible sources.",
+        "interventionDetails_ko": "응급의학과 의사가 초음파(현장 초음파)로 CTM을 시각화하고, 확인 후 1.5mm 방사선비투과 금속 펠릿 스티커를 부착함. 정확한 초음파 기법/탐촉자 방향은 접근 가능한 자료에 상세히 없음.",
+        "comparatorDetails": "Traditional landmark palpation identification of the CTM by emergency physicians, followed by placement of the same 1.5 mm radiopaque pellet marker.",
+        "comparatorDetails_ko": "응급의학과 의사의 전통적 촉진 기반 CTM 확인 후 동일한 1.5mm 방사선비투과 펠릿 표지자 부착.",
+        "followUp": "No longitudinal follow-up; outcome measured on the index neck CT by a blinded neuroradiology fellow or attending measuring marker-to-CTM-midpoint distance.",
+        "followUp_ko": "종단적 추적 없음; 눈가림된 신경영상의학 전임의 또는 전문의가 표지자-CTM 중점 거리를 측정하여 해당 경부 CT에서 결과 측정.",
+        "sourceBasis": "Abstract plus public PubMed and Crossref metadata; no PMCID available for open full-text fetch.",
+        "sourceBasis_ko": "초록과 공개된 PubMed 및 Crossref 메타데이터 기반; 전문 확인을 위한 PMCID 없음."
+      },
+      "pico": {
+        "population": "Adult patients undergoing a neck CT at a tertiary care center",
+        "intervention": "Point-of-care ultrasound-guided identification of the cricothyroid membrane",
+        "comparison": "Traditional landmark palpation identification",
+        "outcome": "Accurate marker placement within 5 mm of the CTM midpoint on CT"
+      },
+      "pico_ko": {
+        "population": "3차 진료 센터에서 경부 CT를 받는 성인 환자",
+        "intervention": "현장 초음파 유도 윤상갑상막 확인",
+        "comparison": "전통적 촉진 기반 확인",
+        "outcome": "CT상 CTM 중점 5mm 이내 정확한 표지자 배치"
+      },
+      "detailedPico": {
+        "population": "Adult patients (mean age 54.7 +/- 18.2 years, 56.7% female, median BMI 26.7) receiving a neck CT at a university-based tertiary care center.",
+        "population_ko": "대학 기반 3차 진료 센터에서 경부 CT를 받는 성인 환자(평균 연령 54.7±18.2세, 여성 56.7%, 중앙값 BMI 26.7).",
+        "countrySetting": "USA; single university-based tertiary care center (corresponding affiliation The George Washington University, Washington DC per public metadata).",
+        "countrySetting_ko": "미국; 단일 대학 기반 3차 진료 센터(공개 메타데이터상 교신 소속은 워싱턴 DC 조지워싱턴대학교).",
+        "intervention": "Emergency physician point-of-care ultrasound-guided CTM identification, marked with a 1.5 mm radiopaque metallic pellet sticker (n=31).",
+        "intervention_ko": "응급의학과 의사의 현장 초음파 유도 CTM 확인 후 1.5mm 방사선비투과 금속 펠릿 스티커 부착(31명).",
+        "comparator": "Emergency physician landmark palpation CTM identification, marked with the same 1.5 mm radiopaque pellet (n=36).",
+        "comparator_ko": "응급의학과 의사의 촉진 기반 CTM 확인 후 동일한 1.5mm 방사선비투과 펠릿 부착(36명).",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Accurate CTM identification (marker within 5 mm radially of CTM midpoint on CT), overall and by technique",
+            "outcome_ko": "정확한 CTM 확인(CT상 CTM 중점에서 반경 5mm 이내 표지자), 전체 및 기법별",
+            "result": "Overall 37/67 (55%) accurate; ultrasound 16/31 (51.6%) vs landmark 21/36 (58%), p = 0.63",
+            "result_ko": "전체 37/67(55%) 정확; 초음파 16/31(51.6%) 대 촉진 21/36(58%), p = 0.63",
+            "statistics": "p = 0.63",
+            "interpretation": "Neither technique clearly outperformed the other, and accuracy was modest (about half) with both methods.",
+            "interpretation_ko": "어느 기법도 명확히 우월하지 않았고, 두 방법 모두 정확도가 약 절반으로 낮았다.",
+            "statPrimer": "A p value >=0.05 (here 0.63) means the observed difference between groups is not statistically significant; this does not prove the methods are equivalent.",
+            "statPrimer_ko": "p값이 0.05 이상(여기서는 0.63)이면 두 군 간 차이가 통계적으로 유의하지 않음을 의미하며, 두 방법이 동등함을 증명하는 것은 아니다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Overall correct marker placement within 5 mm of the CTM midpoint occurred in only 37/67 (55%) of patients.",
+        "Accuracy was 51.6% (16/31) with ultrasound versus 58% (21/36) with landmark palpation, with no significant difference (p = 0.63).",
+        "Authors suggest future studies target higher-BMI patients, in whom palpation may be more challenging."
+      ],
+      "keyFindings_ko": [
+        "CTM 중점 5mm 이내 정확한 표지자 배치는 전체 환자의 37/67(55%)에 불과했다.",
+        "정확도는 초음파 51.6%(16/31) 대 촉진 58%(21/36)로 유의한 차이가 없었다(p = 0.63).",
+        "저자들은 촉진이 더 어려울 수 있는 고BMI 환자를 대상으로 한 향후 연구를 제안한다."
+      ],
+      "conclusion": "In this cohort of adults undergoing neck CT, there was no significant difference in accuracy between landmark and ultrasound-guided identification of the cricothyroid membrane, and both techniques achieved only about 55% accuracy overall.",
+      "conclusion_ko": "경부 CT를 받는 성인 코호트에서 촉진법과 초음파 유도 윤상갑상막 확인 간 정확도에 유의한 차이가 없었으며, 두 기법 모두 전체 정확도가 약 55%에 그쳤다.",
+      "clinicalTakeaway": "Ultrasound did not outperform palpation for locating the CTM in this stable, mostly normal-BMI cohort; clinicians should not assume either method reliably localizes the CTM, and both may be imperfect when a surgical airway is needed.",
+      "clinicalTakeaway_ko": "이 안정적이고 대부분 정상 BMI인 코호트에서 초음파는 CTM 위치 확인에서 촉진보다 우월하지 않았다; 임상의는 어느 방법도 CTM을 확실히 찾는다고 가정해서는 안 되며, 외과적 기도가 필요할 때 두 방법 모두 불완전할 수 있다.",
+      "limitations": "Small single-center study (n=67) likely underpowered to detect a true difference; performed on stable patients undergoing elective/diagnostic neck CT rather than during emergent airway crises; predominantly normal-to-moderate BMI, so it does not address the difficult-palpation obese population the authors flag; operator ultrasound experience, probe technique, and exact dosing/timing details are not available in the accessible sources; a non-significant p value does not establish equivalence.",
+      "limitations_ko": "단일 기관 소규모 연구(n=67)로 실제 차이를 검출하기에 검정력이 부족할 가능성이 높다; 응급 기도 위기 상황이 아닌 진단적 경부 CT를 받는 안정 환자에서 시행됨; 대부분 정상~중등도 BMI로 저자가 지적한 촉진이 어려운 비만 인구를 다루지 못함; 시술자의 초음파 경험, 탐촉자 기법 등 세부사항은 접근 가능한 자료에 없음; 유의하지 않은 p값이 동등성을 입증하지는 않는다.",
+      "edIcuApplicability": "Relevant to ED/ICU difficult-airway and cricothyrotomy preparation. However, the setting (stable patients, elective neck CT, mostly normal BMI, single center) limits direct extrapolation to true emergent front-of-neck access. The main practical message is caution: neither palpation nor ultrasound reliably localized the CTM here, so preparation, backup plans, and training remain important. Findings may differ in the high-BMI patients where imaging guidance is theoretically most valuable.",
+      "edIcuApplicability_ko": "응급실/중환자실의 어려운 기도 및 윤상갑상막절개술 준비와 관련이 있다. 그러나 상황(안정 환자, 선택적 경부 CT, 대부분 정상 BMI, 단일 기관)이 실제 응급 전경부 접근으로의 직접 외삽을 제한한다. 주요 실용적 메시지는 주의이다: 여기서 촉진도 초음파도 CTM을 확실히 찾지 못했으므로 준비, 대비책, 훈련이 여전히 중요하다. 영상 유도가 이론적으로 가장 유용한 고BMI 환자에서는 결과가 다를 수 있다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 5,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Analysis based on abstract plus PubMed and Crossref metadata; no PMCID/open full text available.",
+        "No clinical trial registration ID found in the PubMed record.",
+        "Only one statistical comparison (p = 0.63) reported; no CI, effect estimate, or power calculation available in accessible sources.",
+        "Country/setting (USA, George Washington University) inferred from public author affiliation metadata rather than explicit abstract text."
+      ],
+      "paper": {
+        "pmid": "42418849",
+        "title": "Landmark Versus Ultrasound-Guided Identification of the Cricothyroid Membrane: A Randomized, Prospective Trial.",
+        "abstract": "BACKGROUND: Airway emergencies and respiratory failure represent a frequent reason for Emergency Department (ED) visits. Surgical cricothyrotomy is a critical, time-sensitive procedure, infrequently performed and therefore at risk for complications. Correct identification of the cricothyroid membrane (CTM) has been demonstrated to be reliable and reproducible using point-of-care ultrasound in emergent airway cases.\nOBJECTIVES: This study assessed CTM identification accuracy comparing traditional landmark palpation and point-of-care ultrasound-guided visualization with neck computed tomography (CT) as the reference standard.\nMETHODS: A prospective randomized study was performed at a university-based tertiary care center. Adult patients receiving a CT of the neck were identified through the electronic health record. CTM identification through landmark or ultrasound was performed by emergency physicians following randomization. Once identified, a 1.5 mm radiopaque metallic pellet sticker was placed over the site. A neuroradiology fellow or attending blinded to placement technique of the marker measured the distance between the marker on CT and the midpoint of the CTM. Correct placement was defined as the marker being within a 5 mm distance radially of the CTM midpoint.\nRESULTS/FINDINGS: Sixty-seven patients were enrolled, 31 were randomized to ultrasound-guided and 36 to landmark techniques. The mean age was 54.7 ± 18.2 years, 38 (56.7%) were female. The median body mass index (BMI) was 26.7 (IQR 18.3-35.1); the median BMI for the ultrasound group was 28.5 (IQR 19.5-37.5) and 26.6 (IQR 19.3-33.9) for the landmark group. 37 (55%) had the pellet within 5 mm of the center point of the CTM, with 16/31 (51.6%) accurately placed by ultrasound and 21/36 (58%) accurately placed by landmark (p = 0.63).\nCONCLUSION: No significant difference in accuracy was found between landmark- or ultrasound-guided identification of the cricothyroid membrane in the current cohort. Future studies should focus on patients selected for higher BMI, where palpation may be challenging.",
+        "authors": [
+          "Hoffer M",
+          "Loganathan A",
+          "Nasri FW",
+          "Dow J",
+          "Popova M",
+          "Dearing E",
+          "Jacomino K",
+          "Shahmatdar S"
+        ],
+        "authorAffiliations": [
+          "Department of Emergency Medicine, The George Washington University School of Medicine and Health Sciences, Washington DC.",
+          "Diagnostic Radiology, University of Virginia Health System, Charlottesville, Virginia.",
+          "Department of Emergency Medicine, Northeast Georgia Medical Center, Gainesville, Georgia.",
+          "Department of Emergency Medicine, Maine Health, Portland, Maine.",
+          "Department of Emergency Medicine, AdventHealth, Orlando, Florida.",
+          "David Geffen School of Medicine, University of California Los Angeles, Los Angeles, California.",
+          "Department of Emergency Medicine, The George Washington University School of Medicine and Health Sciences, Washington DC. Electronic address: kboniface@mfa.gwu.edu."
+        ],
+        "journal": "The Journal of emergency medicine",
+        "pubDate": "2026-Aug",
+        "publicationTypes": [
+          "Journal Article",
+          "Randomized Controlled Trial"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Female",
+          "Prospective Studies",
+          "Middle Aged",
+          "Adult",
+          "Cricoid Cartilage",
+          "Male",
+          "Thyroid Cartilage",
+          "Ultrasonography",
+          "Aged",
+          "Ultrasonography, Interventional",
+          "Palpation"
+        ],
+        "keywords": [
+          "cricothyroid membrane (CTM)",
+          "endotracheal intubations",
+          "ultrasound-guided"
+        ],
+        "doi": "10.1016/j.jemermed.2026.05.035",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42418849/",
+        "collectedAt": "2026-07-18T21:17:30.934Z",
+        "screeningData": {
+          "score": 11,
+          "relevanceMatches": [
+            "emergency department",
+            "emergency medicine",
+            "airway",
+            "intubation",
+            "point-of-care ultrasound"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": null,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: emergency department, emergency medicine, airway, intubation",
+            "study design: Randomized Controlled Trial"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42418849\nDOI: 10.1016/j.jemermed.2026.05.035\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Department of Emergency Medicine, The George Washington University School of Medicine and Health Sciences, Washington DC.\n- Diagnostic Radiology, University of Virginia Health System, Charlottesville, Virginia.\n- Department of Emergency Medicine, Northeast Georgia Medical Center, Gainesville, Georgia.\n- Department of Emergency Medicine, Maine Health, Portland, Maine.\n- Department of Emergency Medicine, AdventHealth, Orlando, Florida.\n- David Geffen School of Medicine, University of California Los Angeles, Los Angeles, California.\n- Department of Emergency Medicine, The George Washington University School of Medicine and Health Sciences, Washington DC. Electronic address: kboniface@mfa.gwu.edu.\n\nPublic bibliographic metadata from Crossref:\nTitle: Landmark Versus Ultrasound-Guided Identification of the Cricothyroid Membrane: A Randomized, Prospective Trial\nType: journal-article\nPublished: 2026-8\nPublisher: Elsevier BV",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-18T21:17:57.777Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42418849",
+          "rank": 1,
+          "clinicalPriorityScore": 7.5,
+          "rationale_ko": "응급의학 저널에 게재된 전향적 무작위 배정 연구로, 응급 기도 관리의 핵심인 윤상갑상막(cricothyroid membrane) 식별에서 촉진법과 초음파 유도법을 CT를 기준으로 직접 비교한다. 외과적 윤상갑상절개술은 드물지만 시간에 민감한 고위험 술기로, 정확한 해부학적 위치 식별이 실제 환자 결과에 직결된다. 후보 중 유일하게 EM/CCM 임상의에게 직접적이고 실행 가능한 술기 관련 근거를 제공하는 RCT로, 나머지 후보들(연구 프로토콜, MIMIC-IV 기반 예측/바이오마커 관찰연구, 질적/QI 연구, 신생아·소아 대상 연구)보다 응급실 현장 적용성이 높다."
+        }
+      ],
+      "notes_ko": [
+        "최우선 선정: PMID 42418849 (윤상갑상막 식별 촉진법 vs 초음파 유도 RCT) — 응급 기도 관리에 직접적이고 실행 가능한 술기 근거를 제공하는 유일한 EM 특화 무작위 연구.",
+        "다수 후보(4, 7, 22, 23 등)는 결과가 아닌 연구 프로토콜에 불과해 현재 임상 적용 근거가 없어 제외.",
+        "MIMIC-IV/eICU 데이터베이스 기반 바이오마커·노모그램 예측 연구(8, 14, 16, 20, 26, 27)가 다수였으나, 외부 전향 검증 부족과 즉각적 치료 변경 가능성이 낮아 우선순위에서 제외.",
+        "질적 연구(5), 지식·인식 설문(9), 사회역학/트라우마 관찰연구(10, 11, 24)는 직접적 응급 치료 관련성이 약함.",
+        "메타분석(12 아급성 섬망, 30 PACU 간호 프로토콜)은 관련성은 있으나 EM/CCM 실무 변경 영향이 제한적이어서 후순위.",
+        "PMID 42418849 초록이 최종 정확도 결과 수치가 잘려 완전하지 않으나, 연구 설계와 임상 관련성만으로도 최우선 가치가 명확함."
+      ]
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 7. 19. 오전 6:24</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-07-19</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Landmark Versus Ultrasound-Guided Identification of the Cricothyroid Membrane: A Randomized, Prospective Trial.</h2>
+      <div class="paper-meta">
+        The Journal of emergency medicine · 2026-Aug · PMID 42418849
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Abstract + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Surgical cricothyrotomy is a rare, time-critical rescue procedure where correct cricothyroid membrane (CTM) identification is essential; whether point-of-care ultrasound improves localization over palpation directly informs difficult-airway preparation.</p>
+    <p class="ko">외과적 윤상갑상막절개술은 드물지만 시간이 중요한 구조 시술로 정확한 윤상갑상막(CTM) 확인이 필수적이며, 초음파가 촉진보다 위치 확인을 개선하는지는 어려운 기도 준비에 직접적인 영향을 준다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Prospective randomized controlled trial comparing two CTM identification techniques with neck CT as the reference standard.</p>
+      <p class="ko">두 가지 CTM 확인 기법을 경부 CT 기준으로 비교한 전향적 무작위 대조 시험.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">Single university-based tertiary care center; per author affiliations the corresponding department is The George Washington University (Washington DC, USA).</p>
+      <p class="ko">단일 대학 기반 3차 진료 센터; 저자 소속에 따르면 교신 부서는 조지워싱턴대학교(미국 워싱턴 DC)이다.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">67 patients enrolled and analyzed: 31 randomized to ultrasound-guided and 36 to landmark palpation.</p>
+      <p class="ko">총 67명 등록 및 분석: 초음파 유도군 31명, 촉진군 36명.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Adult patients receiving a CT of the neck, identified through the electronic health record. Mean age 54.7 +/- 18.2 years; 56.7% female; median BMI 26.7 (IQR 18.3-35.1).</p>
+      <p class="ko">전자의무기록으로 확인된 경부 CT를 받는 성인 환자. 평균 연령 54.7±18.2세, 여성 56.7%, 중앙값 BMI 26.7(IQR 18.3-35.1).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Ultrasound-guided (point-of-care ultrasound) visualization of the CTM by emergency physicians; after identification a 1.5 mm radiopaque metallic pellet sticker was placed over the site. Exact ultrasound technique/probe orientation not detailed in the accessible sources.</p>
+      <p class="ko">응급의학과 의사가 초음파(현장 초음파)로 CTM을 시각화하고, 확인 후 1.5mm 방사선비투과 금속 펠릿 스티커를 부착함. 정확한 초음파 기법/탐촉자 방향은 접근 가능한 자료에 상세히 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Traditional landmark palpation identification of the CTM by emergency physicians, followed by placement of the same 1.5 mm radiopaque pellet marker.</p>
+      <p class="ko">응급의학과 의사의 전통적 촉진 기반 CTM 확인 후 동일한 1.5mm 방사선비투과 펠릿 표지자 부착.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">No longitudinal follow-up; outcome measured on the index neck CT by a blinded neuroradiology fellow or attending measuring marker-to-CTM-midpoint distance.</p>
+      <p class="ko">종단적 추적 없음; 눈가림된 신경영상의학 전임의 또는 전문의가 표지자-CTM 중점 거리를 측정하여 해당 경부 CT에서 결과 측정.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract plus public PubMed and Crossref metadata; no PMCID available for open full-text fetch.</p>
+      <p class="ko">초록과 공개된 PubMed 및 Crossref 메타데이터 기반; 전문 확인을 위한 PMCID 없음.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">Adult patients (mean age 54.7 +/- 18.2 years, 56.7% female, median BMI 26.7) receiving a neck CT at a university-based tertiary care center.</p>
+      <p class="ko">대학 기반 3차 진료 센터에서 경부 CT를 받는 성인 환자(평균 연령 54.7±18.2세, 여성 56.7%, 중앙값 BMI 26.7).</p>
+      <p class="en"><strong>Setting:</strong> USA; single university-based tertiary care center (corresponding affiliation The George Washington University, Washington DC per public metadata).</p>
+      <p class="ko">미국; 단일 대학 기반 3차 진료 센터(공개 메타데이터상 교신 소속은 워싱턴 DC 조지워싱턴대학교).</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Emergency physician point-of-care ultrasound-guided CTM identification, marked with a 1.5 mm radiopaque metallic pellet sticker (n=31).</p>
+      <p class="ko">응급의학과 의사의 현장 초음파 유도 CTM 확인 후 1.5mm 방사선비투과 금속 펠릿 스티커 부착(31명).</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Emergency physician landmark palpation CTM identification, marked with the same 1.5 mm radiopaque pellet (n=36).</p>
+      <p class="ko">응급의학과 의사의 촉진 기반 CTM 확인 후 동일한 1.5mm 방사선비투과 펠릿 부착(36명).</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">Accurate CTM identification (marker within 5 mm radially of CTM midpoint on CT), overall and by technique</p>
+    <p class="ko">정확한 CTM 확인(CT상 CTM 중점에서 반경 5mm 이내 표지자), 전체 및 기법별</p>
+    <p class="stat-line">Overall 37/67 (55%) accurate; ultrasound 16/31 (51.6%) vs landmark 21/36 (58%), p = 0.63 · p = 0.63</p>
+    <p class="ko">전체 37/67(55%) 정확; 초음파 16/31(51.6%) 대 촉진 21/36(58%), p = 0.63</p>
+    <div class="interpretation">ⓘ Neither technique clearly outperformed the other, and accuracy was modest (about half) with both methods.<br>어느 기법도 명확히 우월하지 않았고, 두 방법 모두 정확도가 약 절반으로 낮았다.</div>
+    <div class="interpretation primer">ⓘ A p value &gt;=0.05 (here 0.63) means the observed difference between groups is not statistically significant; this does not prove the methods are equivalent.<br>p값이 0.05 이상(여기서는 0.63)이면 두 군 간 차이가 통계적으로 유의하지 않음을 의미하며, 두 방법이 동등함을 증명하는 것은 아니다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Overall correct marker placement within 5 mm of the CTM midpoint occurred in only 37/67 (55%) of patients.</p><p class="ko">CTM 중점 5mm 이내 정확한 표지자 배치는 전체 환자의 37/67(55%)에 불과했다.</p></li>
+<li><p class="en">Accuracy was 51.6% (16/31) with ultrasound versus 58% (21/36) with landmark palpation, with no significant difference (p = 0.63).</p><p class="ko">정확도는 초음파 51.6%(16/31) 대 촉진 58%(21/36)로 유의한 차이가 없었다(p = 0.63).</p></li>
+<li><p class="en">Authors suggest future studies target higher-BMI patients, in whom palpation may be more challenging.</p><p class="ko">저자들은 촉진이 더 어려울 수 있는 고BMI 환자를 대상으로 한 향후 연구를 제안한다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">In this cohort of adults undergoing neck CT, there was no significant difference in accuracy between landmark and ultrasound-guided identification of the cricothyroid membrane, and both techniques achieved only about 55% accuracy overall.</p>
+    <p class="ko">경부 CT를 받는 성인 코호트에서 촉진법과 초음파 유도 윤상갑상막 확인 간 정확도에 유의한 차이가 없었으며, 두 기법 모두 전체 정확도가 약 55%에 그쳤다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Small single-center study (n=67) likely underpowered to detect a true difference; performed on stable patients undergoing elective/diagnostic neck CT rather than during emergent airway crises; predominantly normal-to-moderate BMI, so it does not address the difficult-palpation obese population the authors flag; operator ultrasound experience, probe technique, and exact dosing/timing details are not available in the accessible sources; a non-significant p value does not establish equivalence.</p>
+    <p class="ko">단일 기관 소규모 연구(n=67)로 실제 차이를 검출하기에 검정력이 부족할 가능성이 높다; 응급 기도 위기 상황이 아닌 진단적 경부 CT를 받는 안정 환자에서 시행됨; 대부분 정상~중등도 BMI로 저자가 지적한 촉진이 어려운 비만 인구를 다루지 못함; 시술자의 초음파 경험, 탐촉자 기법 등 세부사항은 접근 가능한 자료에 없음; 유의하지 않은 p값이 동등성을 입증하지는 않는다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Relevant to ED/ICU difficult-airway and cricothyrotomy preparation. However, the setting (stable patients, elective neck CT, mostly normal BMI, single center) limits direct extrapolation to true emergent front-of-neck access. The main practical message is caution: neither palpation nor ultrasound reliably localized the CTM here, so preparation, backup plans, and training remain important. Findings may differ in the high-BMI patients where imaging guidance is theoretically most valuable.</p>
+    <p class="ko">응급실/중환자실의 어려운 기도 및 윤상갑상막절개술 준비와 관련이 있다. 그러나 상황(안정 환자, 선택적 경부 CT, 대부분 정상 BMI, 단일 기관)이 실제 응급 전경부 접근으로의 직접 외삽을 제한한다. 주요 실용적 메시지는 주의이다: 여기서 촉진도 초음파도 CTM을 확실히 찾지 못했으므로 준비, 대비책, 훈련이 여전히 중요하다. 영상 유도가 이론적으로 가장 유용한 고BMI 환자에서는 결과가 다를 수 있다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Ultrasound did not outperform palpation for locating the CTM in this stable, mostly normal-BMI cohort; clinicians should not assume either method reliably localizes the CTM, and both may be imperfect when a surgical airway is needed.</p>
+    <p class="ko">이 안정적이고 대부분 정상 BMI인 코호트에서 초음파는 CTM 위치 확인에서 촉진보다 우월하지 않았다; 임상의는 어느 방법도 CTM을 확실히 찾는다고 가정해서는 안 되며, 외과적 기도가 필요할 때 두 방법 모두 불완전할 수 있다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42418849/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1016/j.jemermed.2026.05.035" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
