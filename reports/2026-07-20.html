@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 7. 20. 오전 6:21</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-07-20</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Effect of goal-directed fluid resuscitation therapy based on peripheral perfusion index on acute skin failure in elderly critically ill patients: A randomized controlled trial.</h2>
+      <div class="paper-meta">
+        Medicine · 2026-Jul-17 · PMID 42469971
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Abstract + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Acute skin failure is common and morbid in elderly ICU patients, and this trial suggests a cheap, noninvasive bedside PPI target may reduce it while improving lactate clearance and limiting cumulative positive fluid balance—an appealing add-on to standard macrohemodynamic resuscitation goals.</p>
+    <p class="ko">급성 피부부전은 고령 중환자에서 흔하고 이환율이 높은데, 이 연구는 저렴하고 비침습적인 침상 PPI 목표가 젖산 청소율을 개선하고 누적 양성 수액균형을 줄이면서 이를 감소시킬 수 있음을 시사하여 기존 대혈역학 소생 목표에 매력적인 보조 지표가 될 수 있다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Single-center prospective, randomized, parallel-controlled trial analyzed by intention-to-treat.</p>
+      <p class="ko">단일기관 전향적, 무작위, 평행 대조 시험으로 치료의도(ITT) 분석.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">Intensive care unit setting; author affiliations indicate Hai&#39;an People&#39;s Hospital and affiliated centers in Nantong, Jiangsu Province, China (per PubMed metadata). Enrollment January–December 2025.</p>
+      <p class="ko">중환자실 환경; 저자 소속은 중국 장쑤성 난퉁의 하이안 인민병원 및 관련 기관(PubMed 메타데이터). 등록 기간 2025년 1~12월.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">216 elderly critically ill patients enrolled; 204 analyzed in the ITT population (103 intervention, 101 control). Reason for the 12-patient reduction is not available in the accessible sources.</p>
+      <p class="ko">고령 중증 환자 216명 등록; ITT 집단에서 204명 분석(중재군 103명, 대조군 101명). 12명 감소 사유는 접근 가능한 자료에 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Elderly critically ill patients requiring early active fluid resuscitation (MeSH: Aged, Aged 80 and over, Critical Illness). Exact age cutoff, severity scores, and exclusion criteria are not available in the accessible sources.</p>
+      <p class="ko">조기 적극적 수액소생술이 필요한 고령 중증 환자(MeSH: 노인, 80세 이상, 중증질환). 정확한 연령 기준, 중증도 점수, 제외 기준은 접근 가능한 자료에 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">PPI-guided goal-directed resuscitation using PPI ≥1.4 as an additional resuscitation endpoint on top of conventional macrohemodynamic goals. Specific fluid types, doses, routes, and total volumes and the PPI measurement device/protocol are not available in the accessible sources.</p>
+      <p class="ko">기존 대혈역학 목표에 더해 PPI ≥1.4를 추가 소생 종료점으로 사용하는 PPI 유도 목표지향 소생술. 구체적 수액 종류·용량·경로·총량 및 PPI 측정 기기/프로토콜은 접근 가능한 자료에 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Conventional resuscitation group managed with fluid therapy based on routine indicators (macrohemodynamic goals) without a PPI target. Specific protocol details not available in the accessible sources.</p>
+      <p class="ko">PPI 목표 없이 통상 지표(대혈역학 목표)에 기반한 수액요법으로 관리된 통상 소생군. 구체적 프로토콜은 접근 가능한 자료에 없음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Primary outcome assessed within 7 days of ICU admission; secondary outcomes included 72-hour fluid balance and 28-day all-cause mortality.</p>
+      <p class="ko">1차 결과는 중환자실 입실 후 7일 이내 평가; 2차 결과는 72시간 수액균형과 28일 전체 사망률 포함.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract (Medicine, 2026), PubMed metadata (affiliations, MeSH), and Crossref metadata (funders, publication data). No PMCID/open full text available.</p>
+      <p class="ko">초록(Medicine, 2026), PubMed 메타데이터(소속, MeSH), Crossref 메타데이터(연구비, 출판 정보). PMCID/공개 전문 없음.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">216 elderly critically ill patients requiring early active fluid resuscitation were enrolled and 204 analyzed by ITT (103 intervention, 101 control). MeSH indicates both sexes and patients aged 65+ including 80+.</p>
+      <p class="ko">조기 적극적 수액소생술이 필요한 고령 중증 환자 216명이 등록되어 204명이 ITT로 분석됨(중재군 103명, 대조군 101명). MeSH상 남녀 모두, 65세 이상(80세 이상 포함).</p>
+      <p class="en"><strong>Setting:</strong> ICUs in China; author affiliations point to Hai&#39;an People&#39;s Hospital and affiliated centers, Nantong, Jiangsu Province (PubMed metadata). Enrollment Jan–Dec 2025.</p>
+      <p class="ko">중국의 중환자실; 저자 소속은 장쑤성 난퉁의 하이안 인민병원 및 관련 기관(PubMed 메타데이터). 등록 2025년 1~12월.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Goal-directed resuscitation adding PPI ≥1.4 as a supplementary target to conventional macrohemodynamic endpoints. Fluid type/dose/route not available in accessible sources.</p>
+      <p class="ko">기존 대혈역학 종료점에 PPI ≥1.4를 보조 목표로 추가한 목표지향 소생술. 수액 종류/용량/경로는 접근 가능한 자료에 없음.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Conventional resuscitation using routine indicators (macrohemodynamic goals) without a PPI target.</p>
+      <p class="ko">PPI 목표 없이 통상 지표(대혈역학 목표)를 사용한 통상 소생술.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">7-day incidence of acute skin failure (ASF)</p>
+    <p class="ko">7일 급성 피부부전(ASF) 발생률</p>
+    <p class="stat-line">14.6% (15/103) intervention vs 29.7% (30/101) control, P = .009 · P = .009; absolute difference ~15.1 percentage points (RR/OR and CI not reported)</p>
+    <p class="ko">중재군 14.6%(15/103) vs 대조군 29.7%(30/101), P = .009</p>
+    <div class="interpretation">ⓘ PPI-guided resuscitation cut the 7-day ASF rate roughly in half, a statistically significant reduction.<br>PPI 유도 소생술은 7일 ASF 발생률을 약 절반으로 줄였으며 통계적으로 유의했다.</div>
+    <div class="interpretation primer">ⓘ P&lt;0.05 is conventionally significant; here P=.009 favors the intervention. An absolute risk difference of ~15% corresponds to roughly 1 fewer ASF case per ~7 patients treated (NNT), though the authors did not report a formal NNT or CI.<br>P&lt;0.05는 통상적으로 유의함을 의미하며, 여기서 P=.009로 중재군에 유리하다. 절대위험차 약 15%는 대략 7명 치료당 1명의 ASF 감소(NNT)에 해당하나 저자가 공식 NNT나 CI는 제시하지 않았다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Median time to ASF onset</p>
+    <p class="ko">ASF 발생까지의 중앙값 시간</p>
+    <p class="stat-line">5.2 days intervention vs 3.1 days control, log-rank P = .012 · log-rank P = .012</p>
+    <p class="ko">중재군 5.2일 vs 대조군 3.1일, 로그순위 P = .012</p>
+    <div class="interpretation">ⓘ Among patients who developed ASF, onset was delayed by about 2 days with PPI guidance.<br>ASF가 발생한 환자에서 PPI 유도 시 발생이 약 2일 지연되었다.</div>
+    <div class="interpretation primer">ⓘ The log-rank test compares time-to-event curves; P&lt;0.05 indicates the timing distributions differ significantly, here favoring later onset with the intervention.<br>로그순위 검정은 사건 발생 시간 곡선을 비교하며, P&lt;0.05는 시간 분포가 유의하게 다름을 의미하고 여기서는 중재군의 늦은 발생에 유리하다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">6-hour lactate clearance rate</p>
+    <p class="ko">6시간 젖산 청소율</p>
+    <p class="stat-line">28.5% ± 12.3% intervention vs 21.8% ± 14.1% control, P = .001 · P = .001 (mean ± SD)</p>
+    <p class="ko">중재군 28.5% ± 12.3% vs 대조군 21.8% ± 14.1%, P = .001</p>
+    <div class="interpretation">ⓘ PPI-guided patients cleared lactate more effectively in the first 6 hours, suggesting better early perfusion.<br>PPI 유도 환자는 초기 6시간 동안 젖산을 더 효과적으로 청소하여 조기 관류가 더 나았음을 시사한다.</div>
+    <div class="interpretation primer">ⓘ Means ± SD compared between groups; P&lt;0.05 indicates the difference is statistically significant. A higher clearance percentage reflects greater lactate reduction.<br>군 간 평균±표준편차 비교; P&lt;0.05는 통계적으로 유의함을 의미한다. 청소율이 높을수록 젖산 감소가 큼을 나타낸다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Cumulative positive fluid balance at 72 hours</p>
+    <p class="ko">72시간 누적 양성 수액균형</p>
+    <p class="stat-line">+1250 ± 980 mL intervention vs +1850 ± 1100 mL control, P &lt; .001 · P &lt; .001 (mean ± SD)</p>
+    <p class="ko">중재군 +1250 ± 980 mL vs 대조군 +1850 ± 1100 mL, P &lt; .001</p>
+    <div class="interpretation">ⓘ PPI guidance was associated with ~600 mL less fluid accumulation, indicating less fluid overload.<br>PPI 유도는 약 600 mL 적은 수액 축적과 연관되어 수액 과부하가 덜함을 나타낸다.</div>
+    <div class="interpretation primer">ⓘ Mean difference between groups; P&lt;0.05 indicates statistical significance. A lower positive balance means less net fluid retained.<br>군 간 평균 차이; P&lt;0.05는 통계적 유의성을 의미한다. 양성 균형이 낮을수록 순 저류 수액이 적음을 뜻한다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">28-day all-cause mortality</p>
+    <p class="ko">28일 전체 사망률</p>
+    <p class="stat-line">No significant difference between groups (exact values not reported) · Reported as nonsignificant; effect estimate and CI not provided</p>
+    <p class="ko">두 군 간 유의한 차이 없음(정확한 수치 미보고)</p>
+    <div class="interpretation">ⓘ The trial did not show a survival benefit, though it was likely underpowered for mortality.<br>이 시험은 생존 이득을 보이지 못했으나 사망률에 대해서는 검정력이 부족했을 가능성이 높다.</div>
+    <div class="interpretation primer">ⓘ &#39;Nonsignificant&#39; means P≥0.05, so no statistically significant difference was established; this does not prove equivalence, especially with a small sample.<br>&#39;유의하지 않음&#39;은 P≥0.05를 의미하여 통계적으로 유의한 차이가 확립되지 않았음을 뜻하며, 특히 표본이 작을 때 동등함을 증명하지는 않는다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">7-day acute skin failure incidence was significantly lower with PPI-guided resuscitation: 14.6% (15/103) vs 29.7% (30/101), P = .009.</p><p class="ko">7일 급성 피부부전 발생률은 PPI 유도 소생술에서 유의하게 낮았다: 14.6%(15/103) vs 29.7%(30/101), P = .009.</p></li>
+<li><p class="en">PPI guidance improved resuscitation quality: higher 6-hour lactate clearance (28.5% ± 12.3% vs 21.8% ± 14.1%, P = .001) and lower 72-hour cumulative positive fluid balance (+1250 ± 980 mL vs +1850 ± 1100 mL, P &lt; .001); time to ASF onset was prolonged (5.2 vs 3.1 days, log-rank P = .012).</p><p class="ko">PPI 유도는 소생 질을 개선했다: 6시간 젖산 청소율 상승(28.5% ± 12.3% vs 21.8% ± 14.1%, P = .001), 72시간 누적 양성 수액균형 감소(+1250 ± 980 mL vs +1850 ± 1100 mL, P &lt; .001); ASF 발생까지 시간 연장(5.2일 vs 3.1일, 로그순위 P = .012).</p></li>
+<li><p class="en">28-day all-cause mortality did not differ significantly between groups.</p><p class="ko">28일 전체 사망률은 두 군 간 유의한 차이가 없었다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">A PPI-based goal-directed fluid resuscitation strategy significantly reduced the risk of acute skin failure in elderly critically ill patients, improved early perfusion markers (lactate clearance), and optimized fluid balance, without a demonstrated mortality benefit. This noninvasive bedside monitoring approach offers a new rationale for protecting skin health during resuscitation.</p>
+    <p class="ko">PPI 기반 목표지향 수액소생술은 고령 중증 환자에서 급성 피부부전 위험을 유의하게 낮추고, 조기 관류 지표(젖산 청소율)를 개선하며 수액균형을 최적화했으나 사망률 이득은 입증되지 않았다. 이 비침습적 침상 모니터링 접근법은 소생 중 피부 건강 보호에 대한 새로운 근거를 제공한다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Single-center trial from one Chinese hospital system limiting generalizability; enrolled 216 but analyzed 204 (attrition reason not available in accessible sources); no reported blinding (skin/perfusion assessment susceptible to bias); acute skin failure definition, PPI measurement device/protocol, and specific fluid types, doses, routes, and total volumes are not available in the accessible sources; the trial was not clearly registered (no ClinicalTrials.gov ID in the PubMed record); effect estimates (RR/OR, absolute risk difference, NNT, CIs) for the primary outcome were not reported beyond raw percentages and P values; likely underpowered for mortality.</p>
+    <p class="ko">단일 중국 병원 시스템의 단일기관 연구로 일반화가 제한됨; 216명 등록 중 204명 분석(탈락 사유는 접근 가능한 자료에 없음); 눈가림 여부 미보고(피부/관류 평가는 편향에 취약); 급성 피부부전 정의, PPI 측정 기기/프로토콜, 구체적 수액 종류·용량·경로·총량은 접근 가능한 자료에 없음; 임상시험 등록이 명확하지 않음(PubMed 기록에 ClinicalTrials.gov ID 없음); 1차 결과의 효과추정치(RR/OR, 절대위험차, NNT, CI)는 원자료 백분율과 P값 외에 보고되지 않음; 사망률에 대해서는 검정력 부족 가능성.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Directly relevant to ED and ICU clinicians resuscitating elderly patients, where PPI is a readily available, noninvasive pulse-oximeter–derived measure. The strategy could be piloted as a supplementary perfusion endpoint alongside lactate and fluid-balance monitoring. However, absence of standardized ASF criteria, PPI protocol specifics, blinding, and multicenter validation means it should be viewed as hypothesis-generating rather than practice-changing until confirmed.</p>
+    <p class="ko">PPI는 맥박산소측정기에서 손쉽게 얻는 비침습적 지표이므로 고령 환자를 소생하는 응급실·중환자실 임상의에게 직접적으로 관련이 있다. 이 전략은 젖산 및 수액균형 모니터링과 함께 보조 관류 지표로 시범 적용해 볼 수 있다. 그러나 표준화된 ASF 기준, PPI 프로토콜 세부사항, 눈가림, 다기관 검증이 없으므로 확증 전까지는 진료를 바꾸기보다 가설 생성 연구로 보아야 한다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Consider adding a noninvasive PPI target (≥1.4) to conventional macrohemodynamic endpoints in elderly ICU patients undergoing fluid resuscitation to reduce acute skin failure and avoid fluid overload, recognizing this is a single-center trial with no mortality benefit and no accessible protocol details on PPI measurement or fluid dosing.</p>
+    <p class="ko">수액소생술을 받는 고령 중환자에서 급성 피부부전 감소와 수액 과부하 회피를 위해 기존 대혈역학 지표에 비침습적 PPI 목표(≥1.4)를 추가하는 것을 고려할 수 있으나, 이는 단일기관 연구로 사망률 이득이 없고 PPI 측정·수액 용량에 대한 상세 프로토콜을 확인할 수 없다는 점을 유의해야 한다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42469971/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.1097/MD.0000000000049879" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>
