@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trend Review</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #667084;
+      --line: #dde5ee;
+      --page: #f5f7fb;
+      --paper: #ffffff;
+      --teal: #0f766e;
+      --blue: #28559a;
+      --violet: #684a8e;
+      --amber: #90661c;
+      --red: #a9473e;
+      --soft-teal: #e7f4f1;
+      --soft-blue: #edf3ff;
+      --soft-violet: #f2edfa;
+      --soft-amber: #fff5df;
+      --soft-red: #fff0ee;
+      --shadow: 0 12px 32px rgba(23, 32, 47, .08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--blue);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .wrap {
+      width: min(100% - 28px, 980px);
+      margin: 0 auto;
+    }
+    .mast {
+      background: linear-gradient(180deg, #fff, #f9fbfd);
+      border-bottom: 1px solid var(--line);
+    }
+    .mast-inner {
+      padding: 22px 0 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(1.7rem, 5vw, 2.45rem);
+      line-height: 1.06;
+      letter-spacing: 0;
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+      max-width: 58rem;
+    }
+    .run-state {
+      display: grid;
+      justify-items: end;
+      gap: 3px;
+      color: var(--muted);
+      font-size: .78rem;
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+    .run-state strong {
+      color: var(--teal);
+      font-size: .9rem;
+      text-transform: uppercase;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 9px;
+    }
+    .stat {
+      min-width: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 11px 12px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.35rem;
+      line-height: 1.1;
+    }
+    .stat span {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    main {
+      padding: 16px 0 36px;
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    details[open] {
+      box-shadow: var(--shadow);
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+    }
+    summary::-webkit-details-marker { display: none; }
+    .day-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px 14px;
+      background: linear-gradient(90deg, #fff, #f8fbfd);
+      border-bottom: 1px solid transparent;
+    }
+    details[open] > .day-summary {
+      border-bottom-color: var(--line);
+    }
+    .day-title {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      min-width: 0;
+    }
+    .date {
+      font-weight: 850;
+      font-size: 1.02rem;
+    }
+    .chevron {
+      width: 27px;
+      height: 27px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      background: var(--soft-blue);
+      color: var(--blue);
+      font-weight: 900;
+      transition: transform .15s ease;
+    }
+    details[open] > summary .chevron {
+      transform: rotate(90deg);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 24px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: .74rem;
+      font-weight: 720;
+      white-space: nowrap;
+    }
+    .pill.teal { border-color: #bfe0d9; background: var(--soft-teal); color: var(--teal); }
+    .pill.blue { border-color: #cddbf7; background: var(--soft-blue); color: var(--blue); }
+    .pill.amber { border-color: #efd8a8; background: var(--soft-amber); color: var(--amber); }
+    .day-body {
+      padding: 12px;
+      display: grid;
+      gap: 10px;
+      background: #fbfcfe;
+    }
+    .paper {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .paper[open] {
+      border-color: rgba(15, 118, 110, .45);
+      box-shadow: none;
+    }
+    .paper-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 13px;
+    }
+    .paper-title {
+      margin: 0;
+      font-size: clamp(.98rem, 2.4vw, 1.18rem);
+      line-height: 1.32;
+      font-weight: 850;
+      letter-spacing: 0;
+    }
+    .paper-meta {
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    .paper-body {
+      border-top: 1px solid var(--line);
+      padding: 13px;
+      display: grid;
+      gap: 12px;
+      background: #fbfcfe;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .section-head {
+      padding: 10px 11px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+    }
+    .section h3 {
+      margin: 0;
+      font-size: .86rem;
+      letter-spacing: 0;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: .72rem;
+      white-space: nowrap;
+    }
+    .section-body {
+      padding: 11px;
+      display: grid;
+      gap: 8px;
+    }
+    .en {
+      margin: 0;
+      font-size: .91rem;
+    }
+    .ko {
+      margin: 0;
+      color: #526075;
+      font-size: .86rem;
+    }
+    .why {
+      border-left: 4px solid var(--teal);
+      background: linear-gradient(90deg, var(--soft-teal), #fff);
+    }
+    .pico-grid {
+      display: grid;
+      gap: 8px;
+    }
+    .pico-row {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      border: 1px solid #e3e9f2;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .pico-label {
+      display: grid;
+      place-items: center;
+      background: #f0f4f8;
+      color: var(--blue);
+      font-weight: 850;
+    }
+    .pico-content {
+      padding: 9px 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .pico-name {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 790;
+      text-transform: uppercase;
+    }
+    .outcomes {
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .outcome {
+      border: 1px solid #d8e4f3;
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 10px;
+      display: grid;
+      gap: 5px;
+    }
+    .outcome-label {
+      color: var(--blue);
+      font-size: .8rem;
+      font-weight: 850;
+    }
+    .stat-line {
+      color: #324259;
+      font-size: .83rem;
+      font-weight: 720;
+    }
+    .interpretation {
+      margin-top: 2px;
+      padding: 8px 9px;
+      border-radius: 7px;
+      background: #f3f6fb;
+      color: #536076;
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+    .primer {
+      background: #fff8e8;
+      color: #6c5520;
+      border: 1px solid #ead8a7;
+    }
+    .points {
+      margin: 0;
+      padding-left: 1.1rem;
+      display: grid;
+      gap: 6px;
+    }
+    .bottom {
+      background: #121a27;
+      color: #f8fafc;
+      border-color: #121a27;
+    }
+    .bottom .section-head {
+      border-bottom-color: rgba(255,255,255,.14);
+    }
+    .bottom .ko {
+      color: #cbd5e1;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: .82rem;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 18px 0 28px;
+      color: var(--muted);
+      text-align: center;
+      font-size: .78rem;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100% - 22px, 980px); }
+      .topline,
+      .day-summary,
+      .paper-summary {
+        grid-template-columns: 1fr;
+      }
+      .run-state {
+        justify-items: start;
+        white-space: normal;
+      }
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .chevron {
+        justify-self: end;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="mast">
+    <div class="wrap mast-inner">
+      <div class="topline">
+        <div>
+          <h1>EM/CCM Trend Review</h1>
+          <p class="subtitle">PubMed 후보 30개에서 Gemini가 1개를 선정하고, 공개 원문이 있으면 PMC 본문까지 반영해 분석합니다.</p>
+        </div>
+        <div class="run-state">
+          <strong>success</strong>
+          <span>2026. 7. 22. 오전 6:21</span>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>Archive Days</span></div>
+        <div class="stat"><b>300</b><span>Latest Fetched</span></div>
+        <div class="stat"><b>30</b><span>Latest Screened</span></div>
+        <div class="stat"><b>1</b><span>Latest Reports</span></div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <details class="day" open>
+  <summary class="day-summary">
+    <div class="day-title">
+      <span class="date">2026-07-22</span>
+      <span class="pill teal">Latest</span>
+      <span class="pill blue">1 report</span>
+      <span class="pill">180-day window</span>
+      <span class="pill amber">LLM analysis</span>
+    </div>
+    <span class="chevron">›</span>
+  </summary>
+  <div class="day-body">
+    <details class="paper">
+  <summary class="paper-summary">
+    <div>
+      <h2 class="paper-title">Paramedic analgesia comparing ketamine and morphine in trauma. A synopsis of the PACKMaN double-blind RCT.</h2>
+      <div class="paper-meta">
+        Health technology assessment (Winchester, England) · 2026-Jul · PMID 42474064
+      </div>
+    </div>
+    <div class="day-title">
+      <span class="pill teal">#1</span>
+      <span class="pill blue">RCT</span>
+      <span class="pill">Abstract + metadata</span>
+      <span class="chevron">›</span>
+    </div>
+  </summary>
+  <div class="paper-body">
+    <section class="section why">
+  <div class="section-head">
+    <h3>Why It Matters</h3>
+    <span class="section-sub">clinical relevance</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Morphine is the standard prehospital strong analgesic but carries risks of hypotension, respiratory depression, and dependency; this large double-blind RCT provides high-quality head-to-head evidence on whether ketamine is a better or at least equivalent, safe option for paramedics.</p>
+    <p class="ko">모르핀은 표준적인 병원 전 강력 진통제이지만 저혈압, 호흡 억제, 의존성 위험이 있다. 이 대규모 이중맹검 RCT는 케타민이 구급대원에게 더 낫거나 최소한 동등하고 안전한 대안인지에 대한 고품질의 직접 비교 근거를 제공한다.</p>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Study Details</h3>
+    <span class="section-sub">methods and source basis</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">D</div>
+    <div class="pico-content">
+      <div class="pico-name">Design</div>
+      <p class="en">Double-blind, randomised controlled, superiority trial (PACKMaN); also indexed as an equivalence/comparative study. NIHR HTA-funded synopsis.</p>
+      <p class="ko">이중맹검, 무작위 대조, 우월성 시험(PACKMaN); 동등성/비교 연구로도 색인됨. NIHR HTA 지원 요약본.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Setting</div>
+      <p class="en">UK prehospital/ambulance setting. Author affiliations indicate West Midlands Ambulance Service University NHS Foundation Trust and Yorkshire Ambulance Service NHS Trust, coordinated by the University of Warwick Clinical Trials Unit.</p>
+      <p class="ko">영국 병원 전/구급차 환경. 저자 소속으로 볼 때 West Midlands Ambulance Service와 Yorkshire Ambulance Service가 참여했으며 워릭대학교 임상시험단이 조율함.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Sample Size</div>
+      <p class="en">449 participants randomised: 219 (49%) received ketamine and 230 (51%) received morphine. Separate ITT/per-protocol/safety denominators beyond these figures are not detailed in the accessible sources.</p>
+      <p class="ko">총 449명 무작위 배정: 219명(49%) 케타민, 230명(51%) 모르핀 투여. 이 수치 외 별도의 ITT/프로토콜순응/안전성 분석 대상자 수는 접근 가능한 자료에 상세히 나와 있지 않음.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">E</div>
+    <div class="pico-content">
+      <div class="pico-name">Eligibility</div>
+      <p class="en">Patients aged 16 years or over with an acute injury who articulated a pain score of 7 or greater on a 0-10 numeric rating scale. Excluded: pregnant patients, prisoners, those unable to articulate a pain score, and anyone lacking capacity.</p>
+      <p class="ko">급성 손상이 있고 0-10 숫자 통증 척도에서 7점 이상을 호소한 16세 이상 환자. 제외: 임신부, 수감자, 통증 점수를 표현할 수 없는 자, 판단능력이 없는 자.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention Details</div>
+      <p class="en">Ketamine titrated to effect, maximum dose 30 mg, administered by paramedics. Exact route and titration increments are not detailed in the accessible sources (parenteral prehospital administration implied).</p>
+      <p class="ko">효과에 따라 적정 투여한 케타민, 최대 용량 30 mg, 구급대원이 투여. 정확한 투여 경로와 적정 증량 단위는 접근 가능한 자료에 상세히 나와 있지 않음(병원 전 비경구 투여로 추정).</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator Details</div>
+      <p class="en">Morphine titrated to effect, maximum dose 20 mg, administered by paramedics under double-blind conditions.</p>
+      <p class="ko">효과에 따라 적정 투여한 모르핀, 최대 용량 20 mg, 이중맹검 조건에서 구급대원이 투여.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">F</div>
+    <div class="pico-content">
+      <div class="pico-name">Follow-up</div>
+      <p class="en">Pain outcomes assessed acutely (Sum of Pain Intensity Difference). Longer-term outcomes assessed at 3 and 6 months, which experienced loss to follow-up.</p>
+      <p class="ko">통증 결과는 급성기에 평가(통증 강도 차이 합산 점수). 장기 결과는 3개월과 6개월에 평가했으며 추적 소실이 발생함.</p>
+    </div>
+  </div>
+<div class="pico-row">
+    <div class="pico-label">S</div>
+    <div class="pico-content">
+      <div class="pico-name">Source Basis</div>
+      <p class="en">Abstract and public PubMed/Crossref metadata; no PMCID available for open full-text fetch.</p>
+      <p class="ko">초록 및 공개 PubMed/Crossref 메타데이터 기반; 전문 확보를 위한 PMCID 없음.</p>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>PICO</h3>
+    <span class="section-sub">English first, Korean paired</span>
+  </div>
+  <div class="section-body pico-grid">
+    <div class="pico-row">
+    <div class="pico-label">P</div>
+    <div class="pico-content">
+      <div class="pico-name">Population</div>
+      <p class="en">449 UK prehospital patients aged 16 or over with acute injury and self-reported pain score of 7 or higher on a 0-10 numeric rating scale; pregnant patients, prisoners, those unable to articulate a pain score, and those lacking capacity were excluded.</p>
+      <p class="ko">급성 손상과 0-10 숫자 척도에서 스스로 보고한 통증 점수 7점 이상을 가진 16세 이상 영국 병원 전 환자 449명; 임신부, 수감자, 통증 점수를 표현할 수 없는 자, 판단능력 결여자는 제외됨.</p>
+      <p class="en"><strong>Setting:</strong> United Kingdom; prehospital ambulance services (per affiliations, West Midlands and Yorkshire Ambulance Services), University of Warwick CTU coordination.</p>
+      <p class="ko">영국; 병원 전 구급 서비스(소속상 West Midlands 및 Yorkshire 구급 서비스), 워릭대학교 임상시험단 조율.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">I</div>
+    <div class="pico-content">
+      <div class="pico-name">Intervention</div>
+      <p class="en">Ketamine titrated to effect with a maximum dose of 30 mg, given by paramedics under double-blind conditions.</p>
+      <p class="ko">이중맹검 조건에서 구급대원이 효과에 따라 적정 투여한 케타민, 최대 용량 30 mg.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">C</div>
+    <div class="pico-content">
+      <div class="pico-name">Comparator</div>
+      <p class="en">Morphine titrated to effect with a maximum dose of 20 mg, given by paramedics under double-blind conditions.</p>
+      <p class="ko">이중맹검 조건에서 구급대원이 효과에 따라 적정 투여한 모르핀, 최대 용량 20 mg.</p>
+    </div>
+  </div>
+    <div class="pico-row">
+    <div class="pico-label">O</div>
+    <div class="pico-content">
+      <div class="pico-name">Outcomes</div>
+      <div class="outcomes">
+        <div class="outcome">
+    <div class="outcome-label">Primary</div>
+    <p class="en">Sum of Pain Intensity Difference (SPID) score</p>
+    <p class="ko">통증 강도 차이 합산(SPID) 점수</p>
+    <p class="stat-line">Ketamine 3.5 (SD 2.8) vs morphine 3.4 (SD 3.0); adjusted mean difference 0.1 (95% CI -0.4 to 0.6; p = 0.7) · Adjusted mean difference 0.1, 95% CI -0.4 to 0.6, p = 0.7</p>
+    <p class="ko">케타민 3.5 (SD 2.8) 대 모르핀 3.4 (SD 3.0); 보정 평균차 0.1 (95% CI -0.4~0.6; p = 0.7)</p>
+    <div class="interpretation">ⓘ Overall pain reduction was essentially identical between the two drugs; the trial did not demonstrate ketamine superiority.<br>두 약물 간 전체 통증 감소는 사실상 동일했으며, 시험은 케타민의 우월성을 입증하지 못했다.</div>
+    <div class="interpretation primer">ⓘ For a mean difference, 0 means no difference between groups; a 95% CI that includes 0 and a p-value of 0.7 (well above 0.05) indicate no statistically significant difference.<br>평균차에서 0은 두 군 간 차이가 없음을 의미한다. 0을 포함하는 95% CI와 0.05보다 훨씬 큰 p값 0.7은 통계적으로 유의한 차이가 없음을 나타낸다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Achievement of &#39;very much improvement&#39;</p>
+    <p class="ko">&#39;매우 큰 호전&#39; 달성</p>
+    <p class="stat-line">Odds ratio 1.58 (95% CI 1.08 to 2.31; p = 0.019) favouring ketamine · OR 1.58, 95% CI 1.08 to 2.31, p = 0.019</p>
+    <p class="ko">오즈비 1.58 (95% CI 1.08~2.31; p = 0.019), 케타민에 유리</p>
+    <div class="interpretation">ⓘ Patients on ketamine were more likely to report the highest category of improvement than those on morphine.<br>케타민을 투여받은 환자가 모르핀보다 최고 등급의 호전을 보고할 가능성이 더 높았다.</div>
+    <div class="interpretation primer">ⓘ For an odds ratio, 1 means no difference; above 1 means higher odds with ketamine. The 95% CI (1.08-2.31) excludes 1 and p&lt;0.05, so this is statistically significant.<br>오즈비에서 1은 차이 없음을 의미하고 1보다 크면 케타민에서 오즈가 더 높음을 뜻한다. 95% CI(1.08~2.31)가 1을 포함하지 않고 p&lt;0.05이므로 통계적으로 유의하다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Speed to achieve improvement</p>
+    <p class="ko">호전 도달 속도</p>
+    <p class="stat-line">Hazard ratio 1.42 (95% CI 1.09 to 1.84; p = 0.009) favouring faster response with ketamine · HR 1.42, 95% CI 1.09 to 1.84, p = 0.009</p>
+    <p class="ko">위험비 1.42 (95% CI 1.09~1.84; p = 0.009), 케타민에서 더 빠른 반응에 유리</p>
+    <div class="interpretation">ⓘ Ketamine achieved improvement more rapidly than morphine.<br>케타민이 모르핀보다 더 빠르게 호전을 이끌어냈다.</div>
+    <div class="interpretation primer">ⓘ For a hazard ratio on time-to-improvement, 1 means no difference; above 1 means the event (improvement) occurs faster with ketamine. The 95% CI excludes 1 and p&lt;0.05, so significant.<br>호전까지의 시간에 대한 위험비에서 1은 차이 없음을 의미하고, 1보다 크면 케타민에서 사건(호전)이 더 빨리 발생함을 뜻한다. 95% CI가 1을 포함하지 않고 p&lt;0.05이므로 유의하다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Secondary</div>
+    <p class="en">Duration of analgesic effect</p>
+    <p class="ko">진통 효과 지속시간</p>
+    <p class="stat-line">Hazard ratio 1.28 (95% CI 1.05 to 1.56; p = 0.013) indicating morphine lasted longer than ketamine · HR 1.28, 95% CI 1.05 to 1.56, p = 0.013</p>
+    <p class="ko">위험비 1.28 (95% CI 1.05~1.56; p = 0.013), 모르핀이 케타민보다 더 오래 지속됨을 시사</p>
+    <div class="interpretation">ⓘ Morphine provided a longer-lasting analgesic effect than ketamine.<br>모르핀이 케타민보다 더 오래 지속되는 진통 효과를 제공했다.</div>
+    <div class="interpretation primer">ⓘ This hazard ratio describes the risk of pain returning; above 1 means the effect wore off sooner (favouring morphine for duration). The 95% CI excludes 1 and p&lt;0.05, so significant.<br>이 위험비는 통증이 다시 나타날 위험을 나타내며, 1보다 크면 효과가 더 빨리 사라짐(지속시간 면에서 모르핀에 유리)을 의미한다. 95% CI가 1을 포함하지 않고 p&lt;0.05이므로 유의하다.</div>
+  </div>
+<div class="outcome">
+    <div class="outcome-label">Safety</div>
+    <p class="en">Serious adverse events</p>
+    <p class="ko">중대 이상반응</p>
+    <p class="stat-line">No evidence of a significant difference in serious adverse events between drugs · No significant difference reported; exact counts not available in the accessible sources</p>
+    <p class="ko">두 약물 간 중대 이상반응에서 유의한 차이의 근거 없음</p>
+    <div class="interpretation">ⓘ Ketamine appeared as safe as morphine in this paramedic-administered setting.<br>구급대원 투여 환경에서 케타민은 모르핀만큼 안전해 보였다.</div>
+    <div class="interpretation primer">ⓘ When a comparison shows no significant difference, the data do not establish that one drug causes more serious harm than the other, though safety is not the same as proven equivalence.<br>비교에서 유의한 차이가 없다는 것은 한 약물이 다른 약물보다 더 심각한 위해를 유발한다고 입증되지 않았음을 뜻하며, 안전성이 곧 동등성 입증과 같은 것은 아니다.</div>
+  </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+    <section class="section">
+  <div class="section-head">
+    <h3>Key Findings</h3>
+    <span class="section-sub">reported results</span>
+  </div>
+  <div class="section-body">
+    <ul class="points">
+      <li><p class="en">Paramedic ketamine was not superior to morphine on the primary SPID outcome (adjusted mean difference 0.1, 95% CI -0.4 to 0.6, p = 0.7).</p><p class="ko">구급대원 케타민은 1차 SPID 결과에서 모르핀보다 우월하지 않았다(보정 평균차 0.1, 95% CI -0.4~0.6, p = 0.7).</p></li>
+<li><p class="en">Ketamine achieved &#39;very much improvement&#39; more often (OR 1.58, 95% CI 1.08-2.31) and more rapidly (HR 1.42, 95% CI 1.09-1.84), but morphine&#39;s effect lasted longer (HR 1.28, 95% CI 1.05-1.56).</p><p class="ko">케타민은 &#39;매우 큰 호전&#39;을 더 자주(OR 1.58, 95% CI 1.08~2.31), 더 빠르게(HR 1.42, 95% CI 1.09~1.84) 달성했으나 모르핀의 효과는 더 오래 지속되었다(HR 1.28, 95% CI 1.05~1.56).</p></li>
+<li><p class="en">No significant difference in serious adverse events; ketamine is a safe alternative for paramedic use.</p><p class="ko">중대 이상반응에 유의한 차이가 없었으며, 케타민은 구급대원 사용에 안전한 대안이다.</p></li>
+    </ul>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Conclusion</h3>
+    <span class="section-sub">author-level conclusion</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Ketamine does not provide superior analgesia to morphine for acute severe trauma pain in the prehospital setting, but it is a suitable and safe alternative for paramedic administration, with faster onset and higher likelihood of marked improvement offset by shorter duration.</p>
+    <p class="ko">케타민은 병원 전 단계 급성 중증 외상 통증에서 모르핀보다 우월한 진통 효과를 제공하지 않지만, 더 빠른 발현과 뚜렷한 호전 가능성이 더 짧은 지속시간과 상쇄되면서 구급대원 투여에 적합하고 안전한 대안이다.</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>Limitations</h3>
+    <span class="section-sub">what weakens confidence</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Only patients with capacity to provide verbal assent were recruited, likely excluding the most severely injured and limiting generalisability. A planned sensitivity analysis comparing minor versus severe injuries could not be completed. Loss to follow-up at 3 and 6 months may have underpowered long-term outcome findings. Exact dosing route, titration protocol, and detailed safety event counts are not available in the accessible abstract/metadata (no open full text).</p>
+    <p class="ko">구두 동의를 제공할 능력이 있는 환자만 모집되어 가장 중증 손상 환자는 배제되었을 가능성이 높아 일반화 가능성이 제한된다. 경증 대 중증 손상을 비교하는 계획된 민감도 분석을 완료하지 못했다. 3개월 및 6개월 추적 소실로 장기 결과의 검정력이 부족했을 수 있다. 정확한 투여 경로, 적정 프로토콜, 상세한 안전성 사건 수는 접근 가능한 초록/메타데이터에 없다(전문 미공개).</p>
+  </div>
+</section>
+    <section class="section ">
+  <div class="section-head">
+    <h3>ED / ICU Applicability</h3>
+    <span class="section-sub">practice consideration</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Highly relevant to prehospital and ED analgesia decisions for severe trauma pain. Supports ketamine as a safe, effective alternative to morphine when opioid side effects (hypotension, respiratory depression, dependency) are a concern, with faster onset but shorter duration. Findings apply best to patients able to report pain and consent, so extrapolation to the most severely injured or obtunded patients is uncertain. Dosing caps (ketamine 30 mg, morphine 20 mg, titrated) provide a practical reference.</p>
+    <p class="ko">중증 외상 통증에 대한 병원 전 및 응급실 진통 결정에 매우 관련이 있다. 오피오이드 부작용(저혈압, 호흡 억제, 의존성)이 우려될 때 케타민을 모르핀의 안전하고 효과적인 대안으로 뒷받침하며, 발현이 더 빠르나 지속시간은 짧다. 결과는 통증을 보고하고 동의할 수 있는 환자에 가장 적합하므로 가장 중증이거나 의식이 저하된 환자로의 확대 적용은 불확실하다. 용량 상한(케타민 30 mg, 모르핀 20 mg, 적정)은 실용적 참고가 된다.</p>
+  </div>
+</section>
+    <section class="section bottom">
+  <div class="section-head">
+    <h3>Bottom Line</h3>
+    <span class="section-sub">mobile summary</span>
+  </div>
+  <div class="section-body">
+    <p class="en">Ketamine and morphine offer comparable overall prehospital trauma analgesia; ketamine can be used safely by paramedics and may act faster, while morphine may provide longer-lasting relief—drug choice can be individualized by patient factors and contraindications.</p>
+    <p class="ko">케타민과 모르핀은 병원 전 외상 진통에서 전반적으로 유사한 효과를 보인다. 케타민은 구급대원이 안전하게 사용할 수 있고 더 빨리 작용할 수 있으며, 모르핀은 더 오래 지속될 수 있어 환자 요인과 금기에 따라 약물 선택을 개별화할 수 있다.</p>
+  </div>
+</section>
+    <section class="section">
+    <div class="section-head">
+      <h3>Links</h3>
+      <span class="section-sub">source</span>
+    </div>
+    <div class="section-body links"><a href="https://pubmed.ncbi.nlm.nih.gov/42474064/" target="_blank" rel="noopener">PubMed</a> · <a href="https://doi.org/10.3310/KGTO6391" target="_blank" rel="noopener">DOI</a></div>
+  </section>
+  </div>
+</details>
+  </div>
+</details>
+  </main>
+  <footer>
+    Trend Review v2 · PubMed / PMC / Gemini · Reading aid, not a clinical decision system
+  </footer>
+</body>
+</html>

@@ -1,0 +1,274 @@
+{
+  "analyses": [
+    {
+      "pmid": "42474064",
+      "title": "Paramedic analgesia comparing ketamine and morphine in trauma. A synopsis of the PACKMaN double-blind RCT.",
+      "oneLineSummary": "In prehospital severe trauma pain, paramedic-administered ketamine was not superior to morphine for pain relief but was a safe alternative.",
+      "oneLineSummary_ko": "병원 전 단계 중증 외상 통증에서 구급대원이 투여한 케타민은 모르핀보다 진통 효과가 우수하지 않았으나 안전한 대안이었다.",
+      "whyItMatters": "Morphine is the standard prehospital strong analgesic but carries risks of hypotension, respiratory depression, and dependency; this large double-blind RCT provides high-quality head-to-head evidence on whether ketamine is a better or at least equivalent, safe option for paramedics.",
+      "whyItMatters_ko": "모르핀은 표준적인 병원 전 강력 진통제이지만 저혈압, 호흡 억제, 의존성 위험이 있다. 이 대규모 이중맹검 RCT는 케타민이 구급대원에게 더 낫거나 최소한 동등하고 안전한 대안인지에 대한 고품질의 직접 비교 근거를 제공한다.",
+      "clinicalQuestion": "In patients with severe acute trauma pain, does paramedic-administered ketamine provide superior analgesia and cost-effectiveness compared with morphine?",
+      "clinicalQuestion_ko": "중증 급성 외상 통증 환자에서 구급대원이 투여한 케타민이 모르핀에 비해 우월한 진통 효과와 비용 효과성을 제공하는가?",
+      "studyDetails": {
+        "design": "Double-blind, randomised controlled, superiority trial (PACKMaN); also indexed as an equivalence/comparative study. NIHR HTA-funded synopsis.",
+        "design_ko": "이중맹검, 무작위 대조, 우월성 시험(PACKMaN); 동등성/비교 연구로도 색인됨. NIHR HTA 지원 요약본.",
+        "setting": "UK prehospital/ambulance setting. Author affiliations indicate West Midlands Ambulance Service University NHS Foundation Trust and Yorkshire Ambulance Service NHS Trust, coordinated by the University of Warwick Clinical Trials Unit.",
+        "setting_ko": "영국 병원 전/구급차 환경. 저자 소속으로 볼 때 West Midlands Ambulance Service와 Yorkshire Ambulance Service가 참여했으며 워릭대학교 임상시험단이 조율함.",
+        "sampleSize": "449 participants randomised: 219 (49%) received ketamine and 230 (51%) received morphine. Separate ITT/per-protocol/safety denominators beyond these figures are not detailed in the accessible sources.",
+        "sampleSize_ko": "총 449명 무작위 배정: 219명(49%) 케타민, 230명(51%) 모르핀 투여. 이 수치 외 별도의 ITT/프로토콜순응/안전성 분석 대상자 수는 접근 가능한 자료에 상세히 나와 있지 않음.",
+        "eligibility": "Patients aged 16 years or over with an acute injury who articulated a pain score of 7 or greater on a 0-10 numeric rating scale. Excluded: pregnant patients, prisoners, those unable to articulate a pain score, and anyone lacking capacity.",
+        "eligibility_ko": "급성 손상이 있고 0-10 숫자 통증 척도에서 7점 이상을 호소한 16세 이상 환자. 제외: 임신부, 수감자, 통증 점수를 표현할 수 없는 자, 판단능력이 없는 자.",
+        "interventionDetails": "Ketamine titrated to effect, maximum dose 30 mg, administered by paramedics. Exact route and titration increments are not detailed in the accessible sources (parenteral prehospital administration implied).",
+        "interventionDetails_ko": "효과에 따라 적정 투여한 케타민, 최대 용량 30 mg, 구급대원이 투여. 정확한 투여 경로와 적정 증량 단위는 접근 가능한 자료에 상세히 나와 있지 않음(병원 전 비경구 투여로 추정).",
+        "comparatorDetails": "Morphine titrated to effect, maximum dose 20 mg, administered by paramedics under double-blind conditions.",
+        "comparatorDetails_ko": "효과에 따라 적정 투여한 모르핀, 최대 용량 20 mg, 이중맹검 조건에서 구급대원이 투여.",
+        "followUp": "Pain outcomes assessed acutely (Sum of Pain Intensity Difference). Longer-term outcomes assessed at 3 and 6 months, which experienced loss to follow-up.",
+        "followUp_ko": "통증 결과는 급성기에 평가(통증 강도 차이 합산 점수). 장기 결과는 3개월과 6개월에 평가했으며 추적 소실이 발생함.",
+        "sourceBasis": "Abstract and public PubMed/Crossref metadata; no PMCID available for open full-text fetch.",
+        "sourceBasis_ko": "초록 및 공개 PubMed/Crossref 메타데이터 기반; 전문 확보를 위한 PMCID 없음."
+      },
+      "pico": {
+        "population": "Patients aged 16+ with acute trauma and pain score 7 or greater on a 0-10 scale in the UK prehospital setting",
+        "intervention": "Paramedic-administered ketamine (max 30 mg, titrated to effect)",
+        "comparison": "Paramedic-administered morphine (max 20 mg, titrated to effect)",
+        "outcome": "Sum of Pain Intensity Difference (primary); global improvement, speed and duration of relief, serious adverse events, cost-effectiveness"
+      },
+      "pico_ko": {
+        "population": "영국 병원 전 단계에서 급성 외상과 0-10 척도 통증 7점 이상인 16세 이상 환자",
+        "intervention": "구급대원이 투여한 케타민(최대 30 mg, 효과에 따라 적정)",
+        "comparison": "구급대원이 투여한 모르핀(최대 20 mg, 효과에 따라 적정)",
+        "outcome": "통증 강도 차이 합산 점수(1차); 전반적 호전, 진통 시작 속도와 지속시간, 중대 이상반응, 비용 효과성"
+      },
+      "detailedPico": {
+        "population": "449 UK prehospital patients aged 16 or over with acute injury and self-reported pain score of 7 or higher on a 0-10 numeric rating scale; pregnant patients, prisoners, those unable to articulate a pain score, and those lacking capacity were excluded.",
+        "population_ko": "급성 손상과 0-10 숫자 척도에서 스스로 보고한 통증 점수 7점 이상을 가진 16세 이상 영국 병원 전 환자 449명; 임신부, 수감자, 통증 점수를 표현할 수 없는 자, 판단능력 결여자는 제외됨.",
+        "countrySetting": "United Kingdom; prehospital ambulance services (per affiliations, West Midlands and Yorkshire Ambulance Services), University of Warwick CTU coordination.",
+        "countrySetting_ko": "영국; 병원 전 구급 서비스(소속상 West Midlands 및 Yorkshire 구급 서비스), 워릭대학교 임상시험단 조율.",
+        "intervention": "Ketamine titrated to effect with a maximum dose of 30 mg, given by paramedics under double-blind conditions.",
+        "intervention_ko": "이중맹검 조건에서 구급대원이 효과에 따라 적정 투여한 케타민, 최대 용량 30 mg.",
+        "comparator": "Morphine titrated to effect with a maximum dose of 20 mg, given by paramedics under double-blind conditions.",
+        "comparator_ko": "이중맹검 조건에서 구급대원이 효과에 따라 적정 투여한 모르핀, 최대 용량 20 mg.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "Sum of Pain Intensity Difference (SPID) score",
+            "outcome_ko": "통증 강도 차이 합산(SPID) 점수",
+            "result": "Ketamine 3.5 (SD 2.8) vs morphine 3.4 (SD 3.0); adjusted mean difference 0.1 (95% CI -0.4 to 0.6; p = 0.7)",
+            "result_ko": "케타민 3.5 (SD 2.8) 대 모르핀 3.4 (SD 3.0); 보정 평균차 0.1 (95% CI -0.4~0.6; p = 0.7)",
+            "statistics": "Adjusted mean difference 0.1, 95% CI -0.4 to 0.6, p = 0.7",
+            "interpretation": "Overall pain reduction was essentially identical between the two drugs; the trial did not demonstrate ketamine superiority.",
+            "interpretation_ko": "두 약물 간 전체 통증 감소는 사실상 동일했으며, 시험은 케타민의 우월성을 입증하지 못했다.",
+            "statPrimer": "For a mean difference, 0 means no difference between groups; a 95% CI that includes 0 and a p-value of 0.7 (well above 0.05) indicate no statistically significant difference.",
+            "statPrimer_ko": "평균차에서 0은 두 군 간 차이가 없음을 의미한다. 0을 포함하는 95% CI와 0.05보다 훨씬 큰 p값 0.7은 통계적으로 유의한 차이가 없음을 나타낸다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Achievement of 'very much improvement'",
+            "outcome_ko": "'매우 큰 호전' 달성",
+            "result": "Odds ratio 1.58 (95% CI 1.08 to 2.31; p = 0.019) favouring ketamine",
+            "result_ko": "오즈비 1.58 (95% CI 1.08~2.31; p = 0.019), 케타민에 유리",
+            "statistics": "OR 1.58, 95% CI 1.08 to 2.31, p = 0.019",
+            "interpretation": "Patients on ketamine were more likely to report the highest category of improvement than those on morphine.",
+            "interpretation_ko": "케타민을 투여받은 환자가 모르핀보다 최고 등급의 호전을 보고할 가능성이 더 높았다.",
+            "statPrimer": "For an odds ratio, 1 means no difference; above 1 means higher odds with ketamine. The 95% CI (1.08-2.31) excludes 1 and p<0.05, so this is statistically significant.",
+            "statPrimer_ko": "오즈비에서 1은 차이 없음을 의미하고 1보다 크면 케타민에서 오즈가 더 높음을 뜻한다. 95% CI(1.08~2.31)가 1을 포함하지 않고 p<0.05이므로 통계적으로 유의하다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Speed to achieve improvement",
+            "outcome_ko": "호전 도달 속도",
+            "result": "Hazard ratio 1.42 (95% CI 1.09 to 1.84; p = 0.009) favouring faster response with ketamine",
+            "result_ko": "위험비 1.42 (95% CI 1.09~1.84; p = 0.009), 케타민에서 더 빠른 반응에 유리",
+            "statistics": "HR 1.42, 95% CI 1.09 to 1.84, p = 0.009",
+            "interpretation": "Ketamine achieved improvement more rapidly than morphine.",
+            "interpretation_ko": "케타민이 모르핀보다 더 빠르게 호전을 이끌어냈다.",
+            "statPrimer": "For a hazard ratio on time-to-improvement, 1 means no difference; above 1 means the event (improvement) occurs faster with ketamine. The 95% CI excludes 1 and p<0.05, so significant.",
+            "statPrimer_ko": "호전까지의 시간에 대한 위험비에서 1은 차이 없음을 의미하고, 1보다 크면 케타민에서 사건(호전)이 더 빨리 발생함을 뜻한다. 95% CI가 1을 포함하지 않고 p<0.05이므로 유의하다."
+          },
+          {
+            "label": "Secondary",
+            "outcome": "Duration of analgesic effect",
+            "outcome_ko": "진통 효과 지속시간",
+            "result": "Hazard ratio 1.28 (95% CI 1.05 to 1.56; p = 0.013) indicating morphine lasted longer than ketamine",
+            "result_ko": "위험비 1.28 (95% CI 1.05~1.56; p = 0.013), 모르핀이 케타민보다 더 오래 지속됨을 시사",
+            "statistics": "HR 1.28, 95% CI 1.05 to 1.56, p = 0.013",
+            "interpretation": "Morphine provided a longer-lasting analgesic effect than ketamine.",
+            "interpretation_ko": "모르핀이 케타민보다 더 오래 지속되는 진통 효과를 제공했다.",
+            "statPrimer": "This hazard ratio describes the risk of pain returning; above 1 means the effect wore off sooner (favouring morphine for duration). The 95% CI excludes 1 and p<0.05, so significant.",
+            "statPrimer_ko": "이 위험비는 통증이 다시 나타날 위험을 나타내며, 1보다 크면 효과가 더 빨리 사라짐(지속시간 면에서 모르핀에 유리)을 의미한다. 95% CI가 1을 포함하지 않고 p<0.05이므로 유의하다."
+          },
+          {
+            "label": "Safety",
+            "outcome": "Serious adverse events",
+            "outcome_ko": "중대 이상반응",
+            "result": "No evidence of a significant difference in serious adverse events between drugs",
+            "result_ko": "두 약물 간 중대 이상반응에서 유의한 차이의 근거 없음",
+            "statistics": "No significant difference reported; exact counts not available in the accessible sources",
+            "interpretation": "Ketamine appeared as safe as morphine in this paramedic-administered setting.",
+            "interpretation_ko": "구급대원 투여 환경에서 케타민은 모르핀만큼 안전해 보였다.",
+            "statPrimer": "When a comparison shows no significant difference, the data do not establish that one drug causes more serious harm than the other, though safety is not the same as proven equivalence.",
+            "statPrimer_ko": "비교에서 유의한 차이가 없다는 것은 한 약물이 다른 약물보다 더 심각한 위해를 유발한다고 입증되지 않았음을 뜻하며, 안전성이 곧 동등성 입증과 같은 것은 아니다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Paramedic ketamine was not superior to morphine on the primary SPID outcome (adjusted mean difference 0.1, 95% CI -0.4 to 0.6, p = 0.7).",
+        "Ketamine achieved 'very much improvement' more often (OR 1.58, 95% CI 1.08-2.31) and more rapidly (HR 1.42, 95% CI 1.09-1.84), but morphine's effect lasted longer (HR 1.28, 95% CI 1.05-1.56).",
+        "No significant difference in serious adverse events; ketamine is a safe alternative for paramedic use."
+      ],
+      "keyFindings_ko": [
+        "구급대원 케타민은 1차 SPID 결과에서 모르핀보다 우월하지 않았다(보정 평균차 0.1, 95% CI -0.4~0.6, p = 0.7).",
+        "케타민은 '매우 큰 호전'을 더 자주(OR 1.58, 95% CI 1.08~2.31), 더 빠르게(HR 1.42, 95% CI 1.09~1.84) 달성했으나 모르핀의 효과는 더 오래 지속되었다(HR 1.28, 95% CI 1.05~1.56).",
+        "중대 이상반응에 유의한 차이가 없었으며, 케타민은 구급대원 사용에 안전한 대안이다."
+      ],
+      "conclusion": "Ketamine does not provide superior analgesia to morphine for acute severe trauma pain in the prehospital setting, but it is a suitable and safe alternative for paramedic administration, with faster onset and higher likelihood of marked improvement offset by shorter duration.",
+      "conclusion_ko": "케타민은 병원 전 단계 급성 중증 외상 통증에서 모르핀보다 우월한 진통 효과를 제공하지 않지만, 더 빠른 발현과 뚜렷한 호전 가능성이 더 짧은 지속시간과 상쇄되면서 구급대원 투여에 적합하고 안전한 대안이다.",
+      "clinicalTakeaway": "Ketamine and morphine offer comparable overall prehospital trauma analgesia; ketamine can be used safely by paramedics and may act faster, while morphine may provide longer-lasting relief—drug choice can be individualized by patient factors and contraindications.",
+      "clinicalTakeaway_ko": "케타민과 모르핀은 병원 전 외상 진통에서 전반적으로 유사한 효과를 보인다. 케타민은 구급대원이 안전하게 사용할 수 있고 더 빨리 작용할 수 있으며, 모르핀은 더 오래 지속될 수 있어 환자 요인과 금기에 따라 약물 선택을 개별화할 수 있다.",
+      "limitations": "Only patients with capacity to provide verbal assent were recruited, likely excluding the most severely injured and limiting generalisability. A planned sensitivity analysis comparing minor versus severe injuries could not be completed. Loss to follow-up at 3 and 6 months may have underpowered long-term outcome findings. Exact dosing route, titration protocol, and detailed safety event counts are not available in the accessible abstract/metadata (no open full text).",
+      "limitations_ko": "구두 동의를 제공할 능력이 있는 환자만 모집되어 가장 중증 손상 환자는 배제되었을 가능성이 높아 일반화 가능성이 제한된다. 경증 대 중증 손상을 비교하는 계획된 민감도 분석을 완료하지 못했다. 3개월 및 6개월 추적 소실로 장기 결과의 검정력이 부족했을 수 있다. 정확한 투여 경로, 적정 프로토콜, 상세한 안전성 사건 수는 접근 가능한 초록/메타데이터에 없다(전문 미공개).",
+      "edIcuApplicability": "Highly relevant to prehospital and ED analgesia decisions for severe trauma pain. Supports ketamine as a safe, effective alternative to morphine when opioid side effects (hypotension, respiratory depression, dependency) are a concern, with faster onset but shorter duration. Findings apply best to patients able to report pain and consent, so extrapolation to the most severely injured or obtunded patients is uncertain. Dosing caps (ketamine 30 mg, morphine 20 mg, titrated) provide a practical reference.",
+      "edIcuApplicability_ko": "중증 외상 통증에 대한 병원 전 및 응급실 진통 결정에 매우 관련이 있다. 오피오이드 부작용(저혈압, 호흡 억제, 의존성)이 우려될 때 케타민을 모르핀의 안전하고 효과적인 대안으로 뒷받침하며, 발현이 더 빠르나 지속시간은 짧다. 결과는 통증을 보고하고 동의할 수 있는 환자에 가장 적합하므로 가장 중증이거나 의식이 저하된 환자로의 확대 적용은 불확실하다. 용량 상한(케타민 30 mg, 모르핀 20 mg, 적정)은 실용적 참고가 된다.",
+      "evidenceLevel": "High",
+      "clinicalApplicabilityScore": 8,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Analysis based on abstract plus PubMed/Crossref metadata; no PMCID/open full text available.",
+        "Trial designed as superiority but concluded no superiority; indexed also as equivalence/comparative study—superiority was not demonstrated rather than equivalence formally proven.",
+        "Cost-effectiveness was a stated aim (Cost-Benefit Analysis MeSH) but specific economic results are not in the accessible abstract.",
+        "Country/setting inferred as UK from author affiliations (West Midlands and Yorkshire Ambulance Services); phrased as public metadata.",
+        "Exact serious adverse event counts, dosing route/protocol, and 3/6-month outcome values not available in accessible sources."
+      ],
+      "paper": {
+        "pmid": "42474064",
+        "title": "Paramedic analgesia comparing ketamine and morphine in trauma. A synopsis of the PACKMaN double-blind RCT.",
+        "abstract": "BACKGROUND: Paramedics frequently administer analgesic medications for pain following trauma. Morphine is the most commonly administered strong analgesic. However, it may not be the best option as it may lower blood pressure, depress respiration and there is a risk of dependency. Ketamine might be a better option. We sought to compare clinical and cost-effectiveness of paramedic administered ketamine and morphine in patients with severe pain following trauma.\nMETHODS: PACKMaN was a double-blinded, randomised controlled, superiority trial. Eligible patients were 16 years of age or over, had an acute injury, and articulated a pain score of 7 or greater on a 0-10 numeric rating score. We excluded pregnant patients, prisoners, those unable to articulate a pain score and anyone lacking capacity. The maximum dose of morphine was 20 mg while the maximum dose of ketamine was 30 mg. The trial drug was titrated to effect. The primary outcome was the Sum of Pain Intensity Difference score.\nRESULTS: We randomised 449 participants: 219 (49%) received ketamine and 230 (51%) received morphine. The Sum of Pain Intensity Difference score was 3.5 (standard deviation 2.8) for ketamine and 3.4 (standard deviation 3.0) for morphine. We found no significant difference in efficacy between drugs (adjusted mean difference 0.1, 95% confidence interval -0.4 to 0.6; = 0.7). Ketamine was more likely to achieve 'very much improvement' (odds ratio 1.58, 95% confidence interval 1.08 to 2.31; = 0.019) and to do so more rapidly than morphine (hazard ratio 1.42, 95% confidence interval 1.09 to 1.84; = 0.009). However, morphine was likely to last longer than ketamine (hazard ratio 1.28, 95% confidence interval 1.05 to 1.56; = 0.013). There was no evidence of a significant difference in serious adverse events.\nCONCLUSION: Ketamine does not provide superior analgesia than morphine when treating acute severe trauma pain. Ketamine is a suitable alternative that is safe for use by paramedics.\nLIMITATIONS: Patients were required to provide verbal assent to participate, consequently we were only able to recruit patients who had capacity to understand what was being asked of them. It is also therefore probable that we were unable to recruit the most severely injured patients. These factors may limit generalisability of our results. Furthermore, we were unable to complete a planned sensitivity analysis to determine if there was a difference in treatment response between patients with more minor injuries and those who were more severely injured. Finally, we experienced a loss to follow-up at 3 and 6 months, so our findings for long term outcomes may have been underpowered.\nFUTURE WORK: Future research should focus on identification of the optimal drug (or combination of drugs), dosing and drug route to achieve rapid control of pain. In addition, it would be valuable to explore the relationship between paramedic analgesia and the development of chronic pain.\nFUNDING: This synopsis presents independent research funded by the National Institute for Health and Care Research (NIHR) Health Technology Assessment programme as award number NIHR128086.",
+        "authors": [
+          "Smyth MA",
+          "Noordali H",
+          "Lall R",
+          "Michelet F",
+          "Petrou S",
+          "Khan K",
+          "Yeung J",
+          "Fuller G"
+        ],
+        "authorAffiliations": [
+          "Clinical Trials Unit, University of Warwick, Coventry, England.",
+          "Nuffield Department of Primary Care Health Sciences, University of Oxford, Radcliffe Observatory Quarter, Oxford, England.",
+          "School of Medicine and Population Health, University of Sheffield, Sheffield, England.",
+          "West Midlands Ambulance Service University NHS Foundation Trust, Brierley Hill, West Midlands, England.",
+          "Yorkshire Ambulance Service NHS Trust, Springhill, Wakefield, England.",
+          "Medical School, University of Warwick, Coventry, England."
+        ],
+        "journal": "Health technology assessment (Winchester, England)",
+        "pubDate": "2026-Jul",
+        "publicationTypes": [
+          "Journal Article",
+          "Randomized Controlled Trial",
+          "Equivalence Trial",
+          "Comparative Study"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Ketamine",
+          "Morphine",
+          "Double-Blind Method",
+          "Female",
+          "Wounds and Injuries",
+          "Analgesics",
+          "Adult",
+          "Male",
+          "Pain Measurement",
+          "Cost-Benefit Analysis",
+          "Paramedics"
+        ],
+        "keywords": [
+          "AMBULANCE",
+          "ANALGESIA",
+          "KETAMINE",
+          "MORPHINE",
+          "PAIN MANAGEMENT",
+          "PARAMEDIC",
+          "TRAUMA"
+        ],
+        "doi": "10.3310/KGTO6391",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42474064/",
+        "collectedAt": "2026-07-21T21:17:13.062Z",
+        "screeningData": {
+          "score": 12,
+          "relevanceMatches": [
+            "ICU",
+            "trauma"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 449,
+          "journalBoost": 2,
+          "reasons": [
+            "abstract available",
+            "topic match: ICU, trauma",
+            "study design: Randomized Controlled Trial",
+            "sample size signal: N=449",
+            "journal boost: Health technology assessment (Winchester, England)"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42474064\nDOI: 10.3310/KGTO6391\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Clinical Trials Unit, University of Warwick, Coventry, England.\n- Nuffield Department of Primary Care Health Sciences, University of Oxford, Radcliffe Observatory Quarter, Oxford, England.\n- School of Medicine and Population Health, University of Sheffield, Sheffield, England.\n- West Midlands Ambulance Service University NHS Foundation Trust, Brierley Hill, West Midlands, England.\n- Yorkshire Ambulance Service NHS Trust, Springhill, Wakefield, England.\n- Medical School, University of Warwick, Coventry, England.\n\nPublic bibliographic metadata from Crossref:\nTitle: Paramedic analgesia comparing ketamine and morphine in trauma. A synopsis of the PACKMaN double-blind RCT\nType: journal-article\nPublished: 2026-7\nPublisher: National Institute for Health and Care Research\nFunders: Health Technology Assessment programme\nCrossref abstract/snippet: Background Paramedics frequently administer analgesic medications for pain following trauma. Morphine is the most commonly administered strong analgesic. However, it may not be the best option as it may lower blood pressure, depress respiration and there is a risk of dependency. Ketamine might be a better option. We sought to compare clinical and cost-effectiveness of paramedic administered ketamine and morphine in patients with severe pain following trauma. Methods PACKMaN was a double-blinded, randomised controlled, superiority trial. Eligible patients were 16 years of age or over, had an acute injury, and articulated a pain score of 7 or greater on a 0–10 numeric rating score. We excluded pregnant patients, prisoners, those unable to articulate a pain score and anyone lacking capacity. The maximum dose of morphine was 20 mg while the maximum dose of ketamine was 30 mg. The trial drug was titrated to effect. The primary outcome was the Sum of Pain Intensity Difference score. Results We randomised 449 participants: 219 (49%) received ketamine and 230 (51%) received morphine. The Sum of Pain Intensity Difference score was 3.5 (standard deviation 2.8) for ketamine and 3.4 (standard deviation 3.0) for morphine. We found no significant difference in efficacy between drugs (adjusted mean difference 0.1, 95% confidence interval −0.4 to 0.6; p = 0.7). Ketamine was more likely to achieve ‘very much improvement’ (odds ratio 1.58, 95% confidence interval 1.08 to 2.31; p = 0.019) and to do so more rapidly than morphine (hazard ratio 1.42, 95% confidence interval 1.09 to 1.84; p = 0.009). However, morphine was likely to last longer than ketamine (hazard ratio 1.28, 95% confidence interval 1.05 to 1.56; p = 0.013). There was no evidence of a significant difference in serious advers",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-21T21:17:53.393Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42474064",
+          "rank": 1,
+          "clinicalPriorityScore": 8,
+          "rationale_ko": "PACKMaN은 병원전 외상 환자에서 구급대원이 투여하는 케타민과 모르핀을 비교한 이중맹검 무작위 대조 우월성 시험(N=449)으로, 응급의학 및 병원전 진료에 직접적이고 실무 변화 가능성이 높은 고품질 근거입니다. 진통 효과가 유사(SPID 케타민 3.5 vs 모르핀 3.4)하다는 결과는 진통제 선택과 프로토콜 결정에 임상적으로 활용도가 높아 최우선으로 선정했습니다."
+        }
+      ],
+      "notes_ko": [
+        "후보 중 성인 응급의학·중환자 진료에 직접적 실무 관련성이 가장 높은 논문은 PACKMaN RCT(병원전 케타민 vs 모르핀)로, 이중맹검 무작위 대조시험이며 병원전 통증관리에 실질적 시사점을 제공합니다.",
+        "다수 후보는 신생아/소아 ICU(42448611, 42455570, 42469527), MIMIC/eICU 기반 후향적 바이오마커 예측 모델(42432931, 42462220, 42432930, 42445594, 42459345), 질적/QI/설문 연구(42468961, 42468959, 42431666)로 성인 EM/CCM 실무 변화 가능성이 낮아 우선순위에서 제외했습니다.",
+        "42457785(독일 외상 가이드라인 준수)와 42447073(NMBA 없는 삽관 리뷰)은 관심 주제지만 실무 변화 근거로는 PACKMaN보다 약합니다.",
+        "42431658, 42430168, 42446882, 42475095, 42431662 등은 EM/CCM 직접 환자진료 관련성이 낮습니다."
+      ]
+    }
+  },
+  "errors": []
+}
