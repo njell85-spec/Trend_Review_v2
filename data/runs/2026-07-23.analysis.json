@@ -1,0 +1,228 @@
+{
+  "analyses": [
+    {
+      "pmid": "42485042",
+      "title": "Mortality After Piperacillin-Tazobactam-Resistant vs -Susceptible Bloodstream Infection.",
+      "oneLineSummary": "In a nationwide Danish cohort, 30-day mortality did not differ significantly between piperacillin-tazobactam-resistant and -susceptible E coli or K pneumoniae bloodstream infections after adjusting for baseline risk.",
+      "oneLineSummary_ko": "덴마크 전국 코호트에서 기저 위험 보정 후 piperacillin-tazobactam 내성과 감수성 E coli 또는 K pneumoniae 혈류감염 간 30일 사망률에 유의한 차이가 없었다.",
+      "whyItMatters": "TZP is widely used empirically for gram-negative bloodstream infections, and TZP resistance is rising across Europe; knowing whether resistance itself independently worsens mortality helps clinicians weigh empiric coverage decisions and antimicrobial stewardship.",
+      "whyItMatters_ko": "TZP는 그람음성 혈류감염에 경험적으로 널리 사용되며 유럽 전역에서 TZP 내성이 증가하고 있다. 내성 자체가 독립적으로 사망률을 악화시키는지 아는 것은 임상의가 경험적 항균 커버리지 결정과 항균제 관리를 판단하는 데 도움이 된다.",
+      "clinicalQuestion": "Among adults with monomicrobial E coli or K pneumoniae bloodstream infection, is TZP resistance associated with higher 30-day mortality compared with TZP susceptibility after adjustment for baseline risk factors?",
+      "clinicalQuestion_ko": "단일균 E coli 또는 K pneumoniae 혈류감염 성인 환자에서, 기저 위험인자 보정 후 TZP 내성이 TZP 감수성에 비해 30일 사망률 증가와 연관되는가?",
+      "studyDetails": {
+        "design": "Nationwide observational cohort study using Danish national health registers with near real-time data collection; univariable and multivariable Cox models estimating 30-day mortality hazard ratios from index blood culture until death, emigration, or end of observation.",
+        "design_ko": "덴마크 전국 보건 등록자료를 이용한 관찰 코호트 연구로, 준실시간 데이터 수집을 사용했으며 지표 혈액배양 시점부터 사망, 이민 또는 관찰 종료까지 단변량 및 다변량 Cox 모형으로 30일 사망 위험비를 추정했다.",
+        "setting": "Denmark, national health registers spanning November 15, 2018 through November 21, 2024. Author affiliations include Statens Serum Institut (Copenhagen) and clinical microbiology departments at Herlev/Gentofte, Odense, and Aalborg University Hospitals (public metadata).",
+        "setting_ko": "덴마크 전국 보건 등록자료, 2018년 11월 15일부터 2024년 11월 21일까지. 저자 소속에는 Statens Serum Institut(코펜하겐)와 Herlev/Gentofte, Odense, Aalborg 대학병원 임상미생물학과가 포함된다(공개 메타데이터).",
+        "sampleSize": "34,379 patients analyzed overall: 28,649 (81.9%) with E coli BSI (of whom 1,689 [5.9%] TZP-resistant) and 6,314 (18.1%) with K pneumoniae BSI (of whom 597 [9.5%] TZP-resistant). No loss to follow-up; ~1% right-censored at end of observation (E coli 343 [1.2%]; K pneumoniae 88 [1.4%]).",
+        "sampleSize_ko": "전체 분석 대상 34,379명: E coli 혈류감염 28,649명(81.9%, 이 중 TZP 내성 1,689명[5.9%]), K pneumoniae 혈류감염 6,314명(18.1%, 이 중 TZP 내성 597명[9.5%]). 추적 손실은 없었고 관찰 종료 시 약 1%가 우측 중도절단됨(E coli 343명[1.2%], K pneumoniae 88명[1.4%]).",
+        "eligibility": "Patients aged 18 years or older with monomicrobial E coli or K pneumoniae BSI, restricted to the first positive (index) blood culture with a TZP-susceptibility test result during the follow-up period.",
+        "eligibility_ko": "18세 이상으로 단일균 E coli 또는 K pneumoniae 혈류감염이 있는 환자 중, 추적 기간 동안 TZP 감수성 검사 결과가 있는 첫 양성(지표) 혈액배양으로 제한했다.",
+        "interventionDetails": "This is an exposure-based observational study, not a treatment trial. The exposure was a TZP susceptibility test classified as TZP resistant. Actual antibiotic therapy administered, dosing, route, and duration are not available in the accessible sources.",
+        "interventionDetails_ko": "이는 치료 시험이 아닌 노출 기반 관찰 연구이다. 노출은 TZP 내성으로 분류된 TZP 감수성 검사였다. 실제 투여된 항생제, 용량, 경로, 기간은 접근 가능한 자료에서 확인되지 않는다.",
+        "comparatorDetails": "Comparison group was BSI with a TZP-susceptible susceptibility test result, within the same E coli or K pneumoniae species strata.",
+        "comparatorDetails_ko": "비교군은 동일한 E coli 또는 K pneumoniae 균종 층 내에서 TZP 감수성 검사 결과를 보인 혈류감염이었다.",
+        "followUp": "30-day mortality from index blood culture date; follow-up until death, emigration, or end of observation period (November 21, 2024). No loss to follow-up reported.",
+        "followUp_ko": "지표 혈액배양일부터 30일 사망률; 사망, 이민 또는 관찰 종료(2024년 11월 21일)까지 추적. 추적 손실은 보고되지 않았다.",
+        "sourceBasis": "Based on the JAMA Network Open abstract plus public PubMed and Crossref metadata; no PMCID available for open full-text, so granular methods (e.g., resistance breakpoints, actual treatment received, baseline covariate balance) beyond the abstract are not accessible.",
+        "sourceBasis_ko": "JAMA Network Open 초록과 공개 PubMed 및 Crossref 메타데이터에 기반함. 오픈 전문에 대한 PMCID가 없어 초록 이외의 세부 방법(예: 내성 판정 기준, 실제 받은 치료, 기저 공변량 균형)은 접근할 수 없다."
+      },
+      "pico": {
+        "population": "Adults (≥18 years) with monomicrobial E coli or K pneumoniae bloodstream infection in Denmark",
+        "intervention": "TZP-resistant bloodstream infection (exposure)",
+        "comparison": "TZP-susceptible bloodstream infection",
+        "outcome": "30-day all-cause mortality (hazard ratio)"
+      },
+      "pico_ko": {
+        "population": "덴마크의 단일균 E coli 또는 K pneumoniae 혈류감염 성인(≥18세)",
+        "intervention": "TZP 내성 혈류감염(노출)",
+        "comparison": "TZP 감수성 혈류감염",
+        "outcome": "30일 전체원인 사망률(위험비)"
+      },
+      "detailedPico": {
+        "population": "34,379 Danish adults (≥18 years; median age 76 years [IQR 66-83]; 51.5% male) with monomicrobial E coli or K pneumoniae bloodstream infection, identified from the first index blood culture with a TZP-susceptibility result.",
+        "population_ko": "단일균 E coli 또는 K pneumoniae 혈류감염이 있는 덴마크 성인 34,379명(≥18세; 중앙간 연령 76세[IQR 66-83]; 51.5% 남성), TZP 감수성 결과가 있는 첫 지표 혈액배양로 식별.",
+        "countrySetting": "Denmark; nationwide health registers, near real-time data, November 15, 2018 to November 21, 2024.",
+        "countrySetting_ko": "덴마크; 전국 보건 등록자료, 준실시간 데이터, 2018년 11월 15일~2024년 11월 21일.",
+        "intervention": "Exposure of interest was a bloodstream infection with a TZP-resistant susceptibility test result. This was an observational exposure classification, not a randomized treatment assignment; the analysis was stratified by species (E coli and K pneumoniae).",
+        "intervention_ko": "관심 노출은 TZP 내성 감수성 검사 결과를 보인 혈류감염이었다. 무작위 치료 배정이 아닌 관찰적 노출 분류였으며, 분석은 균종(E coli, K pneumoniae)별로 층화되었다.",
+        "comparator": "Patients with the same species BSI but a TZP-susceptible test result.",
+        "comparator_ko": "동일 균종 혈류감염이지만 TZP 감수성 검사 결과를 보인 환자.",
+        "outcomes": [
+          {
+            "label": "Primary",
+            "outcome": "30-day mortality in E coli BSI, TZP-resistant vs -susceptible",
+            "outcome_ko": "E coli 혈류감염에서 TZP 내성 대 감수성 30일 사망률",
+            "result": "Crude HR 1.22 (95% CI, 1.08-1.38); adjusted HR 1.09 (95% CI, 0.94-1.27)",
+            "result_ko": "조 HR 1.22 (95% CI, 1.08-1.38); 보정 HR 1.09 (95% CI, 0.94-1.27)",
+            "statistics": "Crude HR 1.22 (95% CI, 1.08-1.38); AHR 1.09 (95% CI, 0.94-1.27)",
+            "interpretation": "A crude excess mortality signal disappeared after adjusting for age, comorbidity, and other baseline risk; the adjusted CI crosses 1, so no independent mortality effect of TZP resistance was established in E coli.",
+            "interpretation_ko": "조 분석에서 보였던 초과 사망 신호는 연령, 동반질환 등 기저 위험 보정 후 사라졌다. 보정 CI가 1을 포함하므로 E coli에서 TZP 내성의 독립적 사망 효과는 확립되지 않았다.",
+            "statPrimer": "HR=1 means no difference in mortality hazard; HR>1 suggests more deaths with resistance. A 95% CI that includes 1 (as with the adjusted HR 0.94-1.27) means conventional statistical significance is not established.",
+            "statPrimer_ko": "HR=1은 사망 위험 차이가 없음을 의미하고, HR>1은 내성 시 사망이 더 많음을 시사한다. 95% CI가 1을 포함하면(보정 HR 0.94-1.27처럼) 통상적 통계적 유의성이 확립되지 않음을 뜻한다."
+          },
+          {
+            "label": "Primary",
+            "outcome": "30-day mortality in K pneumoniae BSI, TZP-resistant vs -susceptible",
+            "outcome_ko": "K pneumoniae 혈류감염에서 TZP 내성 대 감수성 30일 사망률",
+            "result": "Crude HR 1.27 (95% CI, 1.05-1.52); adjusted HR 1.15 (95% CI, 0.94-1.41)",
+            "result_ko": "조 HR 1.27 (95% CI, 1.05-1.52); 보정 HR 1.15 (95% CI, 0.94-1.41)",
+            "statistics": "Crude HR 1.27 (95% CI, 1.05-1.52); AHR 1.15 (95% CI, 0.94-1.41)",
+            "interpretation": "Similar pattern to E coli: an unadjusted association attenuated to non-significance after baseline risk adjustment, with the adjusted CI crossing 1.",
+            "interpretation_ko": "E coli와 유사한 양상으로, 보정 전 연관성이 기저 위험 보정 후 비유의하게 약화되었고 보정 CI가 1을 포함한다.",
+            "statPrimer": "As above, HR=1 indicates no difference; the adjusted 95% CI (0.94-1.41) includes 1, so a statistically significant independent effect is not demonstrated, though the point estimate remains above 1.",
+            "statPrimer_ko": "위와 같이 HR=1은 차이 없음을 의미하며, 보정 95% CI(0.94-1.41)가 1을 포함하므로 통계적으로 유의한 독립 효과는 입증되지 않았으나 점추정치는 여전히 1보다 크다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "After adjustment for age, gender, comorbidity, year, and hospitalization history, TZP resistance was not significantly associated with 30-day mortality in E coli BSI (AHR 1.09; 95% CI, 0.94-1.27) or K pneumoniae BSI (AHR 1.15; 95% CI, 0.94-1.41).",
+        "Crude analyses showed a modest excess mortality with resistance (E coli crude HR 1.22; K pneumoniae crude HR 1.27) that attenuated after adjustment, suggesting confounding by baseline patient risk rather than an intrinsic effect of resistance.",
+        "TZP resistance was present in 5.9% of E coli (1,689/28,649) and 9.5% of K pneumoniae (597/6,314) BSIs in this large, register-based cohort with essentially complete follow-up."
+      ],
+      "keyFindings_ko": [
+        "연령, 성별, 동반질환, 연도, 입원력 보정 후 TZP 내성은 E coli 혈류감염(보정 HR 1.09; 95% CI, 0.94-1.27) 또는 K pneumoniae 혈류감염(보정 HR 1.15; 95% CI, 0.94-1.41)에서 30일 사망률과 유의하게 연관되지 않았다.",
+        "조 분석에서는 내성과 관련된 경미한 초과 사망(E coli 조 HR 1.22, K pneumoniae 조 HR 1.27)이 관찰되었으나 보정 후 약화되어, 내성 자체의 효과보다 기저 환자 위험에 의한 교란을 시사한다.",
+        "이 대규모 등록 기반 코호트에서 TZP 내성은 E coli 혈류감염의 5.9%(1,689/28,649), K pneumoniae 혈류감염의 9.5%(597/6,314)에서 나타났으며 추적은 사실상 완전했다."
+      ],
+      "conclusion": "In this large Danish nationwide cohort of monomicrobial E coli or K pneumoniae bloodstream infections, there was no statistically significant difference in 30-day mortality between TZP-resistant and TZP-susceptible infections after adjusting for baseline risk factors, suggesting that the crude mortality signal is largely explained by patient-level confounding rather than resistance per se.",
+      "conclusion_ko": "단일균 E coli 또는 K pneumoniae 혈류감염을 다룬 이 대규모 덴마크 전국 코호트에서, 기저 위험인자 보정 후 TZP 내성과 감수성 감염 간 30일 사망률에 통계적으로 유의한 차이가 없었으며, 이는 조 사망 신호가 내성 자체보다는 주로 환자 수준 교란으로 설명됨을 시사한다.",
+      "clinicalTakeaway": "TZP resistance in E coli or K pneumoniae bloodstream infection does not appear to independently increase 30-day mortality; observed differences are largely driven by sicker baseline patients—reinforcing the importance of prompt appropriate therapy and stewardship rather than assuming resistance alone drives worse outcomes.",
+      "clinicalTakeaway_ko": "E coli 또는 K pneumoniae 혈류감염의 TZP 내성은 30일 사망률을 독립적으로 증가시키지 않는 것으로 보이며, 관찰된 차이는 대체로 더 중한 기저 환자에 기인한다. 이는 내성 자체가 나쁜 결과를 유발한다고 가정하기보다 신속한 적절 치료와 항균제 관리의 중요성을 강조한다.",
+      "limitations": "Observational design cannot establish causation and residual confounding is possible despite adjustment. Actual antimicrobial therapy received (empiric vs definitive, timing, appropriateness), source of infection, severity/ICU status, and resistance breakpoint methodology are not available in the accessible abstract/metadata sources. Register-based mortality has no restriction to infection-attributable death, and the point estimates remained above 1, so a small true harm cannot be excluded. Findings are specific to Denmark's low-resistance, high-quality register setting and may not generalize to higher-resistance regions.",
+      "limitations_ko": "관찰 연구 설계로 인과관계를 확립할 수 없고 보정에도 불구하고 잔여 교란이 가능하다. 실제 받은 항균 치료(경험적 대 확정적, 시기, 적절성), 감염원, 중증도/중환자실 상태, 내성 판정 기준 방법론은 접근 가능한 초록/메타데이터에서 확인되지 않는다. 등록 기반 사망은 감염 기인 사망으로 제한되지 않으며, 점추정치가 1보다 컸으므로 작은 실제 해악을 배제할 수 없다. 결과는 저내성·고품질 등록 환경인 덴마크에 특이적이며 고내성 지역에는 일반화되지 않을 수 있다.",
+      "edIcuApplicability": "For ED and ICU clinicians managing gram-negative sepsis, this supports that TZP resistance itself does not independently predict higher 30-day mortality when baseline risk is accounted for. It does not change the imperative for early appropriate empiric antibiotics guided by local resistance patterns, and because treatment received was not analyzed, it should not be read as endorsing TZP for resistant isolates. In settings with rising TZP resistance, these reassuring outcome data can inform stewardship discussions without altering the need for source control and susceptibility-guided definitive therapy.",
+      "edIcuApplicability_ko": "그람음성 패혈증을 관리하는 응급실 및 중환자실 임상의에게, 본 연구는 기저 위험을 고려하면 TZP 내성 자체가 30일 사망률 증가를 독립적으로 예측하지 않음을 뒷받침한다. 이는 지역 내성 양상에 따른 조기 적절 경험적 항생제의 필요성을 바꾸지 않으며, 실제 받은 치료가 분석되지 않았으므로 내성 균주에 TZP 사용을 지지하는 것으로 해석해서는 안 된다. TZP 내성이 증가하는 환경에서 이 안심되는 결과는 감염원 조절과 감수성 기반 확정 치료의 필요성을 바꾸지 않으면서 항균제 관리 논의에 참고가 될 수 있다.",
+      "evidenceLevel": "Moderate",
+      "clinicalApplicabilityScore": 7,
+      "manualReviewNeeded": false,
+      "analysisNotes": [
+        "Analysis based on JAMA Network Open abstract plus PubMed and Crossref public metadata; no PMCID available for open full-text, so treatment-received data, resistance breakpoints, and covariate balance could not be verified.",
+        "All reported statistics (crude and adjusted HRs with 95% CIs, sample sizes, resistance proportions) are taken directly from the abstract; no values were inferred.",
+        "Adjusted HR point estimates remained >1 with CIs crossing 1, indicating non-significance rather than proven equivalence; a small residual harm cannot be excluded.",
+        "Species-stratified design (E coli and K pneumoniae analyzed separately) was preserved in the outcomes."
+      ],
+      "paper": {
+        "pmid": "42485042",
+        "title": "Mortality After Piperacillin-Tazobactam-Resistant vs -Susceptible Bloodstream Infection.",
+        "abstract": "IMPORTANCE: Use of piperacillin-tazobactam (TZP) as treatment for bloodstream infections (BSIs) has increased over time in Europe, as has antimicrobial resistance to TZP in some European countries.\nOBJECTIVE: To evaluate mortality associated with TZP-resistant BSIs in the Danish health care system.\nDESIGN, SETTING, AND PARTICIPANTS: In this cohort study, data collected in near real time were obtained from Danish national health registers from November 15, 2018, through November 21, 2024. Participants were patients aged 18 years or older with monomicrobial Escherichia coli or Klebsiella pneumoniae BSI, restricted to the first positive (index) blood culture with a TZP-susceptibility test result during the follow-up period.\nEXPOSURES: E coli or K pneumoniae BSI and a TZP susceptibility test classified as TZP resistant or TZP susceptible.\nMAIN OUTCOME AND MEASURES: Thirty-day mortality hazard ratios (HRs) for BSIs with TZP-resistant vs TZP-susceptible bacteria were estimated from the index date (blood culture) until death, emigration, or end of the observation period. Mortality was drawn from Danish national health registers, with no restriction on in-hospital or postdischarge mortality. Univariable and multivariable models adjusted a priori for self-reported gender, age, comorbidity, year, length of hospital stay until BSI, total length of inpatient stays in the prior year, and BSI in the prior 6 months with species other than that in the index culture.\nRESULTS: The study population included 34 379 patients (median overall age, 76 years [IQR, 66-83 years]; 51.5% male). Among 28 649 patients (81.9%) with E coli BSI, 1689 (5.9%) had a TZP-resistant BSI; among 6314 patients (18.1%) with K pneumoniae BSI, 597 (9.5%) had a TZP-resistant BSI. There was no loss to follow-up, and about 1% of participants were right-censored by the end of the observation period (E coli: 343 [1.2%]; K pneumoniae, 88 [1.4%]). Mortality was similar for patients with TZP-resistant and TZP-susceptible BSI after adjusting for baseline risk factors (E coli: crude HR, 1.22 [95% CI, 1.08-1.38]; adjusted HR [AHR], 1.09 [95% CI, 0.94-1.27]; K pneumoniae: crude HR, 1.27 [95% CI, 1.05-1.52]; AHR, 1.15 [95% CI, 0.94-1.41]).\nCONCLUSIONS AND RELEVANCE: In this cohort study of patients with monomicrobial E coli or K pneumoniae BSI, there was no significant difference in mortality for patients with BSI caused by TZP-resistant vs TZP-susceptible bacteria after adjustment for baseline risk factors. The result is important given increasing TZP resistance in Denmark and other countries.",
+        "authors": [
+          "Tusch E",
+          "Holzknecht B",
+          "Lindegaard M",
+          "Nielsen RT",
+          "Justesen US",
+          "Søgaard KK",
+          "Kostyanev TS",
+          "Hertz FB"
+        ],
+        "authorAffiliations": [
+          "Department of Data Science and AI in Health, Statens Serum Institut, Copenhagen, Denmark.",
+          "Department of Bacteria, Parasites, and Fungi, Statens Serum Institut, Copenhagen, Denmark.",
+          "Department of Clinical Microbiology, Copenhagen University Hospital-Herlev and Gentofte, Herlev, Denmark.",
+          "Department of Clinical Medicine, Copenhagen University, Copenhagen, Denmark.",
+          "Department of Data Integration and Analysis, Statens Serum Institut, Copenhagen, Denmark.",
+          "Department of Clinical Microbiology, Odense University Hospital, Odense, Denmark.",
+          "Department of Clinical Microbiology, Aalborg University Hospital, Aalborg, Denmark.",
+          "Department of Clinical Medicine, Aalborg University, Aalborg, Denmark.",
+          "Department of Clinical Microbiology, Southern Denmark University Hospital, Esbjerg and Grindsted Hospital, Esbjerg, Denmark.",
+          "Department of Immunology & Microbiology, Faculty of Health and Medical Sciences, University of Copenhagen, Copenhagen, Denmark.",
+          "Department of Clinical Microbiology, Zealand University Hospital, Roskilde, Denmark.",
+          "Institute of Regional Health Research, University of Southern Denmark, Odense, Denmark."
+        ],
+        "journal": "JAMA network open",
+        "pubDate": "2026-Jul-01",
+        "publicationTypes": [
+          "Journal Article"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Denmark",
+          "Female",
+          "Piperacillin, Tazobactam Drug Combination",
+          "Male",
+          "Anti-Bacterial Agents",
+          "Aged",
+          "Escherichia coli",
+          "Klebsiella pneumoniae",
+          "Bacteremia",
+          "Drug Resistance, Bacterial",
+          "Cohort Studies"
+        ],
+        "keywords": [],
+        "doi": "10.1001/jamanetworkopen.2026.24366",
+        "pmcid": "",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42485042/",
+        "collectedAt": "2026-07-22T21:17:09.503Z",
+        "screeningData": {
+          "score": 10,
+          "relevanceMatches": [],
+          "studyType": "Observational",
+          "sampleSize": 379,
+          "journalBoost": 4,
+          "reasons": [
+            "abstract available",
+            "study design: Observational",
+            "sample size signal: N=379",
+            "journal boost: JAMA network open"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42485042\nDOI: 10.1001/jamanetworkopen.2026.24366\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Department of Data Science and AI in Health, Statens Serum Institut, Copenhagen, Denmark.\n- Department of Bacteria, Parasites, and Fungi, Statens Serum Institut, Copenhagen, Denmark.\n- Department of Clinical Microbiology, Copenhagen University Hospital-Herlev and Gentofte, Herlev, Denmark.\n- Department of Clinical Medicine, Copenhagen University, Copenhagen, Denmark.\n- Department of Data Integration and Analysis, Statens Serum Institut, Copenhagen, Denmark.\n- Department of Clinical Microbiology, Odense University Hospital, Odense, Denmark.\n- Department of Clinical Microbiology, Aalborg University Hospital, Aalborg, Denmark.\n- Department of Clinical Medicine, Aalborg University, Aalborg, Denmark.\n\nPublic bibliographic metadata from Crossref:\nTitle: Mortality After Piperacillin-Tazobactam–Resistant vs –Susceptible Bloodstream Infection\nType: journal-article\nPublished: 2026-7-22\nPublisher: American Medical Association (AMA)\nCrossref abstract/snippet: Importance Use of piperacillin-tazobactam (TZP) as treatment for bloodstream infections (BSIs) has increased over time in Europe, as has antimicrobial resistance to TZP in some European countries. Objective To evaluate mortality associated with TZP-resistant BSIs in the Danish health care system. Design, Setting, and Participants In this cohort study, data collected in near real time were obtained from Danish national health registers from November 15, 2018, through November 21, 2024. Participants were patients aged 18 years or older with monomicrobial Escherichia coli or Klebsiella pneumoniae BSI, restricted to the first positive (index) blood culture with a TZP-susceptibility test result during the follow-up period. Exposures E coli or K pneumoniae BSI and a TZP susceptibility test classified as TZP resistant or TZP susceptible. Main Outcome and Measures Thirty-day mortality hazard ratios (HRs) for BSIs with TZP-resistant vs TZP-susceptible bacteria were estimated from the index date (blood culture) until death, emigration, or end of the observation period. Mortality was drawn from Danish national health registers, with no restriction on in-hospital or postdischarge mortality. Univariable and multivariable models adjusted a priori for self-reported gender, age, comorbidity, year, length of hospital stay until BSI, total length of inpatient stays in the prior year, and BSI in the prior 6 months with species other than that in the index culture. Results The study population included 34 379 patients (median overall age, 76 years [IQR, 66-83 years]; 51.5% male). Among 28 649 patients (81.9%) with E coli BSI, 1689 (5.9%) had a TZP-resistant BSI; among 6314 patients (18.1%) with K pneumoniae BSI, 597 (9.5%) had a TZP-resistant BSI. There was no loss to follow-up, and about ",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "public-metadata",
+          "reason": "No PMCID available for open full-text fetch",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-22T21:17:57.404Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42485042",
+          "rank": 1,
+          "clinicalPriorityScore": 6.5,
+          "rationale_ko": "JAMA Network Open에 실린 덴마크 전국 등록 기반 코호트로, 대장균/폐렴막대균 균혈증에서 piperacillin-tazobactam 내성 대 감수성 균주의 30일 사망률을 비교했다. MERINO 시험 이후 경험적 항생제 선택 논쟁과 직결되는 임상적으로 실행 가능한 주제이며, 응급실/중환자실에서 흔한 균혈증·패혈증 환자의 항생제 스튜어드십과 예후 판단에 직접적 함의를 준다. 표본수(N=379)가 다소 작고 관찰연구라는 한계가 있으나, 후보군 중 EM/CCM 임상의에게 가장 실질적이고 실행 가능한 근거를 제공한다."
+        }
+      ],
+      "notes_ko": [
+        "오늘 후보군은 대부분 관찰연구, MIMIC/eICU 기반 예측모델, QI, 질적연구로 실무를 바꿀 만한 대규모 RCT나 가이드라인이 부족했다.",
+        "RCT 중 #2(신생아 octenidine)와 #20(SAVE 사후분석 비만/OSA), #10(ICU 후 PTSD 이차분석), #13(리뷰)은 EM/CCM 직접 실무 관련성이 낮아 제외했다.",
+        "#17(pip-tazo 내성 균혈증 사망률)은 표본이 작지만 항생제 선택이라는 실행 가능한 임상 질문과 고임팩트 저널이라는 점에서 최우선 선정했다.",
+        "#14(심정지 후 병원전 기도장치 교체)와 #22(ARF 입원 시 쇼크 예후)도 EM 관련성이 있었으나 관찰연구로 근거 강도가 낮아 순위에서 밀렸다."
+      ]
+    }
+  },
+  "errors": []
+}
