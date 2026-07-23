@@ -1,0 +1,242 @@
+{
+  "analyses": [
+    {
+      "pmid": "42447073",
+      "title": "Clinical Use of Endotracheal Intubation Without Neuromuscular Blockade: The Current Stage of Knowledge.",
+      "oneLineSummary": "This narrative review finds NMBA-free intubation is feasible in selected patients but requires deeper anesthesia that increases the risk of hypotension and bradycardia.",
+      "oneLineSummary_ko": "이 종설은 신경근차단제 없는 기관삽관이 선별된 환자에서 가능하지만 더 깊은 마취가 필요해 저혈압과 서맥 위험이 높아진다고 밝힌다.",
+      "whyItMatters": "Airway management frequently occurs in situations where NMBAs are contraindicated or undesirable (intraoperative neuromonitoring surgery, myasthenia gravis, anaphylaxis history, critically ill patients), so clinicians should understand the trade-offs of NMBA-free intubation and the pharmacologic strategies used to blunt the laryngoscopy stress response.",
+      "whyItMatters_ko": "신경근차단제가 금기이거나 바람직하지 않은 상황(수술 중 신경감시, 중증근무력증, 아나필락시스 병력, 중환자)에서 기도관리가 자주 이루어지므로, 임상의는 신경근차단제 없는 삽관의 득실과 후두경 삽입 스트레스 반응을 완화하는 약물 전략을 이해해야 한다.",
+      "clinicalQuestion": "In patients undergoing endotracheal intubation, how do NMBA-free techniques compare with NMBA-based intubation in terms of feasibility, intubating conditions, postoperative complications, and hemodynamic stability?",
+      "clinicalQuestion_ko": "기관삽관을 받는 환자에서 신경근차단제를 사용하지 않는 기법은 신경근차단제를 사용하는 삽관과 비교해 실행 가능성, 삽관 조건, 수술 후 합병증, 혈역학적 안정성 측면에서 어떠한가?",
+      "studyDetails": {
+        "design": "Narrative review synthesizing evidence from randomized trials and meta-analyses. Note: the deterministic 'Randomized Controlled Trial' study-type signal reflects the included primary evidence; PubMed publication types classify this paper itself as Journal Article and Review.",
+        "design_ko": "무작위 임상시험과 메타분석 근거를 종합한 서술적 종설. 참고: 결정론적 '무작위 임상시험' 신호는 포함된 1차 근거를 반영하며, PubMed 출판유형은 이 논문 자체를 학술논문 및 종설로 분류한다.",
+        "setting": "Applicable to elective surgical and emergency airway management. Author affiliations are anesthesiology/intensive care and surgical departments in Olsztyn and Warsaw, Poland (Regional Specialist Hospital Olsztyn; University of Warmia and Mazury Collegium Medicum; Lazarski University; 'Budzik' Clinic).",
+        "setting_ko": "선택적 수술 및 응급 기도관리에 적용된다. 저자 소속은 폴란드 올슈틴과 바르샤바의 마취/중환자의학 및 외과 부서이다(올슈틴 지역전문병원, 바르미아마주리대학교 의과대학, 라자르스키대학교, '부지크' 클리닉).",
+        "sampleSize": "Not applicable as a review; no pooled study population is reported. Individual figures cited include rocuronium optimal-intubation success 76% and acceptable conditions 64% in n=2192; other quantitative citations are descriptive.",
+        "sampleSize_ko": "종설이므로 해당 없음; 통합 연구 모집단은 보고되지 않았다. 인용된 개별 수치로는 로쿠로늄 최적 삽관 성공률 76%와 허용 조건 64%(n=2192)가 있으며, 다른 정량 인용은 기술적이다.",
+        "eligibility": "The review addresses patients undergoing intubation, with particular focus on those in whom NMBAs are contraindicated or undesirable: intraoperative neuromonitoring (thyroid, spinal, neurosurgical, parotid surgery), short procedures, neuromuscular disorders (e.g., myasthenia gravis), NMBA anaphylaxis/adverse-reaction risk, critically ill patients, and pediatric sevoflurane inhalational induction.",
+        "eligibility_ko": "이 종설은 삽관을 받는 환자를 다루며, 특히 신경근차단제가 금기이거나 바람직하지 않은 경우에 초점을 둔다: 수술 중 신경감시(갑상선, 척추, 신경외과, 이하선 수술), 단시간 수술, 신경근질환(예: 중증근무력증), 신경근차단제 아나필락시스/이상반응 위험, 중환자, 소아 세보플루란 흡입유도.",
+        "interventionDetails": "NMBA-free intubation using deeper sedation/analgesia: IV hypnotics (propofol, ketamine, etomidate), short-acting opioids (remifentanil, alfentanil, fentanyl, sufentanil), inhalational sevoflurane, and adjuncts (dexmedetomidine, magnesium sulfate). Specific dosing example cited: continuous rocuronium 9.0 μg/kg/min maintains relaxation in NMBA-based technique (comparator context); NMBA-free doses/routes are not standardized in the accessible sources.",
+        "interventionDetails_ko": "더 깊은 진정/진통을 이용한 신경근차단제 없는 삽관: 정맥 수면제(프로포폴, 케타민, 에토미데이트), 속효성 오피오이드(레미펜타닐, 알펜타닐, 펜타닐, 수펜타닐), 흡입 세보플루란, 보조제(덱스메데토미딘, 황산마그네슘). 인용된 구체적 용량 예: 지속 로쿠로늄 9.0 μg/kg/min(신경근차단 기법의 비교 맥락). 신경근차단제 없는 삽관의 용량/투여경로는 접근 가능한 자료에서 표준화되어 있지 않다.",
+        "comparatorDetails": "NMBA-based intubation with depolarizing (succinylcholine) or non-depolarizing agents (rocuronium onset ~135 s; vecuronium, atracurium, cisatracurium, pancuronium), reversed with neostigmine or sugammadex (sugammadex effective only for steroidal agents).",
+        "comparatorDetails_ko": "탈분극성(석시닐콜린) 또는 비탈분극성 약제(로쿠로늄 발현 약 135초; 베쿠로늄, 아트라쿠륨, 시사트라쿠륨, 판쿠로늄)를 사용한 신경근차단 삽관으로, 네오스티그민 또는 수감마덱스로 역전한다(수감마덱스는 스테로이드계 약제에만 효과적).",
+        "followUp": "Not applicable / not specified for a review; postoperative outcomes discussed (sore throat, hoarseness, hemodynamic changes) are drawn from cited primary studies without a unified follow-up window.",
+        "followUp_ko": "종설이므로 해당 없음/명시되지 않음; 논의된 수술 후 결과(인후통, 쉰 목소리, 혈역학 변화)는 인용된 1차 연구에서 가져온 것으로 통일된 추적 기간이 없다.",
+        "sourceBasis": "Based on the article abstract, open full-text excerpt from PMC (PMC13380117), and public metadata from PubMed, Crossref, and the medscimonit.com DOI landing page.",
+        "sourceBasis_ko": "논문 초록, PMC 오픈 전문 발췌(PMC13380117), 그리고 PubMed·Crossref·medscimonit.com DOI 랜딩 페이지의 공개 메타데이터에 기반한다."
+      },
+      "pico": {
+        "population": "Patients undergoing endotracheal intubation, especially those in whom NMBAs are contraindicated or undesirable",
+        "intervention": "NMBA-free intubation using deep sedation/analgesia (propofol, ketamine, etomidate, sevoflurane, short-acting opioids, dexmedetomidine, magnesium)",
+        "comparison": "Standard NMBA-based intubation (succinylcholine or non-depolarizing agents)",
+        "outcome": "Intubating conditions, first-attempt success, postoperative laryngeal complications, and hemodynamic stability"
+      },
+      "pico_ko": {
+        "population": "기관삽관을 받는 환자, 특히 신경근차단제가 금기이거나 바람직하지 않은 환자",
+        "intervention": "깊은 진정/진통을 이용한 신경근차단제 없는 삽관(프로포폴, 케타민, 에토미데이트, 세보플루란, 속효성 오피오이드, 덱스메데토미딘, 마그네슘)",
+        "comparison": "표준 신경근차단 삽관(석시닐콜린 또는 비탈분극성 약제)",
+        "outcome": "삽관 조건, 첫 시도 성공률, 수술 후 후두 합병증, 혈역학적 안정성"
+      },
+      "detailedPico": {
+        "population": "Adults (and selected pediatric cases) undergoing elective or emergency endotracheal intubation, with emphasis on patients requiring intraoperative neuromonitoring, with neuromuscular disorders (e.g., myasthenia gravis), at risk of NMBA anaphylaxis/adverse reaction, undergoing very short procedures, or critically ill and at risk of prolonged blockade.",
+        "population_ko": "선택적 또는 응급 기관삽관을 받는 성인(및 선별된 소아)으로, 수술 중 신경감시가 필요하거나, 신경근질환(예: 중증근무력증)이 있거나, 신경근차단제 아나필락시스/이상반응 위험이 있거나, 매우 짧은 시술을 받거나, 지속적 차단 위험이 있는 중환자에 중점을 둔다.",
+        "countrySetting": "Review authored by anesthesiology/intensive care and surgical teams in Poland (Olsztyn and Warsaw); evidence synthesized applies to elective surgical and emergency airway settings internationally.",
+        "countrySetting_ko": "폴란드(올슈틴, 바르샤바)의 마취/중환자의학 및 외과 팀이 저술한 종설로, 종합된 근거는 국제적으로 선택적 수술 및 응급 기도 환경에 적용된다.",
+        "intervention": "NMBA-free intubation achieved with deeper sedation/analgesia: IV hypnotics (propofol, ketamine, etomidate), inhalational sevoflurane, and short-acting opioids (remifentanil, alfentanil, fentanyl, sufentanil), with adjuncts such as dexmedetomidine and magnesium sulfate to attenuate the sympathetic response to laryngoscopy while preserving neuromonitoring compatibility.",
+        "intervention_ko": "더 깊은 진정/진통으로 달성하는 신경근차단제 없는 삽관: 정맥 수면제(프로포폴, 케타민, 에토미데이트), 흡입 세보플루란, 속효성 오피오이드(레미펜타닐, 알펜타닐, 펜타닐, 수펜타닐)와 함께 덱스메데토미딘·황산마그네슘 등 보조제를 사용하여 신경감시 호환성을 유지하면서 후두경 삽입에 대한 교감신경 반응을 완화한다.",
+        "comparator": "Standard NMBA-based intubation using succinylcholine (rapid onset, recovery within ~5 min) or non-depolarizing agents such as rocuronium (onset ~135 s), vecuronium, atracurium, cisatracurium, or pancuronium, with reversal by neostigmine or sugammadex.",
+        "comparator_ko": "석시닐콜린(빠른 발현, 약 5분 내 회복) 또는 로쿠로늄(발현 약 135초), 베쿠로늄, 아트라쿠륨, 시사트라쿠륨, 판쿠로늄 등 비탈분극성 약제를 사용하고 네오스티그민 또는 수감마덱스로 역전하는 표준 신경근차단 삽관.",
+        "outcomes": [
+          {
+            "label": "primary",
+            "outcome": "Optimal intubating conditions and first-attempt success",
+            "outcome_ko": "최적 삽관 조건 및 첫 시도 성공률",
+            "result": "NMBAs are associated with a higher incidence of optimal intubating conditions and improved first-attempt success. Cited example: rocuronium achieved optimal intubation success in 76% and acceptable conditions in 64% (n=2192).",
+            "result_ko": "신경근차단제는 최적 삽관 조건 발생률과 첫 시도 성공률을 더 높인다. 인용 예: 로쿠로늄은 최적 삽관 성공 76%, 허용 조건 64%(n=2192)를 달성했다.",
+            "statistics": "Descriptive proportions: 76% optimal, 64% acceptable (n=2192); no comparative effect estimate or p-value reported for NMBA vs NMBA-free.",
+            "interpretation": "NMBAs make intubating conditions better and first passes more likely, but NMBA-free techniques can still achieve acceptable conditions in many patients.",
+            "interpretation_ko": "신경근차단제는 삽관 조건을 더 좋게 하고 첫 시도 성공 가능성을 높이지만, 신경근차단제 없는 기법도 많은 환자에서 허용 가능한 조건을 달성할 수 있다.",
+            "statPrimer": "These are simple percentages (proportion of patients meeting a condition). Higher percentages mean more patients achieved that outcome; without a comparison group estimate or p-value, no formal statistical significance can be inferred.",
+            "statPrimer_ko": "이 값들은 단순 백분율(조건을 충족한 환자 비율)이다. 백분율이 높을수록 해당 결과를 달성한 환자가 많음을 의미하며, 비교군 추정치나 p값이 없으면 공식적 통계적 유의성은 추론할 수 없다."
+          },
+          {
+            "label": "secondary",
+            "outcome": "Postoperative laryngeal complications (sore throat, hoarseness)",
+            "outcome_ko": "수술 후 후두 합병증(인후통, 쉰 목소리)",
+            "result": "Omission of NMBAs does not significantly increase postoperative complications such as sore throat or hoarseness. A meta-analysis (Li et al.) found omitting NMBAs did not significantly worsen jaw relaxation or increase coughing, with a non-significant trend toward suboptimal vocal cord positioning.",
+            "result_ko": "신경근차단제 생략은 인후통이나 쉰 목소리 같은 수술 후 합병증을 유의하게 증가시키지 않는다. 메타분석(Li 등)에서 신경근차단제 생략은 턱 이완을 유의하게 악화시키거나 기침을 증가시키지 않았고, 성대 위치 불량은 통계적으로 유의하지 않은 경향만 보였다.",
+            "statistics": "Qualitative meta-analysis findings; described as not statistically significant. Exact effect estimates and CIs are not available in the accessible sources.",
+            "interpretation": "Skipping NMBAs does not appear to meaningfully raise the risk of throat-related side effects, and jaw relaxation/coughing were not clearly worse.",
+            "interpretation_ko": "신경근차단제를 생략해도 인후 관련 부작용 위험이 의미 있게 증가하지 않는 것으로 보이며, 턱 이완/기침도 명확히 악화되지 않았다.",
+            "statPrimer": "'Not statistically significant' means the observed difference could plausibly be due to chance (typically p>=0.05 or a confidence interval crossing the no-difference value); it does not prove the groups are identical.",
+            "statPrimer_ko": "'통계적으로 유의하지 않음'은 관찰된 차이가 우연에 의한 것일 수 있음을 의미하며(일반적으로 p>=0.05 또는 신뢰구간이 무차이값을 포함), 두 군이 동일하다는 것을 증명하지는 않는다."
+          },
+          {
+            "label": "secondary",
+            "outcome": "Hemodynamic instability (hypotension, bradycardia)",
+            "outcome_ko": "혈역학적 불안정(저혈압, 서맥)",
+            "result": "The principal concern with NMBA-free techniques is hemodynamic instability from the deeper anesthesia required to suppress airway reflexes, with a high frequency of hypotension and bradycardia after intubation. Some studies report etomidate hypotension rates as high as 30% to 40%.",
+            "result_ko": "신경근차단제 없는 기법의 주요 우려는 기도 반사 억제를 위한 더 깊은 마취로 인한 혈역학적 불안정으로, 삽관 후 저혈압과 서맥 빈도가 높다. 일부 연구는 에토미데이트 저혈압 발생률이 30~40%에 이른다고 보고한다.",
+            "statistics": "Descriptive frequency: hypotension 30–40% with etomidate in some studies; ranges vary between studies and no pooled estimate or CI is provided.",
+            "interpretation": "The main safety cost of avoiding NMBAs is a meaningful chance of post-induction hypotension and bradycardia, so anticipate and be ready to treat it.",
+            "interpretation_ko": "신경근차단제 회피의 주된 안전 대가는 유도 후 저혈압과 서맥의 상당한 가능성이므로, 이를 예상하고 치료할 준비를 해야 한다.",
+            "statPrimer": "These are reported incidence percentages; a 30–40% rate means roughly 3–4 of every 10 patients. Wide variation across studies signals uncertainty, and no confidence interval is given to bound that estimate.",
+            "statPrimer_ko": "이는 보고된 발생률 백분율로, 30~40%는 대략 10명 중 3~4명을 의미한다. 연구 간 큰 편차는 불확실성을 나타내며, 그 추정치를 한정할 신뢰구간은 제시되지 않았다."
+          }
+        ]
+      },
+      "keyFindings": [
+        "Meta-analytic data indicate NMBAs are associated with a higher incidence of optimal intubating conditions and improved first-attempt success, but omitting NMBAs does not significantly increase postoperative complications such as sore throat or hoarseness.",
+        "The principal concern with NMBA-free techniques is hemodynamic instability (hypotension and bradycardia) from the deeper anesthesia needed to suppress airway reflexes; some studies report etomidate hypotension rates of 30% to 40%.",
+        "Alternative agents include short-acting opioids (remifentanil, alfentanil, fentanyl, sufentanil), IV hypnotics (propofol, ketamine, etomidate), inhalational sevoflurane, and adjuncts (dexmedetomidine, magnesium sulfate), which attenuate the sympathetic response while preserving neuromonitoring compatibility."
+      ],
+      "keyFindings_ko": [
+        "메타분석 자료에 따르면 신경근차단제는 더 높은 최적 삽관 조건 발생과 향상된 첫 시도 성공률과 연관되지만, 신경근차단제를 생략해도 인후통이나 쉰 목소리 같은 수술 후 합병증이 유의하게 증가하지는 않는다.",
+        "신경근차단제 없는 기법의 주요 우려는 기도 반사를 억제하기 위한 더 깊은 마취로 인한 혈역학적 불안정(저혈압, 서맥)이며, 일부 연구는 에토미데이트 저혈압 발생률을 30~40%로 보고한다.",
+        "대체 약제로는 속효성 오피오이드(레미펜타닐, 알펜타닐, 펜타닐, 수펜타닐), 정맥 수면제(프로포폴, 케타민, 에토미데이트), 흡입 세보플루란, 보조제(덱스메데토미딘, 황산마그네슘)가 있으며, 이들은 신경감시 호환성을 유지하면서 교감신경 반응을 완화한다."
+      ],
+      "conclusion": "Current evidence supports the feasibility of NMBA-free intubation in carefully selected patients when performed by experienced clinicians. Although NMBAs yield more optimal intubating conditions and higher first-attempt success, their omission does not significantly increase laryngeal complications; the main trade-off is greater hemodynamic instability. Individualized risk assessment and careful drug titration are essential, and larger studies are needed to standardize protocols and define populations most likely to benefit.",
+      "conclusion_ko": "현재 근거는 숙련된 임상의가 시행할 때 신중히 선별된 환자에서 신경근차단제 없는 삽관의 실행 가능성을 뒷받침한다. 신경근차단제가 더 최적의 삽관 조건과 높은 첫 시도 성공률을 제공하지만, 이를 생략해도 후두 합병증이 유의하게 증가하지 않으며 주된 대가는 더 큰 혈역학적 불안정이다. 개별화된 위험 평가와 신중한 약물 적정이 필수적이며, 프로토콜 표준화와 최대 수혜 대상군 규명을 위해 더 큰 규모의 연구가 필요하다.",
+      "clinicalTakeaway": "When NMBAs are contraindicated or undesirable, intubation can be accomplished with deep sedation/analgesia (e.g., propofol plus a short-acting opioid such as remifentanil/sufentanil, or sevoflurane), but anticipate and pre-empt hypotension and bradycardia; reserve this approach for selected patients and experienced operators.",
+      "clinicalTakeaway_ko": "신경근차단제가 금기이거나 바람직하지 않을 때, 깊은 진정/진통(예: 프로포폴과 레미펜타닐/수펜타닐 같은 속효성 오피오이드, 또는 세보플루란)으로 삽관이 가능하지만 저혈압과 서맥을 예상하고 선제 대응해야 하며, 이 접근은 선별된 환자와 숙련된 시술자에게 국한해야 한다.",
+      "limitations": "As a narrative review it does not provide pooled effect estimates, a systematic search strategy, or risk-of-bias assessment, and quantitative data are largely limited to descriptive figures cited from individual studies (e.g., rocuronium optimal-intubation 76%, acceptable 64% in n=2192; etomidate hypotension 30–40%). The authors emphasize that standardized protocols and defined benefit populations are lacking and that further large-scale studies are needed. Much of the evidence derives from elective surgical (neuromonitoring) contexts, limiting direct generalizability to emergency/RSI practice.",
+      "limitations_ko": "서술적 종설이므로 통합 효과 추정치, 체계적 검색 전략, 비뚤림 위험 평가를 제공하지 않으며, 정량적 자료는 대체로 개별 연구에서 인용된 기술적 수치(예: 로쿠로늄 최적 삽관 76%, 허용 조건 64%, n=2192; 에토미데이트 저혈압 30~40%)에 국한된다. 저자들은 표준화된 프로토콜과 명확한 수혜 대상군이 부족하고 대규모 추가 연구가 필요하다고 강조한다. 상당수 근거가 선택적 수술(신경감시) 맥락에서 유래하여 응급/신속연속삽관 실무로의 직접 일반화에는 제한이 있다.",
+      "edIcuApplicability": "Relevant to ED and ICU airway management, especially where NMBAs pose risk (open-globe injury or hyperkalemia risk with succinylcholine, myasthenia gravis, anaphylaxis history, need for neuromonitoring, or critically ill patients prone to prolonged blockade). However, NMBAs generally improve first-attempt success, which remains a priority in emergency RSI; NMBA-free intubation demands deeper anesthesia and readiness to manage post-induction hypotension/bradycardia. The availability of sugammadex has shifted the risk-benefit balance toward using reversible steroidal NMBAs in urgent settings.",
+      "edIcuApplicability_ko": "응급실과 중환자실 기도관리, 특히 신경근차단제가 위험한 경우(석시닐콜린의 개방성 안구 손상 또는 고칼륨혈증 위험, 중증근무력증, 아나필락시스 병력, 신경감시 필요, 지속적 차단에 취약한 중환자)에 관련이 있다. 다만 신경근차단제는 대체로 첫 시도 성공률을 높이며 이는 응급 신속연속삽관에서 여전히 우선순위이다. 신경근차단제 없는 삽관은 더 깊은 마취와 유도 후 저혈압/서맥 관리 준비를 요구한다. 수감마덱스의 이용 가능성은 긴급 상황에서 가역적 스테로이드계 신경근차단제 사용 쪽으로 위험-이익 균형을 이동시켰다.",
+      "evidenceLevel": "Low",
+      "clinicalApplicabilityScore": 6,
+      "manualReviewNeeded": true,
+      "analysisNotes": [
+        "Study-type signal labeled 'Randomized Controlled Trial' but PubMed publication types are Journal Article and Review; this is a narrative review synthesizing RCT/meta-analysis evidence, so the design was reclassified accordingly.",
+        "Quantitative values used are only those explicitly stated in the full-text excerpt: rocuronium optimal intubation 76%, acceptable 64% (n=2192); rocuronium onset ~135 s; continuous rocuronium 9.0 μg/kg/min; etomidate hypotension 30–40%. No pooled effect estimates, CIs, or p-values were provided.",
+        "manualReviewNeeded set true because of the design/signal mismatch and because outcome statistics are sparse and descriptive rather than comparative estimates."
+      ],
+      "paper": {
+        "pmid": "42447073",
+        "title": "Clinical Use of Endotracheal Intubation Without Neuromuscular Blockade: The Current Stage of Knowledge.",
+        "abstract": "Endotracheal intubation is a fundamental component of modern airway management in elective and emergency settings. Neuromuscular blocking agents (NMBAs) are commonly used to optimize intubating conditions by facilitating jaw relaxation, improving vocal cord visualization, and reducing airway trauma. However, their administration can be contraindicated or undesirable in specific situations, such as procedures requiring intraoperative neuromonitoring, short-duration surgeries, patients with neuromuscular disorders, or critically ill individuals at risk of prolonged blockade or adverse reactions. This review examines current evidence regarding the feasibility, effectiveness, and safety of intubation without neuromuscular blockade. Data from randomized trials and meta-analyses indicate that although NMBAs are associated with a higher incidence of optimal intubation conditions and improved first-attempt success rates, their omission does not significantly increase postoperative complications, such as sore throat or hoarseness. The principal concern with NMBA-free techniques remains hemodynamic instability, particularly hypotension and bradycardia, associated with the deeper levels of anesthesia required to suppress airway reflexes. Alternative strategies include short-acting opioids (remifentanil, alfentanil, fentanyl, and sufentanil), intravenous hypnotics (propofol, ketamine, and etomidate), inhalational agents (sevoflurane), and adjuncts (dexmedetomidine and magnesium sulfate). These agents attenuate sympathetic responses to laryngoscopy while preserving neuromonitoring compatibility. Their distinct pharmacodynamic profiles influence intubation conditions, apnea duration, and cardiovascular stability. Current evidence supports the feasibility of NMBA-free intubation in carefully selected patients when performed by experienced clinicians. Individualized risk assessment and careful drug titration are essential. Further large-scale studies are needed to establish standardized protocols and define patient populations most likely to benefit from this approach.",
+        "authors": [
+          "Radkowski P",
+          "Brykczyńska IJ",
+          "Banasiak Ł",
+          "Grabarczyk Ł"
+        ],
+        "authorAffiliations": [
+          "Department of Anesthesiology and Intensive Care, Regional Specialist Hospital, Olsztyn, Poland.",
+          "Department of Anesthesiology and Intensive Care, Faculty of Medicine, Collegium Medicum, University of Warmia and Mazury, Olsztyn, Poland.",
+          "Lazarski University, Warsaw, Poland.",
+          "Department of Plastic Surgery, Regional Specialist Hospital, Olsztyn, Poland.",
+          "'Budzik' Clinic, Warsaw, Poland."
+        ],
+        "journal": "Medical science monitor : international medical journal of experimental and clinical research",
+        "pubDate": "2026-Jul-14",
+        "publicationTypes": [
+          "Journal Article",
+          "Review"
+        ],
+        "meshTerms": [
+          "Humans",
+          "Intubation, Intratracheal",
+          "Neuromuscular Blockade",
+          "Neuromuscular Blocking Agents"
+        ],
+        "keywords": [],
+        "doi": "10.12659/MSM.951765",
+        "pmcid": "PMC13380117",
+        "nctIds": [],
+        "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/42447073/",
+        "collectedAt": "2026-07-23T21:17:26.863Z",
+        "screeningData": {
+          "score": 10,
+          "relevanceMatches": [
+            "ICU",
+            "airway",
+            "intubation",
+            "trauma"
+          ],
+          "studyType": "Randomized Controlled Trial",
+          "sampleSize": 0,
+          "journalBoost": 0,
+          "reasons": [
+            "abstract available",
+            "topic match: ICU, airway, intubation, trauma",
+            "study design: Randomized Controlled Trial"
+          ],
+          "exclude": false,
+          "excludeReason": ""
+        },
+        "fullText": "Introduction Muscle relaxants are commonly used to optimize tracheal intubation conditions by reducing patients’ resistance and facilitating smoother airway access. Neuromuscular blocking agents (NMBAs) inhibit transmission at the neuromuscular junction, inducing muscle relaxation. Their administration during intubation has been associated with a lower incidence of postoperative laryngeal complications, such as sore throat and hoarseness [,]. However, the use of NMBAs is either contraindicated or undesirable in the following: (1) procedures requiring intraoperative neuromonitoring, such as thyroid, spinal, neurosurgical, and parotid gland surgeries, and in short-duration operations [,]; (2) patients with neuromuscular disorders such as myasthenia gravis [,]; (3) patients with history or high risk of NMBA anaphylaxis or severe adverse reaction []; (4) very short procedures in which prolonged paralysis is undesirable []; (5) when residual weakness would be particularly hazardous or reversal is unreliable or unavailable; and (6) in pediatric inhalational induction with sevoflurane for selected cases []. In these cases, alternative intubation strategies must be considered. This includes techniques compatible with neuromuscular monitoring, avoiding interference caused by muscle relaxants []. Effective airway management, both intraoperative and postoperative, requires close coordination between anesthesiology, surgery, and critical care teams to prevent complications such as airway obstruction, aspiration, and hypoxemia []. The use of intermediate-acting NMBAs can significantly affect the accuracy of neuromonitoring signals []. Typically, endotracheal intubation is performed once full muscle paralysis is achieved []. However, it remains unclear whether intubation without NMBAs results in inferior outcomes compared with those of standard practices []. Additionally, endotracheal intubation triggers significant psychological responses. For instance, it can increase intraocular pressure (IOP), likely due to elevated mean arterial pressure and the subsequent increases in choroidal blood flow []. Laryngoscopy and endotracheal intubation are also associated with sympathetic nervous system activation, causing hypertension and tachycardia due to catecholamine release and an increase in the plasma concentration []. These hemodynamic responses can exacerbate existing conditions, such as elevated intracranial pressure and cardiac failure with pulmonary edema, and even precipitate cerebral hemorrhage. To manage these effects, a variety of pharmacologic agents are used, including opioid derivatives, local anesthetics, opioids, beta blockers, alpha-2 adrenergic agonists, vasodilators, magnesium, and high concentrations of volatile anesthetics [,]. In this article, we review the current state of knowledge regarding endotracheal intubation without neuromuscular blockade and aim to evaluate its effectiveness and safety profile in various clinical contexts. Endotracheal intubation is a critical procedure frequently performed in elective surgeries and emergency settings. The success and safety of intubation depend not only on the operator’s skill, but also on the appropriate pharmacological support. This analysis compares the commonly used anesthetic and adjuvant agents with regard to their efficiency, safety, and hemodynamic impact during airway management. Each medication, ranging from intravenous agents, such as propofol or ketamine, to inhalational anesthetics, such as sevofluarane, as well as adjunctive drugs, such as opioids, has unique pharmacodynamic and pharmacokinetic profiles. Special attention given to the management of cardiovascular responses, airway reflex suppression, and drug interactions is essential to ensure safe induction with minimal complications. Techniques of Intubation Using NMBAs The standard approach to endotracheal intubation typically involves the use of NMBAs, which provide favorable intubation conditions and help minimize the risk of airway trauma and related complications. This effect is achieved by blocking neuromuscular transmission at the neuromuscular junction, leading to muscle relaxation via inhibition of acetylcholine binding to its receptors []. NMBAs such as succinylcholine and rocuronium are frequently used due to their effectiveness in facilitating rapid and smooth intubation. Their use is also associated with decreased incidence of postoperative laryngeal complications, including sore throat and hoarseness []. However, the use of NMBAs is not without risks, and particular drugs differ in their adverse-effect profiles. Succinylcholine (suxamethonium) is associated with hyperkalemia (particularly in patients with burns, denervation injuries, or myopathies), arrhythmias, bradycardia in children (and brady- or tachycardia in adults), malignant hyperthermia triggering, fasciculations, postoperative myalgia, increased intraocular and intragastric pressure, and cytotoxic muscle injury [,]. Atracurium can cause histamine release, leading to flushing, hypotension, tachycardia, and bronchospasm, and has been strongly associated with anaphylaxis, respiratory arrest, ventricular fibrillation, and rare reports of hyperglycemia [–]. Cisatracurium, while producing less histamine release and fewer cardiovascular effects than atracurium, is still linked to anaphylaxis, bronchospasm, respiratory arrest, hypotension, and ventricular fibrillation and has shown a pharmacovigilance signal for hepatocellular injury [,]. Among aminosteroid agents, rocuronium is notably associated with anaphylaxis, bronchospasm, respiratory arrest, hypotension, ventricular fibrillation, and rare cases of Kounis syndrome and stress cardiomyopathy; residual neuromuscular block can occur if not fully reversed [,]. Vecuronium exerts minimal direct cardiovascular effects but shares risks of anaphylaxis, bronchospasm, respiratory arrest, and ventricular fibrillation and has been linked to hyperkalemia signals and residual blockade, particularly when reversed with neostigmine alone [,]. Pancuronium, due to its vagolytic properties, can cause tachycardia and hypertension through cardiac muscarinic blockade, has been associated with intensive care unit–acquired weakness during prolonged administration, and can result in residual neuromuscular block [,]. In patients with neuromuscular disorders, such as myasthenia gravis, the use of NMBAs should be avoided due to increased sensitivity and the potential for prolonged paralysis. Similarly, during procedures involving intraoperative neuromonitoring, the administration of NMBAs is discouraged, as they can suppress electromyographic signals and compromise neuromonitoring accuracy [,]. The reversal of deep neuromuscular blockade remains a great challenge. Traditional anticholinesterase agents are often ineffective in reversing profound and rapidly induced blockade, limiting their utility in emergency settings. This limitation contributes to safety concerns surrounding NMBA use []. Depolarizing Neuromuscular Relaxants Although muscle relaxants significantly facilitate tracheal intubation, their use is associated with numerous potential complications []. NMBAs, such as succinylcholine, are commonly associated with adverse effects such as hyperkalemia, cardiac dysrhythmia, postoperative myalgia, allergic reaction, prolonged paralysis, raised intracranial pressure, and malignant hyperthermia. In contrast, nondepolarizing muscle relaxants (ND-NMBAs), may result in prolonged neuromuscular blockade, histamine-mediated cardiovascular effects, and rapid reversal challenges in cases of difficult or failed intubation []. Findings from the 5 National Audit Project (NAP5) indicated that NMBA use can increase the risk of accidental awareness during general anesthesia []. Additionally, most NMBAs have minimal chronotropic effects, although some can cause a slight increase in heart rate following induction []. Succinylcholine Succinylcholine is a rapid-onset, short-acting agent that provides rapid muscle relaxation, allowing full recovery of muscle function within 5 minutes after administration []. Owing to its pharmacokinetic properties, it was long considered a primary agent used for endotracheal intubation until alternatives gained popularity in the 1990s []. Despite its efficacy, succinylcholine has a significant risk profile, particularly in specific patient populations. Life-threatening metabolic and cardiovascular adverse effects include stroke, renal impairment, and susceptibility to malignant hyperthermia, as well as myalgias, hyperkalemia, masseter muscle spasm, prolonged apnea, and increased IOP and intracranial pressure [,]. Rare but serious cases of prolonged paralysis, for over 18 hours, have been documented in patients with undiagnosed pseudocholinesterase deficiency []. The mechanism underlying the increase in IOP following succinylcholine administration is not fully understood. It is believed to involve fasciculations of the extraocular muscles and transient choroidal vasodilation. Another proposed mechanism is its cycloplegic effect, which may flatten the lens, enlarge the anterior chamber, and reduce aqueous humour outflow by decreasing tension on the scleral spur []. These effects make succinylcholine contraindicated in open-globe injuries or conditions with elevated IOP. Non-Depolarizing Neuromuscular Blocking Agents While ND-NMBAs are considered safer alternatives to succinylcholine, they present their own set of limitations. These agents typically have a slower onset of action, prolonged duration, and delayed reversibility, which can pose significant challenges in emergencies requiring rapid airway control []. Additionally, the pharmacodynamic response to ND-NMBAs is highly variable between individuals, complicating precise dosing and effect prediction []. Rocuronium Rocuronium is a ND-NMBA with an onset time of approximately 135 seconds. It is primarily metabolized in the liver and excreted in the kidneys. Rocuronium is frequently selected as an ND-NMBA alternative to succinylcholine, especially in rapid sequence induction, owing to its relatively fast onset and favorable intubating conditions. Studies have shown a success rate of 76% in achieving optimal intubation, with acceptable conditions achieved in 64% of cases (n=2192) [,,]. Importantly, the response to neuromuscular blockade differs across muscle groups. Rocuronium acts more rapidly and recovers sooner in the laryngeal muscles than in the adductor pollicis, with the depth of blockade also being less profound in the larynx []. This has implications for the timing of intubation and neuromuscular monitoring. Moreover, in elderly patients, the onset and duration of action are significantly longer than in younger patients []. A continuous infusion of rocuronium at a rate of 9.0 μg/kg/min has been shown to maintain excellent muscle relaxation without significant adverse effects, offering a reliable option for longer surgical procedures []. Atracurium Atracurium is a non-depolarizing neuromuscular blocking agent of the benzylisoquinoline class, commonly used for short- to intermediate-duration muscle relaxation. It has a moderate duration of action and is known to cause histamine release, which can increase the risk of hypotension and allergic reactions [,]. FDA Adverse Event Reporting System (FAERS) data indicate that atracurium has the highest reported rates of serious adverse events among the studied NMBAs, including death, hospitalization, and life-threatening complications. Deep neuromuscular blockade induced by atracurium can only be reversed with neostigmine, as sugammadex is not effective []. Cisatracurium Cisatracurium, the stereoisomer of atracurium, is also a benzylisoquinoline NMBA, with higher potency and a lower risk of histamine release than atracurium. It is preferred for continuous infusion, especially in critically ill patients. FAERS analysis shows a relatively lower incidence of adverse events compared with that of other NMBAs, with positive signals in immune and respiratory system disorders, and newly identified hepatobiliary risks. Cisatracurium-induced neuromuscular blockade is reversed using acetylcholinesterase inhibitors, such as neostigmine. Rocuronium Rocuronium is a steroidal ND-NMBA with rapid onset and intermediate duration of action, suitable for rapid sequence intubation [,]. FAERS data demonstrate the highest number of reported anaphylaxis cases and cardiovascular adverse events among the analyzed NMBAs []. Deep neuromuscular blockade induced by rocuronium can be rapidly reversed using sugammadex, offering a significant safety advantage in urgent clinical scenarios []. L2 Vecuronium Vecuronium is a steroidal ND-NMBA with an intermediate duration of action and slower onset than rocuronium. FAERS analysis indicates a lower frequency of serious adverse events relative to other NMBAs [,]. Similar to rocuronium, deep blockade with vecuronium can be effectively reversed using sugammadex [,]. Sugammadex This selective relaxant binding agent was designed specifically to reverse the effects of steroidal NMBAs, such as rocuronium and vecuronium. Encapsulating the NMBA molecule, it terminates the neuromuscular blocking activity. However, it is ineffective against benzylisoquinoline compounds, such as atracurium and cisatracurium []. Sugammadex is typically administered at the end of surgery to reverse neuromuscular blockade, significantly reducing the incidence of residual postoperative paralysis. Unlike traditional reversal agents, sugammadex can be used at any depth of blockade, even in emergencies, allowing for rapid restoration and spontaneous breathing []. The availability of sugammadex has altered the risk-benefit balance of using NMBAs, particularly in emergency intubation scenarios, in which the risk of prolonged paralysis previously limited their use. However, while early evidence is promising, further large-scale studies are needed to confirm its impact on outcomes in emergencies []. Technique of Intubation Without Neuromuscular Blockade In specific surgical procedures, such as spinal and thyroid parotid surgeries, in which intraoperative nerve monitoring is critical, the use of NMBAs is contraindicated. Their avoidance can be necessary in patients with neuromuscular disorders or in critically ill individuals, due to increased risk of adverse effects []. In such cases, short-acting opioids with centrally mediated analgesics and antitussive properties are increasingly used to facilitate tracheal intubation. However, successful intubation without NMBAs requires a deeper level of sedation and analgesia, commonly achieved using agents such as propofol, sevoflurane, and sufentanil. This intensified sedation strategy, however, significantly increases the risk of hemodynamic instability, including hypotension and bradycardia, especially in fragile patient populations [,]. The goal of these pharmacological substitutes is to reduce the stress response to laryngoscopy and optimize jaw relaxation and vocal cord positioning without inducing neuromuscular blockade []. A meta-analysis by Li et al revealed that omitting NMBAs during induction did not significantly worsen jaw relaxation or increase the incidence of coughing. There was a trend toward suboptimal vocal cord positioning, although it was not statistically significant. Nevertheless, hemodynamic instability remains a major concern in these cases, with a high frequency of hypotension and bradycardia observed following intubation []. One of the viable alternatives to NMBA use is sevoflurane, which demonstrates adequate muscle relaxation during induction and can facilitate endotracheal intubation without additional neuromuscular agents []. Authors disagree on how often sedatives used in rapid sequence intubation cause hemodynamic complications. Some studies report hypotension rates with etomidate as high as 30% to 40%, while others report rates a",
+        "enrichmentContext": "Public metadata from PubMed:\nPMID: 42447073\nDOI: 10.12659/MSM.951765\nClinical trial IDs found in PubMed record/abstract: none\nAuthor affiliations:\n- Department of Anesthesiology and Intensive Care, Regional Specialist Hospital, Olsztyn, Poland.\n- Department of Anesthesiology and Intensive Care, Faculty of Medicine, Collegium Medicum, University of Warmia and Mazury, Olsztyn, Poland.\n- Lazarski University, Warsaw, Poland.\n- Department of Plastic Surgery, Regional Specialist Hospital, Olsztyn, Poland.\n- 'Budzik' Clinic, Warsaw, Poland.\n\nPublic bibliographic metadata from Crossref:\nTitle: Clinical Use of Endotracheal Intubation Without Neuromuscular Blockade: The Current Stage of Knowledge\nType: journal-article\nPublished: 2026-7-14\nPublisher: International Scientific Information, Inc.\n\nPublic article landing-page metadata (https://medscimonit.com/abstract/full/idArt/951765):\n- description: ABSTRACT:Endotracheal intubation is a fundamental component of modern airway management in elective and emergency settings. Neuromuscular blocking agents (NMBAs) are commonly used to optimize intubating conditions by facilitating jaw relaxation, improving vocal cord visualization, and reducing airway trauma. However, their administration can be contraindicated or undesirable in specific situations, such as procedures requiring intraoperative neuromonitoring, short-duration surgeries, patients with neuromuscular disorders, or critically ill individuals at risk of prolonged blockade or adverse reactions.This review examines current evidence regarding the feasibility, effectiveness, and safety of intubation without neuromuscular blockade. Data from randomized trials and meta-analyses indicate\n- og:description: ABSTRACT Endotracheal intubation is a fundamental component of modern airway management in elective and emergency settings. Neuromuscular blocking age...\n- citation_journal_title: Medical Science Monitor\n- citation_author_institution: Department of Anesthesiology and Intensive Care, Regional Specialist Hospital, Olsztyn, Poland\n- citation_author_institution: Lazarski University, Warsaw, Poland\n- citation_author_institution: Department of Plastic Surgery, Regional Specialist Hospital, Olsztyn, Poland\n- citation_author_institution: ‘Budzik’ Clinic, Warsaw, Poland\n- citation_title: Clinical Use of Endotracheal Intubation Without Neuromuscular Blockade: The Current Stage of Knowledge\n- citation_publication_date: 2026/07/14\n- citation_doi: 10.12659/MSM.951765",
+        "enrichmentSources": [
+          {
+            "type": "pubmed-metadata",
+            "label": "PubMed metadata"
+          },
+          {
+            "type": "pmc",
+            "label": "PMC full text PMC13380117"
+          },
+          {
+            "type": "crossref",
+            "label": "Crossref metadata"
+          },
+          {
+            "type": "doi-landing",
+            "label": "DOI landing metadata"
+          }
+        ],
+        "contextSource": {
+          "type": "pmc+metadata",
+          "pmcid": "PMC13380117",
+          "sources": [
+            {
+              "type": "pubmed-metadata",
+              "label": "PubMed metadata"
+            },
+            {
+              "type": "pmc",
+              "label": "PMC full text PMC13380117"
+            },
+            {
+              "type": "crossref",
+              "label": "Crossref metadata"
+            },
+            {
+              "type": "doi-landing",
+              "label": "DOI landing metadata"
+            }
+          ],
+          "fetchedAt": "2026-07-23T21:18:13.270Z"
+        }
+      },
+      "source": "llm"
+    }
+  ],
+  "stats": {
+    "requested": 1,
+    "analyzed": 1,
+    "fallbackCount": 0,
+    "selection": {
+      "source": "llm-rerank",
+      "provider": "claude-code",
+      "selected": [
+        {
+          "pmid": "42447073",
+          "rank": 1,
+          "clinicalPriorityScore": 6,
+          "rationale_ko": "기도관리는 응급의학·중환자의학의 핵심 술기로, 이 논문은 신경근차단제(NMBA) 없이 기관삽관을 시행하는 것의 타당성·유효성·안전성을 무작위 시험과 메타분석 근거를 종합해 정리한 리뷰다. NMBA 사용이 최적 삽관 조건과 첫 시도 성공률을 높이지만 생략해도 인후통·성대손상 등 합병증은 유의하게 늘지 않는다는 점, 다만 혈역학적 불안정(저혈압·서맥) 위험이 주요 고려사항이라는 실무적 메시지를 제공해 일상 진료에 직접 적용 가능하다. 다만 새로운 1차 데이터가 아닌 서술적 리뷰라는 한계로 최고점은 아니며, 후보군 전반이 QI·단일기관 관찰연구·예측모델·프로토콜 위주로 임상적 파급력이 제한적인 상황에서 상대적으로 EM/CCM 독자층에 가장 폭넓게 유용하다고 판단해 1위로 선정했다."
+        }
+      ],
+      "notes_ko": [
+        "전체 후보 30편 중 실질적 실무 변경 근거(대규모 RCT, 주요 가이드라인)는 부족했고, 상당수가 QI 프로젝트, 단일기관 관찰연구, 예측 노모그램(MIMIC/eICU 기반), 시험 프로토콜, 질적 연구로 직접적 환자진료 파급력이 약했다.",
+        "JAMA Network Open의 옥테니딘 vs 멸균수 NICU 패혈증 RCT(42455570)는 무작위 시험이나 단일기관·신생아 대상으로 일반 EM/CCM 적용성이 좁아 후순위로 두었다.",
+        "PICTURE 하위분석(42480006)은 실제 RCT 데이터이나 ICU 생존자 PTSD에 대한 1차의료 개입의 효과가 일시적(QoL 6개월 시점 개선)으로 제한적이었다.",
+        "독일 다발성외상 가이드라인 순응도 연구(42457785, N=141,073)는 표본은 크나 순응도 감사 성격으로 새로운 처치 근거를 제시하지 못했다.",
+        "선정된 논문도 서술적 리뷰라는 근거 수준 한계가 있어 clinicalPriorityScore는 중간대(6)로 부여했다."
+      ]
+    }
+  },
+  "errors": []
+}
